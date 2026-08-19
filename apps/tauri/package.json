@@ -8,7 +8,8 @@
     "watch": "node build.mjs --watch",
     "typecheck": "tsc --noEmit",
     "selftest": "npm run build && cd src-tauri && cargo run -- --selftest",
-    "selftest:live": "npm run build && cd src-tauri && cargo run -- --selftest=live"
+    "selftest:live": "npm run build && cd src-tauri && cargo run -- --selftest=live",
+    "selftest:layout": "cd src-tauri && cargo run -- --selftest=layout"
   },
   "dependencies": {
     "@docs-compare/core": "0.1.0",

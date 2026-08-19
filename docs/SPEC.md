@@ -140,6 +140,13 @@ popup:status / popup:pair(+screen) / popup:unpair / popup:toggle / popup:set-lay
 
 按站点配置 css.origin/css.mirror,经 bg:state 下发对应侧;style 元素注入,可 Alt+Shift+D(扩展)切换。依赖配对状态。
 
+### 5.5 窗口布局(Tauri 实现)
+
+- 结构:一个窗口 + 三个子 webview(controller 宿主 UI 全幅铺底,left/right 铺在其上,中间 8px 缝隙露出 controller 的分隔条手柄)
+- **标题栏补偿**:macOS 子 webview 的 (0,0) 落在标题栏下方约 28px(`outer_size` 不含标题栏,无法动态获得),按平台固定补偿;Windows/Linux 为 0
+- **分隔条按比例**:窗口尺寸变化时按比例(默认 50/50,拖动后保持拖动比例)重分割,**不钉死绝对像素**;两侧视图右缘贴内容区右缘(滚动条完整可见)、底缘贴齐
+- **重排职责**:窗口 `Resized` 事件由 Rust 侧读取实时 `inner_size` 重排;尺寸一律以 Rust 侧为准,controller 的尺寸回读会构成反馈环(曾致每轮塌陷一个标题栏高度),禁止参与
+
 ## 6. 配置 schema(sites)
 
 ```jsonc
@@ -172,7 +179,8 @@ popup:status / popup:pair(+screen) / popup:unpair / popup:toggle / popup:set-lay
 - Tauri 自动化(`apps/tauri`,窗口弹出、跑完自动退出、exit code 0/1):
   - `npm run selftest`:fixture 双语站(离线;页面高度两侧故意不对称,验证语义同步)
   - `npm run selftest:live`:真实站点(onorca.dev ↔ GitHub Pages 镜像;含远程 https 页面信号通道的端到端验证)
-  - 断言:对照导航、锚点表加载、点标题对侧滚动到对应标题(视口顶 ±200px 内)、语义滚动跟随、点链接对侧跳页
+  - `npm run selftest:layout`:程序化 5 组窗口尺寸 + 最大化/还原 + 连续 resize 风暴,断言左右等宽、右缘贴内容区(滚动条完整)、底缘贴齐、顶部对齐
+  - 同步断言:对照导航、锚点表加载、点标题对侧滚动到对应标题(视口顶 ±200px 内)、语义滚动跟随、点链接对侧跳页
 - 扩展人工验收:配对分屏、点链接、点标题、滚轮跟手、专注 CSS 开关
 
 ### 8.1 实现间已知差异
@@ -182,7 +190,8 @@ popup:status / popup:pair(+screen) / popup:unpair / popup:toggle / popup:set-lay
 
 ## 9. 交付物清单
 
-- packages/core + 冒烟测试
+- packages/core + 冒烟测试(34 断言)
 - apps/chrome-extension(esbuild 构建,dist/ 加载)
+- apps/tauri(Rust 哑中继 + controller 复用 core;fixture/live/layout 三种自测)
 - scripts/gen-anchor-map.mjs + anchor-map.config.json(out/ 产物并同步扩展打包)
-- docs/:本 SPEC、IMPLEMENTATIONS(其他实现方案)
+- docs/:本 SPEC、IMPLEMENTATIONS(其他实现方案详设)

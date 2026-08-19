@@ -37,13 +37,15 @@ npm run build:tauri               # 前端 bundle → frontend-dist/(cargo 前�
 cd apps/tauri/src-tauri && cargo run
 ```
 
-- 工具条粘贴原站 URL → 「对照打开」;中间分隔条可拖拽调整左右宽度
+- 工具条粘贴原站 URL → 「对照打开」(回车同效);左右自动归一为 原站/镜像
+- 中间分隔条可拖拽;窗口缩放时**按比例**保持左右分割(默认 50/50),两侧滚动条始终完整可见
 - 站点配置:`apps/tauri/config/sites.json`(与扩展同一 schema,锚点表打包在 `anchor-maps/`)
-- 自动化测试(窗口会弹出,跑完自动退出):
+- 自动化测试(窗口会弹出,跑完自动退出,exit code 0/1):
 
 ```bash
-npm run selftest        # fixture 双语站(离线、快速)
-npm run selftest:live   # 真实站点(onorca.dev ↔ GitHub Pages 镜像)
+npm run selftest           # fixture 双语站(离线、快速):导航/锚点/语义滚动同步
+npm run selftest:live      # 真实站点(onorca.dev ↔ GitHub Pages 镜像)
+npm run selftest:layout    # 布局:5 组尺寸 + 最大化 + 连续 resize,断言等宽/贴边
 ```
 
 ## 快速开始(Chrome 扩展)
