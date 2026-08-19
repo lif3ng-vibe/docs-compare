@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: 类型检查(全部 workspace)
+        run: npm run typecheck
+      - name: core 冒烟测试
+        run: npm test
+      - name: Chrome 扩展打包
+        run: npm run build
+      - name: Tauri 前端打包
+        run: npm run build:tauri
+      - name: CDP fixture 自测(headless)
+        run: npm run selftest --workspace @docs-compare/cdp -- --headless
+        env:
+          CI: '1'
+      # live 自测依赖外网站点,不进 CI;需要时本地跑 npm run selftest:cdp:live

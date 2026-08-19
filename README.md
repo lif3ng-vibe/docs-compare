@@ -1,5 +1,7 @@
 # docs-compare
 
+[![CI](https://github.com/lif3ng-vibe/docs-compare/actions/workflows/ci.yml/badge.svg)](https://github.com/lif3ng-vibe/docs-compare/actions/workflows/ci.yml)
+
 并排对照阅读「原站文档 ↔ GitHub Pages 汉化镜像」:在一个分屏里点链接/标题,另一侧同步跳到对应页面/滚动到对应锚点,并可注入 CSS 隐藏干扰内容。同一套核心逻辑,多套实现。
 
 ## 结构
@@ -27,6 +29,8 @@ apps/cdp                  实现三:CDP 驱动 Chrome(Node CLI,零新壳)
   src/reporter.ts          content.ts 平移(上行 window.dcReport binding)
   src/selftest.ts          自动化测试(fixture/live 双模式)
 scripts/gen-anchor-map.mjs  锚点表生成器
+scripts/check-anchor-drift.mjs  锚点漂移检测(原站更新后表过期检查)
+scripts/lib/anchor-scan.mjs    两者共用的抓取/配对逻辑
 ```
 
 后续实现(Electron / WKWebView,见 docs/IMPLEMENTATIONS.md)应**只写壳**:
@@ -139,6 +143,16 @@ node scripts/gen-anchor-map.mjs     # 产物在 out/<siteId>/anchor-map.json
 
 生成后把文件放进各汉化站的 `public/` 目录(构建时会拷到站点根)重新部署。
 
+### 锚点漂移检测
+
+原站一更新,部署中的 anchor-map.json 就会过期(新标题没入表、旧映射失效),对照开始错位。日常检查:
+
+```bash
+node scripts/check-anchor-drift.mjs     # 有漂移 exit 1,可挂定时任务
+```
+
+现抓两侧线上标题重算「应有映射」,与打包表(`copyTo` 目录,随扩展/Tauri/CDP 发布,是在役真值)对比。报告新页面未入表 / 新增·失效·变化的映射 / 页面下线 / 两侧标题数量不齐(漏译信号);另作健康检查:生成器产物 out/ 与打包表是否一致、镜像站部署表(若部署)是否同步。有漂移 exit 1,重跑生成器(自动同步 copyTo)、各实现重新打包即可。
+
 ## 已知简化(v1)
 
 - 锚点同步只滚动不改对侧 URL 的 hash(避免整页刷新);地址栏/回退导航由 `tabs.onUpdated` 兜底同步
@@ -152,3 +166,5 @@ node scripts/gen-anchor-map.mjs     # 产物在 out/<siteId>/anchor-map.json
 npm test          # core 冒烟测试
 npm run typecheck # 全部 workspace
 ```
+
+CI(GitHub Actions,`.github/workflows/ci.yml`):push/PR 自动跑 typecheck + core 冒烟 + 扩展/Tauri 前端打包 + CDP fixture 自测(headless)。live 自测依赖外网站点,只在本地跑。

@@ -51,6 +51,8 @@ export async function launchOrAttach(opts: LaunchOptions): Promise<Browser> {
         '--disable-backgrounding-occluded-windows',
         '--disable-renderer-backgrounding',
         '--disable-background-timer-throttling',
+        // CI 容器里 Chrome 以高权限跑,必须关沙箱才能启动
+        ...(process.env.CI ? ['--no-sandbox', '--disable-setuid-sandbox'] : []),
       ],
       defaultViewport: null,
     });
