@@ -1,0 +1,12 @@
+{
+  "name": "@docs-compare/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "文档对照的通用核心:站点配置、URL/锚点映射、滚动比例计算。零浏览器 API 依赖,可被扩展/Electron/CDP 各实现复用。",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "esbuild --bundle test/smoke.ts --format=esm --log-level=error | node --input-type=module"
+  }
+}

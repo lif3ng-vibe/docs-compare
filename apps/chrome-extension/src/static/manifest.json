@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Docs Compare(双语文档对照)",
+  "version": "0.1.0",
+  "description": "并排对照阅读原站与汉化镜像:同步跳转、锚点映射、同步滚动、专注 CSS。",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["main-world.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_popup": "popup.html", "default_title": "Docs Compare" },
+  "options_page": "options.html",
+  "commands": {
+    "toggle-focus-css": {
+      "suggested_key": { "default": "Alt+Shift+D" },
+      "description": "切换专注模式 CSS"
+    }
+  }
+}

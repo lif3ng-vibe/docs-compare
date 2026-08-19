@@ -1,0 +1,99 @@
+{
+  "/core-concepts/how-it-works": {
+    "1-提取": "1-extraction",
+    "2-存储": "2-storage",
+    "3-引用解析": "3-resolution",
+    "4-自动同步": "4-auto-sync"
+  },
+  "/core-concepts/knowledge-graph": {
+    "节点类型": "node-kinds",
+    "边类型": "edge-kinds",
+    "来源": "provenance",
+    "如何查询": "querying-it"
+  },
+  "/core-concepts/resolution": {
+    "引用解析": "reference-resolution",
+    "框架感知": "framework-awareness",
+    "动态派发覆盖": "dynamic-dispatch-coverage"
+  },
+  "/getting-started/configuration": {
+    "开箱即跳过的内容": "what-it-skips-out-of-the-box",
+    "排除或纳入更多": "excluding-or-including-more",
+    "排除已跟踪目录": "excluding-a-tracked-directory",
+    "索引被-gitignore-的源码": "indexing-gitignored-source-a-second-vcs",
+    "自定义文件扩展名": "custom-file-extensions",
+    "索引嵌套-git-仓库": "indexing-nested-git-repositories",
+    "数据存放位置": "where-data-lives"
+  },
+  "/getting-started/installation": {
+    "1-运行安装器": "1-run-the-installer",
+    "非交互式脚本--ci": "non-interactive-scripting--ci",
+    "2-重启你的智能体": "2-restart-your-agent",
+    "3-初始化项目": "3-initialize-projects",
+    "支持的平台": "supported-platforms",
+    "卸载": "uninstall"
+  },
+  "/getting-started/introduction": {
+    "为什么重要": "why-it-matters",
+    "图谱里有什么": "whats-in-the-graph",
+    "100-本地": "100-local"
+  },
+  "/getting-started/next-steps": {
+    "理解模型": "understand-the-model",
+    "投入使用": "put-it-to-work",
+    "参考": "reference"
+  },
+  "/getting-started/quickstart": {
+    "1-安装-cli": "1-install-the-cli",
+    "2-接入你的智能体": "2-wire-up-your-agents",
+    "3-初始化每个项目": "3-initialize-each-project"
+  },
+  "/getting-started/your-first-graph": {
+    "索引一个项目": "index-a-project",
+    "检查是否成功": "check-it-worked",
+    "运行查询": "run-a-query",
+    "交给你的智能体": "hand-it-to-your-agent"
+  },
+  "/guides/affected-tests": {
+    "选项": "options",
+    "ci--钩子示例": "ci--hook-example"
+  },
+  "/guides/indexing": {
+    "初始化并建立索引": "initialize-and-index",
+    "全量与增量": "full-vs-incremental",
+    "始终保持最新": "stay-fresh-automatically",
+    "查看状态": "check-status",
+    "哪些内容会被索引": "what-gets-indexed",
+    "1-带防抖自动同步的文件监听器始终开启": "1-file-watcher-with-debounced-auto-sync-always-on",
+    "2-按文件的过期提示横幅覆盖防抖窗口": "2-per-file-staleness-banner--covers-the-debounce-window",
+    "3-连接时补齐覆盖-mcp-服务器未运行期间的空档": "3-connect-time-catch-up--covers-gaps-when-the-mcp-server-wasnt-running",
+    "核验监听器看到了什么": "verify-what-the-watcher-sees",
+    "何时需要手动-codegraph-sync": "when-manual-codegraph-sync-makes-sense"
+  },
+  "/reference/api": {
+    "关键方法": "key-methods",
+    "更底层的构建块": "lower-level-building-blocks",
+    "嵌入要求": "embedding-requirements"
+  },
+  "/reference/cli": {
+    "initindex-与-sync": "init-index-and-sync",
+    "查询命令": "query-commands"
+  },
+  "/reference/integrations": {
+    "受支持的智能体": "supported-agents",
+    "手动配置": "manual-setup"
+  },
+  "/reference/mcp-server": {
+    "默认只有一个工具codegraph_explore": "one-tool-by-default-codegraph_explore",
+    "其余工具": "the-other-tools",
+    "智能体应当如何使用": "how-agents-should-use-it"
+  },
+  "/troubleshooting": {
+    "codegraph-not-initializedcodegraph-未初始化": "codegraph-not-initialized",
+    "索引很慢": "indexing-is-slow",
+    "mcp-遇到-database-is-locked": "mcp-hits-database-is-locked",
+    "mcp-服务器连不上": "mcp-server-not-connecting",
+    "符号缺失": "missing-symbols",
+    "在-windows-与-wsl-之间共享同一份检出": "sharing-one-checkout-between-windows-and-wsl"
+  }
+}

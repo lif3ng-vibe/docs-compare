@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Docs Compare 配置</title>
+<style>
+  body { max-width: 760px; margin: 24px auto; padding: 0 16px; font: 14px/1.7 system-ui, -apple-system, sans-serif; color: #222; }
+  textarea { width: 100%; height: 320px; box-sizing: border-box; font: 12px/1.6 ui-monospace, Menlo, monospace;
+             border: 1px solid #ccc; border-radius: 6px; padding: 10px; }
+  #msg { margin: 8px 0; min-height: 20px; white-space: pre-wrap; }
+  #msg.err { color: #b3261e; }
+  #msg.ok { color: #1e8e3e; }
+  button { padding: 6px 16px; margin-right: 8px; border: 0; border-radius: 6px; background: #1a73e8;
+           color: #fff; cursor: pointer; }
+  button.secondary { background: #e8eaed; color: #333; }
+  pre { background: #f5f6f8; padding: 12px; border-radius: 6px; font-size: 12px; overflow: auto; }
+  h2 { font-size: 15px; margin: 24px 0 8px; }
+</style>
+</head>
+<body>
+<h1>Docs Compare 站点配置</h1>
+<p>每一项是一对「原站 ↔ 你的汉化镜像」。保存后立即生效,无需重新加载扩展。</p>
+<textarea id="sites" spellcheck="false"></textarea>
+<div id="msg"></div>
+<div>
+  <button id="save">保存</button>
+  <button id="example" class="secondary">填入示例</button>
+</div>
+
+<h2>字段说明</h2>
+<pre>{
+  "id":                  "唯一 id,如 react"
+  "origin":              "原站,如 https://react.dev"
+  "mirror":              "汉化站,如 https://you.github.io/react-zh(可含仓库路径)"
+  "originPrefix":        "可选:原站还需剥离的前缀,如 /docs"
+  "mirrorPrefix":        "可选:汉化站还需剥离的前缀"
+  "originStripHtmlExt":  "可选:true 表示该侧 URL 带 .html 而对侧是干净路径"
+  "anchorMapUrl":        "可选:锚点表地址。绝对 URL(如镜像站 /anchor-map.json),或扩展内打包路径(如 anchor-maps/orca.json,由 scripts/gen-anchor-map.mjs 同步生成)。默认 mirror/anchor-map.json"
+  "css": { "origin": "专注模式注入原站的 CSS", "mirror": "注入汉化站的 CSS" }
+}</pre>
+
+<h2>anchor-map.json 格式</h2>
+<p>构建汉化站时生成,放在镜像根目录(或用 anchorMapUrl 指定)。路径用归一化形式(不带 .html、不带尾斜杠):</p>
+<pre>{
+  "/learn/hooks": { "安装-react": "installing-react", "使用钩子": "using-hooks" }
+}</pre>
+<p>内层方向:<b>键 = 汉化站锚点,值 = 原站锚点</b>,均不含 #。查不到的锚点会原样透传。</p>
+
+<script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "docs-compare",
+  "private": true,
+  "version": "0.1.0",
+  "description": "双语文档对照阅读:原站 ↔ GitHub Pages 汉化镜像,同步跳转/锚点/滚动。多实现共用核心逻辑。",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @docs-compare/chrome-extension",
+    "watch": "npm run watch --workspace @docs-compare/chrome-extension",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@docs-compare/chrome-extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Docs Compare 的 Chrome 扩展实现:配对两个标签页,同步跳转/锚点/滚动,注入专注 CSS。",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@docs-compare/core": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.2.6"
+  }
+}

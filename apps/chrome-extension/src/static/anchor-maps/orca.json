@@ -1,0 +1,466 @@
+{
+  "/activity": {
+    "显示什么内容": "what-shows-up",
+    "与通知的配合": "interplay-with-notifications",
+    "后续步骤": "next-steps"
+  },
+  "/agents/claude-code": {
+    "安装": "setup",
+    "启动": "launching",
+    "用量与限流": "usage--rate-limits",
+    "账号热切换": "account-hot-swap",
+    "子智能体与团队": "subagents-and-teams",
+    "钩子与记忆": "hooks--memory"
+  },
+  "/agents/codex-hot-swap": {
+    "添加账号": "add-accounts",
+    "切换账号": "swap-accounts",
+    "系统默认": "system-default",
+    "当配置修改似乎被忽略时": "when-config-edits-seem-ignored",
+    "规则与注意事项": "rules--gotchas",
+    "claude-code-账号": "claude-code-accounts"
+  },
+  "/agents/codex": {
+    "安装": "setup",
+    "启动": "launching",
+    "账号热切换": "account-hot-swap",
+    "系统默认账号与附加账号": "system-default-vs-extra-accounts",
+    "嵌套-task-子智能体": "nested-task-subagents",
+    "在新会话中继续": "continue-in-a-new-session",
+    "重启微标": "restart-chip",
+    "用量与限流": "usage--rate-limits",
+    "windows-上的-codexwsl": "codex-on-windows-wsl"
+  },
+  "/agents/cursor-cli": {
+    "安装": "setup",
+    "启动": "launching",
+    "模型选择": "model-selection"
+  },
+  "/agents/glm-agent": {
+    "opencodeclinekilo-coderoo-code-与-droid": "opencode-cline-kilo-code-roo-code-and-droid"
+  },
+  "/agents/hibernation": {
+    "哪些会被休眠": "what-gets-hibernated",
+    "调整闲置窗口": "tuning-the-idle-window",
+    "找到休眠中的-worktree": "finding-sleeping-worktrees",
+    "恢复": "resuming",
+    "限制": "limitations",
+    "后续步骤": "next-steps"
+  },
+  "/agents/hooks-memory": {
+    "按仓库配置的钩子": "per-repo-hooks",
+    "worktree-设置钩子": "worktree-setup-hooks",
+    "记忆文件": "memory-files",
+    "智能体状态钩子": "agent-status-hooks",
+    "在重启后存活": "surviving-a-restart"
+  },
+  "/agents/native-chat": {
+    "启用": "enable",
+    "输入区": "composer",
+    "来自智能体的提问": "questions-from-the-agent",
+    "可用性": "availability"
+  },
+  "/agents/session-history": {
+    "打开面板": "open-the-panel",
+    "范围": "scope",
+    "视图选项": "view-options",
+    "恢复会话": "resume-a-session",
+    "转录来自哪里": "where-the-transcripts-come-from",
+    "后续步骤": "next-steps"
+  },
+  "/agents/supported": {
+    "权限默认值": "permissions-default"
+  },
+  "/agents/usage-tracking": {
+    "显示内容": "whats-shown",
+    "工作原理": "how-it-works",
+    "多账号计量": "multi-account-accounting",
+    "用量清单": "usage-roster",
+    "估算成本stats": "estimated-cost-stats",
+    "移动端": "mobile"
+  },
+  "/android-apk": {
+    "安装-orca-移动版": "install-orca-mobile",
+    "故障排查": "troubleshooting",
+    "下载一直不开始或一直不完成": "the-download-never-starts-or-never-finishes",
+    "三星-galaxyauto-blocker": "samsung-galaxy-auto-blocker"
+  },
+  "/browser/design-mode": {
+    "打开它": "turn-it-on",
+    "落入对话": "drop-into-chat",
+    "使用结果": "use-the-result"
+  },
+  "/browser/overview": {
+    "控件": "controls",
+    "worktree-作用域": "worktree-scoping",
+    "链接路由": "link-routing",
+    "下载": "downloads",
+    "分享为-artifact": "share-as-artifact",
+    "视口尺寸仿真": "viewport-size-emulation",
+    "自动化": "automation",
+    "后续步骤": "next-steps"
+  },
+  "/browser/profiles": {
+    "创建配置": "create-a-profile",
+    "cookie-导入与-google-登录": "cookie-import-and-google-sign-in",
+    "使用配置": "use-a-profile",
+    "隔离": "isolation"
+  },
+  "/cli/automations": {
+    "创建一个安全的首个自动化": "create-a-safe-first-automation",
+    "选择运行位置": "choose-where-runs-happen",
+    "运行前预检": "precheck-before-a-run",
+    "项目主机--setup-目标": "project-host--setup-targets",
+    "错过运行的宽限期": "missed-run-grace",
+    "复用既有自动化会话": "reuse-an-existing-automation-session",
+    "检查并启用": "review-and-enable",
+    "手动运行": "run-on-demand",
+    "后续步骤": "next-steps"
+  },
+  "/cli/computer-use": {
+    "首次设置": "first-time-setup",
+    "快照--操作--快照": "snapshot--act--snapshot",
+    "多窗口应用": "multi-window-apps",
+    "选择应用": "selecting-an-app",
+    "可用操作": "available-actions",
+    "敏感输入": "sensitive-input",
+    "截图": "screenshots",
+    "从智能体中使用": "use-it-from-an-agent",
+    "后续步骤": "next-steps"
+  },
+  "/cli/orchestration": {
+    "核心模型": "core-model",
+    "推荐的受监督循环": "preferred-supervised-loop",
+    "联邦工作者可选": "federated-workers-optional",
+    "低层调度自定义拓扑": "low-level-dispatch-custom-topology",
+    "消息说明": "messaging-notes",
+    "工作者契约": "worker-contract",
+    "决策门": "decision-gates",
+    "恢复": "recovery",
+    "选择正确的命令": "choosing-the-right-command",
+    "完整指南": "full-guide"
+  },
+  "/cli/overview": {
+    "安装与验证": "install--verify",
+    "worktree-命令": "worktree-commands",
+    "终端命令": "terminal-commands",
+    "文件命令": "file-commands",
+    "浏览器配置": "browser-profiles",
+    "计划自动化": "scheduled-automations",
+    "浏览器自动化": "browser-automation",
+    "移动模拟器": "mobile-emulator"
+  },
+  "/cli/reference": {
+    "验证运行时": "verify-the-runtime",
+    "选择器": "selectors",
+    "运行时命令": "runtime-commands",
+    "仓库": "repos",
+    "worktree": "worktrees",
+    "终端": "terminals",
+    "文件": "files",
+    "内置浏览器": "built-in-browser",
+    "桌面计算机使用": "desktop-computer-use",
+    "移动模拟器": "mobile-emulator",
+    "技能本地无需运行时": "skills-local-no-runtime-required",
+    "账号主机本地运行时": "account-host-local-runtime",
+    "自动化环境与钩子": "automations-environments-and-hooks",
+    "智能体习惯": "agent-habits",
+    "读取": "read",
+    "mcp-风格写入": "mcp-style-write",
+    "字段辅助命令仍然有效": "field-helpers-still-valid"
+  },
+  "/cli/skills": {
+    "可安装的-orca-技能": "installable-orca-skills",
+    "混合桩与实时指南": "hybrid-stubs-vs-the-live-guide",
+    "保持技能最新": "keep-skills-up-to-date",
+    "发现来源": "discovery-sources",
+    "添加你自己的技能": "add-your-own-skills",
+    "mcp-服务器": "mcp-servers"
+  },
+  "/cli/worktree-checkpoints": {
+    "这一模式": "the-pattern",
+    "卡片状态可选": "card-status-optional",
+    "适合记录检查点的时机": "good-checkpoint-moments",
+    "格式": "format",
+    "先读后写": "reading-before-writing"
+  },
+  "/editing/file-explorer": {
+    "外部拖放": "external-drag-drop",
+    "git-状态": "git-status",
+    "下载ssh--远程": "download-ssh--remote",
+    "在文件夹中查找": "search-a-folder",
+    "后续步骤": "next-steps"
+  },
+  "/editing/markdown": {
+    "斜杠菜单": "slash-menu",
+    "内链": "internal-links",
+    "搜索": "search",
+    "评审标注": "review-annotations",
+    "表格": "tables",
+    "目录": "table-of-contents",
+    "分享为-artifact": "share-as-artifact"
+  },
+  "/editing/monaco": {
+    "自动保存": "autosave",
+    "多光标跳转查找": "multi-cursor-go-to-find",
+    "变更视图模式": "changes-view-mode",
+    "自动换行": "word-wrap",
+    "自定义编辑器字体": "custom-editor-font",
+    "语言支持": "language-support"
+  },
+  "/editing/viewers": {
+    "图片": "images",
+    "jupyter-notebook": "jupyter-notebooks"
+  },
+  "/first-session": {
+    "1-添加仓库": "1-add-a-repository",
+    "2-创建-worktree": "2-create-a-worktree",
+    "3-选择智能体": "3-pick-an-agent",
+    "4-让三个智能体竞速完成同一任务": "4-race-three-agents-on-the-same-task",
+    "5-分屏以便同时盯着它们": "5-split-panes-so-you-can-watch-them-all",
+    "6-选出胜者审查-diff交付": "6-pick-a-winner-review-the-diff-ship-it"
+  },
+  "/github-errors": {
+    "快速分诊": "quick-triage",
+    "限流最常见": "rate-limits-most-common",
+    "认证问题": "authentication-problems",
+    "权限与仓库错误": "permission-and-repository-errors",
+    "网络与-github-故障": "network-and-github-outages",
+    "缺少-github-cli": "github-cli-missing",
+    "github-失败时-orca-的行为": "how-orca-behaves-when-github-fails",
+    "在-orca-中查看-github-api-预算": "check-github-api-budget-in-orca",
+    "仍然卡住": "still-stuck",
+    "相关页面": "related",
+    "orca-关注的配额桶": "buckets-orca-cares-about",
+    "为什么-settings-看起来正常而-pr-面板被限流": "why-settings-can-look-ok-while-the-pr-panel-is-blocked",
+    "在终端确认限流": "confirm-a-rate-limit-from-a-terminal",
+    "通常什么会耗尽配额": "what-usually-burns-the-quota",
+    "应对措施": "what-to-do",
+    "检查状态": "check-status",
+    "常见的坑": "common-footguns"
+  },
+  "/": {
+    "何时使用-orca": "when-to-use-orca",
+    "适合谁": "who-its-for",
+    "orca-不是什么": "what-orca-is-not"
+  },
+  "/install": {
+    "下载": "download",
+    "首次启动": "first-launch",
+    "更新": "updates",
+    "平台说明": "platform-notes",
+    "homebrewmacos": "homebrew-macos"
+  },
+  "/mobile": {
+    "在移动端能做什么": "what-you-can-do-from-mobile",
+    "配对": "pairing",
+    "快速命令": "quick-commands",
+    "会话标签页": "session-tabs",
+    "账号切换器": "account-switcher",
+    "创建工作区": "create-a-workspace",
+    "编辑已配对主机": "edit-a-paired-host",
+    "移动端源代码管理": "source-control-on-mobile",
+    "移动端浏览器视图": "browser-view-on-mobile",
+    "终端设置": "terminal-settings",
+    "故障排查": "troubleshooting"
+  },
+  "/model/agents-sessions": {
+    "状态指示器": "state-indicators",
+    "智能体仪表盘": "agent-dashboard",
+    "启动默认值": "launch-defaults",
+    "restart-卡片": "restart-chip",
+    "会话生命周期": "session-lifecycle",
+    "列": "columns",
+    "视图": "views",
+    "打开方式": "open-as",
+    "搜索与过滤": "search-and-filters",
+    "卡片": "cards"
+  },
+  "/model/quick-open": {
+    "快速打开cmd-p": "quick-open-cmd-p",
+    "新标签页-omnibox": "new-tab-omnibox-",
+    "worktree-跳转面板cmd-j": "worktree-jump-palette-cmd-j"
+  },
+  "/model/session-restore": {
+    "会恢复什么": "what-gets-restored",
+    "不会恢复什么": "what-doesnt-get-restored",
+    "何时触发恢复": "when-restore-runs",
+    "下一步": "next-steps"
+  },
+  "/model/tabs-panes-splits": {
+    "标签页": "tabs",
+    "分屏窗格": "split-panes",
+    "固定边界": "pinned-boundaries",
+    "跨-worktree-的标签组": "tab-groups-across-worktrees",
+    "切换标签页": "switching-tabs"
+  },
+  "/model/worktrees": {
+    "模型": "the-model",
+    "每个功能的生命周期": "per-feature-lifecycle",
+    "创建在后台运行": "creation-runs-in-the-background",
+    "起始引用选择器": "start-from-picker",
+    "共享目录与-gitignored-文件": "shared-directories--gitignored-files",
+    "创建对话框projectrun-on智能体与任务关联": "create-dialog-project-run-on-agent-and-task-links",
+    "emoji-工作区名": "emoji-workspace-names",
+    "分支命名": "naming-the-branch",
+    "侧边栏布局": "sidebar-layout",
+    "保留分支": "preserved-branches",
+    "多仓库项目组与文件夹工作区": "multi-repo-project-groups--folder-workspaces",
+    "使用原生-git": "using-plain-git"
+  },
+  "/notifications": {
+    "智能体完成提醒": "agent-finished-pings",
+    "常驻铃铛": "persistent-bell",
+    "标记未读": "mark-unread",
+    "调整": "tuning",
+    "自定义提示音": "custom-sounds"
+  },
+  "/recipes/design-mode-fix": {
+    "步骤": "steps",
+    "为什么快": "why-its-fast"
+  },
+  "/recipes/jump-worktrees": {
+    "步骤": "steps",
+    "日常清理": "hygiene"
+  },
+  "/recipes/parallel-agents": {
+    "步骤": "steps",
+    "原理": "why-it-works"
+  },
+  "/recipes/remote-worktrees": {
+    "设置": "setup",
+    "运行": "run",
+    "断线": "disconnects"
+  },
+  "/recipes/review-ai-diff": {
+    "步骤": "steps"
+  },
+  "/remote-servers": {
+    "什么运行在哪里": "what-runs-where",
+    "推荐桌面应用--tailscale": "recommended-desktop-app--tailscale",
+    "使用远程服务器": "use-the-remote-server",
+    "访问与安全": "access-and-security",
+    "替代方案orca-serve": "alternative-orca-serve",
+    "桌面应用还是-orca-serve": "desktop-app-or-orca-serve",
+    "远程-orca-服务器还是-ssh": "remote-orca-server-or-ssh",
+    "故障排查": "troubleshooting",
+    "后续步骤": "next-steps",
+    "1-在服务器上创建访问链接": "1-create-an-access-link-on-the-server",
+    "2-在笔记本电脑上添加服务器": "2-add-the-server-on-your-laptop",
+    "从无头服务器连接移动端": "mobile-from-a-headless-server",
+    "tailscale-地址未出现在列表中": "the-tailscale-address-is-not-listed",
+    "服务器显示已断开": "the-server-is-disconnected",
+    "访问链接给错了人": "the-access-link-was-shared-with-the-wrong-person",
+    "服务器找不到某个智能体-cli": "the-server-cannot-find-an-agent-cli",
+    "orca-serve-公告了错误的地址": "orca-serve-advertises-the-wrong-address"
+  },
+  "/review/annotate-ai-diff": {
+    "发表评论": "leave-a-comment",
+    "整批发送": "send-the-batch",
+    "为什么要整批发送": "why-batch",
+    "回复解决复审": "reply-resolve-re-review"
+  },
+  "/review/attribution": {
+    "工作原理": "how-it-works",
+    "为什么重要": "why-it-matters",
+    "范围": "scope"
+  },
+  "/review/commit-push": {
+    "提交": "commit",
+    "推送": "push",
+    "打开托管评审": "open-a-hosted-review",
+    "按仓库定制的-ai-操作配方": "per-repo-ai-action-recipes",
+    "source-control-面板": "source-control-panel",
+    "后续步骤": "next-steps"
+  },
+  "/review/diff-viewer": {
+    "功能特性": "features",
+    "范围限定": "scoping",
+    "自动换行": "word-wrap",
+    "文件树": "file-tree",
+    "键盘快捷键": "keyboard-shortcuts"
+  },
+  "/review/github": {
+    "接入服务商": "connecting-a-provider",
+    "评审": "reviews",
+    "议题": "issues",
+    "任务": "tasks",
+    "故障排查": "troubleshooting",
+    "后续步骤": "next-steps",
+    "自动合并": "auto-merge",
+    "堆叠-pr": "stacked-pull-requests"
+  },
+  "/review/jira": {
+    "接入-jira-站点": "connect-a-jira-site",
+    "使用-jira": "using-jira",
+    "后续步骤": "next-steps"
+  },
+  "/review/linear": {
+    "设置": "setup",
+    "使用-linear": "using-linear",
+    "智能体与-cli": "agents-and-cli",
+    "后续步骤": "next-steps"
+  },
+  "/settings": {
+    "pluginsexperimental": "plugins-experimental"
+  },
+  "/ssh": {
+    "添加-ssh-目标": "add-an-ssh-target",
+    "使用目标": "use-a-target",
+    "高级连接选项": "advanced-connection-options",
+    "口令": "passphrases",
+    "状态": "status",
+    "应用关闭后的会话": "sessions-across-app-close",
+    "下载远程文件与文件夹": "downloading-remote-files-and-folders",
+    "在-vs-code-中打开远程工作区": "open-a-remote-workspace-in-vs-code",
+    "fido2--安全密钥": "fido2--security-keys",
+    "没有-cc-工具链的-linux-主机": "linux-hosts-without-a-cc-toolchain",
+    "端口转发": "port-forwarding"
+  },
+  "/telemetry": {
+    "摘要": "summary",
+    "我们收集什么": "what-we-collect",
+    "我们绝不发送什么": "what-we-never-send",
+    "如何退出": "how-to-opt-out",
+    "数据去向": "where-the-data-goes"
+  },
+  "/terminal": {
+    "窗格与标签页": "panes--tabs",
+    "tui-剪贴板osc-52": "tui-clipboard-osc-52",
+    "搜索": "search",
+    "链接操作": "link-actions",
+    "复制终端上下文": "copy-terminal-context",
+    "主题": "themes",
+    "ghostty-导入": "ghostty-import",
+    "warp-主题导入": "warp-theme-import",
+    "快捷键": "shortcuts",
+    "原生按键绑定": "native-key-bindings",
+    "浮动终端": "floating-terminal",
+    "快速命令": "quick-commands"
+  },
+  "/troubleshooting": {
+    "智能体无法启动": "agent-wont-start",
+    "diff-视图显示异常--卡住": "diff-view-looks-wrong--stuck",
+    "worktree-创建失败": "worktree-creation-fails",
+    "orca-cli-提示-command-not-found": "orca-cli-says-command-not-found",
+    "ssh-能连上但远程终端失败": "ssh-connects-but-remote-terminals-fail",
+    "ssh-对文件有效但-download-folder-不可用": "ssh-works-for-files-but-not-download-folder",
+    "open-in-vs-code-被禁用或仅限本地": "open-in-vs-code-is-disabled-or-local-only",
+    "kerberos-登录失败": "kerberos-login-fails",
+    "浏览器报-browser_no_tab": "browser-says-browser_no_tab",
+    "性能与内存": "performance--memory",
+    "github-pr-面板--检查--tasks-报错": "github-pr-panel--checks--tasks-errors",
+    "日志": "logs",
+    "报告问题": "reporting-issues"
+  },
+  "/ways-to-run": {
+    "一览": "at-a-glance",
+    "1-本地桌面": "1-local-desktop",
+    "2-ssh-主机": "2-ssh-targets",
+    "3-远程-orca-服务器": "3-remote-orca-servers",
+    "4-云-vm每工作区环境": "4-cloud-vms-per-workspace-environments",
+    "如何选择": "how-to-choose",
+    "相关页面": "related",
+    "ssh-与远程-orca-服务器对比": "ssh-vs-remote-orca-server"
+  }
+}

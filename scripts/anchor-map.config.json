@@ -1,0 +1,23 @@
+{
+  "repo": "lif3ng-vibe/docs-cn",
+  "branch": "master",
+  "outDir": "out",
+  "copyTo": "apps/chrome-extension/src/static/anchor-maps",
+  "concurrency": 6,
+  "sites": [
+    {
+      "id": "orca",
+      "dir": "orca-docs-cn",
+      "origin": "https://www.onorca.dev/docs",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/orca",
+      "useSourceFrontmatter": true
+    },
+    {
+      "id": "codegraph",
+      "dir": "codegraph-docs-cn",
+      "origin": "https://colbymchenry.github.io/codegraph",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/codegraph",
+      "useSourceFrontmatter": false
+    }
+  ]
+}
