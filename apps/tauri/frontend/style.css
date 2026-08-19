@@ -1,0 +1,52 @@
+html, body { margin: 0; height: 100%; overflow: hidden; font: 13px/1.5 system-ui, -apple-system, sans-serif; }
+
+#toolbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 44px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  background: #f5f6f8;
+  border-bottom: 1px solid #dcdfe3;
+  z-index: 10;
+}
+.brand { font-weight: 600; color: #333; margin-right: 4px; }
+#url-left {
+  flex: 1;
+  max-width: 480px;
+  padding: 5px 10px;
+  border: 1px solid #cfd4da;
+  border-radius: 6px;
+  font: 12px ui-monospace, Menlo, monospace;
+}
+button {
+  padding: 5px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #1a73e8;
+  color: #fff;
+  cursor: pointer;
+}
+#status { color: #667; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* 分隔条:拖拽改变左右视图宽度;webview 铺在两侧,中间留给本层 */
+#divider {
+  position: fixed;
+  top: 44px; bottom: 0;
+  width: 8px;
+  margin-left: -4px;
+  cursor: col-resize;
+  z-index: 5;
+  touch-action: none;
+}
+#handle {
+  position: absolute;
+  top: 0; bottom: 0; left: 3px;
+  width: 2px;
+  background: #c3c8cf;
+  transition: background .15s;
+}
+#divider:hover #handle, #divider.dragging #handle { background: #1a73e8; }

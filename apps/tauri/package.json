@@ -1,0 +1,17 @@
+{
+  "name": "@docs-compare/tauri",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Docs Compare 的 Tauri 实现:单窗口双 webview 左右分屏,可拖分隔条,同步引擎复用 core。",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "selftest": "npm run build && cd src-tauri && cargo run -- --selftest",
+    "selftest:live": "npm run build && cd src-tauri && cargo run -- --selftest=live"
+  },
+  "dependencies": {
+    "@docs-compare/core": "0.1.0",
+    "@tauri-apps/api": "^2.0.0"
+  }
+}

@@ -9,20 +9,42 @@ packages/core            通用核心(纯 TS、零浏览器 API,所有实现共�
   src/url.ts               URL ↔ URL 映射(base/前缀剥离、逻辑路径、.html 归一)
   src/anchors.ts           anchor-map.json 加载与双向锚点查询
   src/config.ts            站点配置解析校验
-  src/scroll.ts            比例滚动计算
+  src/scroll.ts            比例滚动 + 语义滚动数学(findBracket/interpAt)
   test/smoke.ts            冒烟测试(npm test)
 apps/chrome-extension     实现一:Chrome MV3 扩展(esbuild 打包)
   src/background.ts        同步状态机:所有导航信号汇入 syncFrom(),比较后驱动对侧
   src/content.ts           事件上报 + 命令执行(锚点滚动、CSS 注入)
   src/main-world.ts        补丁 SPA 的 pushState/replaceState
-  src/protocol.ts          消息协议(与实现无关,Electron 版可直接复用)
+  src/protocol.ts          消息协议(与实现无关,其他实现可直接复用)
+apps/tauri                实现二:Tauri v2 单窗口双 webview(Rust 哑中继)
+  src-tauri/src/main.rs    窗口/三 webview、事件转发、dc_eval/dc_navigate/dc_layout
+  frontend/controller.ts   状态机(background.ts 平移)+ 工具条 + 可拖分隔条
+  inject/reporter.ts       content.ts 平移(init script 注入,任意 origin)
+  fixtures/                自测双语站(离线)
+scripts/gen-anchor-map.mjs  锚点表生成器
 ```
 
-后续计划中的实现(Electron / CDP 脚本)应**只写壳**:
+后续实现(Electron / CDP / WKWebView,见 docs/IMPLEMENTATIONS.md)应**只写壳**:
 
-- 把 content↔background 的消息往返换成 `executeJavaScript` / CDP 的调用
+- 把信号通道换成宿主的原生机制(executeJavaScript / CDP binding / WKScriptMessage)
 - 映射、配置、锚点、滚动计算一律 import `@docs-compare/core`
-- `protocol.ts` 的消息形状可原样搬走
+- 消息形状复用 protocol.ts
+
+## Tauri 版
+
+```bash
+npm run build:tauri               # 前端 bundle → frontend-dist/(cargo 前必跑)
+cd apps/tauri/src-tauri && cargo run
+```
+
+- 工具条粘贴原站 URL → 「对照打开」;中间分隔条可拖拽调整左右宽度
+- 站点配置:`apps/tauri/config/sites.json`(与扩展同一 schema,锚点表打包在 `anchor-maps/`)
+- 自动化测试(窗口会弹出,跑完自动退出):
+
+```bash
+npm run selftest        # fixture 双语站(离线、快速)
+npm run selftest:live   # 真实站点(onorca.dev ↔ GitHub Pages 镜像)
+```
 
 ## 快速开始(Chrome 扩展)
 

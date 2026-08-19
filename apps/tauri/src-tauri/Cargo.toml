@@ -1,0 +1,17 @@
+[package]
+name = "docs-compare-tauri"
+version = "0.1.0"
+description = "Docs Compare —— 双语文档对照阅读(Tauri 实现)"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["unstable"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+strip = true
+lto = true

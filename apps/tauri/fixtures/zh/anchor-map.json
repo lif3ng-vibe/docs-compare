@@ -1,0 +1,12 @@
+{
+  "/": {
+    "安装-orca": "install-orca",
+    "启动-orca": "launch-orca",
+    "用法-orca": "usage-orca"
+  },
+  "/page2": {
+    "第二节": "section-two",
+    "第三节": "section-three",
+    "第四节": "section-four"
+  }
+}

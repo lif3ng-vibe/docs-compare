@@ -168,9 +168,17 @@ popup:status / popup:pair(+screen) / popup:unpair / popup:toggle / popup:set-lay
 
 ## 8. 测试
 
-- `npm test`:core 冒烟测试(URL 映射/路径归一化/锚点双向+透传/配置校验/滚动比例/语义区间往返),22+ 断言
-- Tauri:`--selftest` 模式,fixture 双语站断言导航/锚点/滚动同步(见 apps/tauri)
-- 人工验收:配对分屏、点链接、点标题、滚轮跟手、专注 CSS 开关
+- `npm test`:core 冒烟测试(URL 映射/路径归一化/锚点双向+透传/配置校验/滚动比例/语义区间往返),34 断言
+- Tauri 自动化(`apps/tauri`,窗口弹出、跑完自动退出、exit code 0/1):
+  - `npm run selftest`:fixture 双语站(离线;页面高度两侧故意不对称,验证语义同步)
+  - `npm run selftest:live`:真实站点(onorca.dev ↔ GitHub Pages 镜像;含远程 https 页面信号通道的端到端验证)
+  - 断言:对照导航、锚点表加载、点标题对侧滚动到对应标题(视口顶 ±200px 内)、语义滚动跟随、点链接对侧跳页
+- 扩展人工验收:配对分屏、点链接、点标题、滚轮跟手、专注 CSS 开关
+
+### 8.1 实现间已知差异
+
+- 防程序滚动回声:扩展用时间窗抑制(人类使用有天然阻尼);Tauri 用 programmatic 标志(apply 起静默至滚动停稳 + 2s 兜底 + 停稳后 400ms 余波抑制),因自测环境全为程序滚动
+- Tauri 的 init script 在 document_start 注入, MutationObserver 观察 documentElement(body 未生成)
 
 ## 9. 交付物清单
 

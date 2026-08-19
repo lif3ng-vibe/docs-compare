@@ -3,3 +3,6 @@ dist/
 .DS_Store
 *.log
 out/
+apps/tauri/frontend-dist/
+apps/tauri/src-tauri/target/
+apps/tauri/src-tauri/gen/

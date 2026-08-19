@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "docs-compare",
+  "version": "0.1.0",
+  "identifier": "dev.docscompare.tauri",
+  "build": {
+    "frontendDist": "../frontend-dist"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": false
+  }
+}
