@@ -229,10 +229,6 @@ function wireUi(): void {
     await navigateTo('right', rightUrl);
     show(`${src.site.id}:已对照打开`);
   }
-  document.getElementById('open-left')?.addEventListener('click', () => {
-    const url = input?.value?.trim();
-    if (url) void navigateTo('left', url);
-  });
   document.getElementById('open-pair')?.addEventListener('click', () => void openPair());
   input?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') void openPair();
