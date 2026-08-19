@@ -176,8 +176,14 @@ function positionDividerEl(): void {
 function wireUi(): void {
   positionDividerEl();
   scheduleLayout();
+  let prevW = window.innerWidth;
   window.addEventListener('resize', () => {
-    divider = Math.min(Math.max(divider, 180), window.innerWidth - 180);
+    // 分隔条按比例跟随窗口宽度(默认 50/50,拖过则保持拖动比例)
+    const nw = window.innerWidth;
+    if (prevW > 0 && nw > 0) {
+      divider = Math.min(Math.max((divider / prevW) * nw, 180), nw - 180);
+    }
+    prevW = nw;
     positionDividerEl();
     scheduleLayout();
   });
@@ -216,8 +222,11 @@ function wireUi(): void {
       show('URL 不匹配任何站点配置');
       return;
     }
-    await navigateTo('left', src.url);
-    await navigateTo('right', src.url.replace(src.site.origin, src.site.mirror));
+    // mapUrl 的 src.url 是"映射后的对侧"地址;归一为 左=原站、右=镜像
+    const leftUrl = src.from === 'origin' ? url : src.url;
+    const rightUrl = src.from === 'mirror' ? url : src.url;
+    await navigateTo('left', leftUrl);
+    await navigateTo('right', rightUrl);
     show(`${src.site.id}:已对照打开`);
   }
   document.getElementById('open-left')?.addEventListener('click', () => {
