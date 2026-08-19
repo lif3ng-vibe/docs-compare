@@ -1,0 +1,14 @@
+[
+  {
+    "id": "orca",
+    "origin": "https://www.onorca.dev/docs",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/orca",
+    "anchorMapUrl": "anchor-maps/orca.json"
+  },
+  {
+    "id": "codegraph",
+    "origin": "https://colbymchenry.github.io/codegraph",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/codegraph",
+    "anchorMapUrl": "anchor-maps/codegraph.json"
+  }
+]

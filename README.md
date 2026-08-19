@@ -21,10 +21,15 @@ apps/tauri                实现二:Tauri v2 单窗口双 webview(Rust 哑中继
   frontend/controller.ts   状态机(background.ts 平移)+ 工具条 + 可拖分隔条
   inject/reporter.ts       content.ts 平移(init script 注入,任意 origin)
   fixtures/                自测双语站(离线)
+apps/cdp                  实现三:CDP 驱动 Chrome(Node CLI,零新壳)
+  src/engine.ts            状态机(background.ts 平移到 Node,Port 接口解耦宿主)
+  src/chrome.ts            puppeteer-core 接线:双窗口平铺、addBinding/init script/导航事件
+  src/reporter.ts          content.ts 平移(上行 window.dcReport binding)
+  src/selftest.ts          自动化测试(fixture/live 双模式)
 scripts/gen-anchor-map.mjs  锚点表生成器
 ```
 
-后续实现(Electron / CDP / WKWebView,见 docs/IMPLEMENTATIONS.md)应**只写壳**:
+后续实现(Electron / WKWebView,见 docs/IMPLEMENTATIONS.md)应**只写壳**:
 
 - 把信号通道换成宿主的原生机制(executeJavaScript / CDP binding / WKScriptMessage)
 - 映射、配置、锚点、滚动计算一律 import `@docs-compare/core`
@@ -46,6 +51,27 @@ cd apps/tauri/src-tauri && cargo run
 npm run selftest           # fixture 双语站(离线、快速):导航/锚点/语义滚动同步
 npm run selftest:live      # 真实站点(onorca.dev ↔ GitHub Pages 镜像)
 npm run selftest:layout    # 布局:5 组尺寸 + 最大化 + 连续 resize,断言等宽/贴边
+```
+
+## CDP 版
+
+零新壳:Node CLI(puppeteer-core)驱动 Chrome,开两个窗口自动左右平铺,常驻同步、Ctrl-C 退出即停。复用 core 与 protocol,通道全部走 CDP 原语(`Runtime.addBinding` 上行、`Page.addScriptToEvaluateOnNewDocument` 注入、`frameNavigated`/`navigatedWithinDocument` 捕获导航、`Page.navigate` 驱动)。
+
+```bash
+npm run cdp -- https://www.onorca.dev/docs/agents/codex   # 任意一侧 URL,自动归一为 左=原站/右=镜像
+```
+
+- 默认启动系统 Chrome + 临时 profile;找不到时设 `PUPPETEER_EXECUTABLE_PATH`
+- `--user-data-dir <dir>`:持久 profile(登录态可累积);`--attach 9222`:连接已运行的 Chrome(需以 `--remote-debugging-port=9222` 启动;调试端口对本机进程可见,用完即关)
+- `--region l,t,w,h`:自定平铺区域(默认取左窗当前 bounds 对半分);`--css` 专注 CSS;`--no-nav/--no-scroll/--no-semantic` 关单项同步
+- 站点配置:`apps/cdp/config/sites.json`(与扩展同一 schema,锚点表打包在 `anchor-maps/`)
+- 启动参数含禁后台节流(`--disable-backgrounding-occluded-windows` 等):窗口被遮挡时平滑滚动同步不冻结
+
+自动化测试(弹出两个 Chrome 窗口,跑完自动退出,exit code 0/1;`DC_DEBUG=1` 可看信号流):
+
+```bash
+npm run selftest:cdp        # fixture 双语站(离线、快速,复用 Tauri fixtures)
+npm run selftest:cdp:live   # 真实站点(onorca.dev ↔ GitHub Pages 镜像)
 ```
 
 ## 快速开始(Chrome 扩展)

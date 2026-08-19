@@ -1,6 +1,6 @@
-# 其他实现方案详设(Electron / CDP / WKWebView)
+# 其他实现方案详设(Electron / WKWebView)
 
-已交付:Chrome 扩展(apps/chrome-extension)、Tauri(apps/tauri)。
+已交付:Chrome 扩展(apps/chrome-extension)、Tauri(apps/tauri)、CDP(apps/cdp,2026-08-20)。
 本文档详设尚未开工的三种,统一遵循 SPEC 的架构原则:**core 全复用,宿主只写"捕获→映射→驱动"的接线**。
 
 通用复用清单(所有实现):
@@ -40,7 +40,13 @@
 
 ---
 
-## B. CDP 驱动现有 Chrome(最轻,零新壳)
+## B. CDP 驱动现有 Chrome(最轻,零新壳)——已交付 apps/cdp
+
+实现备注(puppeteer-core,按本节设计落地,两处实测修正):
+- reporter 注入用 `Page.addScriptToEvaluateOnNewDocument`,其执行时点比 WKWebView 的 init script 更早,`document.documentElement` 可能为 null——DOM 相关初始化需等其出现(reporter.ts 的 whenDocEl 轮询)
+- Chrome 会冻结后台标签页的渲染:smooth 滚动在后台标签永不推进。双窗口形态天然规避;启动参数加禁后台节流兜底;自测也必须用双窗口而非同窗双标签
+- 验证了「Chrome 下 Runtime.evaluate 轮询不打断顺滑滚动」(WebKit 特有坑在 Chrome 不存在),selftest 可放心轮询等待滚动停稳
+
 
 **形态**:Node 脚本(Puppeteer/Playwright)通过 CDP 控制用户日常 Chrome(或独立 profile),开两个标签页并由脚本平铺两个窗口。无 GUI 框架;复用用户登录态与浏览器生态。
 
@@ -100,6 +106,6 @@
 | | 包体积 | 内存 | 复用度 | 平台 | 附加依赖 |
 |---|---|---|---|---|---|
 | Electron | ~100-200MB | 300-500MB | 高 | 全平台 | 无 |
-| CDP | 0 | ~0(复用 Chrome) | 最高 | 全平台 | Node 进程 |
+| CDP(已做) | 0 | ~0(复用 Chrome) | 最高 | 全平台 | Node 进程 |
 | WKWebView | ~5MB | 150-250MB | 中-高 | 仅 macOS | Xcode 工具链 |
 | Tauri(已做) | ~10MB | 150-250MB | 高 | 全平台 | Rust 工具链 |
