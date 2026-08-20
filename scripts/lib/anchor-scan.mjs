@@ -15,12 +15,21 @@ export const CHROME_IDS = new Set(['_top', 'starlight__on-this-page']);
 /** GitHub API 匿名限额 60/h;有 gh 登录态或 GITHUB_TOKEN 时带上,限额 5000/h */
 export async function githubToken() {
   if (process.env.GITHUB_TOKEN) return process.env.GITHUB_TOKEN;
-  try {
-    const { execFileSync } = await import('node:child_process');
-    return execFileSync('gh', ['auth', 'token'], { encoding: 'utf8' }).trim() || null;
-  } catch {
-    return null;
+  // gh 不在 PATH 时(常见于刚安装、shell 未重启)按平台常见位置找
+  const candidates =
+    process.platform === 'win32'
+      ? ['gh', 'C:\\Program Files\\GitHub CLI\\gh.exe', `${process.env.LOCALAPPDATA}\\Programs\\GitHub CLI\\gh.exe`]
+      : ['gh', '/usr/local/bin/gh', '/opt/homebrew/bin/gh'];
+  for (const gh of candidates) {
+    try {
+      const { execFileSync } = await import('node:child_process');
+      const token = execFileSync(gh, ['auth', 'token'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+      if (token) return token;
+    } catch {
+      // 换下一个候选
+    }
   }
+  return null;
 }
 
 export async function fetchText(url, retries = 2) {

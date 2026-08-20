@@ -304,6 +304,7 @@
     "emoji-工作区名": "emoji-workspace-names",
     "分支命名": "naming-the-branch",
     "侧边栏布局": "sidebar-layout",
+    "resource-manager-清理": "resource-manager-cleanup",
     "保留分支": "preserved-branches",
     "多仓库项目组与文件夹工作区": "multi-repo-project-groups--folder-workspaces",
     "使用原生-git": "using-plain-git"

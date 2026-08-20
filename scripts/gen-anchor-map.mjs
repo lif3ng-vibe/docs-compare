@@ -7,13 +7,13 @@
  * 配置默认读 scripts/anchor-map.config.json,产物写 out/<siteId>/anchor-map.json
  */
 import { mkdir, writeFile } from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 import { scanSite } from './lib/anchor-scan.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const configPath = process.argv[2] ?? path.join(root, 'scripts', 'anchor-map.config.json');
-const { default: cfg } = await import(configPath, { with: { type: 'json' } });
+const { default: cfg } = await import(pathToFileURL(configPath).href, { with: { type: 'json' } });
 
 // ---------- 主流程 ----------
 
