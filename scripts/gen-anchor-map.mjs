@@ -25,7 +25,6 @@ for (const site of cfg.sites) {
   console.log(`页面数:${pages.length}`);
 
   const anchorMap = {};
-  let pairCount = 0;
   const warns = [];
   for (const r of results) {
     if (!r || r.__error) {
@@ -34,10 +33,20 @@ for (const site of cfg.sites) {
     }
     if (Object.keys(r.map).length > 0) {
       anchorMap[r.page.logicalPath] = r.map;
-      pairCount += Object.keys(r.map).length;
     }
     warns.push(...r.warns);
   }
+
+  // 人工补正:重组页(常见于落地页)顺序配对不可信,由 config 的 manualOverrides
+  // 提供人工确认的映射,按逻辑路径合并(覆盖同名键;值为 null 表示删除该键——
+  // 用于剔除自动配对产出的语义错位项,如镜像新增节被硬配到原站相邻节)。
+  const overrides = site.manualOverrides ?? {};
+  for (const [logicalPath, pairs] of Object.entries(overrides)) {
+    const merged = { ...anchorMap[logicalPath], ...pairs };
+    for (const [k, v] of Object.entries(pairs)) if (v === null) delete merged[k];
+    anchorMap[logicalPath] = merged;
+  }
+  const realPairs = Object.values(anchorMap).reduce((n, page) => n + Object.keys(page).length, 0);
 
   const outDir = path.join(root, cfg.outDir ?? 'out', site.id);
   await mkdir(outDir, { recursive: true });
@@ -53,14 +62,14 @@ for (const site of cfg.sites) {
     await writeFile(path.join(destDir, `${site.id}.json`), json);
   }
 
-  console.log(`映射条数:${pairCount},覆盖页面:${Object.keys(anchorMap).length}/${pages.length}`);
+  console.log(`映射条数:${realPairs},覆盖页面:${Object.keys(anchorMap).length}/${pages.length}${Object.keys(overrides).length ? `(含人工补正 ${Object.keys(overrides).length} 页)` : ''}`);
   console.log(`已写入 ${outFile}${copies.length ? `(并同步到 ${copies.join(', ')})` : ''}`);
   if (warns.length) {
     console.log(`警告 ${warns.length} 条(详见 report):`);
     for (const w of warns.slice(0, 10)) console.log(`  ⚠ ${w}`);
     if (warns.length > 10) console.log(`  … 共 ${warns.length} 条`);
   }
-  report.push({ site: site.id, pages: pages.length, mappedPages: Object.keys(anchorMap).length, pairs: pairCount, warns });
+  report.push({ site: site.id, pages: pages.length, mappedPages: Object.keys(anchorMap).length, pairs: realPairs, warns });
 }
 
 await mkdir(path.join(root, cfg.outDir ?? 'out'), { recursive: true });

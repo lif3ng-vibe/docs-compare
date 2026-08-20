@@ -67,6 +67,14 @@ for (const site of cfg.sites) {
     if (Object.keys(r.map).length > 0) freshMap[r.page.logicalPath] = r.map;
     countWarns.push(...r.warns);
   }
+
+  // 与生成器同口径:应用 manualOverrides(补正重组页映射;null = 剔除错配项),
+  // 否则人工补正页会被误报为漂移。
+  for (const [logicalPath, pairs] of Object.entries(site.manualOverrides ?? {})) {
+    const merged = { ...freshMap[logicalPath], ...pairs };
+    for (const [k, v] of Object.entries(pairs)) if (v === null) delete merged[k];
+    freshMap[logicalPath] = merged;
+  }
   console.log(`扫描页面:${freshPages.size},应有映射 ${entryCount(freshMap)} 条`);
 
   // 在役真值:打包表(copyTo)

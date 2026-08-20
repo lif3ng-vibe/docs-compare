@@ -1,0 +1,11 @@
+{
+  "/": {
+    "section-1--模型the-model": "the-model-heading",
+    "section-2--会话上下文窗口与轮sessions-context-windows--turns": "sessions-context-windows-turns-heading",
+    "section-3--工具与环境tools--environment": "tools-environment-heading",
+    "section-4--失败模式failure-modes": "failure-modes-heading",
+    "section-5--交接handoffs": "handoffs-heading",
+    "section-6--记忆与转向memory-and-steering": "memory-and-steering-heading",
+    "section-7--工作模式patterns-of-work": "patterns-of-work-heading"
+  }
+}

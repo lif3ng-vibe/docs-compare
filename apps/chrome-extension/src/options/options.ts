@@ -16,6 +16,18 @@ const EXAMPLE = JSON.stringify(
       mirror: 'https://lif3ng-vibe.github.io/docs-cn/codegraph',
       anchorMapUrl: 'anchor-maps/codegraph.json',
     },
+    {
+      id: 'mattpocock-skills',
+      origin: 'https://www.aihero.dev/skills',
+      mirror: 'https://lif3ng-vibe.github.io/docs-cn/mattpocock-skills',
+      anchorMapUrl: 'anchor-maps/mattpocock-skills.json',
+    },
+    {
+      id: 'ai-coding-dictionary',
+      origin: 'https://www.aihero.dev/ai-coding-dictionary',
+      mirror: 'https://lif3ng-vibe.github.io/docs-cn/ai-coding-dictionary',
+      anchorMapUrl: 'anchor-maps/ai-coding-dictionary.json',
+    },
   ],
   null,
   2,

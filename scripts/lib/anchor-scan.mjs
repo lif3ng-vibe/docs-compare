@@ -83,6 +83,11 @@ export function headings(html) {
 /**
  * 按级别配对:第 n 个 h2 对第 n 个 h2,以此类推。
  * 返回 {zh: en} 与对齐警告。
+ *
+ * 配对纪律:翻译是 1:1 的,顺序配对只在「各级标题数量完全一致」时可信。
+ * 数量不齐 ⇒ 页面被重组/漏译,硬按顺序配会产出语义错位的映射(点击滚到
+ * 错位置,比没有映射更糟)——此时丢弃该级映射,只报警告,留给人工或
+ * config 里的 manualOverrides 补正。
  */
 export function pairHeadings(mirrorHeads, originHeads, pageLabel) {
   const map = {};
@@ -91,10 +96,10 @@ export function pairHeadings(mirrorHeads, originHeads, pageLabel) {
     const a = mirrorHeads.filter((h) => h.level === level);
     const b = originHeads.filter((h) => h.level === level);
     if (a.length !== b.length) {
-      warns.push(`${pageLabel}: h${level} 数量不一致(镜像 ${a.length} / 原站 ${b.length}),按少的配`);
+      warns.push(`${pageLabel}: h${level} 数量不一致(镜像 ${a.length} / 原站 ${b.length}),该级映射已丢弃`);
+      continue;
     }
-    const n = Math.min(a.length, b.length);
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < a.length; i++) {
       if (a[i].id !== b[i].id) map[a[i].id] = b[i].id; // 相同的不用写,core 会原样透传
     }
   }

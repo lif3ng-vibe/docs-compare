@@ -18,6 +18,38 @@
       "origin": "https://colbymchenry.github.io/codegraph",
       "mirror": "https://lif3ng-vibe.github.io/docs-cn/codegraph",
       "useSourceFrontmatter": false
+    },
+    {
+      "id": "mattpocock-skills",
+      "dir": "mattpocock-skills-docs-cn",
+      "origin": "https://www.aihero.dev/skills",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/mattpocock-skills",
+      "useSourceFrontmatter": true,
+      "manualOverrides": {
+        "/": {
+          "安装30-秒": "skills-install-heading",
+          "这些技能为什么存在": null,
+          "参考技能怎么分类": "skill-set-heading"
+        }
+      }
+    },
+    {
+      "id": "ai-coding-dictionary",
+      "dir": "ai-coding-dictionary-docs-cn",
+      "origin": "https://www.aihero.dev/ai-coding-dictionary",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-coding-dictionary",
+      "useSourceFrontmatter": true,
+      "manualOverrides": {
+        "/": {
+          "section-1--模型the-model": "the-model-heading",
+          "section-2--会话上下文窗口与轮sessions-context-windows--turns": "sessions-context-windows-turns-heading",
+          "section-3--工具与环境tools--environment": "tools-environment-heading",
+          "section-4--失败模式failure-modes": "failure-modes-heading",
+          "section-5--交接handoffs": "handoffs-heading",
+          "section-6--记忆与转向memory-and-steering": "memory-and-steering-heading",
+          "section-7--工作模式patterns-of-work": "patterns-of-work-heading"
+        }
+      }
     }
   ]
 }

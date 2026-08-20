@@ -1,0 +1,241 @@
+{
+  "/engineering/ask-matt": {
+    "它做什么": "what-it-does",
+    "何时该用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "流程而非技能": "flows-not-skills",
+    "阶段边界": "the-phase-boundary",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/engineering/code-review": {
+    "它做什么": "what-it-does",
+    "何时使用": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "两条轴": "the-two-axes",
+    "常见问题": "common-questions",
+    "怎样算正常工作": "its-working-if",
+    "它在整体中的位置": "where-it-fits"
+  },
+  "/engineering/codebase-design": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "词汇表": "the-vocabulary",
+    "四条原则": "the-four-principles",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/engineering/diagnosing-bugs": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "紧回路即技能": "the-tight-loop-is-the-skill",
+    "阶段之间的闸门": "the-gates-between-phases",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/engineering/domain-modeling": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "两样产物两道门槛": "two-artifacts-two-bars",
+    "交叉核对以及它止步于何处": "cross-referencing-and-where-it-stops",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/engineering/grill-with-docs": {
+    "它做什么": "what-it-does",
+    "何时该用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "留下的书面记录paper-trail": "the-paper-trail",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/engineering/implement": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "一次运行做什么": "what-one-run-does",
+    "事先约定的接缝": "pre-agreed-seams",
+    "常见问题": "common-questions",
+    "怎么算正常工作": "its-working-if",
+    "它在整体中的位置": "where-it-fits"
+  },
+  "/engineering/improve-codebase-architecture": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "深度和猎取深度的报告": "depth-and-the-report-that-hunts-for-it",
+    "你挑了一个之后会发生什么": "what-happens-after-you-pick-one",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/engineering/prototype": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "两个分支": "two-branches",
+    "原型是一手来源": "the-prototype-is-a-primary-source",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/engineering/research": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "被委托的跑腿": "delegated-legwork",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/engineering/resolving-merge-conflicts": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "一手来源优先于-ours-和-theirs": "primary-sources-over-ours-and-theirs",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/engineering/setup-matt-pocock-skills": {
+    "它做什么": "what-it-does",
+    "何时该用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "三个决策": "the-three-decisions",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/engineering/tdd": {
+    "它做什么": "what-it-does",
+    "何时使用": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "循环以及它所在的接缝": "the-loop-and-the-seam-it-runs-at",
+    "常见问题": "common-questions",
+    "怎样算正常工作": "its-working-if",
+    "它在整体中的位置": "where-it-fits"
+  },
+  "/engineering/to-spec": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "规格是一份决策记录": "the-spec-is-a-decision-record",
+    "先接缝后正文": "seams-before-prose",
+    "常见问题": "common-questions",
+    "怎么算正常工作": "its-working-if",
+    "它在整体中的位置": "where-it-fits"
+  },
+  "/engineering/to-tickets": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "要曳光弹不要分层": "tracer-bullets-not-layers",
+    "阻塞边": "blocking-edges",
+    "宽重构的例外": "the-wide-refactor-exception",
+    "常见问题": "common-questions",
+    "怎么算正常工作": "its-working-if",
+    "它在整体中的位置": "where-it-fits"
+  },
+  "/engineering/triage": {
+    "它做什么": "what-it-does",
+    "什么时候用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "状态机": "the-state-machine",
+    "先验证再写简报": "verify-before-you-brief",
+    "pr-就是带代码的工单": "a-pr-is-an-issue-with-attached-code",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在整个流程中的位置": "where-it-fits"
+  },
+  "/engineering/wayfinder": {
+    "它做什么": "what-it-does",
+    "什么时候用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "地图迷雾与前沿": "the-map-the-fog-and-the-frontier",
+    "四种决策工单类型": "the-four-decision-ticket-types",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在整个流程中的位置": "where-it-fits"
+  },
+  "/engineering/wizard": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "阶段": "stages",
+    "模板已经解好了-ux": "the-template-already-solves-the-ux",
+    "默认即抛": "ephemeral-by-default",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/": {
+    "安装30-秒": "skills-install-heading",
+    "参考技能怎么分类": "skill-set-heading"
+  },
+  "/productivity/grill-me": {
+    "它是做什么的": "what-it-does",
+    "何时该用它": "when-to-reach-for-it",
+    "这是对话不是访谈": "its-a-conversation-not-an-interview",
+    "可追问与不可追问": "grillable-and-ungrillable",
+    "怎样算生效": "its-working-if",
+    "常见问题": "common-questions",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/productivity/grilling": {
+    "它是做什么的": "what-it-does",
+    "何时该用它": "when-to-reach-for-it",
+    "轮前沿以及谁来决定": "the-round-the-frontier-and-who-decides",
+    "哪些东西在这里哪些在包装层": "what-lives-here-and-what-lives-in-the-wrappers",
+    "常见问题": "common-questions",
+    "怎样算生效": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/productivity/handoff": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "分叉是人们漏掉的用法": "branching-is-the-use-people-skip",
+    "什么随行什么不随": "what-travels-and-what-doesnt",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/productivity/teach": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "前置条件": "prerequisites",
+    "存储强度不是流畅度": "storage-strength-not-fluency",
+    "课程参考与组件": "lessons-references-and-components",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/productivity/to-questionnaire": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "递送不是主题": "the-send-not-the-subject",
+    "这份文档": "the-document",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/productivity/wait-what": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "名字即机制": "the-name-is-the-mechanism",
+    "它插进你已有的语言": "it-plugs-into-the-language-you-already-have",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  },
+  "/productivity/writing-for-agents": {
+    "它做什么": "what-it-does",
+    "什么时候该用它": "when-to-reach-for-it",
+    "两种负载": "the-two-loads",
+    "杠杆": "the-levers",
+    "常见问题": "common-questions",
+    "正常工作的标志": "its-working-if",
+    "它在全局中的位置": "where-it-fits"
+  }
+}
