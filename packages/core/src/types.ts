@@ -5,6 +5,8 @@
 export interface SitePair {
   /** 唯一 id,如 "react" */
   id: string;
+  /** 显示名(如中文别名),popup 下拉等 UI 用;缺省用 id */
+  name?: string;
   /** 原站 base,如 "https://react.dev" */
   origin: string;
   /** 汉化站 base,如 "https://user.github.io/react-zh"(可含仓库路径) */

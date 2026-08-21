@@ -86,12 +86,13 @@ eq(idx.size, 2, 'size');
 
 console.log('parseSites');
 const parsed = parseSites([
-  { id: 'a', origin: 'https://a.dev/', mirror: 'https://b.github.io/a/' },
+  { id: 'a', name: '甲站', origin: 'https://a.dev/', mirror: 'https://b.github.io/a/' },
   { id: 'a', origin: 'https://x.dev', mirror: 'https://y.github.io/x' },
   { id: 'bad', origin: 'notaurl', mirror: 'https://z.dev' },
 ]);
 eq(parsed.sites.length, 1, '非法/重复项被跳过');
 eq(parsed.sites[0].origin, 'https://a.dev', 'base 尾斜杠被规范');
+eq(parsed.sites[0].name, '甲站', 'name 透传(保存后不丢显示名)');
 eq(parsed.errors.length, 2, '报出全部错误');
 
 console.log('scroll');

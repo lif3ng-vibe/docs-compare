@@ -2,6 +2,17 @@ import type { StatusReply } from '../protocol';
 
 const $ = <T extends HTMLElement>(id: string): T => document.getElementById(id) as T;
 
+/** 屏幕可用区域(扣 Dock/菜单栏)只有 popup 拿得到,配对/直开时带给后台做左右平铺 */
+function screenRect(): { left: number; top: number; width: number; height: number } {
+  const s = window.screen as Screen & { availLeft?: number; availTop?: number };
+  return {
+    left: s.availLeft ?? 0,
+    top: s.availTop ?? 0,
+    width: s.availWidth || s.width,
+    height: s.availHeight || s.height,
+  };
+}
+
 async function refresh(): Promise<void> {
   const st: StatusReply | undefined = await chrome.runtime
     .sendMessage({ t: 'popup:status' })
@@ -48,6 +59,31 @@ async function refresh(): Promise<void> {
   }
   status.textContent = lines.join('\n');
 
+  // 站点下拉:不依赖当前页命中,选站直开对照
+  const sites = st.sites ?? [];
+  const picker = $('sitePicker');
+  const sel = $('siteSelect') as HTMLSelectElement;
+  const openSite = $('openSite') as HTMLButtonElement;
+  if (sites.length === 0) {
+    picker.hidden = true;
+    openSite.disabled = true;
+    lines.push('尚未配置站点对,请到配置页添加');
+    status.textContent = lines.join('\n');
+  } else {
+    picker.hidden = false;
+    openSite.disabled = false;
+    sel.replaceChildren();
+    for (const s of sites) {
+      const opt = document.createElement('option');
+      opt.value = s.id;
+      opt.textContent = s.name ?? s.id;
+      sel.appendChild(opt);
+    }
+    // 当前页命中且在列表中 → 预选;否则选第一个
+    sel.value =
+      st.matched && st.siteId && sites.some((s) => s.id === st.siteId) ? st.siteId : sites[0].id;
+  }
+
   pair.disabled = !st.matched;
   pair.hidden = st.paired;
   unpair.hidden = !st.paired;
@@ -58,19 +94,16 @@ async function refresh(): Promise<void> {
 }
 
 function wire(): void {
-  // 屏幕可用区域(扣 Dock/菜单栏)只有 popup 拿得到,配对时带给后台做左右平铺
-  function screenRect(): { left: number; top: number; width: number; height: number } {
-    const s = window.screen as Screen & { availLeft?: number; availTop?: number };
-    return {
-      left: s.availLeft ?? 0,
-      top: s.availTop ?? 0,
-      width: s.availWidth || s.width,
-      height: s.availHeight || s.height,
-    };
-  }
   $('pair').addEventListener('click', () =>
     void chrome.runtime.sendMessage({ t: 'popup:pair', screen: screenRect() }).then(refresh),
   );
+  $('openSite').addEventListener('click', () => {
+    const siteId = ($('siteSelect') as HTMLSelectElement).value;
+    if (!siteId) return;
+    void chrome.runtime
+      .sendMessage({ t: 'popup:open-site', siteId, screen: screenRect() })
+      .then(refresh);
+  });
   $('unpair').addEventListener('click', () => void chrome.runtime.sendMessage({ t: 'popup:unpair' }).then(refresh));
   for (const [id, key] of [
     ['navSync', 'navSync'],

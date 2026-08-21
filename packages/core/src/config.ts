@@ -39,6 +39,7 @@ export function parseSites(input: unknown): ParseResult {
     }
     const o = item as Record<string, unknown>;
     const id = str(o.id);
+    const name = str(o.name);
     const origin = isHttpUrl(o.origin) ? o.origin : undefined;
     const mirror = isHttpUrl(o.mirror) ? o.mirror : undefined;
     if (!id) errors.push(`${at}: 缺少 id`);
@@ -58,6 +59,7 @@ export function parseSites(input: unknown): ParseResult {
         : undefined;
     sites.push({
       id,
+      name,
       origin: normalizeBase(origin),
       mirror: normalizeBase(mirror),
       originPrefix: str(o.originPrefix),

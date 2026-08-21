@@ -14,10 +14,17 @@
   fieldset { border: 0; margin: 6px 0 0; padding: 0; }
   legend { font-size: 12px; color: #666; padding: 0 0 2px; }
   .hint { margin-top: 10px; font-size: 11px; color: #777; }
+  #sitePicker { margin-bottom: 10px; }
+  #sitePicker select { display: block; width: 100%; box-sizing: border-box; padding: 6px 8px; margin-bottom: 8px;
+                       border: 1px solid #dadce0; border-radius: 6px; font: inherit; background: #fff; color: #222; }
 </style>
 </head>
 <body>
 <div id="status">加载中…</div>
+<div id="sitePicker">
+  <select id="siteSelect" aria-label="站点对"></select>
+  <button id="openSite" class="secondary">打开所选站点对照</button>
+</div>
 <button id="pair">配对并打开对照页</button>
 <button id="unpair" class="secondary" hidden>解除配对</button>
 <label><input type="checkbox" id="navSync"> 跳转同步(点链接/锚点)</label>

@@ -1,6 +1,7 @@
 import {
   AnchorIndex,
   PageIndex,
+  buildUrl,
   defaultAnchorMapUrl,
   defaultPageMapUrl,
   findSite,
@@ -9,7 +10,7 @@ import {
   parseSites,
 } from '@docs-compare/core';
 import type { SitePair, SyncSettings } from '@docs-compare/core';
-import type { BgMsg, BgState, ContentMsg, PopupMsg, PopupPair, StatusReply } from './protocol';
+import type { BgMsg, BgState, ContentMsg, PopupMsg, PopupOpenSite, PopupPair, StatusReply } from './protocol';
 
 /**
  * background(service worker)是同步状态机:
@@ -310,6 +311,60 @@ async function doUnpair(): Promise<StatusReply> {
   return popupStatus();
 }
 
+/**
+ * 下拉直开:不依赖当前页命中,打开指定站点对的「原站首页 ↔ 镜像首页」对照。
+ * 分屏复刻 doPair 三分支;差别是左侧内容从"当前 tab"换成"当前窗口新开的 origin tab"。
+ */
+async function doOpenSite(siteId: string, screen?: PopupOpenSite['screen']): Promise<StatusReply> {
+  const site = (await getSites()).find((s) => s.id === siteId);
+  if (!site) return popupStatusWithError(`站点 ${siteId} 不存在,请到配置页检查`);
+  const originUrl = buildUrl(site, 'origin', '/');
+  const mirrorUrl = buildUrl(site, 'mirror', '/');
+
+  const cur = await activeTab(); // 仅取窗口归属,不要求 URL 命中
+  const settings = await getSettings();
+  let originId: number | undefined;
+  let mirrorId: number | undefined;
+
+  if (settings.layout === 'windows' && screen && cur?.windowId != null) {
+    // 两窗口平铺:当前窗口还原→缩左半屏→开原站 tab;镜像开右半屏新窗口
+    const win = await chrome.windows.get(cur.windowId).catch(() => null);
+    if (win?.id != null) {
+      if (win.state === 'maximized' || win.state === 'fullscreen') {
+        await chrome.windows.update(win.id, { state: 'normal' });
+      }
+      const half = Math.floor(screen.width / 2);
+      await chrome.windows.update(win.id, {
+        left: screen.left,
+        top: screen.top,
+        width: half,
+        height: screen.height,
+      });
+      const ot = await chrome.tabs.create({ url: originUrl, windowId: win.id, active: true });
+      const mw = await chrome.windows.create({
+        url: mirrorUrl,
+        left: screen.left + half,
+        top: screen.top,
+        width: screen.width - half,
+        height: screen.height,
+        focused: true,
+      });
+      originId = ot.id;
+      mirrorId = mw?.tabs?.[0]?.id;
+    }
+  }
+  if (originId == null || mirrorId == null) {
+    // tabs 布局 / 无 screen / 窗口操作失败:当前窗口相邻两标签,焦点落镜像(与右窗 focused 一致)
+    const ot = await chrome.tabs.create({ url: originUrl, index: cur?.index != null ? cur.index + 1 : undefined, active: false });
+    const mt = await chrome.tabs.create({ url: mirrorUrl, index: (ot.index ?? 0) + 1, active: true });
+    originId = ot.id;
+    mirrorId = mt.id;
+  }
+  if (originId == null || mirrorId == null) return popupStatusWithError('打开对照页失败');
+  await setPair(originId, mirrorId);
+  return popupStatus();
+}
+
 async function doToggle(key: 'navSync' | 'scrollSync' | 'semanticScroll' | 'focusCss'): Promise<StatusReply> {
   const s = await getSettings();
   s[key] = !s[key];
@@ -327,8 +382,9 @@ async function doSetLayout(layout: 'windows' | 'tabs'): Promise<StatusReply> {
 
 async function popupStatus(): Promise<StatusReply> {
   const settings = await getSettings();
+  const siteOptions = (await getSites()).map((s) => ({ id: s.id, name: s.name }));
   const tab = await activeTab();
-  if (!tab?.url) return { matched: false, paired: false, settings };
+  if (!tab?.url) return { matched: false, paired: false, settings, sites: siteOptions };
   const sites = await getSites();
   const hit = findSite(tab.url, sites);
   const other = tab.id != null ? pairs.get(tab.id) : undefined;
@@ -345,6 +401,7 @@ async function popupStatus(): Promise<StatusReply> {
     counterpartUrl: otherTab?.url,
     anchorMapSize,
     settings,
+    sites: siteOptions,
   };
 }
 
@@ -391,6 +448,9 @@ chrome.runtime.onMessage.addListener((msg: ContentMsg | PopupMsg, sender, sendRe
         return;
       case 'popup:pair':
         sendResponse(await doPair(msg.screen));
+        return;
+      case 'popup:open-site':
+        sendResponse(await doOpenSite(msg.siteId, msg.screen));
         return;
       case 'popup:unpair':
         sendResponse(await doUnpair());

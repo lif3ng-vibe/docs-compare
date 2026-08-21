@@ -56,6 +56,14 @@ export interface PopupPair {
   /** popup 所在屏幕的可用区域(扣除任务栏/Dock),用于自动左右平铺;缺省则退回开新标签页 */
   screen?: { left: number; top: number; width: number; height: number };
 }
+/** 不依赖当前页命中,直接打开指定站点对的首页对照(popup 下拉) */
+export interface PopupOpenSite {
+  t: 'popup:open-site';
+  /** 站点对 id(来自 StatusReply.sites) */
+  siteId: string;
+  /** 同 PopupPair.screen,用于两窗口平铺 */
+  screen?: { left: number; top: number; width: number; height: number };
+}
 export interface PopupUnpair {
   t: 'popup:unpair';
 }
@@ -67,9 +75,21 @@ export interface PopupSetLayout {
   t: 'popup:set-layout';
   layout: 'windows' | 'tabs';
 }
-export type PopupMsg = PopupStatus | PopupPair | PopupUnpair | PopupToggle | PopupSetLayout;
+export type PopupMsg =
+  | PopupStatus
+  | PopupPair
+  | PopupOpenSite
+  | PopupUnpair
+  | PopupToggle
+  | PopupSetLayout;
 
 // ---- 应答 ----
+/** 下拉用的精简站点形态(不带 css 等大字段) */
+export interface SiteOption {
+  id: string;
+  /** 显示名(配置里的中文别名);缺省下拉显示 id */
+  name?: string;
+}
 export interface StatusReply {
   matched: boolean;
   siteId?: string;
@@ -78,5 +98,7 @@ export interface StatusReply {
   counterpartUrl?: string;
   anchorMapSize?: number;
   settings: SyncSettings;
+  /** 全部已配置站点对(下拉数据源) */
+  sites: SiteOption[];
   error?: string;
 }
