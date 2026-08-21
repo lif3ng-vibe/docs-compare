@@ -112,10 +112,12 @@ npm run build          # 产物在 apps/chrome-extension/dist/
     "anchorMapUrl": "anchor-maps/codegraph.json" },
   { "id": "mattpocock-skills", "origin": "https://www.aihero.dev/skills",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/mattpocock-skills",
-    "anchorMapUrl": "anchor-maps/mattpocock-skills.json" },
+    "anchorMapUrl": "anchor-maps/mattpocock-skills.json",
+    "pageMapUrl": "anchor-maps/mattpocock-skills.page-map.json" },
   { "id": "ai-coding-dictionary", "origin": "https://www.aihero.dev/ai-coding-dictionary",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-coding-dictionary",
-    "anchorMapUrl": "anchor-maps/ai-coding-dictionary.json" }
+    "anchorMapUrl": "anchor-maps/ai-coding-dictionary.json",
+    "pageMapUrl": "anchor-maps/ai-coding-dictionary.page-map.json" }
 ]
 ```
 4. 分屏方式在 popup 里选:**两窗口平铺**(配对时自动左右平铺)或**同窗口标签页 + Chrome 分屏**(配对时开相邻标签页,右键 →「分屏」;建议关掉 Chrome 分屏自带的同步滚动,避免与扩展叠加)
@@ -137,6 +139,25 @@ npm run build          # 产物在 apps/chrome-extension/dist/
 - 内层:**键 = 汉化站锚点,值 = 原站锚点**,均不含 `#`
 - 查不到的锚点原样透传(两侧 slug 恰好相同时依然能对上)
 - URL 路径两侧镜像(去掉 base/前缀后相同)则不需要额外配置
+
+## page-map.json(两侧路径不镜像的站点)
+
+原站扁平页(如 aihero.dev 的 `/skills-ask-matt`)配上镜像分组页
+(`/engineering/ask-matt/`)时,剥 base 后逻辑路径对不上,导航同步会 404——
+这类站点需要页面路径映射,配置 `pageMapUrl` 指向打包的 `<siteId>.page-map.json`
+(生成器从每页 frontmatter `source:` 自动产出,只收录与 base 推导不一致的页):
+
+```json
+{
+  "/engineering/ask-matt": "/skills-ask-matt",
+  "/terms/afk": "/ai-coding-dictionary/afk"
+}
+```
+
+- 键 = 镜像逻辑路径;值 = 原站**完整路径**(命中时直接以 origin host + 完整路径拼 URL,
+  绕过 base/prefix 剥拼——原站扁平页与 base 是兄弟路径,剥了再拼会多出斜杠)
+- 原站侧点击也靠它识别 URL 归属(扁平页不是 base 子路径,前缀剥离认不出)
+- 查不到的路径退回逻辑路径直映(两侧镜像的站点无需此表)
 
 ### 用生成器脚本产 anchor-map.json
 

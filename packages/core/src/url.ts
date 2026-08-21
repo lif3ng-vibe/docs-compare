@@ -1,4 +1,5 @@
 import type { Side, SitePair } from './types';
+import type { PageIndex } from './pages';
 
 /** 去掉 base 末尾的斜杠 */
 export function normalizeBase(base: string): string {
@@ -78,14 +79,63 @@ export interface MappedUrl {
   logicalPath: string;
 }
 
+export interface MapUrlOptions {
+  /**
+   * 页面路径映射(两侧逻辑路径不一致的站点,如原站扁平 /skills-ask-matt ↔
+   * 镜像分组 /engineering/ask-matt)。入表页直接给对侧完整 URL;
+   * 未入表退回逻辑路径直映。
+   */
+  pageIndex?: PageIndex;
+}
+
 /** 任意 URL → 对侧对应 URL;不匹配任何站点返回 null */
-export function mapUrl(rawUrl: string, sites: SitePair[]): MappedUrl | null {
+export function mapUrl(rawUrl: string, sites: SitePair[], opts: MapUrlOptions = {}): MappedUrl | null {
   const hit = findSite(rawUrl, sites);
-  if (!hit) return null;
-  const path = logicalPath(rawUrl, hit.site, hit.side);
-  if (path == null) return null;
+  const fromPath = hit ? logicalPath(rawUrl, hit.site, hit.side) : null;
+
+  // 常规匹配落空时,用页面路径表识别原站扁平页(非 base 子路径,前缀剥离认不出)
+  if (!hit || fromPath == null) {
+    if (opts.pageIndex) {
+      for (const site of sites) {
+        const m = opts.pageIndex.matchOriginUrl(rawUrl, normalizeBase(site.origin));
+        if (m) {
+          return {
+            site,
+            from: 'origin',
+            to: 'mirror',
+            url: buildUrl(site, 'mirror', m.mirrorPath),
+            logicalPath: m.mirrorPath,
+          };
+        }
+      }
+    }
+    return null;
+  }
   const to: Side = hit.side === 'origin' ? 'mirror' : 'origin';
-  return { site: hit.site, from: hit.side, to, url: buildUrl(hit.site, to, path), logicalPath: path };
+
+  // 页面路径表:入表页给完整对侧 URL,锚点表键统一为镜像逻辑路径
+  if (opts.pageIndex) {
+    if (hit.side === 'mirror') {
+      const mapped = opts.pageIndex.toOrigin(fromPath, normalizeBase(hit.site.origin));
+      if (mapped) {
+        return { site: hit.site, from: hit.side, to, url: mapped.url, logicalPath: mapped.mirrorPath };
+      }
+    } else {
+      const mirrorPath = opts.pageIndex.toMirror(fromPath, normalizeBase(hit.site.origin));
+      if (mirrorPath) {
+        return {
+          site: hit.site,
+          from: hit.side,
+          to,
+          url: buildUrl(hit.site, 'mirror', mirrorPath),
+          logicalPath: mirrorPath,
+        };
+      }
+    }
+  }
+
+  // 未入表:两侧逻辑路径本就相同
+  return { site: hit.site, from: hit.side, to, url: buildUrl(hit.site, to, fromPath), logicalPath: fromPath };
 }
 
 /**

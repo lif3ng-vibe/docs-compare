@@ -27,6 +27,12 @@ export interface SitePair {
    * 缺省为 `${mirror}/anchor-map.json`
    */
   anchorMapUrl?: string;
+  /**
+   * 页面路径映射 JSON 的地址(写法同 anchorMapUrl)。
+   * 两侧逻辑路径不一致的站点(原站扁平 /skills-ask-matt ↔ 镜像分组
+   * /engineering/ask-matt)需要;缺省两侧逻辑路径相同,无需配置。
+   */
+  pageMapUrl?: string;
   /** 专注模式 CSS,分别注入两侧 */
   css?: { origin?: string; mirror?: string };
 }

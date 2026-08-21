@@ -48,14 +48,45 @@ for (const site of cfg.sites) {
   }
   const realPairs = Object.values(anchorMap).reduce((n, page) => n + Object.keys(page).length, 0);
 
+  // 页面路径映射:镜像逻辑路径 → 原站完整路径(来源 frontmatter source:)。
+  // 值存原站完整 pathname(core 命中时以 origin host + 完整路径拼 URL)。
+  // 只收录与「base+逻辑路径」推导结果不同的页(真扁平/重组);全站按规律
+  // 嵌套的(如 orca)不产出文件。
+  const originBasePath = (() => {
+    try {
+      const p = new URL(site.origin.replace(/\/+$/, '')).pathname.replace(/\/+$/, '');
+      return p === '' ? null : p;
+    } catch {
+      return null;
+    }
+  })();
+  const pageMap = {};
+  let pageMapEntries = 0;
+  for (const r of results) {
+    if (!r || r.__error || !r.originPath) continue;
+    const derived = (originBasePath ?? '') + (r.page.logicalPath === '/' ? '/' : r.page.logicalPath);
+    const derivedNorm = derived.replace(/\/+$/, '') || '/';
+    if (r.originPath !== derivedNorm && !(originBasePath === null && r.originPath === r.page.logicalPath)) {
+      pageMap[r.page.logicalPath] = r.originPath;
+      pageMapEntries++;
+    }
+  }
+
   const outDir = path.join(root, cfg.outDir ?? 'out', site.id);
   await mkdir(outDir, { recursive: true });
+  const copies = [cfg.copyTo].flat().filter(Boolean);
   const outFile = path.join(outDir, 'anchor-map.json');
   const json = JSON.stringify(anchorMap, null, 2) + '\n';
   await writeFile(outFile, json);
 
+  // 页面路径映射产物(仅两侧不一致时);文件名 page-map.json,随锚点表同一目录分发
+  if (pageMapEntries > 0) {
+    const pj = JSON.stringify(pageMap, null, 2) + '\n';
+    await writeFile(path.join(outDir, 'page-map.json'), pj);
+    for (const c of copies) await writeFile(path.join(root, c, `${site.id}.page-map.json`), pj);
+  }
+
   // 可选:同步一份到扩展打包目录(配置 copyTo),省去手动拷贝
-  const copies = [cfg.copyTo].flat().filter(Boolean);
   for (const c of copies) {
     const destDir = path.join(root, c);
     await mkdir(destDir, { recursive: true });
@@ -63,6 +94,7 @@ for (const site of cfg.sites) {
   }
 
   console.log(`映射条数:${realPairs},覆盖页面:${Object.keys(anchorMap).length}/${pages.length}${Object.keys(overrides).length ? `(含人工补正 ${Object.keys(overrides).length} 页)` : ''}`);
+  if (pageMapEntries > 0) console.log(`页面路径映射:${pageMapEntries} 条(两侧逻辑路径不一致)→ page-map.json`);
   console.log(`已写入 ${outFile}${copies.length ? `(并同步到 ${copies.join(', ')})` : ''}`);
   if (warns.length) {
     console.log(`警告 ${warns.length} 条(详见 report):`);

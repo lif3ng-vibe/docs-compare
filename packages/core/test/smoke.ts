@@ -5,6 +5,7 @@
  */
 import { AnchorIndex } from '../src/anchors';
 import { parseSites } from '../src/config';
+import { PageIndex } from '../src/pages';
 import { findBracket, interpAt, scrollRatio, scrollTopFor } from '../src/scroll';
 import { logicalPath, mapUrl, normalizePathKey } from '../src/url';
 import type { SitePair } from '../src/types';
@@ -43,6 +44,28 @@ eq(m1?.url, 'https://you.github.io/my-zh/learn/hooks', '原站 → 镜像(丢弃
 const m2 = mapUrl('https://you.github.io/my-zh/learn/hooks', sites);
 eq(m2?.url, 'https://example.dev/docs/guide/learn/hooks', '镜像 → 原站');
 eq(mapUrl('https://unknown.dev/x', sites), null, '未知站点 → null');
+
+console.log('PageIndex / mapUrl 页面路径映射');
+const flatSite: SitePair = {
+  id: 'flat',
+  origin: 'https://aihero.dev/skills',
+  mirror: 'https://you.github.io/mp-zh',
+};
+const pi = PageIndex.fromRaw({ '/engineering/ask-matt': '/skills-ask-matt' });
+const p1 = mapUrl('https://you.github.io/mp-zh/engineering/ask-matt', [flatSite], { pageIndex: pi });
+eq(p1?.url, 'https://aihero.dev/skills-ask-matt', '镜像分组路径 → 原站扁平完整路径');
+eq(p1?.logicalPath, '/engineering/ask-matt', 'logicalPath 统一为镜像侧(锚点表键)');
+const p2 = mapUrl('https://aihero.dev/skills/skills-ask-matt', [flatSite], { pageIndex: pi });
+eq(p2?.url, 'https://you.github.io/mp-zh/engineering/ask-matt', '原站扁平路径 → 镜像分组路径');
+eq(p2?.logicalPath, '/engineering/ask-matt', 'origin 侧 logicalPath 亦归到镜像路径');
+const p3 = mapUrl('https://you.github.io/mp-zh/other/page', [flatSite], { pageIndex: pi });
+eq(p3?.url, 'https://aihero.dev/skills/other/page', '未入表路径退回逻辑路径直映');
+eq(mapUrl('https://you.github.io/mp-zh/engineering/ask-matt', [flatSite])?.url, 'https://aihero.dev/skills/engineering/ask-matt', '无 pageIndex 时退回旧行为');
+// 真实形态:原站扁平页是 base 的兄弟路径,前缀剥离认不出,靠表识别
+const p4 = mapUrl('https://aihero.dev/skills-ask-matt', [flatSite], { pageIndex: pi });
+eq(p4?.url, 'https://you.github.io/mp-zh/engineering/ask-matt', '原站兄弟路径(base 外)→ 镜像分组路径');
+eq(p4?.logicalPath, '/engineering/ask-matt', '兄弟路径命中 logicalPath 归镜像侧');
+eq(mapUrl('https://aihero.dev/skills-ask-matt', [flatSite]), null, '无 pageIndex 时兄弟路径不可识别(null)');
 
 console.log('normalizePathKey');
 eq(normalizePathKey('/a/b/'), '/a/b', '去尾斜杠');

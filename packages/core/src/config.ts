@@ -65,6 +65,7 @@ export function parseSites(input: unknown): ParseResult {
       originStripHtmlExt: o.originStripHtmlExt === true || undefined,
       mirrorStripHtmlExt: o.mirrorStripHtmlExt === true || undefined,
       anchorMapUrl: str(o.anchorMapUrl),
+      pageMapUrl: str(o.pageMapUrl),
       css: css && (css.origin || css.mirror) ? css : undefined,
     });
   });

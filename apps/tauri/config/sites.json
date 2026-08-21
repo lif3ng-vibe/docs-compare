@@ -15,12 +15,14 @@
     "id": "mattpocock-skills",
     "origin": "https://www.aihero.dev/skills",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/mattpocock-skills",
-    "anchorMapUrl": "anchor-maps/mattpocock-skills.json"
+    "anchorMapUrl": "anchor-maps/mattpocock-skills.json",
+    "pageMapUrl": "anchor-maps/mattpocock-skills.page-map.json"
   },
   {
     "id": "ai-coding-dictionary",
     "origin": "https://www.aihero.dev/ai-coding-dictionary",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-coding-dictionary",
-    "anchorMapUrl": "anchor-maps/ai-coding-dictionary.json"
+    "anchorMapUrl": "anchor-maps/ai-coding-dictionary.json",
+    "pageMapUrl": "anchor-maps/ai-coding-dictionary.page-map.json"
   }
 ]

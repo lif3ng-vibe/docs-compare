@@ -8,7 +8,7 @@
  * - pendingUrl 期望 URL 回声消除(自己发起的导航,其 URL 变更事件被吞掉)
  * - 逻辑路径相同 → 只发锚点滚动,不重载对侧
  */
-import { AnchorIndex, defaultAnchorMapUrl, mapUrl, normalizePathKey, parseSites } from '@docs-compare/core';
+import { AnchorIndex, PageIndex, defaultAnchorMapUrl, mapUrl, normalizePathKey, parseSites } from '@docs-compare/core';
 import type { SitePair, SyncSettings } from '@docs-compare/core';
 import { pathToFileURL } from 'node:url';
 import { fileURLToPath } from 'node:url';
@@ -51,6 +51,8 @@ export class Engine {
   private pendingUrl = new Map<Side, string>();
   private anchorCache = new Map<string, Promise<AnchorIndex>>();
   private readonly EMPTY_INDEX = AnchorIndex.fromRaw({});
+  private pageCache = new Map<string, Promise<PageIndex>>();
+  private readonly EMPTY_PAGE_INDEX = PageIndex.fromRaw({});
 
   constructor(
     private port: EnginePort,
@@ -75,8 +77,8 @@ export class Engine {
    * 归一化打开:任意一侧 URL → 左=原站、右=镜像。
    * 返回 null 表示不匹配任何站点配置。
    */
-  openPair(rawUrl: string): { leftUrl: string; rightUrl: string; siteId: string } | null {
-    const src = mapUrl(rawUrl, this.sites);
+  async openPair(rawUrl: string): Promise<{ leftUrl: string; rightUrl: string; siteId: string } | null> {
+    const src = await this.mapUrlWithPages(rawUrl);
     if (!src) return null;
     // mapUrl 的 src.url 是"映射后的对侧"地址;归一为 左=原站、右=镜像
     const leftUrl = src.from === 'origin' ? rawUrl : src.url;
@@ -122,7 +124,7 @@ export class Engine {
       return;
     }
     this.viewUrls[side] = rawUrl;
-    const src = mapUrl(rawUrl, this.sites);
+    const src = await this.mapUrlWithPages(rawUrl);
     if (!src) return;
 
     const anchor = decodeURIComponent(new URL(rawUrl).hash.replace(/^#/, ''));
@@ -134,7 +136,7 @@ export class Engine {
         )
       : null;
 
-    const dst = mapUrl(this.viewUrls[other], this.sites);
+    const dst = await this.mapUrlWithPages(this.viewUrls[other]);
     const samePage =
       !!dst &&
       dst.site.id === src.site.id &&
@@ -158,7 +160,7 @@ export class Engine {
     if (!this.settings.scrollSync) return;
     let anchorId: string | null = null;
     if (this.settings.semanticScroll && topId) {
-      const src = mapUrl(this.viewUrls[side], this.sites);
+      const src = await this.mapUrlWithPages(this.viewUrls[side]);
       if (src) {
         anchorId = (await this.anchorIndexFor(src.site)).lookup(
           src.logicalPath,
@@ -192,11 +194,44 @@ export class Engine {
     return p;
   }
 
+  // ---------- 页面路径表(两侧逻辑路径不一致的站点) ----------
+  private pageIndexFor(site: SitePair): Promise<PageIndex> {
+    let p = this.pageCache.get(site.id);
+    if (!p) {
+      if (!site.pageMapUrl) {
+        p = Promise.resolve(this.EMPTY_PAGE_INDEX);
+      } else {
+        let base = this.assetBase;
+        if (!base.endsWith('/')) base += '/';
+        const url = /^https?:/i.test(site.pageMapUrl)
+          ? site.pageMapUrl
+          : new URL(site.pageMapUrl, base.startsWith('file:') ? base : pathToFileURL(base).href).href;
+        p = PageIndex.load(url, nodeFetch).catch((e) => {
+          console.warn(`[dc] ${url} 加载失败,页面路径退回直映:`, e?.message ?? e);
+          return this.EMPTY_PAGE_INDEX;
+        });
+      }
+      this.pageCache.set(site.id, p);
+    }
+    return p;
+  }
+
+  /** mapUrl 包装:带上站点各自的页面路径表 */
+  private async mapUrlWithPages(rawUrl: string): Promise<ReturnType<typeof mapUrl>> {
+    for (const site of this.sites) {
+      if (!site.pageMapUrl) continue;
+      const hit = await mapUrl(rawUrl, [site], { pageIndex: await this.pageIndexFor(site) });
+      if (hit) return hit;
+    }
+    return mapUrl(rawUrl, this.sites);
+  }
+
   // ---------- 专注 CSS(bg:state) ----------
   /** 与扩展 refreshState 同语义:仅 focusCss 开启且站点配了该侧 CSS 才注入 */
   stateFor(side: Side): BgMsg {
     let css: string | null = null;
     if (this.settings.focusCss) {
+      // CSS 注入只看站点归属,路径表不影响判定;用同步 mapUrl 即可
       const src = mapUrl(this.viewUrls[side], this.sites);
       if (src) css = src.site.css?.[src.from] ?? null;
     }

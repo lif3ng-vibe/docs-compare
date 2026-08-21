@@ -40,7 +40,7 @@ async function run(): Promise<void> {
   const errors = engine.loadSites(await readJson(opts.sites ?? join(DIST, 'sites.json')));
   if (errors.length) console.warn('[dc] 站点配置问题:', errors);
 
-  const pair = engine.openPair(opts.url);
+  const pair = await engine.openPair(opts.url);
   if (!pair) {
     console.error(
       `URL 不匹配任何站点配置:${opts.url}\n已配置:${engine

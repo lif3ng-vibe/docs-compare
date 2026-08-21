@@ -12,6 +12,7 @@ import { invoke } from '@tauri-apps/api/core';
 import { listen } from '@tauri-apps/api/event';
 import {
   AnchorIndex,
+  PageIndex,
   defaultAnchorMapUrl,
   mapUrl,
   normalizePathKey,
@@ -36,6 +37,37 @@ const viewUrls: Record<string, string> = { left: 'about:blank', right: 'about:bl
 const pendingUrl = new Map<string, string>();
 const anchorCache = new Map<string, Promise<AnchorIndex>>();
 const EMPTY_INDEX = AnchorIndex.fromRaw({});
+
+// ---------- 页面路径表(两侧逻辑路径不一致的站点) ----------
+const pageCache = new Map<string, Promise<PageIndex>>();
+const EMPTY_PAGE_INDEX = PageIndex.fromRaw({});
+
+function pageIndexFor(site: SitePair): Promise<PageIndex> {
+  let p = pageCache.get(site.id);
+  if (!p) {
+    if (!site.pageMapUrl) {
+      p = Promise.resolve(EMPTY_PAGE_INDEX);
+    } else {
+      const url = /^https?:/i.test(site.pageMapUrl) ? site.pageMapUrl : new URL(site.pageMapUrl, location.href).href;
+      p = PageIndex.load(url).catch((e) => {
+        console.warn(`[dc] ${url} 加载失败,页面路径退回直映:`, e);
+        return EMPTY_PAGE_INDEX;
+      });
+    }
+    pageCache.set(site.id, p);
+  }
+  return p;
+}
+
+/** mapUrl 包装:带上站点各自的页面路径表 */
+async function mapUrlWithPages(rawUrl: string, sitesArr: SitePair[]) {
+  for (const site of sitesArr) {
+    if (!site.pageMapUrl) continue;
+    const hit = await mapUrl(rawUrl, [site], { pageIndex: await pageIndexFor(site) });
+    if (hit) return hit;
+  }
+  return mapUrl(rawUrl, sitesArr);
+}
 
 function resolveAnchorMapUrl(site: SitePair): string {
   const p = site.anchorMapUrl ?? defaultAnchorMapUrl(site);
@@ -75,7 +107,7 @@ async function syncFrom(view: 'left' | 'right', rawUrl: string): Promise<void> {
     return;
   }
   viewUrls[view] = rawUrl;
-  const src = mapUrl(rawUrl, sites);
+  const src = await mapUrlWithPages(rawUrl, sites);
   if (!src) return;
 
   const anchor = decodeURIComponent(new URL(rawUrl).hash.replace(/^#/, ''));
@@ -87,7 +119,7 @@ async function syncFrom(view: 'left' | 'right', rawUrl: string): Promise<void> {
       )
     : null;
 
-  const dst = mapUrl(viewUrls[other], sites);
+  const dst = await mapUrlWithPages(viewUrls[other], sites);
   const samePage =
     !!dst &&
     dst.site.id === src.site.id &&
@@ -113,7 +145,7 @@ async function onScroll(
   if (!settings.scrollSync) return;
   let anchorId: string | null = null;
   if (settings.semanticScroll && topId) {
-    const src = mapUrl(viewUrls[view], sites);
+    const src = await mapUrlWithPages(viewUrls[view], sites);
     if (src) {
       anchorId = (await anchorIndexFor(src.site)).lookup(
         src.logicalPath,
@@ -217,7 +249,7 @@ function wireUi(): void {
   async function openPair(): Promise<void> {
     const url = input?.value?.trim();
     if (!url) return;
-    const src = mapUrl(url, sites);
+    const src = await mapUrlWithPages(url, sites);
     if (!src) {
       show('URL 不匹配任何站点配置');
       return;

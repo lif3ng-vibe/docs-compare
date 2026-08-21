@@ -1,5 +1,6 @@
 import {
   AnchorIndex,
+  PageIndex,
   defaultAnchorMapUrl,
   findSite,
   mapUrl,
@@ -89,12 +90,15 @@ async function sendSafe(tabId: number, msg: BgMsg): Promise<void> {
   }
 }
 
-// ---------- 锚点表 ----------
+// ---------- 锚点表 / 页面路径表 ----------
 
-/** 锚点表地址:绝对 URL 直接用;否则视为扩展内打包路径 */
-function anchorMapLocation(site: SitePair): string {
-  const p = site.anchorMapUrl ?? defaultAnchorMapUrl(site);
+/** 表地址:绝对 URL 直接用;否则视为扩展内打包路径 */
+function tableLocation(p: string): string {
   return /^https?:\/\//.test(p) ? p : chrome.runtime.getURL(p.replace(/^\//, ''));
+}
+
+function anchorMapLocation(site: SitePair): string {
+  return tableLocation(site.anchorMapUrl ?? defaultAnchorMapUrl(site));
 }
 
 function anchorIndexFor(site: SitePair): Promise<AnchorIndex> {
@@ -108,6 +112,37 @@ function anchorIndexFor(site: SitePair): Promise<AnchorIndex> {
     anchorCache.set(site.id, p);
   }
   return p;
+}
+
+const EMPTY_PAGE_INDEX = PageIndex.fromRaw({});
+const pageCache = new Map<string, Promise<PageIndex>>();
+
+/** 页面路径表(两侧逻辑路径不一致的站点);未配置或加载失败 → 空表(退回直映) */
+function pageIndexFor(site: SitePair): Promise<PageIndex> {
+  let p = pageCache.get(site.id);
+  if (!p) {
+    if (!site.pageMapUrl) {
+      p = Promise.resolve(EMPTY_PAGE_INDEX);
+    } else {
+      const url = tableLocation(site.pageMapUrl);
+      p = PageIndex.load(url).catch((e) => {
+        console.warn(`[docs-compare] ${url} 加载失败,页面路径将退回直映:`, e);
+        return EMPTY_PAGE_INDEX;
+      });
+    }
+    pageCache.set(site.id, p);
+  }
+  return p;
+}
+
+/** mapUrl 包装:带上站点各自的页面路径表 */
+async function mapUrlWithPages(rawUrl: string, sites: SitePair[]) {
+  for (const site of sites) {
+    if (!site.pageMapUrl) continue;
+    const withIdx = await mapUrl(rawUrl, [site], { pageIndex: await pageIndexFor(site) });
+    if (withIdx) return withIdx;
+  }
+  return mapUrl(rawUrl, sites);
 }
 
 // ---------- 状态下发 ----------
@@ -146,7 +181,7 @@ async function syncFrom(tabId: number, rawUrl: string): Promise<void> {
   }
 
   const sites = await getSites();
-  const src = mapUrl(rawUrl, sites);
+  const src = await mapUrlWithPages(rawUrl, sites);
   if (!src) return;
 
   const u = new URL(rawUrl);
@@ -164,7 +199,7 @@ async function syncFrom(tabId: number, rawUrl: string): Promise<void> {
     await dropPair(tabId);
     return;
   }
-  const dst = otherTab.url ? mapUrl(otherTab.url, sites) : null;
+  const dst = otherTab.url ? await mapUrlWithPages(otherTab.url, sites) : null;
   const samePage =
     !!dst &&
     dst.site.id === src.site.id &&
@@ -210,7 +245,7 @@ async function doPair(screen?: PopupPair['screen']): Promise<StatusReply> {
   const tab = await activeTab();
   if (!tab?.id || !tab.url || tab.windowId == null) return popupStatusWithError('找不到当前标签页');
   const sites = await getSites();
-  const src = mapUrl(tab.url, sites);
+  const src = await mapUrlWithPages(tab.url, sites);
   if (!src) {
     return popupStatusWithError('当前页不匹配任何站点配置,请先到配置页添加该站点对');
   }
@@ -339,7 +374,7 @@ chrome.runtime.onMessage.addListener((msg: ContentMsg | PopupMsg, sender, sendRe
         let anchorId: string | null = null;
         if (s.semanticScroll && msg.topId && tabId != null) {
           const tab = await chrome.tabs.get(tabId).catch(() => null);
-          const src = tab?.url ? mapUrl(tab.url, await getSites()) : null;
+          const src = tab?.url ? await mapUrlWithPages(tab.url, await getSites()) : null;
           if (src) {
             anchorId = (await anchorIndexFor(src.site)).lookup(
               src.logicalPath,

@@ -115,8 +115,26 @@ export function frontmatterField(md, key) {
 // ---------- 站点扫描 ----------
 
 /**
+ * 原站 URL → 原站侧完整路径(仅归一:去尾斜杠、剥 .html/.md、/index 归目录)。
+ * 不剥 base——page-map 的值是原站完整 pathname(如 /skills-ask-matt),
+ * core 命中表项时直接以 origin host + 完整路径拼 URL,绕过 base/prefix
+ * 剥拼(原站扁平页 /skills-ask-matt 与 base /skills 是兄弟路径,
+ * 剥掉再拼会多出斜杠拼出 /skills/-ask-matt)。
+ */
+export function originPath(originUrl) {
+  let u;
+  try {
+    u = new URL(originUrl);
+  } catch {
+    return null;
+  }
+  let p = u.pathname.replace(/\/index\.html?$/, '').replace(/\.(html?|md)$/, '').replace(/\/+$/, '');
+  return p === '' ? '/' : p;
+}
+
+/**
  * 单站点全量扫描:拉页面清单,逐页抓两侧 HTML 配对。
- * 返回 { pages, results }:results[i] = { page, originUrl, map, warns } 或 { __error }。
+ * 返回 { pages, results }:results[i] = { page, originUrl, map, warns, originPath } 或 { __error }。
  */
 export async function scanSite(cfg, site) {
   const tree = JSON.parse(
@@ -144,7 +162,7 @@ export async function scanSite(cfg, site) {
 
     const [mirrorHtml, originHtml] = await Promise.all([fetchText(mirrorUrl), fetchText(originUrl)]);
     const { map, warns } = pairHeadings(headings(mirrorHtml), headings(originHtml), page.logicalPath);
-    return { page, originUrl, map, warns };
+    return { page, originUrl, originPath: originPath(originUrl), map, warns };
   });
 
   return { pages, results };
