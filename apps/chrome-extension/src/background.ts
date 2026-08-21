@@ -2,6 +2,7 @@ import {
   AnchorIndex,
   PageIndex,
   defaultAnchorMapUrl,
+  defaultPageMapUrl,
   findSite,
   mapUrl,
   normalizePathKey,
@@ -117,28 +118,27 @@ function anchorIndexFor(site: SitePair): Promise<AnchorIndex> {
 const EMPTY_PAGE_INDEX = PageIndex.fromRaw({});
 const pageCache = new Map<string, Promise<PageIndex>>();
 
-/** 页面路径表(两侧逻辑路径不一致的站点);未配置或加载失败 → 空表(退回直映) */
+/** 页面路径表(两侧逻辑路径不一致的站点);未配置或加载失败 → 空表(退回直映)。
+ *  pageMapUrl 未配时自动试打包约定路径 anchor-maps/<id>.page-map.json
+ *  (旧存储配置也能用上新表;不存在则空表)。 */
 function pageIndexFor(site: SitePair): Promise<PageIndex> {
   let p = pageCache.get(site.id);
   if (!p) {
-    if (!site.pageMapUrl) {
+    const path = site.pageMapUrl ?? defaultPageMapUrl(site, site.anchorMapUrl) ?? '';
+    if (!path) {
       p = Promise.resolve(EMPTY_PAGE_INDEX);
     } else {
-      const url = tableLocation(site.pageMapUrl);
-      p = PageIndex.load(url).catch((e) => {
-        console.warn(`[docs-compare] ${url} 加载失败,页面路径将退回直映:`, e);
-        return EMPTY_PAGE_INDEX;
-      });
+      const url = tableLocation(path);
+      p = PageIndex.load(url).catch(() => EMPTY_PAGE_INDEX); // 不存在(404)静默退空表
     }
     pageCache.set(site.id, p);
   }
   return p;
 }
 
-/** mapUrl 包装:带上站点各自的页面路径表 */
+/** mapUrl 包装:带上站点各自的页面路径表(含约定回退,故所有站点都查) */
 async function mapUrlWithPages(rawUrl: string, sites: SitePair[]) {
   for (const site of sites) {
-    if (!site.pageMapUrl) continue;
     const withIdx = await mapUrl(rawUrl, [site], { pageIndex: await pageIndexFor(site) });
     if (withIdx) return withIdx;
   }

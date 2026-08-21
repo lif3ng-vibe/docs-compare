@@ -8,7 +8,15 @@
  * - pendingUrl 期望 URL 回声消除(自己发起的导航,其 URL 变更事件被吞掉)
  * - 逻辑路径相同 → 只发锚点滚动,不重载对侧
  */
-import { AnchorIndex, PageIndex, defaultAnchorMapUrl, mapUrl, normalizePathKey, parseSites } from '@docs-compare/core';
+import {
+  AnchorIndex,
+  PageIndex,
+  defaultAnchorMapUrl,
+  defaultPageMapUrl,
+  mapUrl,
+  normalizePathKey,
+  parseSites,
+} from '@docs-compare/core';
 import type { SitePair, SyncSettings } from '@docs-compare/core';
 import { pathToFileURL } from 'node:url';
 import { fileURLToPath } from 'node:url';
@@ -198,28 +206,25 @@ export class Engine {
   private pageIndexFor(site: SitePair): Promise<PageIndex> {
     let p = this.pageCache.get(site.id);
     if (!p) {
-      if (!site.pageMapUrl) {
+      const path = site.pageMapUrl ?? defaultPageMapUrl(site, site.anchorMapUrl) ?? '';
+      if (!path) {
         p = Promise.resolve(this.EMPTY_PAGE_INDEX);
       } else {
         let base = this.assetBase;
         if (!base.endsWith('/')) base += '/';
-        const url = /^https?:/i.test(site.pageMapUrl)
-          ? site.pageMapUrl
-          : new URL(site.pageMapUrl, base.startsWith('file:') ? base : pathToFileURL(base).href).href;
-        p = PageIndex.load(url, nodeFetch).catch((e) => {
-          console.warn(`[dc] ${url} 加载失败,页面路径退回直映:`, e?.message ?? e);
-          return this.EMPTY_PAGE_INDEX;
-        });
+        const url = /^https?:/i.test(path)
+          ? path
+          : new URL(path, base.startsWith('file:') ? base : pathToFileURL(base).href).href;
+        p = PageIndex.load(url, nodeFetch).catch(() => this.EMPTY_PAGE_INDEX); // 不存在(404)静默退空表
       }
       this.pageCache.set(site.id, p);
     }
     return p;
   }
 
-  /** mapUrl 包装:带上站点各自的页面路径表 */
+  /** mapUrl 包装:带上站点各自的页面路径表(含约定回退,故所有站点都查) */
   private async mapUrlWithPages(rawUrl: string): Promise<ReturnType<typeof mapUrl>> {
     for (const site of this.sites) {
-      if (!site.pageMapUrl) continue;
       const hit = await mapUrl(rawUrl, [site], { pageIndex: await this.pageIndexFor(site) });
       if (hit) return hit;
     }

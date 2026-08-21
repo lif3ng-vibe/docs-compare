@@ -14,6 +14,7 @@ import {
   AnchorIndex,
   PageIndex,
   defaultAnchorMapUrl,
+  defaultPageMapUrl,
   mapUrl,
   normalizePathKey,
   parseSites,
@@ -45,24 +46,21 @@ const EMPTY_PAGE_INDEX = PageIndex.fromRaw({});
 function pageIndexFor(site: SitePair): Promise<PageIndex> {
   let p = pageCache.get(site.id);
   if (!p) {
-    if (!site.pageMapUrl) {
+    const path = site.pageMapUrl ?? defaultPageMapUrl(site, site.anchorMapUrl) ?? '';
+    if (!path) {
       p = Promise.resolve(EMPTY_PAGE_INDEX);
     } else {
-      const url = /^https?:/i.test(site.pageMapUrl) ? site.pageMapUrl : new URL(site.pageMapUrl, location.href).href;
-      p = PageIndex.load(url).catch((e) => {
-        console.warn(`[dc] ${url} 加载失败,页面路径退回直映:`, e);
-        return EMPTY_PAGE_INDEX;
-      });
+      const url = /^https?:/i.test(path) ? path : new URL(path, location.href).href;
+      p = PageIndex.load(url).catch(() => EMPTY_PAGE_INDEX); // 不存在(404)静默退空表
     }
     pageCache.set(site.id, p);
   }
   return p;
 }
 
-/** mapUrl 包装:带上站点各自的页面路径表 */
+/** mapUrl 包装:带上站点各自的页面路径表(含约定回退,故所有站点都查) */
 async function mapUrlWithPages(rawUrl: string, sitesArr: SitePair[]) {
   for (const site of sitesArr) {
-    if (!site.pageMapUrl) continue;
     const hit = await mapUrl(rawUrl, [site], { pageIndex: await pageIndexFor(site) });
     if (hit) return hit;
   }

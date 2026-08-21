@@ -76,3 +76,18 @@ export function parseSites(input: unknown): ParseResult {
 export function defaultAnchorMapUrl(site: SitePair): string {
   return `${normalizeBase(site.mirror)}/anchor-map.json`;
 }
+
+/**
+ * 页面路径表的约定路径:与锚点表同目录的 `<siteId>.page-map.json`。
+ * 用户没配 pageMapUrl 的旧存储配置也能自动用上打包表(不存在时
+ * 各实现的加载器退回空表,即原直映行为)。
+ */
+export function defaultPageMapUrl(site: SitePair, anchorMapUrl?: string): string | null {
+  if (anchorMapUrl && !/^https?:\/\//.test(anchorMapUrl)) {
+    // 宿主内相对路径(扩展打包 anchor-maps/<id>.json):同目录推导
+    const i = anchorMapUrl.lastIndexOf('/');
+    const dir = i >= 0 ? anchorMapUrl.slice(0, i + 1) : '';
+    return `${dir}${site.id}.page-map.json`;
+  }
+  return null; // 绝对 URL(镜像站部署)无法推导同目录约定,不猜
+}
