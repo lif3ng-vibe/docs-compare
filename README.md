@@ -80,6 +80,16 @@ npm run selftest:cdp:live   # 真实站点(onorca.dev ↔ GitHub Pages 镜像)
 
 ## 快速开始(Chrome 扩展)
 
+**方式一:直接下载**(无需本地构建)——CI 每次 push 自动构建,固定链接永不过期:
+
+```
+https://github.com/lif3ng-vibe/docs-compare/releases/download/latest/docs-compare-extension.zip
+```
+
+(即仓库首页 Releases 区的「Chrome 扩展(最新构建)」。下载 → 解压 → `chrome://extensions` 开「开发者模式」→「加载已解压的扩展程序」→ 选解压目录)
+
+**方式二:本地构建**:
+
 ```bash
 npm install
 npm run build          # 产物在 apps/chrome-extension/dist/
