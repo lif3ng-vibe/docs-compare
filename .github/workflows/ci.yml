@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: write # gh release 更新 latest(仅 main push 用到;PR 同样授但 release 步骤有 if 挡)
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -29,7 +32,9 @@ jobs:
           CI: '1'
       # live 自测依赖外网站点,不进 CI;需要时本地跑 npm run selftest:cdp:live
 
-      # 扩展 zip:每次 main push 覆盖同名 artifact,链接恒定,随时可下载最新代码的产物
+      # 扩展 zip:双通道分发,均为固定位置
+      # 1) Release latest(首页可见、链接永不过期):每次 main push 滚动更新
+      # 2) artifact(备源):同名覆盖,90 天保留
       - name: 打包扩展 zip
         run: |
           cd apps/chrome-extension/dist
@@ -41,3 +46,24 @@ jobs:
           path: apps/chrome-extension/docs-compare-extension.zip
           retention-days: 90
           overwrite: true
+      - name: 发布到 Release latest(首页固定下载位)
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ github.sha }}
+        run: |
+          DATE=$(date -u '+%Y-%m-%d %H:%M UTC')
+          # 滚动 release:tag latest 每次移到最新 commit;无则创建,有则更新并换附件
+          gh release view latest -R "$GITHUB_REPOSITORY" 2>/dev/null \
+            && gh release delete latest -R "$GITHUB_REPOSITORY" --cleanup-tag --yes \
+            || true
+          gh release create latest \
+            -R "$GITHUB_REPOSITORY" \
+            -t "Chrome 扩展(最新构建)" \
+            -n "main 分支每次 push 自动构建。当前: $SHA @ $DATE
+
+          下载 docs-compare-extension.zip → 解压 → chrome://extensions 开发者模式加载解压目录。
+
+          完整构建日志: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
+            --target main \
+            apps/chrome-extension/docs-compare-extension.zip
