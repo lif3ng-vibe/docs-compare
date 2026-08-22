@@ -173,6 +173,7 @@
     "可安装的-orca-技能": "installable-orca-skills",
     "混合桩与实时指南": "hybrid-stubs-vs-the-live-guide",
     "保持技能最新": "keep-skills-up-to-date",
+    "在主机间分享私有技能": "share-private-skills-between-hosts",
     "发现来源": "discovery-sources",
     "添加你自己的技能": "add-your-own-skills",
     "mcp-服务器": "mcp-servers"
@@ -407,6 +408,7 @@
   },
   "/ssh": {
     "添加-ssh-目标": "add-an-ssh-target",
+    "主机密钥校验": "host-key-verification",
     "使用目标": "use-a-target",
     "高级连接选项": "advanced-connection-options",
     "口令": "passphrases",
