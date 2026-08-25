@@ -153,6 +153,7 @@
   "/cli/reference": {
     "验证运行时": "verify-the-runtime",
     "选择器": "selectors",
+    "选择主机": "choose-a-host",
     "运行时命令": "runtime-commands",
     "仓库": "repos",
     "worktree": "worktrees",
