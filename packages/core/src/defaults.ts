@@ -38,6 +38,13 @@ const RAW = [
     anchorMapUrl: 'anchor-maps/ai-coding-dictionary.json',
     pageMapUrl: 'anchor-maps/ai-coding-dictionary.page-map.json',
   },
+  {
+    id: 'ai-memory',
+    name: 'ai-memory 文档',
+    origin: 'https://lif3ng-vibe.github.io/docs-cn/ai-memory-en',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/ai-memory',
+    anchorMapUrl: 'anchor-maps/ai-memory.json',
+  },
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */

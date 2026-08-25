@@ -50,6 +50,13 @@
           "section-7--工作模式patterns-of-work": "patterns-of-work-heading"
         }
       }
+    },
+    {
+      "id": "ai-memory",
+      "dir": "ai-memory-docs-cn",
+      "origin": "https://lif3ng-vibe.github.io/docs-cn/ai-memory-en",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-memory",
+      "useSourceFrontmatter": false
     }
   ]
 }

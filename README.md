@@ -110,7 +110,7 @@ npm run build          # 产物在 apps/chrome-extension/dist/
 
 3. 打开任一侧的文档页 → 点扩展图标 →「配对并打开对照页」
 
-内置的四个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步):
+内置的五个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步):
 
 ```json
 [
@@ -127,7 +127,10 @@ npm run build          # 产物在 apps/chrome-extension/dist/
   { "id": "ai-coding-dictionary", "origin": "https://www.aihero.dev/ai-coding-dictionary",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-coding-dictionary",
     "anchorMapUrl": "anchor-maps/ai-coding-dictionary.json",
-    "pageMapUrl": "anchor-maps/ai-coding-dictionary.page-map.json" }
+    "pageMapUrl": "anchor-maps/ai-coding-dictionary.page-map.json" },
+  { "id": "ai-memory", "origin": "https://lif3ng-vibe.github.io/docs-cn/ai-memory-en",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-memory",
+    "anchorMapUrl": "anchor-maps/ai-memory.json" }
 ]
 ```
 4. 分屏方式在 popup 里选:**两窗口平铺**(配对时自动左右平铺)或**同窗口标签页 + Chrome 分屏**(配对时开相邻标签页,右键 →「分屏」;建议关掉 Chrome 分屏自带的同步滚动,避免与扩展叠加)

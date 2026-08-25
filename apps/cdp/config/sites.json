@@ -24,5 +24,11 @@
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-coding-dictionary",
     "anchorMapUrl": "anchor-maps/ai-coding-dictionary.json",
     "pageMapUrl": "anchor-maps/ai-coding-dictionary.page-map.json"
+  },
+  {
+    "id": "ai-memory",
+    "origin": "https://lif3ng-vibe.github.io/docs-cn/ai-memory-en",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-memory",
+    "anchorMapUrl": "anchor-maps/ai-memory.json"
   }
 ]
