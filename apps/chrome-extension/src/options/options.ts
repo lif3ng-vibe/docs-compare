@@ -1,43 +1,9 @@
-import { parseSites } from '@docs-compare/core';
+import { DEFAULT_SITES, parseSites } from '@docs-compare/core';
 
 const $ = <T extends HTMLElement>(id: string): T => document.getElementById(id) as T;
 
-const EXAMPLE = JSON.stringify(
-  [
-    {
-      id: 'orca',
-      name: 'Orca 文档',
-      origin: 'https://www.onorca.dev/docs',
-      mirror: 'https://lif3ng-vibe.github.io/docs-cn/orca',
-      anchorMapUrl: 'anchor-maps/orca.json',
-    },
-    {
-      id: 'codegraph',
-      name: 'CodeGraph 文档',
-      origin: 'https://colbymchenry.github.io/codegraph',
-      mirror: 'https://lif3ng-vibe.github.io/docs-cn/codegraph',
-      anchorMapUrl: 'anchor-maps/codegraph.json',
-    },
-    {
-      id: 'mattpocock-skills',
-      name: 'Matt Pocock 技能库',
-      origin: 'https://www.aihero.dev/skills',
-      mirror: 'https://lif3ng-vibe.github.io/docs-cn/mattpocock-skills',
-      anchorMapUrl: 'anchor-maps/mattpocock-skills.json',
-      pageMapUrl: 'anchor-maps/mattpocock-skills.page-map.json',
-    },
-    {
-      id: 'ai-coding-dictionary',
-      name: 'AI 编程词典',
-      origin: 'https://www.aihero.dev/ai-coding-dictionary',
-      mirror: 'https://lif3ng-vibe.github.io/docs-cn/ai-coding-dictionary',
-      anchorMapUrl: 'anchor-maps/ai-coding-dictionary.json',
-      pageMapUrl: 'anchor-maps/ai-coding-dictionary.page-map.json',
-    },
-  ],
-  null,
-  2,
-);
+/** 配置页初始值 = 内置默认(与 background 兜底同源),保存过的显示用户配置 */
+const EXAMPLE = JSON.stringify(DEFAULT_SITES, null, 2);
 
 async function load(): Promise<void> {
   const got = await chrome.storage.local.get('dc_sites_raw');

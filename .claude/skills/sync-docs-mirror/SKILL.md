@@ -52,7 +52,7 @@ node scripts/check-anchor-drift.mjs     # 全部干净 exit 0;有漂移 exit 1
    - **标题数量不齐 → 该级映射已丢弃**(配对纪律:硬配会产出语义错位映射)。正文页数量不齐 = 漏译,回流程 A 补;**落地页**数量不齐通常是重组,走 manualOverrides(下述)
    - **落地页重组**:核对两侧小节语义,在站点条目加 `manualOverrides`(键=镜像锚点,值=原站锚点;`null` = 剔除镜像新增节的错配)。词典落地页 7 个 Section h3 配原站 7 个 h2 即先例
 4. **两侧路径形态不同**(原站扁平 `/skills-x` ↔ 镜像分组 `/dir/x/`):生成器自动产 `page-map.json`,但要接上配置才生效——五处同步(漏一处某实现就 404):
-   - `apps/chrome-extension/src/options/options.ts` EXAMPLE(+`name` 中文名、`anchorMapUrl`、`pageMapUrl`)
+   - `packages/core/src/defaults.ts` DEFAULT_SITES(+`name` 中文名、`anchorMapUrl`、`pageMapUrl`;扩展的 popup 下拉/options 示例/首次安装兜底都从它派生,冒烟测试守着打包路径约定)
    - `apps/tauri/config/sites.json`、`apps/cdp/config/sites.json`
    - `README.md` 内置站点对示例
    - (anchor-map.config.json 已在步骤 2 加过)

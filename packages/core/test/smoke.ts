@@ -5,6 +5,7 @@
  */
 import { AnchorIndex } from '../src/anchors';
 import { parseSites } from '../src/config';
+import { DEFAULT_SITES } from '../src/defaults';
 import { PageIndex } from '../src/pages';
 import { findBracket, interpAt, scrollRatio, scrollTopFor } from '../src/scroll';
 import { logicalPath, mapUrl, normalizePathKey } from '../src/url';
@@ -94,6 +95,25 @@ eq(parsed.sites.length, 1, '非法/重复项被跳过');
 eq(parsed.sites[0].origin, 'https://a.dev', 'base 尾斜杠被规范');
 eq(parsed.sites[0].name, '甲站', 'name 透传(保存后不丢显示名)');
 eq(parsed.errors.length, 2, '报出全部错误');
+
+console.log('DEFAULT_SITES');
+{
+  const { sites, errors } = parseSites(DEFAULT_SITES);
+  eq(errors.length, 0, '内置站点对全部合法');
+  eq(sites.length, DEFAULT_SITES.length, '无一项被丢弃');
+  // 关键四元组:各实现(扩展/tauri/cdp)及打包表路径约定一致
+  for (const s of DEFAULT_SITES) {
+    eq(s.anchorMapUrl, `anchor-maps/${s.id}.json`, `内置 ${s.id}: anchorMapUrl 走打包约定`);
+    if (s.pageMapUrl !== undefined) {
+      eq(s.pageMapUrl, `anchor-maps/${s.id}.page-map.json`, `内置 ${s.id}: pageMapUrl 走打包约定`);
+    }
+  }
+  eq(
+    DEFAULT_SITES.some((s) => s.id === 'orca' && s.name === 'Orca 文档'),
+    true,
+    '内置站点带中文名(popup 下拉显示)',
+  );
+}
 
 console.log('scroll');
 eq(scrollRatio({ scrollTop: 0, scrollHeight: 2000, clientHeight: 500 }), 0, '顶部 → 0');

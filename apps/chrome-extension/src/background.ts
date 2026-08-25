@@ -1,5 +1,6 @@
 import {
   AnchorIndex,
+  DEFAULT_SITES,
   PageIndex,
   buildUrl,
   defaultAnchorMapUrl,
@@ -37,8 +38,10 @@ const anchorCache = new Map<string, Promise<AnchorIndex>>();
 
 // ---------- 存取 ----------
 
+/** 站点配置:用户在配置页保存过的(dc_sites)优先;否则内置默认(首次安装即有下拉) */
 async function getSites(): Promise<SitePair[]> {
   const got = await chrome.storage.local.get('dc_sites');
+  if (got.dc_sites === undefined) return [...DEFAULT_SITES];
   const { sites, errors } = parseSites(got.dc_sites);
   if (errors.length) console.warn('[docs-compare] 站点配置有问题:', errors);
   return sites;
