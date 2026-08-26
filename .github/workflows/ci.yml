@@ -59,10 +59,12 @@ jobs:
             || true
           gh release create latest \
             -R "$GITHUB_REPOSITORY" \
-            -t "Chrome 扩展(最新构建)" \
-            -n "main 分支每次 push 自动构建。当前: $SHA @ $DATE
+            -t "最新构建(扩展 + 桌面安装包)" \
+            -n "main 分支每次 push 自动滚动扩展构建;桌面安装包由「Tauri 打包(手动)」工作流按需附上。当前: $SHA @ $DATE
 
-          下载 docs-compare-extension.zip → 解压 → chrome://extensions 开发者模式加载解压目录。
+          - docs-compare-extension.zip:Chrome 扩展,解压后 chrome://extensions 开发者模式加载解压目录
+          - docs-compare_*_x64-setup.exe:Windows 安装包(Tauri,手动触发构建)
+          - docs-compare*_aarch64.dmg / *_x64.dmg:macOS 安装包(Tauri,手动触发构建,无签名首开右键打开)
 
           完整构建日志: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
             --target main \

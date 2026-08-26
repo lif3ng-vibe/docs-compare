@@ -86,7 +86,7 @@ npm run selftest:cdp:live   # 真实站点(onorca.dev ↔ GitHub Pages 镜像)
 https://github.com/lif3ng-vibe/docs-compare/releases/download/latest/docs-compare-extension.zip
 ```
 
-(即仓库首页 Releases 区的「Chrome 扩展(最新构建)」。下载 → 解压 → `chrome://extensions` 开「开发者模式」→「加载已解压的扩展程序」→ 选解压目录)
+(即仓库首页 Releases 区的「最新构建(扩展 + 桌面安装包)」。下载 → 解压 → `chrome://extensions` 开「开发者模式」→「加载已解压的扩展程序」→ 选解压目录)
 
 **方式二:本地构建**:
 
