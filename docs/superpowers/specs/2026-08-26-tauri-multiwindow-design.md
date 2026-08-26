@@ -42,9 +42,10 @@ Tauri 版目前单窗口(`main` + `controller`/`left`/`right` 三个子 webview)
 3. **命令窗口绑定**:`dc_eval`/`dc_navigate`/`dc_layout`/`dc_ready`/`dc_new_window`/`dc_set_title` 全部加 `window: tauri::Window` 参数(Tauri 自动注入**发起调用的窗口**,多窗口天然各管各)。`dc_eval`/`dc_navigate` 的 `target` 语义变为「本窗口内的视图名」(`left`/`right`),Rust 侧拼 `format!("{}-{target}", window.label())` 查找;`dc_ready` 同理查本窗口的 left/right。**完整标签逃生门**:target 匹配 `^w\d+-`(如 `w2-left`)时视为完整标签直接查找、不拼前缀——selftest 跨窗口操作用,普通路径不感知。
 4. **信号路由**:`dc-report` 监听器解析上报载荷里的 `view` 字段(完整标签,如 `w2-left`),剥出窗口前缀 `w2`,`emit_to("{w2}-controller", "dc-signal", …)`。载荷无前缀或前缀非 `w\d+-` 格式 → 丢弃并 warn(不可路由)。
 5. **窗口事件**:`on_window_event` 里 `Resized` → `relayout(app, window.label())`(不再写死 `main`)。其余事件不处理。
-6. **新命令 `dc_set_title`**:`fn dc_set_title(window: tauri::Window, title: String)` → `window.set_title(&title)`。空串回退「Docs Compare」(回退逻辑放前端,后端只透传)。
+6. **标题跟随(实现修订:改 Rust 原生事件)**:原设计经 reporter→controller→`dc_set_title` 命令,实现时发现 JS 信号时机不可靠——`cs:nav` 点击 capture 发生在导航前(title 是旧页的),`cs:hello` 在 WebView2 首次加载不跑 initialization_script 全程 0 条。改为 left webview 构建时挂 `on_document_title_changed`(Tauri 稳定 API)→ `set_title` 到所属窗口:整页导航/SPA/动态 title 全覆盖。`dc_set_title` 命令保留未用(不作为主通道);空 title 回退「Docs Compare」。
 7. **selftest 隔离**:`dc_selftest_done` 里 `app.exit` 语义不变(任何窗口跑 selftest 仍退出整个进程——selftest 只在窗口 1 跑)。`--selftest=layout` 的 `layout_selftest` 全程操作窗口 1(`w1`),把写死的 `"main"`/`"left"`/`"right"` 换成 `"w1"`/`"w1-left"`/`"w1-right"`。
 8. **capabilities**:`windows` 改为 `["w*"]`(Tauri 2 支持 glob 标签,`w*` 覆盖 `w1`、`w1-controller`、`w2-left` 等全部窗口与子 webview;旧标签 `main` 等不再创建,枚举项删除)。
+9. **`dc_new_window` 必须 async(实现修订)**:Tauri 2 在 Windows 上,同步命令里建 webview 会死锁——`add_child` 内部 `run_on_main_thread` + channel 同步等待,而同步命令本身占着主线程(官方文档 "Known issues" 明示 async 命令建窗)。async 命令跑线程池,主线程空闲,channel 才能回包。症状:窗口壳建出、三个子 webview 永远不出现。
 
 ### Reporter(`inject/reporter.ts`)
 
@@ -56,19 +57,20 @@ Tauri 版目前单窗口(`main` + `controller`/`left`/`right` 三个子 webview)
 1. **本窗口前缀**:启动时 `getCurrentWindow().label()`(取自 `@tauri-apps/api/window`)→ 本窗口视图名 = `label.replace(/^w\d+-/, '')`。controller 自身标签是 `w{n}-controller`,剥后缀得 `w{n}`,本窗口 left/right 完整标签 = `w{n}-left`/`w{n}-right`。
 2. **evalIn/navigateTo/applyTo/query**:target 传 `left`/`right` 语义名,invoke `dc_eval` 时由 Rust 拼完整标签(前端不感知完整标签,见上 Rust §3)。
 3. **信号过滤**:`dc-signal` 监听里,`p.view` 先剥 `w\d+-` 前缀得视图名(`left`/`right`),前缀不等于本窗口前缀则忽略(现在 `emit_to` 已按窗口定向,此过滤是双保险)。
-4. **标题跟随**:信号处理里,若视图名为 `left` 且载荷带 `title`,则 `invoke('dc_set_title', { title: p.title || 'Docs Compare' })`。仅左侧驱动(已确认)。防抖:同一标题不重复 invoke(记 lastTitle)。
-5. **「新窗口」按钮**:`index.html` 工具条 `#open-pair` 后加 `<button id="new-window">新窗口</button>`;`wireUi` 挂 click → `invoke('dc_new_window')`。样式复用现有 `button`(蓝底白字)。
-6. **blank.html(待命页)导航后的标题**:左侧从文档页导航回 blank(不会发生——工具条只会导航到站点 URL;初始 blank 阶段 title 保持「Docs Compare」)。初始 title 由 Rust 建窗时 `.title("Docs Compare")` 设定,无需前端处理。
+4. **标题跟随(实现修订)**:controller 不参与——见 Rust §6,原生 `on_document_title_changed` 驱动。若保留 JS 侧 set title,`cs:nav` 的旧页 title 会把原生事件设好的新标题改回去,故彻底移除。
+5. **「新窗口」按钮**:`index.html` 工具条 `#open-pair` 后加 `<button id="new-window">新窗口</button>`(白底蓝边次要样式,与主按钮区分);`wireUi` 挂 click → `invoke('dc_new_window')`,状态栏显示新窗口标签。
+6. **blank.html(待命页)导航后的标题**:左侧从文档页导航回 blank(不会发生——工具条只会导航到站点 URL;初始 blank 阶段 title 保持「Docs Compare」)。初始 title 由 Rust 建窗时 `.title("Docs Compare")` 设定;blank 的 title「待命」会经原生事件写入——实现时用空判定:blank.html 的 `<title>待命</title>` 实测不会覆盖窗口标题(initialization_script 阶段事件不触发),保持现状不额外处理。
 
 ### 数据流(新窗口)
 
 ```
-点「新窗口」→ invoke dc_new_window → Rust 取 NEXT_WINDOW++ → spawn_window(app, n)
+点「新窗口」→ invoke dc_new_window(async,Windows 同步命令死锁)→ Rust 取 NEXT_WINDOW++ → spawn_window(app, n)
   → 新 Window w{n} + w{n}-controller/w{n}-left/w{n}-right(干净初始态,blank.html)
   → 新 controller 独立加载 sites.json、独立状态机
-内容页点击/导航 → reporter dc-report {view: "w{n}-left", t: "cs:nav", title}
+内容页导航/标题变化 → w{n}-left 的 on_document_title_changed(Rust 原生)
+  → 本窗口 set_title → 标题更新
+内容页点击/滚动 → reporter dc-report {view: "w{n}-left", t: "cs:nav"/"cs:scroll"}
   → Rust 路由 emit_to "w{n}-controller" → 本窗口 controller 消费
-  → (左侧) dc_set_title → 该窗口标题更新
 ```
 
 ## 错误处理
