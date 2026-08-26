@@ -1,8 +1,8 @@
 name: Tauri 打包(手动)
 
-# 手动触发:Windows runner 上打 NSIS 安装包,附到 Release latest。
-# 不进 push CI——Rust 冷编译 10+ 分钟,按需跑。
-# 本地等价流程见 .claude/skills/tauri/SKILL.md(实测产物 ~2.2 MB)。
+# 手动触发:Windows(NSIS .exe)+ macOS(.dmg)并行打包,附到 Release latest。
+# 不进 push CI——Rust 冷编译 10+ 分钟,按需跑;公共仓库标准 runner 免费,双平台零成本。
+# 本地等价流程见 .claude/skills/tauri/SKILL.md(Windows 实测 ~2.2 MB)。
 
 on:
   workflow_dispatch: {}
@@ -11,8 +11,18 @@ permissions:
   contents: write # 往 Release latest 传附件
 
 jobs:
-  build-windows:
-    runs-on: windows-latest
+  build:
+    strategy:
+      fail-fast: false # 一平台失败不影响另一平台产物
+      matrix:
+        include:
+          - os: windows-latest
+            platform: windows
+            # bundle.targets 走 tauri.conf.json(nsis);macOS 需 dmg,命令行覆盖
+          - os: macos-latest
+            platform: macos
+            extra-args: --bundles dmg
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
 
@@ -23,7 +33,7 @@ jobs:
 
       - uses: dtolnay/rust-toolchain@stable
 
-      # 按 Cargo.lock 缓存 target/,后续构建 3-5 分钟
+      # 按 Cargo.lock 缓存 target/,后续构建 3-5 分钟(按平台分桶)
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: apps/tauri/src-tauri
@@ -34,15 +44,18 @@ jobs:
       - name: Tauri 前端打包
         run: npm run build:tauri
 
-      - name: 打 NSIS 安装包
+      - name: 打安装包
         working-directory: apps/tauri/src-tauri
-        run: npx --yes @tauri-apps/cli@^2 build
+        run: npx --yes @tauri-apps/cli@^2 build ${{ matrix.extra-args || '' }}
 
       - name: 上传 artifact
         uses: actions/upload-artifact@v4
         with:
-          name: docs-compare-tauri-windows
-          path: apps/tauri/src-tauri/target/release/bundle/nsis/*-setup.exe
+          name: docs-compare-tauri-${{ matrix.platform }}
+          # Windows: nsis/*-setup.exe;macOS: dmg/*.dmg——两形态一次 glob
+          path: |
+            apps/tauri/src-tauri/target/release/bundle/nsis/*-setup.exe
+            apps/tauri/src-tauri/target/release/bundle/dmg/*.dmg
           retention-days: 90
           overwrite: true
 
@@ -55,12 +68,14 @@ jobs:
           SHA: ${{ github.sha }}
         run: |
           DATE=$(date -u '+%Y-%m-%d %H:%M UTC')
-          exe=$(ls apps/tauri/src-tauri/target/release/bundle/nsis/*-setup.exe | head -1)
+          f=$(ls apps/tauri/src-tauri/target/release/bundle/nsis/*-setup.exe \
+              apps/tauri/src-tauri/target/release/bundle/dmg/*.dmg 2>/dev/null | head -1)
+          [ -n "$f" ] || { echo "找不到安装包产物"; exit 1; }
           if ! gh release view latest -R "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
             gh release create latest -R "$GITHUB_REPOSITORY" \
               -t "Chrome 扩展(最新构建)" \
               -n "main 分支每次 push 自动构建。" \
               --target main
           fi
-          gh release upload latest "$exe" -R "$GITHUB_REPOSITORY" --clobber
-          echo "已上传: $exe @ $SHA $DATE"
+          gh release upload latest "$f" -R "$GITHUB_REPOSITORY" --clobber
+          echo "已上传: $f @ $SHA $DATE"
