@@ -1,7 +1,7 @@
 export type { AnchorDir, Side, SitePair, SyncSettings } from './types';
 export { AnchorIndex } from './anchors';
 export type { AnchorLookupOptions, AnchorMap } from './anchors';
-export { DEFAULT_SITES } from './defaults';
+export { DEFAULT_SITES, mergeDefaultSites } from './defaults';
 export { defaultAnchorMapUrl, defaultPageMapUrl, parseSites } from './config';
 export type { ParseResult } from './config';
 export { PageIndex } from './pages';

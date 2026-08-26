@@ -54,3 +54,27 @@ if (parsed.errors.length || parsed.sites.length !== RAW.length) {
 }
 
 export const DEFAULT_SITES: readonly SitePair[] = parsed.sites;
+
+/**
+ * 老安装升级合并:用户保存过的配置 + 内置默认,按 id 合并(用户值优先)。
+ *
+ * 背景:dc_sites 是保存时的快照,内置新收录的站点不会自动出现。
+ * savedDefaultIds 是保存那一刻的内置 id 快照(dc_defaults_at_save):
+ *   - 内置新站(快照里没有的 id)自动补入——用户从没见过它,谈不上删过
+ *   - 快照里有、用户配置里没有的 = 用户当时主动删过,不回补
+ *   - 无快照(更早期安装)退化为按 id 合并,新站同样补入
+ * 用户自定义站点(非内置 id)始终原样保留。
+ */
+export function mergeDefaultSites(
+  saved: readonly SitePair[],
+  savedDefaultIds: readonly string[] | undefined,
+): SitePair[] {
+  const savedIds = new Set(saved.map((s) => s.id));
+  const merged = [...saved];
+  for (const d of DEFAULT_SITES) {
+    if (savedIds.has(d.id)) continue;
+    // 该站在用户保存时还不存在 → 内置新站,补入
+    if (savedDefaultIds === undefined || !savedDefaultIds.includes(d.id)) merged.push(d);
+  }
+  return merged;
+}

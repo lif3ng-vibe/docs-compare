@@ -7,6 +7,7 @@ import {
   defaultPageMapUrl,
   findSite,
   mapUrl,
+  mergeDefaultSites,
   normalizePathKey,
   parseSites,
 } from '@docs-compare/core';
@@ -38,13 +39,17 @@ const anchorCache = new Map<string, Promise<AnchorIndex>>();
 
 // ---------- 存取 ----------
 
-/** 站点配置:用户在配置页保存过的(dc_sites)优先;否则内置默认(首次安装即有下拉) */
+/** 站点配置:用户在配置页保存过的(dc_sites)优先,并合并内置新站
+ *  (保存时快照 dc_defaults_at_save 记录当时的内置 id;快照里没有的 id
+ *  是后来新收录的站,自动补入——老安装升级即可见;用户主动删过的
+ *  内置站不回补);从未保存过则直接用内置默认 */
 async function getSites(): Promise<SitePair[]> {
-  const got = await chrome.storage.local.get('dc_sites');
+  const got = await chrome.storage.local.get(['dc_sites', 'dc_defaults_at_save']);
   if (got.dc_sites === undefined) return [...DEFAULT_SITES];
   const { sites, errors } = parseSites(got.dc_sites);
   if (errors.length) console.warn('[docs-compare] 站点配置有问题:', errors);
-  return sites;
+  const snap = Array.isArray(got.dc_defaults_at_save) ? (got.dc_defaults_at_save as string[]) : undefined;
+  return mergeDefaultSites(sites, snap);
 }
 
 async function getSettings(): Promise<SyncSettings> {

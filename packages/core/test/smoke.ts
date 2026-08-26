@@ -5,7 +5,7 @@
  */
 import { AnchorIndex } from '../src/anchors';
 import { parseSites } from '../src/config';
-import { DEFAULT_SITES } from '../src/defaults';
+import { DEFAULT_SITES, mergeDefaultSites } from '../src/defaults';
 import { PageIndex } from '../src/pages';
 import { findBracket, interpAt, scrollRatio, scrollTopFor } from '../src/scroll';
 import { logicalPath, mapUrl, normalizePathKey } from '../src/url';
@@ -113,6 +113,32 @@ console.log('DEFAULT_SITES');
     true,
     '内置站点带中文名(popup 下拉显示)',
   );
+}
+
+console.log('mergeDefaultSites(老安装升级后新站自动补入)');
+{
+  // 场景:用户在只有 4 站的年代保存过配置;内置后来加了第 5 站
+  const saved4 = DEFAULT_SITES.filter((s) => s.id !== 'ai-memory');
+  const savedAt = saved4.map((s) => s.id); // 保存时的内置快照
+  const merged = mergeDefaultSites(saved4, savedAt);
+  eq(merged.length, DEFAULT_SITES.length, '内置新站(ai-memory)自动补入');
+  eq(
+    merged.some((s) => s.id === 'ai-memory' && s.name === 'ai-memory 文档'),
+    true,
+    '补入的是完整内置定义(带 name/anchorMapUrl)',
+  );
+  // 用户自定义项保留(非内置 id 原样保留;内置 id 用用户的值)
+  const custom = [...saved4, { id: 'my-site', name: '我自己的', origin: 'https://a.dev', mirror: 'https://b.dev' }];
+  eq(mergeDefaultSites(custom, savedAt).length, DEFAULT_SITES.length + 1, '自定义站点保留');
+  // 快照里有、但用户配置删掉的内置站:不回补(用户主动删除,尊重)
+  const deleted = saved4.filter((s) => s.id !== 'orca');
+  const merged2 = mergeDefaultSites(deleted, savedAt);
+  eq(merged2.some((s) => s.id === 'orca'), false, '用户删掉的内置站不回补');
+  eq(merged2.some((s) => s.id === 'ai-memory'), true, '但没删过的新站仍补入');
+  // 无快照(更老的安装,只有 dc_sites 没存过 defaults 快照):只加用户配置里没有的内置站
+  // 此时无法区分「用户删过」与「保存时还没有」,按 id 直接合并(用户值优先)
+  const merged3 = mergeDefaultSites(saved4, undefined);
+  eq(merged3.length, DEFAULT_SITES.length, '无快照时按 id 合并,内置新站补入');
 }
 
 console.log('scroll');
