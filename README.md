@@ -12,6 +12,7 @@ packages/core            通用核心(纯 TS、零浏览器 API,所有实现共�
   src/anchors.ts           anchor-map.json 加载与双向锚点查询
   src/config.ts            站点配置解析校验
   src/scroll.ts            比例滚动 + 语义滚动数学(findBracket/interpAt)
+  src/remote-sites.ts      远程站点列表(GitHub Release 固定 URL 下发+校验)
   test/smoke.ts            冒烟测试(npm test)
 apps/chrome-extension     实现一:Chrome MV3 扩展(esbuild 打包)
   src/background.ts        同步状态机:所有导航信号汇入 syncFrom(),比较后驱动对侧
@@ -29,6 +30,7 @@ apps/cdp                  实现三:CDP 驱动 Chrome(Node CLI,零新壳)
   src/reporter.ts          content.ts 平移(上行 window.dcReport binding)
   src/selftest.ts          自动化测试(fixture/live 双模式)
 scripts/gen-anchor-map.mjs  锚点表生成器
+scripts/gen-remote-sites.mjs  远程 sites.json 生成器(CI 上传 Release,见「收录新站点」)
 scripts/check-anchor-drift.mjs  锚点漂移检测(原站更新后表过期检查)
 scripts/lib/anchor-scan.mjs    两者共用的抓取/配对逻辑
 ```
@@ -47,8 +49,9 @@ cd apps/tauri/src-tauri && cargo run
 ```
 
 - 工具条粘贴原站 URL → 「对照打开」(回车同效);左右自动归一为 原站/镜像
+- 工具条站点下拉:列出全部站点对(与扩展 popup 同源),选中即开该站首页对照;与 URL 框双向联动
 - 中间分隔条可拖拽;窗口缩放时**按比例**保持左右分割(默认 50/50),两侧滚动条始终完整可见
-- 站点配置:`apps/tauri/config/sites.json`(与扩展同一 schema,锚点表打包在 `anchor-maps/`)
+- 站点配置:启动用打包的 `apps/tauri/config/sites.json`,后台拉远程热更(见「收录新站点」)
 - 自动化测试(窗口会弹出,跑完自动退出,exit code 0/1):
 
 ```bash
@@ -110,7 +113,7 @@ npm run build          # 产物在 apps/chrome-extension/dist/
 
 3. 打开任一侧的文档页 → 点扩展图标 →「配对并打开对照页」
 
-内置的六个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步;`official: true` 表示两侧都是官方维护的双语站,下拉打「官方」角标):
+内置的六个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步;`official: true` 表示两侧都是官方维护的双语站,下拉打「官方」角标)。列表会随远程热更自动补新站(见「收录新站点」),以下为兜底快照:
 
 ```json
 [
@@ -195,6 +198,35 @@ node scripts/check-anchor-drift.mjs     # 有漂移 exit 1,可挂定时任务
 ```
 
 现抓两侧线上标题重算「应有映射」,与打包表(`copyTo` 目录,随扩展/Tauri/CDP 发布,是在役真值)对比。报告新页面未入表 / 新增·失效·变化的映射 / 页面下线 / 两侧标题数量不齐(漏译信号);另作健康检查:生成器产物 out/ 与打包表是否一致、镜像站部署表(若部署)是否同步。有漂移 exit 1,重跑生成器(自动同步 copyTo)、各实现重新打包即可。
+
+## 收录新站点(远程热更,零发版)
+
+站点列表不随客户端发版:CI 每次 push main 会把 `sites.json` + 全部锚点表
+(平铺命名 `anchor-maps-<id>[.page-map].json`)上传到
+[Release latest](https://github.com/lif3ng-vibe/docs-compare/releases/tag/latest),
+固定 URL `releases/download/latest/<file>` 永不变化。扩展与 Tauri 客户端
+启动后台拉取,成功即热更——**新增站点合入 main,所有客户端下次启动自动出现**。
+
+收录一个新站点的完整流程:
+
+1. **加配置**:改 `packages/core/src/defaults.ts`(`DEFAULT_SITES` 追加一项:
+   id/名称/origin/mirror/`official` 标记等)——这是唯一事实源,
+   CI 用 `scripts/gen-remote-sites.mjs` 从它生成下发的 sites.json
+   (anchorMapUrl 自动改写为 Release 绝对 URL)
+2. **生成锚点表**:`scripts/anchor-map.config.json` 加站点对 → `node scripts/gen-anchor-map.mjs`
+   → 产物自动 `copyTo` 到 `apps/chrome-extension/src/static/anchor-maps/<id>.json`
+   (CI 会把该目录整体上传 Release)
+3. **同步打包兜底**:`apps/tauri/config/sites.json`、`apps/cdp/config/sites.json`
+   抄同一份(离线/CI 时的兜底数据;name 等字段与 defaults.ts 保持一致)
+4. **验证后合入**:本地 `npm test && npm run typecheck`,合入 main 后 CI 自动
+   滚动 Release;可顺手 `curl -sL .../releases/download/latest/sites.json` 抽查
+
+客户端加载策略(拉不到就退打包,永不白屏):
+
+- **Tauri**:启动加载打包 sites.json 立即可用,后台拉远程,成功整体替换并重渲染下拉
+- **扩展**:SW 冷启动拉一次存 `dc_sites_remote`;`getSites()` 三级合并
+  **用户手存 > 远程 > 打包内置**(用户改过的 id 不被远程覆盖;远程新站自动补入)
+- 拉取失败/超时(5s)/校验不过 → 静默用本地,下次再试;远程锚点表 404 → 空表退化为锚点原样透传
 
 ## 已知简化(v1)
 

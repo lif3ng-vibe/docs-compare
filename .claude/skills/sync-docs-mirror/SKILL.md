@@ -56,7 +56,14 @@ node scripts/check-anchor-drift.mjs     # 全部干净 exit 0;有漂移 exit 1
    - `apps/tauri/config/sites.json`、`apps/cdp/config/sites.json`
    - `README.md` 内置站点对示例
    - (anchor-map.config.json 已在步骤 2 加过)
-5. `npm run typecheck && npm test && npm run build` 全绿后 commit;用户确认后 push(push 后 CI 出 Release latest 新 zip)
+5. `npm run typecheck && npm test && npm run build` 全绿后 commit;用户确认后 push
+6. **push 后远程热更自动生效**(无需发版):CI 把 `sites.json`(gen-remote-sites.mjs
+   从 DEFAULT_SITES 生成,锚点表 URL 自动改写为 Release 绝对地址)+ 全部锚点表
+   (平铺 `anchor-maps-<id>[.page-map].json`)上传 Release latest。扩展 SW 冷启动、
+   Tauri 启动即拉到新站。抽查:`curl -sL https://github.com/lif3ng-vibe/docs-compare/releases/download/latest/sites.json`
+   应含新站 id,`anchor-maps-<id>.json` 应 200
+
+## 常量速查
 
 ## 常量速查
 
