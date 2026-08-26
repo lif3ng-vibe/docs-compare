@@ -156,14 +156,28 @@ fn spawn_window(
     for side in ["left", "right"] {
         let label = format!("{win_label}-{side}");
         let init = format!("window.__DC_VIEW__ = {label:?};\n{REPORTER}");
+        let mut builder = WebviewBuilder::new(label, WebviewUrl::App("blank.html".into()))
+            .initialization_script(init)
+            .on_page_load(|wv, payload| {
+                if std::env::var_os("DC_DEBUG").is_some() {
+                    eprintln!("[dc] load: {} {}", wv.label(), payload.url());
+                }
+            });
+        // 标题跟随:left(原站)文档标题 → 本窗口标题。原生事件,整页导航/SPA/
+        // 动态 title 全覆盖——JS 层信号(cs:nav 在导航前发、title 是旧页的;
+        // cs:hello 在 WebView2 首载不可靠)都拿不到导航后的准确时机。
+        if side == "left" {
+            let app2 = app.clone();
+            let wl = win_label.clone();
+            builder = builder.on_document_title_changed(move |_wv, title| {
+                if let Some(win) = app2.get_window(&wl) {
+                    let t = if title.is_empty() { "Docs Compare".to_string() } else { title };
+                    let _ = win.set_title(&t);
+                }
+            });
+        }
         window.add_child(
-            WebviewBuilder::new(label, WebviewUrl::App("blank.html".into()))
-                .initialization_script(init)
-                .on_page_load(|wv, payload| {
-                    if std::env::var_os("DC_DEBUG").is_some() {
-                        eprintln!("[dc] load: {} {}", wv.label(), payload.url());
-                    }
-                }),
+            builder,
             LogicalPosition::new(0.0, TOOLBAR),
             LogicalSize::new(w / 2.0 - GAP / 2.0, (h - TOOLBAR).max(120.0)),
         )?;
@@ -324,8 +338,13 @@ fn w_scale(app: &tauri::AppHandle) -> f64 {
 
 /// 开新窗口(多窗口):分配下一个序号,干净初始态(blank.html 两视图 + 独立 controller)。
 /// 返回新窗口标签(如 "w2"),selftest 与 UI 状态栏提示都用它。
+///
+/// 必须 async:Tauri 2 在 Windows 上,同步命令/事件回调里建 webview 会死锁
+/// (add_child 内部 run_on_main_thread + channel 同步等待,而同步命令本身
+/// 占着主线程,自己等自己;官方文档 "Known issues" 明示要 async 命令建窗)。
+/// async 命令跑在线程池,主线程空闲,channel 才能回包。
 #[tauri::command]
-fn dc_new_window(app: tauri::AppHandle) -> Result<String, String> {
+async fn dc_new_window(app: tauri::AppHandle) -> Result<String, String> {
     let n = next_window_id();
     spawn_window(&app, n, "")
         .map(|w| w.label().to_string())

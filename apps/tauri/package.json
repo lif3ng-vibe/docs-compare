@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "selftest": "npm run build && cd src-tauri && cargo run -- --selftest",
     "selftest:live": "npm run build && cd src-tauri && cargo run -- --selftest=live",
+    "selftest:multiwindow": "npm run build && cd src-tauri && cargo run -- --selftest=multiwindow",
     "selftest:layout": "cd src-tauri && cargo run -- --selftest=layout"
   },
   "dependencies": {

@@ -179,16 +179,9 @@ async function onScroll(
 // ---------- 信号接入 + 自测查询通道 ----------
 let qid = 0;
 const queryWaiters = new Map<string, (v: unknown) => void>();
-
-/** 窗口标题跟随左侧(原站)文档;空标题回退应用名。同标题去重,避免每信号都 invoke */
-let lastTitle = 'Docs Compare';
-function applyWindowTitle(view: 'left' | 'right', title?: string): void {
-  if (view !== 'left' || !title) return;
-  const next = title.trim() || 'Docs Compare';
-  if (next === lastTitle) return;
-  lastTitle = next;
-  void invoke('dc_set_title', { title: next }).catch(() => {});
-}
+// 窗口标题跟随在 Rust 原生实现(left webview 的 on_document_title_changed
+// → set_title):JS 信号里 cs:nav 发生在导航前(title 是旧页的)、cs:hello 在
+// WebView2 首载不可靠,都不如原生事件准。controller 不参与标题。
 
 function query(view: string, expr: string, timeoutMs = 4000): Promise<unknown> {
   const name = `q${++qid}`;
@@ -562,10 +555,131 @@ async function selftest(mode: true | 'live'): Promise<void> {
   });
 }
 
+/** 多窗口自测:开第二窗口 → 独立导航 → 断言隔离与标题跟随(fixture 离线站)。
+ *  对窗口 2 的操作走 dc_eval/dc_navigate 的完整标签逃生门(w2-left 直达,
+ *  Rust 侧不拼发起窗口前缀),不依赖窗口 2 自己的 controller */
+async function multiwindowSelftest(): Promise<void> {
+  const results: TestResult[] = [];
+  const t = async (name: string, fn: () => Promise<void>): Promise<void> => {
+    try {
+      await fn();
+      results.push({ name, pass: true, detail: '' });
+    } catch (e) {
+      results.push({ name, pass: false, detail: String(e) });
+    }
+  };
+
+  const EN = `${location.origin}/fixtures/en`;
+  const ZH = `${location.origin}/fixtures/zh`;
+  sites = [
+    { id: 'fixture', origin: EN, mirror: ZH, anchorMapUrl: `${ZH}/anchor-map.json` },
+  ];
+
+  // 窗口 1:与 fixture 自测相同的初始导航
+  await waitFor(async () => Boolean(await invoke('dc_ready')), 10000, '窗口1 left/right 就绪');
+  await navigateTo('left', `${EN}/index.html`);
+  await navigateTo('right', `${ZH}/index.html`);
+  await waitFor(
+    async () =>
+      String(await query('left', 'location.href', 800).catch(() => '')).includes(
+        '/fixtures/en/index.html',
+      ),
+    8000,
+    '窗口1 left 加载',
+  );
+  await waitFor(
+    async () =>
+      String(await query('right', 'location.href', 800).catch(() => '')).includes(
+        '/fixtures/zh/index.html',
+      ),
+    8000,
+    '窗口1 right 加载',
+  );
+
+  let w2 = '';
+  await t('开第二窗口', async () => {
+    w2 = String(await invoke('dc_new_window'));
+    assert(/^w\d+$/.test(w2), `新窗口标签格式异常:${w2}`);
+    // 窗口 2 内容视图就绪(其 controller 同样在跑,断言只走逃生门不经过它)
+    await waitFor(
+      async () => {
+        try {
+          await invoke('dc_eval', {
+            target: `${w2}-left`,
+            js: 'window.__dcTest && __dcTest("w2probe", location.href)',
+          });
+          return true;
+        } catch {
+          return false;
+        }
+      },
+      10000,
+      `窗口2 ${w2}-left 可用`,
+    );
+  });
+
+  await t('窗口2 独立导航 page2', async () => {
+    await invoke('dc_navigate', { target: `${w2}-left`, url: `${EN}/page2.html` });
+    await invoke('dc_navigate', { target: `${w2}-right`, url: `${ZH}/page2.html` });
+    await waitFor(
+      async () =>
+        String(await query(`${w2}-left`, 'location.href', 800).catch(() => '')).includes(
+          '/fixtures/en/page2.html',
+        ),
+      8000,
+      `窗口2 ${w2}-left 到 page2`,
+    );
+    await waitFor(
+      async () =>
+        String(await query(`${w2}-right`, 'location.href', 800).catch(() => '')).includes(
+          '/fixtures/zh/page2.html',
+        ),
+      8000,
+      `窗口2 ${w2}-right 到 page2`,
+    );
+  });
+
+  await t('两窗口互不干扰', async () => {
+    const l1 = String(await query('left', 'location.href', 2000));
+    assert(l1.includes('/fixtures/en/index.html'), `窗口1 left 被带偏:${l1}`);
+    const r1 = String(await query('right', 'location.href', 2000));
+    assert(r1.includes('/fixtures/zh/index.html'), `窗口1 right 被带偏:${r1}`);
+  });
+
+  await t('窗口1 内导航不影响窗口2', async () => {
+    // 窗口1 左侧跳 page2;窗口2 两视图 URL 必须纹丝不动
+    await evalIn('left', `document.querySelector("a[href='page2.html']").click()`);
+    await waitFor(
+      async () =>
+        String(await query('right', 'location.href', 800).catch(() => '')).includes(
+          '/fixtures/zh/page2.html',
+        ),
+      8000,
+      '窗口1 right 跟随到 page2',
+    );
+    const w2l = String(await query(`${w2}-left`, 'location.href', 2000));
+    assert(w2l.includes('/fixtures/en/page2.html'), `窗口2 left 异常(应为 page2):${w2l}`);
+  });
+
+  await t('标题各随各窗口', async () => {
+    await wait(1200); // 等 cs:nav → dc_set_title 传播
+    const t1 = String(await invoke('dc_window_title', { label: 'w1' }));
+    const t2 = String(await invoke('dc_window_title', { label: w2 }));
+    assert(t1 === 'Fixture EN — Page 2', `窗口1 标题=${t1},期望 Fixture EN — Page 2`);
+    assert(t2 === 'Fixture EN — Page 2', `窗口2 标题=${t2},期望 Fixture EN — Page 2`);
+  });
+
+  const pass = results.filter((r) => r.pass).length;
+  await invoke('dc_selftest_done', {
+    results: JSON.stringify({ pass, total: results.length, results }, null, 2),
+  });
+}
+
 // ---------- 启动 ----------
 async function main(): Promise<void> {
   // 看门狗 + 未捕获异常:selftest 模式下任何卡死/报错都要给 Rust 一个交代
-  const mode = (window as unknown as { __DC_SELFTEST__?: true | 'live' }).__DC_SELFTEST__;
+  const mode = (window as unknown as { __DC_SELFTEST__?: true | 'live' | 'multiwindow' })
+    .__DC_SELFTEST__;
   if (mode) {
     let done = false;
     const bail = (why: string): void => {
@@ -607,13 +721,9 @@ async function main(): Promise<void> {
     }
     const view = parseView(p.view);
     if (!view) return; // 非 w{n}-left/right 格式的信号(路由已定向,格式过滤双保险)
-    if (p.t === 'cs:hello') {
-      viewUrls[view] = p.href ?? viewUrls[view];
-      applyWindowTitle(view, p.title);
-    } else if (p.t === 'cs:nav') {
-      applyWindowTitle(view, p.title);
-      void syncFrom(view, p.href!);
-    } else if (p.t === 'cs:scroll') void onScroll(view, p.topId ?? null, p.frac ?? 0, p.ratio ?? 0);
+    if (p.t === 'cs:hello') viewUrls[view] = p.href ?? viewUrls[view];
+    else if (p.t === 'cs:nav') void syncFrom(view, p.href!);
+    else if (p.t === 'cs:scroll') void onScroll(view, p.topId ?? null, p.frac ?? 0, p.ratio ?? 0);
   });
 
   if (mode) {
@@ -640,7 +750,8 @@ async function main(): Promise<void> {
   }
 
   wireUi();
-  if (mode) await selftest(mode);
+  if (mode === 'multiwindow') await multiwindowSelftest();
+  else if (mode) await selftest(mode);
 }
 
 void main();

@@ -15,6 +15,7 @@
     "selftest": "npm run selftest --workspace @docs-compare/tauri",
     "selftest:live": "npm run selftest:live --workspace @docs-compare/tauri",
     "selftest:layout": "npm run selftest:layout --workspace @docs-compare/tauri",
+    "selftest:multiwindow": "npm run selftest:multiwindow --workspace @docs-compare/tauri",
     "selftest:cdp": "npm run selftest --workspace @docs-compare/cdp",
     "selftest:cdp:live": "npm run selftest:live --workspace @docs-compare/cdp",
     "typecheck": "npm run typecheck --workspaces --if-present",
