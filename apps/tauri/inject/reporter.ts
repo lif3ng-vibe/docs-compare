@@ -89,7 +89,7 @@ import { findBracket, interpAt, scrollRatio, scrollTopFor } from '@docs-compare/
       const href = (a as HTMLAnchorElement).href;
       // 允许任意绝对 scheme(含自测用的 tauri://),只排除脚本/邮件类
       if (href && /^[a-z][a-z0-9+.-]*:/i.test(href) && !/^(javascript|mailto|tel):/i.test(href)) {
-        report({ t: 'cs:nav', href });
+        report({ t: 'cs:nav', href, title: document.title ?? '' });
       }
       if (a.getAttribute('href')?.startsWith('#')) suppressScrollUntil = Date.now() + 1000;
     },
@@ -97,11 +97,11 @@ import { findBracket, interpAt, scrollRatio, scrollTopFor } from '@docs-compare/
   );
   window.addEventListener('hashchange', () => {
     suppressScrollUntil = Date.now() + 1000;
-    report({ t: 'cs:nav', href: location.href });
+    report({ t: 'cs:nav', href: location.href, title: document.title ?? '' });
   });
   // SPA history 路由(init script 运行在主世界时可拦截;失败则由 hashchange 兜底)
   try {
-    const emit = (): void => report({ t: 'cs:nav', href: location.href });
+    const emit = (): void => report({ t: 'cs:nav', href: location.href, title: document.title ?? '' });
     for (const name of ['pushState', 'replaceState'] as const) {
       const orig = history[name].bind(history) as (...args: unknown[]) => unknown;
       history[name] = ((...args: unknown[]) => {
@@ -265,5 +265,5 @@ import { findBracket, interpAt, scrollRatio, scrollTopFor } from '@docs-compare/
   };
 
   document.documentElement.appendChild(flash);
-  report({ t: 'cs:hello', href: location.href });
+  report({ t: 'cs:hello', href: location.href, title: document.title ?? '' });
 })();

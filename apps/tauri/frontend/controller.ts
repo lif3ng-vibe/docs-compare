@@ -10,6 +10,7 @@
  */
 import { invoke } from '@tauri-apps/api/core';
 import { listen } from '@tauri-apps/api/event';
+import { getCurrentWindow } from '@tauri-apps/api/window';
 import {
   AnchorIndex,
   PageIndex,
@@ -40,6 +41,23 @@ const viewUrls: Record<string, string> = { left: 'about:blank', right: 'about:bl
 const pendingUrl = new Map<string, string>();
 const anchorCache = new Map<string, Promise<AnchorIndex>>();
 const EMPTY_INDEX = AnchorIndex.fromRaw({});
+
+// ---------- 多窗口:本窗口标识 ----------
+// controller 自身标签形如 w{n}-controller;剥 -controller 得窗口标签 w{n}。
+// 非 Tauri 环境直接浏览器开 index.html 时回退 w1(行为同首窗)。
+const WINDOW_LABEL = (() => {
+  try {
+    return getCurrentWindow().label.replace(/-controller$/, '');
+  } catch {
+    return 'w1';
+  }
+})();
+/** 上报载荷 view(完整标签 w{n}-left/right)剥出视图名;格式不合法返回 null。
+ *  Rust 转发已按窗口定向,这里格式过滤是双保险 */
+function parseView(view: string | undefined): 'left' | 'right' | null {
+  const m = /^w\d+-(left|right)$/.exec(view ?? '');
+  return m ? (m[1] as 'left' | 'right') : null;
+}
 
 // ---------- 页面路径表(两侧逻辑路径不一致的站点) ----------
 const pageCache = new Map<string, Promise<PageIndex>>();
@@ -161,6 +179,16 @@ async function onScroll(
 // ---------- 信号接入 + 自测查询通道 ----------
 let qid = 0;
 const queryWaiters = new Map<string, (v: unknown) => void>();
+
+/** 窗口标题跟随左侧(原站)文档;空标题回退应用名。同标题去重,避免每信号都 invoke */
+let lastTitle = 'Docs Compare';
+function applyWindowTitle(view: 'left' | 'right', title?: string): void {
+  if (view !== 'left' || !title) return;
+  const next = title.trim() || 'Docs Compare';
+  if (next === lastTitle) return;
+  lastTitle = next;
+  void invoke('dc_set_title', { title: next }).catch(() => {});
+}
 
 function query(view: string, expr: string, timeoutMs = 4000): Promise<unknown> {
   const name = `q${++qid}`;
@@ -554,6 +582,7 @@ async function main(): Promise<void> {
       t?: string;
       view?: string;
       href?: string;
+      title?: string;
       topId?: string | null;
       frac?: number;
       ratio?: number;
@@ -569,10 +598,15 @@ async function main(): Promise<void> {
       }
       return;
     }
-    if (p.view !== 'left' && p.view !== 'right') return;
-    if (p.t === 'cs:hello') viewUrls[p.view] = p.href ?? viewUrls[p.view];
-    else if (p.t === 'cs:nav') void syncFrom(p.view, p.href!);
-    else if (p.t === 'cs:scroll') void onScroll(p.view, p.topId ?? null, p.frac ?? 0, p.ratio ?? 0);
+    const view = parseView(p.view);
+    if (!view) return; // 非 w{n}-left/right 格式的信号(路由已定向,格式过滤双保险)
+    if (p.t === 'cs:hello') {
+      viewUrls[view] = p.href ?? viewUrls[view];
+      applyWindowTitle(view, p.title);
+    } else if (p.t === 'cs:nav') {
+      applyWindowTitle(view, p.title);
+      void syncFrom(view, p.href!);
+    } else if (p.t === 'cs:scroll') void onScroll(view, p.topId ?? null, p.frac ?? 0, p.ratio ?? 0);
   });
 
   if (mode) {
