@@ -61,3 +61,7 @@ button {
   transition: background .15s;
 }
 #divider:hover #handle, #divider.dragging #handle { background: #1a73e8; }
+
+/* 新窗口按钮:次要样式,与主操作「对照打开」区分防误点 */
+#new-window { background: #fff; color: #1a73e8; border: 1px solid #1a73e8; }
+#new-window:hover { background: #eef4fe; }

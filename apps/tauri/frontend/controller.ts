@@ -343,6 +343,13 @@ function wireUi(): void {
   input?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') void openPair();
   });
+
+  // 新窗口:干净初始态(blank 两视图),本窗口状态不受影响
+  document.getElementById('new-window')?.addEventListener('click', () => {
+    invoke('dc_new_window')
+      .then((label) => show(`已开新窗口 ${String(label)}`))
+      .catch((e: unknown) => show(`开窗失败:${String(e)}`));
+  });
 }
 
 // ---------- selftest ----------
