@@ -1,0 +1,198 @@
+{
+  "/": {
+    "选择你的路径": "pick-your-path",
+    "或者让你的智能体来介绍": "or-let-your-agent-introduce-you",
+    "核心指南": "core-guides"
+  },
+  "/agent-automation": {
+    "三种原语": "three-primitives",
+    "智能体身份与启动": "agent-identity-and-launch",
+    "选择控制界面": "choose-the-control-surface",
+    "备用屏幕历史读取": "alternate-screen-history-reads",
+    "示例": "recipes"
+  },
+  "/agent-skill": {
+    "这份技能做什么": "what-the-skill-does",
+    "安装": "install-it",
+    "安全规则": "safety-rule",
+    "面向智能体的参考": "agent-facing-reference"
+  },
+  "/agents": {
+    "受支持的智能体": "supported-agents",
+    "状态权威": "status-authority",
+    "虚拟机与沙箱包装器": "vms-and-sandbox-wrappers",
+    "blocked-状态": "blocked-state",
+    "检测清单": "detection-manifests",
+    "状态汇总": "state-rollups",
+    "直接集成": "direct-integrations",
+    "自定义智能体标签": "custom-agent-labels",
+    "自定义状态标签": "custom-status-labels",
+    "直接附加到智能体": "attach-directly-to-an-agent"
+  },
+  "/cli-reference": {
+    "启动与状态": "launch-and-status",
+    "shell-补全": "shell-completions",
+    "服务器": "server",
+    "通知": "notifications",
+    "会话": "sessions",
+    "工作区": "workspaces",
+    "worktree": "worktrees",
+    "标签页": "tabs",
+    "窗格": "panes",
+    "智能体": "agents",
+    "直接终端附加": "direct-terminal-attach",
+    "输出等待": "output-waits",
+    "集成": "integrations",
+    "插件": "plugins",
+    "读取来源": "read-sources",
+    "环境变量": "environment-variables"
+  },
+  "/concepts": {
+    "工作区": "workspace",
+    "标签页": "tab",
+    "窗格": "pane",
+    "鼠标-ui": "mouse-ui",
+    "智能体": "agent",
+    "会话": "session",
+    "客户端与服务器": "client-and-server",
+    "模式": "modes"
+  },
+  "/configuration": {
+    "配置文件": "config-file",
+    "重载配置": "reload-config",
+    "无客户端终端尺寸": "headless-terminal-size",
+    "终端默认值": "terminal-defaults",
+    "worktree": "worktrees",
+    "远程连接": "remote-attach",
+    "按键绑定": "keybindings",
+    "索引跳转": "indexed-jumps",
+    "自定义命令按键绑定": "custom-command-keybindings",
+    "主题": "theme",
+    "ui-与侧边栏": "ui-and-sidebar",
+    "通知": "notifications",
+    "声音": "sound",
+    "高级配置": "advanced-configuration",
+    "智能体会话恢复": "agent-session-restore",
+    "ime-光标跟踪": "ime-cursor-tracking",
+    "前缀输入源切换": "prefix-input-source-switching",
+    "环境变量": "environment-variables",
+    "日志": "logs",
+    "外层终端窗口标题": "outer-terminal-window-title",
+    "侧边栏行布局": "sidebar-row-layouts"
+  },
+  "/how-to-work": {
+    "本地工作": "local-work",
+    "通过普通-ssh-的远程工作": "remote-work-through-normal-ssh",
+    "用手机工作": "work-from-your-phone",
+    "从本地终端远程工作": "remote-work-from-your-local-terminal",
+    "该用哪条路径": "which-path-to-use"
+  },
+  "/install": {
+    "安装": "install",
+    "用-homebrew-安装": "install-with-homebrew",
+    "用-mise-安装": "install-with-mise",
+    "用-nix-安装": "install-with-nix",
+    "手动下载": "download-manually",
+    "验证": "verify",
+    "更新": "update",
+    "系统要求": "requirements",
+    "windows-压缩包": "windows-archive"
+  },
+  "/integrations": {
+    "安装集成": "install-integrations",
+    "卸载集成": "uninstall-integrations",
+    "herdr-如何使用集成": "how-herdr-uses-integrations",
+    "集成你自己的智能体": "integrate-your-own-agent",
+    "自定义状态标签": "custom-status-labels",
+    "调试集成状态": "debug-integration-state"
+  },
+  "/keyboard": {
+    "前缀键是什么": "what-the-prefix-is",
+    "先学这五个": "learn-these-five-first",
+    "其余的按任务分": "the-rest-by-task",
+    "复制模式": "copy-mode",
+    "一切都可以改": "change-anything",
+    "不用前缀键": "going-prefix-free"
+  },
+  "/marketplace": {
+    "浏览插件": "browse-plugins",
+    "安装插件": "install-a-plugin",
+    "让你的插件被收录": "get-your-plugin-listed",
+    "条目会展示什么": "what-a-listing-shows"
+  },
+  "/persistence-remote": {
+    "分离与重新连接": "detach-and-reattach",
+    "命名会话": "named-sessions",
+    "通过-ssh-远程连接": "remote-attach-over-ssh",
+    "远程命名会话": "remote-named-sessions",
+    "直接终端附加": "direct-terminal-attach",
+    "单进程逃生舱": "single-process-escape-hatch"
+  },
+  "/plugins": {
+    "信任与安全": "trust-and-security",
+    "清单": "manifest",
+    "第一个插件": "first-plugin",
+    "安装与链接": "install-and-link",
+    "构建命令": "build-commands",
+    "启动钩子": "startup-hooks",
+    "命令与环境": "commands-and-environment",
+    "窗格": "panes",
+    "按键绑定": "keybindings",
+    "链接处理器": "link-handlers",
+    "存储": "storage",
+    "插件市场": "marketplace"
+  },
+  "/quick-start": {
+    "创建工作区": "create-a-workspace",
+    "使用鼠标": "use-the-mouse",
+    "运行智能体": "run-an-agent",
+    "键盘操作": "keyboard-control",
+    "分离与回来": "detach-and-come-back",
+    "接下来": "where-next"
+  },
+  "/session-state": {
+    "什么能保留下来": "what-survives",
+    "实时持久化": "live-persistence",
+    "快照恢复": "snapshot-restore",
+    "窗格屏幕历史回放": "pane-screen-history-replay",
+    "智能体原生会话恢复": "native-agent-session-restore",
+    "实时交接": "live-handoff"
+  },
+  "/socket-api": {
+    "选择集成层": "choose-an-integration-layer",
+    "你能控制什么": "what-you-can-control",
+    "cli-示例": "cli-examples",
+    "原始方法": "raw-methods",
+    "智能体视图查询": "agent-view-queries",
+    "插件-api": "plugin-apis",
+    "socket-传输": "socket-transport",
+    "socket-路径": "socket-paths",
+    "智能体状态上报": "agent-state-reporting",
+    "事件订阅": "event-subscriptions",
+    "读取窗格": "reading-panes",
+    "等待状态": "waiting-for-state",
+    "响应结构": "response-shapes",
+    "协议稳定性": "protocol-stability",
+    "实验性窗格图形": "experimental-pane-graphics"
+  },
+  "/troubleshooting": {
+    "windows-上的-cjk-输入法窗口位置错误或光标闪烁": "the-cjk-ime-window-is-misplaced-or-the-cursor-flickers-on-windows",
+    "entertab-或-backspace-触发两次": "enter-tab-or-backspace-fires-twice",
+    "按-optionleft-或-optionright-时输入-3d-或-3c": "optionleft-or-optionright-inserts-3d-or-3c",
+    "herdr-已更新但运行中的会话仍是旧版本": "herdr-updated-but-the-running-session-is-still-old",
+    "找不到-herdr-命令": "the-herdr-command-is-not-found",
+    "直接快捷键没有反应": "a-direct-keybinding-does-nothing",
+    "远程连接无法认证": "remote-attach-cannot-authenticate",
+    "查找诊断日志": "find-diagnostic-logs"
+  },
+  "/windows-beta": {
+    "windows-支持": "supported-on-windows",
+    "部分支持": "partial-support",
+    "已知注意事项": "known-caveats",
+    "复制与粘贴": "copy-and-paste",
+    "windows-不支持": "not-supported-on-windows",
+    "报告-windows-问题": "reporting-windows-issues",
+    "光标渲染": "cursor-rendering",
+    "键盘和鼠标": "keyboard-and-mouse"
+  }
+}

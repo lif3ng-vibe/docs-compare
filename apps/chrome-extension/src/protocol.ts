@@ -89,6 +89,8 @@ export interface SiteOption {
   id: string;
   /** 显示名(配置里的中文别名);缺省下拉显示 id */
   name?: string;
+  /** 官方双语站(origin/mirror 都是官方维护),下拉打「官方」角标 */
+  official?: boolean;
 }
 export interface StatusReply {
   matched: boolean;

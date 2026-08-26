@@ -76,7 +76,8 @@ async function refresh(): Promise<void> {
     for (const s of sites) {
       const opt = document.createElement('option');
       opt.value = s.id;
-      opt.textContent = s.name ?? s.id;
+      // 官方双语站(origin/mirror 都是官方维护)打「官方」后缀,与我们维护的汉化镜像区分
+      opt.textContent = s.official ? `${s.name ?? s.id}(官方)` : (s.name ?? s.id);
       sel.appendChild(opt);
     }
     // 当前页命中且在列表中 → 预选;否则选第一个

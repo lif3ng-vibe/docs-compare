@@ -113,6 +113,11 @@ console.log('DEFAULT_SITES');
     true,
     '内置站点带中文名(popup 下拉显示)',
   );
+  eq(
+    DEFAULT_SITES.filter((s) => s.official).map((s) => s.id),
+    ['herdr'],
+    '官方双语站带 official 标记(下拉打「官方」角标)',
+  );
 }
 
 console.log('mergeDefaultSites(老安装升级后新站自动补入)');

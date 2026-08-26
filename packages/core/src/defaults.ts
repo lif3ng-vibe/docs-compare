@@ -45,6 +45,14 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/ai-memory',
     anchorMapUrl: 'anchor-maps/ai-memory.json',
   },
+  {
+    id: 'herdr',
+    name: 'Herdr 文档',
+    origin: 'https://herdr.dev/docs',
+    mirror: 'https://herdr.dev/zh-cn/docs',
+    anchorMapUrl: 'anchor-maps/herdr.json',
+    official: true,
+  },
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */

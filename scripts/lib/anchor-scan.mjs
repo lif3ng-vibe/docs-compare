@@ -112,6 +112,62 @@ export function frontmatterField(md, key) {
   return m ? m[1].trim() : null;
 }
 
+// ---------- sitemap 页面清单 ----------
+
+/** 抓取 sitemap(支持 sitemapindex 嵌套一层),返回去重后的 loc 列表 */
+export async function sitemapUrls(sitemapUrl) {
+  const xml = await fetchText(sitemapUrl);
+  const locs = [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => m[1]);
+  if (/<sitemapindex/i.test(xml)) {
+    const nested = [];
+    for (const u of locs) nested.push(...(await sitemapUrls(u)));
+    return nested;
+  }
+  return locs;
+}
+
+/**
+ * sitemap 页面清单模式(官方双语站,不走 GitHub 树枚举):
+ * 从 sitemap 里取 origin base 下的页面,逻辑路径 = 剥掉 origin pathname 前缀。
+ * origin base 必须精确到语言根(如 https://herdr.dev/docs),否则会捞进博客/落地页。
+ */
+async function pagesFromSitemap(site) {
+  const locs = await sitemapUrls(site.listFrom.sitemap);
+  const o = new URL(site.origin);
+  const base = o.pathname.replace(/\/+$/, ''); // 如 /docs
+  const pages = [];
+  for (const loc of locs) {
+    let u;
+    try {
+      u = new URL(loc);
+    } catch {
+      continue;
+    }
+    if (u.origin !== o.origin) continue;
+    let p = u.pathname;
+    if (base === '') {
+      if (p === '/') pages.push({ file: null, logicalPath: '/' });
+      else if (p.endsWith('.html') || p.endsWith('.md')) continue; // 站点根裸奔的站少见,谨慎跳过非目录形态
+      else pages.push({ file: null, logicalPath: p.replace(/\/+$/, '') });
+    } else {
+      if (p === `${base}/` || p === base) {
+        pages.push({ file: null, logicalPath: '/' });
+        continue;
+      }
+      if (!p.startsWith(`${base}/`)) continue;
+      const rest = p.slice(base.length + 1).replace(/\/+$/, '');
+      if (rest === '') continue;
+      // .html 归一(目录式优先);非目录也不跳——带扩展名的逻辑路径照收,URL 拼接时原样带回
+      const norm = rest.replace(/\/index\.html?$/, '').replace(/\.html?$/, '');
+      if (norm === '') continue;
+      pages.push({ file: null, logicalPath: `/${norm}` });
+    }
+  }
+  // 去重(逻辑路径维度)
+  const seen = new Set();
+  return pages.filter((p) => (seen.has(p.logicalPath) ? false : (seen.add(p.logicalPath), true)));
+}
+
 // ---------- 站点扫描 ----------
 
 /**
@@ -135,25 +191,34 @@ export function originPath(originUrl) {
 /**
  * 单站点全量扫描:拉页面清单,逐页抓两侧 HTML 配对。
  * 返回 { pages, results }:results[i] = { page, originUrl, map, warns, originPath } 或 { __error }。
+ *
+ * 页面清单两种来源:
+ *   - 默认:GitHub API 读 docs-cn 仓库 <dir>/src/content/docs/ 下的 .md(我们维护的翻译站)
+ *   - site.listFrom = { sitemap: '<url>' }:官方双语站,从 sitemap 枚举
  */
 export async function scanSite(cfg, site) {
-  const tree = JSON.parse(
-    await fetchText(`https://api.github.com/repos/${cfg.repo}/git/trees/${cfg.branch}?recursive=1`),
-  ).tree;
+  let pages;
+  if (site.listFrom?.sitemap) {
+    pages = await pagesFromSitemap(site);
+  } else {
+    const tree = JSON.parse(
+      await fetchText(`https://api.github.com/repos/${cfg.repo}/git/trees/${cfg.branch}?recursive=1`),
+    ).tree;
 
-  const contentDir = `${site.dir}/src/content/docs/`;
-  const pages = tree
-    .filter((t) => t.type === 'blob' && t.path.startsWith(contentDir) && t.path.endsWith('.md'))
-    .map((t) => t.path.slice(contentDir.length))
-    .map((p) => {
-      const noExt = p.replace(/\.md$/, '');
-      return { file: p, logicalPath: noExt === 'index' ? '/' : `/${noExt}` };
-    });
+    const contentDir = `${site.dir}/src/content/docs/`;
+    pages = tree
+      .filter((t) => t.type === 'blob' && t.path.startsWith(contentDir) && t.path.endsWith('.md'))
+      .map((t) => t.path.slice(contentDir.length))
+      .map((p) => {
+        const noExt = p.replace(/\.md$/, '');
+        return { file: p, logicalPath: noExt === 'index' ? '/' : `/${noExt}` };
+      });
+  }
 
   const results = await pool(pages, cfg.concurrency ?? 6, async (page) => {
-    const rawUrl = `https://raw.githubusercontent.com/${cfg.repo}/${cfg.branch}/${site.dir}/src/content/docs/${page.file}`;
     let originUrl = null;
-    if (site.useSourceFrontmatter) {
+    if (site.useSourceFrontmatter && page.file) {
+      const rawUrl = `https://raw.githubusercontent.com/${cfg.repo}/${cfg.branch}/${site.dir}/src/content/docs/${page.file}`;
       const md = await fetchText(rawUrl);
       originUrl = frontmatterField(md, 'source');
     }

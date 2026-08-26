@@ -69,6 +69,7 @@ export function parseSites(input: unknown): ParseResult {
       anchorMapUrl: str(o.anchorMapUrl),
       pageMapUrl: str(o.pageMapUrl),
       css: css && (css.origin || css.mirror) ? css : undefined,
+      official: o.official === true || undefined,
     });
   });
   return { sites, errors };

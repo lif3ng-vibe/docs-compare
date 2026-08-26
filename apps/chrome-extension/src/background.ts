@@ -390,7 +390,7 @@ async function doSetLayout(layout: 'windows' | 'tabs'): Promise<StatusReply> {
 
 async function popupStatus(): Promise<StatusReply> {
   const settings = await getSettings();
-  const siteOptions = (await getSites()).map((s) => ({ id: s.id, name: s.name }));
+  const siteOptions = (await getSites()).map((s) => ({ id: s.id, name: s.name, official: s.official }));
   const tab = await activeTab();
   if (!tab?.url) return { matched: false, paired: false, settings, sites: siteOptions };
   const sites = await getSites();

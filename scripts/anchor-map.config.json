@@ -57,6 +57,13 @@
       "origin": "https://lif3ng-vibe.github.io/docs-cn/ai-memory-en",
       "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-memory",
       "useSourceFrontmatter": false
+    },
+    {
+      "id": "herdr",
+      "origin": "https://herdr.dev/docs",
+      "mirror": "https://herdr.dev/zh-cn/docs",
+      "useSourceFrontmatter": false,
+      "listFrom": { "sitemap": "https://herdr.dev/sitemap.xml" }
     }
   ]
 }

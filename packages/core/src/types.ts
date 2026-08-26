@@ -37,6 +37,12 @@ export interface SitePair {
   pageMapUrl?: string;
   /** 专注模式 CSS,分别注入两侧 */
   css?: { origin?: string; mirror?: string };
+  /**
+   * 官方双语站标记:origin/mirror 都是官方自己维护的(如 herdr 的
+   * /docs ↔ /zh-cn/docs),区别于「原站 + 我们的汉化镜像」。
+   * UI 用(popup 下拉打「官方」角标),逻辑不影响。
+   */
+  official?: boolean;
 }
 
 export type Side = 'origin' | 'mirror';
