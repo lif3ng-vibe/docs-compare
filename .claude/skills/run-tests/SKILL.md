@@ -30,6 +30,7 @@ npm run build:tauri   # Tauri 前端 bundle → frontend-dist/(不编译 Rust)
 | `npm run selftest` | Tauri 版:fixture | 需 cargo,弹 Tauri 窗口 |
 | `npm run selftest:live` | Tauri 版:真实站点 | 外网 + cargo |
 | `npm run selftest:layout` | Tauri 布局:5 组尺寸+最大化+resize | cargo |
+| `npm run selftest:multiwindow` | Tauri 多窗口:开窗/隔离/标题跟随 | cargo |
 
 headless 跑 CDP(无窗口):`npm run selftest --workspace @docs-compare/cdp -- --headless`(CI 同款,env `CI=1`)
 

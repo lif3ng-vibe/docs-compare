@@ -26,6 +26,7 @@ cd apps/tauri/src-tauri && cargo run
 npm run selftest           # fixture 双语站(离线、快):导航/锚点/语义滚动同步
 npm run selftest:live      # 真实站点(外网:onorca.dev ↔ GitHub Pages)
 npm run selftest:layout    # 布局:5 组尺寸+最大化+连续 resize,断言等宽/贴边
+npm run selftest:multiwindow  # 多窗口:开窗/独立导航/互不干扰/标题跟随
 ```
 
 注意:窗口会真实弹出,跑完自动关;fixture 模式离线可跑,live 依赖外网。

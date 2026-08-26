@@ -50,6 +50,8 @@ cd apps/tauri/src-tauri && cargo run
 
 - 工具条粘贴原站 URL → 「对照打开」(回车同效);左右自动归一为 原站/镜像
 - 工具条站点下拉:列出全部站点对(与扩展 popup 同源),选中即开该站首页对照;与 URL 框双向联动
+- 工具条「新窗口」按钮:一键再开一个对照窗口,各窗口独立选站/导航/分隔条,互不干扰
+- 窗口标题跟随左侧(原站)文档标题,切页即变(未打开文档时为「Docs Compare」);Rust 原生 `on_document_title_changed` 事件驱动
 - 中间分隔条可拖拽;窗口缩放时**按比例**保持左右分割(默认 50/50),两侧滚动条始终完整可见
 - 站点配置:启动用打包的 `apps/tauri/config/sites.json`,后台拉远程热更(见「收录新站点」)
 - 自动化测试(窗口会弹出,跑完自动退出,exit code 0/1):
@@ -58,6 +60,7 @@ cd apps/tauri/src-tauri && cargo run
 npm run selftest           # fixture 双语站(离线、快速):导航/锚点/语义滚动同步
 npm run selftest:live      # 真实站点(onorca.dev ↔ GitHub Pages 镜像)
 npm run selftest:layout    # 布局:5 组尺寸 + 最大化 + 连续 resize,断言等宽/贴边
+npm run selftest:multiwindow  # 多窗口:开窗/独立导航/互不干扰/标题跟随
 ```
 
 ## CDP 版
