@@ -1,0 +1,66 @@
+name: Tauri 打包(手动)
+
+# 手动触发:Windows runner 上打 NSIS 安装包,附到 Release latest。
+# 不进 push CI——Rust 冷编译 10+ 分钟,按需跑。
+# 本地等价流程见 .claude/skills/tauri/SKILL.md(实测产物 ~2.2 MB)。
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write # 往 Release latest 传附件
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      # 按 Cargo.lock 缓存 target/,后续构建 3-5 分钟
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: apps/tauri/src-tauri
+
+      - run: npm ci
+
+      # tauri.conf.json 无 beforeBuildCommand,前端产物先手动备好(frontendDist 指向 ../frontend-dist)
+      - name: Tauri 前端打包
+        run: npm run build:tauri
+
+      - name: 打 NSIS 安装包
+        working-directory: apps/tauri/src-tauri
+        run: npx --yes @tauri-apps/cli@^2 build
+
+      - name: 上传 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-compare-tauri-windows
+          path: apps/tauri/src-tauri/target/release/bundle/nsis/*-setup.exe
+          retention-days: 90
+          overwrite: true
+
+      # Release latest 由主 CI 滚动管理(删了重建);这里只追加附件。
+      # 若手动跑时 latest 尚不存在(理论上不会),兜底创建。
+      - name: 附到 Release latest
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ github.sha }}
+        run: |
+          DATE=$(date -u '+%Y-%m-%d %H:%M UTC')
+          exe=$(ls apps/tauri/src-tauri/target/release/bundle/nsis/*-setup.exe | head -1)
+          if ! gh release view latest -R "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create latest -R "$GITHUB_REPOSITORY" \
+              -t "Chrome 扩展(最新构建)" \
+              -n "main 分支每次 push 自动构建。" \
+              --target main
+          fi
+          gh release upload latest "$exe" -R "$GITHUB_REPOSITORY" --clobber
+          echo "已上传: $exe @ $SHA $DATE"
