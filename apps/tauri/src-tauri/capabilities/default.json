@@ -1,11 +1,11 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "dc-default",
-  "description": "controller 全量本地 IPC;left/right 内容视图仅事件发射;远程 https 页面也允许上报(语义见 docs/SPEC.md)",
+  "description": "controller 全量本地 IPC;left/right 内容视图仅事件发射;远程 https 页面也允许上报(语义见 docs/SPEC.md)。多窗口:标签 w{N} 系列,用 glob w* 覆盖",
   "local": true,
   "remote": {
     "urls": ["https://**", "http://**"]
   },
-  "windows": ["main", "controller", "left", "right"],
+  "windows": ["w*"],
   "permissions": ["core:event:default"]
 }
