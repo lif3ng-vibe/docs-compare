@@ -22,6 +22,17 @@ html, body { margin: 0; height: 100%; overflow: hidden; font: 13px/1.5 system-ui
   border-radius: 6px;
   font: 12px ui-monospace, Menlo, monospace;
 }
+#site-select {
+  width: 180px;
+  box-sizing: border-box;
+  padding: 5px 6px;
+  border: 1px solid #cfd4da;
+  border-radius: 6px;
+  font: 12px system-ui, -apple-system, sans-serif;
+  background: #fff;
+  color: #333;
+  text-overflow: ellipsis;
+}
 button {
   padding: 5px 14px;
   border: 0;

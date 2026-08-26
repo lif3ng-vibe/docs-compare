@@ -1,18 +1,21 @@
 [
   {
     "id": "orca",
+    "name": "Orca 文档",
     "origin": "https://www.onorca.dev/docs",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/orca",
     "anchorMapUrl": "anchor-maps/orca.json"
   },
   {
     "id": "codegraph",
+    "name": "CodeGraph 文档",
     "origin": "https://colbymchenry.github.io/codegraph",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/codegraph",
     "anchorMapUrl": "anchor-maps/codegraph.json"
   },
   {
     "id": "mattpocock-skills",
+    "name": "Matt Pocock 技能库",
     "origin": "https://www.aihero.dev/skills",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/mattpocock-skills",
     "anchorMapUrl": "anchor-maps/mattpocock-skills.json",
@@ -20,6 +23,7 @@
   },
   {
     "id": "ai-coding-dictionary",
+    "name": "AI 编程词典",
     "origin": "https://www.aihero.dev/ai-coding-dictionary",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-coding-dictionary",
     "anchorMapUrl": "anchor-maps/ai-coding-dictionary.json",
@@ -27,6 +31,7 @@
   },
   {
     "id": "ai-memory",
+    "name": "ai-memory 文档",
     "origin": "https://lif3ng-vibe.github.io/docs-cn/ai-memory-en",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-memory",
     "anchorMapUrl": "anchor-maps/ai-memory.json"

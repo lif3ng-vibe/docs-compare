@@ -53,6 +53,21 @@ fn main() {
                 eprintln!("[dc] 初始几何: sf={sf} logical={w}x{h}");
             }
 
+            // 中继:内容视图上报 → controller。
+            // 转发必须换事件名(dc-signal):同名会再次触发本监听器,同步递归直到栈溢出。
+            // 必须在创建内容 webview 之前注册:blank.html 加载极快,reporter 的
+            // cs:hello 若在监听就绪前发出会被静默丢弃(selftest 的就绪等待将超时)
+            let handle = app.handle().clone();
+            app.listen("dc-report", move |e| {
+                let Ok(v) = serde_json::from_str::<serde_json::Value>(e.payload()) else {
+                    return;
+                };
+                if std::env::var_os("DC_DEBUG").is_some() {
+                    eprintln!("[dc] report: {}", e.payload());
+                }
+                let _ = handle.emit_to("controller", "dc-signal", v);
+            });
+
             // controller:宿主 UI(工具条+分隔条),铺满窗口,后创建的内容视图盖在上面
             window.add_child(
                 WebviewBuilder::new("controller", WebviewUrl::App("index.html".into()))
@@ -78,19 +93,6 @@ fn main() {
                 )?;
             }
 
-            // 中继:内容视图上报 → controller。
-            // 转发必须换事件名(dc-signal):同名会再次触发本监听器,同步递归直到栈溢出
-            let handle = app.handle().clone();
-            app.listen("dc-report", move |e| {
-                let Ok(v) = serde_json::from_str::<serde_json::Value>(e.payload()) else {
-                    return;
-                };
-                if std::env::var_os("DC_DEBUG").is_some() {
-                    eprintln!("[dc] report: {}", e.payload());
-                }
-                let _ = handle.emit_to("controller", "dc-signal", v);
-            });
-
             // 布局自测:程序化改变窗口尺寸,断言三个视图的几何
             if layout_test {
                 let handle = app.handle().clone();
@@ -104,9 +106,22 @@ fn main() {
                 let _ = relayout(&window.app_handle());
             }
         })
-        .invoke_handler(tauri::generate_handler![dc_eval, dc_navigate, dc_layout, dc_selftest_done])
+        .invoke_handler(tauri::generate_handler![
+            dc_ready,
+            dc_eval,
+            dc_navigate,
+            dc_layout,
+            dc_selftest_done
+        ])
         .run(tauri::generate_context!())
         .expect("error while running docs-compare");
+}
+
+/// 内容视图是否都已创建(selftest 据此决定何时可以开始导航,
+/// 消除 "no webview: left/right" 启动竞态)
+#[tauri::command]
+fn dc_ready(app: tauri::AppHandle) -> bool {
+    app.get_webview("left").is_some() && app.get_webview("right").is_some()
 }
 
 /// 在指定视图执行 JS(任意 origin;init script 保证 __dcApply/__dcTest 存在)
@@ -118,7 +133,11 @@ fn dc_eval(app: tauri::AppHandle, target: String, js: String) -> Result<(), Stri
     let wv = app
         .get_webview(&target)
         .ok_or_else(|| format!("no webview: {target}"))?;
-    wv.eval(&js).map_err(|e| e.to_string())
+    let r = wv.eval(&js).map_err(|e| e.to_string());
+    if let Err(e) = &r {
+        eprintln!("[dc] eval FAILED → {target}: {e}");
+    }
+    r
 }
 
 /// 导航指定视图(比 JS location.href 可靠,尤其自定义 scheme)
@@ -221,7 +240,24 @@ fn layout_selftest(app: tauri::AppHandle) {
         (p.x as f64 / sf, p.y as f64 / sf, s.width as f64 / sf, s.height as f64 / sf)
     }
 
-    std::thread::sleep(Duration::from_millis(1500)); // 等 controller 首次 layout
+    // 等 controller 首次 dc_layout 生效:right 已从初始位 (0,44) 挪到
+    // left 右缘之后。固定 sleep 在慢启动时会截在布局前(存量竞态):
+    // webview 渲染器未就绪时 set_position/set_size 会被静默丢弃,同尺寸
+    // set_size 又不触发 Resized 事件,所以轮询里直接重跑 relayout 直到生效
+    let wait_deadline = std::time::Instant::now() + Duration::from_secs(10);
+    loop {
+        let (_, _, lw, _) = view_rect(&app, "left");
+        let (rx, _, _, _) = view_rect(&app, "right");
+        if rx >= lw && rx > 0.0 {
+            break;
+        }
+        if std::time::Instant::now() > wait_deadline {
+            eprintln!("[layout] 等待首次布局超时,继续执行");
+            break;
+        }
+        let _ = relayout(&app);
+        std::thread::sleep(Duration::from_millis(100));
+    }
     let targets: [(f64, f64, &str); 5] = [
         (1280.0, 860.0, "初始"),
         (1000.0, 700.0, "缩小"),

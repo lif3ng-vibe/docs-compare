@@ -173,10 +173,27 @@ import { findBracket, interpAt, scrollRatio, scrollTopFor } from '@docs-compare/
   window.addEventListener('scroll', onScrollEvt, { passive: true, capture: true });
   // 自测取证:滚动事件到底有没有触发
   (window as unknown as { __dcScrollEvents: () => number }).__dcScrollEvents = () => scrollEventCount;
-  // init script 在 document_start 注入,此时 body 尚未出现,观察 documentElement
-  new MutationObserver(() => {
-    headingsDirty = true;
-  }).observe(document.documentElement, { childList: true, subtree: true });
+  // init script 在 document_start 注入,此时 body 尚未出现,观察 documentElement。
+  // WebView2 的 document_start 时 documentElement 也可能未就绪(为 null),
+  // observe(null) 会抛 TypeError 打断整个 IIFE——__dcApply/__dcTest 装不上、
+  // cs:hello 发不出。防御:documentElement 未就绪时先观察 document,
+  // 等 documentElement 出现后再转挂(并立即失效一次标题缓存)
+  if (document.documentElement) {
+    new MutationObserver((): void => {
+      headingsDirty = true;
+    }).observe(document.documentElement, { childList: true, subtree: true });
+  } else {
+    let rootMo: MutationObserver | null = new MutationObserver((): void => {
+      if (!document.documentElement || !rootMo) return;
+      rootMo.disconnect();
+      rootMo = null;
+      new MutationObserver((): void => {
+        headingsDirty = true;
+      }).observe(document.documentElement, { childList: true, subtree: true });
+      headingsDirty = true;
+    });
+    rootMo.observe(document, { childList: true });
+  }
   window.addEventListener('resize', () => {
     headingsDirty = true;
   });

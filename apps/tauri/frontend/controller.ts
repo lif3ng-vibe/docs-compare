@@ -13,6 +13,7 @@ import { listen } from '@tauri-apps/api/event';
 import {
   AnchorIndex,
   PageIndex,
+  buildUrl,
   defaultAnchorMapUrl,
   defaultPageMapUrl,
   mapUrl,
@@ -106,6 +107,7 @@ async function syncFrom(view: 'left' | 'right', rawUrl: string): Promise<void> {
   }
   viewUrls[view] = rawUrl;
   const src = await mapUrlWithPages(rawUrl, sites);
+  syncSelectFromUrl(src?.site.id ?? null);
   if (!src) return;
 
   const anchor = decodeURIComponent(new URL(rawUrl).hash.replace(/^#/, ''));
@@ -203,6 +205,48 @@ function positionDividerEl(): void {
   if (el) el.style.left = `${divider}px`;
 }
 
+// ---------- 工具条站点下拉 ----------
+/** 渲染站点下拉选项;sites 为空则禁用(仅剩占位项) */
+function renderSiteSelect(): void {
+  const sel = document.getElementById('site-select') as HTMLSelectElement | null;
+  if (!sel) return;
+  sel.replaceChildren();
+  const ph = document.createElement('option');
+  ph.value = '';
+  ph.disabled = true;
+  ph.selected = true;
+  ph.textContent = '选择文档站点…';
+  sel.appendChild(ph);
+  for (const s of sites) {
+    const opt = document.createElement('option');
+    opt.value = s.id;
+    // 官方双语站(origin/mirror 都是官方维护)打「官方」后缀,与我们维护的汉化镜像区分
+    opt.textContent = s.official ? `${s.name ?? s.id}(官方)` : (s.name ?? s.id);
+    sel.appendChild(opt);
+  }
+  sel.disabled = sites.length === 0;
+}
+
+/** 下拉选站:左右各开该站点首页(原站/镜像) */
+async function openSitePair(site: SitePair): Promise<void> {
+  const leftUrl = buildUrl(site, 'origin', '/');
+  const rightUrl = buildUrl(site, 'mirror', '/');
+  await navigateTo('left', leftUrl);
+  await navigateTo('right', rightUrl);
+  const input = document.getElementById('url-left') as HTMLInputElement | null;
+  if (input) input.value = leftUrl;
+  syncSelectFromUrl(site.id);
+  const status = document.getElementById('status');
+  if (status) status.textContent = `${site.id}:已对照打开`;
+}
+
+/** 导航后回填下拉:命中站点则切过去,否则回占位项(程序化赋值不触发 change,无回环) */
+function syncSelectFromUrl(siteId: string | null): void {
+  const sel = document.getElementById('site-select') as HTMLSelectElement | null;
+  if (!sel) return;
+  sel.value = siteId && sites.some((s) => s.id === siteId) ? siteId : '';
+}
+
 function wireUi(): void {
   positionDividerEl();
   scheduleLayout();
@@ -239,6 +283,12 @@ function wireUi(): void {
     dividerEl.addEventListener('pointercancel', end);
   }
 
+  const siteSelect = document.getElementById('site-select') as HTMLSelectElement | null;
+  siteSelect?.addEventListener('change', () => {
+    const site = sites.find((s) => s.id === siteSelect.value);
+    if (site) void openSitePair(site);
+  });
+
   const input = document.getElementById('url-left') as HTMLInputElement | null;
   const status = document.getElementById('status');
   const show = (s: string): void => {
@@ -257,6 +307,7 @@ function wireUi(): void {
     const rightUrl = src.from === 'mirror' ? url : src.url;
     await navigateTo('left', leftUrl);
     await navigateTo('right', rightUrl);
+    syncSelectFromUrl(src.site.id);
     show(`${src.site.id}:已对照打开`);
   }
   document.getElementById('open-pair')?.addEventListener('click', () => void openPair());
@@ -390,15 +441,29 @@ async function selftest(mode: true | 'live'): Promise<void> {
   }
 
   await t('初始导航(对照打开)', async () => {
+    // 等 Rust 侧 left/right webview 都创建好再导航:
+    // WebView2 初始化有快慢,不等会撞上 "no webview: right" 竞态。
+    // (不能用 cs:hello:WebView2 对首次加载不跑 initialization_script,
+    // blank.html 的 hello 只在导航后的页面才上报,平台行为不可靠)
+    await waitFor(async () => Boolean(await invoke('dc_ready')), 10000, 'left/right webview 就绪');
     await navigateTo('left', s.leftHome);
     await navigateTo('right', s.rightHome);
+    // query 是单发+等回信:eval 若落在「导航已提交、reporter 未装好」的窗口会被
+    // __dcTest undefined 静默吞掉,4s 后 reject。这里把超时当"还没好"继续轮询,
+    // 否则第一发撞上加载窗口整个用例就掀桌(改用短超时快速进入下一轮)。
     await waitFor(
-      async () => String(await query('left', 'location.href')).includes(new URL(s.leftHome).pathname),
+      async () =>
+        String(
+          await query('left', 'location.href', 800).catch(() => ''),
+        ).includes(new URL(s.leftHome).pathname),
       s.navTimeout,
       'left 加载',
     );
     await waitFor(
-      async () => String(await query('right', 'location.href')).includes(new URL(s.rightHome).pathname),
+      async () =>
+        String(
+          await query('right', 'location.href', 800).catch(() => ''),
+        ).includes(new URL(s.rightHome).pathname),
       s.navTimeout,
       'right 加载',
     );
@@ -446,7 +511,10 @@ async function selftest(mode: true | 'live'): Promise<void> {
   await t('点链接同步到对侧页面', async () => {
     await evalIn('left', `document.querySelector(${JSON.stringify(s.linkSelector)}).click()`);
     await waitFor(
-      async () => String(await query('right', 'location.href')).includes(s.rightAfterLink),
+      async () =>
+        String(
+          await query('right', 'location.href', 800).catch(() => ''),
+        ).includes(s.rightAfterLink),
       s.navTimeout,
       `right 跳转到 ${s.rightAfterLink}`,
     );
@@ -507,7 +575,7 @@ async function main(): Promise<void> {
   });
 
   if (mode) {
-    // selftest 自带站点配置
+    // selftest 自带站点配置,不渲染下拉(避免干扰测试 UI)
   } else {
     try {
       const res = await fetch('sites.json');
@@ -519,6 +587,7 @@ async function main(): Promise<void> {
     } catch (e) {
       console.warn('[dc] sites.json 加载失败:', e);
     }
+    renderSiteSelect();
   }
 
   wireUi();
