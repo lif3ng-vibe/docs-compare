@@ -56,8 +56,10 @@ jobs:
       - name: 准备远程资产(锚点表平铺命名 anchor-maps-<id>.json,gh 资产名不允许 '/')
         run: |
           mkdir -p out/remote-sites
-          cd apps/chrome-extension/src/static/anchor-maps
-          for f in *.json; do cp "$f" "../../../../out/remote-sites/anchor-maps-$f"; done
+          for f in apps/chrome-extension/src/static/anchor-maps/*.json; do
+            cp "$f" "out/remote-sites/anchor-maps-$(basename "$f")"
+          done
+          ls out/remote-sites/
       - name: 上传扩展 zip(固定名 artifact)
         uses: actions/upload-artifact@v4
         with:
