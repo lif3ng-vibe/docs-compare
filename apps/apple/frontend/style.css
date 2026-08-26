@@ -1,0 +1,96 @@
+html, body { margin: 0; height: 100%; overflow: hidden; font: 13px/1.5 system-ui, -apple-system, sans-serif; }
+
+/* 安全区探针:固定在四边,JS 量取 env() 的数值 */
+#sa-probe-l { position: fixed; top: 0; left: env(safe-area-inset-left); width: 0; height: 0; }
+#sa-probe-r { position: fixed; top: 0; right: env(safe-area-inset-right); width: 0; height: 0; }
+
+#toolbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 44px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* 刘海/圆角设备上工具条内容避让安全区(controller webview 全屏铺满) */
+  padding: 0 max(12px, env(safe-area-inset-right)) 0 max(12px, env(safe-area-inset-left));
+  background: #f5f6f8;
+  border-bottom: 1px solid #dcdfe3;
+  z-index: 10;
+}
+.brand { font-weight: 600; color: #333; margin-right: 4px; }
+#url-left {
+  flex: 1;
+  min-width: 0;
+  max-width: 480px;
+  padding: 5px 10px;
+  border: 1px solid #cfd4da;
+  border-radius: 6px;
+  font: 16px ui-monospace, Menlo, monospace; /* 16px 防 iOS 聚焦自动放大 */
+}
+#site-select {
+  width: 180px;
+  box-sizing: border-box;
+  padding: 5px 6px;
+  border: 1px solid #cfd4da;
+  border-radius: 6px;
+  font: 16px system-ui, -apple-system, sans-serif;
+  background: #fff;
+  color: #333;
+  text-overflow: ellipsis;
+}
+button {
+  padding: 5px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #1a73e8;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+#status { color: #667; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* 分隔条:拖拽改变左右视图宽度;webview 铺在两侧,中间留给本层。
+   单文档模式下隐藏(工具条 #mode-toggle 的 body.single 由 controller 控制) */
+#divider {
+  position: fixed;
+  top: 44px; bottom: env(safe-area-inset-bottom);
+  width: 8px;
+  margin-left: -4px;
+  cursor: col-resize;
+  z-index: 5;
+  touch-action: none;
+}
+#handle {
+  position: absolute;
+  top: 0; bottom: 0; left: 3px;
+  width: 2px;
+  background: #c3c8cf;
+  transition: background .15s;
+}
+#divider:hover #handle, #divider.dragging #handle { background: #1a73e8; }
+body.single #divider { display: none; }
+
+/* iOS v1 不做多窗口(按钮隐藏,controller 代码路径保留) */
+#new-window { display: none; }
+
+/* 布局模式切换与原/译分段:次要样式 */
+#mode-toggle, #side-switch button {
+  background: #fff;
+  color: #1a73e8;
+  border: 1px solid #1a73e8;
+  padding: 5px 10px;
+}
+#mode-toggle:active, #side-switch button:active { background: #eef4fe; }
+#side-switch { display: none; gap: 0; }
+#side-switch button { border-radius: 0; }
+#side-switch #side-origin { border-radius: 6px 0 0 6px; border-right-width: 0; }
+#side-switch #side-mirror { border-radius: 0 6px 6px 0; }
+#side-switch button.on { background: #1a73e8; color: #fff; }
+body.single #side-switch { display: flex; }
+
+/* 窄屏(iPhone 横屏 667–740pt):藏品牌与 URL 输入,保下拉+按钮+状态 */
+@media (max-width: 740px) {
+  .brand, #url-left { display: none; }
+  #site-select { flex: 0 1 180px; min-width: 120px; width: auto; }
+}

@@ -1,16 +1,21 @@
 /**
- * Tauri 版控制器(background.ts 的平移):
- * 信号(dc-report 事件)→ core 映射 → dc_eval 驱动对侧视图。
+ * WKWebView 版控制器(Tauri 版 controller.ts 的平移):
+ * 信号(dcReport 消息)→ core 映射 → dc_eval 驱动对侧视图。
  * 本页同时是宿主 UI:顶部工具条 + 中间可拖分隔条(左右 webview 铺在两侧,
  * 中间 8px 缝隙露出本层拖拽手柄)。
  *
- * selftest 模式(Rust 注入 window.__DC_SELFTEST__):
+ * 传输层差异(vs Tauri):
+ * - 上行 invoke:window.webkit.messageHandlers.dcInvoke.postMessage(JSON),
+ *   原生经 window.__dcDispatch({t:'cmd:result',...}) 回填 Promise
+ * - 信号:原生把 reporter 消息以 __dcDispatch({t:'signal',payload}) 推入
+ * - 布局:分隔条数学改为「内容区偏移」(扣除安全区),dc_layout 上报偏移,
+ *   原生按 ratio = 偏移/可用宽度 换算(语义与 Tauri 版一致)
+ * - 模式:单文档/对照可切(dc_set_mode);原生裁决生效模式并回推 dc:mode
+ *
+ * selftest 模式(Swift 注入 window.__DC_SELFTEST__):
  * - true:fixtures 双语站(离线、快速)
  * - 'live':与浏览器插件相同的真实文档(onorca.dev ↔ GitHub Pages 镜像)
  */
-import { invoke } from '@tauri-apps/api/core';
-import { listen } from '@tauri-apps/api/event';
-import { getCurrentWindow } from '@tauri-apps/api/window';
 import {
   AnchorIndex,
   PageIndex,
@@ -31,7 +36,7 @@ const DEFAULT_SETTINGS: SyncSettings = {
   scrollSync: true,
   semanticScroll: true,
   focusCss: false,
-  layout: 'windows', // Tauri 版固定双视图,此字段仅保持 schema 一致
+  layout: 'windows', // 双视图固定;此字段仅保持 schema 一致
 };
 
 // ---------- 状态 ----------
@@ -42,18 +47,10 @@ const pendingUrl = new Map<string, string>();
 const anchorCache = new Map<string, Promise<AnchorIndex>>();
 const EMPTY_INDEX = AnchorIndex.fromRaw({});
 
-// ---------- 多窗口:本窗口标识 ----------
-// controller 自身标签形如 w{n}-controller;剥 -controller 得窗口标签 w{n}。
-// 非 Tauri 环境直接浏览器开 index.html 时回退 w1(行为同首窗)。
-const WINDOW_LABEL = (() => {
-  try {
-    return getCurrentWindow().label.replace(/-controller$/, '');
-  } catch {
-    return 'w1';
-  }
-})();
-/** 上报载荷 view(完整标签 w{n}-left/right)剥出视图名;格式不合法返回 null。
- *  Rust 转发已按窗口定向,这里格式过滤是双保险 */
+// ---------- 单窗口标识 ----------
+// Swift 侧恒定单窗口 w1,视图标签 w1-left/w1-right。
+/** 上报载荷 view(完整标签 w1-left/right)剥出视图名;格式不合法返回 null。
+ *  Swift 路由已按视图定向,这里格式过滤是双保险 */
 function parseView(view: string | undefined): 'left' | 'right' | null {
   const m = /^w\d+-(left|right)$/.exec(view ?? '');
   return m ? (m[1] as 'left' | 'right') : null;
@@ -102,6 +99,66 @@ function anchorIndexFor(site: SitePair): Promise<AnchorIndex> {
     anchorCache.set(site.id, p);
   }
   return p;
+}
+
+// ---------- 桥接:invoke / 信号(替换 @tauri-apps/api) ----------
+interface WebkitHost {
+  webkit?: {
+    messageHandlers?: {
+      dcInvoke?: { postMessage(s: string): void };
+    };
+  };
+}
+type DispatchMsg =
+  | { t: 'cmd:result'; reqId: number; ok: boolean; value?: unknown; error?: string }
+  | { t: 'signal'; payload: Record<string, unknown> }
+  | { t: 'dc:mode'; mode: LayoutMode; side: SingleSide };
+
+let invokeSeq = 0;
+const invokeWaiters = new Map<number, { resolve: (v: unknown) => void; reject: (e: Error) => void }>();
+const signalSubs: ((p: Record<string, unknown>) => void)[] = [];
+
+function invoke<T = unknown>(cmd: string, args: Record<string, unknown> = {}): Promise<T> {
+  const host = window as typeof window & WebkitHost;
+  const handler = host.webkit?.messageHandlers?.dcInvoke;
+  if (!handler) return Promise.reject(new Error('webkit.messageHandlers.dcInvoke 不可用(非 WKWebView 宿主?)'));
+  return new Promise((resolve, reject) => {
+    const reqId = ++invokeSeq;
+    invokeWaiters.set(reqId, {
+      resolve: (v) => resolve(v as T),
+      reject,
+    });
+    handler.postMessage(JSON.stringify({ cmd, reqId, args }));
+  });
+}
+function onSignal(h: (p: Record<string, unknown>) => void): () => void {
+  signalSubs.push(h);
+  return () => {
+    const i = signalSubs.indexOf(h);
+    if (i >= 0) signalSubs.splice(i, 1);
+  };
+}
+function installDispatch(): void {
+  (window as unknown as { __dcDispatch?: (m: DispatchMsg) => void }).__dcDispatch = (m) => {
+    if (!m || typeof m !== 'object') return;
+    if (m.t === 'cmd:result') {
+      const w = invokeWaiters.get(m.reqId);
+      if (!w) return;
+      invokeWaiters.delete(m.reqId);
+      if (m.ok) w.resolve(m.value);
+      else w.reject(new Error(m.error ?? `invoke 失败:reqId=${m.reqId}`));
+      return;
+    }
+    if (m.t === 'signal') {
+      for (const h of [...signalSubs]) h(m.payload);
+      return;
+    }
+    if (m.t === 'dc:mode') {
+      effectiveMode = m.mode;
+      sideRequested = m.side;
+      applyModeUi();
+    }
+  };
 }
 
 // ---------- 驱动原语 ----------
@@ -179,20 +236,19 @@ async function onScroll(
 // ---------- 信号接入 + 自测查询通道 ----------
 let qid = 0;
 const queryWaiters = new Map<string, (v: unknown) => void>();
-// 窗口标题跟随在 Rust 原生实现(left webview 的 on_document_title_changed
-// → set_title):JS 信号里 cs:nav 发生在导航前(title 是旧页的)、cs:hello 在
-// WebView2 首载不可靠,都不如原生事件准。controller 不参与标题。
+// 窗口标题跟随在 Swift 原生实现(left webview 的 title KVO → scene.title):
+// JS 信号里 cs:nav 发生在导航前(title 是旧页的)、cs:hello 时机不可靠,
+// 都不如原生事件准。controller 不参与标题。
 
 function query(view: string, expr: string, timeoutMs = 4000): Promise<unknown> {
   const name = `q${++qid}`;
   return new Promise((resolve, reject) => {
     let done = false;
-    const off = listen('dc-signal', (e) => {
-      const p = e.payload as { t?: string; name?: string; value?: unknown };
+    const off = onSignal((p) => {
       if (p?.t === 'test:info' && p.name === name) {
         done = true;
         queryWaiters.delete(name);
-        void off.then((u) => u());
+        off();
         resolve(p.value);
       }
     });
@@ -201,30 +257,100 @@ function query(view: string, expr: string, timeoutMs = 4000): Promise<unknown> {
     setTimeout(() => {
       if (!done) {
         queryWaiters.delete(name);
-        void off.then((u) => u());
+        off();
         reject(new Error(`查询超时:${view}:${expr}`));
       }
     }, timeoutMs);
   });
 }
 
-// ---------- 布局 ----------
-let divider = Math.floor(window.innerWidth / 2);
+// ---------- 安全区 + 布局 ----------
+// divider 是「内容区内偏移」(扣除左右安全区);原生按
+// ratio = divider / usableW 换算,与 Tauri 版的窗口内比例语义一致。
+// 安全区数值用页面里的固定探针读 env()(旋转后 env() 自动更新,resize 重读)。
+const insets = { left: 0, right: 0 };
+const MIN_PANE = 120; // 与原生 LayoutMath 一致
+let divider = 0;
 let layoutTimer: number | undefined;
+
+function readInsets(): void {
+  const l = document.getElementById('sa-probe-l');
+  const r = document.getElementById('sa-probe-r');
+  if (l) insets.left = Math.max(0, l.getBoundingClientRect().left);
+  if (r) insets.right = Math.max(0, window.innerWidth - r.getBoundingClientRect().left);
+}
+function usableW(): number {
+  return Math.max(0, window.innerWidth - insets.left - insets.right);
+}
+function clampDivider(v: number): number {
+  const u = usableW();
+  const m = Math.min(MIN_PANE, u / 2);
+  return Math.min(Math.max(v, m), u - m);
+}
 function scheduleLayout(): void {
   if (layoutTimer != null) return;
   layoutTimer = window.setTimeout(() => {
     layoutTimer = undefined;
     void invoke('dc_layout', {
       divider,
-      width: window.innerWidth,
+      width: usableW(),
       height: window.innerHeight,
-    });
+    }).catch(() => {});
   }, 16);
 }
 function positionDividerEl(): void {
   const el = document.getElementById('divider');
-  if (el) el.style.left = `${divider}px`;
+  if (el) el.style.left = `${insets.left + divider}px`;
+}
+
+// ---------- 布局模式:单文档 / 对照 ----------
+type LayoutMode = 'split' | 'single';
+type SingleSide = 'origin' | 'mirror';
+let modeRequested: LayoutMode = 'split';
+let sideRequested: SingleSide = 'mirror'; // 单文档默认看译文
+let effectiveMode: LayoutMode = 'split';
+
+function loadModePrefs(): void {
+  try {
+    if (localStorage.getItem('dc.mode') === 'single') modeRequested = 'single';
+    if (localStorage.getItem('dc.side') === 'origin') sideRequested = 'origin';
+  } catch {
+    // localStorage 不可用时静默用默认
+  }
+}
+function applyModeUi(): void {
+  document.body.classList.toggle('single', effectiveMode === 'single');
+  const mt = document.getElementById('mode-toggle');
+  if (mt) {
+    mt.textContent = effectiveMode === 'single' ? '对照' : '单文';
+    mt.title = effectiveMode === 'single' ? '切换到左右对照' : '切换到单文档';
+  }
+  document.getElementById('side-origin')?.classList.toggle('on', sideRequested === 'origin');
+  document.getElementById('side-mirror')?.classList.toggle('on', sideRequested === 'mirror');
+}
+function showStatus(s: string): void {
+  const status = document.getElementById('status');
+  if (status) status.textContent = s;
+}
+async function requestMode(mode: LayoutMode, side?: SingleSide): Promise<void> {
+  modeRequested = mode;
+  if (side) sideRequested = side;
+  try {
+    localStorage.setItem('dc.mode', modeRequested);
+    localStorage.setItem('dc.side', sideRequested);
+  } catch {
+    // ignore
+  }
+  try {
+    const r = await invoke<{ mode: LayoutMode }>('dc_set_mode', { mode: modeRequested, side: sideRequested });
+    effectiveMode = r.mode;
+  } catch {
+    // 壳未就绪时先按请求值渲染,后续 dc:mode 推送会纠正
+  }
+  applyModeUi();
+  if (effectiveMode === 'single' && modeRequested === 'split') {
+    showStatus('竖屏仅支持单文档,请横屏后对照');
+  }
 }
 
 // ---------- 工具条站点下拉 ----------
@@ -249,7 +375,8 @@ function renderSiteSelect(): void {
   sel.disabled = sites.length === 0;
 }
 
-/** 下拉选站:左右各开该站点首页(原站/镜像) */
+/** 下拉选站:左右各开该站点首页(原站/镜像;单文档模式下隐藏侧同样导航,
+ *  保持两侧同步,切回对照/转横屏即已就位) */
 async function openSitePair(site: SitePair): Promise<void> {
   const leftUrl = buildUrl(site, 'origin', '/');
   const rightUrl = buildUrl(site, 'mirror', '/');
@@ -258,8 +385,7 @@ async function openSitePair(site: SitePair): Promise<void> {
   const input = document.getElementById('url-left') as HTMLInputElement | null;
   if (input) input.value = leftUrl;
   syncSelectFromUrl(site.id);
-  const status = document.getElementById('status');
-  if (status) status.textContent = `${site.id}:已对照打开`;
+  showStatus(`${site.id}:已对照打开`);
 }
 
 /** 导航后回填下拉:命中站点则切过去,否则回占位项(程序化赋值不触发 change,无回环) */
@@ -270,16 +396,17 @@ function syncSelectFromUrl(siteId: string | null): void {
 }
 
 function wireUi(): void {
+  readInsets();
+  divider = clampDivider(Math.floor(usableW() / 2));
   positionDividerEl();
   scheduleLayout();
-  let prevW = window.innerWidth;
+  let prevUsable = usableW();
   window.addEventListener('resize', () => {
-    // 分隔条按比例跟随窗口宽度(默认 50/50,拖过则保持拖动比例)
-    const nw = window.innerWidth;
-    if (prevW > 0 && nw > 0) {
-      divider = Math.min(Math.max((divider / prevW) * nw, 180), nw - 180);
-    }
-    prevW = nw;
+    // 安全区可能随旋转变化:先重读,再按比例换算分隔条,最后上报
+    readInsets();
+    const u = usableW();
+    if (prevUsable > 0 && u > 0) divider = clampDivider((divider / prevUsable) * u);
+    prevUsable = u;
     positionDividerEl();
     scheduleLayout();
   });
@@ -292,7 +419,7 @@ function wireUi(): void {
     });
     dividerEl.addEventListener('pointermove', (e) => {
       if (!dividerEl.classList.contains('dragging')) return;
-      divider = Math.min(Math.max(e.clientX, 180), window.innerWidth - 180);
+      divider = clampDivider(e.clientX - insets.left);
       positionDividerEl();
       scheduleLayout();
     });
@@ -312,16 +439,12 @@ function wireUi(): void {
   });
 
   const input = document.getElementById('url-left') as HTMLInputElement | null;
-  const status = document.getElementById('status');
-  const show = (s: string): void => {
-    if (status) status.textContent = s;
-  };
   async function openPair(): Promise<void> {
     const url = input?.value?.trim();
     if (!url) return;
     const src = await mapUrlWithPages(url, sites);
     if (!src) {
-      show('URL 不匹配任何站点配置');
+      showStatus('URL 不匹配任何站点配置');
       return;
     }
     // mapUrl 的 src.url 是"映射后的对侧"地址;归一为 左=原站、右=镜像
@@ -330,18 +453,22 @@ function wireUi(): void {
     await navigateTo('left', leftUrl);
     await navigateTo('right', rightUrl);
     syncSelectFromUrl(src.site.id);
-    show(`${src.site.id}:已对照打开`);
+    showStatus(`${src.site.id}:已对照打开`);
   }
   document.getElementById('open-pair')?.addEventListener('click', () => void openPair());
   input?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') void openPair();
   });
 
-  // 新窗口:干净初始态(blank 两视图),本窗口状态不受影响
-  document.getElementById('new-window')?.addEventListener('click', () => {
-    invoke('dc_new_window')
-      .then((label) => show(`已开新窗口 ${String(label)}`))
-      .catch((e: unknown) => show(`开窗失败:${String(e)}`));
+  // 布局模式:单文/对照切换;单文下选看原/译
+  document.getElementById('mode-toggle')?.addEventListener('click', () => {
+    void requestMode(effectiveMode === 'single' ? 'split' : 'single');
+  });
+  document.getElementById('side-origin')?.addEventListener('click', () => {
+    void requestMode('single', 'origin');
+  });
+  document.getElementById('side-mirror')?.addEventListener('click', () => {
+    void requestMode('single', 'mirror');
   });
 }
 
@@ -404,7 +531,11 @@ function nearestHeadingExpr(tolerancePx: number): string {
 
 async function selftest(mode: true | 'live'): Promise<void> {
   const results: TestResult[] = [];
+  let phase = '未开始';
+  (window as unknown as { __DC_PHASE__?: string }).__DC_PHASE__ = phase;
   const t = async (name: string, fn: () => Promise<void>): Promise<void> => {
+    phase = name;
+    (window as unknown as { __DC_PHASE__?: string }).__DC_PHASE__ = name;
     try {
       await fn();
       results.push({ name, pass: true, detail: '' });
@@ -458,10 +589,7 @@ async function selftest(mode: true | 'live'): Promise<void> {
   }
 
   await t('初始导航(对照打开)', async () => {
-    // 等 Rust 侧 left/right webview 都创建好再导航:
-    // WebView2 初始化有快慢,不等会撞上 "no webview: right" 竞态。
-    // (不能用 cs:hello:WebView2 对首次加载不跑 initialization_script,
-    // blank.html 的 hello 只在导航后的页面才上报,平台行为不可靠)
+    // 等 Swift 侧 left/right webview 都创建好再导航(协议轮询,与 Tauri 版同因)
     await waitFor(async () => Boolean(await invoke('dc_ready')), 10000, 'left/right webview 就绪');
     await navigateTo('left', s.leftHome);
     await navigateTo('right', s.rightHome);
@@ -497,8 +625,9 @@ async function selftest(mode: true | 'live'): Promise<void> {
   await t('点标题对侧滚到对应标题', async () => {
     await evalIn('left', `location.hash = ${JSON.stringify(s.anchorHash)}`);
     // 不轮询:evaluateJavaScript 会打断 WebKit 的顺滑滚动动画,
-    // 固定等待动画结束后单次查询
-    await wait(2200);
+    // 固定等待动画结束后单次查询。iOS WKWebView 的动画比桌面长(窄视口
+    // 长距离缓动可达数秒),等待比 Tauri 版加长
+    await wait(4200);
     const near = String(await query('right', nearestHeadingExpr(200)));
     const ry = Number(await query('right', 'window.scrollY'));
     const elTop = String(
@@ -506,7 +635,9 @@ async function selftest(mode: true | 'live'): Promise<void> {
     );
     assert(
       near === s.expectHeading,
-      `right 视口顶标题=${near},期望 ${s.expectHeading};rightY=${ry};目标元素视口位置=${elTop}`,
+      `right 视口顶标题=${near},期望 ${s.expectHeading};rightY=${ry};目标元素视口位置=${elTop};innerW=${String(
+        await query('right', 'window.innerWidth'),
+      )};scale=${String(await query('right', '(window.visualViewport ? visualViewport.scale : -1)'))}`,
     );
   });
 
@@ -519,10 +650,9 @@ async function selftest(mode: true | 'live'): Promise<void> {
     await evalIn('left', `window.scrollTo(0, Math.floor(document.body.scrollHeight * 0.85))`);
     await wait(400);
     const ly = Number(await query('left', 'window.scrollY'));
-    // WebKit(macOS wry)上不能轮询等停稳:每次 evaluateJavaScript 都会打断
-    // 顺滑滚动动画,固定等待后单次查询(Windows WebView2 轮询无此问题,
-    // 但定点等待同样成立)
-    await wait(2600);
+    // WKWebView 上不能轮询等停稳:每次 evaluateJavaScript 都会打断顺滑滚动
+    // 动画(Tauri 桌面版 waitSettled 在此不适用),固定等待后单次查询
+    await wait(4200);
     const y = Number(await query('right', 'window.scrollY'));
     assert(ly > 100, `left 未滚动(scrollY=${ly})`);
     assert(Math.abs(y - before) > 50, `right 未跟随(${before} → ${y},left=${ly})`);
@@ -546,131 +676,10 @@ async function selftest(mode: true | 'live'): Promise<void> {
   });
 }
 
-/** 多窗口自测:开第二窗口 → 独立导航 → 断言隔离与标题跟随(fixture 离线站)。
- *  对窗口 2 的操作走 dc_eval/dc_navigate 的完整标签逃生门(w2-left 直达,
- *  Rust 侧不拼发起窗口前缀),不依赖窗口 2 自己的 controller */
-async function multiwindowSelftest(): Promise<void> {
-  const results: TestResult[] = [];
-  const t = async (name: string, fn: () => Promise<void>): Promise<void> => {
-    try {
-      await fn();
-      results.push({ name, pass: true, detail: '' });
-    } catch (e) {
-      results.push({ name, pass: false, detail: String(e) });
-    }
-  };
-
-  const EN = `${location.origin}/fixtures/en`;
-  const ZH = `${location.origin}/fixtures/zh`;
-  sites = [
-    { id: 'fixture', origin: EN, mirror: ZH, anchorMapUrl: `${ZH}/anchor-map.json` },
-  ];
-
-  // 窗口 1:与 fixture 自测相同的初始导航
-  await waitFor(async () => Boolean(await invoke('dc_ready')), 10000, '窗口1 left/right 就绪');
-  await navigateTo('left', `${EN}/index.html`);
-  await navigateTo('right', `${ZH}/index.html`);
-  await waitFor(
-    async () =>
-      String(await query('left', 'location.href', 800).catch(() => '')).includes(
-        '/fixtures/en/index.html',
-      ),
-    8000,
-    '窗口1 left 加载',
-  );
-  await waitFor(
-    async () =>
-      String(await query('right', 'location.href', 800).catch(() => '')).includes(
-        '/fixtures/zh/index.html',
-      ),
-    8000,
-    '窗口1 right 加载',
-  );
-
-  let w2 = '';
-  await t('开第二窗口', async () => {
-    w2 = String(await invoke('dc_new_window'));
-    assert(/^w\d+$/.test(w2), `新窗口标签格式异常:${w2}`);
-    // 窗口 2 内容视图就绪(其 controller 同样在跑,断言只走逃生门不经过它)
-    await waitFor(
-      async () => {
-        try {
-          await invoke('dc_eval', {
-            target: `${w2}-left`,
-            js: 'window.__dcTest && __dcTest("w2probe", location.href)',
-          });
-          return true;
-        } catch {
-          return false;
-        }
-      },
-      10000,
-      `窗口2 ${w2}-left 可用`,
-    );
-  });
-
-  await t('窗口2 独立导航 page2', async () => {
-    await invoke('dc_navigate', { target: `${w2}-left`, url: `${EN}/page2.html` });
-    await invoke('dc_navigate', { target: `${w2}-right`, url: `${ZH}/page2.html` });
-    await waitFor(
-      async () =>
-        String(await query(`${w2}-left`, 'location.href', 800).catch(() => '')).includes(
-          '/fixtures/en/page2.html',
-        ),
-      8000,
-      `窗口2 ${w2}-left 到 page2`,
-    );
-    await waitFor(
-      async () =>
-        String(await query(`${w2}-right`, 'location.href', 800).catch(() => '')).includes(
-          '/fixtures/zh/page2.html',
-        ),
-      8000,
-      `窗口2 ${w2}-right 到 page2`,
-    );
-  });
-
-  await t('两窗口互不干扰', async () => {
-    const l1 = String(await query('left', 'location.href', 2000));
-    assert(l1.includes('/fixtures/en/index.html'), `窗口1 left 被带偏:${l1}`);
-    const r1 = String(await query('right', 'location.href', 2000));
-    assert(r1.includes('/fixtures/zh/index.html'), `窗口1 right 被带偏:${r1}`);
-  });
-
-  await t('窗口1 内导航不影响窗口2', async () => {
-    // 窗口1 左侧跳 page2;窗口2 两视图 URL 必须纹丝不动
-    await evalIn('left', `document.querySelector("a[href='page2.html']").click()`);
-    await waitFor(
-      async () =>
-        String(await query('right', 'location.href', 800).catch(() => '')).includes(
-          '/fixtures/zh/page2.html',
-        ),
-      8000,
-      '窗口1 right 跟随到 page2',
-    );
-    const w2l = String(await query(`${w2}-left`, 'location.href', 2000));
-    assert(w2l.includes('/fixtures/en/page2.html'), `窗口2 left 异常(应为 page2):${w2l}`);
-  });
-
-  await t('标题各随各窗口', async () => {
-    await wait(1200); // 等 cs:nav → dc_set_title 传播
-    const t1 = String(await invoke('dc_window_title', { label: 'w1' }));
-    const t2 = String(await invoke('dc_window_title', { label: w2 }));
-    assert(t1 === 'Fixture EN — Page 2', `窗口1 标题=${t1},期望 Fixture EN — Page 2`);
-    assert(t2 === 'Fixture EN — Page 2', `窗口2 标题=${t2},期望 Fixture EN — Page 2`);
-  });
-
-  const pass = results.filter((r) => r.pass).length;
-  await invoke('dc_selftest_done', {
-    results: JSON.stringify({ pass, total: results.length, results }, null, 2),
-  });
-}
-
 // ---------- 启动 ----------
 async function main(): Promise<void> {
-  // 看门狗 + 未捕获异常:selftest 模式下任何卡死/报错都要给 Rust 一个交代
-  const mode = (window as unknown as { __DC_SELFTEST__?: true | 'live' | 'multiwindow' })
-    .__DC_SELFTEST__;
+  // 看门狗 + 未捕获异常:selftest 模式下任何卡死/报错都要给 Swift 一个交代
+  const mode = (window as unknown as { __DC_SELFTEST__?: true | 'live' }).__DC_SELFTEST__;
   if (mode) {
     let done = false;
     const bail = (why: string): void => {
@@ -686,35 +695,34 @@ async function main(): Promise<void> {
     };
     window.addEventListener('error', (e) => bail(`window.onerror: ${e.message}`));
     window.addEventListener('unhandledrejection', (e) => bail(`unhandledrejection: ${String(e.reason)}`));
-    setTimeout(() => bail('看门狗超时(90s)'), 90_000);
+    setTimeout(
+      () =>
+        bail(
+          `看门狗超时(90s,卡在:${
+            (window as unknown as { __DC_PHASE__?: string }).__DC_PHASE__ ?? '未知'
+          })`,
+        ),
+      90_000,
+    );
   }
 
-  await listen('dc-signal', (e) => {
-    const p = e.payload as {
-      t?: string;
-      view?: string;
-      href?: string;
-      title?: string;
-      topId?: string | null;
-      frac?: number;
-      ratio?: number;
-      name?: string;
-      value?: unknown;
-    };
+  installDispatch();
+  onSignal((p) => {
     if (!p) return;
     if (p.t === 'test:info') {
-      const w = queryWaiters.get(p.name!);
-      if (w) {
-        queryWaiters.delete(p.name!);
+      const name = p.name as string | undefined;
+      const w = name ? queryWaiters.get(name) : undefined;
+      if (name && w) {
+        queryWaiters.delete(name);
         w(p.value);
       }
       return;
     }
-    const view = parseView(p.view);
+    const view = parseView(p.view as string | undefined);
     if (!view) return; // 非 w{n}-left/right 格式的信号(路由已定向,格式过滤双保险)
-    if (p.t === 'cs:hello') viewUrls[view] = p.href ?? viewUrls[view];
-    else if (p.t === 'cs:nav') void syncFrom(view, p.href!);
-    else if (p.t === 'cs:scroll') void onScroll(view, p.topId ?? null, p.frac ?? 0, p.ratio ?? 0);
+    if (p.t === 'cs:hello') viewUrls[view] = (p.href as string) ?? viewUrls[view];
+    else if (p.t === 'cs:nav') void syncFrom(view, p.href as string);
+    else if (p.t === 'cs:scroll') void onScroll(view, (p.topId as string | null) ?? null, (p.frac as number) ?? 0, (p.ratio as number) ?? 0);
   });
 
   if (mode) {
@@ -741,8 +749,11 @@ async function main(): Promise<void> {
   }
 
   wireUi();
-  if (mode === 'multiwindow') await multiwindowSelftest();
-  else if (mode) await selftest(mode);
+  loadModePrefs();
+  applyModeUi();
+  // 与壳同步模式(拿回生效模式;竖屏 iPhone 会被原生裁成 single 并回推)
+  void requestMode(modeRequested);
+  if (mode) await selftest(mode);
 }
 
 void main();

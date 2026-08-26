@@ -1,7 +1,7 @@
 # 其他实现方案详设(Electron / WKWebView)
 
-已交付:Chrome 扩展(apps/chrome-extension)、Tauri(apps/tauri)、CDP(apps/cdp,2026-08-20)。
-本文档详设尚未开工的三种,统一遵循 SPEC 的架构原则:**core 全复用,宿主只写"捕获→映射→驱动"的接线**。
+已交付:Chrome 扩展(apps/chrome-extension)、Tauri(apps/tauri)、CDP(apps/cdp,2026-08-20)、Apple iOS/Catalyst(apps/apple,2026-08-27,见 D 节)。
+本文档详设尚未开工的实现,统一遵循 SPEC 的架构原则:**core 全复用,宿主只写"捕获→映射→驱动"的接线**。
 
 通用复用清单(所有实现):
 
@@ -78,6 +78,8 @@
 
 ## C. macOS 原生 WKWebView(Swift)
 
+> 2026-08-27 状态:本节设计已由 D 节实现覆盖(经 Mac Catalyst 跑 macOS,同套代码)。
+
 **形态**:AppKit `NSSplitViewController` + 两个 `WKWebView`,原生可拖分隔条;app 几 MB。仅 macOS。
 
 **能力映射**
@@ -101,11 +103,53 @@
 
 ---
 
+## D. iOS / iPadOS / Mac Catalyst——已交付 apps/apple(2026-08-27)
+
+按 C 节的 WKWebView 能力映射落地(选了"TS controller 最大复用"分支),扩展到 iOS:
+Tauri 的多 webview 架构在 iOS 走不通(wry `build_as_child` 官方不支持 iOS),
+而 UIKit 挂多个 WKWebView 是标准做法,正好把 C 节方案反哺成 iOS/Catalyst 双平台。
+
+**形态**:Swift 哑壳(`ios/App/`,7 文件 ~700 行,main.rs 的平移)+ 三个共享进程池的
+WKWebView:controller(可见工具条页)+ left/right(文档页)。Mac Catalyst 直接同代码跑 macOS。
+
+**通道**(全部 JSON 字符串,CDP binding 同款先例):
+
+- 上行:`WKScriptMessageHandler`(controller → dcInvoke;reporter → dcReport)
+- 下行:`evaluateJavaScript("window.__dcDispatch(...)")`;命令回包 `{t:'cmd:result',reqId,...}`
+- 资源:`dcapp://bundle/*`(WKURLSchemeHandler 映射 bundle 内 esbuild 产物 `web/`),
+  自定义 scheme 给 controller 页非 null origin——selftest 的 `location.origin/fixtures`
+  与同源 fetch sites.json 都依赖它
+- 命令面与 main.rs 对齐(dc_ready/dc_eval/dc_navigate/dc_layout/dc_set_title/
+  dc_window_title/dc_selftest_done),新增 `dc_set_mode`;`dc_new_window` 返回错误(留待 iPad scenes)
+
+**iOS 特有**:
+
+- 布局模式:**单文档/对照**可切;iPhone 竖屏强制单文档,横屏与 iPad 任意方向两模式皆可。
+  单文档=隐藏一侧 webview 但保持静默驱动(引擎零改动,切回即同步)
+- 安全区:controller 页全屏铺满 + CSS `env()`,JS 用探针元素数值化供分隔条数学;
+  内容页 frame 由 `LayoutMath.computeFrames`(纯函数,layout 自测对象)计算
+- 旋转 = `viewDidLayoutSubviews` 重布局,分隔条比例保持(Tauri 的 Resized→relayout 同构)
+- 标题跟随:left 的 `title` KVO → `scene.title`(Catalyst 窗口可见)
+- 竖屏点「对照」→ 提示横屏;`viewport-fit=cover` + 16px 输入字号(防聚焦缩放)
+- 自测:启动参数 `--selftest[=live|layout]` 经 `simctl launch` 传入,
+  结果 JSON 打 stdout、`pass==total` 定退出码;120s 看门狗;CI macos job 跑 fixture 模式
+
+**坑(实测)**:
+
+- 模拟器构建免签:`CODE_SIGNING_ALLOWED=NO` 命令行传参(工程里 sdk 条件设置偶发不生效)
+- `about:blank` 与 wry/macOS 同款不提交导航问题 → 左右初始页用 `dcapp://bundle/blank.html`
+- 精简版 Xcode(删过运行时)需 `xcodebuild -downloadPlatform iOS` 手动装运行时(~9GB 磁盘)
+- `evaluateJavaScript` 会打断 WebKit 顺滑滚动(Tauri 版已知),selftest 沿用"固定等待后单次查询"策略
+
+**分发**:模拟器/本地自用优先;真机走 Xcode 个人 team 调试签名;Catalyst 产物 ad-hoc 签名本机跑。
+
+---
+
 ## 选型对照
 
 | | 包体积 | 内存 | 复用度 | 平台 | 附加依赖 |
 |---|---|---|---|---|---|
 | Electron | ~100-200MB | 300-500MB | 高 | 全平台 | 无 |
 | CDP(已做) | 0 | ~0(复用 Chrome) | 最高 | 全平台 | Node 进程 |
-| WKWebView | ~5MB | 150-250MB | 中-高 | 仅 macOS | Xcode 工具链 |
+| Apple(已做) | ~5MB | 150-250MB | 中-高 | iOS/iPadOS/macOS(Catalyst) | Xcode 工具链 |
 | Tauri(已做) | ~10MB | 150-250MB | 高 | 全平台 | Rust 工具链 |

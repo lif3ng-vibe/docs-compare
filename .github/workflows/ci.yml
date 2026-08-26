@@ -32,6 +32,28 @@ jobs:
           CI: '1'
       # live 自测依赖外网站点,不进 CI;需要时本地跑 npm run selftest:cdp:live
 
+  apple:
+    # iOS 壳:构建 + 模拟器 fixture 自测(Swift 哑壳 + 复用 TS controller)
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Apple 前端打包(esbuild → web/)
+        run: npm run build:apple
+      - name: 安装 xcodegen 并生成工程
+        run: |
+          brew install xcodegen
+          cd apps/apple && xcodegen generate
+      - name: 模拟器 fixture 自测(布局断言 + 同步引擎)
+        run: npm run selftest:apple
+        env:
+          CI: '1'
+      # live 自测依赖外网站点,不进 CI;需要时本地跑 npm run selftest:apple:live
+
       # 扩展 zip:双通道分发,均为固定位置
       # 1) Release latest(首页可见、链接永不过期):每次 main push 滚动更新
       # 2) artifact(备源):同名覆盖,90 天保留

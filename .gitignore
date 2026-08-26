@@ -6,3 +6,6 @@ out/
 apps/tauri/frontend-dist/
 apps/tauri/src-tauri/target/
 apps/tauri/src-tauri/gen/
+apps/apple/web/
+apps/apple/DocsCompare.xcodeproj/
+apps/apple/build/

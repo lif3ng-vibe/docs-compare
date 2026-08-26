@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Docs Compare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- 安全区探针:JS 读 getBoundingClientRect 供分隔条数学用(env() 数值化) -->
+<div id="sa-probe-l" aria-hidden="true"></div>
+<div id="sa-probe-r" aria-hidden="true"></div>
+<div id="toolbar">
+  <span class="brand">Docs Compare</span>
+  <select id="site-select" aria-label="站点对"><option value="" disabled selected>选择文档站点…</option></select>
+  <input id="url-left" placeholder="原站 URL,粘贴后回车" spellcheck="false">
+  <button id="open-pair">对照打开</button>
+  <button id="new-window" title="iOS 暂不支持多窗口">新窗口</button>
+  <button id="mode-toggle" title="切换 单文档/对照 布局">单文</button>
+  <div id="side-switch" title="单文档模式看哪一侧">
+    <button id="side-origin">原</button><button id="side-mirror">译</button>
+  </div>
+  <span id="status"></span>
+</div>
+<div id="divider"><div id="handle"></div></div>
+<script src="controller.js"></script>
+</body>
+</html>

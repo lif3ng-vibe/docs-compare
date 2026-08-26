@@ -1,0 +1,19 @@
+{
+  "name": "@docs-compare/apple",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Docs Compare 的 iOS/macOS(Catalyst)实现:Swift 哑壳 + WKWebView 三视图,同步引擎复用 core。",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "project": "xcodegen generate",
+    "sim": "node scripts/sim.mjs",
+    "selftest": "npm run build && node scripts/selftest.mjs",
+    "selftest:live": "npm run build && node scripts/selftest.mjs --live",
+    "selftest:layout": "node scripts/selftest.mjs --layout"
+  },
+  "dependencies": {
+    "@docs-compare/core": "0.1.0"
+  }
+}

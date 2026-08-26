@@ -29,6 +29,10 @@ apps/cdp                  实现三:CDP 驱动 Chrome(Node CLI,零新壳)
   src/chrome.ts            puppeteer-core 接线:双窗口平铺、addBinding/init script/导航事件
   src/reporter.ts          content.ts 平移(上行 window.dcReport binding)
   src/selftest.ts          自动化测试(fixture/live 双模式)
+apps/apple                实现四:iOS / iPadOS / Mac Catalyst(Swift 哑壳 + WKWebView)
+  ios/App/*.swift          三视图容器、命令中继、dcapp:// 资源、布局数学、自测
+  frontend/controller.ts   状态机(Tauri 版平移)+ 工具条 + 单文/对照模式
+  inject/reporter.ts       content.ts 平移(WKUserScript 注入,上行 messageHandler)
 scripts/gen-anchor-map.mjs  锚点表生成器
 scripts/gen-remote-sites.mjs  远程 sites.json 生成器(CI 上传 Release,见「收录新站点」)
 scripts/check-anchor-drift.mjs  锚点漂移检测(原站更新后表过期检查)
@@ -83,6 +87,24 @@ npm run cdp -- https://www.onorca.dev/docs/agents/codex   # 任意一侧 URL,自
 npm run selftest:cdp        # fixture 双语站(离线、快速,复用 Tauri fixtures)
 npm run selftest:cdp:live   # 真实站点(onorca.dev ↔ GitHub Pages 镜像)
 ```
+
+## Apple 版(iOS / iPadOS / Mac Catalyst)
+
+Swift 哑壳(main.rs 的平移)+ 三个 WKWebView(controller 工具条页 + 左右文档页),同步引擎与站点配置完全复用 core。通道全部 JSON 字符串:上行 `WKScriptMessageHandler`(dcInvoke/dcReport),下行 `evaluateJavaScript`(`window.__dcDispatch`)。
+
+```bash
+npm run sim:apple            # 构建 + 装 iPhone 模拟器正常启动(手动过 UI)
+npm run selftest:apple       # fixture 离线自测(模拟器里跑完自动退出)
+npm run selftest:apple:live  # 真实站点
+npm run selftest:apple:layout # 纯 Swift 布局断言(安全区/比例钳制/单文档帧)
+```
+
+- 前置:Xcode(完整版含 iOS 运行时;精简安装先 `xcodebuild -downloadPlatform iOS`)+ `brew install xcodegen`
+- 布局模式:**单文档 / 对照**可切。iPhone 竖屏强制单文档(工具条「原/译」选看哪侧),横屏与 iPad 任意方向两模式皆可
+- 单文档模式下隐藏侧仍被静默驱动(导航/滚动同步照常)——切回对照或转横屏即已同步
+- 工具条与桌面同款:站点下拉(远程热更同机制)、分隔条可拖(比例随旋转保持)
+- 多窗口 v1 不支持(按钮隐藏,命令返回错误,留待 iPad scenes)
+- 真机调试:用 Xcode 打开生成的工程选自己 team 签名即可(模拟器构建免签);Catalyst 冒烟跑法见 `.claude/skills/apple/SKILL.md`
 
 ## 快速开始(Chrome 扩展)
 
@@ -245,4 +267,4 @@ npm test          # core 冒烟测试
 npm run typecheck # 全部 workspace
 ```
 
-CI(GitHub Actions,`.github/workflows/ci.yml`):push/PR 自动跑 typecheck + core 冒烟 + 扩展/Tauri 前端打包 + CDP fixture 自测(headless)。live 自测依赖外网站点,只在本地跑。
+CI(GitHub Actions,`.github/workflows/ci.yml`):push/PR 自动跑 typecheck + core 冒烟 + 扩展/Tauri/Apple 前端打包 + CDP fixture 自测(headless)+ iOS 模拟器自测(macos job)。live 自测依赖外网站点,只在本地跑。
