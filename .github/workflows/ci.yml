@@ -89,4 +89,4 @@ jobs:
             --target main \
             apps/chrome-extension/docs-compare-extension.zip \
             out/remote-sites/sites.json \
-            out/remote-sites/anchor-maps
+            out/remote-sites/anchor-maps/*.json
