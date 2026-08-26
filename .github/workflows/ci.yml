@@ -74,6 +74,15 @@ jobs:
           SHA: ${{ github.sha }}
         run: |
           DATE=$(date -u '+%Y-%m-%d %H:%M UTC')
+          # 桌面安装包资产先抢救下来:Tauri 打包工作流(手动,~7 分钟冷编译)
+          # 传上来的 exe/dmg 不随本次滚动重建丢失——删建前下载,create 时一并带回
+          mkdir -p out/keep-assets
+          gh release download latest -R "$GITHUB_REPOSITORY" \
+            --dir out/keep-assets --clobber \
+            --pattern '*-setup.exe' --pattern '*.dmg' \
+            || true   # latest 不存在或没有安装包资产时静默跳过
+          shopt -s nullglob
+          keep=(out/keep-assets/*)
           # 滚动 release:tag latest 每次移到最新 commit;无则创建,有则更新并换附件
           gh release view latest -R "$GITHUB_REPOSITORY" 2>/dev/null \
             && gh release delete latest -R "$GITHUB_REPOSITORY" --cleanup-tag --yes \
@@ -92,4 +101,5 @@ jobs:
             --target main \
             apps/chrome-extension/docs-compare-extension.zip \
             out/remote-sites/sites.json \
-            out/remote-sites/anchor-maps-*.json
+            out/remote-sites/anchor-maps-*.json \
+            "${keep[@]}"
