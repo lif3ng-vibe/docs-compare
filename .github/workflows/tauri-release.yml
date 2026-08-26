@@ -52,10 +52,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: docs-compare-tauri-${{ matrix.platform }}
-          # Windows: nsis/*-setup.exe;macOS: dmg/*.dmg——两形态一次 glob
+          # Windows: nsis/*-setup.exe;macOS: dmg/*.dmg——两形态一次 glob,
+          # 各平台只有自己那份匹配,upload-artifact 对无匹配 glob 容忍
           path: |
             apps/tauri/src-tauri/target/release/bundle/nsis/*-setup.exe
             apps/tauri/src-tauri/target/release/bundle/dmg/*.dmg
+          if-no-files-found: error
           retention-days: 90
           overwrite: true
 
@@ -68,8 +70,9 @@ jobs:
           SHA: ${{ github.sha }}
         run: |
           DATE=$(date -u '+%Y-%m-%d %H:%M UTC')
-          f=$(ls apps/tauri/src-tauri/target/release/bundle/nsis/*-setup.exe \
-              apps/tauri/src-tauri/target/release/bundle/dmg/*.dmg 2>/dev/null | head -1)
+          # find 而非 ls 多 glob:另一平台的 glob 无匹配时 ls 整条非零
+          # (-e -o pipefail 下直接挂),find 单分支无匹配不影响其余
+          f=$(find apps/tauri/src-tauri/target/release/bundle -name '*-setup.exe' -o -name '*.dmg' | head -1)
           [ -n "$f" ] || { echo "找不到安装包产物"; exit 1; }
           if ! gh release view latest -R "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
             gh release create latest -R "$GITHUB_REPOSITORY" \
