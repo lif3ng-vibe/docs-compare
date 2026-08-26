@@ -14,8 +14,10 @@ export const REMOTE_SITES_URL =
   'https://github.com/lif3ng-vibe/docs-compare/releases/download/latest/sites.json';
 
 /** Release 资产的固定地址前缀(CI 下发的 sites.json 里锚点表用绝对 URL) */
-export function releaseAssetUrl(path: string): string {
-  return `https://github.com/lif3ng-vibe/docs-compare/releases/download/latest/${path.replace(/^\/+/, '')}`;
+export function releaseAssetUrl(name: string): string {
+  // GitHub Release 资产名不允许 '/':锚点表用平铺前缀 anchor-maps-<id>.json
+  const flat = name.replace(/^\/+/, '').replace(/\//g, '-');
+  return `https://github.com/lif3ng-vibe/docs-compare/releases/download/latest/${flat}`;
 }
 
 /**

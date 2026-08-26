@@ -28,10 +28,12 @@ await esbuild.build({
 const { DEFAULT_SITES } = await import(`file://${tmp.replace(/\\/g, '/')}`);
 
 const ASSET_BASE = 'https://github.com/lif3ng-vibe/docs-compare/releases/download/latest';
+// GitHub Release 资产名不允许 '/',上传时目录会被剥掉——锚点表资产
+// 用平铺前缀 anchor-maps-<id>.json,URL 与资产名严格一致
 const sites = DEFAULT_SITES.map((s) => ({
   ...s,
-  anchorMapUrl: `${ASSET_BASE}/anchor-maps/${s.id}.json`,
-  pageMapUrl: s.pageMapUrl ? `${ASSET_BASE}/anchor-maps/${s.id}.page-map.json` : undefined,
+  anchorMapUrl: `${ASSET_BASE}/anchor-maps-${s.id}.json`,
+  pageMapUrl: s.pageMapUrl ? `${ASSET_BASE}/anchor-maps-${s.id}.page-map.json` : undefined,
 }));
 
 await mkdir(outDir, { recursive: true });
