@@ -16,6 +16,7 @@ import {
   buildUrl,
   defaultAnchorMapUrl,
   defaultPageMapUrl,
+  fetchRemoteSites,
   mapUrl,
   normalizePathKey,
   parseSites,
@@ -588,6 +589,13 @@ async function main(): Promise<void> {
       console.warn('[dc] sites.json 加载失败:', e);
     }
     renderSiteSelect();
+    // 远程热更:打包配置先用(秒开),后台拉 Release 固定地址的 sites.json;
+    // 成功则整体替换并重渲染下拉——新增站点免发版即得。失败静默退打包版。
+    void fetchRemoteSites().then((remote) => {
+      if (!remote || remote.length === 0) return;
+      sites = remote;
+      renderSiteSelect();
+    });
   }
 
   wireUi();

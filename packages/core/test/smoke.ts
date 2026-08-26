@@ -7,6 +7,7 @@ import { AnchorIndex } from '../src/anchors';
 import { parseSites } from '../src/config';
 import { DEFAULT_SITES, mergeDefaultSites } from '../src/defaults';
 import { PageIndex } from '../src/pages';
+import { fetchRemoteSites } from '../src/remote-sites';
 import { findBracket, interpAt, scrollRatio, scrollTopFor } from '../src/scroll';
 import { logicalPath, mapUrl, normalizePathKey } from '../src/url';
 import type { SitePair } from '../src/types';
@@ -166,6 +167,38 @@ eq(interpAt(offs, 2, 0.5), 1200, '尾段中点');
 for (const y of [120, 480, 640, 899, 1400]) {
   const b = findBracket(offs, y);
   if (b.index >= 0) eq(Math.round(interpAt(offs, b.index, b.frac)), Math.min(y, 1500), `往返还原 y=${y}`);
+}
+
+console.log('remote-sites');
+{
+  // fetchRemoteSites 走全局 fetch:注入假实现驱动各分支(Node 22 有原生 fetch)
+  const realFetch = globalThis.fetch;
+  const json = (v: unknown): Response =>
+    ({ ok: true, json: async () => v }) as unknown as Response;
+  const bad = (): Response => ({ ok: false, status: 404 }) as unknown as Response;
+
+  const VALID = [{ id: 'x', origin: 'https://x.dev', mirror: 'https://y.github.io/x' }];
+
+  globalThis.fetch = (async () => json(VALID)) as typeof fetch;
+  const r1 = await fetchRemoteSites();
+  eq(r1?.length, 1, '合法列表 → 解析返回');
+  eq(r1?.[0].id, 'x', '站点字段完整');
+
+  globalThis.fetch = (async () => json([{ id: 'x', origin: 'not-a-url' }])) as typeof fetch;
+  eq(await fetchRemoteSites(), null, 'parseSites 有 errors → null');
+
+  globalThis.fetch = (async () => json({ nope: 1 })) as typeof fetch;
+  eq(await fetchRemoteSites(), null, '非数组 → null');
+
+  globalThis.fetch = (async () => bad()) as typeof fetch;
+  eq(await fetchRemoteSites(), null, '非 200 → null');
+
+  globalThis.fetch = (async () => {
+    throw new Error('network down');
+  }) as typeof fetch;
+  eq(await fetchRemoteSites(), null, '网络异常 → null(不抛)');
+
+  globalThis.fetch = realFetch;
 }
 
 if (failed > 0) {

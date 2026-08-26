@@ -5,6 +5,7 @@ import {
   buildUrl,
   defaultAnchorMapUrl,
   defaultPageMapUrl,
+  fetchRemoteSites,
   findSite,
   mapUrl,
   mergeDefaultSites,
@@ -39,17 +40,46 @@ const anchorCache = new Map<string, Promise<AnchorIndex>>();
 
 // ---------- 存取 ----------
 
-/** 站点配置:用户在配置页保存过的(dc_sites)优先,并合并内置新站
- *  (保存时快照 dc_defaults_at_save 记录当时的内置 id;快照里没有的 id
- *  是后来新收录的站,自动补入——老安装升级即可见;用户主动删过的
- *  内置站不回补);从未保存过则直接用内置默认 */
+/** 站点配置三级合并:用户手存(dc_sites)> 远程热更(dc_sites_remote)> 打包内置。
+ *  - 用户保存过的 id 永远用用户的(远程不覆盖用户意图)
+ *  - 远程列表(Release 固定 URL 拉回,GitHub Release 绝对 anchorMapUrl)
+ *    按 id 覆盖同名内置站(取最新 origin/mirror/名称),并追加新收录站
+ *  - 从未保存过且无远程 → 直接用打包 DEFAULT_SITES
+ *  - 用户保存过:dc_sites + 远程新站合并(快照语义同 mergeDefaultSites:
+ *    用户主动删过的内置站不回补;远程新站(快照里没有)自动补入) */
 async function getSites(): Promise<SitePair[]> {
-  const got = await chrome.storage.local.get(['dc_sites', 'dc_defaults_at_save']);
-  if (got.dc_sites === undefined) return [...DEFAULT_SITES];
+  const got = await chrome.storage.local.get(['dc_sites', 'dc_defaults_at_save', 'dc_sites_remote']);
+  const remote = parseRemoteSites(got.dc_sites_remote);
+  if (got.dc_sites === undefined) {
+    return remote ?? [...DEFAULT_SITES];
+  }
   const { sites, errors } = parseSites(got.dc_sites);
   if (errors.length) console.warn('[docs-compare] 站点配置有问题:', errors);
   const snap = Array.isArray(got.dc_defaults_at_save) ? (got.dc_defaults_at_save as string[]) : undefined;
-  return mergeDefaultSites(sites, snap);
+  const userMerged = mergeDefaultSites(sites, snap);
+  if (!remote) return userMerged;
+  // 用户配置之上叠加远程:同名覆盖、新站追加(用户没动过的 id 才覆盖;
+  // 用户配置里有同 id 说明用户动过/保留过——以远程为准更新元数据,
+  // 因为远程正是"内置最新版"的化身;用户主动删的 id 不在 userMerged,不回补)
+  const byId = new Map(userMerged.map((s) => [s.id, s]));
+  for (const r of remote) byId.set(r.id, r);
+  return [...byId.values()];
+}
+
+/** 校验存储里的远程列表缓存;非法/过期形状返回 null(SW 淘汰后残留防御) */
+function parseRemoteSites(raw: unknown): SitePair[] | null {
+  if (!Array.isArray(raw) || raw.length === 0) return null;
+  const { sites, errors } = parseSites(raw);
+  if (errors.length > 0) return null;
+  return sites;
+}
+
+/** SW 启动即拉远程列表(每次 SW 冷启动一次,天然节流);
+ *  成功写 dc_sites_remote 供 getSites 合并,失败静默(下次 SW 再试) */
+async function refreshRemoteSites(): Promise<void> {
+  const remote = await fetchRemoteSites();
+  if (!remote || remote.length === 0) return;
+  await chrome.storage.local.set({ dc_sites_remote: remote });
 }
 
 async function getSettings(): Promise<SyncSettings> {
@@ -490,3 +520,5 @@ chrome.commands?.onCommand.addListener((command) => {
 chrome.runtime.onInstalled.addListener(() => void loadPairs());
 chrome.runtime.onStartup?.addListener(() => void loadPairs());
 void loadPairs();
+// 远程站点列表热更:SW 每次冷启动拉一次(装/启/被淘汰后复活都会走到)
+void refreshRemoteSites();

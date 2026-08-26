@@ -39,6 +39,24 @@ jobs:
         run: |
           cd apps/chrome-extension/dist
           zip -r ../docs-compare-extension.zip .
+      # 远程站点列表资产:以 DEFAULT_SITES 为事实源生成 sites.json
+      # (anchorMapUrl 写 Release 绝对 URL),连同锚点表一起下发——
+      # 扩展/Tauri 客户端从此免更新获取新收录站点
+      - name: 生成远程 sites.json
+        run: node scripts/gen-remote-sites.mjs out/remote-sites
+      - name: 断言:sites.json 锚点表地址全为 Release 绝对 URL
+        run: |
+          node -e "
+            const s = require('./out/remote-sites/sites.json');
+            const base = 'https://github.com/lif3ng-vibe/docs-compare/releases/download/latest/anchor-maps/';
+            const bad = s.filter(x => !x.anchorMapUrl.startsWith(base) || (x.pageMapUrl && !x.pageMapUrl.startsWith(base)));
+            if (bad.length) { console.error('非 Release 地址:', bad.map(x=>x.id)); process.exit(1); }
+            console.log('ok:', s.length, '站,锚点表地址全为 Release 绝对 URL');
+          "
+      - name: 准备远程资产目录(anchor-maps/ 前缀)
+        run: |
+          mkdir -p out/remote-sites/anchor-maps
+          cp apps/chrome-extension/src/static/anchor-maps/*.json out/remote-sites/anchor-maps/
       - name: 上传扩展 zip(固定名 artifact)
         uses: actions/upload-artifact@v4
         with:
@@ -63,9 +81,12 @@ jobs:
             -n "main 分支每次 push 自动滚动扩展构建;桌面安装包由「Tauri 打包(手动)」工作流按需附上。当前: $SHA @ $DATE
 
           - docs-compare-extension.zip:Chrome 扩展,解压后 chrome://extensions 开发者模式加载解压目录
+          - sites.json + anchor-maps/*:站点列表与锚点表(客户端远程热更数据源,固定 URL 永不变化)
           - docs-compare_*_x64-setup.exe:Windows 安装包(Tauri,手动触发构建)
           - docs-compare*_aarch64.dmg / *_x64.dmg:macOS 安装包(Tauri,手动触发构建,无签名首开右键打开)
 
           完整构建日志: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
             --target main \
-            apps/chrome-extension/docs-compare-extension.zip
+            apps/chrome-extension/docs-compare-extension.zip \
+            out/remote-sites/sites.json \
+            out/remote-sites/anchor-maps
