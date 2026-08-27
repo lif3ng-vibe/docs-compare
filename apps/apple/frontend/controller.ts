@@ -331,7 +331,15 @@ function applyModeUi(): void {
 function showStatus(s: string): void {
   const status = document.getElementById('status');
   if (status) status.textContent = s;
+  // iOS 版工具条窄:提示只闪现 2s 后清空(CSS 里 #status:empty 隐藏,平时不占位)
+  if (statusClearTimer != null) window.clearTimeout(statusClearTimer);
+  statusClearTimer = window.setTimeout(() => {
+    const el = document.getElementById('status');
+    if (el) el.textContent = '';
+    statusClearTimer = undefined;
+  }, 2000);
 }
+let statusClearTimer: number | undefined;
 async function requestMode(mode: LayoutMode, side?: SingleSide): Promise<void> {
   modeRequested = mode;
   if (side) sideRequested = side;

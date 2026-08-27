@@ -7,18 +7,26 @@ html, body { margin: 0; height: 100%; overflow: hidden; font: 13px/1.5 system-ui
 #toolbar {
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: 44px;
+  /* 高度含顶部安全区(灵动岛/状态栏),内容带仍 44px:与 Swift 侧
+     内容 webview 的 y = insets.top + 44 对齐;背景连着铺满安全区 */
+  height: calc(44px + env(safe-area-inset-top, 0px));
   box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 8px;
   /* 刘海/圆角设备上工具条内容避让安全区(controller webview 全屏铺满) */
-  padding: 0 max(12px, env(safe-area-inset-right)) 0 max(12px, env(safe-area-inset-left));
+  padding: env(safe-area-inset-top, 0px) max(12px, env(safe-area-inset-right)) 0 max(12px, env(safe-area-inset-left));
   background: #f5f6f8;
   border-bottom: 1px solid #dcdfe3;
   z-index: 10;
 }
 .brand { font-weight: 600; color: #333; margin-right: 4px; }
+/* iOS 版工具条精简:触屏上贴 URL 的桌面流程不可用,砍掉品牌/输入/按钮/状态,
+   只留下拉+模式按钮,宽度全部让给下拉 */
+.brand, #url-left, #open-pair { display: none; }
+#site-select { flex: 1 1 auto; width: auto; max-width: none; }
+#status:empty { display: none; }
+#status { flex: 0 1 auto; }
 #url-left {
   flex: 1;
   min-width: 0;
@@ -54,7 +62,7 @@ button {
    单文档模式下隐藏(工具条 #mode-toggle 的 body.single 由 controller 控制) */
 #divider {
   position: fixed;
-  top: 44px; bottom: env(safe-area-inset-bottom);
+  top: calc(44px + env(safe-area-inset-top, 0px)); bottom: env(safe-area-inset-bottom, 0px);
   width: 8px;
   margin-left: -4px;
   cursor: col-resize;
@@ -89,8 +97,7 @@ body.single #divider { display: none; }
 #side-switch button.on { background: #1a73e8; color: #fff; }
 body.single #side-switch { display: flex; }
 
-/* 窄屏(iPhone 横屏 667–740pt):藏品牌与 URL 输入,保下拉+按钮+状态 */
+/* 窄屏再兜底:下拉保底宽度 */
 @media (max-width: 740px) {
-  .brand, #url-left { display: none; }
-  #site-select { flex: 0 1 180px; min-width: 120px; width: auto; }
+  #site-select { min-width: 120px; }
 }

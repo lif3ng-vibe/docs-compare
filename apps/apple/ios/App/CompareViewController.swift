@@ -34,6 +34,9 @@ final class CompareViewController: UIViewController {
         controllerWebView = makeWebView(config: makeControllerConfig())
         controllerWebView.scrollView.bounces = false
         controllerWebView.scrollView.alwaysBounceVertical = false
+        // 工具条页是应用 UI:禁缩放(双击/捏合),内容文档页保留缩放便于阅读
+        controllerWebView.scrollView.minimumZoomScale = 1
+        controllerWebView.scrollView.maximumZoomScale = 1
 
         leftWebView = makeWebView(config: makeContentConfig(view: "w1-left", reporterJS: reporterJS))
         rightWebView = makeWebView(config: makeContentConfig(view: "w1-right", reporterJS: reporterJS))
