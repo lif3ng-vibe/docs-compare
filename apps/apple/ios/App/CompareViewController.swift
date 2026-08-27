@@ -1,6 +1,15 @@
 import UIKit
 import WebKit
 
+/// controller 主页加载完成的回调(用于首推安全区)
+final class ControllerNavDelegate: NSObject, WKNavigationDelegate {
+    var onFinish: (() -> Void)?
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        onFinish?()
+    }
+}
+
 /// 三视图容器(controller 工具条页 + left/right 文档页),Tauri 版
 /// spawn_window/relayout 的平移。布局走纯 frame(viewDidLayoutSubviews +
 /// 安全区变化触发),不用 autolayout——与 Rust 侧 Resize→relayout 同构。
@@ -15,6 +24,11 @@ final class CompareViewController: UIViewController {
     /// 标题跟随:left 的 title KVO → scene.title(SceneDelegate 注入)
     var onTitle: ((String) -> Void)?
     private var titleObservation: NSKeyValueObservation?
+
+    /// controller 页安全区推送:env() 与 UIKit 安全区在 Catalyst 窗口模式
+    /// 不一致(WebKit 报 0,UIKit 报标题栏 41),以原生值为准推送
+    private var controllerNavDelegate = ControllerNavDelegate()
+    private var lastPushedInsets: UIEdgeInsets?
 
     /// 三视图共享进程池(cookie/会话一致)
     static let processPool = WKProcessPool()
@@ -37,6 +51,10 @@ final class CompareViewController: UIViewController {
         // 工具条页是应用 UI:禁缩放(双击/捏合),内容文档页保留缩放便于阅读
         controllerWebView.scrollView.minimumZoomScale = 1
         controllerWebView.scrollView.maximumZoomScale = 1
+        controllerWebView.navigationDelegate = controllerNavDelegate
+        controllerNavDelegate.onFinish = { [weak self] in
+            self?.pushInsetsToController()
+        }
 
         leftWebView = makeWebView(config: makeContentConfig(view: "w1-left", reporterJS: reporterJS))
         rightWebView = makeWebView(config: makeContentConfig(view: "w1-right", reporterJS: reporterJS))
@@ -90,8 +108,38 @@ final class CompareViewController: UIViewController {
         return (isPhone && isPortrait) ? .single : .split
     }
 
+    /// 把原生安全区推给 controller 页(CSS 变量 --dc-sa-*);
+    /// 页面未加载完成时 eval 被 __dcDispatch 守卫静默跳过,靠重试点补推
+    func pushInsetsToController() {
+        let insets = view.safeAreaInsets
+        if let last = lastPushedInsets,
+           abs(last.top - insets.top) < 0.5,
+           abs(last.left - insets.left) < 0.5,
+           abs(last.bottom - insets.bottom) < 0.5,
+           abs(last.right - insets.right) < 0.5 {
+            return
+        }
+        lastPushedInsets = insets
+        if DC_DEBUG {
+            NSLog("[dc] push insets t:%.0f l:%.0f b:%.0f r:%.0f", insets.top, insets.left, insets.bottom, insets.right)
+        }
+        dispatchToController([
+            "t": "dc:insets",
+            "top": insets.top,
+            "left": insets.left,
+            "bottom": insets.bottom,
+            "right": insets.right,
+        ])
+    }
+
     func relayout() {
         guard isViewLoaded, view.bounds.width > 1, view.bounds.height > 1 else { return }
+        if DC_DEBUG {
+            NSLog("[dc] relayout bounds=%@ insets=t:%.0f l:%.0f b:%.0f r:%.0f mode=%@",
+                  String(describing: view.bounds), view.safeAreaInsets.top,
+                  view.safeAreaInsets.left, view.safeAreaInsets.bottom, view.safeAreaInsets.right,
+                  effectiveModeForCurrentTraits().rawValue)
+        }
         let mode = effectiveModeForCurrentTraits()
         bridge.applyEffective(mode, side: bridge.sideRequested)
 
@@ -102,6 +150,8 @@ final class CompareViewController: UIViewController {
             mode: mode,
             visibleSide: bridge.sideRequested
         )
+        // 安全区变化(全屏切换/旋转/Stage Manager)时同步给 controller 页
+        pushInsetsToController()
         if controllerWebView.frame != view.bounds {
             controllerWebView.frame = view.bounds
         }

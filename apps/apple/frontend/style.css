@@ -1,5 +1,14 @@
 html, body { margin: 0; height: 100%; overflow: hidden; font: 13px/1.5 system-ui, -apple-system, sans-serif; }
 
+/* 安全区变量:Swift 推送真实值覆盖(--dc-sa-*),未推送前用 env() 兜底
+   (Catalyst 窗口模式 env() 与 UIKit 不一致,不能单独依赖) */
+:root {
+  --dc-sa-top: env(safe-area-inset-top, 0px);
+  --dc-sa-left: env(safe-area-inset-left, 0px);
+  --dc-sa-right: env(safe-area-inset-right, 0px);
+  --dc-sa-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 /* 安全区探针:固定在四边,JS 量取 env() 的数值 */
 #sa-probe-l { position: fixed; top: 0; left: env(safe-area-inset-left); width: 0; height: 0; }
 #sa-probe-r { position: fixed; top: 0; right: env(safe-area-inset-right); width: 0; height: 0; }
@@ -7,15 +16,15 @@ html, body { margin: 0; height: 100%; overflow: hidden; font: 13px/1.5 system-ui
 #toolbar {
   position: fixed;
   top: 0; left: 0; right: 0;
-  /* 高度含顶部安全区(灵动岛/状态栏),内容带仍 44px:与 Swift 侧
+  /* 高度含顶部安全区(灵动岛/状态栏/标题栏),内容带仍 44px:与 Swift 侧
      内容 webview 的 y = insets.top + 44 对齐;背景连着铺满安全区 */
-  height: calc(44px + env(safe-area-inset-top, 0px));
+  height: calc(44px + var(--dc-sa-top));
   box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 8px;
   /* 刘海/圆角设备上工具条内容避让安全区(controller webview 全屏铺满) */
-  padding: env(safe-area-inset-top, 0px) max(12px, env(safe-area-inset-right)) 0 max(12px, env(safe-area-inset-left));
+  padding: var(--dc-sa-top) max(12px, var(--dc-sa-right)) 0 max(12px, var(--dc-sa-left));
   background: #f5f6f8;
   border-bottom: 1px solid #dcdfe3;
   z-index: 10;
@@ -62,7 +71,7 @@ button {
    单文档模式下隐藏(工具条 #mode-toggle 的 body.single 由 controller 控制) */
 #divider {
   position: fixed;
-  top: calc(44px + env(safe-area-inset-top, 0px)); bottom: env(safe-area-inset-bottom, 0px);
+  top: calc(44px + var(--dc-sa-top)); bottom: var(--dc-sa-bottom);
   width: 8px;
   margin-left: -4px;
   cursor: col-resize;

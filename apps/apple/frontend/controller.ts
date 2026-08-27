@@ -112,7 +112,8 @@ interface WebkitHost {
 type DispatchMsg =
   | { t: 'cmd:result'; reqId: number; ok: boolean; value?: unknown; error?: string }
   | { t: 'signal'; payload: Record<string, unknown> }
-  | { t: 'dc:mode'; mode: LayoutMode; side: SingleSide };
+  | { t: 'dc:mode'; mode: LayoutMode; side: SingleSide }
+  | { t: 'dc:insets'; top: number; left: number; right: number; bottom: number };
 
 let invokeSeq = 0;
 const invokeWaiters = new Map<number, { resolve: (v: unknown) => void; reject: (e: Error) => void }>();
@@ -157,6 +158,24 @@ function installDispatch(): void {
       effectiveMode = m.mode;
       sideRequested = m.side;
       applyModeUi();
+    }
+    if (m.t === 'dc:insets') {
+      // 原生推送的真实安全区(Catalyst 窗口模式 env() 与 UIKit 不一致,
+      // 以此为准):写 CSS 变量供工具条/分隔条用,并重算分隔条
+      pushedInsets = {
+        top: m.top ?? 0,
+        left: m.left ?? 0,
+        right: m.right ?? 0,
+        bottom: m.bottom ?? 0,
+      };
+      const style = document.documentElement.style;
+      style.setProperty('--dc-sa-top', `${pushedInsets.top}px`);
+      style.setProperty('--dc-sa-left', `${pushedInsets.left}px`);
+      style.setProperty('--dc-sa-right', `${pushedInsets.right}px`);
+      style.setProperty('--dc-sa-bottom', `${pushedInsets.bottom}px`);
+      readInsets();
+      positionDividerEl();
+      scheduleLayout();
     }
   };
 }
@@ -267,13 +286,20 @@ function query(view: string, expr: string, timeoutMs = 4000): Promise<unknown> {
 // ---------- 安全区 + 布局 ----------
 // divider 是「内容区内偏移」(扣除左右安全区);原生按
 // ratio = divider / usableW 换算,与 Tauri 版的窗口内比例语义一致。
-// 安全区数值用页面里的固定探针读 env()(旋转后 env() 自动更新,resize 重读)。
+// 安全区以原生推送(dc:insets,见 __dcDispatch)为准——Catalyst 窗口模式
+// 下 env() 与 UIKit 不一致;未推送前用页面探针读 env() 兜底。
 const insets = { left: 0, right: 0 };
+let pushedInsets: { top: number; left: number; right: number; bottom: number } | null = null;
 const MIN_PANE = 120; // 与原生 LayoutMath 一致
 let divider = 0;
 let layoutTimer: number | undefined;
 
 function readInsets(): void {
+  if (pushedInsets) {
+    insets.left = pushedInsets.left;
+    insets.right = pushedInsets.right;
+    return;
+  }
   const l = document.getElementById('sa-probe-l');
   const r = document.getElementById('sa-probe-r');
   if (l) insets.left = Math.max(0, l.getBoundingClientRect().left);
