@@ -114,6 +114,18 @@ import { findBracket, interpAt, scrollRatio, scrollTopFor } from '@docs-compare/
     // ignore
   }
 
+  // ---- 缩放快捷键(桌面端):Ctrl/Cmd + =/-/0 → 原生页面缩放(两侧同步)。
+  //  键盘焦点通常在某个内容页里,所以监听放在 reporter;controller 页
+  //  自己也有一份(焦点在工具条时)。 ----
+  window.addEventListener('keydown', (e) => {
+    if (!(e.metaKey || e.ctrlKey) || e.altKey) return;
+    const dir =
+      e.key === '=' || e.key === '+' ? 1 : e.key === '-' || e.key === '_' ? -1 : e.key === '0' ? 0 : null;
+    if (dir === null) return;
+    e.preventDefault();
+    report({ t: 'cs:zoom', dir });
+  });
+
   // ---- 滚动上报 ----
   let lastSent = -1;
   let scrollEventCount = 0;

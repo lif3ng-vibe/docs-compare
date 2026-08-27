@@ -55,6 +55,7 @@ cd apps/tauri/src-tauri && cargo run
 - 工具条粘贴原站 URL → 「对照打开」(回车同效);左右自动归一为 原站/镜像
 - 工具条站点下拉:列出全部站点对(与扩展 popup 同源),选中即开该站首页对照;与 URL 框双向联动
 - 工具条「新窗口」按钮:一键再开一个对照窗口,各窗口独立选站/导航/分隔条,互不干扰
+- 键盘缩放:Ctrl/Cmd + `=`/`-` 放大缩小、`0` 复位,左右两侧同步原生页面缩放(每窗独立记忆)
 - 窗口标题跟随左侧(原站)文档标题,切页即变(未打开文档时为「Docs Compare」);Rust 原生 `on_document_title_changed` 事件驱动
 - 中间分隔条可拖拽;窗口缩放时**按比例**保持左右分割(默认 50/50),两侧滚动条始终完整可见
 - 站点配置:启动用打包的 `apps/tauri/config/sites.json`,后台拉远程热更(见「收录新站点」)
@@ -102,6 +103,7 @@ npm run selftest:apple:layout # 纯 Swift 布局断言(安全区/比例钳制/�
 - 前置:Xcode(完整版含 iOS 运行时;精简安装先 `xcodebuild -downloadPlatform iOS`)+ `brew install xcodegen`
 - 布局模式:**单文档 / 对照**可切。iPhone 竖屏强制单文档(工具条「原/译」选看哪侧),横屏与 iPad 任意方向两模式皆可
 - 单文档模式下隐藏侧仍被静默驱动(导航/滚动同步照常)——切回对照或转横屏即已同步
+- 键盘缩放:Catalyst/外接键盘下 Ctrl/Cmd + `=`/`-`/`0` 两侧同步(CSS zoom,iOS 无原生 setPageZoom)
 - 工具条与桌面同款:站点下拉(远程热更同机制)、分隔条可拖(比例随旋转保持)
 - 多窗口 v1 不支持(按钮隐藏,命令返回错误,留待 iPad scenes)
 - 真机调试:用 Xcode 打开生成的工程选自己 team 签名即可(模拟器构建免签);Catalyst 冒烟跑法见 `.claude/skills/apple/SKILL.md`

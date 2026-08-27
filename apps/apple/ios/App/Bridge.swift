@@ -20,6 +20,9 @@ final class Bridge: NSObject, WKScriptMessageHandler {
     /// 标题跟随的最后值(dc_window_title 用;主路径是 left webview 的 title KVO)
     private(set) var lastTitle: String = "Docs Compare"
 
+    /// 内容缩放级(0.5~3.0),dc_zoom 步进/复位
+    private var zoom: CGFloat = 1.0
+
     // MARK: - WKScriptMessageHandler(controller 页 dcInvoke)
 
     func userContentController(
@@ -82,6 +85,11 @@ final class Bridge: NSObject, WKScriptMessageHandler {
             owner?.relayout()
             reply(reqId: reqId, value: nil)
 
+        case "dc_zoom":
+            let dir = args["dir"] as? Int ?? 0
+            let z = applyZoom(dir: dir)
+            reply(reqId: reqId, value: z)
+
         case "dc_set_title":
             if let t = args["title"] as? String, !t.isEmpty {
                 lastTitle = t
@@ -112,6 +120,16 @@ final class Bridge: NSObject, WKScriptMessageHandler {
         default:
             replyError(reqId: reqId, error: "未知命令 \(cmd)")
         }
+    }
+
+    /// 键盘缩放(Ctrl/Cmd + −/=/0):± 步进 ×1.15,0 复位,钳制 0.5~3.0;
+    /// 左右内容视图同步 setPageZoom(对照阅读两侧必须同倍率)
+    private func applyZoom(dir: Int) -> Double {
+        zoom = dir == 0 ? 1.0 : min(max(zoom * (dir > 0 ? 1.15 : 1 / 1.15), 0.5), 3.0)
+        zoom = (zoom * 100).rounded() / 100
+        owner?.setContentZoom(zoom)
+        if DC_DEBUG { NSLog("[dc] zoom → %.2f", zoom) }
+        return Double(zoom)
     }
 
     // MARK: - 状态回填

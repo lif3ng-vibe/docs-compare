@@ -10,6 +10,18 @@ final class ControllerNavDelegate: NSObject, WKNavigationDelegate {
     }
 }
 
+/// 内容页导航完成回调:重施 CSS 缩放(全页跳转会重置 documentElement.style,
+/// SPA 路由不重载文档则天然保留)。iOS/Catalyst 无 setPageZoom(AppKit 专属),
+/// 用 CSS zoom 等效。
+final class ContentNavDelegate: NSObject, WKNavigationDelegate {
+    var zoom: CGFloat = 1.0
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        guard abs(zoom - 1.0) > 0.005 else { return }
+        webView.evaluateJavaScript("document.documentElement.style.zoom = \(zoom);")
+    }
+}
+
 /// 三视图容器(controller 工具条页 + left/right 文档页),Tauri 版
 /// spawn_window/relayout 的平移。布局走纯 frame(viewDidLayoutSubviews +
 /// 安全区变化触发),不用 autolayout——与 Rust 侧 Resize→relayout 同构。
@@ -29,6 +41,9 @@ final class CompareViewController: UIViewController {
     /// 不一致(WebKit 报 0,UIKit 报标题栏 41),以原生值为准推送
     private var controllerNavDelegate = ControllerNavDelegate()
     private var lastPushedInsets: UIEdgeInsets?
+
+    /// 内容页缩放重施(CSS zoom,见 ContentNavDelegate)
+    private let contentNavDelegate = ContentNavDelegate()
 
     /// 三视图共享进程池(cookie/会话一致)
     static let processPool = WKProcessPool()
@@ -60,6 +75,7 @@ final class CompareViewController: UIViewController {
         rightWebView = makeWebView(config: makeContentConfig(view: "w1-right", reporterJS: reporterJS))
         for wv in [leftWebView!, rightWebView!] {
             wv.allowsBackForwardNavigationGestures = true
+            wv.navigationDelegate = contentNavDelegate
         }
 
         // 层序:controller 在底(工具条+分隔条),内容页盖上
@@ -196,6 +212,15 @@ final class CompareViewController: UIViewController {
         }
         wv.load(URLRequest(url: url))
         return nil
+    }
+
+    /// 左右内容视图同步页面缩放(Bridge.dc_zoom 调用;iOS/Catalyst 无
+    /// setPageZoom,用 CSS zoom 等效,导航完成后由 ContentNavDelegate 重施)
+    func setContentZoom(_ z: CGFloat) {
+        contentNavDelegate.zoom = z
+        let js = "document.documentElement.style.zoom = \(z);"
+        leftWebView.evaluateJavaScript(js)
+        rightWebView.evaluateJavaScript(js)
     }
 
     // MARK: - 下行推送

@@ -27,6 +27,11 @@ use tauri::{
 static DIVIDER_RATIOS: std::sync::LazyLock<Mutex<HashMap<String, f64>>> =
     std::sync::LazyLock::new(|| Mutex::new(HashMap::new()));
 
+/// 每窗内容缩放(0.5~3.0),键 = 窗口标签:Ctrl/Cmd + −/=/0 经 reporter 的
+/// cs:zoom 信号 → controller → dc_zoom,原生页面缩放左右两侧同步施加
+static ZOOM_LEVELS: std::sync::LazyLock<Mutex<HashMap<String, f64>>> =
+    std::sync::LazyLock::new(|| Mutex::new(HashMap::new()));
+
 /// 下一个窗口序号:只增不复用,窗口关闭不回收,避免新窗撞上残留标签
 static NEXT_WINDOW: AtomicU64 = AtomicU64::new(1);
 
@@ -105,6 +110,7 @@ fn main() {
             dc_eval,
             dc_navigate,
             dc_layout,
+            dc_zoom,
             dc_new_window,
             dc_set_title,
             dc_window_title,
@@ -334,6 +340,36 @@ fn w_scale(app: &tauri::AppHandle) -> f64 {
     app.get_window("w1")
         .and_then(|w| w.scale_factor().ok())
         .unwrap_or(1.0)
+}
+
+/// 键盘缩放(Ctrl/Cmd + −/=/0):按发起窗口记录缩放级,± 步进 ×1.15,
+/// 0 复位,钳制 0.5~3.0;左右内容视图同步施加原生页面缩放(对照阅读
+/// 两侧必须同倍率,单独缩一侧没有意义)。
+#[tauri::command]
+fn dc_zoom(app: tauri::AppHandle, window: tauri::Window, dir: i64) -> Result<f64, String> {
+    let label = window.label().to_string();
+    let z = {
+        let mut map = ZOOM_LEVELS.lock().unwrap();
+        let z = map.entry(label.clone()).or_insert(1.0);
+        *z = if dir == 0 {
+            1.0
+        } else {
+            (*z * if dir > 0 { 1.15 } else { 1.0 / 1.15 }).clamp(0.5, 3.0)
+        };
+        // 两位小数取整,避免连按的浮点漂移累积
+        *z = (*z * 100.0).round() / 100.0;
+        *z
+    };
+    for side in ["left", "right"] {
+        let wv = app
+            .get_webview(&format!("{label}-{side}"))
+            .ok_or_else(|| format!("no webview: {label}-{side}"))?;
+        wv.set_zoom(z).map_err(|e| e.to_string())?;
+    }
+    if std::env::var_os("DC_DEBUG").is_some() {
+        eprintln!("[dc] zoom[{label}] → {z}");
+    }
+    Ok(z)
 }
 
 /// 开新窗口(多窗口):分配下一个序号,干净初始态(blank.html 两视图 + 独立 controller)。

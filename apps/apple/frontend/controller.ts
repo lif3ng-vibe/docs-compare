@@ -504,6 +504,17 @@ function wireUi(): void {
   document.getElementById('side-mirror')?.addEventListener('click', () => {
     void requestMode('single', 'mirror');
   });
+
+  // 缩放快捷键:焦点在工具条时内容页收不到键盘事件,这里补一份
+  // (与 reporter 的监听同一协议:cs:zoom → dc_zoom)
+  window.addEventListener('keydown', (e) => {
+    if (!(e.metaKey || e.ctrlKey) || e.altKey) return;
+    const dir =
+      e.key === '=' || e.key === '+' ? 1 : e.key === '-' || e.key === '_' ? -1 : e.key === '0' ? 0 : null;
+    if (dir === null) return;
+    e.preventDefault();
+    void invoke('dc_zoom', { dir }).catch(() => {});
+  });
 }
 
 // ---------- selftest ----------
@@ -704,6 +715,26 @@ async function selftest(mode: true | 'live'): Promise<void> {
     );
   });
 
+  await t('键盘缩放(Ctrl/Cmd± 两侧同步)', async () => {
+    // iOS/Catalyst 用 CSS zoom(无 setPageZoom):html 的 getBoundingClientRect
+    // 宽 = 视口/zoom,与 innerWidth 之比 ≈ 1/zoom,放大 → 比值变小
+    const zExpr = '(document.documentElement.getBoundingClientRect().width / window.innerWidth)';
+    const z0 = Number(await query('left', zExpr));
+    const z0r = Number(await query('right', zExpr));
+    await evalIn('left', `window.dispatchEvent(new KeyboardEvent('keydown', {key: '=', metaKey: true, ctrlKey: true}))`);
+    await waitFor(
+      async () => Number(await query('left', zExpr, 800).catch(() => z0)) < z0 * 0.95,
+      4000,
+      'left 放大生效',
+    );
+    const z1r = Number(await query('right', zExpr));
+    assert(z1r < z0r * 0.95, `right 未同步缩放(${z0r.toFixed(2)} → ${z1r.toFixed(2)})`);
+    await evalIn('left', `window.dispatchEvent(new KeyboardEvent('keydown', {key: '0', metaKey: true, ctrlKey: true}))`);
+    await wait(700);
+    const z2 = Number(await query('left', zExpr));
+    assert(Math.abs(z2 - z0) <= 0.03, `复位偏差(${z0.toFixed(2)} → ${z2.toFixed(2)})`);
+  });
+
   const pass = results.filter((r) => r.pass).length;
   await invoke('dc_selftest_done', {
     results: JSON.stringify({ pass, total: results.length, results }, null, 2),
@@ -757,6 +788,7 @@ async function main(): Promise<void> {
     if (p.t === 'cs:hello') viewUrls[view] = (p.href as string) ?? viewUrls[view];
     else if (p.t === 'cs:nav') void syncFrom(view, p.href as string);
     else if (p.t === 'cs:scroll') void onScroll(view, (p.topId as string | null) ?? null, (p.frac as number) ?? 0, (p.ratio as number) ?? 0);
+    else if (p.t === 'cs:zoom') void invoke('dc_zoom', { dir: (p.dir as number) ?? 0 }).catch(() => {});
   });
 
   if (mode) {
