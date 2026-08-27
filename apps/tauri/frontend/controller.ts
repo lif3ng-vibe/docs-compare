@@ -729,6 +729,7 @@ async function main(): Promise<void> {
       ratio?: number;
       name?: string;
       value?: unknown;
+      dir?: number;
     };
     if (!p) return;
     if (p.t === 'test:info') {
