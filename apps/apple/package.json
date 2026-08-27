@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "project": "xcodegen generate",
     "sim": "node scripts/sim.mjs",
+    "catalyst": "node build.mjs && node scripts/catalyst.mjs",
     "selftest": "npm run build && node scripts/selftest.mjs",
     "selftest:live": "npm run build && node scripts/selftest.mjs --live",
     "selftest:layout": "node scripts/selftest.mjs --layout"

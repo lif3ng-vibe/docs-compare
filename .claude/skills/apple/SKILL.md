@@ -11,6 +11,7 @@ description: Use when 运行 iOS/Catalyst 版应用、跑 apple 自测(fixture/l
 
 ```bash
 npm run sim:apple            # 构建+安装+模拟器正常启动(手动过 UI 用)
+npm run catalyst             # Mac Catalyst 版一键构建+启动(本机自用)
 npm run selftest:apple       # fixture 离线自测(模拟器里跑完自动退出,exit 0/1)
 npm run selftest:apple:live  # 真实站点(外网:onorca.dev ↔ GitHub Pages)
 npm run selftest:apple:layout # 纯 Swift 布局断言(不起 UI,也走模拟器)
@@ -33,16 +34,7 @@ npm run selftest:apple:layout # 纯 Swift 布局断言(不起 UI,也走模拟器
 
 ## Catalyst(macOS 同套布局)
 
-```bash
-cd apps/apple
-xcodegen generate   # 若未生成
-xcodebuild -project DocsCompare.xcodeproj -scheme DocsCompare \
-  -destination 'platform=macOS,variant=Mac Catalyst' -derivedDataPath build \
-  CODE_SIGN_IDENTITY=- CODE_SIGNING_REQUIRED=NO build
-open build/Build/Products/Debug-maccatalyst/DocsCompare.app
-```
-
-Mac 上桌面分发仍以 Tauri dmg 为准,Catalyst 是"同套布局"验证渠道。
+`npm run catalyst` 一键完成(等价于:xcodegen → xcodebuild `-destination 'platform=macOS,variant=Mac Catalyst'` ad-hoc 签名 → open)。Mac 上桌面分发仍以 Tauri dmg 为准,Catalyst 是"同套布局"本机自用渠道。
 
 ## 相关事实
 
