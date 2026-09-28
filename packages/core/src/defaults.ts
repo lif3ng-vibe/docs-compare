@@ -45,6 +45,14 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/ai-memory',
     anchorMapUrl: 'anchor-maps/ai-memory.json',
   },
+
+  {
+    id: 'nimbus',
+    name: 'Nimbus 文档',
+    origin: 'https://nimbus-docs.com',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/nimbus',
+    anchorMapUrl: 'anchor-maps/nimbus.json',
+  },
   {
     id: 'herdr',
     name: 'Herdr 文档',

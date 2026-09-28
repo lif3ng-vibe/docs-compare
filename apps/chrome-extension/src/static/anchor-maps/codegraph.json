@@ -75,10 +75,6 @@
     "更底层的构建块": "lower-level-building-blocks",
     "嵌入要求": "embedding-requirements"
   },
-  "/reference/cli": {
-    "initindex-与-sync": "init-index-and-sync",
-    "查询命令": "query-commands"
-  },
   "/reference/integrations": {
     "受支持的智能体": "supported-agents",
     "手动配置": "manual-setup"

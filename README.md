@@ -140,7 +140,7 @@ npm run build          # 产物在 apps/chrome-extension/dist/
 
 3. 打开任一侧的文档页 → 点扩展图标 →「配对并打开对照页」
 
-内置的六个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步;`official: true` 表示两侧都是官方维护的双语站,下拉打「官方」角标)。列表会随远程热更自动补新站(见「收录新站点」),以下为兜底快照:
+内置的七个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步;`official: true` 表示两侧都是官方维护的双语站,下拉打「官方」角标)。列表会随远程热更自动补新站(见「收录新站点」),以下为兜底快照:
 
 ```json
 [
@@ -161,6 +161,9 @@ npm run build          # 产物在 apps/chrome-extension/dist/
   { "id": "ai-memory", "origin": "https://lif3ng-vibe.github.io/docs-cn/ai-memory-en",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-memory",
     "anchorMapUrl": "anchor-maps/ai-memory.json" },
+  { "id": "nimbus", "origin": "https://nimbus-docs.com",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/nimbus",
+    "anchorMapUrl": "anchor-maps/nimbus.json" },
   { "id": "herdr", "origin": "https://herdr.dev/docs",
     "mirror": "https://herdr.dev/zh-cn/docs",
     "anchorMapUrl": "anchor-maps/herdr.json", "official": true }

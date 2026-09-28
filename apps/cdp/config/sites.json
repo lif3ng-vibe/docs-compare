@@ -43,5 +43,12 @@
     "mirror": "https://herdr.dev/zh-cn/docs",
     "anchorMapUrl": "anchor-maps/herdr.json",
     "official": true
+  },
+  {
+    "id": "nimbus",
+    "name": "Nimbus 文档",
+    "origin": "https://nimbus-docs.com",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/nimbus",
+    "anchorMapUrl": "anchor-maps/nimbus.json"
   }
 ]

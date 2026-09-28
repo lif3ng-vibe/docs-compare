@@ -20,17 +20,6 @@
     "规则与注意事项": "rules--gotchas",
     "claude-code-账号": "claude-code-accounts"
   },
-  "/agents/codex": {
-    "安装": "setup",
-    "启动": "launching",
-    "账号热切换": "account-hot-swap",
-    "系统默认账号与附加账号": "system-default-vs-extra-accounts",
-    "嵌套-task-子智能体": "nested-task-subagents",
-    "在新会话中继续": "continue-in-a-new-session",
-    "重启微标": "restart-chip",
-    "用量与限流": "usage--rate-limits",
-    "windows-上的-codexwsl": "codex-on-windows-wsl"
-  },
   "/agents/cursor-cli": {
     "安装": "setup",
     "启动": "launching",
@@ -53,12 +42,6 @@
     "记忆文件": "memory-files",
     "智能体状态钩子": "agent-status-hooks",
     "在重启后存活": "surviving-a-restart"
-  },
-  "/agents/native-chat": {
-    "启用": "enable",
-    "输入区": "composer",
-    "来自智能体的提问": "questions-from-the-agent",
-    "可用性": "availability"
   },
   "/agents/session-history": {
     "打开面板": "open-the-panel",
@@ -85,37 +68,11 @@
     "下载一直不开始或一直不完成": "the-download-never-starts-or-never-finishes",
     "三星-galaxyauto-blocker": "samsung-galaxy-auto-blocker"
   },
-  "/browser/design-mode": {
-    "打开它": "turn-it-on",
-    "落入对话": "drop-into-chat",
-    "使用结果": "use-the-result"
-  },
-  "/browser/overview": {
-    "控件": "controls",
-    "worktree-作用域": "worktree-scoping",
-    "链接路由": "link-routing",
-    "下载": "downloads",
-    "分享为-artifact": "share-as-artifact",
-    "视口尺寸仿真": "viewport-size-emulation",
-    "自动化": "automation",
-    "后续步骤": "next-steps"
-  },
   "/browser/profiles": {
     "创建配置": "create-a-profile",
     "cookie-导入与-google-登录": "cookie-import-and-google-sign-in",
     "使用配置": "use-a-profile",
     "隔离": "isolation"
-  },
-  "/cli/automations": {
-    "创建一个安全的首个自动化": "create-a-safe-first-automation",
-    "选择运行位置": "choose-where-runs-happen",
-    "运行前预检": "precheck-before-a-run",
-    "项目主机--setup-目标": "project-host--setup-targets",
-    "错过运行的宽限期": "missed-run-grace",
-    "复用既有自动化会话": "reuse-an-existing-automation-session",
-    "检查并启用": "review-and-enable",
-    "手动运行": "run-on-demand",
-    "后续步骤": "next-steps"
   },
   "/cli/computer-use": {
     "首次设置": "first-time-setup",
@@ -151,33 +108,9 @@
     "移动模拟器": "mobile-emulator"
   },
   "/cli/reference": {
-    "验证运行时": "verify-the-runtime",
-    "选择器": "selectors",
-    "选择主机": "choose-a-host",
-    "运行时命令": "runtime-commands",
-    "仓库": "repos",
-    "worktree": "worktrees",
-    "终端": "terminals",
-    "文件": "files",
-    "内置浏览器": "built-in-browser",
-    "桌面计算机使用": "desktop-computer-use",
-    "移动模拟器": "mobile-emulator",
-    "技能本地无需运行时": "skills-local-no-runtime-required",
-    "账号主机本地运行时": "account-host-local-runtime",
-    "自动化环境与钩子": "automations-environments-and-hooks",
-    "智能体习惯": "agent-habits",
     "读取": "read",
     "mcp-风格写入": "mcp-style-write",
     "字段辅助命令仍然有效": "field-helpers-still-valid"
-  },
-  "/cli/skills": {
-    "可安装的-orca-技能": "installable-orca-skills",
-    "混合桩与实时指南": "hybrid-stubs-vs-the-live-guide",
-    "保持技能最新": "keep-skills-up-to-date",
-    "在主机间分享私有技能": "share-private-skills-between-hosts",
-    "发现来源": "discovery-sources",
-    "添加你自己的技能": "add-your-own-skills",
-    "mcp-服务器": "mcp-servers"
   },
   "/cli/worktree-checkpoints": {
     "这一模式": "the-pattern",
@@ -209,10 +142,6 @@
     "自动换行": "word-wrap",
     "自定义编辑器字体": "custom-editor-font",
     "语言支持": "language-support"
-  },
-  "/editing/viewers": {
-    "图片": "images",
-    "jupyter-notebook": "jupyter-notebooks"
   },
   "/first-session": {
     "1-添加仓库": "1-add-a-repository",
@@ -271,12 +200,7 @@
     "智能体仪表盘": "agent-dashboard",
     "启动默认值": "launch-defaults",
     "restart-卡片": "restart-chip",
-    "会话生命周期": "session-lifecycle",
-    "列": "columns",
-    "视图": "views",
-    "打开方式": "open-as",
-    "搜索与过滤": "search-and-filters",
-    "卡片": "cards"
+    "会话生命周期": "session-lifecycle"
   },
   "/model/quick-open": {
     "快速打开cmd-p": "quick-open-cmd-p",
@@ -427,35 +351,6 @@
     "我们绝不发送什么": "what-we-never-send",
     "如何退出": "how-to-opt-out",
     "数据去向": "where-the-data-goes"
-  },
-  "/terminal": {
-    "窗格与标签页": "panes--tabs",
-    "tui-剪贴板osc-52": "tui-clipboard-osc-52",
-    "搜索": "search",
-    "链接操作": "link-actions",
-    "复制终端上下文": "copy-terminal-context",
-    "主题": "themes",
-    "ghostty-导入": "ghostty-import",
-    "warp-主题导入": "warp-theme-import",
-    "快捷键": "shortcuts",
-    "原生按键绑定": "native-key-bindings",
-    "浮动终端": "floating-terminal",
-    "快速命令": "quick-commands"
-  },
-  "/troubleshooting": {
-    "智能体无法启动": "agent-wont-start",
-    "diff-视图显示异常--卡住": "diff-view-looks-wrong--stuck",
-    "worktree-创建失败": "worktree-creation-fails",
-    "orca-cli-提示-command-not-found": "orca-cli-says-command-not-found",
-    "ssh-能连上但远程终端失败": "ssh-connects-but-remote-terminals-fail",
-    "ssh-对文件有效但-download-folder-不可用": "ssh-works-for-files-but-not-download-folder",
-    "open-in-vs-code-被禁用或仅限本地": "open-in-vs-code-is-disabled-or-local-only",
-    "kerberos-登录失败": "kerberos-login-fails",
-    "浏览器报-browser_no_tab": "browser-says-browser_no_tab",
-    "性能与内存": "performance--memory",
-    "github-pr-面板--检查--tasks-报错": "github-pr-panel--checks--tasks-errors",
-    "日志": "logs",
-    "报告问题": "reporting-issues"
   },
   "/ways-to-run": {
     "一览": "at-a-glance",

@@ -1,0 +1,441 @@
+{
+  "/": {
+    "为什么选择-nimbus": "why-nimbus",
+    "接下来去哪里": "where-to-go-next"
+  },
+  "/adding-components": {
+    "组件与工具函数": "components-and-utilities",
+    "特性": "features",
+    "浏览可用内容": "browse-whats-available"
+  },
+  "/ai/docs-for-agents": {
+    "内置内容": "what-ships",
+    "页面如何被索引": "how-pages-are-indexed",
+    "路由搭建": "route-setup",
+    "为什么重要": "why-it-matters",
+    "自定义内容加载器": "custom-content-loaders"
+  },
+  "/ai/metadata-and-seo": {
+    "标题与描述": "titles-and-descriptions",
+    "open-graph-图片": "open-graph-images",
+    "sitemap-与-robots": "sitemap-and-robots",
+    "页面级与全站-head": "per-page-and-site-wide-head",
+    "canonical-url": "canonical-urls"
+  },
+  "/ai/override-markdown": {
+    "包装共享路由": "wrap-the-shared-route",
+    "替换共享路由": "replace-the-shared-route",
+    "接管单个集合": "take-over-one-collection",
+    "覆盖-llmstxt-索引": "override-an-llmstxt-index",
+    "自定义-og-卡片": "customize-og-cards",
+    "覆盖会改变什么": "what-an-override-changes"
+  },
+  "/ai/publish-markdown": {
+    "1-添加页面替代版本": "1-add-alternate-page-versions",
+    "2-添加站点索引": "2-add-the-site-index",
+    "3-添加-llms-fulltxt": "3-add-llms-fulltxt",
+    "4-添加栏目索引": "4-add-section-indexes",
+    "验证": "verify",
+    "直接渲染": "direct-rendering",
+    "后续步骤": "next-steps"
+  },
+  "/api-reference": {
+    "用配方安装": "install-with-the-recipe",
+    "各部分如何协作": "how-the-pieces-fit",
+    "配方生成的配置": "configuration-generated-by-the-recipe",
+    "坐标与路由": "coordinates-and-routes",
+    "带版本的-api-参考": "versioned-api-references",
+    "构建或按请求渲染": "build-or-request-rendering",
+    "发布产物": "published-outputs",
+    "引用托管在别处的-api": "cite-an-api-hosted-elsewhere",
+    "验证参考页": "verify-the-reference",
+    "为什么规范不放在-srccontent": "why-the-specification-is-not-in-srccontent",
+    "显式传入条目": "passing-the-entry-explicitly",
+    "从正文按坐标链接": "link-from-prose-by-coordinate",
+    "坐标的形态": "coordinate-shapes",
+    "预处理好的代码示例": "prepared-code-examples"
+  },
+  "/cli": {
+    "保持最新": "keeping-up-to-date",
+    "帮助与版本": "help-and-version",
+    "组件与工具函数": "components-and-utilities",
+    "特性": "features",
+    "服务器适配器": "server-adapters"
+  },
+  "/components/accordion": {
+    "预览": "preview",
+    "示例": "examples",
+    "单独使用": "solo",
+    "默认展开": "default-open"
+  },
+  "/components/aside": {
+    "预览": "preview",
+    "示例": "examples",
+    "类型": "types",
+    "自定义标题": "custom-title",
+    "实际场景": "in-context"
+  },
+  "/components/badge": {
+    "预览": "preview",
+    "示例": "examples",
+    "变体": "variants",
+    "尺寸": "sizes",
+    "实际场景": "in-context"
+  },
+  "/components/banner": {
+    "预览": "preview",
+    "示例": "examples",
+    "可关闭": "dismissible"
+  },
+  "/components/breadcrumbs": {
+    "预览": "preview",
+    "示例": "examples",
+    "长路径": "long-path"
+  },
+  "/components/button": {
+    "预览": "preview",
+    "示例": "examples",
+    "变体": "variants",
+    "尺寸": "sizes",
+    "带图标": "with-an-icon",
+    "纯图标": "icon-only",
+    "加载中": "loading"
+  },
+  "/components/card-grid": {
+    "预览": "preview"
+  },
+  "/components/card": {
+    "预览": "preview",
+    "示例": "examples",
+    "单独使用": "solo",
+    "带图标": "with-icon",
+    "卡片网格": "card-grid"
+  },
+  "/components/code-group": {
+    "预览": "preview",
+    "示例": "examples",
+    "自动标签名": "auto-tab-labels",
+    "混合语言": "mixed-languages",
+    "带文件名框": "with-filename-frames"
+  },
+  "/components/code": {
+    "预览": "preview",
+    "示例": "examples",
+    "文件名": "filename",
+    "行高亮": "line-highlight",
+    "焦点": "focus",
+    "错误与警告": "error-and-warning",
+    "行号": "line-numbers",
+    "词高亮": "word-highlight"
+  },
+  "/components/collapsible": {
+    "预览": "preview",
+    "示例": "examples",
+    "默认展开": "default-open"
+  },
+  "/components/dialog": {
+    "预览": "preview",
+    "示例": "examples",
+    "确认操作": "confirmation"
+  },
+  "/components/embed": {
+    "预览": "preview",
+    "示例": "examples",
+    "自定义宽高比": "custom-ratio"
+  },
+  "/components/file-tree": {
+    "预览": "preview",
+    "示例": "examples",
+    "扁平结构": "flat",
+    "嵌套结构": "nested",
+    "高亮与占位": "highlight-and-placeholder"
+  },
+  "/components/frame": {
+    "预览": "preview",
+    "示例": "examples",
+    "宽高比": "aspect-ratio"
+  },
+  "/components/icon": {
+    "预览": "preview",
+    "示例": "examples",
+    "尺寸": "sizing",
+    "无障碍": "accessibility",
+    "搭配-tailwind-类": "with-tailwind-classes",
+    "iconify-图标集": "iconify-sets",
+    "本地-svg": "local-svgs"
+  },
+  "/components/layer-card": {
+    "预览": "preview"
+  },
+  "/components/link-button": {
+    "预览": "preview",
+    "示例": "examples",
+    "变体与尺寸": "variants-and-sizes"
+  },
+  "/components/link-card": {
+    "预览": "preview",
+    "示例": "examples",
+    "仅标题": "title-only",
+    "带描述": "with-description"
+  },
+  "/components/package-managers": {
+    "预览": "preview",
+    "示例": "examples",
+    "搭配-args-使用-dlx": "dlx-with-args"
+  },
+  "/components/page-actions": {
+    "预览": "preview"
+  },
+  "/components/pagination": {
+    "预览": "preview",
+    "示例": "examples",
+    "起始页": "first-page"
+  },
+  "/components/popover": {
+    "预览": "preview"
+  },
+  "/components/search": {
+    "预览": "preview"
+  },
+  "/components/sidebar": {
+    "预览": "preview"
+  },
+  "/components/steps": {
+    "预览": "preview",
+    "示例": "examples",
+    "基础用法": "basic",
+    "带标题": "with-titles",
+    "自定义起始编号": "custom-start"
+  },
+  "/components/tabs": {
+    "预览": "preview",
+    "示例": "examples",
+    "基础用法": "basic",
+    "同步": "synced"
+  },
+  "/components/theme-toggle": {
+    "预览": "preview"
+  },
+  "/components/toc": {
+    "预览": "preview"
+  },
+  "/configuration": {
+    "站点配置": "site-config",
+    "集成选项": "integration-options",
+    "渲染策略": "rendering-policy",
+    "定制生成的-markdown": "customize-generated-markdown",
+    "启用按请求渲染": "enable-request-rendering",
+    "混用构建与按请求渲染": "mix-build-and-request-rendering"
+  },
+  "/get-started": {
+    "它有何不同": "what-makes-it-different",
+    "快速上手": "quickstart",
+    "接下来去哪里": "where-to-go-next"
+  },
+  "/installation": {
+    "环境要求": "requirements",
+    "脚手架生成": "scaffold",
+    "哪些内容会进入你的仓库": "what-lands-in-your-repo",
+    "运行": "run",
+    "构建与部署": "build-and-deploy"
+  },
+  "/navigation/redirects": {
+    "改写侧边栏链接": "rewrite-a-sidebar-link",
+    "跨版本的页面改名": "renamed-pages-across-versions",
+    "主机级重定向": "host-level-redirects"
+  },
+  "/navigation/search": {
+    "工作原理": "how-it-works",
+    "控制哪些内容被索引": "controlling-whats-indexed",
+    "禁用或替换搜索": "disabling-or-replacing-search"
+  },
+  "/navigation/sidebar": {
+    "从文件系统生成": "generate-from-the-filesystem",
+    "定义结构": "define-the-structure",
+    "限定大型侧边栏的范围": "scope-large-sidebars",
+    "控制分组落地页": "control-group-landing-pages",
+    "转换最终树": "transform-the-final-tree",
+    "页面级控制": "per-page-controls"
+  },
+  "/philosophy": {
+    "代码全部归你所有": "you-own-all-your-code",
+    "交互式内容完全属于你": "interactive-content-fully-yours",
+    "人类与智能体优先": "human-and-agent-first",
+    "智能体化创作": "agentic-authoring",
+    "创作质量是一等公民": "authoring-quality-is-first-class",
+    "可读只是底线": "readable-is-the-floor",
+    "内容溯源是内建原语": "provenance-is-a-primitive",
+    "目录树即事实来源": "the-tree-is-the-truth",
+    "版本只是内容集合": "versions-are-just-collections"
+  },
+  "/project-structure": {
+    "哪些内容会进入你的仓库": "what-lands-in-your-repo",
+    "nimbusjson内容溯源记录": "nimbusjson--the-provenance-record",
+    "框架边界": "the-framework-boundary",
+    "目录树即事实来源": "the-tree-is-the-truth"
+  },
+  "/registry": {
+    "三种类型": "three-types",
+    "条目的构成": "anatomy-of-an-entry",
+    "安装图": "install-graph",
+    "特性": "features",
+    "内容配方": "content-recipes"
+  },
+  "/styling/layouts": {
+    "页面外壳": "the-shells",
+    "页面级开关": "per-page-toggles",
+    "全站开关": "site-wide-toggles"
+  },
+  "/styling/theme-and-tokens": {
+    "设计令牌": "design-tokens",
+    "深色模式": "dark-mode",
+    "布局与排版": "layout-and-type"
+  },
+  "/writing/code-blocks": {
+    "标题与高亮": "titles-and-highlighting",
+    "标注": "notations",
+    "语言别名": "language-aliases",
+    "包管理器标签页": "package-manager-tabs"
+  },
+  "/writing/frontmatter": {
+    "字段": "fields",
+    "sidebar-对象": "the-sidebar-object",
+    "示例": "example",
+    "已移除的键": "removed-keys"
+  },
+  "/writing/interactive-content": {
+    "无头包装器": "the-headless-wrapper",
+    "外壳归你所有": "chrome-is-yours",
+    "边界": "the-boundary"
+  },
+  "/writing/linting": {
+    "两层机制": "two-layers",
+    "运行": "run-it",
+    "配置严重级别": "configure-severities",
+    "文件内禁用": "in-file-disables"
+  },
+  "/writing/markdown-and-mdx": {
+    "部署-base-下的链接": "links-under-a-deployment-base",
+    "组件注册表": "the-components-registry",
+    "构建时校验": "build-time-validation",
+    "提示块": "admonitions",
+    "扩展-markdown": "extending-markdown",
+    "渲染效果": "rendered-examples",
+    "语法与行为": "syntax-and-behavior"
+  },
+  "/writing/pages-and-routing": {
+    "文件到-url": "file-to-url",
+    "自定义-astro-路由": "custom-astro-routes",
+    "页面模式": "page-modes",
+    "草稿": "drafts",
+    "重定向侧边栏条目": "redirecting-a-sidebar-entry",
+    "其他集合": "other-collections",
+    "自定义路由辅助函数": "custom-route-helpers",
+    "页面-url": "page-urls"
+  },
+  "/writing/recipes/changelog": {
+    "何时使用": "when-to-use-it",
+    "标题与描述": "title--description",
+    "脚手架生成此页": "scaffold-this-page",
+    "组件建议": "component-guidance",
+    "结尾": "ending",
+    "阈值": "thresholds",
+    "链接与时效性": "links--freshness",
+    "智能体须知": "agent-notes",
+    "检查清单": "checklist"
+  },
+  "/writing/recipes/concept": {
+    "何时使用": "when-to-use-it",
+    "标题与描述": "title--description",
+    "脚手架生成此页": "scaffold-this-page",
+    "组件建议": "component-guidance",
+    "结尾": "ending",
+    "阈值": "thresholds",
+    "链接与时效性": "links--freshness",
+    "智能体须知": "agent-notes",
+    "检查清单": "checklist"
+  },
+  "/writing/recipes/example": {
+    "何时使用": "when-to-use-it",
+    "标题与描述": "title--description",
+    "脚手架生成此页": "scaffold-this-page",
+    "组件建议": "component-guidance",
+    "结尾": "ending",
+    "阈值": "thresholds",
+    "链接与时效性": "links--freshness",
+    "智能体须知": "agent-notes",
+    "检查清单": "checklist"
+  },
+  "/writing/recipes/how-to": {
+    "何时使用": "when-to-use-it",
+    "标题与描述": "title--description",
+    "脚手架生成此页": "scaffold-this-page",
+    "组件建议": "component-guidance",
+    "结尾": "ending",
+    "阈值": "thresholds",
+    "链接与时效性": "links--freshness",
+    "智能体须知": "agent-notes",
+    "检查清单": "checklist"
+  },
+  "/writing/recipes/overview": {
+    "何时使用": "when-to-use-it",
+    "标题与描述": "title--description",
+    "脚手架生成此页": "scaffold-this-page",
+    "组件建议": "component-guidance",
+    "结尾": "ending",
+    "阈值": "thresholds",
+    "链接与时效性": "links--freshness",
+    "智能体须知": "agent-notes",
+    "检查清单": "checklist"
+  },
+  "/writing/recipes/quickstart": {
+    "何时使用": "when-to-use-it",
+    "标题与描述": "title--description",
+    "脚手架生成此页": "scaffold-this-page",
+    "组件建议": "component-guidance",
+    "结尾": "ending",
+    "阈值": "thresholds",
+    "链接与时效性": "links--freshness",
+    "智能体须知": "agent-notes",
+    "检查清单": "checklist"
+  },
+  "/writing/recipes/reference": {
+    "何时使用": "when-to-use-it",
+    "标题与描述": "title--description",
+    "脚手架生成此页": "scaffold-this-page",
+    "组件建议": "component-guidance",
+    "结尾": "ending",
+    "阈值": "thresholds",
+    "链接与时效性": "links--freshness",
+    "智能体须知": "agent-notes",
+    "检查清单": "checklist"
+  },
+  "/writing/recipes/troubleshooting": {
+    "何时使用": "when-to-use-it",
+    "标题与描述": "title--description",
+    "脚手架生成此页": "scaffold-this-page",
+    "组件建议": "component-guidance",
+    "结尾": "ending",
+    "阈值": "thresholds",
+    "链接与时效性": "links--freshness",
+    "智能体须知": "agent-notes",
+    "检查清单": "checklist"
+  },
+  "/writing/recipes/tutorial": {
+    "何时使用": "when-to-use-it",
+    "标题与描述": "title--description",
+    "脚手架生成此页": "scaffold-this-page",
+    "组件建议": "component-guidance",
+    "结尾": "ending",
+    "阈值": "thresholds",
+    "链接与时效性": "links--freshness",
+    "智能体须知": "agent-notes",
+    "检查清单": "checklist"
+  },
+  "/writing/reusable-snippets": {
+    "编写局部片段": "write-a-partial",
+    "引用片段": "include-it",
+    "参数": "parameters",
+    "自定义片段-id": "custom-partial-ids"
+  }
+}

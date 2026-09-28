@@ -63,7 +63,19 @@
       "origin": "https://herdr.dev/docs",
       "mirror": "https://herdr.dev/zh-cn/docs",
       "useSourceFrontmatter": false,
-      "listFrom": { "sitemap": "https://herdr.dev/sitemap.xml" }
+      "listFrom": {
+        "sitemap": "https://herdr.dev/sitemap.xml"
+      }
+    },
+    {
+      "id": "nimbus",
+      "dir": "nimbus-docs-cn",
+      "origin": "https://nimbus-docs.com",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/nimbus",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "sitemap": "https://nimbus-docs.com/sitemap-index.xml"
+      }
     }
   ]
 }
