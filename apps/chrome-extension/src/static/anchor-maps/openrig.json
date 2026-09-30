@@ -275,7 +275,7 @@
   "last-verified-against-source-sha-as-built-独有": "last-verified-against-source-sha-as-built-unique",
   "另见": "see-also"
  },
- "/as-built/README": {
+ "/as-built/readme": {
   "本目录树的组织方式": "how-this-tree-is-organized",
   "模块索引": "module-index",
   "architecture后端守护进程与运行时": "architecture--backend-daemon-runtime",
@@ -692,13 +692,13 @@
   "规则": "rules",
   "信任任何-worktree-构建之前的自检": "self-check-before-trusting-any-worktree-build"
  },
- "/releases/README": {
+ "/releases/readme": {
   "设立缘由": "why-this-exists",
   "最简流程": "minimal-process",
   "撰写指南": "guidance",
   "范围": "scope"
  },
- "/releases/v0.1.12": {
+ "/releases/v0112": {
   "摘要": "summary",
   "本版包含内容": "included-in-this-release",
   "用户可感知的变化": "user-facing-changes",
@@ -707,7 +707,7 @@
   "已执行的验证": "verification-performed",
   "所含提交": "commits-included"
  },
- "/releases/v0.2.0": {
+ "/releases/v020": {
   "摘要": "summary",
   "本版包含内容": "included-in-this-release",
   "用户可感知的变化": "user-facing-changes",
@@ -732,7 +732,7 @@
   "发布循环中的最终修复": "final-fixes-during-release-loop",
   "恢复标记": "recovery-markers"
  },
- "/releases/v0.3.0": {
+ "/releases/v030": {
   "摘要": "summary",
   "本版包含内容": "included-in-this-release",
   "用户可感知的变化": "user-facing-changes",
@@ -746,7 +746,7 @@
   "已执行的验证": "verification-performed",
   "所含提交": "commits-included"
  },
- "/releases/v0.3.1": {
+ "/releases/v031": {
   "摘要": "summary",
   "本版包含内容": "included-in-this-release",
   "用户可感知的变化": "user-facing-changes",
@@ -770,7 +770,7 @@
   "最终测试对齐": "final-test-alignment",
   "隐私清理": "privacy-hygiene"
  },
- "/releases/v0.3.2": {
+ "/releases/v032": {
   "摘要": "summary",
   "本版包含内容": "included-in-this-release",
   "用户可感知的变化": "user-facing-changes",
@@ -796,7 +796,7 @@
   "scope-树原语-1": "scope-tree-primitive-第二次出现",
   "隐私与发布准备": "privacy-and-release-prep"
  },
- "/releases/v0.3.3": {
+ "/releases/v033": {
   "摘要": "summary",
   "本版包含内容": "included-in-this-release",
   "用户可感知的变化": "user-facing-changes",
@@ -822,7 +822,7 @@
   "for-you-按异常管理-1": "for-you-manage-by-exception-第二次出现",
   "自动功能发布产品代码部分": "auto-feature-rollout-product-code-halves"
  },
- "/releases/v0.3.4": {
+ "/releases/v034": {
   "摘要": "summary",
   "本版包含内容": "included-in-this-release",
   "用户可感知的变化": "user-facing-changes",
@@ -851,7 +851,7 @@
   "卡住席位恢复": "stuck-seat-recovery",
   "节点粒度的托管部分恢复-1": "node-granular-managed-partial-restore-第二次出现"
  },
- "/releases/v0.4.0": {
+ "/releases/v040": {
   "摘要": "summary",
   "本版包含内容": "included-in-this-release",
   "新增顶级-cli-动词与新子命令": "new-top-level-cli-verbs--new-subcommands",
@@ -869,7 +869,7 @@
   "已执行的验证": "verification-performed",
   "包含的提交": "commits-included"
  },
- "/releases/v0.4.1": {
+ "/releases/v041": {
   "摘要": "summary",
   "本版包含内容": "included-in-this-release",
   "新增顶级-cli-呈现面": "new-top-level-cli-surface",
@@ -883,14 +883,14 @@
   "已知限制与后续跟进": "known-limitations--follow-ons",
   "另请参阅": "see-also"
  },
- "/releases/v0.4.2": {
+ "/releases/v042": {
   "摘要": "summary",
   "变更内容": "what-changed",
   "涉及文件": "files-touched",
   "行为与兼容性": "behavior--compatibility",
   "另请参阅": "see-also"
  },
- "/releases/v0.4.3": {
+ "/releases/v043": {
   "摘要能存活的-rig": "summary--rigs-that-survive",
   "存续承重集合": "survival--the-load-bearing-set",
   "默认拒绝的反转rig-send": "the-deny-by-default-reversal-rig-send",
@@ -902,7 +902,7 @@
   "已知后续项": "known-follow-ons",
   "另请参阅": "see-also"
  },
- "/releases/v0.4.4": {
+ "/releases/v044": {
   "摘要多主机与活笔记living-notes": "summary--multi-host--living-notes",
   "随版内容": "what-shipped",
   "多主机基础": "multi-host-foundation",
@@ -913,7 +913,7 @@
   "已知后续项": "known-follow-ons",
   "另请参阅": "see-also"
  },
- "/releases/v0.4.6": {
+ "/releases/v046": {
   "摘要工作流多主机协作与工厂基础": "summary--workflows--multi-host-coordination--factory-foundations",
   "随版内容": "what-shipped",
   "工作流": "workflows",
@@ -924,7 +924,7 @@
   "迁移": "migrations",
   "已知后续项": "known-follow-ons"
  },
- "/releases/v0.4.7": {
+ "/releases/v047": {
   "摘要恢复诚实性starter-引导技能浪潮slack-连接器与-ui-维护模式": "summary--recovery-honesty--starter-bootstrap--skills-wave--slack-connector--ui-maintenance-mode",
   "随版内容": "what-shipped",
   "starter-引导": "starter-bootstrap",
@@ -937,7 +937,7 @@
   "行为与兼容性": "behavior--compatibility",
   "另请参阅": "see-also"
  },
- "/releases/v0.4.8": {
+ "/releases/v048": {
   "摘要权限姿态的快速跟进": "summary--permission-posture-fast-follow",
   "随版内容": "what-shipped",
   "可配置的启动姿态": "configurable-launch-posture",
@@ -950,7 +950,7 @@
   "行为与兼容性": "behavior--compatibility",
   "另请参阅": "see-also"
  },
- "/releases/v0.5.0": {
+ "/releases/v050": {
   "摘要终端任务控制--上下文库--权限策略--提供商用量--诚实的-cli": "summary--mission-control-in-the-terminal--context-library--permission-policies--provider-usage--honest-cli",
   "发布内容": "what-shipped",
   "权限策略内置模板--智能体驱动的翻译": "permission-policy-built-ins--agent-driven-translation",
@@ -968,7 +968,7 @@
   "行为与兼容性": "behavior--compatibility",
   "另请参阅": "see-also"
  },
- "/releases/v0.5.1": {
+ "/releases/v051": {
   "摘要一套面向产品的测试系统外加经由它发布的可靠性修复": "summary--a-test-system-for-the-product-plus-reliability-fixes-shipped-through-it",
   "发布内容": "what-shipped",
   "测试系统": "test-system",
@@ -980,21 +980,21 @@
   "行为与兼容性": "behavior--compatibility",
   "另请参阅": "see-also"
  },
- "/releases/v0.5.10": {
+ "/releases/v0510": {
   "system-health": "system-health",
   "耐久的生命周期与人工触达": "durable-lifecycle-and-human-delivery",
   "运维安装注意项": "upgrade-and-setup-notes",
   "已知限制": "known-limitations",
   "已执行的验证": "release-verification"
  },
- "/releases/v0.5.11": {
+ "/releases/v0511": {
   "首次有用工作与共享视图": "first-useful-work-and-a-shared-view",
   "在普通-tui-中理解工作": "understand-work-in-the-ordinary-tui",
   "更可靠的协同与生命周期": "more-reliable-coordination-and-lifecycle",
   "运维安装注意项": "operator-notes",
   "验证范围与限制": "validation-scope-and-limitations"
  },
- "/releases/v0.5.12": {
+ "/releases/v0512": {
   "判断只记录一次": "record-a-judgment-once",
   "分清正在运行的是哪张图": "know-which-graph-is-running",
   "让故障有归属有恢复路径": "give-failures-an-owner-and-a-recovery-path",
@@ -1004,7 +1004,7 @@
   "运维安装注意项": "operator-notes",
   "验证范围与已知限制": "validation-scope-and-known-limitations"
  },
- "/releases/v0.5.13": {
+ "/releases/v0513": {
   "从有用的东西开始": "start-with-something-useful",
   "阅读当前源码并找到回去的路": "read-the-current-source-and-find-your-way-back",
   "分清哪些需要你决策": "know-what-needs-your-decision",
@@ -1013,14 +1013,14 @@
   "更新上下文而不丢弃本地撰写": "update-context-without-discarding-local-authorship",
   "运维安装注意项与验证限制": "operator-notes-and-validation-limits"
  },
- "/releases/v0.5.14": {
+ "/releases/v0514": {
   "进入并持续阅读": "enter-and-keep-reading",
   "完成请求与静默更新": "complete-requests-and-quiet-updates",
   "查找请求与实例健康": "find-requests-and-instance-health",
   "理解任务进度": "understand-mission-progress",
   "运维注意项与验证边界": "operator-notes-and-verification-limits"
  },
- "/releases/v0.5.15": {
+ "/releases/v0515": {
   "启动与返回的清晰指引": "start-and-return-with-clearer-guidance",
   "继续推进有效的已评审工作": "continue-useful-reviewed-work",
   "选择命令权限": "choose-command-permissions",
@@ -1028,16 +1028,16 @@
   "pi-的回复输入与恢复": "pi-replies-input-and-recovery",
   "贡献者与收录的拉取请求": "contributors-and-included-pull-requests"
  },
- "/releases/v0.5.16": {
+ "/releases/v0516": {
   "保持已纳入版本管理的-claude-md": "keep-a-tracked-claudemd-unchanged",
   "面向拉取请求的可移植性报告": "portability-report-for-pull-requests",
   "贡献者与收录的拉取请求": "contributors-and-included-pull-requests"
  },
- "/releases/v0.5.17": {
+ "/releases/v0517": {
   "使用-bun-安装": "install-with-bun",
   "贡献者与收录的拉取请求": "contributors-and-included-pull-requests"
  },
- "/releases/v0.5.2": {
+ "/releases/v052": {
   "摘要测试系统投入实战急救车指挥器可靠性修复": "summary--test-system-exercises-for-real-crash-cart-conductor-reliability-fixes",
   "发布内容": "what-shipped",
   "急救车舰队恢复指挥器主打": "crash-cart-fleet-restore-conductor-headline",
@@ -1053,7 +1053,7 @@
   "行为与兼容性": "behavior--compatibility",
   "另请参阅": "see-also"
  },
- "/releases/v0.5.3": {
+ "/releases/v053": {
   "摘要上下文发布": "summary--the-context-release",
   "发布内容": "what-shipped",
   "上下文的地址语法rig-context-get主打": "address-grammar-for-context-rig-context-get-headline",
@@ -1067,7 +1067,7 @@
   "已知限制54-待办清单": "known-limitations-54-backlog",
   "另请参阅": "see-also"
  },
- "/releases/v0.5.4": {
+ "/releases/v054": {
   "摘要诚实发布": "summary---the-honesty-release",
   "发布内容": "what-shipped",
   "一条经分类的会话解析路径": "one-classified-session-resolution-path",
@@ -1081,7 +1081,7 @@
   "已知限制055-待办清单": "known-limitations-055-backlog",
   "另请参阅": "see-also"
  },
- "/releases/v0.5.5": {
+ "/releases/v055": {
   "摘要环境注意力发布": "summary--the-ambient-attention-release",
   "发布内容": "what-shipped",
   "rig-parked-seat推导式的静默卡滞诊断": "rig-parked-seat--derived-silent-stuck-diagnosis",
@@ -1101,7 +1101,7 @@
   "已知限制056-待办清单": "known-limitations-056-backlog",
   "另请参阅": "see-also"
  },
- "/releases/v0.5.6": {
+ "/releases/v056": {
   "上下文系统结构化带标签可核验": "the-context-system-structured-tagged-verifiable",
   "连续性寿命超越自身上下文窗口的席位": "continuity-seats-that-outlive-their-context-windows",
   "人类层可证明的送达": "the-human-layer-delivery-you-can-prove",
@@ -1109,14 +1109,14 @@
   "流程与参考文档": "process-and-reference",
   "升级注意事项": "upgrade-notes"
  },
- "/releases/v0.5.7": {
+ "/releases/v057": {
   "弹性拓扑生命周期": "elastic-topology-lifecycle",
   "连贯的工作交付": "coherent-work-delivery",
   "已执行的验证": "verification-performed",
   "运维安装注意项": "operator-notes",
   "已知限制": "known-limitations"
  },
- "/releases/v0.5.8": {
+ "/releases/v058": {
   "恢复与拓扑生命周期": "recovery-and-topology-lifecycle",
   "任务与上下文可见性": "mission-and-context-visibility",
   "运维诚实与更安全的安装": "operational-honesty-and-safer-setup",
@@ -1124,7 +1124,7 @@
   "已知限制": "known-limitations",
   "已执行的验证": "release-verification"
  },
- "/releases/v0.5.9": {
+ "/releases/v059": {
   "开发者视角的精致终端-ui": "developer-beautiful-terminal-ui",
   "连贯的实例上下文与技能模型": "a-coherent-instance-context-and-skill-model",
   "生命周期与恢复诚实": "lifecycle-and-recovery-honesty",
@@ -1132,7 +1132,7 @@
   "已知限制": "known-limitations",
   "已执行的验证": "release-verification"
  },
- "/releases/v0.6.0": {
+ "/releases/v060": {
   "破坏性变更nodejs-22-或-24": "breaking-change-nodejs-22-or-24",
   "按席位选择权限": "choose-permissions-per-seat",
   "保护需要手工输入的席位": "protect-a-seat-where-you-type-by-hand",
@@ -1145,7 +1145,7 @@
   "验证范围": "verification-scope",
   "贡献者与收录的拉取请求": "contributors-and-included-pull-requests"
  },
- "/releases/v0.6.1": {
+ "/releases/v061": {
   "从已安装版本获取帮助": "find-help-from-the-installed-version",
   "读取已编目项目的执行视图": "read-a-catalogued-projects-execution-view",
   "codex-就绪与捆绑指引": "codex-readiness-and-bundled-guidance",
@@ -1153,7 +1153,7 @@
   "拉取请求上的回归检查": "regression-checks-on-pull-requests",
   "升级与兼容性": "upgrade-and-compatibility"
  },
- "/releases/v0.6.2": {
+ "/releases/v062": {
   "小团队与一个有用的成果": "a-small-team-and-one-useful-result",
   "bundle-文件留在你安装它们的位置": "bundle-files-stay-where-you-install-them",
   "投递与恢复诊断": "delivery-and-restore-diagnostics",
