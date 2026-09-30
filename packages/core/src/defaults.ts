@@ -54,6 +54,13 @@ const RAW = [
     anchorMapUrl: 'anchor-maps/nimbus.json',
   },
   {
+    id: 'openrig',
+    name: 'OpenRig 文档',
+    origin: 'https://openrig.dev',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/openrig',
+    anchorMapUrl: 'anchor-maps/openrig.json',
+  },
+  {
     id: 'herdr',
     name: 'Herdr 文档',
     origin: 'https://herdr.dev/docs',

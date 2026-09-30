@@ -76,6 +76,13 @@
       "listFrom": {
         "sitemap": "https://nimbus-docs.com/sitemap-index.xml"
       }
+    },
+    {
+      "id": "openrig",
+      "dir": "openrig-docs-cn",
+      "origin": "https://openrig.dev",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/openrig",
+      "useSourceFrontmatter": false
     }
   ]
 }
