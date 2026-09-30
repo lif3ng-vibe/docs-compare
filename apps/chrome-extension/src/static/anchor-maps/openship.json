@@ -1,0 +1,1265 @@
+{
+  "/": {
+    "从这里开始": "start-here",
+    "查找任务": "find-a-task",
+    "核心概念": "key-concepts"
+  },
+  "/mcp": {
+    "端点": "the-endpoint",
+    "连接客户端": "connect-a-client",
+    "每次调用都会重新校验": "every-call-is-re-checked",
+    "工具与-api-的对应关系": "which-tools-map-to-which-api",
+    "引导式流程": "guided-flows",
+    "在终端中验证": "verify-from-the-terminal",
+    "故障排查": "troubleshooting",
+    "管理已连接的客户端": "manage-connected-clients",
+    "相关指南": "related-guides",
+    "将端点粘贴到你的客户端": "paste-the-endpoint-into-your-client",
+    "在浏览器中批准": "approve-it-in-the-browser",
+    "连接完成": "youre-connected"
+  },
+  "/reference/app-catalog": {
+    "两种类型": "two-kinds",
+    "顶层": "top-level",
+    "服务": "services",
+    "构建镜像": "building-an-image",
+    "两套字段体系": "two-field-systems",
+    "provides-与-requires": "provides-and-requires",
+    "主机要求": "host-requirements",
+    "占位符": "placeholders",
+    "本地化字符串": "localized-strings",
+    "校验": "validation",
+    "稳定性与版本": "stability-and-versioning",
+    "另请参阅": "see-also",
+    "服务资源默认值": "service-resource-defaults",
+    "copy-路径要加上服务名前缀": "copy-paths-are-prefixed-by-the-service-name",
+    "取值与构建参数": "values-and-build-args",
+    "表单布局": "form-layout",
+    "输出来源": "output-sources"
+  },
+  "/reference/openship-json": {
+    "构建": "build",
+    "运行时": "runtime",
+    "发布命令": "release-commands",
+    "持久化存储": "persistent-storage",
+    "环境变量": "environment-variables",
+    "域名": "domains",
+    "路由": "routes",
+    "资源": "resources",
+    "servicescompose": "services-compose",
+    "字段对应关系": "how-it-maps",
+    "另请参阅": "see-also"
+  },
+  "/guides/migrate-from-coolify-dokploy-dokku": {
+    "导入是如何工作的": "how-the-import-works",
+    "开始之前": "before-you-start",
+    "迁移一台服务器分步操作": "migrate-a-server-step-by-step",
+    "服务器到服务器迁移": "server-to-server-migration",
+    "为什么架构与众不同": "why-the-architecture-is-different",
+    "坦诚的对比": "honest-comparison",
+    "坦诚的提醒": "honest-caveats",
+    "下一步": "next-steps",
+    "连接服务器并扫描": "connect-the-server-and-scan",
+    "选择工作负载三步向导": "pick-workloads-3-step-wizard",
+    "选择卷策略这决定了停机时间": "choose-a-volume-strategy--this-decides-downtime",
+    "接管域名与边缘": "take-over-the-domains--edge",
+    "验证然后切换并移除旧平台": "verify-then-cut-over-and-remove-the-old-platform"
+  },
+  "/guides/updating": {
+    "更新信息在哪里看": "where-updates-live",
+    "更新": "updating",
+    "关于常开服务": "about-the-always-on-service",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides"
+  },
+  "/guides/auto-deploy": {
+    "在控制台开启": "turn-it-on-from-the-dashboard",
+    "webhook-是如何接通的简述": "how-the-webhook-gets-wired-the-short-version",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "打开项目的-source-标签页": "open-the-projects-source-tab",
+    "打开-auto-deploy-开关": "flip-on-auto-deploy",
+    "如果-openship-要求设置-webhook-endpoint": "if-openship-asks-for-a-webhook-endpoint",
+    "检查状态": "check-the-status"
+  },
+  "/guides/add-an-app": {
+    "pull-request-包含什么": "what-a-pull-request-contains",
+    "逐步搭建": "build-it-up",
+    "配个-logo": "give-it-a-logo",
+    "重新生成并验证": "regenerate-and-validate",
+    "发布提交": "ship-it",
+    "用户在安装过程中看到什么": "what-the-user-sees-on-install",
+    "核对清单": "checklist",
+    "上传自定义应用无需-pull-request": "upload-a-custom-app-no-pull-request",
+    "另请参阅": "see-also",
+    "必须达到的门槛": "the-bar-it-has-to-clear",
+    "1-身份信息与应用本身": "1-identity-and-the-app-itself",
+    "2-添加数据库并共享生成的密码": "2-add-the-database-and-share-the-generated-password",
+    "3-选择对外暴露方式": "3-choose-how-it-gets-exposed",
+    "4-用户安装后看到什么": "4-what-the-user-sees-after-install",
+    "5-后续运维设置": "5-day-2-settings",
+    "完整文件": "the-complete-file",
+    "进阶字段": "going-further",
+    "构建服务镜像而非拉取现成镜像": "build-a-service-instead-of-pulling-an-image",
+    "预览本地改动": "preview-your-local-changes"
+  },
+  "/guides/custom-servers": {
+    "步骤": "steps",
+    "服务器页面上有什么": "whats-on-the-server-page",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "打开-servers-页面并开始添加": "open-the-servers-page-and-start-adding",
+    "填写-ssh-连接表单": "fill-in-the-ssh-connection-form",
+    "选择如何配置服务器": "choose-how-to-set-the-server-up",
+    "看核心组件装好": "watch-the-core-components-install",
+    "速率限制security-标签页": "rate-limiting-security-tab",
+    "端口转发ports-标签页仅桌面": "port-forwarding-ports-tab-desktop-only"
+  },
+  "/guides/database-migrations": {
+    "无关的变更别碰数据库": "dont-touch-the-database-on-an-unrelated-change",
+    "每次部署前备份回滚安全网": "back-up-before-every-deploy-rollback-safety-net",
+    "部署完成后执行迁移": "run-a-migration-after-the-deploy",
+    "openship-目前不做的事": "what-openship-does-not-do-yet"
+  },
+  "/guides/cloud-connect-migration": {
+    "把实例连接到-openship-cloud": "connect-your-instance-to-openship-cloud",
+    "把一个项目迁移到-cloud或迁回来": "move-one-project-to-cloud-and-back",
+    "把实例开放给团队迁移": "open-your-instance-to-a-team-migration",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "打开-cloud-设置": "open-the-cloud-settings",
+    "登录并授权": "sign-in-and-give-consent",
+    "断开连接": "disconnecting",
+    "用终端执行同样的迁移": "the-same-migration-from-the-terminal"
+  },
+  "/guides/jobs": {
+    "内置任务": "built-in-jobs",
+    "自定义任务": "your-own-jobs",
+    "计划cron-表达式通俗解释": "schedules-cron-in-plain-terms"
+  },
+  "/guides/persistent-storage": {
+    "持久化存储部署后仍保留的路径": "persistent-storage-paths-that-survive-a-deploy",
+    "对象存储s3-存储桶": "object-storage-an-s3-bucket",
+    "打开-configuration--persistent-storage": "open-configuration--persistent-storage",
+    "点击-edit-并逐行列出路径": "press-edit-and-list-the-paths-one-per-line",
+    "保存然后部署": "save-then-deploy",
+    "值得了解的几点": "things-worth-knowing",
+    "打开-configuration--object-storage-并点击-connect": "open-configuration--object-storage-and-press-connect",
+    "选择存储桶的来源": "choose-where-the-bucket-comes-from",
+    "点击-test--connect": "press-test--connect",
+    "在代码中使用存储桶": "using-the-bucket-from-your-code"
+  },
+  "/guides/deploy-from-github": {
+    "步骤": "steps",
+    "打开自动部署可选但极好用": "turn-on-auto-deploy-optional-but-great",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "关联你的-github-账户只需一次": "connect-your-github-account-once",
+    "选一个要部署的仓库": "pick-the-repository-you-want-to-deploy",
+    "选择它在哪里运行": "choose-where-it-should-run",
+    "检查设置并点-deploy": "check-the-settings-and-press-deploy",
+    "看它上线": "watch-it-go-live"
+  },
+  "/guides/teams-members": {
+    "邀请某人": "invite-someone",
+    "每种角色能做什么": "what-each-role-can-do",
+    "接受邀请": "accept-an-invite",
+    "个人工作区与团队工作区": "personal-vs-team-workspaces",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "打开团队设置": "open-the-team-settings",
+    "点击invite-member": "press-invite-member",
+    "输入对方邮箱并选择角色": "enter-their-email-and-pick-a-role",
+    "发送邀请": "send-the-invite",
+    "打开邮件中的链接": "open-the-link-in-the-email",
+    "登录或创建账户": "sign-in-or-create-an-account",
+    "点击-accept": "press-accept"
+  },
+  "/guides/sleep-mode-resources": {
+    "两项设置通俗版": "the-two-settings-in-plain-words",
+    "设置资源": "set-resources",
+    "逐服务限制compose": "per-service-limits-compose",
+    "设置休眠模式": "set-sleep-mode",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "发起部署并选择-openship-cloud": "start-a-deploy-and-choose-openship-cloud",
+    "选一个规格": "pick-a-size",
+    "部署": "deploy"
+  },
+  "/guides/billing": {
+    "自托管免费": "self-hosted-is-free",
+    "管理你的套餐": "managing-your-plan",
+    "点数告警与恢复": "credit-warnings-and-recovery"
+  },
+  "/guides/compose-multi-service": {
+    "你的服务住在哪里": "where-your-services-live",
+    "服务如何进入一个栈": "how-services-get-into-a-stack",
+    "打开一个服务": "opening-a-service",
+    "启动停止重启": "start-stop-restart",
+    "当仓库与你的修改不一致漂移": "when-the-repo-and-your-edits-disagree-drift",
+    "端口与卷cloud-与自托管之别": "ports--volumes-cloud-vs-self-hosted",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "1-来自-docker-composeyml-文件": "1-from-a-docker-composeyml-file",
+    "2-手动添加": "2-added-by-hand",
+    "打开-add-service-对话框": "open-the-add-service-dialog",
+    "选择一个服务": "pick-a-service",
+    "填写细节": "fill-in-the-details",
+    "它会自动部署": "it-deploys-automatically",
+    "compose-文件变更后的重新同步": "re-syncing-after-the-compose-file-changes",
+    "compose-文件在子文件夹里": "compose-file-in-a-subfolder",
+    "build-是什么意思": "what-build-means",
+    "nextjs-构建期间的数据库访问": "database-access-during-a-nextjs-build"
+  },
+  "/guides/migrate-control-plane": {
+    "哪些内容会迁移以及迁移后要检查什么": "what-travels-and-what-to-check-after",
+    "开始迁移": "move-it",
+    "源码发布版的维护命令": "source-release-maintenance-commands",
+    "只部署有变化的部分不要重启你的数据库": "deploy-only-what-changed-dont-restart-your-databases",
+    "在旧机器上导出": "export-on-the-old-machine",
+    "把文件复制到新服务器": "copy-the-file-to-the-new-server",
+    "在新服务器上导入": "import-on-the-new-server",
+    "重新指向本地文件夹项目": "re-point-local-folder-projects"
+  },
+  "/guides/git-authentication": {
+    "先搞清楚克隆在哪里运行": "first-where-does-the-clone-run",
+    "凭据链服务器构建": "the-credential-chain-server-builds",
+    "各方式如何启用": "how-to-turn-each-one-on",
+    "本地构建与服务器构建": "local-vs-server-builds",
+    "相关指南": "related-guides",
+    "转发你的-git-身份桌面端推荐": "forward-your-git-identity-recommended-on-desktop",
+    "使用服务器自带的-git": "use-the-servers-own-git",
+    "在服务器上保存一个令牌或-ssh-密钥": "save-a-token-or-ssh-key-on-the-server",
+    "设置一个克隆令牌全局或按项目": "set-a-clone-token-global-or-per-project",
+    "公开仓库什么都不需要": "public-repos-need-nothing"
+  },
+  "/guides/the-edge": {
+    "边缘实际做什么": "what-the-edge-actually-does",
+    "接管一台已在服役的服务器": "taking-over-a-server-thats-already-serving",
+    "把域名放到边缘上": "putting-a-domain-on-the-edge",
+    "保护一条路由": "protecting-a-route",
+    "观察你的流量": "watching-your-traffic",
+    "更想看完整的命令参考": "prefer-the-full-command-reference",
+    "相关指南": "related-guides",
+    "看看那里有什么": "see-whats-there",
+    "接管并把站点带过来": "take-over-and-bring-the-sites-across"
+  },
+  "/guides/rollback-redeploy": {
+    "找到部署历史": "find-the-deploy-history",
+    "回滚到正常的版本": "roll-back-to-a-version-that-worked",
+    "重新部署再跑一次": "redeploy-run-it-again",
+    "多少个版本保持可即时恢复": "how-many-versions-stay-instantly-restorable",
+    "固定版本让它永远在场": "pin-a-version-so-its-always-there",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "打开你想回去的版本": "open-the-version-you-want-to-return-to",
+    "选择rollback-to-this-version": "choose-rollback-to-this-version"
+  },
+  "/guides": {
+    "部署": "deploy",
+    "配置": "configure",
+    "运维": "operate",
+    "迁移": "move",
+    "扩展": "extend"
+  },
+  "/guides/server-to-server-migration": {
+    "开始之前": "before-you-start",
+    "迁移一个项目分步操作": "move-a-project-step-by-step",
+    "哪些会迁移哪些不会": "what-moves-and-what-doesnt",
+    "下一步": "next-steps",
+    "发起迁移并选择源服务器": "start-the-migration-and-pick-the-source",
+    "选择要迁移的工作负载": "select-the-workloads-to-move",
+    "选择目标服务器": "choose-the-target-server",
+    "迁移": "migrate",
+    "重新指向-dns验证然后切换": "re-point-dns-verify-then-cut-over"
+  },
+  "/guides/preview-environments": {
+    "production与preview是什么意思": "what-production-and-preview-mean",
+    "从分支创建环境": "create-an-environment-from-a-branch",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "打开项目并找到切换器": "open-the-project-and-find-the-switcher",
+    "点击--并选择分支": "press--and-pick-a-branch",
+    "部署新环境": "deploy-the-new-environment",
+    "在环境之间切换": "switching-between-environments",
+    "手动创建不带分支": "creating-one-by-hand-no-branch"
+  },
+  "/guides/openship-json": {
+    "1-生成初始文件": "1-scaffold-it",
+    "2-声明你的部署": "2-declare-your-deploy",
+    "3-校验": "3-validate",
+    "4-部署": "4-deploy",
+    "多服务与-monorepo": "multi-service-and-monorepos"
+  },
+  "/guides/custom-domains": {
+    "步骤": "steps",
+    "泛域名": "wildcard-domains",
+    "带日志重试路由": "retry-routing-with-logs",
+    "三种-dns-配置方式": "dns-setup-three-ways",
+    "把一个域名重定向到另一个": "redirect-one-domain-to-another",
+    "自带证书": "bring-your-own-certificate",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "打开项目的-domains-标签页": "open-your-projects-domains-tab",
+    "添加你的域名": "add-your-domain",
+    "复制-openship-给你的-dns-记录": "copy-the-dns-records-openship-shows-you",
+    "粘贴到你的注册商": "paste-them-into-your-registrar",
+    "验证": "verify",
+    "看-https-亮起来": "watch-https-turn-on",
+    "自动提供方": "automatic-provider",
+    "手动-txt": "manual-txt",
+    "sdk-与-mcp": "sdk-and-mcp"
+  },
+  "/guides/deploy-local-folder": {
+    "实际上传的是什么": "what-actually-gets-uploaded",
+    "在控制台里": "in-the-dashboard",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides"
+  },
+  "/guides/self-hosted-github-app": {
+    "开始之前": "before-you-start",
+    "一键-manifest-配置githubcom": "one-click-manifest-setup-githubcom",
+    "注册已有-app-或-github-enterprise-server": "register-an-existing-app-or-github-enterprise-server",
+    "管理源与安装": "manage-sources-and-installations",
+    "运行时行为": "runtime-behavior",
+    "遗留的环境变量式-app": "legacy-environment-based-app",
+    "在控制台中开始": "start-in-the-dashboard",
+    "审核并创建-app": "review-and-create-the-app",
+    "选择仓库访问范围": "choose-repository-access"
+  },
+  "/guides/deploy-template-or-url": {
+    "粘贴-git-url-导入": "import-by-pasting-a-git-url",
+    "从模板起步": "start-from-a-template",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "打开-git-url-标签页": "open-the-git-url-tab",
+    "粘贴仓库链接": "paste-the-repository-link",
+    "在配置界面上收尾": "finish-on-the-setup-screen",
+    "打开-template-标签页": "open-the-template-tab",
+    "选一个框架": "pick-a-framework",
+    "在配置界面上收尾-1": "finish-on-the-setup-screen-1"
+  },
+  "/guides/environment-variables": {
+    "在控制台添加或修改变量": "add-or-edit-variables-in-the-dashboard",
+    "你的应用何时能见到这些值": "when-your-app-sees-these-values",
+    "服务覆盖与凭据轮换": "service-overrides-and-credential-rotation",
+    "查看隐藏与替换一个机密": "reveal-hide-and-replace-a-secret",
+    "生产与预览值": "production-and-preview-values",
+    "下载环境变量": "download-environment-variables",
+    "不重建就生效": "apply-without-a-full-rebuild",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "打开-configuration-标签页": "open-the-configuration-tab",
+    "添加一个变量": "add-a-variable",
+    "标记机密": "mark-the-secret-ones",
+    "保存": "save"
+  },
+  "/guides/logs-monitoring": {
+    "打开-logs-标签页": "open-the-logs-tab",
+    "运行日志terminal-子标签页": "runtime-logs--the-terminal-sub-tab",
+    "请求日志server-子标签页": "request-logs--the-server-sub-tab",
+    "更宏观的视角overview-标签页上的分析": "the-bigger-picture--analytics-on-the-overview-tab",
+    "出问题时应看哪里": "where-to-look-when-something-is-wrong",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "前往你的项目": "go-to-your-project",
+    "点击-logs": "click-logs"
+  },
+  "/guides/mcp-clusters-and-scaling": {
+    "支持的功能": "what-is-supported",
+    "前提条件与工作区": "prerequisites-and-workspace",
+    "1-检查或准备私有网络": "1-inspect-or-prepare-private-networking",
+    "2-创建计算集群并安装-k3s": "2-create-the-compute-cluster-and-install-k3s",
+    "3-先选目标再部署": "3-select-the-target-then-deploy",
+    "4-扩容与缩容": "4-scale-up-and-down",
+    "5-恢复与清理": "5-recover-and-clean-up",
+    "共享文件与恢复归档": "share-files-and-recover-archives",
+    "数据库与备份工作流": "database-and-backup-workflows",
+    "验证边界": "validation-boundaries"
+  },
+  "/guides/backups-restore": {
+    "第一步添加一个存放备份的地方": "step-1--add-a-place-to-keep-backups",
+    "第二步设置备份计划": "step-2--set-a-backup-schedule",
+    "第三步立刻执行一次备份": "step-3--run-a-backup-now",
+    "第四步保护某个副本免于删除": "step-4--protect-a-copy-from-being-deleted",
+    "第五步恢复一份备份": "step-5--restore-a-backup",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "打开-backups-页面": "open-the-backups-page",
+    "选择存储类型": "pick-the-kind-of-storage",
+    "填写细节": "fill-in-the-details",
+    "验证它能用": "check-that-it-works",
+    "打开项目的-backup-标签页": "open-the-projects-backup-tab",
+    "为一个服务创建策略": "create-a-policy-for-a-service",
+    "启动恢复": "start-the-restore",
+    "检查确认": "review",
+    "prepare一道安全检查": "prepare-a-safe-check"
+  },
+  "/architecture/overview": {
+    "控制面api": "the-control-plane-the-api",
+    "三种操作入口": "the-three-ways-you-drive-it",
+    "平台层适配器": "the-platform-layer-adapters",
+    "应用的落点": "where-an-app-ends-up",
+    "共享包": "shared-packages",
+    "一份代码库三种角色": "one-codebase-three-roles",
+    "相关指南": "related-guides"
+  },
+  "/architecture/modules-overview": {
+    "构建与发布": "building-and-shipping",
+    "流量与源": "traffic-and-source",
+    "观察与知悉": "watching-and-staying-informed",
+    "人员访问与安全": "people-access-and-security",
+    "云与计费": "cloud-and-billing",
+    "数据保护": "data-protection",
+    "自托管专属组件": "self-hosted-machinery",
+    "相关指南": "related-guides"
+  },
+  "/architecture/cloud-as-source": {
+    "是网关不是镜像": "a-gateway-not-a-mirror",
+    "网关如何判断项目住在哪": "how-the-gateway-knows-where-a-project-lives",
+    "全队共用一个云身份": "one-cloud-identity-for-the-whole-team",
+    "上迁把项目送上云端": "promote-sending-a-project-up-to-the-cloud",
+    "搬回把项目拉回家": "bring-home-pulling-a-project-back",
+    "对云项目你的机器还做什么": "what-your-box-still-does-for-a-cloud-project",
+    "openship-cloud-自身又如何": "on-openship-cloud-itself",
+    "自己动手": "doing-it-yourself",
+    "相关指南": "related-guides"
+  },
+  "/architecture/runtime-model": {
+    "两种运行方式沙箱或直跑": "two-ways-to-run-it-sandboxed-or-direct",
+    "先构建再交接": "build-first-then-hand-off",
+    "三个目标逐一细看": "the-three-targets-up-close",
+    "路由与证书": "routing-and-certificates",
+    "零停机与自动回退": "zero-downtime-and-auto-revert",
+    "相关指南": "related-guides",
+    "构建把源码变成可运行的东西": "build--turn-source-into-something-runnable",
+    "部署启动新版本并把流量切过去": "deploy--start-the-new-version-and-send-traffic-to-it"
+  },
+  "/architecture/data-ownership": {
+    "你的数据存在哪自托管": "where-your-data-lives-self-hosted",
+    "云项目住在云端": "cloud-projects-live-on-the-cloud",
+    "零锁定全量导出与导入": "no-lock-in-export-and-import-everything",
+    "搬迁单个项目": "moving-a-single-project",
+    "桌面应用如何守护本地数据目录": "how-the-desktop-app-guards-the-local-data-directory",
+    "相关指南": "related-guides",
+    "文件里有什么": "whats-in-the-file",
+    "导入模式": "import-modes",
+    "把实例搬到新机器": "move-an-instance-to-a-new-machine",
+    "从旧安装导出": "export-from-the-old-install",
+    "在新安装上导入": "import-on-the-new-install",
+    "完成": "youre-done"
+  },
+  "/dashboard/projects": {
+    "projects-列表": "the-projects-list",
+    "项目详情页": "the-project-detail-screen",
+    "九个标签页": "the-nine-tabs",
+    "相关指南": "related-guides",
+    "新建项目": "create-project",
+    "搜索": "search",
+    "按部署目标过滤": "filter-by-target",
+    "环境切换器": "the-environment-switcher"
+  },
+  "/dashboard/backups": {
+    "界面内容": "what-the-screen-shows",
+    "添加备份目标": "add-a-destination",
+    "验证备份目标": "verify-a-destination",
+    "设置默认备份目标": "set-the-default-destination",
+    "编辑备份目标": "edit-a-destination",
+    "删除备份目标": "delete-a-destination",
+    "后续步骤": "next-steps",
+    "首次访问空态": "first-visit-empty-state",
+    "第-1-步选择类型": "step-1--pick-a-kind",
+    "第-2-步配置它": "step-2--configure-it"
+  },
+  "/dashboard/billing": {
+    "自托管没有计费": "self-hosted-has-no-billing",
+    "点数告警与恢复": "credit-warnings-and-recovery"
+  },
+  "/dashboard": {
+    "侧边栏": "the-sidebar",
+    "首页": "the-home-page",
+    "控制台导览地图": "a-map-of-the-dashboard",
+    "导航链接": "navigation-links",
+    "新建项目": "new-project",
+    "工作区切换器": "workspace-switcher",
+    "快捷链接": "quick-links",
+    "动态与最近": "activity-and-recent"
+  },
+  "/dashboard/settings": {
+    "个人访问令牌personal-access-tokens": "personal-access-tokens",
+    "导出与导入数据export--import": "export--import-data"
+  },
+  "/dashboard/servers": {
+    "servers-列表": "the-servers-list",
+    "添加服务器": "adding-a-server",
+    "服务器详情页": "the-server-detail-screen",
+    "编辑与移除服务器": "editing-and-removing-a-server",
+    "相关指南": "related-guides",
+    "ssh-连接表单": "the-ssh-connection-form",
+    "设置流程": "the-setup-flow",
+    "overview-标签": "overview-tab",
+    "components-标签": "components-tab",
+    "security-标签速率限制": "security-tab-rate-limiting",
+    "ports-标签端口转发": "ports-tab-port-forwarding",
+    "terminal-标签": "terminal-tab",
+    "暴露端口扫描": "exposed-port-scan"
+  },
+  "/dashboard/library": {
+    "五个标签页": "the-five-tabs",
+    "github仓库": "github-repositories",
+    "接下来发生什么": "what-happens-next"
+  },
+  "/dashboard/deploy-wizard": {
+    "第-1-屏部署目标仅桌面应用": "screen-1--deploy-target-desktop-app-only",
+    "第-2-屏config": "screen-2--config",
+    "实时构建界面": "the-live-build-screen",
+    "相关指南": "related-guides",
+    "目标卡片": "the-target-cards",
+    "power云资源档位": "power--the-cloud-resource-tier",
+    "advanced服务器目标": "advanced-server-targets",
+    "设为默认并继续": "save-as-default--continue",
+    "主栏": "the-main-column",
+    "边栏": "the-sidebar",
+    "deploy-按钮": "the-deploy-button",
+    "标题与进度": "title-and-progress",
+    "部署详情与操作": "deployment-details--actions"
+  },
+  "/dashboard/emails": {
+    "为什么要自己运营以及送达率是怎么回事": "why-run-your-own--and-how-deliverability-works",
+    "界面随状态呈现什么": "what-the-screen-shows-you",
+    "mail-servers-列表": "the-mail-servers-list",
+    "设置一台新邮件服务器": "set-up-a-new-mail-server",
+    "收养一台已有的邮件服务器": "adopt-an-existing-mail-server",
+    "管理面板十个标签页": "the-admin-panel-ten-tabs",
+    "相关指南": "related",
+    "观看安装过程": "watching-the-install",
+    "dns-暂停发布你的记录": "dns-hold--publish-your-records",
+    "ptr-暂停设置反向-dns": "ptr-hold--set-reverse-dns"
+  },
+  "/security/permissions": {
+    "组织": "organizations",
+    "四种角色": "the-four-roles",
+    "权限标签resourceaction": "permission-tags-resourceaction",
+    "restricted-成员与资源授权": "restricted-members-and-resource-grants",
+    "邀请成员并设置角色": "inviting-people-and-setting-roles",
+    "访问令牌遵循同一套规则": "access-tokens-follow-the-same-rules",
+    "被拒时显示为未找到": "denied-looks-like-not-found",
+    "相关指南": "related-guides",
+    "授权沿树向下": "grants-flow-downhill",
+    "可以授予什么": "what-you-can-grant",
+    "打开邀请对话框": "open-the-invite-dialog",
+    "选择角色": "choose-a-role",
+    "发送邀请": "send-it"
+  },
+  "/security/auth": {
+    "四种进场方式": "the-four-ways-in",
+    "会话-cookie控制台": "session-cookies-the-dashboard",
+    "个人访问令牌bearer": "personal-access-tokens-bearer",
+    "mcp-oauthai-智能体": "mcp-oauth-ai-agents",
+    "桌面与零鉴权环回模式": "desktop--zero-auth-loopback-mode",
+    "云端登录": "cloud-sign-in",
+    "凭据存放在哪": "where-credentials-live",
+    "吊销": "revocation",
+    "你可能见到的错误": "errors-you-might-see",
+    "相关指南": "related-guides",
+    "创建令牌": "create-one",
+    "给令牌设限的两种方式": "two-ways-to-narrow-a-token"
+  },
+  "/security/cloud-boundary": {
+    "一个网关一个身份": "one-gateway-one-identity",
+    "什么能过境什么永远不能": "what-crosses-the-boundary--and-what-never-does",
+    "本地-id-走私不到上游": "your-local-id-cant-be-smuggled-upstream",
+    "没有混合形态": "no-hybrids",
+    "存储的凭据": "the-stored-credential",
+    "相关指南": "related-guides"
+  },
+  "/security/isolation": {
+    "先划定归属": "scoping-comes-first",
+    "每次部署一个容器": "one-container-per-deployment",
+    "每项目专属网络": "per-project-networks",
+    "每项目专属卷": "per-project-volumes",
+    "资源限制": "resource-limits",
+    "各运行时横向对比": "how-the-runtimes-compare",
+    "相关指南": "related-guides"
+  },
+  "/troubleshooting/desktop-data": {
+    "cannot-reach-the-server--fetch-failed启动时": "cannot-reach-the-server--fetch-failed-on-start",
+    "更新卡住或失败": "a-stuck-or-failed-update",
+    "本地数据存放在哪里": "where-your-local-data-lives",
+    "还是没解决": "still-stuck",
+    "关掉另一个": "close-the-other-one",
+    "稍等片刻再试": "give-it-a-moment-then-retry",
+    "仅在确定没有任何进程在跑时删除锁文件": "only-if-youre-certain-nothing-is-running--remove-the-lock",
+    "恢复损坏的数据库": "recovering-a-corrupted-database"
+  },
+  "/troubleshooting/host-channel": {
+    "这是功能降级不是坏了": "this-is-degraded-not-broken",
+    "修复取决于你怎么装的": "repair--it-depends-how-you-installed",
+    "验证是否生效": "verify-it-worked",
+    "两个会无声搞坏它的前提": "the-two-prerequisites-that-break-this-silently",
+    "有意关掉这条通道": "turning-the-channel-off-on-purpose",
+    "相关页面": "related",
+    "用-openship-up-安装的": "installed-with-openship-up",
+    "直接用-dockerdocker-composeyml-装的": "installed-from-the-raw-dockerdocker-composeyml",
+    "sshd-必须在运行且监听在容器够得着的地址上": "sshd-must-be-running-and-listening-where-containers-can-reach-it",
+    "主机防火墙必须放行容器主机的-ssh-端口": "the-host-firewall-must-allow-containerhost-on-the-ssh-port"
+  },
+  "/troubleshooting/common-errors": {
+    "报错对照表": "the-error-table",
+    "你最先会碰到的几种": "the-ones-youll-hit-first",
+    "构建与部署故障": "build-and-deploy-failures"
+  },
+  "/troubleshooting/github": {
+    "openship-读不了你的仓库": "openship-cant-read-your-repositories",
+    "私有仓库导入不了": "a-private-repo-wont-import",
+    "公开仓库一直要求我连接": "a-public-repo-keeps-asking-me-to-connect",
+    "自动部署没有触发webhook-未送达": "auto-deploy-isnt-triggering-webhooks-not-firing",
+    "还是没解决": "still-stuck"
+  },
+  "/troubleshooting": {
+    "有用信息藏在哪里": "where-the-useful-information-lives",
+    "如何读懂-openship-的报错": "how-to-read-an-openship-error",
+    "前往对应的页面": "jump-to-the-right-page",
+    "实时构建界面": "the-live-build-screen",
+    "项目的-logs-标签页": "the-project-logs-tab",
+    "cli": "the-cli",
+    "症状部署失败且看不出原因": "symptom-a-deploy-failed-and-you-cant-tell-why",
+    "症状cli-连不上你的实例": "symptom-the-cli-cant-reach-your-instance",
+    "症状openship-up-拒绝重新生成密钥": "symptom-openship-up-refuses-to-regenerate-secrets",
+    "症状openship-命令崩溃或升级-node-后消失": "symptom-the-openship-command-crashes-or-vanishes-after-a-node-upgrade"
+  },
+  "/troubleshooting/domains-ssl": {
+    "dns-与-ssl-都验证通过了应用却仍返回-404-或-502": "dns-and-ssl-are-verified-but-the-app-still-returns-404-or-502",
+    "验证一直不通过": "verification-keeps-failing",
+    "泛域名或手动-txt-配置在等待": "wildcard-or-manual-txt-setup-is-waiting",
+    "cloud-dns-没问题但证书检查失败": "cloud-dns-is-correct-but-the-certificate-check-fails",
+    "dns-还没生效": "dns-hasnt-propagated-yet",
+    "ssl-卡在-provisioning或没有签发证书": "ssl-stuck-on-provisioning-or-no-certificate-issued",
+    "外部入口你的边缘来终结-tls": "external-ingress-your-edge-terminates-tls",
+    "还是没解决": "still-stuck",
+    "如果是-cloud-的路由记录没过": "if-the-cloud-routing-record-is-failing",
+    "如果是-cloud-的-txt-归属记录没过": "if-the-cloud-txt-ownership-record-is-failing"
+  },
+  "/troubleshooting/deployments": {
+    "框架识别错了或构建命令不对": "the-framework-was-detected-wrong-or-the-build-command-is-off",
+    "缺少必需的命令或端口": "a-required-command-or-the-port-is-missing",
+    "应用没有监听在正确的端口上": "the-app-isnt-listening-on-the-right-port",
+    "应用需要比这台更大的机器": "the-app-needs-a-bigger-machine-than-this-one",
+    "构建内存不足": "the-build-ran-out-of-memory",
+    "缺少构建期环境变量": "a-build-time-environment-variable-is-missing",
+    "有些服务部署成功有些失败了action-required": "some-services-deployed-some-failed-action-required",
+    "其他可能碰到的几种情况": "a-couple-of-other-things-you-might-hit",
+    "相关页面": "related"
+  },
+  "/troubleshooting/servers-ssh": {
+    "两条能告诉你问题所在的命令": "two-commands-that-tell-you-whats-wrong",
+    "ssh-连接失败": "ssh-connection-fails",
+    "组件装不上或报告不健康": "a-component-wont-install-or-reports-unhealthy",
+    "端口转发隧道起不来": "port-forward-tunnels-wont-start",
+    "还是没解决": "still-stuck",
+    "认证失败": "authentication-failed",
+    "连不上主机被拒绝超时或不可达": "cant-reach-the-host-refused-timed-out-or-unreachable",
+    "通过-cloudflare-access-连接": "connecting-through-cloudflare-access",
+    "跳板机或额外-ssh-参数像是被忽略了": "a-jump-host-or-extra-ssh-args-seem-ignored",
+    "agent-认证找不到密钥": "agent-auth-finds-no-keys",
+    "缺少-docker或守护进程没在运行": "docker-is-missing-or-the-daemon-isnt-running",
+    "组件装了但不健康": "a-component-is-installed-but-unhealthy",
+    "安装中途报错停止": "an-install-stops-with-an-error",
+    "没有-ports-标签页或隧道返回-not-available": "the-ports-tab-is-missing-or-a-tunnel-returns-not-available",
+    "隧道打不开或端口被拒绝": "a-tunnel-wont-open-or-a-port-is-rejected"
+  },
+  "/cli/projects": {
+    "项目": "projects",
+    "环境与源设置": "environment-and-source-settings",
+    "服务": "services",
+    "域名": "domains",
+    "目录应用": "catalog-apps"
+  },
+  "/cli/run": {
+    "启动": "start",
+    "停止与更新": "stop-and-update",
+    "诊断问题": "diagnose-a-problem",
+    "安装命令对比": "installation-commands-compared"
+  },
+  "/cli/access": {
+    "登录": "log-in",
+    "切换上下文": "switch-contexts",
+    "创建令牌": "create-a-token",
+    "调用-http-端点": "call-an-http-endpoint",
+    "原生模式": "native-mode"
+  },
+  "/cli/deploy": {
+    "部署-git-项目": "deploy-a-git-project",
+    "部署文件夹": "deploy-a-folder",
+    "选择变更范围": "select-what-changes",
+    "查看进度": "inspect-progress",
+    "控制发布": "control-a-release"
+  },
+  "/cli/self-host": {
+    "服务器": "servers",
+    "备份与恢复": "backups-and-restores",
+    "邮件": "mail",
+    "安装设置与数据": "installation-settings-and-data",
+    "反向代理": "reverse-proxy"
+  },
+  "/cli": {
+    "安装": "install",
+    "连接并部署": "connect-and-deploy",
+    "选择工作流": "choose-a-workflow",
+    "脚本与应用代码": "scripts-and-application-code"
+  },
+  "/cli/automation": {
+    "认证运行器": "authenticate-a-runner",
+    "使用显式-id-与-json": "use-explicit-ids-and-json",
+    "处理失败": "handle-failure",
+    "原生自动化": "native-automation"
+  },
+  "/cli/native": {
+    "创建配置文件": "create-a-configuration",
+    "运行命令": "run-a-command",
+    "支持的命令": "supported-commands"
+  },
+  "/cli/edge": {
+    "检查与设置": "inspect-and-set-up",
+    "域名与规则": "domains-and-rules",
+    "查看流量": "inspect-traffic"
+  },
+  "/getting-started/first-deployment": {
+    "逐步导览": "the-walkthrough",
+    "上线是什么样子": "what-live-looks-like",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "新建一个项目": "open-a-new-project",
+    "选择你要的仓库": "pick-the-repository-you-want",
+    "选择它要在哪里运行这一步你可能看不到": "choose-where-it-should-run-you-might-not-see-this",
+    "读懂设置页面": "read-the-setup-screen",
+    "看着它上线": "watch-it-go-live"
+  },
+  "/getting-started/installation": {
+    "安装": "install",
+    "运行-openship": "run-openship",
+    "打开并确认一切正常": "open-it-and-check-its-working",
+    "下一步": "next-steps",
+    "主机控制加固": "host-control-hardening",
+    "卸载-openship": "removing-openship",
+    "全自动无人值守安装headless": "fully-unattended-install-headless"
+  },
+  "/getting-started/quickstart": {
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "安装-openship-cli": "install-the-openship-cli",
+    "设置-openship": "set-up-openship",
+    "打开控制台": "open-the-dashboard",
+    "部署一个应用": "deploy-one-thing"
+  },
+  "/getting-started/core-concepts": {
+    "组织工作区": "organization-workspace",
+    "项目": "project",
+    "环境": "environment",
+    "部署": "deployment",
+    "服务": "service",
+    "域名": "domain",
+    "服务器": "server",
+    "运行时": "runtimes",
+    "相关指南": "related-guides"
+  },
+  "/api/mail": {
+    "开始或恢复安装": "start-or-resume-setup",
+    "确认-dns--ptr": "acknowledge-dns--ptr",
+    "收编已有安装": "adopt-an-existing-install",
+    "轮换-postmaster-密码": "rotate-the-postmaster-password",
+    "添加邮件域名": "add-a-mail-domain",
+    "创建邮箱": "create-a-mailbox",
+    "配置备份": "configure-backups",
+    "发送测试邮件": "send-a-test-email",
+    "部署-webmail": "deploy-webmail",
+    "错误": "errors",
+    "操作": "operations",
+    "替换目录出现之前的-webmail": "replacing-a-pre-catalog-webmail"
+  },
+  "/api/permissions": {
+    "列出工作区": "list-workspaces",
+    "创建团队组织": "create-a-team-organization",
+    "列出可授权资源": "list-grantable-resources",
+    "授权资源": "grant-a-resource",
+    "整体替换成员的授权集": "replace-a-members-grant-set",
+    "携带授权邀请成员": "invite-a-member-with-grants",
+    "落实邀请中的授权": "materialize-an-invitations-grants",
+    "错误": "errors",
+    "操作一览": "operations"
+  },
+  "/api/mcp-tools": {
+    "工具": "tools",
+    "仅-http-路由": "http-only-routes"
+  },
+  "/api/migration": {
+    "扫描服务器": "scan-a-server",
+    "收编发现的服务": "adopt-discovered-services",
+    "运行一次经过审阅的迁移": "run-a-reviewed-migration",
+    "错误": "errors",
+    "操作": "operations"
+  },
+  "/api/services": {
+    "在项目间共享服务": "share-a-service-between-projects",
+    "添加服务": "add-a-service",
+    "更新服务": "update-a-service",
+    "从-docker-compose-同步": "sync-from-docker-compose",
+    "化解-compose-漂移": "resolve-compose-drift",
+    "容器操作": "container-actions",
+    "环境变量": "environment-variables",
+    "错误": "errors",
+    "操作一览": "operations",
+    "揭示环境值": "reveal-environment-values"
+  },
+  "/api/audit": {
+    "列出审计事件": "list-audit-events",
+    "错误": "errors",
+    "操作": "operations",
+    "查询参数": "query-parameters",
+    "响应": "response"
+  },
+  "/api/jobs": {
+    "创建命令任务": "create-a-command-job",
+    "运行与查看": "run-and-inspect",
+    "原生调度": "native-scheduling",
+    "操作": "operations"
+  },
+  "/api/health": {
+    "存活探针": "liveness-probe",
+    "部署信息": "deployment-info",
+    "错误": "errors",
+    "操作": "operations",
+    "资源方法": "resource-methods",
+    "http-端点": "http-endpoints"
+  },
+  "/api/backup-destinations": {
+    "创建备份目标": "create-a-destination",
+    "更新备份目标": "update-a-destination",
+    "预检验证连通性": "preflight-verify-connectivity",
+    "错误": "errors",
+    "操作": "operations"
+  },
+  "/api/data-transfer": {
+    "团队模式迁移": "team-mode-migration",
+    "实例与项目数据传输": "instance-and-project-data-transfer",
+    "操作": "operations"
+  },
+  "/api/images": {
+    "列出镜像": "list-images",
+    "错误": "errors",
+    "操作": "operations"
+  },
+  "/api/sources": {
+    "部署生成的文件": "deploy-generated-files",
+    "上传源文件夹": "upload-a-source-folder",
+    "检查已上传的源": "inspect-an-uploaded-source",
+    "操作一览": "operations",
+    "资源方法": "resource-methods",
+    "http-端点": "http-endpoints"
+  },
+  "/api/credentials": {
+    "发现支持的提供方": "discover-supported-providers",
+    "创建或更新凭据": "create-or-update-a-credential",
+    "验证已保存的凭据": "verify-a-saved-credential",
+    "操作": "operations"
+  },
+  "/api/issues": {
+    "列出问题": "list-issues",
+    "检查工作负载健康": "inspect-workload-health",
+    "刷新问题来源": "refresh-issue-sources",
+    "操作": "operations"
+  },
+  "/api/projects": {
+    "创建项目": "create-a-project",
+    "在集群上扩缩容无状态应用": "scale-a-stateless-application-on-a-cluster",
+    "更新项目": "update-a-project",
+    "关联-git-仓库": "link-a-git-repo",
+    "绑定自定义域名": "connect-a-custom-domain",
+    "环境变量": "environment-variables",
+    "资源配置": "resources",
+    "创建环境": "create-an-environment",
+    "文件夹上传": "folder-uploads",
+    "转入--转出云端": "transfer-to--from-cloud",
+    "携带日志重试路由": "retry-routing-with-logs",
+    "错误": "errors",
+    "操作一览": "operations",
+    "共享应用文件": "share-application-files",
+    "添加导入或恢复数据库": "add-import-or-recover-a-database",
+    "生命周期": "lifecycle",
+    "源与部署": "source-and-deployment",
+    "集群扩缩容": "cluster-scaling",
+    "集群数据库": "cluster-databases",
+    "共享文件": "shared-files",
+    "环境与设置": "environments-and-settings",
+    "路由与监控": "routing-and-monitoring",
+    "连接存储与应用": "connections-storage-and-apps",
+    "云端迁移": "cloud-transfer",
+    "http-端点": "http-endpoints"
+  },
+  "/api/backups": {
+    "创建备份策略": "create-a-backup-policy",
+    "更新备份策略": "update-a-policy",
+    "手动触发备份": "trigger-a-backup-manually",
+    "保护运行记录免于保留修剪": "protect-a-run-from-retention",
+    "准备与执行恢复": "stage-and-apply-a-restore",
+    "实时进度sse": "live-progress-sse",
+    "通过-webhook-触发备份": "trigger-a-backup-by-webhook",
+    "错误": "errors",
+    "操作": "operations"
+  },
+  "/api/service-terminal": {
+    "签发票据": "mint-a-ticket",
+    "打开-websocket": "open-the-websocket",
+    "错误": "errors",
+    "操作一览": "operations"
+  },
+  "/api/domains": {
+    "添加域名": "add-a-domain",
+    "预览所需的-dns-记录": "preview-required-dns",
+    "验证域名": "verify-a-domain",
+    "泛域名-https-与手动-txt": "wildcard-https-and-manual-txt",
+    "错误": "errors",
+    "操作": "operations"
+  },
+  "/api/billing": {
+    "列出套餐": "list-plans",
+    "订阅与用量": "subscription-and-usage",
+    "校验结账": "verify-a-checkout",
+    "资源用量": "resource-usage",
+    "加购包与客户门户": "top-ups-and-the-portal",
+    "操作": "operations",
+    "资源方法": "resource-methods",
+    "http-端点": "http-endpoints"
+  },
+  "/api/updates": {
+    "查找可用更新": "find-available-updates",
+    "刷新上游信息": "refresh-upstream-information",
+    "应用一个更新": "apply-an-update",
+    "操作一览": "operations"
+  },
+  "/api/auth": {
+    "better-auth-通配路由": "the-better-auth-catch-all",
+    "获取当前会话": "get-the-current-session",
+    "桌面端会话引导": "desktop-session-bootstrap",
+    "云端登录交接桌面端": "cloud-sign-in-handoff-desktop",
+    "错误": "errors",
+    "操作": "operations"
+  },
+  "/api/github": {
+    "连接状态": "connection-state",
+    "连接": "connect",
+    "断开连接": "disconnect",
+    "工作区持有的-github-app-源": "workspace-owned-github-app-sources",
+    "创建仓库": "create-a-repository",
+    "浏览仓库分支与文件": "browse-repos-branches-and-files",
+    "克隆令牌": "clone-token",
+    "错误": "errors",
+    "操作": "operations",
+    "列出源": "list-sources",
+    "一键-manifest": "one-click-manifest",
+    "手动注册与-github-enterprise-server": "manual-registration-and-github-enterprise-server",
+    "连接-1": "connect-1",
+    "仓库与源": "repositories-and-source",
+    "github-app-源": "github-app-sources",
+    "http-端点": "http-endpoints"
+  },
+  "/api/tokens": {
+    "创建令牌": "create-a-token",
+    "列出令牌": "list-tokens",
+    "撤销令牌": "revoke-a-token",
+    "mcp-客户端": "mcp-clients",
+    "操作一览": "operations",
+    "仅限它创建的项目作用域": "the-projects-it-creates-scope",
+    "授权客户端": "authorize-a-client",
+    "列出已连接客户端": "list-connected-clients",
+    "断开客户端": "disconnect-a-client"
+  },
+  "/api/webhooks": {
+    "创建接收式-hook": "create-an-incoming-hook",
+    "调用已授权的动作": "invoke-an-authorized-action",
+    "读取投递记录": "read-deliveries",
+    "分发服务商-webhook": "dispatch-a-provider-webhook",
+    "一次-github-push-如何变成一次部署": "how-a-github-push-becomes-a-deploy",
+    "错误": "errors",
+    "操作一览": "operations",
+    "签名校验github": "signature-verification-github",
+    "服务商注册": "provider-registration",
+    "资源方法": "resource-methods",
+    "http-端点": "http-endpoints"
+  },
+  "/api/analytics": {
+    "读取请求流量": "read-request-traffic",
+    "读取部署统计": "read-deployment-statistics",
+    "读取运行时用量": "read-runtime-usage",
+    "控制路径收集": "control-path-collection",
+    "服务器分析": "server-analytics",
+    "操作": "operations",
+    "实时用量": "live-usage"
+  },
+  "/api": {
+    "从这里开始": "start-here",
+    "发起请求": "make-a-request",
+    "应用": "applications",
+    "网络": "networking",
+    "运维": "operations",
+    "访问与基础设施": "access-and-infrastructure",
+    "示例约定": "example-conventions"
+  },
+  "/api/settings": {
+    "读取偏好": "read-preferences",
+    "设置构建与路由默认值": "set-build-and-routing-defaults",
+    "设置部署目的地": "set-a-deployment-destination",
+    "管理克隆凭据": "manage-clone-credentials",
+    "设置迁移偏好": "set-transfer-preferences",
+    "操作一览": "operations"
+  },
+  "/api/mcp": {
+    "认证如何工作": "how-authentication-works",
+    "请求体json-rpc-20-信封": "request-body-json-rpc-20-envelope",
+    "列出可用工具": "list-available-tools",
+    "发现并选择工作区": "discover-and-select-a-workspace",
+    "调用一个工具": "call-a-tool",
+    "引导式流程prompts": "guided-flows-prompts",
+    "输入与工作流契约": "input-and-workflow-contracts",
+    "错误": "errors",
+    "操作": "operations",
+    "方法": "methods"
+  },
+  "/api/servers": {
+    "注册服务器": "register-a-server",
+    "服务器健康检查与安装": "server-health-check--install",
+    "按服务器的速率限制": "per-server-rate-limiting",
+    "端口转发隧道": "port-forward-tunnels",
+    "服务器集群与私有网络": "server-clusters-and-private-networking",
+    "计算集群": "compute-clusters",
+    "操作一览": "operations",
+    "受管的私有网络": "managed-private-networks",
+    "受管的-k3s-搭建": "managed-k3s-setup",
+    "跨服务器共享文件": "share-files-across-servers",
+    "受管容器": "managed-containers",
+    "组件与安装": "components-and-installation",
+    "服务器生命周期": "server-lifecycle",
+    "私有网络": "private-networks",
+    "计算集群-1": "compute-clusters-1",
+    "集群运行时": "cluster-runtime",
+    "共享存储": "shared-storage",
+    "旧版网络方法": "legacy-network-methods",
+    "git-凭据": "git-credentials",
+    "网络功能": "networking",
+    "旧版网络-url": "legacy-network-urls"
+  },
+  "/api/apps": {
+    "列出目录": "list-the-catalog",
+    "获取单个应用": "get-one-app",
+    "检查目标": "check-a-destination",
+    "安装应用": "install-an-app",
+    "自定义应用": "custom-apps",
+    "精选设置": "curated-settings",
+    "连接详情": "connection-details",
+    "mcp-暴露": "mcp-exposure",
+    "错误": "errors",
+    "相关指南": "related-guides",
+    "操作": "operations",
+    "连接存储与应用": "connections-storage-and-apps",
+    "资源方法": "resource-methods"
+  },
+  "/api/deployments": {
+    "部署-git-项目": "deploy-a-git-project",
+    "检测构建配置": "detect-build-configuration",
+    "等待决策与取消": "wait-decisions-and-cancellation",
+    "读取进度事件": "read-progress-events",
+    "重新部署": "redeploy",
+    "回滚与固定": "rollback-and-pin",
+    "取消进行中的部署": "cancel-a-running-deploy",
+    "部分失败的-compose-部署保留或拒绝": "partial-failure-compose-deploys-keep-or-reject",
+    "ssl-状态与续期": "ssl-status-and-renew",
+    "错误": "errors",
+    "操作": "operations",
+    "提交": "submit",
+    "观察": "observe",
+    "控制": "control",
+    "证书": "certificates"
+  },
+  "/api/terminal": {
+    "签发票据": "mint-a-ticket",
+    "打开-websocket": "open-the-websocket",
+    "错误": "errors",
+    "操作一览": "operations",
+    "恢复挂起的会话": "resuming-a-parked-session",
+    "线路协议": "wire-protocol"
+  },
+  "/api/dns": {
+    "连接提供方": "connect-a-provider",
+    "检查区域": "check-a-zone",
+    "添加预览与应用域名": "add-preview-and-apply-a-domain",
+    "移除记录": "removing-records",
+    "错误": "errors",
+    "操作": "operations"
+  },
+  "/api/system": {
+    "初始引导与搭建": "onboarding--setup",
+    "实例设置": "instance-settings",
+    "把零认证升级为真正的登录": "promote-zero-auth-to-a-real-login",
+    "浏览主机文件系统": "browse-the-host-filesystem",
+    "操作一览": "operations",
+    "资源方法": "resource-methods",
+    "http-端点": "http-endpoints"
+  },
+  "/api/support": {
+    "投递与邮箱配置": "delivery-and-mailbox-configuration",
+    "运维者-api": "operator-api",
+    "验证": "verification",
+    "操作一览": "operations"
+  },
+  "/api/http": {
+    "认证": "authentication",
+    "权限": "permissions",
+    "速率限制": "rate-limits",
+    "错误结构": "error-shape",
+    "固定组织作用域": "fixed-organization-scope",
+    "流式与重试": "streams-and-retries",
+    "可用性": "availability"
+  },
+  "/api/notifications": {
+    "事件类别": "categories",
+    "创建渠道": "create-a-channel",
+    "更新渠道": "update-a-channel",
+    "为渠道订阅事件类别": "subscribe-a-channel-to-a-category",
+    "组织默认项": "org-defaults",
+    "读取告警信息流": "read-the-alert-feed",
+    "错误": "errors",
+    "操作一览": "operations"
+  },
+  "/api/edge": {
+    "检查现有站点": "inspect-existing-sites",
+    "安装的边缘预检": "installation-edge-preflight",
+    "操作": "operations",
+    "资源方法": "resource-methods",
+    "http-端点": "http-endpoints"
+  },
+  "/api/cloud": {
+    "自托管端点": "self-hosted-endpoints",
+    "cloud-控制面端点": "cloud-control-plane-endpoints",
+    "错误": "errors",
+    "操作": "operations",
+    "检查连接状态": "check-connection-status",
+    "完成连接": "finalize-a-connection",
+    "交接与代码交换": "handoff--code-exchange",
+    "部署代理预检edge-代理分析": "deploy-proxies-preflight-edge-proxy-analytics",
+    "控制台产品遥测": "dashboard-product-telemetry",
+    "邀请中继": "invitation-relay",
+    "子图传输与拆除": "subgraph-transfer--teardown",
+    "github-app-代理": "github-app-proxy"
+  },
+  "/api/notices": {
+    "读取活跃公告": "read-active-notices",
+    "发布公告": "publish-a-notice",
+    "操作": "operations",
+    "资源方法": "resource-methods",
+    "http-端点": "http-endpoints"
+  },
+  "/guides/email-webmail/relays": {
+    "其他提供商": "other-providers"
+  },
+  "/guides/email-webmail/relay-oci": {
+    "设置流程一览": "setup-at-a-glance",
+    "陷阱与须知": "gotchas--good-to-know",
+    "创建-email-domain-并添加-dkim-记录": "create-an-email-domain-and-add-the-dkim-records",
+    "添加-spf-记录": "add-the-spf-record",
+    "注册你的获批发件人": "register-your-approved-senders",
+    "创建-smtp-凭据": "create-smtp-credentials",
+    "把-openship-的中继指向-oci": "point-openships-relay-at-oci"
+  },
+  "/guides/email-webmail": {
+    "步骤-1--开通一台邮件服务器": "step-1--provision-a-mail-server",
+    "步骤-2--管理域名与邮箱": "step-2--manage-domains-and-mailboxes",
+    "步骤-3--部署-webmail-应用": "step-3--deploy-the-webmail-app",
+    "故障排查": "troubleshooting",
+    "相关指南": "related-guides",
+    "打开-emails-页面": "open-the-emails-page",
+    "选择服务器和域名": "pick-a-server-and-a-domain",
+    "按-start-setup-并看着它跑": "press-start-setup-and-watch-it-run",
+    "发布你的-dns-记录": "publish-your-dns-records",
+    "设置反向-dnsptr": "set-reverse-dns-ptr",
+    "完成": "done",
+    "从-overview-标签页开始": "start-from-the-overview-tab",
+    "选择它跑在哪里用哪个地址": "choose-where-it-runs-and-at-which-address",
+    "按-deploy-webmail": "press-deploy-webmail"
+  },
+  "/cli/reference": {
+    "全局选项": "global-options",
+    "连接": "connect",
+    "部署": "deploy",
+    "应用": "applications",
+    "基础设施": "infrastructure",
+    "本地安装": "local-installation"
+  },
+  "/api/sdk/utilities": {
+    "类型化输入与结果": "typed-inputs-and-results",
+    "分页": "pagination",
+    "部署辅助工具": "deployment-helpers",
+    "compose-规范化": "compose-normalization",
+    "http-传输": "http-transport"
+  },
+  "/api/sdk/identity": {
+    "远程作用域": "remote-scopes",
+    "原生身份适配器": "native-identity-adapter",
+    "开通客户工作区": "provision-a-customer-workspace",
+    "后台动作": "background-actions"
+  },
+  "/api/sdk/operator": {
+    "原生操作员": "native-operator",
+    "远程操作员": "remote-operator",
+    "公告": "notices"
+  },
+  "/api/sdk/installation": {
+    "从-npm-安装": "install-from-npm",
+    "从源码测试改动": "test-changes-from-source",
+    "选择导入方式": "choose-an-import",
+    "在同一安装中使用-cli": "use-the-cli-from-the-same-installation"
+  },
+  "/api/sdk/lifecycle": {
+    "生命周期": "lifecycle",
+    "必需配置": "required-configuration",
+    "存储": "storage",
+    "提供方与策略": "providers-and-policy",
+    "关闭时限": "shutdown-deadlines",
+    "附加到现有内核": "attach-to-an-existing-kernel"
+  },
+  "/api/sdk/compatibility": {
+    "包的可用性": "package-availability",
+    "固定组织作用域": "fixed-organization-scopes",
+    "当前限制": "current-limits",
+    "已验证的内容": "what-has-been-checked"
+  },
+  "/api/sdk/examples": {
+    "运行原生生命周期": "run-the-native-lifecycle",
+    "它验证了什么": "what-it-verifies",
+    "改造成更小的工作流": "adapt-a-smaller-workflow"
+  },
+  "/api/sdk": {
+    "选择使用模式": "choose-a-mode",
+    "安装": "install",
+    "部署你的应用": "deploy-your-application",
+    "代码中的一次部署": "a-deployment-in-code",
+    "后续步骤": "next-steps",
+    "扩缩容与运维": "scale-and-operate"
+  },
+  "/api/sdk/native": {
+    "创建安装并部署": "create-an-installation-and-deploy",
+    "运行时选择": "runtime-choices",
+    "继续阅读": "continue"
+  },
+  "/api/sdk/client": {
+    "连接": "connect",
+    "选项": "options",
+    "组织作用域": "organization-scope",
+    "返回结果与其他-http-端点": "results-and-additional-http-endpoints"
+  },
+  "/api/sdk/errors": {
+    "操作错误": "operation-errors",
+    "部署结果": "deployment-outcomes",
+    "流": "streams",
+    "分页": "pagination"
+  }
+}

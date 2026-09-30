@@ -83,6 +83,15 @@
       "origin": "https://lif3ng-vibe.github.io/docs-cn/openrig-en",
       "mirror": "https://lif3ng-vibe.github.io/docs-cn/openrig",
       "useSourceFrontmatter": false
+    },
+    {
+      "id": "openship",
+      "origin": "https://openship.io/docs",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/openship/docs",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "sitemap": "https://openship.io/sitemap.xml"
+      }
     }
   ]
 }

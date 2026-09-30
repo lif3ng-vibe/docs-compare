@@ -68,6 +68,13 @@ const RAW = [
     anchorMapUrl: 'anchor-maps/herdr.json',
     official: true,
   },
+  {
+    id: 'openship',
+    name: 'OpenShip 文档',
+    origin: 'https://openship.io/docs',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/openship/docs',
+    anchorMapUrl: 'anchor-maps/openship.json',
+  },
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */

@@ -57,5 +57,12 @@
     "origin": "https://lif3ng-vibe.github.io/docs-cn/openrig-en",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/openrig",
     "anchorMapUrl": "anchor-maps/openrig.json"
+  },
+  {
+    "id": "openship",
+    "name": "OpenShip 文档",
+    "origin": "https://openship.io/docs",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/openship/docs",
+    "anchorMapUrl": "anchor-maps/openship.json"
   }
 ]
