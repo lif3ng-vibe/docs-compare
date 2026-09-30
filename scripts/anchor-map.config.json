@@ -80,7 +80,7 @@
     {
       "id": "openrig",
       "dir": "openrig-docs-cn",
-      "origin": "https://openrig.dev",
+      "origin": "https://lif3ng-vibe.github.io/docs-cn/openrig-en",
       "mirror": "https://lif3ng-vibe.github.io/docs-cn/openrig",
       "useSourceFrontmatter": false
     }

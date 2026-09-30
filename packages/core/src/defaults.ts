@@ -56,7 +56,7 @@ const RAW = [
   {
     id: 'openrig',
     name: 'OpenRig 文档',
-    origin: 'https://openrig.dev',
+    origin: 'https://lif3ng-vibe.github.io/docs-cn/openrig-en',
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/openrig',
     anchorMapUrl: 'anchor-maps/openrig.json',
   },

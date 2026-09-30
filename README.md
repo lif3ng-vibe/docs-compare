@@ -164,7 +164,7 @@ npm run build          # 产物在 apps/chrome-extension/dist/
   { "id": "nimbus", "origin": "https://nimbus-docs.com",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/nimbus",
     "anchorMapUrl": "anchor-maps/nimbus.json" },
-  { "id": "openrig", "origin": "https://openrig.dev",
+  { "id": "openrig", "origin": "https://lif3ng-vibe.github.io/docs-cn/openrig-en",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/openrig",
     "anchorMapUrl": "anchor-maps/openrig.json" },
   { "id": "herdr", "origin": "https://herdr.dev/docs",
