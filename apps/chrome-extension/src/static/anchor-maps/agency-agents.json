@@ -1,6 +1,5 @@
 {
   "/academic/academic-anthropologist": {
-    "人类学家智能体人格": "anthropologist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -17,7 +16,6 @@
     "文化自洽检查": "cultural-coherence-check"
   },
   "/academic/academic-geographer": {
-    "地理学家智能体人格": "geographer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -34,7 +32,6 @@
     "气候系统设计": "climate-system-design"
   },
   "/academic/academic-historian": {
-    "历史学家智能体人格": "historian-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -51,7 +48,6 @@
     "历史自洽检查": "historical-coherence-check"
   },
   "/academic/academic-narratologist": {
-    "叙事学家智能体人格": "narratologist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -68,7 +64,6 @@
     "人物弧光评估": "character-arc-assessment"
   },
   "/academic/academic-psychologist": {
-    "心理学家智能体人格": "psychologist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -85,7 +80,6 @@
     "人际动力分析": "interpersonal-dynamics-analysis"
   },
   "/academic/academic-statistician": {
-    "统计学家智能体人格": "statistician-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -110,7 +104,6 @@
     "诚实的推断与传达": "honest-inference--communication"
   },
   "/catalog": {
-    "-代理公司the-agency一支随时准备变革你工作流的-ai-专家团队": "-the-agency-ai-specialists-ready-to-transform-your-workflow",
     "-这是什么": "-what-is-this",
     "-快速开始": "-quick-start",
     "-代理公司名册": "-the-agency-roster",
@@ -169,7 +162,6 @@
     "跨引擎智能体与引擎无关": "cross-engine-agents-engine-agnostic"
   },
   "/contributing": {
-    "-为代理公司the-agency做贡献": "-contributing-to-the-agency",
     "-目录": "-table-of-contents",
     "-行为准则": "-code-of-conduct",
     "-我能如何贡献": "-how-can-i-contribute",
@@ -209,7 +201,6 @@
     "一律关闭的-pr": "things-well-always-close"
   },
   "/design/design-brand-guardian": {
-    "品牌守护者智能体人格": "brand-guardian-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -238,7 +229,6 @@
     "品牌保护专长": "brand-protection-expertise"
   },
   "/design/design-image-prompt-engineer": {
-    "图像提示词工程师智能体": "image-prompt-engineer-agent",
     "你的身份与记忆": "your-identity--memory",
     "你的核心使命": "your-core-mission",
     "你必须遵守的关键规则": "critical-rules-you-must-follow",
@@ -276,7 +266,6 @@
     "时尚摄影": "fashion-photography"
   },
   "/design/design-inclusive-visuals-specialist": {
-    "-包容性视觉专家": "-inclusive-visuals-specialist",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -289,7 +278,6 @@
     "示例代码有尊严的视频提示词": "example-code-the-dignified-video-prompt"
   },
   "/design/design-persona-walkthrough": {
-    "人格走查专家": "persona-walkthrough-specialist",
     "-身份与记忆": "-identity--memory",
     "-核心使命": "-core-mission",
     "-关键规则": "-critical-rules",
@@ -326,7 +314,6 @@
     "fogg-行为模型": "fogg-behavior-model"
   },
   "/design/design-ui-designer": {
-    "ui-设计师智能体人格": "ui-designer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -354,7 +341,6 @@
     "与开发者协作": "developer-collaboration"
   },
   "/design/design-ui-finish-gate-reviewer": {
-    "ui-完工门审查者智能体人格": "ui-finish-gate-reviewer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -377,7 +363,6 @@
     "示例移动端运营界面": "example-mobile-operations-screen"
   },
   "/design/design-ux-architect": {
-    "architectux-智能体人格": "architectux-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -408,7 +393,6 @@
     "开发者体验": "developer-experience"
   },
   "/design/design-ux-researcher": {
-    "ux-研究员智能体人格": "ux-researcher-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -437,7 +421,6 @@
     "洞察传达": "insight-communication"
   },
   "/design/design-visual-storyteller": {
-    "视觉叙事者智能体": "visual-storyteller-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -463,7 +446,6 @@
     "战略整合": "strategic-integration"
   },
   "/design/design-whimsy-injector": {
-    "奇趣注入者智能体人格": "whimsy-injector-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -492,7 +474,6 @@
     "品牌个性整合": "brand-personality-integration"
   },
   "/engineering/engineering-ai-data-remediation-engineer": {
-    "ai-数据修复工程师智能体": "ai-data-remediation-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules",
@@ -517,7 +498,6 @@
     "第-5-步对账与审计": "step-5--reconciliation--audit"
   },
   "/engineering/engineering-ai-engineer": {
-    "ai-工程师智能体": "ai-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -542,7 +522,6 @@
     "生产级-ml-卓越实践": "production-ml-excellence"
   },
   "/engineering/engineering-api-platform-engineer": {
-    "api-平台工程师": "api-platform-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -561,7 +540,6 @@
     "开发者体验与生命周期": "developer-experience--lifecycle"
   },
   "/engineering/engineering-ats-validator-architect": {
-    "ats-校验架构师": "ats-validator-architect",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命与关键任务": "-your-core-mission--key-tasks",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -607,7 +585,6 @@
     "第-5-步评分卡生成与-agent-原生交接": "step-5-scorecard-generation--agent-native-handoff"
   },
   "/engineering/engineering-autonomous-optimization-architect": {
-    "️-自主优化架构师": "️-autonomous-optimization-architect",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -620,7 +597,6 @@
     "示例代码智能护栏路由器": "example-code-the-intelligent-guardrail-router"
   },
   "/engineering/engineering-backend-architect": {
-    "后端架构师智能体人格": "backend-architect-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -646,7 +622,6 @@
     "云基础设施专长": "cloud-infrastructure-expertise"
   },
   "/engineering/engineering-china-network-engineer": {
-    "-中国网络工程师": "-china-network-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -660,7 +635,6 @@
     "交付物-7排障速查表": "deliverable-7--troubleshooting-quick-reference"
   },
   "/engineering/engineering-cms-developer": {
-    "-cms-开发者": "-cms-developer",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -690,7 +664,6 @@
     "第-5-步上线前检查清单": "step-5-pre-launch-checklist"
   },
   "/engineering/engineering-code-reviewer": {
-    "代码评审员智能体": "code-reviewer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules",
@@ -702,7 +675,6 @@
     "-细枝末节问题nit有则更好": "-nits-nice-to-have"
   },
   "/engineering/engineering-codebase-onboarding-engineer": {
-    "代码库上手引导工程师智能体": "codebase-onboarding-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -727,7 +699,6 @@
     "第-5-步讲解与上手输出": "step-5-explanation-and-onboarding-output"
   },
   "/engineering/engineering-data-engineer": {
-    "数据工程师智能体": "data-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -757,7 +728,6 @@
     "云平台精通": "cloud-platform-mastery"
   },
   "/engineering/engineering-data-visualization-engineer": {
-    "数据可视化工程师": "data-visualization-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -776,14 +746,12 @@
     "仪表盘与交互": "dashboards--interaction"
   },
   "/engineering/engineering-database-optimizer": {
-    "️-数据库优化师": "️-database-optimizer",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
     "沟通风格": "communication-style"
   },
   "/engineering/engineering-database-reliability-engineer": {
-    "数据库可靠性工程师": "database-reliability-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -802,7 +770,6 @@
     "运营与规模": "operations--scale"
   },
   "/engineering/engineering-desktop-app-engineer": {
-    "桌面应用工程师": "desktop-app-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -822,7 +789,6 @@
     "os-集成精通": "os-integration-mastery"
   },
   "/engineering/engineering-developer-tooling-engineer": {
-    "开发者工具工程师": "developer-tooling-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -841,7 +807,6 @@
     "内部开发者平台": "internal-developer-platforms"
   },
   "/engineering/engineering-devops-automator": {
-    "devops-自动化工程师智能体人格": "devops-automator-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -870,7 +835,6 @@
     "可观测性专长": "observability-expertise"
   },
   "/engineering/engineering-drupal-performance": {
-    "-drupal-性能工程师": "-drupal-performance-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -897,7 +861,6 @@
     "基础设施与工具": "infrastructure--tooling"
   },
   "/engineering/engineering-drupal-shopping-cart": {
-    "-drupal-购物车工程师": "-drupal-shopping-cart-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -924,7 +887,6 @@
     "标准与运营": "standards--operations"
   },
   "/engineering/engineering-email-intelligence-engineer": {
-    "邮件智能工程师智能体": "email-intelligence-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -951,7 +913,6 @@
     "质量度量与监控": "quality-measurement--monitoring"
   },
   "/engineering/engineering-embedded-firmware-engineer": {
-    "嵌入式固件工程师": "embedded-firmware-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -974,7 +935,6 @@
     "调试与诊断": "debug--diagnostics"
   },
   "/engineering/engineering-feishu-integration-developer": {
-    "飞书集成开发工程师": "feishu-integration-developer",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -1004,7 +964,6 @@
     "第-4-步测试与上线": "step-4-testing--launch"
   },
   "/engineering/engineering-filament-optimization-specialist": {
-    "智能体人格": "agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-核心使命": "-core-mission",
     "️-你不能做的事": "️-what-you-must-not-do",
@@ -1038,7 +997,6 @@
     "全局搜索优化": "global-search-optimization"
   },
   "/engineering/engineering-finops-engineer": {
-    "finops-工程师": "finops-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1057,7 +1015,6 @@
     "finops-项目成熟度": "finops-program-maturity"
   },
   "/engineering/engineering-frontend-developer": {
-    "前端开发工程师--智能体人格": "frontend-developer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1084,7 +1041,6 @@
     "无障碍领导力": "accessibility-leadership"
   },
   "/engineering/engineering-gaussdb-expert": {
-    "️-gaussdb-oltp-专家": "️-gaussdb-oltp-expert",
     "你的身份与记忆": "identity--memory",
     "核心专长": "core-expertise",
     "核心使命": "core-mission",
@@ -1101,7 +1057,6 @@
     "gaussdb-分布式专属规则": "gaussdb-distributed-specific-rules"
   },
   "/engineering/engineering-git-workflow-master": {
-    "git-工作流大师智能体": "git-workflow-master-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules",
@@ -1115,7 +1070,6 @@
     "收尾一个分支": "finishing-a-branch"
   },
   "/engineering/engineering-i18n-engineer": {
-    "国际化工程师": "internationalization-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1135,7 +1089,6 @@
     "本地化项目支持": "localization-program-support"
   },
   "/engineering/engineering-identity-access-engineer": {
-    "身份与访问工程师": "identity--access-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1155,7 +1108,6 @@
     "身份运维": "identity-operations"
   },
   "/engineering/engineering-incident-response-commander": {
-    "事故响应指挥官智能体": "incident-response-commander-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1188,7 +1140,6 @@
     "跨组织的事故协调": "cross-organizational-incident-coordination"
   },
   "/engineering/engineering-iot-fleet-engineer": {
-    "iot-设备群工程师": "iot-fleet-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1207,7 +1158,6 @@
     "大规模设备群运营": "fleet-operations-at-scale"
   },
   "/engineering/engineering-it-service-manager": {
-    "-it-服务管理师": "-it-service-manager",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1235,7 +1185,6 @@
     "认证与标准": "certifications--standards"
   },
   "/engineering/engineering-knowledge-graph-engineer": {
-    "-知识图谱工程师智能体": "-knowledge-graph-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1268,7 +1217,6 @@
     "change-impact完整流水线": "change-impact--full-pipeline"
   },
   "/engineering/engineering-llm-post-training-engineer": {
-    "llm-后训练工程师": "llm-post-training-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1297,7 +1245,6 @@
     "运行时与活性诊断": "runtime-and-liveness-diagnosis"
   },
   "/engineering/engineering-minimal-change-engineer": {
-    "最小变更工程师智能体": "minimal-change-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1325,7 +1272,6 @@
     "删掉看看会坏什么技术": "the-delete-this-and-see-what-breaks-technique"
   },
   "/engineering/engineering-mobile-app-builder": {
-    "移动应用构建器智能体人格": "mobile-app-builder-agent-personality",
     "-你的身份与记忆": "à-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1354,7 +1300,6 @@
     "移动-devops-与数据分析": "mobile-devops-and-analytics"
   },
   "/engineering/engineering-mobile-release-engineer": {
-    "移动发布工程师": "mobile-release-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1373,7 +1318,6 @@
     "发布健康与合规": "release-health--compliance"
   },
   "/engineering/engineering-multi-agent-systems-architect": {
-    "️-多智能体系统架构师": "️-multi-agent-systems-architect-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的沟通风格": "-your-communication-style",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1427,7 +1371,6 @@
     "安全": "security"
   },
   "/engineering/engineering-network-engineer": {
-    "网络工程师": "network-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1448,7 +1391,6 @@
     "运维就绪": "operational-readiness"
   },
   "/engineering/engineering-orgscript-engineer": {
-    "orgscript-工程师智能体人格": "orgscript-engineer-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1469,7 +1411,6 @@
     "第-4-步导出生成": "step-4-export-generation"
   },
   "/engineering/engineering-payments-billing-engineer": {
-    "支付与计费工程师": "payments--billing-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1489,7 +1430,6 @@
     "财务运营": "financial-operations"
   },
   "/engineering/engineering-pdf-engine-architect": {
-    "pdf-引擎架构师": "pdf-engine-architect",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命与关键任务": "-your-core-mission--key-tasks",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1518,7 +1458,6 @@
     "6-自动化-pdf-矢量与文本完整性审计器python": "6-automated-pdf-vector--text-integrity-auditor-python"
   },
   "/engineering/engineering-platform-engineer": {
-    "平台工程师": "platform-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1550,7 +1489,6 @@
     "多云--混合现实": "multi-cloud--hybrid-reality"
   },
   "/engineering/engineering-privacy-engineer": {
-    "隐私工程师": "privacy-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1569,7 +1507,6 @@
     "主体权利与合规工程": "subject-rights--compliance-engineering"
   },
   "/engineering/engineering-prompt-engineer": {
-    "提示词工程师prompt-engineer智能体": "prompt-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1593,7 +1530,6 @@
     "动态提示词组装": "dynamic-prompt-assembly"
   },
   "/engineering/engineering-rag-pipeline-engineer": {
-    "检索增强生成rag流水线工程师": "rag-pipeline-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1626,7 +1562,6 @@
     "生产监控": "production-monitoring"
   },
   "/engineering/engineering-rapid-prototyper": {
-    "快速原型师智能体人格": "rapid-prototyper-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1655,7 +1590,6 @@
     "速度优化技巧": "speed-optimization-techniques"
   },
   "/engineering/engineering-realtime-collaboration-engineer": {
-    "实时协作工程师": "realtime-collaboration-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1675,7 +1609,6 @@
     "协作产品机制": "collaboration-product-mechanics"
   },
   "/engineering/engineering-rust-refactoring-specialist": {
-    "rust-重构专家智能体": "rust-refactoring-specialist-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1704,7 +1637,6 @@
     "8-审计最终-diff": "8-audit-the-resulting-diff"
   },
   "/engineering/engineering-search-relevance-engineer": {
-    "搜索相关性工程师": "search-relevance-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1724,7 +1656,6 @@
     "多语言与运营规模": "multilingual--operational-scale"
   },
   "/engineering/engineering-section-508-specialist": {
-    "-section-508-无障碍专家": "-section-508-accessibility-specialist",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1751,7 +1682,6 @@
     "文档与媒体": "documents--media"
   },
   "/engineering/engineering-senior-developer": {
-    "开发者智能体人格": "developer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的开发哲学": "-your-development-philosophy",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1780,7 +1710,6 @@
     "性能优化": "performance-optimization"
   },
   "/engineering/engineering-servicenow-developer-mentor": {
-    "servicenow-开发者与导师-智能体人格": "servicenow-developer--mentor-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1806,7 +1735,6 @@
     "高级自动化": "advanced-automation"
   },
   "/engineering/engineering-software-architect": {
-    "软件架构师-智能体": "software-architect-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules",
@@ -1820,7 +1748,6 @@
     "5-质量属性分析": "5-quality-attribute-analysis"
   },
   "/engineering/engineering-solidity-smart-contract-engineer": {
-    "solidity-智能合约工程师": "solidity-smart-contract-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1852,7 +1779,6 @@
     "高级-evm-模式": "advanced-evm-patterns"
   },
   "/engineering/engineering-sre": {
-    "sre站点可靠性工程师智能体": "sre-site-reliability-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules",
@@ -1864,7 +1790,6 @@
     "黄金信号": "golden-signals"
   },
   "/engineering/engineering-technical-writer": {
-    "技术文档工程师智能体": "technical-writer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -1894,7 +1819,6 @@
     "内容运营": "content-operations"
   },
   "/engineering/engineering-universal-document-compiler": {
-    "通用文档编译器universal-document-compiler": "universal-document-compiler",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的沟通风格": "-your-communication-style",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -1919,7 +1843,6 @@
     "第-5-步实现与打印欧氏预算": "step-5-realization--print-euclidean-budgeting"
   },
   "/engineering/engineering-uswds-developer": {
-    "️-uswds-开发者": "️-uswds-developer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -1946,7 +1869,6 @@
     "cms-与平台集成": "cms--platform-integration"
   },
   "/engineering/engineering-video-streaming-engineer": {
-    "视频流工程师": "video-streaming-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -1965,7 +1887,6 @@
     "播放与-qoe-工程": "playback--qoe-engineering"
   },
   "/engineering/engineering-voice-ai-integration-engineer": {
-    "️-语音-ai-集成工程师智能体": "️-voice-ai-integration-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -1997,7 +1918,6 @@
     "生产流水线架构": "production-pipeline-architecture"
   },
   "/engineering/engineering-webassembly-engineer": {
-    "webassembly-工程师": "webassembly-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2016,7 +1936,6 @@
     "集成与交付": "integration--delivery"
   },
   "/engineering/engineering-wechat-mini-program-developer": {
-    "微信小程序开发者智能体人格": "wechat-mini-program-developer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2045,7 +1964,6 @@
     "安全与合规": "security--compliance"
   },
   "/engineering/engineering-wordpress-performance": {
-    "-wordpress-性能工程师": "-wordpress-performance-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2072,7 +1990,6 @@
     "基础设施与工具链": "infrastructure--tooling"
   },
   "/engineering/engineering-wordpress-shopping-cart": {
-    "️-wordpress-购物车工程师": "️-wordpress-shopping-cart-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2099,13 +2016,11 @@
     "规范与运营": "standards--operations"
   },
   "/examples": {
-    "示例": "examples",
     "为什么有这个目录": "why-this-exists",
     "内容": "contents",
     "添加新示例": "adding-new-examples"
   },
   "/examples/nexus-spatial-discovery": {
-    "nexus-spatial代理公司全员产品发现演练": "nexus-spatial-full-agency-discovery-exercise",
     "目录": "table-of-contents",
     "1-机会": "1-the-opportunity",
     "2-市场验证": "2-market-validation",
@@ -2190,7 +2105,6 @@
     "这场演练证明了什么": "what-this-exercise-demonstrates"
   },
   "/examples/workflow-book-chapter": {
-    "工作流示例图书章节开发": "workflow-example-book-chapter-development",
     "何时使用": "when-to-use-this",
     "使用的智能体": "agent-used",
     "激活示例": "example-activation",
@@ -2198,7 +2112,6 @@
     "质量标准": "quality-bar"
   },
   "/examples/workflow-landing-page": {
-    "多智能体工作流落地页冲刺sprint": "multi-agent-workflow-landing-page-sprint",
     "场景": "the-scenario",
     "智能体团队": "agent-team",
     "工作流": "the-workflow",
@@ -2209,7 +2122,6 @@
     "下午优化": "afternoon-optimize"
   },
   "/examples/workflow-startup-mvp": {
-    "多智能体工作流创业公司-mvp": "multi-agent-workflow-startup-mvp",
     "场景": "the-scenario",
     "智能体团队": "agent-team",
     "工作流": "the-workflow",
@@ -2221,7 +2133,6 @@
     "第-4-周发布": "week-4-launch"
   },
   "/examples/workflow-with-memory": {
-    "多智能体工作流带持久记忆的创业公司-mvp": "multi-agent-workflow-startup-mvp-with-persistent-memory",
     "手动交接的问题": "the-problem-with-manual-handoffs",
     "修复方案": "the-fix",
     "安装": "setup",
@@ -2238,7 +2149,6 @@
     "当-qa-挂掉回滚": "when-qa-fails-rollback"
   },
   "/finance/finance-bookkeeper-controller": {
-    "-记账员与财务总监智能体": "-bookkeeper--controller-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2265,7 +2175,6 @@
     "审计与合规": "audit--compliance"
   },
   "/finance/finance-financial-analyst": {
-    "-财务分析师智能体": "-financial-analyst-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2291,7 +2200,6 @@
     "流程卓越": "process-excellence"
   },
   "/finance/finance-fpa-analyst": {
-    "-fpa-分析师智能体": "-fpa-analyst-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2316,7 +2224,6 @@
     "fpa-技术与自动化": "fpa-technology--automation"
   },
   "/finance/finance-investment-researcher": {
-    "-投资研究员智能体": "-investment-researcher-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2343,7 +2250,6 @@
     "行业专精": "sector-specialization"
   },
   "/finance/finance-tax-strategist": {
-    "️-税务策略师智能体": "️-tax-strategist-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2370,7 +2276,6 @@
     "税务技术与自动化": "tax-technology--automation"
   },
   "/game-development/blender/blender-addon-engineer": {
-    "blender-插件工程师智能体人格": "blender-add-on-engineer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2400,7 +2305,6 @@
     "跨工具交接": "cross-tool-handoff"
   },
   "/game-development/economy-designer": {
-    "经济设计师智能体人格": "economy-designer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2429,7 +2333,6 @@
     "经济模拟工具": "economic-simulation-tooling"
   },
   "/game-development/game-audio-engineer": {
-    "游戏音频工程师智能体人格": "game-audio-engineer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2459,7 +2362,6 @@
     "主机与平台认证": "console-and-platform-certification"
   },
   "/game-development/game-designer": {
-    "游戏设计师智能体人格": "game-designer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2487,7 +2389,6 @@
     "系统化设计与涌现": "systemic-design-and-emergence"
   },
   "/game-development/godot/godot-gameplay-scripter": {
-    "godot-游戏玩法脚本师智能体人格": "godot-gameplay-scripter-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2526,7 +2427,6 @@
     "godot-网络高级模式": "godot-networking-advanced-patterns"
   },
   "/game-development/godot/godot-multiplayer-engineer": {
-    "godot-多人游戏工程师智能体人格": "godot-multiplayer-engineer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2557,7 +2457,6 @@
     "自定义多人协议设计": "custom-multiplayer-protocol-design"
   },
   "/game-development/godot/godot-shader-developer": {
-    "godot-着色器开发者智能体人格": "godot-shader-developer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2587,7 +2486,6 @@
     "后处理管线": "post-processing-pipeline"
   },
   "/game-development/level-designer": {
-    "关卡设计师智能体人格": "level-designer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2617,7 +2515,6 @@
     "多人与社交空间设计": "multiplayer-and-social-space-design"
   },
   "/game-development/narrative-designer": {
-    "叙事设计师智能体人格": "narrative-designer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2647,7 +2544,6 @@
     "对白工具与实现": "dialogue-tooling-and-implementation"
   },
   "/game-development/roblox-studio/roblox-avatar-creator": {
-    "roblox-角色形象创作者智能体人格": "roblox-avatar-creator-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2677,7 +2573,6 @@
     "体验集成的角色自定义": "experience-integrated-avatar-customization"
   },
   "/game-development/roblox-studio/roblox-experience-designer": {
-    "roblox-体验设计师智能体人格": "roblox-experience-designer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2706,7 +2601,6 @@
     "变现优化": "monetization-optimization"
   },
   "/game-development/roblox-studio/roblox-systems-scripter": {
-    "roblox-系统脚本师智能体人格": "roblox-systems-scripter-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2735,7 +2629,6 @@
     "体验架构模式": "experience-architecture-patterns"
   },
   "/game-development/technical-artist": {
-    "技术美术智能体人格": "technical-artist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2764,7 +2657,6 @@
     "面向美术的工具开发": "tool-development-for-artists"
   },
   "/game-development/unity/unity-architect": {
-    "unity-架构师智能体人格": "unity-architect-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2797,7 +2689,6 @@
     "性能剖析与优化": "performance-profiling-and-optimization"
   },
   "/game-development/unity/unity-editor-tool-developer": {
-    "unity-编辑器工具开发者智能体人格": "unity-editor-tool-developer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2826,7 +2717,6 @@
     "高级-ui-toolkit-编辑器工具": "advanced-ui-toolkit-editor-tools"
   },
   "/game-development/unity/unity-multiplayer-engineer": {
-    "unity-多人联机工程师智能体人格": "unity-multiplayer-engineer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2855,7 +2745,6 @@
     "ngo-性能优化": "ngo-performance-optimization"
   },
   "/game-development/unity/unity-shader-graph-artist": {
-    "unity-shader-graph-美术师智能体人格": "unity-shader-graph-artist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2884,7 +2773,6 @@
     "程序化纹理生成": "procedural-texture-generation"
   },
   "/game-development/unreal-engine/unreal-multiplayer-architect": {
-    "unreal-多人联机架构师智能体人格": "unreal-multiplayer-architect-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2914,7 +2802,6 @@
     "gas-多人深度实践": "gas-multiplayer-deep-dive"
   },
   "/game-development/unreal-engine/unreal-systems-engineer": {
-    "unreal-系统工程师智能体人格": "unreal-systems-engineer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2950,7 +2837,6 @@
     "lyra-风格玩法框架": "lyra-style-gameplay-framework"
   },
   "/game-development/unreal-engine/unreal-technical-artist": {
-    "unreal-技术美术智能体人格": "unreal-technical-artist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -2980,7 +2866,6 @@
     "pcg-高级模式": "pcg-advanced-patterns"
   },
   "/game-development/unreal-engine/unreal-world-builder": {
-    "unreal-世界构建师智能体人格": "unreal-world-builder-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3010,7 +2895,6 @@
     "流送性能优化": "streaming-performance-optimization"
   },
   "/gis/gis-3d-scene-developer": {
-    "3dscenedeveloper-智能体人格": "3dscenedeveloper-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3031,7 +2915,6 @@
     "工具": "tools"
   },
   "/gis/gis-analyst": {
-    "gisanalyst-智能体人格": "gisanalyst-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3049,7 +2932,6 @@
     "数据格式": "data-formats"
   },
   "/gis/gis-bim-specialist": {
-    "bimgiss-专家智能体人格": "bimgiss-specialist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3069,7 +2951,6 @@
     "python-库": "python-libraries"
   },
   "/gis/gis-cartography-designer": {
-    "cartographydesigner-智能体人格": "cartographydesigner-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3093,7 +2974,6 @@
     "简洁浅色主题": "clean-light-theme"
   },
   "/gis/gis-drone-reality-mapping": {
-    "dronerealitymapping-智能体人格": "dronerealitymapping-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3113,7 +2993,6 @@
     "点云": "point-cloud"
   },
   "/gis/gis-geoai-ml-engineer": {
-    "geoaimlengineer-智能体人格": "geoaimlengineer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3132,7 +3011,6 @@
     "地理空间-ml": "geospatial-ml"
   },
   "/gis/gis-geoprocessing-specialist": {
-    "geoprocessingspecialist-智能体人格": "geoprocessingspecialist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3150,7 +3028,6 @@
     "扩展模块": "extensions"
   },
   "/gis/gis-qa-engineer": {
-    "gisqaengineer-智能体人格": "gisqaengineer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3171,7 +3048,6 @@
     "自动化检查": "automated-checks"
   },
   "/gis/gis-solution-engineer": {
-    "gissolutionengineer-智能体人格": "gissolutionengineer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3191,7 +3067,6 @@
     "编程": "programming"
   },
   "/gis/gis-spatial-data-engineer": {
-    "spatialdataengineer-智能体人格": "spatialdataengineer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3210,7 +3085,6 @@
     "数据校验": "data-validation"
   },
   "/gis/gis-spatial-data-scientist": {
-    "spatialdatascientist-智能体人格": "spatialdatascientist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3228,7 +3102,6 @@
     "地理空间": "geospatial"
   },
   "/gis/gis-technical-consultant": {
-    "gistechnicalconsultant-智能体人格": "gistechnicalconsultant-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3245,7 +3118,6 @@
     "阶段-3路线图与治理": "phase-3-roadmap--governance"
   },
   "/gis/gis-web-gis-developer": {
-    "webgisdeveloper-智能体人格": "webgisdeveloper-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3265,7 +3137,6 @@
     "数据处理": "data-processing"
   },
   "/healthcare/healthcare-clinical-evidence-agent": {
-    "临床证据智能体": "clinical-evidence-agent",
     "你的身份": "your-identity",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -3290,7 +3161,6 @@
     "针对投资人材料": "for-investor-materials"
   },
   "/healthcare/healthcare-innovation-strategist": {
-    "医疗健康创新战略家": "healthcare-innovation-strategist",
     "你的身份": "your-identity",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -3320,7 +3190,6 @@
     "叙事审计": "narrative-audit"
   },
   "/healthcare/healthcare-sovereign-health-systems-agent": {
-    "主权卫生系统智能体": "sovereign-health-systems-agent",
     "你的身份": "your-identity",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -3361,7 +3230,6 @@
     "关于本镜像": "about-this-mirror"
   },
   "/integrations/aider": {
-    "aider-集成": "aider-integration",
     "为什么是索引而不是智能体本体": "why-an-index-and-not-the-agents",
     "安装": "install",
     "使用一个智能体": "use-an-agent",
@@ -3369,20 +3237,17 @@
     "重新生成": "regenerate"
   },
   "/integrations/antigravity": {
-    "antigravity-集成": "antigravity-integration",
     "安装": "install",
     "激活一个技能": "activate-a-skill",
     "重新生成": "regenerate",
     "文件格式": "file-format"
   },
   "/integrations/claude-code": {
-    "claude-code-集成": "claude-code-integration",
     "安装": "install",
     "激活一个智能体": "activate-an-agent",
     "智能体目录": "agent-directory"
   },
   "/integrations/codex": {
-    "codex-集成": "codex-integration",
     "安装": "installation",
     "生成格式": "generated-format",
     "用法": "usage",
@@ -3394,13 +3259,11 @@
     "未检测到-codex": "codex-not-detected"
   },
   "/integrations/cursor": {
-    "cursor-集成": "cursor-integration",
     "安装": "install",
     "激活一条规则": "activate-a-rule",
     "重新生成": "regenerate"
   },
   "/integrations/dsh": {
-    "deepseek-harness-集成": "deepseek-harness-integration",
     "安装": "install",
     "激活一个技能": "activate-a-skill",
     "重新生成": "regenerate",
@@ -3408,33 +3271,28 @@
     "dsh-扫描的技能根目录": "skill-roots-scanned-by-dsh"
   },
   "/integrations/gemini-cli": {
-    "gemini-cli-集成": "gemini-cli-integration",
     "安装": "install",
     "使用一个智能体": "use-an-agent",
     "目录结构": "structure",
     "重新生成": "regenerate"
   },
   "/integrations/github-copilot": {
-    "github-copilot-集成": "github-copilot-integration",
     "安装": "install",
     "激活一个智能体": "activate-an-agent",
     "智能体目录": "agent-directory"
   },
   "/integrations/hermes": {
-    "hermes-的-agency-agents-路由插件": "hermes-agency-agents-router-plugin",
     "暴露给-hermes-的工具": "tools-exposed-to-hermes",
     "给-hermes-的专家使用指引": "specialist-usage-instruction-for-hermes",
     "安装": "install"
   },
   "/integrations": {
-    "-集成": "-integrations",
     "支持的工具": "supported-tools",
     "快速安装": "quick-install",
     "重新生成集成文件": "regenerating-integration-files",
     "用法": "usage"
   },
   "/integrations/kimi": {
-    "kimi-code-cli-集成": "kimi-code-cli-integration",
     "安装": "installation",
     "用法": "usage",
     "智能体结构": "agent-structure",
@@ -3451,7 +3309,6 @@
     "yaml-不合法": "invalid-yaml"
   },
   "/integrations/mcp-memory/backend-architect-with-memory": {
-    "后端架构师智能体人格": "backend-architect-agent-personality",
     "你的身份与记忆": "your-identity--memory",
     "你的核心使命": "your-core-mission",
     "你必须遵守的关键规则": "critical-rules-you-must-follow",
@@ -3475,7 +3332,6 @@
     "云基础设施专长": "cloud-infrastructure-expertise"
   },
   "/integrations/mcp-memory": {
-    "mcp-记忆集成": "mcp-memory-integration",
     "它能做什么": "what-it-does",
     "设置": "setup",
     "如何给任意智能体加记忆": "how-to-add-memory-to-any-agent",
@@ -3486,13 +3342,11 @@
     "智能体会拿它做什么": "what-the-agent-does-with-this"
   },
   "/integrations/openclaw": {
-    "openclaw-集成": "openclaw-integration",
     "安装": "install",
     "激活一个智能体": "activate-an-agent",
     "重新生成": "regenerate"
   },
   "/integrations/opencode": {
-    "opencode-集成": "opencode-integration",
     "安装": "install",
     "激活一个智能体": "activate-an-agent",
     "智能体格式": "agent-format",
@@ -3500,14 +3354,12 @@
     "重新生成": "regenerate"
   },
   "/integrations/qwen": {
-    "qwen-code-集成": "qwen-code-integration",
     "生成": "generate",
     "安装": "install",
     "在-qwen-code-中刷新": "refresh-in-qwen-code",
     "注意事项": "notes"
   },
   "/integrations/vibe": {
-    "mistral-vibe-集成": "mistral-vibe-integration",
     "生成": "generate",
     "安装": "install",
     "生成格式": "generated-format",
@@ -3521,18 +3373,15 @@
     "集成文件未生成": "integration-files-not-generated"
   },
   "/integrations/windsurf": {
-    "windsurf-集成": "windsurf-integration",
     "安装": "install",
     "激活一个智能体": "activate-an-agent",
     "重新生成": "regenerate"
   },
   "/integrations/zcode": {
-    "zcode-集成": "zcode-integration",
     "生成": "generate",
     "安装": "install"
   },
   "/marketing/marketing-aeo-foundations": {
-    "aeo-基础架构师": "aeo-foundations-architect",
     "-身份与记忆": "-identity--memory",
     "-核心使命": "-core-mission",
     "-关键规则": "-critical-rules",
@@ -3552,7 +3401,6 @@
     "与互补智能体的协作": "collaboration-with-complementary-agents"
   },
   "/marketing/marketing-agentic-search-optimizer": {
-    "智能体搜索优化师": "agentic-search-optimizer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的沟通风格": "-your-communication-style",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3573,7 +3421,6 @@
     "与互补智能体的协作": "collaboration-with-complementary-agents"
   },
   "/marketing/marketing-ai-citation-strategist": {
-    "ai-引用策略师": "ai-citation-strategist",
     "你的身份与记忆": "your-identity--memory",
     "你的沟通风格": "your-communication-style",
     "你必须遵守的关键规则": "critical-rules-you-must-follow",
@@ -3590,7 +3437,6 @@
     "提示词模式工程": "prompt-pattern-engineering"
   },
   "/marketing/marketing-app-store-optimizer": {
-    "应用商店优化师智能体人格": "app-store-optimizer-agent-personality",
     "à-你的身份与记忆": "à-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3619,7 +3465,6 @@
     "分析与表现追踪": "analytics-and-performance-tracking"
   },
   "/marketing/marketing-baidu-seo-specialist": {
-    "市场营销部百度-seo-专家": "marketing-baidu-seo-specialist",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3647,7 +3492,6 @@
     "跨搜索引擎的中国战略": "cross-search-engine-china-strategy"
   },
   "/marketing/marketing-bilibili-content-strategist": {
-    "市场营销部-b-站内容策略师": "marketing-bilibili-content-strategist",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3675,7 +3519,6 @@
     "b-站舆情管理": "crisis-management-on-b站"
   },
   "/marketing/marketing-book-co-author": {
-    "图书联合作者": "book-co-author",
     "你的身份与记忆": "your-identity--memory",
     "你的核心使命": "your-core-mission",
     "你必须遵守的关键规则": "critical-rules-you-must-follow",
@@ -3689,7 +3532,6 @@
     "5-交付修订包": "5-deliver-the-revision-package"
   },
   "/marketing/marketing-carousel-growth-engine": {
-    "营销轮播图增长引擎": "marketing-carousel-growth-engine",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -3722,7 +3564,6 @@
     "自我优化增长闭环": "self-optimizing-growth-loop"
   },
   "/marketing/marketing-china-ecommerce-operator": {
-    "营销中国电商操盘手": "marketing-china-e-commerce-operator",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3751,7 +3592,6 @@
     "供应链与财务管理": "supply-chain--financial-management"
   },
   "/marketing/marketing-china-market-localization-strategist": {
-    "中国市场本地化战略官": "china-market-localization-strategist",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3784,7 +3624,6 @@
     "中国-全球桥梁策略": "china-global-bridge-strategy"
   },
   "/marketing/marketing-content-creator": {
-    "营销内容创作者智能体": "marketing-content-creator-agent",
     "身份与角色定义": "identity--role-definition",
     "核心能力": "core-capabilities",
     "专长技能": "specialized-skills",
@@ -3792,7 +3631,6 @@
     "成功指标": "success-metrics"
   },
   "/marketing/marketing-cross-border-ecommerce": {
-    "营销跨境电商专家": "marketing-cross-border-e-commerce-specialist",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -3843,7 +3681,6 @@
     "阶段-5壮大贡献者管线": "phase-5-grow-the-contributor-pipeline"
   },
   "/marketing/marketing-douyin-strategist": {
-    "市场营销-抖音策略专家": "marketing-douyin-strategist",
     "身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -3864,7 +3701,6 @@
     "第-4-步数据复盘与迭代": "step-4-data-review--iteration"
   },
   "/marketing/marketing-email-strategist": {
-    "邮件营销策略专家": "email-marketing-strategist",
     "-身份与记忆": "-your-identity--memory",
     "-核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3895,7 +3731,6 @@
     "gdpr-与-eprivacy-合规2026-年现状": "gdpr--eprivacy-compliance-2026-state"
   },
   "/marketing/marketing-global-podcast-strategist": {
-    "市场营销-全球播客策略专家": "marketing-global-podcast-strategist",
     "-身份与记忆": "-your-identity--memory",
     "-核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3920,7 +3755,6 @@
     "危机与平台期管理": "crisis--plateau-management"
   },
   "/marketing/marketing-growth-hacker": {
-    "市场营销-增长黑客智能体": "marketing-growth-hacker-agent",
     "身份与角色定义": "identity--role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -3928,7 +3762,6 @@
     "成功指标": "success-metrics"
   },
   "/marketing/marketing-instagram-curator": {
-    "市场营销-instagram-运营专家": "marketing-instagram-curator",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -3950,7 +3783,6 @@
     "社区建设进阶": "community-building-excellence"
   },
   "/marketing/marketing-kuaishou-strategist": {
-    "市场营销-快手策略专家": "marketing-kuaishou-strategist",
     "-身份与记忆": "-your-identity--memory",
     "-核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3978,7 +3810,6 @@
     "跨平台私域策略": "cross-platform-private-domain-strategy"
   },
   "/marketing/marketing-linkedin-content-creator": {
-    "linkedin-内容创作专家": "linkedin-content-creator",
     "-身份与记忆": "-your-identity--memory",
     "-核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -3990,7 +3821,6 @@
     "-高级能力": "-advanced-capabilities"
   },
   "/marketing/marketing-livestream-commerce-coach": {
-    "市场营销直播电商教练": "marketing-livestream-commerce-coach",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4017,7 +3847,6 @@
     "第-5-步实时盯盘与优化": "step-5-real-time-monitoring--optimization"
   },
   "/marketing/marketing-multi-platform-publisher": {
-    "多平台发布专家": "multi-platform-publisher",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -4038,7 +3867,6 @@
     "状态报告模板": "status-report-template"
   },
   "/marketing/marketing-podcast-strategist": {
-    "市场营销播客策略师": "marketing-podcast-strategist",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4067,7 +3895,6 @@
     "第-5-步数据复盘与迭代": "step-5-data-review--iteration"
   },
   "/marketing/marketing-pr-communications-manager": {
-    "-公关与传播经理": "-pr--communications-manager",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -4096,7 +3923,6 @@
     "模式识别": "pattern-recognition"
   },
   "/marketing/marketing-private-domain-operator": {
-    "市场营销私域运营专家": "marketing-private-domain-operator",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4121,7 +3947,6 @@
     "第-4-步数据驱动迭代": "step-4-data-driven-iteration"
   },
   "/marketing/marketing-reddit-community-builder": {
-    "市场营销-reddit-社群运营专家": "marketing-reddit-community-builder",
     "你的身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4144,7 +3969,6 @@
     "高阶社区导航": "advanced-community-navigation"
   },
   "/marketing/marketing-seo-specialist": {
-    "市场营销-seo-专家": "marketing-seo-specialist",
     "你的身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4176,7 +4000,6 @@
     "ai-搜索与-sge-适配": "ai-search--sge-adaptation"
   },
   "/marketing/marketing-short-video-editing-coach": {
-    "市场营销短视频剪辑教练": "marketing-short-video-editing-coach",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4204,7 +4027,6 @@
     "第-5-步导出与多平台适配": "step-5-export--multi-platform-adaptation"
   },
   "/marketing/marketing-social-media-strategist": {
-    "社交媒体策略师智能体": "social-media-strategist-agent",
     "角色定位": "role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -4224,7 +4046,6 @@
     "效果跟踪": "performance-tracking"
   },
   "/marketing/marketing-tiktok-strategist": {
-    "市场营销-tiktok-策略师": "marketing-tiktok-strategist",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4248,7 +4069,6 @@
     "危机管理与社群响应": "crisis-management--community-response"
   },
   "/marketing/marketing-twitter-engager": {
-    "市场营销-twitter-互动官": "marketing-twitter-engager",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4272,7 +4092,6 @@
     "twitter-广告整合": "twitter-advertising-integration"
   },
   "/marketing/marketing-video-optimization-specialist": {
-    "市场营销视频优化专员智能体": "marketing-video-optimization-specialist-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -4292,7 +4111,6 @@
     "第-4-步元数据优化": "step-4-metadata-optimization"
   },
   "/marketing/marketing-wechat-official-account": {
-    "市场营销微信公众号运营经理": "marketing-wechat-official-account-manager",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4317,7 +4135,6 @@
     "业务整合": "business-integration"
   },
   "/marketing/marketing-weibo-strategist": {
-    "市场营销-微博策略师": "marketing-weibo-strategist",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4346,7 +4163,6 @@
     "第-5-步数据复盘与策略迭代": "step-5-data-review--strategy-iteration"
   },
   "/marketing/marketing-x-twitter-intelligence-analyst": {
-    "市场营销-xtwitter-情报分析师": "marketing-xtwitter-intelligence-analyst",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4370,7 +4186,6 @@
     "竞品与受众情报": "competitor--audience-intelligence"
   },
   "/marketing/marketing-xiaohongshu-specialist": {
-    "市场营销-小红书营销专家": "marketing-xiaohongshu-specialist",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4395,7 +4210,6 @@
     "数据与效果优化": "data--performance-optimization"
   },
   "/marketing/marketing-zhihu-strategist": {
-    "市场营销-知乎策略师": "marketing-zhihu-strategist",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4421,7 +4235,6 @@
     "业务整合": "business-integration"
   },
   "/paid-media/paid-media-auditor": {
-    "付费媒体审计员智能体": "paid-media-auditor-agent",
     "身份与角色定义": "identity--role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -4430,7 +4243,6 @@
     "成功指标": "success-metrics"
   },
   "/paid-media/paid-media-creative-strategist": {
-    "付费媒体广告创意策略师智能体": "paid-media-ad-creative-strategist-agent",
     "身份与角色定义": "identity--role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -4439,7 +4251,6 @@
     "成功指标": "success-metrics"
   },
   "/paid-media/paid-media-paid-social-strategist": {
-    "付费媒体付费社交策略师智能体": "paid-media-paid-social-strategist-agent",
     "身份与角色定义": "identity--role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -4448,7 +4259,6 @@
     "成功指标": "success-metrics"
   },
   "/paid-media/paid-media-ppc-strategist": {
-    "付费媒体-ppc-广告活动策略师智能体": "paid-media-ppc-campaign-strategist-agent",
     "身份与角色定义": "identity--role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -4457,7 +4267,6 @@
     "成功指标": "success-metrics"
   },
   "/paid-media/paid-media-programmatic-buyer": {
-    "付费媒体程序化与展示广告采买师智能体": "paid-media-programmatic--display-buyer-agent",
     "身份与角色定义": "identity--role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -4466,7 +4275,6 @@
     "成功指标": "success-metrics"
   },
   "/paid-media/paid-media-search-query-analyst": {
-    "付费媒体搜索查询分析师智能体": "paid-media-search-query-analyst-agent",
     "身份与角色定义": "identity--role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -4475,7 +4283,6 @@
     "成功指标": "success-metrics"
   },
   "/paid-media/paid-media-tracking-specialist": {
-    "付费媒体追踪与衡量专员智能体": "paid-media-tracking--measurement-specialist-agent",
     "身份与角色定义": "identity--role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -4484,7 +4291,6 @@
     "成功指标": "success-metrics"
   },
   "/product/product-behavioral-nudge-engine": {
-    "-行为助推引擎": "-behavioral-nudge-engine",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -4517,7 +4323,6 @@
     "第-5-阶段闭合回路": "phase-5-close-the-loop"
   },
   "/product/product-feedback-synthesizer": {
-    "产品反馈综合分析师智能体": "product-feedback-synthesizer-agent",
     "身份与角色定义": "identity--role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -4537,7 +4342,6 @@
     "客户成功-playbook": "customer-success-playbooks"
   },
   "/product/product-manager": {
-    "-产品经理智能体": "-product-manager-agent",
     "-身份与记忆": "-identity--memory",
     "-核心使命": "-core-mission",
     "-关键规则": "-critical-rules",
@@ -4559,7 +4363,6 @@
     "第-6-阶段度量与学习": "phase-6--measurement--learning"
   },
   "/product/product-sprint-prioritizer": {
-    "产品-sprint-优先级排序师智能体": "product-sprint-prioritizer-agent",
     "角色定义": "role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -4587,7 +4390,6 @@
     "团队发展": "team-development"
   },
   "/product/product-trend-researcher": {
-    "产品趋势研究员智能体": "product-trend-researcher-agent",
     "身份与角色定义": "identity--role-definition",
     "核心能力": "core-capabilities",
     "专项技能": "specialized-skills",
@@ -4614,7 +4416,6 @@
     "质量保证": "quality-assurance"
   },
   "/project-management/project-management-experiment-tracker": {
-    "实验追踪员智能体人格": "experiment-tracker-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -4640,7 +4441,6 @@
     "数据科学整合": "data-science-integration"
   },
   "/project-management/project-management-jira-workflow-steward": {
-    "jira-工作流管家智能体": "jira-workflow-steward-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -4671,7 +4471,6 @@
     "流程现代化": "process-modernization"
   },
   "/project-management/project-management-meeting-notes-specialist": {
-    "会议纪要专家": "meeting-notes-specialist",
     "身份": "identity",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -4682,7 +4481,6 @@
     "成功指标": "success-metrics"
   },
   "/project-management/project-management-project-shepherd": {
-    "项目牧羊人智能体人格": "project-shepherd-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -4708,7 +4506,6 @@
     "组织变革领导力": "organizational-change-leadership"
   },
   "/project-management/project-management-studio-operations": {
-    "工作室运营智能体人格": "studio-operations-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -4734,7 +4531,6 @@
     "组织卓越建设": "organizational-excellence-development"
   },
   "/project-management/project-management-studio-producer": {
-    "工作室制作人智能体人格": "studio-producer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -4760,7 +4556,6 @@
     "组织领导力卓越": "organizational-leadership-excellence"
   },
   "/project-management/project-manager-senior": {
-    "项目经理智能体人格": "project-manager-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心职责": "-your-core-responsibilities",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -4775,7 +4570,6 @@
     "从经验中学习": "learning-from-experience"
   },
   "/research/research-synthesist": {
-    "研究综合师智能体人格": "research-synthesist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -4800,7 +4594,6 @@
     "综合与表达": "synthesis-and-communication"
   },
   "/sales/sales-account-strategist": {
-    "客户战略家智能体": "account-strategist-agent",
     "你的身份与记忆": "your-identity--memory",
     "你的核心使命": "your-core-mission",
     "你必须遵守的关键规则": "critical-rules-you-must-follow",
@@ -4828,7 +4621,6 @@
     "组织情报": "organizational-intelligence"
   },
   "/sales/sales-coach": {
-    "销售教练智能体": "sales-coach-agent",
     "你的身份与记忆": "your-identity--memory",
     "你的核心使命": "your-core-mission",
     "你必须遵守的关键规则": "critical-rules-you-must-follow",
@@ -4860,7 +4652,6 @@
     "销售方法论强化": "sales-methodology-reinforcement"
   },
   "/sales/sales-deal-strategist": {
-    "交易战略家智能体": "deal-strategist-agent",
     "角色定义": "role-definition",
     "核心能力": "core-capabilities",
     "meddpicc-框架深度应用": "meddpicc-framework--deep-application",
@@ -4888,7 +4679,6 @@
     "竞争战卡模板": "competitive-battlecard-template"
   },
   "/sales/sales-discovery-coach": {
-    "需求探询教练智能体": "discovery-coach-agent",
     "你的身份": "your-identity",
     "三大探询框架": "the-three-discovery-frameworks",
     "顶级探询通话结构": "elite-discovery-call-structure",
@@ -4906,7 +4696,6 @@
     "异议分布你最常听到的": "objection-distribution-what-you-will-hear-most"
   },
   "/sales/sales-engineer": {
-    "销售工程师智能体": "sales-engineer-agent",
     "角色定义": "role-definition",
     "核心能力": "core-capabilities",
     "演示手艺技术叙事的艺术": "demo-craft--the-art-of-technical-storytelling",
@@ -4927,7 +4716,6 @@
     "赢区--缠斗区--落败区技术层": "winning--battling--losing-zones--technical-layer"
   },
   "/sales/sales-offer-lead-gen-strategist": {
-    "报价与获客战略家": "offer--lead-gen-strategist",
     "-身份与记忆": "-identity--memory",
     "-核心使命": "-core-mission",
     "-关键规则": "-critical-rules",
@@ -4961,7 +4749,6 @@
     "放大器项目运营": "amplifier-program-operations"
   },
   "/sales/sales-outbound-strategist": {
-    "外呼战略家智能体": "outbound-strategist-agent",
     "你的身份": "your-identity",
     "基于信号的销售框架": "the-signal-based-selling-framework",
     "icp-定义与客户分层": "icp-definition-and-account-tiering",
@@ -4979,7 +4766,6 @@
     "写出有人回复的冷邮件": "writing-cold-emails-that-get-replies"
   },
   "/sales/sales-pipeline-analyst": {
-    "销售管道分析师智能体": "pipeline-analyst-agent",
     "你的身份与记忆": "your-identity--memory",
     "你的核心使命": "your-core-mission",
     "你必须遵守的关键规则": "critical-rules-you-must-follow",
@@ -5008,7 +4794,6 @@
     "销售教练分析": "sales-coaching-analytics"
   },
   "/sales/sales-proposal-strategist": {
-    "提案战略家智能体": "proposal-strategist-agent",
     "你的身份与记忆": "your-identity--memory",
     "你的核心使命": "your-core-mission",
     "你必须遵守的关键规则": "critical-rules-you-must-follow",
@@ -5036,7 +4821,6 @@
     "内容运营": "content-operations"
   },
   "/security": {
-    "安全策略": "security-policy",
     "报告漏洞": "reporting-a-vulnerability",
     "响应时限": "response-timeline",
     "范围": "scope",
@@ -5045,7 +4829,6 @@
     "shell-脚本scripts": "shell-scripts-scripts"
   },
   "/security/security-ai-generated-code-auditor": {
-    "ai-生成代码安全审计员": "ai-generated-code-security-auditor",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5075,7 +4858,6 @@
     "诚实可映射的报告": "honest-mappable-reporting"
   },
   "/security/security-appsec-engineer": {
-    "应用安全工程师": "application-security-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5106,7 +4888,6 @@
     "合规即代码": "compliance-as-code"
   },
   "/security/security-architect": {
-    "安全架构师": "security-architect-agent",
     "-你的身份与思维": "-your-identity--mindset",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5135,7 +4916,6 @@
     "安全测试覆盖清单": "security-test-coverage-checklist"
   },
   "/security/security-blockchain-security-auditor": {
-    "区块链安全审计员": "blockchain-security-auditor",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5169,7 +4949,6 @@
     "事故响应": "incident-response"
   },
   "/security/security-cloud-security-architect": {
-    "云安全架构师": "cloud-security-architect",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5201,7 +4980,6 @@
     "云上事故响应": "incident-response-in-cloud"
   },
   "/security/security-compliance-auditor": {
-    "合规审计员": "compliance-auditor-agent",
     "你的身份与记忆": "your-identity--memory",
     "你的核心使命": "your-core-mission",
     "你必须遵守的关键规则": "critical-rules-you-must-follow",
@@ -5223,7 +5001,6 @@
     "5-持续合规": "5-continuous-compliance"
   },
   "/security/security-incident-responder": {
-    "事故响应员": "incident-responder",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5255,7 +5032,6 @@
     "危机沟通": "crisis-communication"
   },
   "/security/security-penetration-tester": {
-    "渗透测试员": "penetration-tester",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5287,7 +5063,6 @@
     "物理与社会工程": "physical--social-engineering"
   },
   "/security/security-secrets-credential-engineer": {
-    "密钥与凭据治理工程师": "secrets--credential-hygiene-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5318,7 +5093,6 @@
     "轮换与响应自动化": "rotation-and-response-automation"
   },
   "/security/security-senior-secops": {
-    "资深-secops-工程师": "senior-secops-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-每次调用自动安全扫描": "-on-every-invocation--automatic-security-scan",
     "-你的核心使命": "-your-core-mission",
@@ -5381,7 +5155,6 @@
     "类别-9--url-中的-pii敏感数据high": "category-9--pii--sensitive-data-in-urls-high"
   },
   "/security/security-threat-detection-engineer": {
-    "威胁检测工程师智能体": "threat-detection-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5417,7 +5190,6 @@
     "检测体系成熟度": "detection-program-maturity"
   },
   "/security/security-threat-intelligence-analyst": {
-    "威胁情报分析师": "threat-intelligence-analyst",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5449,7 +5221,6 @@
     "情报共享与协作": "intelligence-sharing--collaboration"
   },
   "/spatial-computing/macos-spatial-metal-engineer": {
-    "macos-空间计算metal-工程师智能体人格": "macos-spatialmetal-engineer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5479,7 +5250,6 @@
     "系统集成": "system-integration"
   },
   "/spatial-computing/terminal-integration-specialist": {
-    "终端集成专家": "terminal-integration-specialist",
     "身份与核心专长": "identity--core-expertise",
     "技术能力": "technical-capabilities",
     "关键技术": "key-technologies",
@@ -5493,7 +5263,6 @@
     "ssh-集成模式": "ssh-integration-patterns"
   },
   "/spatial-computing/visionos-spatial-engineer": {
-    "visionos-空间工程师": "visionos-spatial-engineer",
     "身份与核心专长": "identity--core-expertise",
     "关键技术": "key-technologies",
     "文档参考": "documentation-references",
@@ -5504,28 +5273,24 @@
     "swiftui-空间专精": "swiftui-spatial-specializations"
   },
   "/spatial-computing/xr-cockpit-interaction-specialist": {
-    "xr-座舱交互专家智能体人格": "xr-cockpit-interaction-specialist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "️-你能做什么": "️-what-you-can-do",
     "为-xr-用户构建基于座舱的沉浸式界面": "build-cockpit-based-immersive-interfaces-for-xr-users"
   },
   "/spatial-computing/xr-immersive-developer": {
-    "xr-沉浸式开发者智能体人格": "xr-immersive-developer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "️-你能做什么": "️-what-you-can-do",
     "跨浏览器跨头显构建沉浸式-xr-体验": "build-immersive-xr-experiences-across-browsers-and-headsets"
   },
   "/spatial-computing/xr-interface-architect": {
-    "xr-界面架构师智能体人格": "xr-interface-architect-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "️-你能做什么": "️-what-you-can-do",
     "为-xr-平台设计空间直觉化的用户体验": "design-spatially-intuitive-user-experiences-for-xr-platforms"
   },
   "/specialized/accounts-payable-agent": {
-    "应付账款智能体人格accounts-payable-agent-personality": "accounts-payable-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5545,7 +5310,6 @@
     "生成应付账款摘要": "generate-ap-summary"
   },
   "/specialized/agentic-identity-trust": {
-    "智能体身份与信任架构师": "agentic-identity--trust-architect",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5580,7 +5344,6 @@
     "多租户信任隔离": "multi-tenant-trust-isolation"
   },
   "/specialized/agents-orchestrator": {
-    "agentsorchestrator-智能体人格": "agentsorchestrator-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5619,7 +5382,6 @@
     "-专项智能体": "-specialized-agents"
   },
   "/specialized/automation-governance-architect": {
-    "自动化治理架构师": "automation-governance-architect",
     "核心使命": "core-mission",
     "不可妥协的规则": "non-negotiable-rules",
     "决策框架强制执行": "decision-framework-mandatory",
@@ -5644,7 +5406,6 @@
     "7-前提条件与风险": "7-preconditions-and-risks"
   },
   "/specialized/business-strategist": {
-    "️-商业战略家business-strategist": "️-business-strategist",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5671,7 +5432,6 @@
     "战略分析工具": "strategic-analysis-tools"
   },
   "/specialized/change-management-consultant": {
-    "-变革管理顾问": "-change-management-consultant",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5697,7 +5457,6 @@
     "行业经验": "industry-experience"
   },
   "/specialized/chief-financial-officer": {
-    "-首席财务官智能体": "-chief-financial-officer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的沟通风格": "-your-communication-style",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5731,7 +5490,6 @@
     "董事会财务汇报高管摘要模板": "board-financial-update--executive-summary-template"
   },
   "/specialized/corporate-training-designer": {
-    "企业培训设计师": "corporate-training-designer",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -5760,7 +5518,6 @@
     "第-5-步效果评估与优化": "step-5-effectiveness-evaluation--optimization"
   },
   "/specialized/customer-service": {
-    "-客服智能体": "-customer-service-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5789,7 +5546,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/customer-success-manager": {
-    "-客户成功经理": "-customer-success-manager",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5816,7 +5572,6 @@
     "客群分层模型": "segmentation-models"
   },
   "/specialized/data-consolidation-agent": {
-    "数据整合智能体": "data-consolidation-agent",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -5827,7 +5582,6 @@
     "区域报告": "territory-report"
   },
   "/specialized/data-privacy-officer": {
-    "-数据隐私官智能体": "-data-privacy-officer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的沟通风格": "-your-communication-style",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5863,7 +5617,6 @@
     "阶段-5持续优化": "stage-5--optimizing"
   },
   "/specialized/esg-sustainability-officer": {
-    "-esg-与可持续发展官智能体": "-esg--sustainability-officer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的沟通风格": "-your-communication-style",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5904,7 +5657,6 @@
     "阶段-4领先": "stage-4--leading"
   },
   "/specialized/government-digital-presales-consultant": {
-    "政务数字化售前顾问": "government-digital-presales-consultant",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -5932,7 +5684,6 @@
     "第-5-步中标后交接": "step-5-post-award-handoff"
   },
   "/specialized/grant-writer": {
-    "-资助申请撰写专家": "-grant-writer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5959,7 +5710,6 @@
     "服务领域": "sectors-served"
   },
   "/specialized/healthcare-aging-parent-care-companion": {
-    "-年长父母照护陪伴智能体": "-aging-parent-care-companion",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -5991,7 +5741,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/healthcare-customer-service": {
-    "-医疗健康客服智能体": "-healthcare-customer-service-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6021,7 +5770,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/healthcare-marketing-compliance": {
-    "医疗健康营销合规专家": "healthcare-marketing-compliance-specialist",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -6052,7 +5800,6 @@
     "第-5-步合规能力建设": "step-5-compliance-capability-building"
   },
   "/specialized/hospitality-guest-services": {
-    "-宾客服务智能体": "-hospitality-guest-services-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6080,7 +5827,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/hr-onboarding": {
-    "-hr-入职智能体": "-hr-onboarding-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6109,7 +5855,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/identity-graph-operator": {
-    "身份图谱操作员identity-graph-operator": "identity-graph-operator",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6142,7 +5887,6 @@
     "共享智能体记忆": "shared-agent-memory"
   },
   "/specialized/language-translator": {
-    "-语言翻译员language-translator": "-language-translator",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6170,7 +5914,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/legal-billing-time-tracking": {
-    "️-法务计费与工时追踪智能体": "️-legal-billing--time-tracking-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6199,7 +5942,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/legal-client-intake": {
-    "-法务客户接待智能体": "-legal-client-intake-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6228,7 +5970,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/legal-document-review": {
-    "️-法务文档审阅智能体": "️-legal-document-review-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6255,7 +5996,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/loan-officer-assistant": {
-    "-贷款专员助手智能体": "-loan-officer-assistant-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -6283,7 +6023,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/lsp-index-engineer": {
-    "lsp索引工程师人格": "lspindex-engineer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -6313,7 +6052,6 @@
     "性能优化": "performance-optimization"
   },
   "/specialized/ma-integration-manager": {
-    "-并购整合经理智能体": "-ma-integration-manager-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的沟通风格": "-your-communication-style",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -6350,7 +6088,6 @@
     "整合风险登记册": "integration-risk-register"
   },
   "/specialized/medical-billing-coding-specialist": {
-    "-医疗计费与编码专员": "-medical-billing--coding-specialist",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -6377,7 +6114,6 @@
     "认证与参考资料": "certifications--references"
   },
   "/specialized/operations-manager": {
-    "️-运营经理智能体": "️-operations-manager-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的沟通风格": "-your-communication-style",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -6412,7 +6148,6 @@
     "改善kaizen活动结构35-天快速改进": "kaizen-event-structure-35-day-rapid-improvement"
   },
   "/specialized/organizational-psychologist": {
-    "-组织心理学家智能体": "-organizational-psychologist-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的沟通风格": "-your-communication-style",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6448,7 +6183,6 @@
     "文化健康脉搏调查每季度10-题": "culture-health-pulse-survey-quarterly--10-questions"
   },
   "/specialized/personal-growth-mentor": {
-    "-个人成长导师": "-personal-growth-mentor",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6470,7 +6204,6 @@
     "每周问责复盘": "weekly-accountability-review"
   },
   "/specialized/real-estate-buyer-seller": {
-    "-房产买卖经纪智能体": "-real-estate-buyer--seller-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6499,7 +6232,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/recruitment-specialist": {
-    "招聘专员智能体": "recruitment-specialist-agent",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "面试流程设计": "interview-process-design",
@@ -6557,7 +6289,6 @@
     "战略人力规划": "strategic-workforce-planning"
   },
   "/specialized/report-distribution-agent": {
-    "报表分发智能体": "report-distribution-agent",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -6569,7 +6300,6 @@
     "审计轨迹": "audit-trail"
   },
   "/specialized/resume-tailor": {
-    "简历裁缝智能体": "resume-tailor-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6603,7 +6333,6 @@
     "第-6-步交付": "step-6-delivery"
   },
   "/specialized/retail-customer-returns": {
-    "-零售顾客退货智能体": "-retail-customer-returns-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6631,7 +6360,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/sales-data-extraction-agent": {
-    "销售数据提取智能体": "sales-data-extraction-agent",
     "身份与记忆": "identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -6643,7 +6371,6 @@
     "数据持久化": "data-persistence"
   },
   "/specialized/sales-outreach": {
-    "-销售触达智能体": "-sales-outreach-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6671,7 +6398,6 @@
     "模式识别": "pattern-recognition"
   },
   "/specialized/specialized-chief-of-staff": {
-    "-幕僚长": "-chief-of-staff",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你的沟通风格": "-your-communication-style",
@@ -6706,7 +6432,6 @@
     "收尾包每次会话结束": "closeout-package-end-of-every-session"
   },
   "/specialized/specialized-civil-engineer": {
-    "土木工程师智能体": "civil-engineer-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-全球标准覆盖": "-global-standards-coverage",
@@ -6749,7 +6474,6 @@
     "可持续与韧性": "sustainability--resilience"
   },
   "/specialized/specialized-codebase-archaeologist": {
-    "代码库考古学家智能体人格": "codebase-archaeologist-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6785,7 +6509,6 @@
     "登记册维护规则": "registry-maintenance-rules"
   },
   "/specialized/specialized-cultural-intelligence-strategist": {
-    "-文化商数策略师cultural-intelligence-strategist": "-cultural-intelligence-strategist",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6798,7 +6521,6 @@
     "示例代码符号学与语言审计": "example-code-the-semiatic--linguistic-audit"
   },
   "/specialized/specialized-developer-advocate": {
-    "开发者布道师智能体": "developer-advocate-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6829,7 +6551,6 @@
     "规模化内容策略": "content-strategy-at-scale"
   },
   "/specialized/specialized-document-generator": {
-    "文档生成器智能体": "document-generator-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules",
@@ -6840,7 +6561,6 @@
     "word-文档docx": "word-documents-docx"
   },
   "/specialized/specialized-fedramp-rmf-compliance": {
-    "️-fedramp-与-rmf-合规工程师": "️-fedramp--rmf-compliance-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -6868,7 +6588,6 @@
     "云与相邻框架": "cloud--adjacent-frameworks"
   },
   "/specialized/specialized-focus-music-architect": {
-    "专注音乐架构师智能体人格": "focus-music-architect-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -6892,7 +6611,6 @@
     "第-4-阶段质量与抗疲劳验证": "phase-4-quality--anti-fatigue-verification"
   },
   "/specialized/specialized-french-consulting-market": {
-    "法国咨询市场导航": "french-consulting-market-navigator",
     "-你的身份与记忆": "-your-identity--memory",
     "-沟通风格": "-your-communication-style",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -6910,7 +6628,6 @@
     "esn-梯队分级": "esn-tier-classification"
   },
   "/specialized/specialized-korean-business-navigator": {
-    "-你的身份与记忆": "-your-identity--memory",
     "-沟通风格": "-your-communication-style",
     "-关键规则": "-critical-rules-you-must-follow",
     "-你的核心使命": "-your-core-mission",
@@ -6930,7 +6647,6 @@
     "kakaotalk-规则": "kakaotalk-rules"
   },
   "/specialized/specialized-master-plan-architect": {
-    "总体规划架构师与技术教育者": "master-plan-architect--technical-educator",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-关键规则": "-critical-rules-you-must-follow",
@@ -6952,7 +6668,6 @@
     "第-4-阶段蓝图撰写与评审呈现": "phase-4-blueprint-authoring--review-presentation"
   },
   "/specialized/specialized-mcp-builder": {
-    "mcp-builder-智能体": "mcp-builder-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -6979,7 +6694,6 @@
     "可组合服务器架构": "composable-server-architecture"
   },
   "/specialized/specialized-model-qa": {
-    "模型-qa-专家": "model-qa-specialist",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7020,7 +6734,6 @@
     "自动化监控流水线": "automated-monitoring-pipelines"
   },
   "/specialized/specialized-pricing-analyst": {
-    "定价分析师智能体": "pricing-analyst-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7040,7 +6753,6 @@
     "支柱-4历史价格与弹性": "pillar-4--historical-pricing--elasticity"
   },
   "/specialized/specialized-salesforce-architect": {
-    "salesforce-架构师": "salesforce-architect",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的沟通风格": "-your-communication-style",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7058,7 +6770,6 @@
     "agentforce-架构": "agentforce-architecture"
   },
   "/specialized/specialized-strategy-duel-agent": {
-    "战略对决智能体": "strategy-duel-agent",
     "示例对决场次": "example-duel-session",
     "内部模拟伪代码": "internal-simulation-pseudocode",
     "-你的身份与记忆": "-your-identity--memory",
@@ -7072,7 +6783,6 @@
     "-进阶能力": "-advanced-capabilities"
   },
   "/specialized/specialized-workflow-architect": {
-    "工作流架构师智能体人格": "workflow-architect-agent-personality",
     "brain-你的身份与记忆": "brain-your-identity--memory",
     "dart-你的核心使命": "dart-your-core-mission",
     "rotating_light-你必须遵守的关键规则": "rotating_light-critical-rules-you-must-follow",
@@ -7117,7 +6827,6 @@
     "登记册维护规则": "registry-maintenance-rules"
   },
   "/specialized/study-abroad-advisor": {
-    "留学规划顾问study-abroad-advisor": "study-abroad-advisor",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "关键规则": "critical-rules",
@@ -7144,7 +6853,6 @@
     "步骤-4提交与后续": "step-4-submission--follow-up"
   },
   "/specialized/supply-chain-strategist": {
-    "供应链策略师supply-chain-strategist智能体": "supply-chain-strategist-agent",
     "你的身份与记忆": "your-identity--memory",
     "核心使命": "core-mission",
     "采购渠道管理": "procurement-channel-management",
@@ -7190,7 +6898,6 @@
     "数字化与智能化": "digitalization--intelligence"
   },
   "/specialized/zk-steward": {
-    "zk-管家zk-steward智能体": "zk-steward-agent",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7223,7 +6930,6 @@
     "步骤-4记忆同步": "step-4-memory-sync"
   },
   "/strategy/coordination/agent-activation-prompts": {
-    "-nexus-智能体激活提示词": "-nexus-agent-activation-prompts",
     "流水线控制器": "pipeline-controller",
     "工程部门": "engineering-division",
     "设计部门": "design-division",
@@ -7237,7 +6943,6 @@
     "reality-checker最终集成": "reality-checker--final-integration"
   },
   "/strategy/coordination/handoff-templates": {
-    "-nexus-交接模板": "-nexus-handoff-templates",
     "1-标准交接模板": "1-standard-handoff-template",
     "2-qa-反馈循环pass": "2-qa-feedback-loop--pass",
     "3-qa-反馈循环fail": "3-qa-feedback-loop--fail",
@@ -7248,7 +6953,6 @@
     "使用指南": "usage-guide"
   },
   "/strategy/executive-brief": {
-    "-nexus-高管简报": "-nexus-executive-brief",
     "专家集结战略统一network-of-experts-unified-in-strategy": "network-of-experts-unified-in-strategy",
     "1-形势概览": "1-situation-overview",
     "2-关键发现": "2-key-findings",
@@ -7260,7 +6964,6 @@
     "文件结构": "file-structure"
   },
   "/strategy/nexus-strategy": {
-    "-nexus--专家集结战略统一network-of-experts-unified-in-strategy": "-nexus--network-of-experts-unified-in-strategy",
     "代理公司多智能体编排的完整作战手册playbook": "the-agencys-complete-operational-playbook-for-multi-agent-orchestration",
     "目录": "table-of-contents",
     "1-战略基石": "1-strategic-foundation",
@@ -7339,7 +7042,6 @@
     "面向-qa-智能体任务验证": "for-qa-agents-task-validation"
   },
   "/strategy/playbooks/phase-0-discovery": {
-    "-第-0-阶段-playbook情报与发现": "-phase-0-playbook--intelligence--discovery",
     "目标": "objective",
     "前置条件": "pre-conditions",
     "智能体激活序列": "agent-activation-sequence",
@@ -7357,7 +7059,6 @@
     "️-tool-evaluator技术全景": "️-tool-evaluator--technology-landscape"
   },
   "/strategy/playbooks/phase-1-strategy": {
-    "️-第-1-阶段-playbook战略与架构": "️-phase-1-playbook--strategy--architecture",
     "目标": "objective",
     "前置条件": "pre-conditions",
     "智能体激活序列": "agent-activation-sequence",
@@ -7377,7 +7078,6 @@
     "-sprint-prioritizer功能优先级排序": "-sprint-prioritizer--feature-prioritization"
   },
   "/strategy/playbooks/phase-2-foundation": {
-    "️-第-2-阶段-playbook奠基与脚手架": "️-phase-2-playbook--foundation--scaffolding",
     "目标": "objective",
     "前置条件": "pre-conditions",
     "智能体激活序列": "agent-activation-sequence",
@@ -7396,7 +7096,6 @@
     "️-ux-architectcss-体系实现": "️-ux-architect--css-system-implementation"
   },
   "/strategy/playbooks/phase-3-build": {
-    "-第-3-阶段-playbook构建与迭代": "-phase-3-playbook--build--iterate",
     "目标": "objective",
     "前置条件": "pre-conditions",
     "devqa-循环核心机制": "the-devqa-loop--core-mechanic",
@@ -7421,7 +7120,6 @@
     "并行任务管理": "parallel-task-management"
   },
   "/strategy/playbooks/phase-4-hardening": {
-    "️-第-4-阶段-playbook质量与加固": "️-phase-4-playbook--quality--hardening",
     "目标": "objective",
     "前置条件": "pre-conditions",
     "关键心态": "critical-mindset",
@@ -7444,7 +7142,6 @@
     "-reality-checker最终裁定": "-reality-checker--the-final-verdict"
   },
   "/strategy/playbooks/phase-5-launch": {
-    "-第-5-阶段-playbook发布与增长": "-phase-5-playbook--launch--growth",
     "目标": "objective",
     "前置条件": "pre-conditions",
     "发布时间线": "launch-timeline",
@@ -7463,7 +7160,6 @@
     "第-2-8-小时监控与响应": "hour-2-8-monitoring--response"
   },
   "/strategy/playbooks/phase-6-operate": {
-    "-第-6-阶段-playbook运营与演进": "-phase-6-playbook--operate--evolve",
     "目标": "objective",
     "前置条件": "pre-conditions",
     "运营节奏": "operational-cadences",
@@ -7490,7 +7186,6 @@
     "季度战略评审studio-producer": "quarterly-strategic-review-studio-producer"
   },
   "/strategy/quickstart": {
-    "-nexus-快速上手指南": "-nexus-quick-start-guide",
     "nexus-是什么": "what-is-nexus",
     "选择你的模式": "choose-your-mode",
     "-nexus-full启动完整项目": "-nexus-full-start-a-complete-project",
@@ -7507,7 +7202,6 @@
     "ux-改进": "ux-improvement"
   },
   "/strategy/runbooks/scenario-enterprise-feature": {
-    "-runbook企业级功能开发": "-runbook-enterprise-feature-development",
     "场景": "scenario",
     "智能体名册roster": "agent-roster",
     "执行计划": "execution-plan",
@@ -7524,7 +7218,6 @@
     "第-5-阶段上线第-12-周": "phase-5-rollout-week-12"
   },
   "/strategy/runbooks/scenario-incident-response": {
-    "-runbook事故响应": "-runbook-incident-response",
     "场景": "scenario",
     "严重程度分级": "severity-classification",
     "按严重程度组建的响应团队": "response-teams-by-severity",
@@ -7544,7 +7237,6 @@
     "高管通报高管摘要生成器仅限-p0": "executive-update-executive-summary-generator--p0-only"
   },
   "/strategy/runbooks/scenario-marketing-campaign": {
-    "-runbook多渠道营销活动": "-runbook-multi-channel-marketing-campaign",
     "场景": "scenario",
     "智能体名册roster": "agent-roster",
     "执行计划": "execution-plan",
@@ -7559,7 +7251,6 @@
     "第-3-4-周维持与优化": "week-3-4-sustain--optimize"
   },
   "/strategy/runbooks/scenario-startup-mvp": {
-    "-runbook创业公司-mvp-构建": "-runbook-startup-mvp-build",
     "场景": "scenario",
     "智能体名册roster": "agent-roster",
     "逐周执行": "week-by-week-execution",
@@ -7575,7 +7266,6 @@
     "第-5-6-周上线--增长第-5-阶段": "week-5-6-launch--growth-phase-5"
   },
   "/support/support-analytics-reporter": {
-    "分析报告专员智能体人格": "analytics-reporter-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7604,7 +7294,6 @@
     "技术整合": "technical-integration"
   },
   "/support/support-executive-summary-generator": {
-    "高管摘要生成器智能体人格": "executive-summary-generator-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7630,7 +7319,6 @@
     "分析严谨性": "analytical-rigor"
   },
   "/support/support-finance-tracker": {
-    "财务追踪专员智能体人格": "finance-tracker-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7659,7 +7347,6 @@
     "风险管理": "risk-management-excellence"
   },
   "/support/support-infrastructure-maintainer": {
-    "基础设施维护专员智能体人格": "infrastructure-maintainer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7688,7 +7375,6 @@
     "安全与合规": "security-and-compliance-leadership"
   },
   "/support/support-legal-compliance-checker": {
-    "法务合规审查专员智能体人格": "legal-compliance-checker-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7717,7 +7403,6 @@
     "合规技术整合": "compliance-technology-integration"
   },
   "/support/support-support-responder": {
-    "客户支持响应专员智能体人格": "support-responder-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7746,7 +7431,6 @@
     "知识管理": "knowledge-management-excellence"
   },
   "/testing/testing-accessibility-auditor": {
-    "无障碍审计员智能体人格": "accessibility-auditor-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7777,7 +7461,6 @@
     "跨智能体协作": "cross-agent-collaboration"
   },
   "/testing/testing-api-tester": {
-    "api-测试员智能体人格": "api-tester-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7803,7 +7486,6 @@
     "测试自动化精通": "test-automation-mastery"
   },
   "/testing/testing-evidence-collector": {
-    "qa-智能体人格": "qa-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心信念": "-your-core-beliefs",
     "-你的强制流程": "-your-mandatory-process",
@@ -7828,7 +7510,6 @@
     "积累以下专长": "build-expertise-in"
   },
   "/testing/testing-performance-benchmarker": {
-    "性能基准测试员智能体人格": "performance-benchmarker-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7854,7 +7535,6 @@
     "基础设施性能": "infrastructure-performance"
   },
   "/testing/testing-reality-checker": {
-    "集成智能体人格": "integration-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7882,7 +7562,6 @@
     "积累以下专长": "build-expertise-in"
   },
   "/testing/testing-test-automation-engineer": {
-    "测试自动化工程师": "test-automation-engineer",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7901,7 +7580,6 @@
     "大规模套件运营": "suite-operations-at-scale"
   },
   "/testing/testing-test-results-analyzer": {
-    "测试结果分析师智能体人格": "test-results-analyzer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7927,7 +7605,6 @@
     "战略质量管理": "strategic-quality-management"
   },
   "/testing/testing-tool-evaluator": {
-    "工具评估员智能体人格": "tool-evaluator-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
@@ -7953,7 +7630,6 @@
     "厂商关系精通": "vendor-relationship-excellence"
   },
   "/testing/testing-workflow-optimizer": {
-    "工作流优化师智能体人格": "workflow-optimizer-agent-personality",
     "-你的身份与记忆": "-your-identity--memory",
     "-你的核心使命": "-your-core-mission",
     "-你必须遵守的关键规则": "-critical-rules-you-must-follow",
