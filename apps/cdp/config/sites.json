@@ -92,5 +92,12 @@
     "origin": "https://docs.claude-mem.ai",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/claude-mem",
     "anchorMapUrl": "anchor-maps/claude-mem.json"
+  },
+  {
+    "id": "ai-sdk",
+    "name": "AI SDK 文档",
+    "origin": "https://ai-sdk.dev",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-sdk",
+    "anchorMapUrl": "anchor-maps/ai-sdk.json"
   }
 ]

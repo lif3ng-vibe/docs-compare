@@ -103,6 +103,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/claude-mem',
     anchorMapUrl: 'anchor-maps/claude-mem.json',
   },
+  {
+    id: 'ai-sdk',
+    name: 'AI SDK 文档',
+    origin: 'https://ai-sdk.dev',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/ai-sdk',
+    anchorMapUrl: 'anchor-maps/ai-sdk.json',
+  },
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */

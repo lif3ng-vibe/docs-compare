@@ -127,6 +127,15 @@
       "listFrom": {
         "sitemap": "https://docs.claude-mem.ai/sitemap.xml"
       }
+    },
+    {
+      "id": "ai-sdk",
+      "origin": "https://ai-sdk.dev",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-sdk",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "sitemap": "https://ai-sdk.dev/sitemap.xml"
+      }
     }
   ]
 }
