@@ -71,5 +71,12 @@
     "origin": "https://skills.addy.ie",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-skills",
     "anchorMapUrl": "anchor-maps/agent-skills.json"
+  },
+  {
+    "id": "agency-agents",
+    "name": "Agency Agents 文档",
+    "origin": "https://lif3ng-vibe.github.io/docs-cn/agency-agents-en",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/agency-agents",
+    "anchorMapUrl": "anchor-maps/agency-agents.json"
   }
 ]

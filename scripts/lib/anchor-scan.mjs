@@ -211,7 +211,10 @@ export async function scanSite(cfg, site) {
       .map((t) => t.path.slice(contentDir.length))
       .map((p) => {
         const noExt = p.replace(/\.md$/, '');
-        return { file: p, logicalPath: noExt === 'index' ? '/' : `/${noExt}` };
+        // 根 index → '/'；子目录 index（integrations/foo/index）折叠为所在目录（Starlight 同规则）
+        if (noExt === 'index') return { file: p, logicalPath: '/' };
+        const collapsed = noExt.replace(/\/index$/, '');
+        return { file: p, logicalPath: `/${collapsed}` };
       });
   }
 

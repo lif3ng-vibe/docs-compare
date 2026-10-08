@@ -102,6 +102,13 @@
       "listFrom": {
         "sitemap": "https://skills.addy.ie/sitemap-index.xml"
       }
+    },
+    {
+      "id": "agency-agents",
+      "dir": "agency-agents-docs-cn",
+      "origin": "https://lif3ng-vibe.github.io/docs-cn/agency-agents-en",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/agency-agents",
+      "useSourceFrontmatter": false
     }
   ]
 }

@@ -82,6 +82,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/agent-skills',
     anchorMapUrl: 'anchor-maps/agent-skills.json',
   },
+  {
+    id: 'agency-agents',
+    name: 'Agency Agents 文档',
+    origin: 'https://lif3ng-vibe.github.io/docs-cn/agency-agents-en',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/agency-agents',
+    anchorMapUrl: 'anchor-maps/agency-agents.json',
+  },
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */
