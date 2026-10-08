@@ -64,5 +64,12 @@
     "origin": "https://openship.io/docs",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/openship/docs",
     "anchorMapUrl": "anchor-maps/openship.json"
+  },
+  {
+    "id": "agent-skills",
+    "name": "Agent Skills 官方站",
+    "origin": "https://skills.addy.ie",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-skills",
+    "anchorMapUrl": "anchor-maps/agent-skills.json"
   }
 ]

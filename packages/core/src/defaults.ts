@@ -75,6 +75,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/openship/docs',
     anchorMapUrl: 'anchor-maps/openship.json',
   },
+  {
+    id: 'agent-skills',
+    name: 'Agent Skills 官方站',
+    origin: 'https://skills.addy.ie',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/agent-skills',
+    anchorMapUrl: 'anchor-maps/agent-skills.json',
+  },
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */

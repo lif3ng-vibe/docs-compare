@@ -92,6 +92,16 @@
       "listFrom": {
         "sitemap": "https://openship.io/sitemap.xml"
       }
+    },
+    {
+      "id": "agent-skills",
+      "dir": "agent-skills-docs-cn",
+      "origin": "https://skills.addy.ie",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-skills",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "sitemap": "https://skills.addy.ie/sitemap-index.xml"
+      }
     }
   ]
 }
