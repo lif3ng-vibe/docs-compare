@@ -89,6 +89,20 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/agency-agents',
     anchorMapUrl: 'anchor-maps/agency-agents.json',
   },
+  {
+    id: 'tester-army-e2e',
+    name: 'e2e 文档',
+    origin: 'https://e2e.tester.army/docs',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/tester-army-e2e',
+    anchorMapUrl: 'anchor-maps/tester-army-e2e.json',
+  },
+  {
+    id: 'claude-mem',
+    name: 'Claude-Mem 文档',
+    origin: 'https://docs.claude-mem.ai',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/claude-mem',
+    anchorMapUrl: 'anchor-maps/claude-mem.json',
+  },
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */

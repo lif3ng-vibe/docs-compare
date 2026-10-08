@@ -109,6 +109,24 @@
       "origin": "https://lif3ng-vibe.github.io/docs-cn/agency-agents-en",
       "mirror": "https://lif3ng-vibe.github.io/docs-cn/agency-agents",
       "useSourceFrontmatter": false
+    },
+    {
+      "id": "tester-army-e2e",
+      "origin": "https://e2e.tester.army/docs",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/tester-army-e2e",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "sitemap": "https://e2e.tester.army/docs/sitemap.xml"
+      }
+    },
+    {
+      "id": "claude-mem",
+      "origin": "https://docs.claude-mem.ai",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/claude-mem",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "sitemap": "https://docs.claude-mem.ai/sitemap.xml"
+      }
     }
   ]
 }

@@ -140,7 +140,7 @@ npm run build          # 产物在 apps/chrome-extension/dist/
 
 3. 打开任一侧的文档页 → 点扩展图标 →「配对并打开对照页」
 
-内置的十一个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步;`official: true` 表示两侧都是官方维护的双语站,下拉打「官方」角标)。列表会随远程热更自动补新站(见「收录新站点」),以下为兜底快照:
+内置的十三个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步;`official: true` 表示两侧都是官方维护的双语站,下拉打「官方」角标)。列表会随远程热更自动补新站(见「收录新站点」),以下为兜底快照:
 
 ```json
 [
@@ -178,7 +178,13 @@ npm run build          # 产物在 apps/chrome-extension/dist/
     "anchorMapUrl": "anchor-maps/agent-skills.json" },
   { "id": "agency-agents", "origin": "https://lif3ng-vibe.github.io/docs-cn/agency-agents-en",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/agency-agents",
-    "anchorMapUrl": "anchor-maps/agency-agents.json" }
+    "anchorMapUrl": "anchor-maps/agency-agents.json" },
+  { "id": "tester-army-e2e", "origin": "https://e2e.tester.army/docs",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/tester-army-e2e",
+    "anchorMapUrl": "anchor-maps/tester-army-e2e.json" },
+  { "id": "claude-mem", "origin": "https://docs.claude-mem.ai",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/claude-mem",
+    "anchorMapUrl": "anchor-maps/claude-mem.json" }
 ]
 ```
 4. 分屏方式在 popup 里选:**两窗口平铺**(配对时自动左右平铺)或**同窗口标签页 + Chrome 分屏**(配对时开相邻标签页,右键 →「分屏」;建议关掉 Chrome 分屏自带的同步滚动,避免与扩展叠加)
