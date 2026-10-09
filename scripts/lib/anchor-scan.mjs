@@ -69,12 +69,23 @@ export async function pool(items, limit, fn) {
 
 const HEAD_RE = /<h([1-6])[^>]*?\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h\1>/g;
 
+/**
+ * 框架 chrome 标题判定:除了 CHROME_IDS 白名单外,再按形态排除两类
+ * 渲染框架自带的标题 id——`page-title`(Mintlify 页头标题)与 `_R_*`
+ * (React useId 框架标题,如「On this page」)。两侧对称剔除:
+ * Mintlify 系镜像/原站双方都有,剔除后配对不受影响;自研渲染器
+ * 原站(如 pi.dev)本来就没有,镜像侧多出的框架标题不再导致整级错位。
+ */
+function isChromeId(id) {
+  return CHROME_IDS.has(id) || id === 'page-title' || /^_R_/.test(id);
+}
+
 /** 提取正文标题:[{level, id}](顺序保持文档顺序) */
 export function headings(html) {
   const out = [];
   for (const m of html.matchAll(HEAD_RE)) {
     const id = m[2];
-    if (CHROME_IDS.has(id)) continue;
+    if (isChromeId(id)) continue;
     out.push({ level: Number(m[1]), id });
   }
   return out;
@@ -192,14 +203,37 @@ export function originPath(originUrl) {
  * 单站点全量扫描:拉页面清单,逐页抓两侧 HTML 配对。
  * 返回 { pages, results }:results[i] = { page, originUrl, map, warns, originPath } 或 { __error }。
  *
- * 页面清单两种来源:
+ * 页面清单三种来源:
  *   - 默认:GitHub API 读 docs-cn 仓库 <dir>/src/content/docs/ 下的 .md(我们维护的翻译站)
  *   - site.listFrom = { sitemap: '<url>' }:官方双语站,从 sitemap 枚举
+ *   - site.listFrom = { githubDir: '<dir>', ext?: '.md' }:镜像仓库任意目录枚举(非 Starlight 布局)
  */
 export async function scanSite(cfg, site) {
   let pages;
   if (site.listFrom?.sitemap) {
     pages = await pagesFromSitemap(site);
+  } else if (site.listFrom?.githubDir) {
+    // GitHub 树枚举镜像仓库任意目录下的文档文件(非 Starlight 布局的镜像站,
+    // 如 Mintlify 扁平布局 <dir>/*.md):逻辑路径 = 剥目录前缀与扩展名,index → 根。
+    // 项目自身的 README/GLOSSARY/LICENSE 不是文档页,跳过。
+    const tree = JSON.parse(
+      await fetchText(`https://api.github.com/repos/${cfg.repo}/git/trees/${cfg.branch}?recursive=1`),
+    ).tree;
+    const prefix = site.listFrom.githubDir.replace(/\/+$/, '') + '/';
+    const ext = site.listFrom.ext || '.md';
+    const skipNames = new Set(['README.md', 'GLOSSARY.md', 'LICENSE.md']);
+    pages = tree
+      .filter((t) => {
+        if (t.type !== 'blob' || !t.path.startsWith(prefix) || !t.path.endsWith(ext)) return false;
+        return !skipNames.has(t.path.slice(prefix.length));
+      })
+      .map((t) => t.path.slice(prefix.length))
+      .map((p) => {
+        const noExt = p.slice(0, -ext.length);
+        if (noExt === 'index') return { file: p, logicalPath: '/' };
+        const collapsed = noExt.replace(/\/index$/, '');
+        return { file: p, logicalPath: `/${collapsed}` };
+      });
   } else {
     const tree = JSON.parse(
       await fetchText(`https://api.github.com/repos/${cfg.repo}/git/trees/${cfg.branch}?recursive=1`),

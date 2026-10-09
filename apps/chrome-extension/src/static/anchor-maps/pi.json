@@ -1,0 +1,422 @@
+{
+  "/cli-integration": {
+    "选择模式": "choose-a-mode",
+    "打印到-stdout": "print-to-stdout",
+    "流式输出-json-事件": "stream-json-events",
+    "用-rpc-控制-pi": "control-pi-with-rpc",
+    "分叉并重塑-pi-品牌": "fork-and-rebrand-pi",
+    "示例与参考": "examples-and-references"
+  },
+  "/cli": {
+    "调用与输出": "invocation-and-output",
+    "模型": "models",
+    "会话": "sessions",
+    "工具": "tools",
+    "资源": "resources",
+    "提示词与进程": "prompts-and-process",
+    "包命令": "package-commands",
+    "凭据命令": "credential-commands",
+    "mcp-命令": "mcp-commands",
+    "启用-codemode": "enable-codemode",
+    "codemode-的工作原理": "how-codemode-works",
+    "工具搜索": "tool-search",
+    "常见任务": "common-tasks",
+    "更新-pi-或包": "update-pi-or-packages",
+    "别名与命令选项": "aliases-and-command-options"
+  },
+  "/codemode": {
+    "脚本": "scripts",
+    "全局对象": "globals",
+    "调用工具": "call-tools",
+    "存储值": "store-values",
+    "模型": "models",
+    "限制": "limits",
+    "分类": "classify",
+    "生成图片": "generate-images"
+  },
+  "/compaction": {
+    "概览": "overview",
+    "压缩": "compaction",
+    "分支摘要": "branch-summarization",
+    "摘要格式": "summary-format",
+    "通过扩展自定义摘要": "custom-summarization-via-extensions",
+    "设置": "settings",
+    "触发时机": "when-it-triggers",
+    "工作方式": "how-it-works",
+    "溢出与长度恢复的顺序": "overflow-and-length-recovery-ordering",
+    "拆分的用户消息区间": "split-user-message-spans",
+    "切点规则": "cut-point-rules",
+    "compactionentry-结构": "compactionentry-structure",
+    "触发时机-2": "when-it-triggers-1",
+    "工作方式-2": "how-it-works-1",
+    "累积式文件追踪": "cumulative-file-tracking",
+    "branchsummaryentry-结构": "branchsummaryentry-structure",
+    "消息序列化": "message-serialization",
+    "按模型覆盖": "per-model-overrides",
+    "将消息转换为文本": "converting-messages-to-text"
+  },
+  "/configuration": {
+    "智能体目录": "agent-directory",
+    "项目-pi-目录": "project-pi-directory",
+    "上下文文件": "context-files"
+  },
+  "/containerization": {
+    "选择隔离方式": "choose-an-isolation-method",
+    "决定-pi-能访问什么": "decide-what-pi-can-access",
+    "在原生-docker-中运行-pi": "run-pi-in-plain-docker",
+    "通过-docker-sandboxes-运行-pi": "run-pi-with-docker-sandboxes",
+    "通过-openshell-运行-pi": "run-pi-with-openshell",
+    "通过-gondolin-路由工具": "route-tools-through-gondolin",
+    "构建镜像": "build-the-image",
+    "启动-pi": "start-pi",
+    "验证工作区": "verify-the-workspace",
+    "使用-claude-pro-或-max-令牌": "use-a-claude-pro-or-max-token",
+    "启动-pi-2": "start-pi-1",
+    "选择网关": "select-a-gateway",
+    "创建沙箱": "create-the-sandbox",
+    "向远程沙箱传输文件": "transfer-files-to-a-remote-sandbox",
+    "安装扩展": "install-the-extension",
+    "启动-pi-3": "start-pi-2"
+  },
+  "/custom-provider": {
+    "选择最小的集成方案": "choose-the-smallest-integration",
+    "注册提供商": "register-a-provider",
+    "提供身份验证": "provide-authentication",
+    "提供与刷新模型": "supply-and-refresh-models",
+    "复用受支持的流式-api": "reuse-a-supported-streaming-api",
+    "实现自定义流式处理": "implement-custom-streaming",
+    "上报失败与用量": "report-failures-and-usage",
+    "测试集成": "test-the-integration"
+  },
+  "/environment-variables": {
+    "进程标记": "process-marker",
+    "shell-工具的会话环境": "shell-tool-session-environment",
+    "pi-进程配置": "pi-process-configuration",
+    "自定义-shell-工具": "custom-shell-tools"
+  },
+  "/extensions": {
+    "创建并加载扩展": "create-and-load-an-extension",
+    "将其加入-pi": "add-it-to-pi",
+    "遵守运行时生命周期": "respect-the-runtime-lifecycle",
+    "选择集成点": "choose-an-integration-point",
+    "遵循扩展契约": "follow-the-extension-contracts",
+    "示例与参考": "examples-and-reference",
+    "事件与并发": "events-and-concurrency",
+    "工具": "tools",
+    "工具暴露": "tool-exposure",
+    "动态激活工具": "activate-tools-dynamically",
+    "工具渲染": "tool-rendering",
+    "mcp-服务器": "mcp-servers",
+    "上下文与会话变更": "context-and-session-changes",
+    "状态": "state",
+    "ui-与模式": "ui-and-modes",
+    "错误与清理": "errors-and-cleanup"
+  },
+  "/how-pi-works": {
+    "智能体循环": "agent-loop",
+    "上下文": "context",
+    "会话": "sessions",
+    "接口": "interfaces",
+    "扩展与资源": "extensions-and-resources",
+    "信任与权限": "trust-and-permissions"
+  },
+  "/": {
+    "开始使用-pi": "start-using-pi",
+    "定制-pi": "customize-pi",
+    "自动化或嵌入-pi": "automate-or-embed-pi",
+    "查找参考与设置信息": "find-reference-and-setup-information",
+    "安全使用": "work-safely"
+  },
+  "/json": {
+    "分帧与进程-i/o": "framing-and-process-io",
+    "会话头部": "session-header",
+    "事件序列": "event-sequence",
+    "智能体与轮次事件": "agent-and-turn-events",
+    "消息事件": "message-events",
+    "工具执行事件": "tool-execution-events",
+    "队列与状态事件": "queue-and-state-events",
+    "压缩事件": "compaction-events",
+    "重试事件": "retry-events",
+    "rpc-独有事件": "rpc-only-events",
+    "typescript-类型": "typescript-types",
+    "示例": "example",
+    "重建流式消息": "reconstruct-streaming-messages"
+  },
+  "/keybindings": {
+    "分配按键绑定": "assign-keybindings",
+    "按键语法": "key-syntax",
+    "动作": "actions",
+    "终端-ui": "terminal-ui",
+    "应用级": "application",
+    "会话": "sessions",
+    "模型与思考": "models-and-thinking",
+    "显示与消息队列": "display-and-message-queue",
+    "会话树导航": "tree-navigation",
+    "范围模型选择器": "scoped-models-selector",
+    "光标移动": "cursor-movement",
+    "文本编辑": "text-editing",
+    "输入与选择": "input-and-selection",
+    "全屏": "fullscreen"
+  },
+  "/llama-cpp": {
+    "启动路由器": "start-the-router",
+    "配置-pi": "configure-pi",
+    "管理模型": "manage-models",
+    "分类": "classification",
+    "故障排查": "troubleshooting",
+    "作为分类器的对话模型": "chat-models-as-classifiers"
+  },
+  "/mcp": {
+    "快速上手": "quick-setup",
+    "配置服务器": "configure-servers",
+    "从其他客户端迁移配置": "migrate-configuration-from-another-client",
+    "使用-oauth-认证": "authenticate-with-oauth",
+    "控制工具暴露方式": "control-tool-exposure",
+    "使用资源": "use-resources",
+    "权限": "permissions",
+    "扩展与-sdk": "extensions-and-sdk",
+    "配置规则": "configuration-rules",
+    "查看或修改服务器": "inspect-or-change-a-server",
+    "诊断连接问题": "diagnose-connection-problems",
+    "从扩展添加服务器": "add-servers-from-extensions",
+    "替换内置的-mcp-支持": "replace-the-built-in-mcp-support",
+    "在-sdk-中使用-mcp": "use-mcp-from-the-sdk"
+  },
+  "/message-types": {
+    "内容块": "content-blocks",
+    "用量": "usage",
+    "基础消息": "base-messages",
+    "coding-agent-消息": "coding-agent-messages",
+    "agentmessage-联合类型": "agentmessage-union"
+  },
+  "/models": {
+    "选择连接方式": "choose-a-connection",
+    "身份认证": "authenticate",
+    "选定模型": "select-a-model",
+    "连接本地模型": "connect-local-models",
+    "配置兼容端点": "configure-a-compatible-endpoint",
+    "使用分类模型": "use-classifier-models",
+    "使用图像模型": "use-image-models",
+    "添加自定义提供商": "add-a-custom-provider",
+    "故障排查": "troubleshooting",
+    "描述模型输入与缓存": "describe-model-input-and-caching",
+    "按思考级别配置采样参数": "configure-sampling-by-thinking-level",
+    "模型不出现在列表中": "a-model-does-not-appear",
+    "认证仅在一个-shell-中生效": "authentication-works-in-one-shell-only",
+    "在远程机器上登录时打开了浏览器": "sign-in-opens-a-browser-on-a-remote-machine",
+    "兼容端点拒绝请求": "a-compatible-endpoint-rejects-requests"
+  },
+  "/packages": {
+    "安装和管理包": "install-and-manage-packages",
+    "选择来源": "choose-a-source",
+    "创建包": "create-a-package",
+    "声明依赖": "declare-dependencies",
+    "选择包资源": "select-package-resources",
+    "了解作用域与标识": "understand-scope-and-identity"
+  },
+  "/prompt-templates": {
+    "创建模板": "create-a-template",
+    "使用模板": "use-a-template",
+    "把模板加入-pi": "add-it-to-pi"
+  },
+  "/providers": {
+    "交互式认证": "authenticate-interactively",
+    "从环境变量使用-api-密钥": "use-an-api-key-from-the-environment",
+    "从命令加载-api-密钥": "load-an-api-key-from-a-command",
+    "提供商专属配置": "provider-specific-config"
+  },
+  "/quickstart": {
+    "1-安装-pi": "1-install-pi",
+    "2-启动-pi": "2-start-pi",
+    "3-选择模型": "3-choose-a-model",
+    "4-给-pi-一个任务": "4-give-pi-a-task",
+    "稍后继续": "continue-later",
+    "后续步骤": "next-steps",
+    "卸载-pi": "uninstall-pi",
+    "选择如何定制-pi": "choose-how-to-customize-pi"
+  },
+  "/rpc-commands": {
+    "发送提示词": "prompting",
+    "状态": "state",
+    "模型": "model",
+    "思考": "thinking",
+    "队列模式": "queue-modes",
+    "压缩": "compaction",
+    "重试": "retry",
+    "会话": "session",
+    "可发现的命令": "discoverable-commands",
+    "模型对象": "model-object",
+    "bash-2": "bash-1"
+  },
+  "/rpc-extension-ui": {
+    "限制": "limitations",
+    "来自-pi-的请求": "requests-from-pi",
+    "发往-pi-的响应": "responses-to-pi",
+    "示例": "example",
+    "值响应（select、input、editor）": "value-response-select-input-editor",
+    "确认响应（confirm）": "confirmation-response-confirm",
+    "取消响应（任意对话框）": "cancellation-response-any-dialog"
+  },
+  "/rpc": {
+    "启动-rpc-模式": "start-rpc-mode",
+    "协议记录": "protocol-records",
+    "分帧": "framing",
+    "运行生命周期": "run-lifecycle",
+    "错误": "errors",
+    "关闭": "shutdown",
+    "最小客户端": "minimal-client",
+    "参考": "reference",
+    "迁移的参考锚点": "moved-reference-anchors",
+    "关联命令与响应": "correlate-commands-and-responses"
+  },
+  "/sdk": {
+    "会话生命周期": "session-lifecycle",
+    "发送提示词": "prompting",
+    "订阅事件": "subscribing-to-events",
+    "配置会话": "configuring-a-session",
+    "示例": "examples",
+    "资源": "resources",
+    "会话存储": "session-storage"
+  },
+  "/security": {
+    "选择-pi-的运行方式": "choose-how-to-run-pi",
+    "了解项目信任": "understand-project-trust",
+    "降低影响并改善恢复": "reduce-impact-and-improve-recovery",
+    "报告安全问题": "report-a-security-issue",
+    "项目信任保护的资源": "resources-protected-by-project-trust",
+    "pi-如何做出信任决定": "how-pi-chooses-a-trust-decision",
+    "无交互提示时的项目信任": "project-trust-without-an-interactive-prompt"
+  },
+  "/session-format": {
+    "文件位置": "file-location",
+    "删除会话": "deleting-sessions",
+    "会话版本": "session-version",
+    "源码文件": "source-files",
+    "消息": "messages",
+    "条目基类": "entry-base",
+    "条目类型": "entry-types",
+    "树形结构": "tree-structure",
+    "上下文构建": "context-building",
+    "解析示例": "parsing-example"
+  },
+  "/sessions": {
+    "继续或切换会话": "continue-or-switch-sessions",
+    "选择分支方式": "choose-how-to-branch",
+    "管理对话上下文": "manage-conversation-context",
+    "控制会话存储": "control-session-storage",
+    "导出或分享会话": "export-or-share-a-session",
+    "报告-bug": "report-a-bug"
+  },
+  "/settings": {
+    "模型与思考": "model-and-thinking",
+    "交互": "interaction",
+    "工具": "tools",
+    "会话与上下文": "sessions-and-context",
+    "终端与显示": "terminal-and-display",
+    "网络与重试": "network-and-retries",
+    "资源": "resources",
+    "更新、遥测与警告": "updates-telemetry-and-warnings",
+    "压缩": "compaction",
+    "分支摘要": "branch-summaries"
+  },
+  "/shell-aliases": {
+    "了解-pi-使用哪个-shell": "understand-which-shell-pi-uses",
+    "选择-bash-可执行文件": "choose-a-bash-executable",
+    "在每条-bash-命令前运行初始化": "run-setup-before-every-bash-command",
+    "启用-bash-别名": "enable-bash-aliases",
+    "故障排查": "troubleshooting",
+    "前缀对-生效但对扩展工具不生效": "the-prefix-works-for--but-not-for-an-extension-tool",
+    "找不到-shopt-命令": "shopt-is-not-found",
+    "初始化命令等待输入": "a-setup-command-waits-for-input"
+  },
+  "/skills": {
+    "创建技能": "create-a-skill",
+    "了解技能的加载方式": "understand-how-skills-load",
+    "把技能加入-pi": "add-it-to-pi",
+    "编写可移植的-frontmatter": "write-portable-frontmatter",
+    "验证并分享技能": "validate-and-share-a-skill"
+  },
+  "/slash-commands": {
+    "模型与设置": "models-and-settings",
+    "会话与上下文": "sessions-and-context",
+    "导出与分享": "export-and-share",
+    "运行时与项目": "runtime-and-project",
+    "资源添加的命令": "commands-added-by-resources"
+  },
+  "/terminal-setup": {
+    "故障排查": "troubleshooting",
+    "vs-code-集成终端": "vs-code-integrated-terminal",
+    "zed-集成终端": "zed-integrated-terminal",
+    "xfce4-terminal-与-terminator": "xfce4-terminal-and-terminator",
+    "intellij-idea-集成终端": "intellij-idea-integrated-terminal",
+    "覆盖自动检测的能力": "override-detected-capabilities",
+    "程序状态": "program-status",
+    "修复全屏滚动缓慢": "fix-slow-fullscreen-scrolling",
+    "在全屏模式下打开链接": "open-links-in-fullscreen-mode",
+    "在-macos-上转发-alt+enter": "forward-altenter-on-macos",
+    "在-wsl-中定位输入法候选窗口": "position-an-ime-candidate-window-in-wsl",
+    "转发-shift+enter": "forward-shiftenter",
+    "将-alt+enter-用于追问": "use-altenter-for-follow-ups"
+  },
+  "/termux": {
+    "开始之前": "before-you-begin",
+    "安装-pi": "install-pi",
+    "访问-android-共享存储": "access-android-shared-storage",
+    "使用剪贴板命令": "use-clipboard-commands",
+    "添加-termux-专属指令": "add-termux-specific-instructions",
+    "故障排查": "troubleshooting",
+    "剪贴板集成失败": "clipboard-integration-fails",
+    "共享存储报权限被拒": "shared-storage-reports-permission-denied",
+    "安装后找不到-pi": "pi-is-not-found-after-installation"
+  },
+  "/themes": {
+    "使用终端的颜色": "use-your-terminals-colors",
+    "选择主题": "choose-a-theme",
+    "创建自定义主题": "create-a-custom-theme",
+    "了解主题文件": "understand-the-theme-file",
+    "找到要修改的颜色": "find-the-color-to-change",
+    "从项目或包加载主题": "load-a-theme-from-a-project-or-package"
+  },
+  "/tmux": {
+    "检查-tmux-版本": "check-your-tmux-version",
+    "在-tmux-3-5-及更新版本中启用扩展按键": "enable-extended-keys-in-tmux-35-or-newer",
+    "重启-tmux": "restart-tmux",
+    "验证修饰键": "verify-modified-keys",
+    "使用-tmux-3-2-至-3-4": "use-tmux-32-through-34"
+  },
+  "/tui": {
+    "选择集成点": "choose-an-integration-point",
+    "理解组件模型": "understand-the-component-model",
+    "组合内置组件": "compose-built-in-components",
+    "处理键盘输入与焦点": "handle-keyboard-input-and-focus",
+    "处理鼠标输入": "handle-mouse-input",
+    "使用自定义屏幕与浮层": "use-custom-screens-and-overlays",
+    "正确应用主题": "apply-themes-correctly",
+    "保持渲染流畅": "keep-rendering-responsive",
+    "示例与源码": "examples-and-source"
+  },
+  "/usage": {
+    "输入提示词": "enter-a-prompt",
+    "跟踪-pi-的工作": "follow-pis-work",
+    "调整方向": "change-direction",
+    "更换模型或调整设置": "change-the-model-or-settings",
+    "继续或重新开始": "continue-or-start-over",
+    "运行终端命令": "run-a-terminal-command",
+    "复制、导出或分享结果": "copy-export-or-share-results",
+    "调整终端": "adjust-the-terminal",
+    "收集诊断信息": "collect-diagnostic-information"
+  },
+  "/virtual-models": {
+    "选择与分发": "selection-and-dispatch",
+    "注册虚拟模型": "register-a-virtual-model",
+    "路由请求": "route-requests",
+    "保存路由状态": "keep-routing-state"
+  },
+  "/windows": {
+    "选择原生-windows-还是-wsl": "choose-native-windows-or-wsl",
+    "在原生-windows-上使用-git-bash": "use-git-bash-on-native-windows",
+    "让模型使用-powershell": "let-the-model-use-powershell",
+    "使用自定义-bash-可执行文件": "use-a-custom-bash-executable",
+    "配置-windows-terminal": "configure-windows-terminal"
+  }
+}

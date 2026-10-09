@@ -136,6 +136,17 @@
       "listFrom": {
         "sitemap": "https://ai-sdk.dev/sitemap.xml"
       }
+    },
+    {
+      "id": "pi",
+      "dir": "pi-docs-cn",
+      "origin": "https://pi.dev/docs/latest",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/pi",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "githubDir": "pi-docs-cn",
+        "ext": ".md"
+      }
     }
   ]
 }
