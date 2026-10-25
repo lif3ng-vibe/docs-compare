@@ -76,6 +76,13 @@ const RAW = [
     anchorMapUrl: 'anchor-maps/openship.json',
   },
   {
+    id: 'openshell',
+    name: 'NVIDIA OpenShell 文档',
+    origin: 'https://docs.nvidia.com/openshell/latest',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/openshell',
+    anchorMapUrl: 'anchor-maps/openshell.json',
+  },
+  {
     id: 'agent-skills',
     name: 'Agent Skills 官方站',
     origin: 'https://skills.addy.ie',

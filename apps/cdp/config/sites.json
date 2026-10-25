@@ -106,5 +106,12 @@
     "origin": "https://pi.dev/docs/latest",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/pi",
     "anchorMapUrl": "anchor-maps/pi.json"
+  },
+  {
+    "id": "openshell",
+    "name": "NVIDIA OpenShell 文档",
+    "origin": "https://docs.nvidia.com/openshell/latest",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/openshell",
+    "anchorMapUrl": "anchor-maps/openshell.json"
   }
 ]

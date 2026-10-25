@@ -147,6 +147,17 @@
         "githubDir": "pi-docs-cn",
         "ext": ".md"
       }
+    },
+    {
+      "id": "openshell",
+      "dir": "openshell-docs-cn",
+      "origin": "https://docs.nvidia.com/openshell/latest",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/openshell",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "githubDir": "openshell-docs-cn/src/content/docs",
+        "ext": ".mdx"
+      }
     }
   ]
 }
