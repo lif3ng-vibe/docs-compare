@@ -113,5 +113,12 @@
     "origin": "https://docs.nvidia.com/openshell/latest",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/openshell",
     "anchorMapUrl": "anchor-maps/openshell.json"
+  },
+  {
+    "id": "tailscale",
+    "name": "Tailscale 文档",
+    "origin": "https://tailscale.com",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/tailscale",
+    "anchorMapUrl": "anchor-maps/tailscale.json"
   }
 ]

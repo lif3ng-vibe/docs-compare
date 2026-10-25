@@ -158,6 +158,16 @@
         "githubDir": "openshell-docs-cn/src/content/docs",
         "ext": ".mdx"
       }
+    },
+    {
+      "id": "tailscale",
+      "dir": "tailscale-docs-cn",
+      "origin": "https://tailscale.com",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/tailscale",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "sitemap": "https://tailscale.com/sitemap.xml"
+      }
     }
   ]
 }

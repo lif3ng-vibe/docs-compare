@@ -124,6 +124,14 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/pi',
     anchorMapUrl: 'anchor-maps/pi.json',
   },
+  {
+    id: 'tailscale',
+    name: 'Tailscale 文档',
+    origin: 'https://tailscale.com',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/tailscale',
+    anchorMapUrl: 'anchor-maps/tailscale.json',
+  },
+
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */

@@ -1,0 +1,3904 @@
+{
+  "/docs/account/admin-console-session-timeout": {
+    "启用会话超时": "enable-session-timeout",
+    "禁用会话超时": "disable-session-timeout"
+  },
+  "/docs/account/billing/azure-marketplace-for-billing": {
+    "前提条件": "prerequisites",
+    "在-azure-marketplace-上购买-tailscale": "purchase-tailscale-on-azure-marketplace",
+    "管理账单信息和发票": "manage-billing-information-and-invoices",
+    "在-azure-marketplace-上取消你的-tailscale-订阅": "cancel-your-tailscale-subscription-on-azure-marketplace",
+    "注意事项": "considerations"
+  },
+  "/docs/account/billing/modify-billing": {
+    "更改付款方式": "change-a-payment-method",
+    "更改账单邮箱地址": "change-the-billing-email-address",
+    "更改账单姓名和地址": "change-the-billing-name-and-address",
+    "管理税务-id": "manage-tax-ids"
+  },
+  "/docs/account/bug-report": {
+    "使用客户端应用生成-bug-报告": "generating-a-bug-report-by-using-the-client-application",
+    "使用-cli-生成-bug-报告": "generating-a-bug-report-by-using-the-cli",
+    "bug-报告中共享的内容": "what-is-shared-in-a-bug-report"
+  },
+  "/docs/account/delete-tailnet": {
+    "取消订阅-tailscale-邮件列表": "unsubscribe-from-tailscale-mailing-list",
+    "重新开始使用-tailscale": "start-using-tailscale-again"
+  },
+  "/docs/account/domain-aliases": {
+    "创建域别名": "create-a-domain-alias",
+    "移除域别名": "remove-a-domain-alias",
+    "处理旧版域别名": "handle-legacy-domain-aliases",
+    "限制": "limitations"
+  },
+  "/docs/account/domain-verification": {
+    "域名类型": "domain-types",
+    "验证域名": "verify-a-domain-name",
+    "移除域名": "remove-a-domain-name"
+  },
+  "/docs/account": {
+    "管理你的联系信息": "manage-your-contact-information",
+    "管理你的套餐与账单": "manage-your-plan-and-billing",
+    "管理你的-tailnet-名称与域名": "manage-your-tailnet-names-and-domain"
+  },
+  "/docs/account/manage-plans/downgrade-plan": {
+    "注意事项": "considerations",
+    "降级套餐": "downgrade-a-plan",
+    "取消你的订阅": "cancel-your-subscription",
+    "取消已计划的降级": "cancel-a-scheduled-downgrade"
+  },
+  "/docs/account/manage-plans/free-plans-discounts": {
+    "personal-套餐": "personal-plan",
+    "github-社区计划community-on-github": "community-on-github",
+    "促销码": "promo-codes",
+    "销售税豁免": "sales-tax-exemption",
+    "慈善机构非营利组织和教育机构": "charities-not-for-profit-organizations-and-educational-institutions"
+  },
+  "/docs/account/manage-plans/legacy-plans": {
+    "注意事项": "considerations",
+    "迁移你的旧版套餐": "migrate-your-legacy-plan"
+  },
+  "/docs/account/manage-plans/modify-existing-plan": {
+    "注意事项": "considerations",
+    "添加或移除席位": "add-or-remove-seats",
+    "添加-mullvad-出口节点": "add-mullvad-exit-nodes"
+  },
+  "/docs/account/manage-plans/upgrade-plan": {
+    "注意事项": "considerations",
+    "从-personal-套餐升级": "upgrade-from-the-personal-plan",
+    "付费套餐之间升级": "upgrade-a-paid-plan"
+  },
+  "/docs/aperture/admin-dashboard": {
+    "访问管理仪表板": "access-the-admin-dashboard",
+    "探索管理能力": "explore-admin-capabilities",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/buy-tokens-through-aperture": {
+    "前提条件": "prerequisites",
+    "限制": "limitations",
+    "购买-token": "buy-tokens",
+    "跟踪用量与余额": "track-usage-and-balance",
+    "配置自动充值": "configure-auto-top-up",
+    "常见问题": "faq"
+  },
+  "/docs/aperture/chat": {
+    "访问-chat": "access-chat",
+    "使用模型与工具": "work-with-models-and-tools",
+    "查看你的活动": "review-your-activity",
+    "了解更多": "learn-more"
+  },
+  "/docs/aperture/chat/projects": {
+    "项目能做什么": "what-you-can-do-with-projects",
+    "创建项目": "create-a-project",
+    "编写项目指令": "write-project-instructions",
+    "管理项目中的对话": "manage-conversations-in-a-project",
+    "自定义工具访问": "customize-tool-access",
+    "分配-tailnet-节点": "assign-tailnet-nodes",
+    "固定项目": "pin-a-project",
+    "搜索项目": "search-for-projects",
+    "删除项目": "delete-a-project",
+    "限制": "limits",
+    "相关内容": "related"
+  },
+  "/docs/aperture/chat-sandbox": {
+    "用沙盒可以做什么": "what-you-can-do-with-the-sandbox",
+    "沙盒的工作原理": "how-the-sandbox-works",
+    "文件处理": "working-with-files",
+    "文件预览支持": "file-preview-support",
+    "限制": "limits",
+    "已知限制": "known-limitations",
+    "相关内容": "related"
+  },
+  "/docs/aperture/cli": {
+    "使用场景": "use-cases",
+    "前提条件": "prerequisites",
+    "安装-aperture-cli": "install-the-aperture-cli",
+    "连接到-aperture": "connect-to-aperture",
+    "启动编码智能体": "launch-a-coding-agent",
+    "受支持的智能体": "supported-agents",
+    "桥接": "bridges",
+    "配置设置": "configure-settings",
+    "键盘快捷键": "keyboard-shortcuts",
+    "持久化状态": "persistent-state",
+    "限制": "limitations",
+    "排查-aperture-cli-问题": "troubleshoot-the-aperture-cli",
+    "命令行参考": "command-line-reference"
+  },
+  "/docs/aperture/configuration": {
+    "最小配置": "minimal-configuration",
+    "默认配置": "default-configuration",
+    "配置参考": "configuration-reference",
+    "配额执行": "quota-enforcement",
+    "校验": "validation",
+    "完整示例": "complete-example",
+    "相关内容": "related",
+    "aperture-如何构造上游-url": "how-aperture-builds-upstream-urls",
+    "模型名称": "model-names",
+    "授权类型": "authorization-types",
+    "提供商兼容性": "provider-compatibility",
+    "提供商示例": "provider-examples",
+    "基本结构": "basic-structure",
+    "来源匹配src": "source-match-src",
+    "模型访问": "model-access",
+    "角色分配": "role-assignment",
+    "连接器访问": "connector-access",
+    "更多能力字段": "more-capability-fields",
+    "cors-头": "cors-headers",
+    "自定义-app-能力": "custom-app-capabilities",
+    "模板变量": "template-variables",
+    "将配额挂到授权上": "attach-quotas-to-grants",
+    "多个配额如何相互作用": "how-multiple-quotas-interact",
+    "透支overdraft": "overdrafts",
+    "桶的生命周期": "bucket-lifecycle",
+    "配额示例": "quota-examples",
+    "hook-事件": "hook-events",
+    "hook-发送类型": "hook-send-types",
+    "hook-授权示例": "hook-grant-example",
+    "hook-响应格式": "hook-response-format",
+    "hook-链": "hook-chains",
+    "connectors-字段": "connectors-fields",
+    "servers-字段": "servers-fields",
+    "连接器-id-规则": "connector-id-rules",
+    "认证类型": "auth-types",
+    "http-连接器": "http-connectors",
+    "从-mcpservers-迁移": "migration-from-mcpservers",
+    "mcp-字段": "mcp-fields",
+    "servers-字段-1": "servers-fields-1",
+    "database-字段": "database-fields",
+    "databaseretention-字段": "databaseretention-fields",
+    "databaseheaders-字段": "databaseheaders-fields",
+    "chat_models-字段": "chat_models-fields",
+    "标志参考": "flag-reference",
+    "校验行为": "validation-behavior",
+    "connectors-标志": "connectors-flags",
+    "每用户配额": "per-user-quota",
+    "限定特定模型的配额": "quota-scoped-to-specific-models",
+    "合并每用户与共享配额": "combine-per-user-and-shared-quotas"
+  },
+  "/docs/aperture/connect-outside-tailnet": {
+    "使用场景": "use-cases",
+    "通过-aperture-cli-桥接连接": "connect-using-an-aperture-cli-bridge",
+    "使用-ts-unplug-连接": "connect-using-ts-unplug",
+    "后续步骤": "next-steps",
+    "限制": "limitations"
+  },
+  "/docs/aperture/connectors/add-verified-connector": {
+    "前提条件": "prerequisites",
+    "第-1-步在提供商处创建-oauth-应用": "step-1-create-the-oauth-application-at-the-provider",
+    "第-2-步从选择器添加连接器": "step-2-add-the-connector-from-the-picker",
+    "第-3-步授予访问权限": "step-3-grant-access",
+    "第-4-步让用户完成授权": "step-4-have-users-authorize",
+    "相关内容": "related"
+  },
+  "/docs/aperture/connectors/built-in-connectors": {
+    "前提条件": "prerequisites",
+    "内置连接器与其他连接器的区别": "how-built-in-connectors-differ-from-other-connectors",
+    "在哪里定义授权": "where-to-define-grants",
+    "tailnet-连接器": "tailnet-connector",
+    "tailscale-ssh-连接器": "tailscale-ssh-connector",
+    "验证内置连接器": "verify-a-built-in-connector",
+    "相关内容": "related"
+  },
+  "/docs/aperture/connectors/get-started": {
+    "前提条件": "prerequisites",
+    "第-1-步添加连接器": "step-1-add-a-connector",
+    "第-2-步授予访问权限": "step-2-grant-access",
+    "第-3-步验证连接": "step-3-verify-the-connection",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/connectors/how-connectors-work": {
+    "连接器与提供商": "connectors-and-providers",
+    "两种协议": "two-protocols",
+    "认证模型": "the-authentication-model",
+    "能力发现与更新": "capability-discovery-and-updates",
+    "访问控制": "access-control",
+    "http-连接器如何限制凭证暴露": "how-http-connectors-limit-credential-exposure",
+    "相关内容": "related"
+  },
+  "/docs/aperture/connectors": {
+    "设置连接器": "set-up-connectors",
+    "使用连接器": "use-connectors",
+    "理解连接器": "understand-connectors",
+    "参考": "reference"
+  },
+  "/docs/aperture/connectors/kinds-of-connector": {
+    "执行与可达性": "execution-and-reachability",
+    "连接器类型": "connector-types",
+    "各类型的行为差异": "behavioral-differences-by-type",
+    "能力更新": "capability-updates",
+    "api-类别": "api-categories",
+    "示例": "examples",
+    "相关内容": "related"
+  },
+  "/docs/aperture/connectors/reference": {
+    "connectors-字段": "connectors-fields",
+    "servers-字段": "servers-fields",
+    "连接器-id-规则": "connector-id-rules",
+    "连接器标签": "connector-labels",
+    "系统连接器": "system-connectors",
+    "经验证连接器注册表": "verified-connectors-registry",
+    "连接器类别": "connector-categories",
+    "连接器状态": "connector-statuses",
+    "认证": "authentication",
+    "mcp-连接器": "mcp-connectors",
+    "http-连接器": "http-connectors",
+    "动态注册": "dynamic-registration",
+    "连接器资源的授权": "grants-for-connector-resources",
+    "从-mcpservers-迁移": "migration-from-mcpservers",
+    "校验错误": "validation-errors",
+    "管理-rest-api-端点": "admin-rest-api-endpoints",
+    "完整注释示例": "full-annotated-example",
+    "故障排查": "troubleshooting",
+    "发起流程": "initiating-the-flow",
+    "令牌生命周期": "token-lifecycle",
+    "能力填充": "capability-population",
+    "chat-中缺少连接器或工具": "missing-chat-connectors-or-tools",
+    "连接被拒或主机未找到": "connection-refused-or-host-not-found",
+    "认证配置因未知字段被拒绝": "auth-configuration-rejected-with-unknown-field-error",
+    "动态注册失败": "dynamic-registration-fails",
+    "授权与重新连接": "authorizing-and-reconnecting",
+    "工具此前正常现在失效": "tools-stop-working-after-previously-working",
+    "工具调用超时": "tool-calls-time-out"
+  },
+  "/docs/aperture/connectors/set-up-authenticated-mcp-connector": {
+    "前提条件": "prerequisites",
+    "选择认证类型": "choose-an-authentication-type",
+    "添加-bearer-token-连接器": "add-a-bearer-token-connector",
+    "添加-oauth-20-client-credentials-连接器": "add-an-oauth-20-client-credentials-connector",
+    "授予访问权限": "grant-access",
+    "验证连接": "verify-the-connection",
+    "相关内容": "related"
+  },
+  "/docs/aperture/connectors/use-a-connector": {
+    "前提条件": "prerequisites",
+    "查看连接器状态": "check-a-connectors-status",
+    "授权按用户连接器": "authorize-a-per-user-connector",
+    "查看或刷新-mcp-工具": "review-or-refresh-mcp-tools",
+    "发现并调用工具": "discover-and-call-tools",
+    "工具失效时重新连接": "reconnect-when-tools-stop-working",
+    "相关内容": "related"
+  },
+  "/docs/aperture/get-started": {
+    "前提条件": "prerequisites",
+    "第-1-步注册-aperture": "step-1-sign-up-for-aperture",
+    "第-2-步配置-llm-提供商": "step-2-configure-an-llm-provider",
+    "第-3-步发送测试请求": "step-3-send-a-test-request",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/guardrails": {
+    "护栏的工作原理": "how-guardrails-work",
+    "动作": "actions",
+    "钩子链": "hook-chains",
+    "失败行为": "failure-behavior",
+    "护栏与集成钩子的对比": "guardrails-versus-integration-hooks",
+    "限制": "limitations",
+    "护栏与连接器流量": "guardrails-and-connector-traffic",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-aperture-works": {
+    "身份与认证": "identity-and-authentication",
+    "按模型路由请求": "request-routing-by-model",
+    "遥测捕获": "telemetry-capture",
+    "会话跟踪": "session-tracking",
+    "出站集成": "outbound-integrations",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-grants-work": {
+    "授权模型": "the-grants-model",
+    "授权的结构": "anatomy-of-a-grant",
+    "aperture-授权字段": "aperture-grant-fields",
+    "aperture-如何评估请求": "how-aperture-evaluates-a-request",
+    "优先级与冲突": "precedence-and-conflicts",
+    "授权中的组": "groups-in-grants",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/build-custom-webhook": {
+    "前提条件": "prerequisites",
+    "定义钩子端点": "define-a-hook-endpoint",
+    "在授权中触发钩子": "trigger-the-hook-from-a-grant",
+    "查看载荷格式": "review-the-payload-format",
+    "验证-webhook": "verify-the-webhook",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/check-and-refill-budgets": {
+    "前提条件": "prerequisites",
+    "在-web-界面查看配额状态": "check-quota-status-in-the-web-interfaces",
+    "在管理仪表盘中补充配额桶": "refill-a-quota-bucket-in-the-admin-dashboard",
+    "使用-api-查看配额状态": "check-quota-status-using-the-api",
+    "补充配额桶": "refill-a-quota-bucket",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/configure-overdraft-quotas": {
+    "透支的工作原理": "how-overdrafts-work",
+    "前提条件": "prerequisites",
+    "第-1-步定义配额桶": "step-1-define-the-quota-buckets",
+    "第-2-步在授权中添加透支": "step-2-add-overdrafts-to-a-grant",
+    "第-3-步分层授权以处理例外可选": "step-3-layer-grants-for-exceptions-optional",
+    "第-4-步验证与故障排除": "step-4-verify-and-troubleshoot",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/configure-zero-retention": {
+    "前提条件": "prerequisites",
+    "保留机制的工作原理": "how-retention-works",
+    "第-1-步选择保留策略": "step-1-choose-a-retention-posture",
+    "第-2-步备份当前配置": "step-2-back-up-the-current-configuration",
+    "第-3-步设置不存储配置": "step-3-set-the-never-store-configuration",
+    "第-4-步保存前预览影响": "step-4-preview-the-impact-before-saving",
+    "第-5-步保存并验证": "step-5-save-and-verify",
+    "故障排除": "troubleshooting",
+    "安全注意事项": "security-considerations",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/enable-sandbox": {
+    "前提条件": "prerequisites",
+    "为你的-aperture-网关申请聊天沙箱": "request-the-chat-sandbox-for-your-aperture-gateway",
+    "限制门户访问可选": "restrict-portal-access-optional",
+    "验证沙箱是否正常工作": "verify-the-sandbox-is-working",
+    "启用沙箱后有哪些变化": "what-changes-when-sandbox-is-enabled",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/export-usage-data-to-s3": {
+    "前提条件": "prerequisites",
+    "配置-s3-导出器": "configure-the-s3-exporter",
+    "导出文件格式": "export-file-format",
+    "验证导出": "verify-the-export",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/filter-logs-by-header": {
+    "前提条件": "prerequisites",
+    "头部过滤的工作原理": "how-header-filtering-works",
+    "第-1-步选择要建立索引的头部": "step-1-choose-the-headers-to-index",
+    "第-2-步把头部添加到配置中": "step-2-add-the-headers-to-your-configuration",
+    "第-3-步授予过滤访问权限": "step-3-grant-filter-access",
+    "第-4-步将头部存为仅记录存在可选": "step-4-store-a-header-as-presence-only-optional",
+    "第-5-步在-logs-页面过滤": "step-5-filter-the-logs-page",
+    "参考": "reference"
+  },
+  "/docs/aperture/how-to/grant-connector-access-by-label": {
+    "前提条件": "prerequisites",
+    "第-1-步为连接器打标签": "step-1-label-your-connectors",
+    "第-2-步按标签授予访问权限": "step-2-grant-access-by-label",
+    "第-3-步验证访问权限": "step-3-verify-access",
+    "标签只会扩大访问绝不会限制访问": "labels-widen-access-never-restrict-it",
+    "保留的-system-标签": "the-reserved-system-label",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/grant-mcp-tool-access": {
+    "前提条件": "prerequisites",
+    "配置连接器访问授权": "configure-connector-access-grants",
+    "内置连接器": "built-in-connectors",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/grant-model-access": {
+    "前提条件": "prerequisites",
+    "第-1-步允许网络访问-aperture-网关": "step-1-allow-network-access-to-the-aperture-gateway",
+    "第-2-步配置授权以控制模型访问": "step-2-configure-grants-to-control-model-access",
+    "验证访问权限": "verify-access",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/manage-sandbox": {
+    "可用性与支持": "availability-and-support",
+    "安全注意事项": "security-considerations",
+    "运维参数参考": "operational-parameters-reference",
+    "相关内容": "related"
+  },
+  "/docs/aperture/how-to/set-per-user-spending-limits": {
+    "前提条件": "prerequisites",
+    "定义按用户的配额桶": "define-a-per-user-quota-bucket",
+    "把配额挂到授权上": "attach-the-quota-to-a-grant",
+    "把配额限定到特定模型": "scope-a-quota-to-specific-models",
+    "验证配置": "verify-the-configuration",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/set-team-budget": {
+    "前提条件": "prerequisites",
+    "定义共享配额桶": "define-a-shared-quota-bucket",
+    "把预算挂到授权上": "attach-the-budget-to-a-grant",
+    "与按用户限额组合": "combine-with-per-user-limits",
+    "验证配置": "verify-the-configuration",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/set-up-admin-access": {
+    "前提条件": "prerequisites",
+    "限制管理员权限": "restrict-admin-access",
+    "验证管理员权限": "verify-admin-access",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/set-up-chat-ui": {
+    "前提条件": "prerequisites",
+    "第-1-步授予模型访问权限": "step-1-grant-model-access",
+    "第-2-步配置支持聊天的提供商": "step-2-configure-a-chat-compatible-provider",
+    "可选第-3-步管理模型选择器": "optional-step-3-curate-the-model-picker",
+    "验证访问权限": "verify-access",
+    "监控聊天使用情况": "monitor-chat-usage",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/set-up-guardrails": {
+    "前提条件": "prerequisites",
+    "配置钩子端点": "configure-the-hook-endpoint",
+    "把钩子接入请求": "wire-the-hook-to-requests",
+    "验证护栏": "verify-the-guardrail",
+    "变体": "variations",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/set-up-http-api-connector": {
+    "前提条件": "prerequisites",
+    "步骤-1选择上游-base-url": "step-1-choose-the-upstream-base-url",
+    "步骤-2配置认证": "step-2-configure-authentication",
+    "步骤-3设置-description-与-context-供智能体发现": "step-3-set-description-and-context-for-agent-discovery",
+    "步骤-4向用户授予连接器访问权": "step-4-grant-users-access-to-the-connector",
+    "步骤-5验证代理是否生效": "step-5-verify-the-proxy-works",
+    "安全行为": "security-behavior",
+    "故障排查": "troubleshooting",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/set-up-per-user-oauth2-connector": {
+    "前提条件": "prerequisites",
+    "步骤-1在提供商处注册-oauth-应用": "step-1-register-an-oauth-application-at-the-provider",
+    "步骤-2在-aperture-中配置连接器": "step-2-configure-the-connector-in-aperture",
+    "步骤-3向用户授予连接器工具的访问权": "step-3-grant-users-access-to-the-connectors-tools",
+    "步骤-4引导用户完成授权流程": "step-4-walk-users-through-the-authorization-flow",
+    "步骤-5确认工具已出现": "step-5-verify-tools-appear",
+    "检查或重置用户的授权": "check-or-reset-a-users-authorization",
+    "故障排查": "troubleshooting",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/use-amazon-bedrock": {
+    "前提条件": "prerequisites",
+    "配置提供商": "configure-the-provider",
+    "验证提供商": "verify-the-provider",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/use-claude-code-action": {
+    "前提条件": "prerequisites",
+    "创建-ci-标签并授予-aperture-访问权": "create-a-ci-tag-and-grant-access-to-aperture",
+    "为-github-actions-设置-tailscale-认证": "set-up-tailscale-authentication-for-github-actions",
+    "在工作流中添加-claude-code-action": "add-claude-code-action-to-the-workflow",
+    "验证连接": "verify-the-connection",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/use-passthrough-mode/claude-subscriptions": {
+    "前提条件": "prerequisites",
+    "配置-anthropic-提供商": "configure-the-anthropic-provider",
+    "在-claude-code-中登录订阅": "sign-in-claude-code-with-the-subscription",
+    "验证连接": "verify-the-connection",
+    "哪些流量经由-aperture-路由": "what-routes-through-aperture",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/how-to/use-passthrough-mode/codex-subscriptions": {
+    "前提条件": "prerequisites",
+    "配置-codex-提供商": "configure-the-codex-provider",
+    "配置-codex-cli": "configure-the-codex-cli",
+    "验证连接": "verify-the-connection",
+    "哪些流量经由-aperture-路由": "what-routes-through-aperture",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture": {
+    "了解-aperture": "understand-aperture",
+    "设置-aperture": "set-up-aperture",
+    "管理访问与支出": "manage-access-and-spending",
+    "观测治理与集成": "observe-govern-and-integrate",
+    "参考与故障排除": "reference-and-troubleshooting"
+  },
+  "/docs/aperture/integrate/cerbos": {
+    "前提条件": "prerequisites",
+    "配置-cerbos-端点": "configure-the-cerbos-endpoint",
+    "配置-aperture-hook": "configure-the-aperture-hook",
+    "验证集成": "verify-the-integration",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/integrate/cribl": {
+    "前提条件": "prerequisites",
+    "配置-cribl-webhook-source": "configure-the-cribl-webhook-source",
+    "配置-aperture-hook": "configure-the-aperture-hook",
+    "验证集成": "verify-the-integration",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/integrate/highflame": {
+    "前提条件": "prerequisites",
+    "配置-highflame-hook": "configure-the-highflame-hook",
+    "将-hook-接入授权": "wire-the-hook-to-a-grant",
+    "验证集成": "verify-the-integration",
+    "故障排除": "troubleshooting",
+    "安全注意事项": "security-considerations",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/integrate/oso": {
+    "前提条件": "prerequisites",
+    "查看或更新-oso-hook": "review-or-update-the-oso-hook",
+    "验证集成": "verify-the-integration",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/mcp-server": {
+    "使用场景": "use-cases",
+    "mcp-核心概念": "key-mcp-concepts",
+    "前提条件": "prerequisites",
+    "开始使用": "get-started",
+    "内置工具": "built-in-tools",
+    "常见场景": "common-scenarios",
+    "http-api-连接器": "http-api-connectors",
+    "mcp-配置参考": "mcp-configuration-reference",
+    "限制": "limitations",
+    "故障排除": "troubleshooting",
+    "旧语法": "legacy-syntax"
+  },
+  "/docs/aperture/model-aliases": {
+    "别名如何解析": "how-aliases-resolve",
+    "支持的请求与模型发现": "supported-requests-and-model-discovery",
+    "前提条件": "prerequisites",
+    "使用场景": "use-cases",
+    "访问与用量": "access-and-usage",
+    "限制": "limitations",
+    "故障排除": "troubleshooting",
+    "配置-bedrock-mantle-提供商": "configure-the-bedrock-mantle-provider",
+    "配置并切换别名": "configure-and-switch-the-alias"
+  },
+  "/docs/aperture/observe-and-export": {
+    "留存": "retention"
+  },
+  "/docs/aperture/privacy-and-data-retention": {
+    "控制留存": "control-retention",
+    "导出并归档用量数据": "export-and-archive-usage-data",
+    "请求内容的去向": "where-request-content-goes"
+  },
+  "/docs/aperture/provider-compatibility": {
+    "兼容性标志": "compatibility-flags",
+    "其他提供商字段": "additional-provider-fields",
+    "认证类型": "authorization-types",
+    "成本基准": "cost-basis",
+    "相关内容": "related"
+  },
+  "/docs/aperture/reference/aperture-vs-tailnet-grants": {
+    "语法对比": "syntax-comparison",
+    "示例": "examples",
+    "将-aperture-授权转换为-tailnet-策略文件授权": "convert-an-aperture-grant-to-a-tailnet-policy-file-grant",
+    "故障排除": "troubleshooting",
+    "相关内容": "related"
+  },
+  "/docs/aperture/reference/chat": {
+    "打开-chat": "open-chat",
+    "开始对话": "start-a-conversation",
+    "项目projects": "projects",
+    "模型models": "models",
+    "连接器connectors": "connectors",
+    "技能skills": "skills",
+    "会话sessions": "sessions",
+    "用量usage": "usage",
+    "配额quotas": "quotas",
+    "共享对话": "share-a-conversation",
+    "反馈": "feedback",
+    "相关内容": "related"
+  },
+  "/docs/aperture/reference/dashboard-admin": {
+    "用量与采用usage--adoption": "usage--adoption",
+    "安全security": "security",
+    "管理administration": "administration",
+    "参考reference": "reference",
+    "相关内容": "related",
+    "模型models-1": "models-1",
+    "系统提示system-prompt": "system-prompt"
+  },
+  "/docs/aperture/reference/recipes": {
+    "仓库里有什么": "whats-in-the-repository",
+    "使用配方": "use-a-recipe",
+    "贡献配方": "contribute-a-recipe"
+  },
+  "/docs/aperture/reference/sandbox": {
+    "工具": "tools",
+    "文件系统布局": "file-system-layout",
+    "大小限制与配额": "size-limits-and-quotas",
+    "支持预览的文件类型": "supported-file-types-for-preview",
+    "错误消息": "error-messages",
+    "配置": "configuration"
+  },
+  "/docs/aperture/reference/supported-providers-clients": {
+    "提供商矩阵": "provider-matrix",
+    "客户端与-agent-框架": "clients-and-agent-harnesses",
+    "限制": "limitations",
+    "其他提供商与客户端": "other-providers-and-clients",
+    "相关内容": "related"
+  },
+  "/docs/aperture/troubleshooting": {
+    "客户端连接问题": "client-connection-issues",
+    "所有会话似乎来自同一用户": "all-sessions-appear-to-come-from-the-same-user",
+    "https-连接问题": "https-connection-issues",
+    "无法通过主机名连接-aperture": "cannot-connect-to-aperture-using-hostname",
+    "http-403-拒绝访问错误": "http-403-access-denied-error",
+    "web-门户访问问题": "web-portal-access-issues",
+    "aperture-设备变得不可达": "aperture-device-becomes-unreachable",
+    "http-429-速率限制错误": "http-429-rate-limit-errors",
+    "使用-mullvad-出口节点时的间歇性失败": "intermittent-failures-with-mullvad-exit-nodes",
+    "来自上游提供商的-http-405-错误": "http-405-error-from-upstream-provider",
+    "v1responses-或-v1messages-上的-http-404": "http-404-on-v1responses-or-v1messages",
+    "连接器验证错误": "connector-validation-errors",
+    "oauth-20-授权失败": "oauth-20-authorization-fails",
+    "http-连接器返回意外错误": "http-connector-returns-unexpected-errors",
+    "http-连接器返回-403-forbidden": "http-connector-returns-403-forbidden",
+    "每用户-oauth-连接器的工具不显示": "tools-from-per-user-oauth-connector-do-not-appear",
+    "刷新令牌失败": "refresh-token-failure",
+    "相关内容": "related",
+    "获取帮助": "get-help"
+  },
+  "/docs/aperture/troubleshooting/sandbox": {
+    "沙箱工具不出现在会话中": "sandbox-tools-do-not-appear-in-conversations",
+    "工具调用因连接错误而失败": "tool-calls-fail-with-connection-errors",
+    "超出存储上限": "storage-limit-exceeded",
+    "文件下载失败": "file-downloads-fail",
+    "命令输出被截断": "command-output-is-truncated",
+    "验证沙箱健康状态": "verify-sandbox-health",
+    "相关内容": "related"
+  },
+  "/docs/aperture/use-your-tools": {
+    "客户端设置指南": "client-setup-guides",
+    "网关生成的配置": "gateway-generated-configuration"
+  },
+  "/docs/aperture/visible-groups": {
+    "工作原理": "how-it-works",
+    "前提条件": "prerequisites",
+    "配置节点属性": "configure-the-node-attribute",
+    "在-aperture-授权中使用组": "use-groups-in-aperture-grants",
+    "验证组可见性": "verify-group-visibility",
+    "后续步骤": "next-steps"
+  },
+  "/docs/aperture/what-is-aperture": {
+    "代理如何使用你的身份": "how-the-agent-uses-your-identity",
+    "网关如何处理-llm-请求": "how-the-gateway-handles-llm-requests",
+    "aperture-提供什么": "what-aperture-provides",
+    "限制": "limitations",
+    "常见问题": "faq",
+    "相关资源": "related-resources"
+  },
+  "/docs/concepts/all-your-offices": {
+    "为分布式办公而生的-vpn": "a-vpn-built-for-the-distributed-workplace",
+    "tailscale-的网状网络将延迟降到最低": "tailscales-mesh-network-minimizes-latency",
+    "tailscale-提升安全性": "tailscale-improves-security",
+    "tailscale-简化配置与维护": "tailscale-streamlines-configuration-and-maintenance"
+  },
+  "/docs/concepts/av-flagging": {
+    "处理误报": "manage-false-positives",
+    "处理真实告警": "manage-true-positives"
+  },
+  "/docs/concepts/control-data-planes": {
+    "控制平面": "control-plane",
+    "数据平面": "data-plane",
+    "设备发现与-nat-穿透": "device-discovery-and-nat-traversal",
+    "状态策略与配置": "state-policies-and-configurations",
+    "认证授权与密钥分发": "authentication-authorization-and-key-distribution"
+  },
+  "/docs/concepts/corporate-vpn": {
+    "商业-vpn-的安全性": "business-vpn-security",
+    "连接性": "connectivity",
+    "访问控制面板": "access-control-panel"
+  },
+  "/docs/concepts/device-visibility": {
+    "tailscale-中的设备可见性": "device-visibility-in-tailscale",
+    "管理设备访问": "manage-device-access",
+    "限制对你设备的访问": "restrict-access-to-your-devices"
+  },
+  "/docs/concepts/domain-ownership": {
+    "你的域名如何被使用": "how-your-domain-is-used",
+    "降低-tailnet-被恶意接管的风险": "mitigating-tailnet-risk-from-a-malicious-takeover",
+    "如果你不再使用该域名": "if-you-no-longer-use-your-domain"
+  },
+  "/docs/concepts": {
+    "网络与设备连接": "networking-and-device-connectivity",
+    "安全身份验证与加密": "security-authentication-and-encryption"
+  },
+  "/docs/concepts/ip-and-dns-addresses": {
+    "查找你的-tailscale-ip-地址": "finding-your-tailscale-ip-address",
+    "使用-dns-将机器名映射到-ip-地址": "mapping-machine-names-to-ip-addresses-using-dns",
+    "强制更改-ip-地址": "forcing-an-ip-address-to-change",
+    "tailscale-ipv6-本地地址前缀": "tailscale-ipv6-local-address-prefix"
+  },
+  "/docs/concepts/ip-blocklist-relays": {
+    "什么是-ip-封锁列表": "what-is-an-ip-block-list",
+    "使用-tailscale-应用连接器改进-ip-封锁列表": "use-tailscale-app-connectors-to-improve-ip-block-lists"
+  },
+  "/docs/concepts/ipv6": {
+    "私有与公共-ipv6-地址": "private-and-public-ipv6-addresses",
+    "ipv4-互操作性": "ipv4-interoperability"
+  },
+  "/docs/concepts/machine-names": {
+    "机器名如何确定": "how-machine-names-are-determined",
+    "重命名机器": "renaming-a-machine"
+  },
+  "/docs/concepts/macos-sysext": {
+    "配置步骤": "configuration-steps",
+    "使用-cli-管理": "manage-using-the-cli",
+    "什么是系统扩展": "what-is-a-system-extension",
+    "为你的用户自动化此流程": "automate-this-process-for-your-users"
+  },
+  "/docs/concepts/macos-variants": {
+    "有哪些区别": "what-are-the-differences",
+    "我该选哪个": "which-should-i-choose",
+    "自动化-app-store-安装": "automating-app-store-installs",
+    "故障排除": "troubleshooting"
+  },
+  "/docs/concepts/macos-webfilterproxyd": {
+    "屏幕使用时间与-tailscale-的问题": "issues-with-screen-time-and-tailscale",
+    "排查冲突": "identify-the-conflict",
+    "webfilterproxyd-正在运行时的应对选项": "options-if-webfilterproxyd-is-running",
+    "停用屏幕使用时间": "disable-screen-time"
+  },
+  "/docs/concepts/node-keys": {
+    "机器密钥与节点密钥的对比": "machine-keys-vs-node-keys"
+  },
+  "/docs/concepts/post-quantum-cryptography": {
+    "pqc-与-wireguard": "pqc-and-wireguard",
+    "pqc-与-tailscale": "pqc-and-tailscale"
+  },
+  "/docs/concepts/shared-responsibility": {
+    "tailscale-的责任": "tailscales-responsibilities",
+    "用户的责任": "users-responsibilities"
+  },
+  "/docs/concepts/tailnet": {
+    "管理": "management"
+  },
+  "/docs/concepts/tailnet-lock-whitepaper": {
+    "摘要": "abstract",
+    "引言": "introduction",
+    "背景": "context",
+    "tailnet-lock-的组件": "components-of-tailnet-lock",
+    "密码学": "cryptography",
+    "tailnet-lock-中的用户流程": "user-flows-within-tailnet-lock",
+    "局限性": "limitations",
+    "处理增量更新": "processing-incremental-updates",
+    "验证": "validation",
+    "处理分叉更新": "processing-forking-updates"
+  },
+  "/docs/concepts/tailnet-name": {
+    "tailnet-dns-名称": "tailnet-dns-name",
+    "机器名称": "machine-names",
+    "显示名称": "display-name"
+  },
+  "/docs/concepts/tailscale-encryption": {
+    "控制平面与数据平面": "control-and-data-planes",
+    "设备发现与-nat-穿透": "device-discovery-and-nat-traversal",
+    "tailscale-生态中的加密": "encryption-across-tailscale",
+    "tls-与密码学": "tls-and-cryptography",
+    "合规性": "compliance"
+  },
+  "/docs/concepts/tailscale-identity": {
+    "简介": "introduction",
+    "设备所有权与身份验证": "device-ownership-and-authentication",
+    "节点的创建过程": "how-a-node-gets-created",
+    "身份在安全连接中的作用": "identitys-role-in-secure-connections",
+    "连接如何确保安全": "how-connections-are-secured",
+    "tailscale-自动管理密钥": "tailscale-automatic-management-of-keys",
+    "设备节点与用户账户的关系": "how-devices-nodes-and-user-accounts-relate",
+    "tailnet-示例": "tailnet-examples"
+  },
+  "/docs/concepts/tailscale-osi": {
+    "应用层": "application-layer",
+    "表示层": "presentation-layer",
+    "会话层": "session-layer",
+    "传输层": "transport-layer",
+    "网络层": "network-layer",
+    "数据链路层": "data-link-layer",
+    "物理层": "physical-layer"
+  },
+  "/docs/concepts/tunnel-vision": {
+    "攻击的原理": "how-the-attack-works",
+    "如何应对": "how-to-take-action",
+    "更多信息": "additional-information"
+  },
+  "/docs/concepts/userspace-networking": {
+    "socks5-与-http-的区别": "socks5-vs-http",
+    "以用户态网络模式启动-tailscale": "start-tailscale-in-userspace-networking-mode",
+    "配置应用使用-socks5-或-http": "configure-your-application-to-use-socks5-or-http"
+  },
+  "/docs/concepts/what-is-tailscale": {
+    "技术细节": "technical-details",
+    "优势": "benefits",
+    "使用场景": "use-cases",
+    "开始使用": "get-started"
+  },
+  "/docs/concepts/zero-trust": {
+    "历史": "history",
+    "解决方案端到端加密": "solution-end-to-end-encryption",
+    "渐进式零信任": "incremental-zero-trust",
+    "顺势推荐": "shameless-plug"
+  },
+  "/docs/features/access-control/acls": {
+    "编辑-acl": "edit-acls",
+    "各套餐的可用性": "availability-by-plan"
+  },
+  "/docs/features/access-control/auth-keys/how-to/secure-auth-keys": {
+    "创建环境变量": "create-the-environment-variable",
+    "使用环境变量": "use-the-environment-variable",
+    "移除环境变量": "remove-the-environment-variable"
+  },
+  "/docs/features/access-control/auth-keys": {
+    "认证密钥的类型": "types-of-auth-keys",
+    "密钥过期": "key-expiry",
+    "生成认证密钥": "generate-an-auth-key",
+    "使用认证密钥注册节点": "register-a-node-with-the-auth-key",
+    "使用认证密钥注册移动设备": "register-a-mobile-device-with-the-auth-key",
+    "吊销认证密钥": "revoke-an-auth-key",
+    "最佳实践": "best-practices"
+  },
+  "/docs/features/access-control/device-management/device-approval": {
+    "为你的网络启用设备审批": "enable-device-approval-for-your-network",
+    "在管理控制台中批准设备": "approve-devices-from-the-admin-console",
+    "使用认证密钥预批准设备": "pre-approve-devices-with-an-auth-key",
+    "自动化设备审批": "automate-device-approval",
+    "限制": "limitations"
+  },
+  "/docs/features/access-control/device-management/how-to/filter": {
+    "筛选与-url-查询": "filter-url-queries",
+    "筛选的-and-逻辑与-or-逻辑": "filter-and-logic-and-or-logic",
+    "使用筛选器": "use-a-filter",
+    "按-auto-update-筛选": "filter-by-auto-update",
+    "按-posture-identity-筛选": "filter-by-posture-identity",
+    "使用搜索栏筛选": "filter-with-the-search-bar",
+    "使用文本筛选": "filter-with-text",
+    "移除筛选器": "remove-a-filter"
+  },
+  "/docs/features/access-control/device-management/how-to/manage-identity": {
+    "前提条件": "prerequisites",
+    "为你的-tailnet-启用设备身份收集": "enabling-device-identity-collection-for-your-tailnet",
+    "为-tailnet-中的设备启用设备身份收集": "enabling-device-identity-collection-for-devices-in-your-tailnet",
+    "查看收集进度": "check-collection-progress",
+    "查看设备标识符": "check-device-identifiers",
+    "限制": "limitations"
+  },
+  "/docs/features/access-control/device-management/how-to/remove": {
+    "从管理控制台移除设备": "remove-devices-from-the-admin-console",
+    "使用-api-脚本移除设备": "use-api-scripts-to-remove-devices"
+  },
+  "/docs/features/access-control/device-management/how-to/set-up": {
+    "前提条件": "prerequisites",
+    "在设备上安装-tailscale": "install-tailscale-on-a-device",
+    "将设备添加到-tailnet": "add-a-device-to-a-tailnet",
+    "使用二维码添加设备": "add-a-device-using-a-qr-code",
+    "权限": "permissions"
+  },
+  "/docs/features/access-control/device-management/how-to/set-up-qr-code": {
+    "前提条件": "prerequisites",
+    "安装步骤": "installation-steps"
+  },
+  "/docs/features/access-control/grants/grants-app-capabilities": {
+    "应用能力的工作原理": "how-app-capabilities-work",
+    "要求与限制": "requirements-and-limitations",
+    "tailscale-内置能力": "built-in-tailscale-capabilities",
+    "自定义能力": "custom-capabilities",
+    "包含多种能力的完整示例": "complete-example-with-multiple-capabilities"
+  },
+  "/docs/features/access-control/grants/grants-via": {
+    "限制": "limitations",
+    "语法": "syntax",
+    "示例": "examples"
+  },
+  "/docs/features/access-control/grants": {
+    "优势与使用场景": "benefits-and-use-cases",
+    "实现基础": "implementation-basics",
+    "来源与目标": "sources-and-destinations",
+    "网络能力": "network-capabilities",
+    "应用能力": "application-capabilities",
+    "限制与注意事项": "limitations-and-considerations",
+    "后续步骤": "next-steps"
+  },
+  "/docs/features/access-control": {
+    "授权grant": "grants",
+    "访问控制列表acl": "access-control-lists-acls"
+  },
+  "/docs/features/access-control/just-in-time-access": {
+    "提供即时访问": "provide-just-in-time-access"
+  },
+  "/docs/features/access-control/key-expiry": {
+    "禁用密钥过期": "disabling-key-expiry",
+    "启用密钥过期": "enabling-key-expiry",
+    "为密钥已过期的设备续期": "renewing-keys-for-an-expired-device",
+    "对已打标签设备使用密钥过期": "using-key-expiry-with-tagged-devices",
+    "设置自定义认证有效期": "setting-a-custom-authentication-period",
+    "管理控制台会话过期": "admin-console-session-expiry"
+  },
+  "/docs/features/access-control/user-approval": {
+    "为你的网络启用用户审批": "enable-user-approval-for-your-network",
+    "批准待审批用户": "approve-an-unapproved-user",
+    "移除待审批用户": "remove-an-unapproved-user",
+    "为你的网络禁用用户审批": "disable-user-approval-for-your-network",
+    "对其他功能的影响": "impact-on-other-features",
+    "限制": "limitations"
+  },
+  "/docs/features/app-connectors/how-to/setup": {
+    "要求": "requirements",
+    "开始使用": "get-started",
+    "限制": "limitations",
+    "添加预设应用": "add-a-preset-app",
+    "添加自定义应用": "add-a-custom-app",
+    "编辑预设应用": "edit-preset-apps",
+    "移除应用连接器": "remove-an-app-connector"
+  },
+  "/docs/features/app-connectors": {
+    "工作原理": "how-it-works",
+    "注意事项": "considerations"
+  },
+  "/docs/features/client/android-app-split-tunneling": {
+    "基于应用的拆分隧道的类型": "types-of-app-based-split-tunneling",
+    "在客户端中排除应用": "exclude-apps-from-the-client",
+    "使用-mdm-强制或排除应用": "force-and-exclude-apps-using-mdm",
+    "默认排除的应用": "default-app-exclusions"
+  },
+  "/docs/features/client/device-web-interface": {
+    "在设备上暴露-web-界面": "expose-the-web-interface-on-a-device",
+    "打开-web-界面并完成身份验证": "open-and-authenticate-to-the-web-interface",
+    "在设备上禁用-web-界面": "disable-the-web-interface-on-a-device",
+    "控制远程访问": "control-remote-access",
+    "授予管理访问权限": "grant-management-access",
+    "功能": "features"
+  },
+  "/docs/features/client/fast-user-switching": {
+    "工作原理": "how-it-works"
+  },
+  "/docs/features/client/ios-vpn-on-demand": {
+    "设置-vpn-on-demand": "setting-up-vpn-on-demand",
+    "局限性": "limitations"
+  },
+  "/docs/features/client/linux-systray": {
+    "启动-systray-应用": "start-the-systray-application",
+    "配置-gnome-桌面": "configure-gnome-desktops",
+    "添加剪贴板支持": "add-clipboard-support",
+    "对非-linux-桌面的支持": "support-for-non-linux-desktops",
+    "已知局限": "known-limitations"
+  },
+  "/docs/features/client/manage-preferences": {
+    "默认配置": "default-configuration",
+    "允许入站连接": "allow-incoming-connections",
+    "使用-tailscale-dns-设置": "use-tailscale-dns-settings",
+    "使用-tailscale-子网": "use-tailscale-subnets"
+  },
+  "/docs/features/client/update": {
+    "检查更新": "check-for-updates",
+    "自动更新": "auto-updates",
+    "手动更新": "manual-updates",
+    "mdm-管理的更新": "mdm-managed-updates"
+  },
+  "/docs/features/containers/docker/docker-desktop": {
+    "安装-tailscale-扩展": "installing-the-tailscale-extension",
+    "使用-tailscale-扩展": "using-the-tailscale-extension",
+    "会把你的容器端口从-tailnet-中移除的操作": "activities-that-remove-your-container-ports-from-your-tailnet",
+    "卸载-tailscale-扩展": "uninstalling-the-tailscale-extension"
+  },
+  "/docs/features/containers/docker/docker-params": {
+    "额外参数": "extra-arguments",
+    "实验性参数": "experimental-parameters"
+  },
+  "/docs/features/containers/docker/how-to/connect-docker-alt-manager": {
+    "前提条件": "prerequisites",
+    "常用管理工具": "common-management-tools",
+    "生成认证密钥": "generate-an-auth-key",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/features/containers/docker/how-to/connect-docker-container": {
+    "前提条件": "prerequisites",
+    "生成认证密钥": "generate-an-auth-key",
+    "创建并运行容器": "create-and-run-your-containers",
+    "docker-compose-示例详解": "docker-compose-example-details"
+  },
+  "/docs/features/containers/docker/how-to/connect-docker-standalone": {
+    "前提条件": "prerequisites",
+    "拉取-tailscale-docker-镜像": "pull-the-tailscale-docker-image",
+    "生成认证密钥": "generate-an-auth-key",
+    "运行容器": "run-the-container"
+  },
+  "/docs/features/containers/lxc/lxc-unprivileged": {
+    "操作说明": "instructions",
+    "常见问题": "faq"
+  },
+  "/docs/features/declarative-node-sharing": {
+    "工作原理": "how-it-works",
+    "开始之前": "before-you-begin",
+    "访问声明式节点共享": "access-declarative-node-sharing",
+    "配置声明式节点共享": "configure-declarative-node-sharing",
+    "连接到共享资源": "connect-to-a-shared-resource",
+    "声明式共享与基于链接的节点共享的对比": "declarative-sharing-versus-link-based-node-sharing",
+    "局限性": "limitations"
+  },
+  "/docs/features/device-posture": {
+    "优势": "benefits",
+    "使用场景": "use-cases",
+    "按套餐区分的可用性": "usage-by-plan",
+    "进一步了解设备态势管理": "learn-more-about-device-posture-management"
+  },
+  "/docs/features/device-posture/integrations": {
+    "使用-tailscale-api-管理设备态势集成": "manage-device-posture-integrations-with-the-tailscale-api"
+  },
+  "/docs/features/device-posture/monitoring-postures": {
+    "查看设备态势状态": "check-device-posture-status",
+    "查找未通过态势的设备": "find-devices-that-are-failing-a-posture",
+    "为设备启用控制台徽标": "enable-console-badges-for-devices",
+    "发送警告或通知": "send-warnings-or-notifications"
+  },
+  "/docs/features/device-posture/postures-and-attributes": {
+    "设备态势属性": "device-posture-attributes",
+    "设备态势": "device-postures",
+    "默认源态势": "default-source-posture",
+    "tailscale-ssh-与态势": "tailscale-ssh-and-postures",
+    "共享节点与态势": "shared-nodes-and-postures",
+    "态势属性-api": "posture-attributes-api",
+    "审计日志事件": "audit-log-events"
+  },
+  "/docs/features/device-posture/postures-in-access-rules": {
+    "态势作为访问规则中的条件": "postures-as-conditions-in-access-rules",
+    "示例": "examples",
+    "默认态势与访问规则": "default-postures-and-access-rules",
+    "查看设备态势状态": "check-device-posture-status"
+  },
+  "/docs/features/ephemeral-nodes": {
+    "认证临时节点": "authenticating-an-ephemeral-node",
+    "临时设备能将自己从-tailnet-中移除吗": "can-an-ephemeral-device-remove-itself-from-my-tailnet",
+    "临时设备多久后会被自动移除": "how-long-before-ephemeral-devices-are-auto-removed",
+    "能在没有认证密钥的情况下创建临时节点吗": "can-i-create-an-ephemeral-node-without-an-auth-key"
+  },
+  "/docs/features/exit-nodes/auto-exit-nodes": {
+    "工作原理": "how-it-works",
+    "使用建议出口节点": "use-a-suggested-exit-node",
+    "强制使用出口节点": "force-use-of-an-exit-node"
+  },
+  "/docs/features/exit-nodes/how-to/setup": {
+    "将设备宣告为出口节点": "advertise-a-device-as-an-exit-node",
+    "授予使用出口节点的权限": "grant-access-to-use-an-exit-node",
+    "使用出口节点": "use-an-exit-node"
+  },
+  "/docs/features/exit-nodes": {
+    "优势": "benefits",
+    "使用场景": "use-cases",
+    "工作原理": "how-it-works",
+    "开始使用": "get-started",
+    "网络流日志中的目标日志记录": "destination-logging-in-network-flow-logs",
+    "注意事项": "caveats"
+  },
+  "/docs/features/exit-nodes/mullvad-exit-nodes": {
+    "要求与限制": "requirements-and-limitations",
+    "数据隐私与匿名性": "data-privacy-and-anonymity",
+    "可用的-mullvad-区域": "available-mullvad-regions",
+    "mullvad-许可": "mullvad-licensing",
+    "操作指南": "how-to-guides",
+    "共享许可池": "share-a-pool-of-licenses"
+  },
+  "/docs/features/firewall-mode": {
+    "如何设置防火墙模式": "how-to-set-the-firewall-mode",
+    "防火墙模式探测": "firewall-mode-heuristic",
+    "示例": "examples",
+    "如何验证是否生效": "how-to-verify-its-working"
+  },
+  "/docs/features/group-visibility-clients": {
+    "要求": "requirements",
+    "使用场景": "use-cases",
+    "工作原理": "how-it-works",
+    "更新策略文件": "update-your-tailnet-policy-file",
+    "使用-tailscale-cli-验证群组可见性": "verify-group-visibility-using-the-tailscale-cli",
+    "使用-tsnet-验证群组可见性": "verify-group-visibility-using-tsnet"
+  },
+  "/docs/features/logging/audit-logging": {
+    "日志结构": "log-structure",
+    "启用配置审计日志": "enabling-configuration-audit-logging",
+    "访问配置审计日志": "accessing-configuration-audit-logs",
+    "从审计日志回滚访问控制策略": "reverting-access-control-policies-from-audit-logs",
+    "事件": "events",
+    "单个操作的多个事件": "multiple-events-for-a-single-operation",
+    "共享节点的事件": "events-for-shared-nodes",
+    "服务事件": "service-events",
+    "未包含的事件": "events-not-included",
+    "配置审计日志流式传输": "configuration-audit-logs-streaming",
+    "限制": "limitations",
+    "筛选配置审计日志": "filtering-configuration-audit-logs",
+    "时间": "time",
+    "操作类型": "type-of-action",
+    "操作者": "actor"
+  },
+  "/docs/features/logging": {
+    "客户端日志": "client-logs",
+    "kubernetes-operator-日志": "kubernetes-operator-logs",
+    "网络流日志": "network-flow-logs",
+    "服务器日志": "server-logs",
+    "本地-ssh-会话日志": "local-ssh-session-logs"
+  },
+  "/docs/features/logging/log-streaming": {
+    "支持的集成": "supported-integrations",
+    "前提条件": "prerequisites",
+    "配置日志流式传输": "configuration-log-streaming",
+    "网络日志流式传输": "network-log-streaming",
+    "私有端点": "private-endpoints",
+    "其他-siem-系统": "additional-siem-systems"
+  },
+  "/docs/features/logging/network-flow-logs": {
+    "工作原理": "how-it-works",
+    "网络日志结构": "network-logs-structure",
+    "启用网络流日志": "enable-network-flow-logs",
+    "停用网络流日志": "disable-network-flow-logs",
+    "访问网络日志": "access-network-logs",
+    "网络流日志流式传输": "network-flow-logs-streaming",
+    "限制": "limitations",
+    "api-调用示例": "example-api-call"
+  },
+  "/docs/features/mac-ios-shortcuts": {
+    "前提条件": "prerequisites",
+    "可用操作": "available-actions",
+    "示例": "examples",
+    "查找账户": "find-accounts",
+    "切换账户": "switch-accounts",
+    "查找设备": "find-devices",
+    "ping-设备": "ping-devices",
+    "发送文件": "send-file",
+    "使用出口节点": "use-exit-node",
+    "停止使用出口节点": "stop-using-exit-node",
+    "连接": "connect",
+    "断开连接": "disconnect",
+    "获取状态": "get-status",
+    "设置-tailscale-dns": "set-tailscale-dns",
+    "切换": "toggle"
+  },
+  "/docs/features/magicdns": {
+    "启用-magicdns": "enabling-magicdns",
+    "通过-magicdns-访问设备": "accessing-devices-over-magicdns",
+    "分配和编辑机器名": "assigning-and-editing-machine-names",
+    "完全限定域名与机器名": "fully-qualified-domain-names-vs-machine-names",
+    "停用-magicdns": "disabling-magicdns",
+    "移除-betatailscalenet-名称服务器": "removing-the-betatailscalenet-nameserver"
+  },
+  "/docs/features/magicroute": {
+    "使用场景": "use-cases",
+    "工作原理": "how-it-works",
+    "前提条件": "prerequisites",
+    "开始使用": "get-started",
+    "限制": "limitations"
+  },
+  "/docs/features/multiple-tailnets": {
+    "创建其他-tailnet": "create-additional-tailnets",
+    "访问其他-tailnet-的管理控制台": "access-the-admin-console-of-additional-tailnets",
+    "向你的其他-tailnet-添加设备": "add-devices-to-your-additional-tailnet",
+    "用户与群组预配": "user-and-group-provisioning",
+    "取消列出-tailnet": "unlist-tailnets",
+    "限制": "limitations"
+  },
+  "/docs/features/oauth-apps/device-provisioning": {
+    "使用场景": "use-cases",
+    "前提条件": "prerequisites",
+    "开始使用": "get-started",
+    "一次性授权作用域": "one-time-authorization-scope",
+    "身份模型": "identity-model",
+    "作用域参考": "scopes-reference",
+    "限制": "limitations"
+  },
+  "/docs/features/oauth-apps": {
+    "要求": "requirements",
+    "指南": "guides",
+    "限制": "limitations"
+  },
+  "/docs/features/oauth-clients": {
+    "工作原理": "how-it-works",
+    "前提条件": "prerequisites",
+    "设置-oauth-客户端": "setting-up-an-oauth-client",
+    "tailscale-oauth-令牌端点": "tailscale-oauth-token-endpoint",
+    "oauth-客户端库": "oauth-client-libraries",
+    "验证你能否生成-api-访问令牌": "verifying-you-can-generate-api-access-tokens",
+    "生成长期认证密钥": "generating-long-lived-auth-keys",
+    "tailnet-id-的简写": "shorthand-notation-for-tailnet-id",
+    "使用-oauth-凭证注册新节点": "register-new-nodes-using-oauth-credentials",
+    "get-authkey-工具": "get-authkey-utility",
+    "作用域": "scopes",
+    "旧版作用域": "legacy-scopes",
+    "限制": "limitations"
+  },
+  "/docs/features/peer-relay": {
+    "使用场景": "use-cases",
+    "工作原理": "how-it-works",
+    "前提条件": "prerequisites",
+    "开始使用": "get-started",
+    "禁用对等中继": "disable-peer-relay",
+    "示例": "examples",
+    "安全与访问控制": "security-and-access-control",
+    "静态端点": "static-endpoints"
+  },
+  "/docs/features/route-selection": {
+    "比较路由选择选项": "compare-route-selection-options",
+    "路由选择使用场景": "route-selection-use-cases",
+    "前提条件": "prerequisites",
+    "更改路由选择选项": "change-the-route-selection-option",
+    "验证路由选择": "verify-route-selection"
+  },
+  "/docs/features/secure-node-state-storage": {
+    "为什么重要": "why-it-matters",
+    "平台支持": "platform-support",
+    "前提条件": "prerequisites",
+    "配置安全的节点状态存储": "configure-secure-node-state-storage",
+    "禁用安全的节点状态存储": "disabling-secure-node-state-storage",
+    "设备态势属性": "device-posture-attribute",
+    "从-tpm-故障中恢复": "recover-from-tpm-failures",
+    "限制": "limitations"
+  },
+  "/docs/features/services": {
+    "什么是端点": "what-are-endpoints",
+    "启用端点收集": "enabling-endpoint-collection",
+    "监控你的端点": "monitoring-your-endpoints",
+    "启动端点": "launching-endpoints",
+    "访问控制": "access-controls"
+  },
+  "/docs/features/sharing/how-to/change-role": {
+    "更改用户的角色": "change-a-users-role",
+    "更改-owner": "change-owner"
+  },
+  "/docs/features/sharing/how-to/invite-any-user": {
+    "发送邀请电子邮件": "send-an-invite-email",
+    "发送邀请链接": "send-an-invite-link",
+    "启用或禁用加入外部-tailnet": "enable-or-disable-joining-external-tailnets",
+    "接受邀请": "accept-an-invite",
+    "离开-tailnet": "leave-a-tailnet",
+    "批准邀请": "approve-an-invite",
+    "查看邀请": "review-invites",
+    "重新发送邀请": "resend-an-invite",
+    "删除邀请": "delete-an-invite",
+    "监控邀请": "monitor-invites"
+  },
+  "/docs/features/sharing/how-to/invite-team-members": {
+    "前提条件": "prerequisites",
+    "发送团队邀请": "send-a-team-invite",
+    "接受团队邀请": "accept-a-team-invite",
+    "批准团队邀请": "approve-a-team-invite",
+    "查看团队邀请": "review-team-invites",
+    "重新发送团队邀请": "resend-a-team-invite",
+    "删除团队邀请": "delete-a-team-invite",
+    "监控团队邀请": "monitor-team-invites",
+    "限制": "limitations"
+  },
+  "/docs/features/sharing/how-to/offboard": {
+    "非-scim-环境下的用户离职处理": "offboarding-for-non-scim-environments",
+    "使用用户与组预配scim时的用户离职处理": "offboarding-when-using-user--group-provisioning-scim"
+  },
+  "/docs/features/sharing/how-to/remove-team-members": {
+    "删除用户": "deleting-users",
+    "停用用户": "suspending-users",
+    "未批准的用户": "unapproved-users",
+    "恢复用户": "restoring-users",
+    "管理用户资源": "managing-user-resources",
+    "管理空闲用户": "managing-idle-users",
+    "离开-tailnet": "leaving-a-tailnet",
+    "删除-tailnet": "deleting-a-tailnet"
+  },
+  "/docs/features/sharing": {
+    "共享资源的方式": "ways-to-share-resources",
+    "与其他用户共享机器": "share-a-machine-with-another-user",
+    "撤销邀请": "revoke-an-invite",
+    "共享的工作原理": "how-sharing-works"
+  },
+  "/docs/features/site-to-site": {
+    "要求与限制": "requirements-and-limitations",
+    "创建站点到站点连接": "create-a-site-to-site-connection",
+    "示例场景": "example-scenario",
+    "ip-地址转发": "ip-address-forwarding",
+    "子网路由器配置选项": "subnet-router-configuration-options",
+    "将-mss-钳制到-mtu": "clamp-the-mss-to-the-mtu",
+    "json-编辑器": "json-editor",
+    "可视化编辑器": "visual-editor"
+  },
+  "/docs/features/subnet-routers/4via6-subnets": {
+    "工作原理": "how-it-works",
+    "设置重叠的子网路由器": "setting-up-overlapping-subnet-routers",
+    "ipv4-子网设备的-magicdns-名称": "magicdns-name-for-the-ipv4-subnet-devices",
+    "4via6-子网路由器的高可用": "high-availability-with-4via6-subnet-routers",
+    "访问控制规则": "access-control-rules",
+    "限制": "limitations"
+  },
+  "/docs/features/subnet-routers": {
+    "为什么重要": "why-it-matters",
+    "优势": "benefits",
+    "使用场景": "use-cases",
+    "子网路由器的工作原理": "how-subnet-routers-work",
+    "设置子网路由器": "set-up-a-subnet-router",
+    "更新子网路由": "update-subnet-routes",
+    "使用高级子网路由": "use-advanced-subnet-routing",
+    "注意事项": "caveats"
+  },
+  "/docs/features/tags": {
+    "要求": "requirements",
+    "限制": "limitations",
+    "使用场景": "use-cases",
+    "所有权": "ownership",
+    "标签认证与用户认证的对比": "tag-vs-user-authentication",
+    "密钥过期": "key-expiry",
+    "tailscale-生态中的标签": "tags-in-the-tailscale-ecosystem",
+    "高级标签层级": "advanced-tag-hierarchies",
+    "最佳实践": "best-practices",
+    "使用标签": "working-with-tags",
+    "acl": "acls",
+    "授权": "grants",
+    "在管理控制台中为设备应用标签": "apply-a-tag-to-a-device-in-the-admin-console",
+    "使用-cli-为设备应用标签": "apply-a-tag-to-a-device-with-the-cli",
+    "通过-api-为设备应用标签": "apply-a-tag-to-a-device-using-the-api"
+  },
+  "/docs/features/taildrive": {
+    "工作原理": "how-it-works",
+    "配置-taildrive": "configure-taildrive",
+    "使用-taildrive-共享和访问文件夹": "sharing-and-accessing-folders-with-taildrive",
+    "局限性": "limitations"
+  },
+  "/docs/features/taildrop/how-to/set-up-taildrop-with-nas": {
+    "在-synology-上设置-taildrop": "set-up-taildrop-on-synology",
+    "在-qnap-上设置-taildrop": "set-up-taildrop-on-qnap",
+    "用-nas-设备接收文件": "receive-files-with-a-nas-device"
+  },
+  "/docs/features/taildrop": {
+    "为你的网络启用-taildrop": "enable-taildrop-for-your-network",
+    "客户端设置": "client-setup",
+    "使用-taildrop-发送文件": "send-files-with-taildrop",
+    "使用-taildrop-接收文件": "receive-files-with-taildrop",
+    "示例将敏感文档从电脑安全传输到移动设备方便随时随地访问": "example-securely-transfer-sensitive-documents-from-your-computer-to-mobile-device-for-easier-on-the-go-access",
+    "示例将家人照片从手机发送到电脑": "example-send-family-photos-from-your-phone-to-your-computer",
+    "示例将截图共享到电脑": "example-share-screenshots-to-your-computer",
+    "示例将-google-photos-相册传输到个人照片服务器": "example-transfer-google-photos-albums-to-a-personal-photos-server"
+  },
+  "/docs/features/tailnet-lock": {
+    "tailnet-lock-是什么": "what-is-tailnet-lock",
+    "工作原理": "how-it-works",
+    "启用-tailnet-lock": "enable-tailnet-lock",
+    "禁用-tailnet-lock": "disable-tailnet-lock",
+    "向已锁定-tailnet-添加节点": "add-a-node-to-a-locked-tailnet",
+    "查看节点的-tailnet-lock-公钥": "determine-a-nodes-tailnet-lock-public-key",
+    "添加签名节点": "add-a-signing-node",
+    "移除签名节点": "remove-a-signing-node",
+    "吊销已泄露的签名节点": "revoke-a-compromised-signing-node",
+    "tailnet-lock-如何与其他-tailscale-功能协作": "how-tailnet-lock-works-with-other-tailscale-features",
+    "配置审计日志": "configuration-audit-logging",
+    "tailnet-lock-状态": "tailnet-lock-state",
+    "局限性": "limitations"
+  },
+  "/docs/features/tailnet-policy-file": {
+    "分区": "sections"
+  },
+  "/docs/features/tailnet-policy-file/ip-sets": {
+    "局限性": "limitations",
+    "语法": "syntax",
+    "示例": "examples"
+  },
+  "/docs/features/tailnet-policy-file/manage-tailnet-policies": {
+    "将-acl-转换为授权": "convert-acls-to-grants",
+    "预览更改": "preview-changes",
+    "调试访问控制策略": "debug-access-control-policies",
+    "撤销更改": "revert-changes"
+  },
+  "/docs/features/tailnets-api": {
+    "创建仅限-api-的-tailnet": "create-api-only-tailnets"
+  },
+  "/docs/features/tailscale-accessbot-jit": {
+    "带过期时间的态势属性-api": "posture-attributes-api-with-expiry",
+    "参数": "parameters",
+    "请求示例": "request-example",
+    "响应": "response",
+    "参数-1": "parameters-1",
+    "请求示例-1": "request-example-1",
+    "响应-1": "response-1",
+    "deviceidurl-路径中必填": "deviceid-required-in-url-path",
+    "deviceidurl-路径中必填-1": "deviceid-required-in-url-path-1",
+    "attributekeyurl-路径中必填": "attributekey-required-in-url-path",
+    "态势属性-valuepost-请求体中必填": "posture-attribute-value-required-in-post-body",
+    "态势属性-expirypost-请求体中可选": "posture-attribute-expiry-optional-in-post-body",
+    "态势属性-commentpost-请求体中可选": "posture-attribute-comment-optional-in-post-body"
+  },
+  "/docs/features/tailscale-funnel/how-to/host-websites": {
+    "前提条件": "prerequisites",
+    "提供你的文件和网站": "serve-your-files-and-website",
+    "共享你的网站": "share-your-website"
+  },
+  "/docs/features/tailscale-funnel": {
+    "funnel-的工作原理": "how-funnel-works",
+    "开始使用-funnel": "get-started-with-funnel",
+    "资源": "resources",
+    "排查问题": "troubleshooting"
+  },
+  "/docs/features/tailscale-serve": {
+    "开始使用-serve": "get-started-with-serve",
+    "运行-tailscale-serve": "run-tailscale-serve",
+    "身份标头": "identity-headers",
+    "应用能力标头": "app-capabilities-header",
+    "资源": "resources",
+    "局限性": "limitations",
+    "排查问题": "troubleshooting"
+  },
+  "/docs/features/tailscale-services": {
+    "用例": "use-cases",
+    "前提条件": "prerequisites",
+    "开始使用": "get-started",
+    "常见场景": "common-scenarios",
+    "参考": "reference",
+    "局限性": "limitations",
+    "更多信息": "additional-information",
+    "移除端点": "remove-an-endpoint",
+    "移除-service-的所有端点映射": "remove-all-endpoint-mappings-for-a-service",
+    "移除所有-service-配置": "remove-all-service-configurations",
+    "配置-service-访问": "configure-service-access",
+    "第-7-层端点应用层": "layer-7-endpoints-application-layer",
+    "第-4-层端点传输层": "layer-4-endpoints-transport-layer",
+    "第-3-层端点网络层": "layer-3-endpoints-network-layer"
+  },
+  "/docs/features/tailscale-skill": {
+    "用例": "use-cases",
+    "前提条件": "prerequisites",
+    "开始使用": "get-started",
+    "局限性": "limitations",
+    "支持与反馈": "support-and-feedback"
+  },
+  "/docs/features/tailscale-ssh/how-to/session-recording-s3": {
+    "将-s3-配置为会话录制节点的存储": "configure-s3-as-storage-for-session-recording-nodes",
+    "使用-aws-访问密钥部署": "deploy-with-aws-access-keys",
+    "使用附加的-iam-角色部署": "deploy-with-attached-iam-roles",
+    "cloudflare-r2-兼容性": "cloudflare-r2-compatibility"
+  },
+  "/docs/features/tailscale-ssh": {
+    "为什么重要": "why-it-matters",
+    "优势": "benefits",
+    "用例": "use-cases",
+    "tailscale-ssh-有何不同": "how-is-tailscale-ssh-different",
+    "工作原理": "how-does-it-work",
+    "配置-tailscale-ssh": "configure-tailscale-ssh",
+    "禁用-tailscale-ssh": "disable-tailscale-ssh",
+    "使用检查模式配置-tailscale-ssh": "configure-tailscale-ssh-with-check-mode",
+    "局限性": "limitations",
+    "更多信息": "additional-information",
+    "求值顺序": "order-of-evaluation",
+    "默认访问控制策略中的-ssh-访问规则": "ssh-access-rules-in-default-access-control-policy",
+    "ssh-访问规则示例": "ssh-access-rule-examples",
+    "acceptenv-示例": "acceptenv-examples"
+  },
+  "/docs/features/tailscale-ssh/tailscale-ssh-console": {
+    "工作原理": "how-it-works",
+    "前提条件": "prerequisites",
+    "创建-tailscale-ssh-console-会话": "creating-a-tailscale-ssh-console-session",
+    "临时-tailscale-ssh-console-节点": "ephemeral-tailscale-ssh-console-node",
+    "结束-tailscale-ssh-console-会话": "ending-a-tailscale-ssh-console-session",
+    "tailscale-ssh-console-会话的审计日志": "audit-logging-of-tailscale-ssh-console-sessions",
+    "局限性": "limitations"
+  },
+  "/docs/features/tailscale-ssh/tailscale-ssh-session-recording": {
+    "工作原理": "how-it-works",
+    "为-tailscale-ssh-设置会话录制": "set-up-session-recording-for-tailscale-ssh",
+    "限制对录制节点和主机的访问": "scope-access-to-the-recorder-node-and-host",
+    "禁用会话录制": "disable-session-recording",
+    "会话录制内容": "session-recordings",
+    "局限性": "limitations"
+  },
+  "/docs/features/tailscale-system-policies": {
+    "可用设置": "available-settings",
+    "如何应用系统策略": "how-to-apply-system-policies",
+    "查看设备上的系统策略": "review-the-system-policy-on-a-device",
+    "重新加载设备上的系统策略": "reload-the-system-policy-on-a-device",
+    "可用的系统策略": "available-system-policies",
+    "隐藏自动更新设置macos": "hide-the-auto-update-settings-macos",
+    "自动检查更新windows": "check-for-updates-automatically-windows",
+    "自动安装更新windows": "install-updates-automatically-windows",
+    "自动安装更新macos": "install-updates-automatically-macos",
+    "自动检查更新macos": "check-for-updates-automatically-macos",
+    "管理不稳定版本的可用性": "manage-unstable-versions-availability",
+    "通告出口节点": "advertise-exit-node",
+    "建议允许的强制出口节点": "suggest-allowed-forced-exit-nodes",
+    "使用出口节点时切换本地网络访问": "toggle-local-network-access-when-an-exit-node-is-in-use",
+    "强制始终使用某个出口节点": "force-an-exit-node-to-always-be-used",
+    "强制时设置不同的出口节点": "set-a-different-exit-node-when-forced",
+    "设置信息消息": "set-an-info-message",
+    "设置组织名称": "set-your-organization-name",
+    "设置支持-url": "set-a-support-url",
+    "设置是否允许传入连接": "set-whether-to-allow-incoming-connections",
+    "设置-tailscale-始终保持连接": "set-tailscale-to-always-be-connected",
+    "设置断开连接的必填原因": "set-a-required-reason-for-disconnection",
+    "设置认证密钥": "set-an-auth-key",
+    "指定设备序列号": "specify-the-device-serial-number",
+    "设置排除的应用": "set-excluded-applications",
+    "在-active-directory-中强制注册-tailscale-ip": "force-tailscale-ip-registration-in-active-directory",
+    "强制-tailscale-始终运行": "force-tailscale-to-always-be-running",
+    "抑制-dhcp-选项-121-警告": "suppress-dhcp-option-121-warnings",
+    "设置包含的应用": "set-included-applications",
+    "抑制-ip-地址复制通知": "suppress-ip-address-copied-notifications",
+    "设置密钥过期提醒期限": "set-the-key-expiration-notice-period",
+    "设置用于身份验证的自定义浏览器": "set-a-custom-browser-for-authentication",
+    "设置自定义控制服务器-url": "set-a-custom-control-server-url",
+    "设置机器证书主题": "set-a-machine-certificate-subject",
+    "启用设备态势数据收集": "enable-gathering-device-posture-data",
+    "设置重新连接计时器": "set-a-reconnection-timer",
+    "设置建议或强制的-tailnet": "set-a-suggested-or-required-tailnet",
+    "抑制首次启动引导流程": "suppress-the-first-launch-onboarding-flow",
+    "抑制应用窗口介绍流程": "suppress-the-app-window-intro-flow",
+    "用户登录时自动启动-tailscale": "automatically-start-tailscale-when-the-user-logs-in",
+    "设置无人值守模式": "set-unattended-mode",
+    "设置设备是否使用-tailscale-dns-设置": "set-whether-the-device-uses-tailscale-dns-settings",
+    "设置设备是否接受-tailscale-子网": "set-whether-the-device-accepts-tailscale-subnets",
+    "设置是否可以修改设备主机名": "set-whether-device-hostnames-can-be-modified",
+    "加密节点状态文件": "encrypt-node-state-file",
+    "隐藏管理控制台菜单项": "hide-the-admin-console-menu-item",
+    "隐藏-cli-集成安装器": "hide-the-cli-integration-installer",
+    "阻止重新身份验证窗口": "block-re-authentication-window",
+    "隐藏出口节点选择器": "hide-the-exit-node-picker",
+    "隐藏网络设备": "hide-network-devices",
+    "隐藏-tailnet-lock-设置": "hide-the-tailnet-lock-settings",
+    "隐藏网络设备菜单": "hide-the-network-devices-menu",
+    "隐藏偏好设置菜单": "hide-the-preferences-menu",
+    "隐藏恢复默认设置菜单项": "hide-the-reset-to-defaults-menu-item",
+    "隐藏以出口节点运行菜单项": "hide-the-run-as-exit-node-menu-item",
+    "隐藏登录时启动菜单项": "hide-the-start-on-login-menu-item",
+    "隐藏调试菜单": "hide-the-debug-menu",
+    "隐藏更新菜单": "hide-the-update-menu",
+    "隐藏-vpn-按需连接菜单项": "hide-the-vpn-on-demand-menu-item",
+    "所有窗口关闭后隐藏-macos-dock-图标": "hide-the-macos-dock-icon-after-all-windows-close"
+  },
+  "/docs/features/tsidp": {
+    "工作原理": "how-it-works",
+    "前提条件": "prerequisites",
+    "配置你的-tailnet": "configure-your-tailnet",
+    "部署-tsidp-实例": "deploy-a-tsidp-instance",
+    "使用-tsidp-管理凭证": "use-tsidp-to-manage-credentials",
+    "后续步骤": "next-steps"
+  },
+  "/docs/features/tsnet/how-to/create-basic-tsnet-app": {
+    "前提条件": "prerequisites",
+    "创建-tsnet-hello-world-程序": "create-a-tsnet-hello-world-program",
+    "运行程序": "run-the-program",
+    "使用-auth-key": "use-an-auth-key",
+    "控制持久化数据的目录": "control-the-directory-for-persistent-data",
+    "tsnet-与-go-http-栈": "tsnet-and-the-go-http-stack"
+  },
+  "/docs/features/tsnet/how-to/register-service": {
+    "简介": "introduction",
+    "前提条件": "prerequisites",
+    "步骤-1更新-tailnet-策略文件": "step-1-update-your-tailnet-policy-file",
+    "步骤-2生成认证密钥": "step-2-generate-an-auth-key",
+    "步骤-3使用-tsnet-包": "step-3-use-the-tsnet-package",
+    "步骤-4运行程序": "step-4-run-the-program",
+    "步骤-5连接到应用": "step-5-connect-to-the-application",
+    "结语": "conclusion"
+  },
+  "/docs/features/tsnet": {
+    "概述": "overview",
+    "在程序中引入-tsnet": "include-tsnet-in-your-program",
+    "使用-tsnetserver-进行调用": "make-calls-with-tsnetserver",
+    "设备创建与认证": "device-creation-and-authentication",
+    "更多信息": "additional-information"
+  },
+  "/docs/features/tsrecorder": {
+    "可以录制的内容": "what-you-can-record",
+    "录制是如何控制的": "how-recording-is-controlled",
+    "录制内容存储在哪里": "where-recordings-are-stored",
+    "设置-tsrecorder": "set-up-tsrecorder",
+    "查看录制内容": "view-recordings"
+  },
+  "/docs/features/user-group-provisioning": {
+    "在已有用户的-tailnet-中启用-scim-的影响": "impact-of-enabling-scim-in-a-tailnet-that-already-has-users",
+    "sso-与-scim-的注意事项": "sso-and-scim-considerations",
+    "邀请用户": "inviting-users",
+    "同步用户停用": "syncing-a-user-suspension",
+    "同步用户删除": "syncing-a-user-deletion",
+    "同步组成员关系": "syncing-group-membership",
+    "已知限制": "known-limitations"
+  },
+  "/docs/features/visual-editor": {
+    "编辑器模式": "editor-modes",
+    "通用访问规则": "general-access-rules",
+    "群组": "groups",
+    "标签": "tags",
+    "ip-集": "ip-sets",
+    "主机": "hosts",
+    "节点属性": "node-attributes",
+    "设备态势": "device-posture",
+    "自动审批": "auto-approvers",
+    "测试": "tests",
+    "数据同步": "data-synchronization",
+    "反馈": "feedback"
+  },
+  "/docs/features/webhooks/how-to/rotate-webhook-secret": {
+    "前提条件": "prerequisites",
+    "操作步骤": "instructions",
+    "后续步骤": "next-steps"
+  },
+  "/docs/features/webhooks": {
+    "工作原理": "how-it-works",
+    "前提条件": "prerequisites",
+    "设置-webhook-端点": "setting-up-a-webhook-endpoint",
+    "事件": "events",
+    "事件载荷": "events-payload",
+    "测试你的-webhook": "testing-your-webhook",
+    "事件发送失败后的重试": "retries-for-events-that-fail-to-send",
+    "更新订阅的事件": "updating-subscribed-events",
+    "webhook-密钥": "webhook-secret",
+    "轮换-webhook-密钥": "rotating-a-webhook-secret",
+    "删除端点": "deleting-an-endpoint",
+    "为现有端点使用新-webhook": "using-a-new-webhook-for-an-existing-endpoint",
+    "webhook-操作的审计日志": "audit-logging-of-webhook-actions",
+    "验证事件签名": "verifying-an-event-signature"
+  },
+  "/docs/features/workload-identity-federation": {
+    "工作原理": "how-it-works",
+    "设置联合身份": "set-up-a-federated-identity",
+    "与-tailscale-交换工作负载身份令牌": "exchange-workload-identity-tokens-with-tailscale",
+    "使用工作负载身份注册新节点": "register-new-nodes-using-workload-identity",
+    "参考": "reference",
+    "限制": "limitations"
+  },
+  "/docs/how-to/connect-ssh-linux-vm": {
+    "前提条件": "prerequisites",
+    "配置-tailscale-ssh": "configure-tailscale-ssh",
+    "使用-tailscale-ssh": "use-tailscale-ssh"
+  },
+  "/docs/how-to/connect-to-devices": {
+    "前提条件": "prerequisites",
+    "连接到-tailnet-中的设备": "connect-to-devices-in-your-tailnet",
+    "故障排查": "troubleshooting",
+    "进阶主题": "advanced-topics"
+  },
+  "/docs/how-to/connect-vpc": {
+    "前提条件": "prerequisites",
+    "创建-tailscale-子网路由器": "create-a-tailscale-subnet-router",
+    "使用子网路由器": "use-the-subnet-router"
+  },
+  "/docs/how-to/quickstart": {
+    "创建-tailnet": "create-a-tailnet",
+    "重命名设备": "rename-devices",
+    "使用-magicdns": "use-magicdns",
+    "邀请用户": "invite-users",
+    "添加设备": "add-devices",
+    "使用出口节点保护流量": "secure-traffic-using-exit-nodes",
+    "使用子网路由流量": "route-traffic-using-subnets",
+    "使用访问控制策略管理权限": "manage-permissions-with-access-control-policies",
+    "监控并记录流量": "monitor-and-log-traffic",
+    "使用场景": "use-cases",
+    "故障排查与支持": "troubleshooting-and-support"
+  },
+  "/docs/how-to/run-unattended": {
+    "前提条件": "prerequisites",
+    "启用无人值守模式": "enable-unattended-mode",
+    "验证无人值守模式": "verify-unattended-mode",
+    "禁用无人值守模式": "disable-unattended-mode",
+    "管理密钥过期": "manage-key-expiry",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/how-to/secure-ubuntu-server-with-ufw": {
+    "前提条件": "prerequisites",
+    "第-1-步ssh-连接到你的新-ubuntu-服务器": "step-1-ssh-into-your-new-ubuntu-server",
+    "第-2-步在-ubuntu-服务器上安装-tailscale": "step-2-install-tailscale-on-your-ubuntu-server",
+    "第-3-步通过-tailscale-进行-ssh": "step-3-ssh-over-tailscale",
+    "第-4-步启用-ufw": "step-4-enable-ufw",
+    "第-5-步限制所有其他流量": "step-5-restrict-all-other-traffic",
+    "第-6-步重启-ufw-和-ssh": "step-6-restart-ufw-and-ssh",
+    "第-7-步测试并验证": "step-7-test-and-verify",
+    "可选为所有-ssh-连接启用多因素认证mfa": "optional-enable-multifactor-authentication-mfa-for-all-ssh-connections"
+  },
+  "/docs/how-to/set-up-custom-control-server": {
+    "添加自定义控制服务器": "add-a-custom-control-server",
+    "移除自定义控制服务器": "remove-a-custom-control-server"
+  },
+  "/docs/how-to/set-up-high-availability": {
+    "选择路由选择选项": "choose-a-route-selection-option",
+    "应用连接器高可用性": "app-connector-high-availability",
+    "子网路由器高可用性": "subnet-router-high-availability",
+    "延伸阅读": "further-reading"
+  },
+  "/docs/how-to/set-up-https-certificates": {
+    "配置-https": "configure-https",
+    "禁用-https": "disable-https",
+    "检查证书状态": "check-certificate-status"
+  },
+  "/docs/how-to/set-up-small-tailscale": {
+    "前提条件": "prerequisites",
+    "第-1-步构建-tailscale": "step-1-building-tailscale",
+    "第-2-步构建更小的-tailscale-二进制文件": "step-2-building-a-smaller-tailscale-binary",
+    "第-3-步压缩-tailscale": "step-3-compressing-tailscale"
+  },
+  "/docs/automations": {
+    "基础设施即代码iac": "infrastructure-as-code",
+    "适用于-macos-和-ios-的-tailscale-快捷指令": "tailscale-shortcuts-for-macos-and-ios"
+  },
+  "/docs/chat-sandbox": {
+    "了解沙盒": "understand-the-sandbox",
+    "设置与运维": "set-up-and-operate",
+    "参考与故障排除": "reference-and-troubleshooting"
+  },
+  "/docs/develop-with-ai": {
+    "面向编码智能体的-tailscale-skill": "tailscale-skill-for-coding-agents",
+    "文档的-mcp-服务器": "mcp-server-for-the-documentation",
+    "向-ai-提问": "ask-ai",
+    "文档页面的-markdown-版本": "markdown-versions-of-documentation-pages"
+  },
+  "/docs/kubernetes": {
+    "前提条件": "prerequisites",
+    "设置": "setup",
+    "使用-kubernetes-operator": "use-the-kubernetes-operator",
+    "sidecar-示例": "sample-sidecar",
+    "用户态-sidecar": "userspace-sidecar",
+    "代理示例": "sample-proxy",
+    "子网路由器": "subnet-router",
+    "可选添加-dns-信息": "optional-add-dns-information",
+    "从-tailnet-中移除临时节点": "remove-ephemeral-nodes-from-a-tailnet"
+  },
+  "/docs/manage": {
+    "管理访问策略": "manage-access-policy",
+    "管理设备": "manage-devices",
+    "管理用户与用户角色": "manage-users-and-user-roles",
+    "管理域名所有权": "manage-domain-ownership"
+  },
+  "/docs/manage-users": {
+    "邀请用户加入你的-tailnet": "invite-users-to-your-tailnet",
+    "管理用户访问": "manage-user-access",
+    "在-tailscale-客户端中切换当前用户": "switch-the-active-user-in-the-tailscale-client"
+  },
+  "/docs/resources": {
+    "软件变更与发布阶段": "software-changes-and-release-stages",
+    "对比与安全": "comparisons-and-security",
+    "tailscale-社区项目": "tailscale-community-projects"
+  },
+  "/docs/route": {
+    "访问非-tailscale-设备": "access-non-tailscale-devices",
+    "路由全部互联网流量": "route-all-internet-traffic",
+    "控制对第三方应用的访问": "control-access-to-third-party-applications",
+    "选择-tailscale-的路由选择方式": "choose-how-tailscale-selects-routes",
+    "管理-dns": "manage-dns"
+  },
+  "/docs/secure-networks": {
+    "管理访问策略": "manage-access-policy",
+    "管理客户端访问": "manage-client-access",
+    "管理-tailnet-安全": "manage-tailnet-security"
+  },
+  "/docs/servers": {
+    "认证设备并验证身份": "authenticate-devices-and-verify-identity",
+    "保护远程访问并启用-tls-连接": "secure-remote-access-and-enable-tls-connections"
+  },
+  "/docs/support": {
+    "阅读我们的故障排查指南": "read-our-troubleshooting-guides",
+    "联系支持": "contact-support",
+    "向我们发送错误报告": "send-us-a-bug-report"
+  },
+  "/docs": {
+    "开始使用": "get-started",
+    "管理你的-tailnet": "manage-your-tailnet",
+    "扩展你的-tailnet": "expand-your-tailnet",
+    "资源与参考": "resources-and-reference"
+  },
+  "/docs/install/amazon-fire": {
+    "支持的硬件": "supported-hardware"
+  },
+  "/docs/install/android": {
+    "使用单点登录账户": "use-a-single-sign-on-account",
+    "使用二维码": "use-a-qr-code",
+    "使用生成的代码": "use-a-generated-code",
+    "mdm-部署": "mdm-deployments"
+  },
+  "/docs/install/appletv": {
+    "前提条件": "prerequisites",
+    "在-tvos-上安装-tailscale": "install-tailscale-on-tvos",
+    "访问远程媒体服务器": "access-remote-media-servers",
+    "使用设备出口节点": "use-a-device-exit-node",
+    "使用-mullvad-出口节点": "use-a-mullvad-exit-node",
+    "将-apple-tv-宣告为出口节点": "advertise-apple-tv-as-an-exit-node",
+    "将-apple-tv-宣告为子网路由器": "advertise-apple-tv-as-a-subnet-router",
+    "将-apple-tv-与-tailnet-断开连接": "disconnect-apple-tv-from-a-tailnet",
+    "停止使用其他设备作为出口节点": "stop-using-another-device-as-an-exit-node",
+    "停止将-apple-tv-用作出口节点": "stop-using-apple-tv-as-an-exit-node",
+    "测试设备延迟": "test-device-latency",
+    "故障排除": "troubleshooting"
+  },
+  "/docs/install/chromebook": {
+    "mdm-部署": "mdm-deployments"
+  },
+  "/docs/install/cloud/aws/aws-app-runner": {
+    "第-1-步生成认证密钥用于认证你的-aws-app-runner-容器": "step-1-generate-an-auth-key-to-authenticate-your-aws-app-runner-containers",
+    "第-2-步配置-dockerfile-以安装-tailscale": "step-2-configure-your-dockerfile-to-install-tailscale",
+    "从-tailnet-中移除临时节点": "remove-ephemeral-nodes-from-a-tailnet"
+  },
+  "/docs/install/cloud/aws/aws-lambda": {
+    "第-1-步生成认证密钥用于认证你的-aws-lambda-容器": "step-1-generate-an-auth-key-to-authenticate-your-aws-lambda-containers",
+    "第-2-步配置-dockerfile-以安装-tailscale": "step-2-configure-your-dockerfile-to-install-tailscale",
+    "从-tailnet-中移除临时节点": "remove-ephemeral-nodes-from-a-tailnet"
+  },
+  "/docs/install/cloud/aws/aws-lightsail": {
+    "第-1-步生成认证密钥用于认证你的-aws-lightsail-容器": "step-1-generate-an-auth-key-to-authenticate-your-aws-lightsail-containers",
+    "第-2-步配置-dockerfile-以安装-tailscale": "step-2-configure-your-dockerfile-to-install-tailscale",
+    "从-tailnet-中移除临时节点": "remove-ephemeral-nodes-from-a-tailnet"
+  },
+  "/docs/install/cloud/aws/aws-rds": {
+    "前提条件": "prerequisites",
+    "第-1-步设置子网路由器": "step-1-set-up-a-subnet-router",
+    "第-2-步配置-rds-安全策略": "step-2-configure-rds-security-policy",
+    "第-3-步为你的-tailnet-添加-aws-dns": "step-3-add-aws-dns-for-your-tailnet",
+    "第-4-步移除公开的-ssh-访问": "step-4-remove-public-ssh-access",
+    "第-5-步连接到-rds": "step-5-connect-to-rds"
+  },
+  "/docs/install/cloud/aws": {
+    "概述": "overview",
+    "前提条件": "prerequisites",
+    "架构": "architecture",
+    "费用与许可": "costs-and-licenses",
+    "安全注意事项": "security-considerations",
+    "部署步骤": "deployment-steps",
+    "服务器设置": "server-setup",
+    "高可用性": "high-availability",
+    "4via6-子网路由器": "4via6-subnet-routers"
+  },
+  "/docs/install/cloud/aws/quickstart": {
+    "手动安装": "install-manually",
+    "自动安装": "install-automatically",
+    "后续步骤": "next-steps"
+  },
+  "/docs/install/cloud/azure/azure-app-service": {
+    "第-1-步生成认证密钥用于认证你的-azure-app-service-应用": "step-1-generate-an-auth-key-to-authenticate-your-azure-app-service-apps",
+    "第-2-步配置-dockerfile-以安装-tailscale": "step-2-configure-your-dockerfile-to-install-tailscale",
+    "从-tailnet-中移除临时节点": "remove-ephemeral-nodes-from-a-tailnet"
+  },
+  "/docs/install/cloud/azure/linux": {
+    "前提条件": "prerequisites",
+    "第-1-步为-linux-虚拟机设置-tailscale-客户端": "step-1-set-up-the-tailscale-client-for-linux-vms",
+    "第-2-步从虚拟机宣告路由": "step-2-advertise-routes-from-the-vm",
+    "第-3-步为你的-tailnet-添加-azure-dns": "step-3-add-azure-dns-for-your-tailnet",
+    "第-4-步移除公开的-ssh-访问": "step-4-remove-public-ssh-access"
+  },
+  "/docs/install/cloud/azure/windows": {
+    "前提条件": "prerequisites",
+    "第-1-步为-windows-虚拟机设置-tailscale-客户端": "step-1-set-up-the-tailscale-client-for-windows-vms",
+    "第-2-步从虚拟机宣告路由": "step-2-advertise-routes-from-the-vm",
+    "第-3-步为你的-tailnet-添加-azure-dns": "step-3-add-azure-dns-for-your-tailnet",
+    "第-4-步移除公开的-ssh-访问": "step-4-remove-public-ssh-access",
+    "4via6-子网路由器": "4via6-subnet-routers"
+  },
+  "/docs/install/cloud/cloudrun": {
+    "第-1-步生成认证密钥用于认证你的-cloud-run-容器": "step-1-generate-an-auth-key-to-authenticate-your-cloud-run-containers",
+    "第-2-步配置-dockerfile-以安装-tailscale": "step-2-configure-your-dockerfile-to-install-tailscale",
+    "从-tailnet-中移除临时节点": "remove-ephemeral-nodes-from-a-tailnet"
+  },
+  "/docs/install/cloud/coder": {
+    "集成": "integration",
+    "授权": "authorization"
+  },
+  "/docs/install/cloud/flydotio": {
+    "第-1-步生成认证密钥用于认证你的-fly-上的应用": "step-1-generate-an-auth-key-to-authenticate-your-app-on-fly",
+    "第-2-步配置-dockerfile-以安装-tailscale": "step-2-configure-your-dockerfile-to-install-tailscale",
+    "从-tailnet-中移除临时节点": "remove-ephemeral-nodes-from-a-tailnet"
+  },
+  "/docs/install/cloud/gce": {
+    "前提条件": "prerequisites",
+    "第-1-步为虚拟机设置-tailscale-客户端": "step-1-set-up-the-tailscale-client-for-the-vm",
+    "第-2-步放行-udp-端口-41641": "step-2-allow-udp-port-41641",
+    "第-3-步从虚拟机宣告路由": "step-3-advertise-routes-from-the-vm",
+    "第-4-步为你的-tailnet-添加-gce-dns": "step-4-add-gce-dns-for-your-tailnet",
+    "第-5-步移除公开的-ssh-访问": "step-5-remove-public-ssh-access"
+  },
+  "/docs/install/cloud/gitpod": {
+    "启动-tailscale": "start-tailscale",
+    "向-tailscale-认证": "authenticate-to-tailscale"
+  },
+  "/docs/install/cloud/heroku": {
+    "第-1-步生成认证密钥用于认证你的-heroku-应用": "step-1-generate-an-auth-key-to-authenticate-your-heroku-apps",
+    "第-2-步配置-dockerfile-以安装-tailscale": "step-2-configure-your-dockerfile-to-install-tailscale",
+    "从-tailnet-中移除临时节点": "remove-ephemeral-nodes-from-a-tailnet"
+  },
+  "/docs/install/cloud/hetzner": {
+    "前提条件": "prerequisites",
+    "第-1-步为虚拟机设置-tailscale-客户端": "step-1-set-up-the-tailscale-client-for-the-vm",
+    "第-2-步放行-udp-端口-41641": "step-2-allow-udp-port-41641"
+  },
+  "/docs/install/cloud/koyeb": {
+    "步骤-1生成认证密钥在-koyeb-上认证你的服务": "step-1-generate-an-auth-key-to-authenticate-your-service-on-koyeb",
+    "步骤-2配置-dockerfile-以安装-tailscale": "step-2-configure-your-dockerfile-to-install-tailscale",
+    "步骤-3将应用部署到-koyeb": "step-3-deploy-your-app-to-koyeb",
+    "从-tailnet-中移除临时节点": "remove-ephemeral-nodes-from-a-tailnet"
+  },
+  "/docs/install/cloud/oracle-cloud": {
+    "前提条件": "prerequisites",
+    "步骤-1为虚拟机设置-tailscale-客户端": "step-1-set-up-the-tailscale-client-for-the-vm",
+    "步骤-2放行-udp-端口-41641": "step-2-allow-udp-port-41641",
+    "步骤-3从虚拟机宣告路由": "step-3-advertise-routes-from-the-vm",
+    "步骤-4为你的-tailnet-添加-oracle-dns": "step-4-add-oracle-dns-for-your-tailnet",
+    "步骤-5移除公开的-ssh-访问": "step-5-remove-public-ssh-access",
+    "故障排除": "troubleshooting"
+  },
+  "/docs/install": {
+    "安装与更新说明": "install-and-update-instructions",
+    "安装与更新方式": "install-and-update-options",
+    "卸载说明": "uninstall-instructions"
+  },
+  "/docs/install/ios": {
+    "mdm-部署": "mdm-deployments"
+  },
+  "/docs/install/linux": {
+    "主流发行版": "mainstream-distributions",
+    "其他发行版": "other-distributions",
+    "静态二进制文件": "static-binaries",
+    "验证安装": "verify-the-installation",
+    "进一步探索": "further-exploration",
+    "故障排除": "troubleshooting"
+  },
+  "/docs/install/mac": {
+    "mdm-部署": "mdm-deployments",
+    "故障排除": "troubleshooting"
+  },
+  "/docs/install/opnsense": {
+    "安装": "installation",
+    "连接": "connect",
+    "配置防火墙规则": "configure-firewall-rules",
+    "更新-tailscale": "update-tailscale",
+    "让-lan-客户端建立直连": "direct-connections-for-lan-clients",
+    "静态-nat-端口映射": "static-nat-port-mapping",
+    "延伸阅读": "further-reading",
+    "特别致谢": "special-thanks"
+  },
+  "/docs/install/windows": {
+    "mdm-部署": "mdm-deployments",
+    "故障排除": "troubleshooting"
+  },
+  "/docs/install/windows/msi": {
+    "安装步骤": "to-install",
+    "卸载步骤": "to-uninstall",
+    "属性": "properties"
+  },
+  "/docs/install/windows/wsl2": {
+    "安装步骤": "to-install",
+    "卸载步骤": "to-uninstall",
+    "注意事项": "considerations"
+  },
+  "/docs/install/with-cloud-init": {
+    "cloud-config-示例模板": "a-cloud-config-sample-template",
+    "厂商专属-cloud-init-文档": "vendor-specific-cloud-init-documentation"
+  },
+  "/docs/integrations/bitbucket/gitops": {
+    "前提条件": "prerequisites",
+    "设置你的-gitops-配置": "set-up-your-gitops-configuration",
+    "推送对-tailnet-策略文件的更改": "push-changes-to-your-tailnet-policy-file",
+    "防止他人意外修改你的-tailnet-策略文件": "prevent-others-from-accidentally-modifying-your-tailnet-policy-file",
+    "撤销对-tailnet-策略文件的最近一次更改": "revert-the-most-recent-change-to-your-tailnet-policy-file",
+    "移除你的-gitops-配置": "remove-your-gitops-configuration",
+    "补充信息": "additional-information"
+  },
+  "/docs/integrations/captive-portals": {
+    "强制门户通知": "captive-portal-notifications",
+    "tailscale-如何检测强制门户": "how-tailscale-detects-captive-portals",
+    "禁用强制门户检测": "disable-captive-portal-detection"
+  },
+  "/docs/integrations/codesandbox": {
+    "集成": "integration",
+    "授权": "authorization"
+  },
+  "/docs/integrations/codeserver": {
+    "集成": "integration",
+    "授权": "authorization"
+  },
+  "/docs/integrations/control-d": {
+    "前提条件": "prerequisites",
+    "将-control-d-用作全局名称服务器": "use-control-d-as-a-global-nameserver",
+    "为不同设备使用不同的-control-d-配置档": "use-different-control-d-profiles-for-different-devices",
+    "带标签设备的优先级": "priority-for-tagged-devices"
+  },
+  "/docs/integrations/crunchy-bridge": {
+    "前提条件": "prerequisites",
+    "集成": "integration",
+    "限制": "limitations"
+  },
+  "/docs/integrations/firewalls": {
+    "延迟与安全的权衡": "latency-vs-security",
+    "防火墙兼容性与解决方法": "firewall-compatibility-and-workarounds",
+    "只允许经-tailscale-的流量": "only-allow-traffic-over-tailscale"
+  },
+  "/docs/integrations/firewalls/opnsense-unbound": {
+    "unbound-dns-配置": "unbound-dns-configuration"
+  },
+  "/docs/integrations/firewalls/palo-alto-firewall": {
+    "连接类型": "types-of-connections",
+    "pan-os-111x-及更高版本persistent-dynamic-ip-and-port": "pan-os-111x-and-later-persistent-dynamic-ip-and-port",
+    "更早的-pan-os-版本static-ip": "earlier-pan-os-releases-static-ip"
+  },
+  "/docs/integrations/firewalls/pfsense": {
+    "局域网客户端的直连": "direct-connections-for-lan-clients",
+    "静态-nat-端口映射": "static-nat-port-mapping"
+  },
+  "/docs/integrations/github/github-action": {
+    "前提条件": "prerequisites",
+    "工作原理": "how-it-works",
+    "将-tailscale-github-action-添加到工作流": "add-the-tailscale-github-action-to-a-workflow",
+    "使用-oauth-客户端": "using-an-oauth-client",
+    "认证密钥相关注意事项": "auth-key-considerations",
+    "用-ping-验证连通性": "ping-to-verify-connectivity",
+    "tailscale-客户端版本": "tailscale-client-version",
+    "缓存-tailscale-二进制文件": "cache-tailscale-binaries"
+  },
+  "/docs/integrations/github/github-codespaces": {
+    "集成": "integration",
+    "授权": "authorization"
+  },
+  "/docs/integrations/github/gitops": {
+    "前提条件": "prerequisites",
+    "用于同步-tailscale-访问控制策略的-github-action": "github-action-to-sync-tailscale-access-control-policies",
+    "设置你的-gitops-配置": "set-up-your-gitops-configuration",
+    "推送对-tailnet-策略文件的更改": "push-changes-to-your-tailnet-policy-file",
+    "防止他人意外修改你的-tailnet-策略文件": "prevent-others-from-accidentally-modifying-your-tailnet-policy-file",
+    "撤销对-acl-的最近一次更改": "revert-the-most-recent-change-to-your-acl",
+    "移除你的-gitops-配置": "remove-your-gitops-configuration",
+    "补充信息": "additional-information"
+  },
+  "/docs/integrations/gitlab/gitlab-runner": {
+    "工作原理": "how-it-works",
+    "将-tailscale-添加到-gitlab-runner": "add-tailscale-to-a-gitlab-runner"
+  },
+  "/docs/integrations/gitlab/gitops": {
+    "前提条件": "prerequisites",
+    "用于同步-tailscale-访问控制策略的-gitlab-ci-文件": "gitlab-ci-file-to-sync-tailscale-access-control-policies",
+    "设置你的-gitops-配置": "set-up-your-gitops-configuration",
+    "推送对-tailnet-策略文件的更改": "push-changes-to-your-tailnet-policy-file",
+    "防止他人意外修改你的-tailnet-策略文件": "prevent-others-from-accidentally-modifying-your-tailnet-policy-file",
+    "撤销对-tailnet-策略文件的最近一次更改": "revert-the-most-recent-change-to-your-tailnet-policy-file",
+    "移除你的-gitops-配置": "remove-your-gitops-configuration",
+    "补充信息": "additional-information"
+  },
+  "/docs/integrations/google-sync": {
+    "前提条件": "prerequisites",
+    "设置-google-用户与组同步": "set-up-google-user--group-sync",
+    "同步所有用户": "sync-all-users",
+    "管理组": "manage-groups",
+    "取消同步未分配的用户": "unsync-unassigned-users",
+    "强制同步": "force-a-sync",
+    "在-tailnet-策略文件中使用组": "use-groups-in-your-tailnet-policy-file",
+    "禁用-google-用户与组同步": "disable-google-user--group-sync",
+    "限制": "limitations"
+  },
+  "/docs/integrations/grafana": {
+    "用-tailscale-保护-grafana-仪表板": "secure-grafana-dashboards-with-tailscale",
+    "使用-tailscale-验证-grafana-用户身份": "authenticate-grafana-users-using-tailscale",
+    "与-grafana-cloud-private-data-source-connect-集成": "integrate-with-grafana-cloud-private-data-source-connect",
+    "用-grafana-监控你的-tailnet": "monitor-your-tailnet-with-grafana"
+  },
+  "/docs/integrations/identity/custom-oidc": {
+    "要求": "requirements",
+    "webfinger-设置": "webfinger-setup",
+    "身份提供方设置": "identity-provider-setup",
+    "tailscale-设置": "tailscale-setup",
+    "添加更多-tailnet-用户": "additional-tailnet-users",
+    "迁移现有-tailnet": "migrate-an-existing-tailnet",
+    "注意事项": "notes"
+  },
+  "/docs/integrations/identity/entra/entra-id-scim": {
+    "功能": "features",
+    "要求": "requirements",
+    "分步配置说明": "step-by-step-configuration-instructions",
+    "在-tailscale-中": "in-tailscale",
+    "在-microsoft-entra-id-中": "in-microsoft-entra-id",
+    "限制对-tailscale-应用程序的访问": "restricting-access-to-the-tailscale-application",
+    "支持的属性映射": "supported-attribute-mappings",
+    "更新-microsoft-entra-id-群组名称": "updating-microsoft-entra-id-group-names",
+    "在-microsoft-entra-id-中-1": "in-microsoft-entra-id-1",
+    "在-tailscale-中-1": "in-tailscale-1"
+  },
+  "/docs/integrations/identity/github": {
+    "创建-github-个人-tailnet": "create-a-github-personal-tailnet",
+    "创建-github-组织-tailnet": "create-a-github-organization-tailnet",
+    "加入-github-个人-tailnet": "join-a-github-personal-tailnet",
+    "加入-github-组织-tailnet": "join-a-github-organization-tailnet",
+    "迁入与迁出-github-tailnet": "migration-to-and-from-a-github-tailnet",
+    "多个-tailnet": "multiple-tailnets"
+  },
+  "/docs/integrations/identity/google-sso": {
+    "将-tailscale-加入第三方应用白名单": "allowlist-tailscale-as-a-third-party-app"
+  },
+  "/docs/integrations/identity": {
+    "设置身份提供方": "set-up-an-identity-provider",
+    "更换身份提供方": "changing-identity-providers",
+    "tailscale-会从身份提供方获取哪些信息": "what-tailscale-accesses-from-identity-providers"
+  },
+  "/docs/integrations/identity/okta": {
+    "目录": "contents",
+    "支持的功能": "supported-features",
+    "要求": "requirements",
+    "配置步骤": "configuration-steps",
+    "注意事项": "notes",
+    "okta-发起的登录": "okta-initiated-login"
+  },
+  "/docs/integrations/identity/okta/okta-scim": {
+    "功能": "features",
+    "要求": "requirements",
+    "分步配置说明": "step-by-step-configuration-instructions",
+    "在-tailscale-中": "in-tailscale",
+    "在-okta-中": "in-okta",
+    "在-okta-中-1": "in-okta-1",
+    "在-tailscale-中-1": "in-tailscale-1",
+    "更新-okta-群组名称": "updating-okta-group-names",
+    "在-okta-中-2": "in-okta-2",
+    "在-tailscale-中-2": "in-tailscale-2"
+  },
+  "/docs/integrations/identity/passkeys": {
+    "工作原理": "how-it-works",
+    "支持的-passkey-管理器": "supported-passkey-managers",
+    "passkey-用户名规则": "passkey-username-rules",
+    "邀请-passkey-用户": "invite-a-passkey-user",
+    "通过邀请创建-passkey-用户": "create-a-passkey-user-from-an-invite",
+    "使用现有-passkey-登录": "sign-in-with-an-existing-passkey",
+    "限制": "limitations"
+  },
+  "/docs/integrations/identity/switch-identity-provider": {
+    "更换为其他身份提供方": "switch-to-a-different-identity-provider",
+    "限制": "limitations"
+  },
+  "/docs/integrations/jit-access": {
+    "使用第三方集成管理你的-jit-访问": "manage-your-jit-access-with-a-third-party-integration"
+  },
+  "/docs/integrations/jit-conductorone": {
+    "前提条件": "prerequisites",
+    "集成": "integration"
+  },
+  "/docs/integrations/jit-opal": {
+    "前提条件": "prerequisites",
+    "集成": "integration"
+  },
+  "/docs/integrations/mdm/android": {
+    "在-android-上分发-tailscale": "distributing-tailscale-on-android",
+    "在-android-上使用-tailscale-系统策略": "using-tailscale-system-policies-on-android"
+  },
+  "/docs/integrations/mdm/google-workspace": {
+    "使用-google-workspace-分发-android-版-tailscale": "distribute-tailscale-for-android-using-google-workspace",
+    "使用-google-workspace-在-android-上部署-tailscale-系统策略": "deploy-tailscale-system-policies-on-android-using-google-workspace",
+    "使用-google-workspace-在-chromeos-上部署-tailscale-系统策略": "deploy-tailscale-system-policies-on-chromeos-using-google-workspace"
+  },
+  "/docs/integrations/mdm/ios": {
+    "配置描述文件": "configuration-profiles"
+  },
+  "/docs/integrations/mdm/iru": {
+    "使用-kandji-auto-apps-部署-tailscale": "deploying-tailscale-using-kandji-auto-apps",
+    "使用-kandji-部署-tailscale-系统策略": "deploying-tailscale-system-policies-using-kandji"
+  },
+  "/docs/integrations/mdm/jamf": {
+    "使用-jamf-pro-分发-tailscale": "distributing-tailscale-using-jamf-pro",
+    "使用-jamf-pro-部署系统策略": "deploying-system-policies-using-jamf-pro"
+  },
+  "/docs/integrations/mdm/jumpcloud": {
+    "使用-jumpcloud-在-macos-上部署-tailscale": "deploying-tailscale-on-macos-using-jumpcloud"
+  },
+  "/docs/integrations/mdm/linux": {
+    "在-linux-上安装-tailscale": "installing-tailscale-on-linux",
+    "在-linux-上使用-tailscale-系统策略": "using-tailscale-system-policies-on-linux",
+    "示例": "example"
+  },
+  "/docs/integrations/mdm/mac": {
+    "配置描述文件": "configuration-profiles",
+    "使用-tailscale-描述文件清单": "using-the-tailscale-profile-manifest",
+    "配置所需的系统策略键": "configure-the-required-system-policy-keys",
+    "配置-ondemandrules-字典": "configure-the-ondemandrules-dictionary",
+    "mdm-初始部署": "mdm-initial-deployment",
+    "基于-mdm-的升级": "mdm-based-upgrades",
+    "macos-networkextension-框架-bug-的解决方法": "workarounds-for-macos-networkextension-framework-bugs"
+  },
+  "/docs/integrations/mdm/microsoft-intune": {
+    "为-macosiosipados-创建上传并部署-tailscale-配置描述文件": "create-upload-and-deploy-a-tailscale-configuration-profile-for-macosiosipados",
+    "为-windows-创建上传并部署-tailscale-配置描述文件": "create-upload-and-deploy-a-tailscale-configuration-profile-for-windows",
+    "使用-microsoft-intune-为-android-部署-tailscale": "deploy-tailscale-for-android-using-microsoft-intune"
+  },
+  "/docs/integrations/mdm/simplemdm": {
+    "创建并上传-tailscale-配置描述文件": "create-and-upload-a-tailscale-configuration-profile",
+    "将-tailscale-描述文件分配给一组设备": "assign-the-tailscale-profile-to-a-group-of-devices"
+  },
+  "/docs/integrations/mdm/tinymdm": {
+    "使用-tinymdm-分发-android-版-tailscale": "distribute-tailscale-for-android-using-tinymdm",
+    "使用-tinymdm-在-android-上部署-tailscale-系统策略": "deploy-tailscale-system-policies-on-android-using-tinymdm"
+  },
+  "/docs/integrations/nextdns": {
+    "哪些信息会共享给-nextdns": "what-information-is-shared-with-nextdns",
+    "前提条件": "prerequisites",
+    "将-nextdns-用作全局域名服务器": "use-nextdns-as-a-global-nameserver",
+    "为不同设备使用不同的-nextdns-配置档案": "use-different-nextdns-profiles-for-different-devices",
+    "禁止与-nextdns-共享设备元数据": "disable-sharing-device-metadata-with-nextdns"
+  },
+  "/docs/integrations/open-vscode": {
+    "集成": "integration",
+    "授权": "authorization"
+  },
+  "/docs/integrations/pikvm": {
+    "前提条件": "prerequisites",
+    "安装-tailscale": "install-tailscale",
+    "访问你的-pikvm-设备": "access-your-pikvm-device"
+  },
+  "/docs/integrations/proxmox": {
+    "启用对-proxmox-web-ui-的-https-访问": "enable-https-access-to-the-proxmox-web-ui",
+    "故障排除": "troubleshooting"
+  },
+  "/docs/integrations/pulumi-provider": {
+    "安装步骤": "installation-steps",
+    "支持": "support"
+  },
+  "/docs/integrations/qnap": {
+    "受支持的-qnap-硬件": "supported-qnap-hardware",
+    "安装步骤": "installation-steps",
+    "功能": "features",
+    "使用-tailscale-cli": "using-the-tailscale-cli",
+    "特别致谢": "special-thanks"
+  },
+  "/docs/integrations/synology": {
+    "功能与优势": "features-and-benefits",
+    "使用-synology-package-center-安装": "install-using-synology-package-center",
+    "安排自动更新": "schedule-automatic-updates",
+    "启用出站连接": "enable-outbound-connections",
+    "调整-synology-防火墙设置": "adjust-synology-firewall-settings",
+    "故障排除": "troubleshooting",
+    "在-dsm-上手动安装-tailscale": "install-tailscale-on-dsm-manually",
+    "限制与已知问题": "limitations-and-known-issues",
+    "特别致谢": "special-thanks"
+  },
+  "/docs/integrations/terraform-provider": {
+    "凭证与-tailnet-配置": "credentials-and-tailnet-configuration",
+    "特别致谢": "special-thanks",
+    "支持": "support"
+  },
+  "/docs/integrations/truenas": {
+    "环境要求": "requirements",
+    "生成认证密钥": "generate-authentication-keys",
+    "安装并配置-tailscale": "install-and-configure-tailscale",
+    "让-tailnet-流量经由-truenas-路由": "route-tailnet-traffic-through-truenas",
+    "让非-tailnet-流量经由-truenas-路由": "route-non-tailnet-traffic-through-truenas",
+    "配置-truenas-zfs-复制": "configure-truenas-zfs-replication"
+  },
+  "/docs/integrations/unraid": {
+    "环境要求": "requirements",
+    "在-unraid-中安装-tailscale": "install-tailscale-in-unraid",
+    "将-unraid-用作-tailscale-出口节点": "unraid-as-a-tailscale-exit-node",
+    "将-unraid-用作-tailscale-子网路由器": "unraid-as-a-tailscale-subnet-router",
+    "docker-与-tailscale-的原生集成": "native-docker-and-tailscale-integration"
+  },
+  "/docs/integrations/vscode-extension": {
+    "下载并安装扩展": "download-and-install-the-extension",
+    "使用-machine-explorer": "using-the-machine-explorer",
+    "启动-tailscale-funnel": "start-tailscale-funnel",
+    "故障排除": "troubleshooting",
+    "配置": "configuration",
+    "解决-ssh-用户名的常见问题": "resolving-common-issues-with-ssh-usernames",
+    "更改根目录": "changing-the-root-directory"
+  },
+  "/docs/integrations/web-servers/caddy/caddy-certificates": {
+    "允许非-root-用户获取证书": "provide-non-root-users-with-access-to-fetch-certificate"
+  },
+  "/docs/kubernetes-operator/api-server-access/auth-and-rbac": {
+    "模拟机制的工作原理": "how-impersonation-works",
+    "使用授权模拟-kubernetes-组": "use-grants-to-impersonate-kubernetes-groups",
+    "使用标签模拟-kubernetes-组": "use-tags-to-impersonate-kubernetes-groups",
+    "使用-tailscale-用户身份": "use-tailscale-user-identity"
+  },
+  "/docs/kubernetes-operator/api-server-access": {
+    "身份验证模式默认": "auth-mode-default",
+    "noauth-模式": "noauth-mode",
+    "进程内代理": "in-process-proxy",
+    "专用代理proxygroup": "dedicated-proxy-proxygroup",
+    "限制": "limitations",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/api-server-access/noauth-mode": {
+    "何时使用-noauth-模式": "when-to-use-noauth-mode",
+    "前提条件": "prerequisites",
+    "以-noauth-模式安装进程内代理": "install-the-in-process-proxy-in-noauth-mode",
+    "以-noauth-模式用-proxygroup-部署": "deploy-with-proxygroup-in-noauth-mode",
+    "身份验证与授权": "authentication-and-authorization",
+    "配置-kubeconfig": "configure-kubeconfig",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/api-server-access/setup-api-over-tailscale": {
+    "前提条件": "prerequisites",
+    "使用-proxygroup-部署高可用代理": "deploy-a-high-availability-proxy-with-proxygroup",
+    "配置-kubeconfig": "configure-kubeconfig",
+    "配置-kubernetes-rbac": "configure-kubernetes-rbac",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/concepts/architecture": {
+    "api-服务器代理": "api-server-proxy",
+    "l3-入站": "l3-ingress",
+    "l7-入站": "l7-ingress",
+    "l3-出站": "l3-egress",
+    "recorder-节点": "recorder-nodes"
+  },
+  "/docs/kubernetes-operator/concepts/dnsconfig": {
+    "示例": "example",
+    "从私有镜像仓库拉取名称服务器镜像": "pull-the-nameserver-image-from-a-private-registry",
+    "工作原理": "how-it-works",
+    "与-coredns-集成": "integrate-with-coredns",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/concepts/proxyclass": {
+    "示例": "example",
+    "如何应用-proxyclass": "how-to-apply-a-proxyclass",
+    "默认-proxyclass": "default-proxyclass",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/concepts/proxygroup": {
+    "类型": "types",
+    "创建的资源": "created-resources",
+    "使用方法": "how-to-use",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/connector/deploy-app-connector": {
+    "前提条件": "prerequisites",
+    "部署应用连接器": "deploy-the-app-connector",
+    "已知问题与限制": "known-issues-and-limitations"
+  },
+  "/docs/kubernetes-operator/connector/deploy-subnet-router": {
+    "前提条件": "prerequisites",
+    "部署出口节点或子网路由器": "deploy-an-exit-node-or-subnet-router",
+    "通告-4via6-路由": "advertise-a-4via6-route",
+    "自定义": "customization",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/kubernetes-operator/connector": {
+    "connector-的能力": "connector-capabilities",
+    "connector-配置示例": "example-connector-configuration",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/egress/access-ip-behind-subnet-router": {
+    "前提条件": "prerequisites",
+    "创建接受路由的-proxyclass": "create-a-proxyclass-to-accept-routes",
+    "创建出站-proxygroup": "create-an-egress-proxygroup",
+    "创建出站-kubernetes-service": "create-an-egress-kubernetes-service",
+    "验证访问": "verify-access",
+    "访问-4via6-地址": "access-a-4via6-address",
+    "限制": "limitations",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/egress/access-tailnet-service": {
+    "前提条件": "prerequisites",
+    "创建出站-proxygroup": "create-an-egress-proxygroup",
+    "创建出站-kubernetes-service": "create-an-egress-kubernetes-service",
+    "验证出站服务": "verify-the-egress-service",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/egress/enable-magicdns-resolution": {
+    "前提条件": "prerequisites",
+    "部署-dnsconfig-资源": "deploy-the-dnsconfig-resource",
+    "获取名称服务器-ip": "get-the-nameserver-ip",
+    "配置-coredns": "configure-coredns",
+    "验证名称解析": "verify-name-resolution",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/egress/expose-rds-to-tailnet": {
+    "前提条件": "prerequisites",
+    "使用-kubernetes-externalname-service-暴露云服务": "expose-a-cloud-service-using-a-kubernetes-externalname-service",
+    "使用-connector-暴露-cidr-网段": "expose-a-cidr-range-using-a-connector",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/egress": {
+    "概述": "overview",
+    "独立出站": "standalone-egress",
+    "高可用ha出站": "high-availability-ha-egress",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator": {
+    "探索文档": "explore-the-documentation"
+  },
+  "/docs/kubernetes-operator/ingress/expose-workload-to-internet": {
+    "前提条件": "prerequisites",
+    "更新-tailnet-策略文件": "update-tailnet-policy-file",
+    "部署示例应用": "deploy-a-sample-application",
+    "创建-funnel-ingress": "create-the-funnel-ingress",
+    "访问你的服务": "access-your-service",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/ingress/expose-workload-to-tailnet-l3": {
+    "前提条件": "prerequisites",
+    "创建-proxygroup": "create-a-proxygroup",
+    "部署示例应用": "deploy-a-sample-application",
+    "使用-l3-ingress-暴露服务": "expose-the-service-with-l3-ingress",
+    "访问你的服务": "access-your-service"
+  },
+  "/docs/kubernetes-operator/ingress/expose-workload-to-tailnet-l7": {
+    "前提条件": "prerequisites",
+    "创建-proxygroup": "create-a-proxygroup",
+    "部署示例应用": "deploy-a-sample-application",
+    "使用-ingress-和-proxygroup-公开服务": "expose-the-service-with-an-ingress-and-proxygroup",
+    "访问你的服务": "access-your-service"
+  },
+  "/docs/kubernetes-operator/ingress": {
+    "面向-http-和-https-的独立-l7-入站": "standalone-layer-7-ingress-for-http-and-https",
+    "独立-l3-入站tcpudp": "standalone-layer-3-ingress-for-tcpudp",
+    "高可用ha入站": "high-availability-ha-ingress",
+    "tls-证书与限制": "tls-certificates-and-limits",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/ingress/multi-cluster": {
+    "前提条件": "prerequisites",
+    "配置集群": "configure-the-clusters",
+    "测试暂存环境": "test-the-staging-environment",
+    "切换到生产证书": "switch-to-production-certificates",
+    "测试生产环境": "test-the-production-environment",
+    "区域路由的工作原理": "how-regional-routing-works",
+    "切换到-magicroute-测试版": "switch-to-magicroute-beta",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/ingress/multi-cluster-service-mirroring": {
+    "工作原理": "how-it-works"
+  },
+  "/docs/kubernetes-operator/install-operator": {
+    "前提条件": "prerequisites",
+    "配置标签和-oauth-凭证": "configure-tags-and-oauth-credentials",
+    "安装-operator": "install-the-operator",
+    "验证": "validation",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/manage-and-configure/configure-static-endpoints": {
+    "配置防火墙规则": "configure-firewall-rules",
+    "配置静态端点": "configure-static-endpoints"
+  },
+  "/docs/kubernetes-operator/manage-and-configure/high-availability": {
+    "副本": "replicas",
+    "使用-proxyclass-进行配置": "configure-with-proxyclass",
+    "tls-证书": "tls-certificates",
+    "出站优雅故障转移": "egress-graceful-failover",
+    "静态端点": "static-endpoints",
+    "多集群": "multi-cluster",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/manage-and-configure/lets-encrypt-rate-limits": {
+    "避开速率限制": "avoid-the-rate-limits",
+    "进一步探索": "further-exploration",
+    "在现有部署上启用": "enable-on-an-existing-deployment",
+    "删除保护": "deletion-protection"
+  },
+  "/docs/kubernetes-operator/manage-and-configure/multi-tailnet": {
+    "前提条件": "prerequisites",
+    "创建-tailnet-资源": "create-a-tailnet-resource",
+    "配置资源以使用特定-tailnet": "configure-resources-to-use-a-specific-tailnet"
+  },
+  "/docs/kubernetes-operator/manage-and-configure/proxy-group-policy": {
+    "前提条件": "prerequisites",
+    "多租户示例": "multi-tenant-example"
+  },
+  "/docs/kubernetes-operator/manage-and-configure/workload-identity-federation": {
+    "准备集群": "prepare-the-cluster",
+    "获取集群的颁发者issuer": "get-your-clusters-issuer",
+    "配置联合身份": "configure-a-federated-identity",
+    "安装或升级-tailscale-kubernetes-operator": "install-or-upgrade-the-tailscale-kubernetes-operator",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/peer-relay": {
+    "前提条件": "prerequisites",
+    "peerrelay-配置示例": "example-peerrelay-configuration",
+    "配置授权策略": "configure-a-grant-policy",
+    "部署-peerrelay": "deploy-a-peerrelay",
+    "对等中继的高可用": "high-availability-for-a-peer-relay",
+    "自定义-loadbalancer-service": "customize-the-loadbalancer-service",
+    "在-aws-上部署": "deploy-on-aws",
+    "自定义": "customization",
+    "静态端点": "static-endpoints",
+    "验证对等中继": "verify-the-peer-relay",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/kubernetes-operator/quickstart": {
+    "tailscale-kubernetes-operator-做什么": "what-the-tailscale-kubernetes-operator-does",
+    "前提条件": "prerequisites",
+    "初始设置": "setup",
+    "用例": "use-cases",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/recorder/deploy-tsrecorder": {
+    "前提条件": "prerequisites",
+    "配置标签所有权": "configure-tag-ownership",
+    "创建录制器": "create-a-recorder",
+    "验证会话录制": "verify-session-recording",
+    "配置存储": "configure-storage",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/recorder": {
+    "kubectl-会话录制": "kubectl-session-recording",
+    "api-请求事件录制": "api-request-event-recordings",
+    "录制的路由方式": "how-recordings-are-routed",
+    "失败策略": "failure-policy",
+    "recorder-自定义资源": "the-recorder-custom-resource",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/recorder/kubectl-session-recording": {
+    "前提条件": "prerequisites",
+    "基本录制": "basic-recording",
+    "强制录制": "enforced-recording",
+    "与身份模拟结合使用": "combining-with-impersonation",
+    "启用-api-请求事件录制": "enable-api-request-event-recording",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/kubernetes-operator/reference/compatibility": {
+    "版本支持": "version-support",
+    "基础设施与网络": "infrastructure-and-networking",
+    "云服务商专属事项": "cloud-provider-specifics",
+    "证书与维护": "certificates-and-maintenance",
+    "ciliumkube-proxy-replacement-模式": "cilium-kube-proxy-replacement-mode"
+  },
+  "/docs/kubernetes-operator/reference/ipv6": {
+    "单例代理": "singleton-proxy"
+  },
+  "/docs/kubernetes-operator/reference/limitations": {
+    "通用限制": "general",
+    "七层入站": "layer-7-ingress",
+    "三层入站": "layer-3-ingress",
+    "标签": "tags"
+  },
+  "/docs/kubernetes-operator/reference/rbac": {
+    "自定义": "customization"
+  },
+  "/docs/kubernetes-operator/reference/tags": {
+    "默认标签": "default-tags",
+    "标签所有权": "tag-ownership",
+    "按资源自定义标签": "customize-tags-per-resource",
+    "访问控制中的标签": "tags-in-access-control",
+    "标签与-api-server-代理": "tags-and-the-api-server-proxy",
+    "限制": "limitations",
+    "后续步骤": "next-steps"
+  },
+  "/docs/kubernetes-operator/reference/troubleshooting": {
+    "使用日志": "using-logs",
+    "集群出站与集群入站代理": "cluster-egress-and-cluster-ingress-proxies",
+    "tls-连接错误": "tls-connection-errors",
+    "共享-acme-账户-secret-卡在-terminating-状态": "shared-acme-accounts-secret-stuck-in-terminating",
+    "oauth-客户端与标签问题": "oauth-client-and-tagging-issues",
+    "tailscale-ingress-故障排查": "tailscale-ingress-troubleshooting"
+  },
+  "/docs/privileged-access-management/architecture-and-concepts": {
+    "服务": "services",
+    "策略": "policies",
+    "会话": "sessions",
+    "连接器": "connectors",
+    "隧道": "tunnels",
+    "用户组与身份提供方": "users-group-and-identity-providers",
+    "tailscale-客户端": "tailscale-client",
+    "浏览器客户端": "browser-client"
+  },
+  "/docs/privileged-access-management/connectors/high-availability": {
+    "连接器故障时会发生什么": "what-happens-when-a-connector-fails",
+    "连接器宕机时已有连接会怎样": "what-happens-to-existing-connections-when-a-connector-goes-down"
+  },
+  "/docs/privileged-access-management/connectors/install": {
+    "前提条件": "prerequisites",
+    "安装连接器二进制文件": "install-the-connector-binary",
+    "管理连接器服务": "manage-the-connector-service",
+    "更新连接器二进制文件": "update-the-connector-binary",
+    "配置你的连接器": "configure-your-connector",
+    "使用邀请码安装": "dialog-label",
+    "使用邀请码安装-1": "install-with-an-invite-code",
+    "在-linux-上管理连接器服务": "manage-the-connector-service-on-linux",
+    "在-macos-上管理连接器服务": "manage-the-connector-service-on-macos"
+  },
+  "/docs/privileged-access-management/connectors/install-ansible": {
+    "前提条件": "prerequisites",
+    "创建服务账户": "create-a-service-account",
+    "创建服务账户令牌": "create-a-service-account-token",
+    "创建-inventory": "create-the-inventory",
+    "运行-playbook": "run-the-playbook",
+    "验证连接器正在运行": "verify-a-connector-is-running",
+    "重新运行-playbook": "rerun-the-playbook",
+    "完整-playbook": "complete-playbook",
+    "后续步骤": "next-steps"
+  },
+  "/docs/privileged-access-management/connectors/overview": {
+    "连接器令牌": "connector-token",
+    "服务": "service",
+    "连接器日志": "connector-logs"
+  },
+  "/docs/privileged-access-management/get-started": {
+    "前提条件": "prerequisites",
+    "步骤-1为你的-tailnet-启用-tailscale-pam-集成": "step-1-enable-the-tailscale-pam-integration-for-your-tailnet",
+    "步骤-2创建-tailscale-pam-连接器": "step-2-create-a-tailscale-pam-connector",
+    "步骤-3定义-pam-服务": "step-3-define-a-pam-service",
+    "步骤-4访问服务": "step-4-access-a-service",
+    "后续步骤": "next-steps"
+  },
+  "/docs/privileged-access-management/how-to/access-database/amazon-rds": {
+    "前提条件": "prerequisites",
+    "选择认证方式": "choose-an-authentication-method",
+    "创建-amazon-rds-pam-服务": "create-an-amazon-rds-pam-service",
+    "为-amazon-rds-数据库授予访问权限": "grant-access-to-the-amazon-rds-database",
+    "连接到-amazon-rds-数据库": "connect-to-the-amazon-rds-database",
+    "保护上游凭证": "secure-the-upstream-credentials",
+    "查看会话详情与录制": "review-session-details-and-recordings",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-database/elasticsearch": {
+    "前提条件": "prerequisites",
+    "用-docker-运行本地-elasticsearch-服务器": "run-a-local-elasticsearch-server-with-docker",
+    "创建-elasticsearch-pam-服务": "create-an-elasticsearch-pam-service",
+    "为-elasticsearch-服务授予访问权限": "grant-access-to-the-elasticsearch-service",
+    "连接到-elasticsearch-服务器": "connect-to-the-elasticsearch-server",
+    "保护上游凭证": "secure-the-upstream-credentials",
+    "查看会话详情与录制": "review-session-details-and-recordings",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-database/google-cloud-sql": {
+    "前提条件": "prerequisites",
+    "选择-cloud-sql-的连接方式": "choose-how-to-connect-to-cloud-sql",
+    "创建-google-cloud-sql-pam-服务": "create-a-google-cloud-sql-pam-service",
+    "为-cloud-sql-数据库授予访问权限": "grant-access-to-the-cloud-sql-database",
+    "连接到-cloud-sql-数据库": "connect-to-the-cloud-sql-database",
+    "保护上游凭证": "secure-the-upstream-credentials",
+    "查看会话详情与录制": "review-session-details-and-recordings",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-database": {
+    "数据库访问的工作方式": "how-database-access-works",
+    "控制数据库访问": "control-database-access",
+    "数据库指南": "database-guides"
+  },
+  "/docs/privileged-access-management/how-to/access-database/microsoft-sql-server": {
+    "前提条件": "prerequisites",
+    "选择认证方式": "choose-an-authentication-method",
+    "创建-sql-server-pam-服务": "create-a-sql-server-pam-service",
+    "为-sql-server-数据库授予访问权限": "grant-access-to-the-sql-server-database",
+    "连接到-sql-server-数据库": "connect-to-the-sql-server-database",
+    "保护上游凭证": "secure-the-upstream-credentials",
+    "查看会话详情与录制": "review-session-details-and-recordings",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-database/mongodb": {
+    "前提条件": "prerequisites",
+    "用-docker-运行本地-mongodb-服务器": "run-a-local-mongodb-server-with-docker",
+    "创建-mongodb-pam-服务": "create-a-mongodb-pam-service",
+    "为-mongodb-数据库授予访问权限": "grant-access-to-the-mongodb-database",
+    "连接到-mongodb-数据库": "connect-to-the-mongodb-database",
+    "保护上游凭证": "secure-the-upstream-credentials",
+    "查看会话详情与录制": "review-session-details-and-recordings",
+    "使用带-iam-认证的-amazon-documentdb": "use-amazon-documentdb-with-iam-authentication",
+    "使用-mongodb-atlas": "use-mongodb-atlas",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-database/mysql": {
+    "前提条件": "prerequisites",
+    "用-docker-运行本地-mysql-服务器": "run-a-local-mysql-server-with-docker",
+    "创建数据库服务": "create-a-database-service",
+    "为-mysql-服务授予访问权限": "grant-access-to-the-mysql-service",
+    "连接到-mysql-数据库": "connect-to-the-mysql-database",
+    "保护上游凭证": "secure-the-upstream-credentials",
+    "查看会话详情与录制": "review-session-details-and-recordings",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-database/postgresql": {
+    "前提条件": "prerequisites",
+    "用-docker-运行本地-postgresql-服务器": "run-a-local-postgresql-server-with-docker",
+    "创建-postgresql-pam-服务": "create-a-postgresql-pam-service",
+    "为-postgresql-服务授予访问权限": "grant-access-to-the-postgresql-service",
+    "连接到-postgresql-数据库": "connect-to-the-postgresql-database",
+    "保护上游凭证": "secure-the-upstream-credentials",
+    "查看会话详情与录制": "review-session-details-and-recordings",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-http-service/grafana": {
+    "用-docker-试一试": "try-it-with-docker"
+  },
+  "/docs/privileged-access-management/how-to/access-http-service": {
+    "http-访问的工作方式": "how-http-access-works",
+    "前提条件": "prerequisites",
+    "创建-http-pam-服务": "create-an-http-pam-service",
+    "为-web-应用授予访问权限": "grant-access-to-the-web-application",
+    "打开-web-应用": "open-the-web-application",
+    "查看-http-会话": "review-http-sessions",
+    "把-tailscale-身份传给你的-web-应用": "pass-tailscale-identity-to-your-web-application",
+    "以编程方式访问-http-服务": "access-the-http-service-programmatically",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-kubernetes": {
+    "受支持的-kubernetes-服务类型": "supported-kubernetes-service-types",
+    "前提条件": "prerequisites",
+    "为连接器配置-kubernetes-权限": "configure-kubernetes-permissions-for-the-connector",
+    "使用-kubernetes-身份模拟impersonation": "use-kubernetes-impersonation",
+    "创建-kubernetes-pam-服务": "create-a-kubernetes-pam-service",
+    "为-kubernetes-服务授予访问权限": "grant-access-to-the-kubernetes-service",
+    "连接到-kubernetes-集群": "connect-to-the-kubernetes-cluster",
+    "查看-kubernetes-会话": "review-kubernetes-sessions",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-s3": {
+    "s3-访问的工作原理": "how-s3-access-works",
+    "前提条件": "prerequisites",
+    "创建-amazon-s3-pam-服务": "create-an-amazon-s3-pam-service",
+    "为-s3-授予访问权限": "grant-access-to-s3",
+    "访问-s3": "access-s3",
+    "查看-s3-会话": "review-s3-sessions",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-ssh/built-in-ssh": {
+    "前提条件": "prerequisites",
+    "启用或停用内置-ssh-服务器": "enable-or-disable-the-built-in-ssh-server",
+    "为-ssh-服务授予访问权限": "grant-access-to-the-ssh-service",
+    "使用你偏好的-ssh-客户端连接": "connect-with-your-preferred-ssh-client",
+    "从浏览器连接": "connect-from-the-browser",
+    "查看-ssh-会话": "review-ssh-sessions",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-ssh/ec2-instance": {
+    "前提条件": "prerequisites",
+    "授予连接器使用-ec2-instance-connect-的权限": "give-the-connector-permission-to-use-ec2-instance-connect",
+    "创建-ssh-pam-服务": "create-an-ssh-pam-service",
+    "使用-ec2-instance-connect-endpoint": "use-an-ec2-instance-connect-endpoint",
+    "为-ssh-服务授予访问权限": "grant-access-to-the-ssh-service",
+    "连接到-ec2-实例": "connect-to-the-ec2-instance",
+    "查看-ssh-会话": "review-ssh-sessions",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-ssh/ec2-ssm": {
+    "前提条件": "prerequisites",
+    "为-session-manager-准备-ec2-实例": "prepare-the-ec2-instance-for-session-manager",
+    "授予连接器使用-session-manager-的权限": "give-the-connector-permission-to-use-session-manager",
+    "创建-ec2-pam-服务": "create-an-ec2-pam-service",
+    "为-ssh-服务授予访问权限": "grant-access-to-the-ssh-service",
+    "连接到-ec2-实例": "connect-to-the-ec2-instance",
+    "查看-ssh-会话": "review-ssh-sessions",
+    "故障排查": "troubleshooting",
+    "通过-aws-ssm-访问-ecs-任务": "access-an-ecs-task-through-aws-ssm"
+  },
+  "/docs/privileged-access-management/how-to/access-ssh/ecs-ssm": {
+    "前提条件": "prerequisites",
+    "准备可访问的-ecs-任务": "prepare-the-ecs-task-for-access",
+    "授予连接器访问-ecs-的权限": "give-the-connector-permission-to-access-ecs",
+    "创建-aws-ecs-pam-服务": "create-an-aws-ecs-pam-service",
+    "为-ecs-服务授予访问权限": "grant-access-to-the-ecs-service",
+    "连接到-ecs-容器": "connect-to-the-ecs-container",
+    "查看-ssh-会话": "review-ssh-sessions",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-ssh": {
+    "ssh-访问的工作原理": "how-ssh-access-works",
+    "访问-ssh-服务器的几种方式": "ways-to-access-ssh-servers",
+    "控制-ssh-访问": "control-ssh-access",
+    "查看-ssh-会话": "review-ssh-sessions"
+  },
+  "/docs/privileged-access-management/how-to/access-ssh/remote-ssh": {
+    "前提条件": "prerequisites",
+    "创建-ssh-pam-服务": "create-an-ssh-pam-service",
+    "可选为基于证书的身份验证配置服务器": "optional-configure-the-server-for-certificate-based-authentication",
+    "为-ssh-服务授予访问权限": "grant-access-to-the-ssh-service",
+    "连接到-ssh-服务器": "connect-to-the-ssh-server",
+    "保护上游凭证": "secure-upstream-credentials",
+    "查看-ssh-会话": "review-ssh-sessions",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-tcp-service": {
+    "tcp-访问的工作原理": "how-tcp-access-works",
+    "前提条件": "prerequisites",
+    "创建-tcp-pam-服务": "create-a-tcp-pam-service",
+    "为-tcp-服务授予访问权限": "grant-access-to-the-tcp-service",
+    "连接到-tcp-服务": "connect-to-the-tcp-service",
+    "查看-tcp-会话": "review-tcp-sessions",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/access-windows-server-rdp": {
+    "前提条件": "prerequisites",
+    "创建-rdp-pam-服务": "create-an-rdp-pam-service",
+    "为-rdp-服务授予访问权限": "grant-access-to-the-rdp-service",
+    "连接到-windows-服务器": "connect-to-the-windows-server",
+    "保护上游凭证": "secure-the-upstream-credentials",
+    "查看-rdp-会话": "review-rdp-sessions",
+    "故障排查": "troubleshooting"
+  },
+  "/docs/privileged-access-management/how-to/control-access": {
+    "前提条件": "prerequisites",
+    "tailscale-pam-授权的工作原理": "how-tailscale-pam-grants-work",
+    "在管理控制台中创建授权": "create-a-grant-of-the-admin-console",
+    "控制数据库访问": "control-database-access",
+    "控制-ssh-访问": "control-ssh-access",
+    "控制-kubernetes-访问": "control-kubernetes-access",
+    "控制-amazon-s3-访问": "control-amazon-s3-access",
+    "控制-httprdpvnc-和-tcp-访问": "control-http-rdp-vnc-and-tcp-access",
+    "在一条授权中配置多种服务类型": "configure-multiple-service-types-in-one-grant",
+    "完整的-pam-授权示例": "complete-pam-grant-example",
+    "排查-pam-访问问题": "troubleshoot-pam-access",
+    "对所有数据库的只读访问": "read-only-access-to-all-databases",
+    "对单个数据库的只读访问": "read-only-access-to-one-database"
+  },
+  "/docs/privileged-access-management/how-to/custom-dns-domain": {
+    "前提条件": "prerequisites",
+    "添加自定义域": "add-a-custom-domain",
+    "选择默认域": "choose-a-default-domain",
+    "使用你的自定义域": "use-your-custom-domain"
+  },
+  "/docs/privileged-access-management/how-to/manage-resources-terraform": {
+    "前提条件": "prerequisites",
+    "创建服务账户": "create-a-service-account",
+    "配置-terraform-provider": "configure-the-terraform-provider",
+    "管理-tailscale-pam-连接器": "manage-a-tailscale-pam-connector",
+    "管理-tailscale-pam-服务": "manage-a-tailscale-pam-service",
+    "控制对-terraform-管理的服务的访问": "control-access-to-terraform-managed-services",
+    "后续步骤": "next-steps"
+  },
+  "/docs/privileged-access-management/how-to/manage-secrets": {
+    "密钥引用的工作原理": "how-secret-references-work",
+    "受支持的密钥来源": "supported-secret-sources",
+    "在服务配置中引用密钥": "reference-secrets-in-service-configuration",
+    "从-json-密钥中提取字段": "extract-a-field-from-a-json-secret",
+    "保护对密钥的访问": "protect-access-to-secrets"
+  },
+  "/docs/privileged-access-management/how-to/session-recordings-s3": {
+    "录制存储的工作原理": "how-recording-storage-works",
+    "前提条件": "prerequisites",
+    "创建-s3-存储桶": "create-an-s3-bucket",
+    "创建-iam-策略": "create-an-iam-policy",
+    "创建-iam-角色": "create-an-iam-role",
+    "在-tailscale-pam-中配置录制存储": "configure-recording-storage-in-tailscale-pam",
+    "验证录制存储": "verify-recording-storage"
+  },
+  "/docs/privileged-access-management/reference/faq": {
+    "有可以配合-tailscale-pam-使用的沙箱服务器吗": "are-there-sandbox-servers-i-can-use-with-tailscale-pam",
+    "tailscale-客户端能识别哪些数据库客户端": "which-database-clients-does-the-tailscale-client-recognize",
+    "如何让-tailscale-pam-服务实现高可用": "how-do-i-make-tailscale-pam-services-highly-available",
+    "如何检查或升级-tailscale-pam-连接器的版本": "how-do-i-check-or-upgrade-the-tailscale-pam-connector-version",
+    "为什么通过-tailscale-pam-http-服务登录-sso-会失败": "why-does-sso-login-fail-through-a-tailscale-pam-http-service"
+  },
+  "/docs/privileged-access-management/reference/tailzero": {
+    "命令参考": "command-reference"
+  },
+  "/docs/privileged-access-management/reference/troubleshooting": {
+    "错误credentials-chain-中没有-tailscale-pam-令牌": "error-no-tailscale-pam-token-in-credentials-chain",
+    "错误令牌无效": "error-invalid-token"
+  },
+  "/docs/privileged-access-management/service-accounts": {
+    "服务账户与-tailscale-标签": "service-accounts-and-tailscale-tags",
+    "为-api-访问创建服务账户": "create-a-service-account-for-api-access",
+    "创建服务账户令牌": "create-a-service-account-token",
+    "配合-tailscale-pam-api-使用服务账户": "use-a-service-account-with-the-tailscale-pam-api",
+    "配合-tailscale-pam-使用-terraform": "use-terraform-with-tailscale-pam",
+    "使用客户端服务账户访问-http-服务": "access-an-http-service-with-a-client-service-account",
+    "保护服务账户令牌的最佳实践": "best-practices-to-protect-service-account-tokens"
+  },
+  "/docs/privileged-access-management/services": {
+    "前提条件": "prerequisites",
+    "创建服务": "create-a-service",
+    "更新服务": "update-a-service",
+    "删除服务": "delete-a-service"
+  },
+  "/docs/privileged-access-management/session-logs": {
+    "查看-pam-会话": "review-pam-sessions",
+    "查看会话详情": "review-session-details",
+    "查看会话内的活动": "review-activity-within-a-session",
+    "查看会话事件": "review-session-events",
+    "会话录制": "session-recordings"
+  },
+  "/docs/privileged-access-management/what-is-tailscale-pam": {
+    "使用场景": "use-cases",
+    "系统要求": "requirements",
+    "开始使用": "get-started",
+    "常见场景": "common-scenarios",
+    "相关资源": "resources"
+  },
+  "/docs/reference/best-practices/app-connectors": {
+    "配置应用以进行路由发现": "configure-apps-for-route-discovery",
+    "基于访问控制策略的路由配置": "access-control-policy-driven-route-configuration",
+    "路由合并": "route-coalescing",
+    "减少路由发现期间的重配置": "reduce-reconfiguration-during-route-discovery",
+    "配置使用多租户-ip-空间的应用": "configure-apps-with-multi-tenant-ip-space",
+    "连接大型-saas-服务": "connect-large-saas-services",
+    "路由": "routes",
+    "域名-1": "domains-1",
+    "自动化预配置": "automate-preconfiguration",
+    "使用-terraform-自动化": "automation-with-terraform"
+  },
+  "/docs/reference/best-practices/cloud/coreweave": {
+    "使用-tailscale-kubernetes-operator-的-coreweave-分支版本": "use-the-coreweave-fork-of-the-tailscale-kubernetes-operator",
+    "网络与连接": "networking-and-connectivity"
+  },
+  "/docs/reference/best-practices/performance": {
+    "直连": "direct-connections",
+    "操作系统建议": "operating-system-recommendations",
+    "机器规格建议": "machine-sizing-recommendations",
+    "aws-单流带宽限制": "aws-single-flow-bandwidth-limitation"
+  },
+  "/docs/reference/best-practices/security": {
+    "基线实践": "baseline-practices",
+    "进阶实践": "advanced-practices"
+  },
+  "/docs/reference/cgnat-interoperability": {
+    "最小权限模型的行为变更": "least-privilege-model-behavior-change",
+    "禁用-cgnat-丢弃规则": "disable-the-cgnat-drop-rule",
+    "验证-cgnat-丢弃规则已禁用": "verify-the-cgnat-drop-rule-is-disabled",
+    "限制": "limitations"
+  },
+  "/docs/reference/connection-types": {
+    "tailscale-如何建立连接": "how-tailscale-establishes-connections",
+    "直连": "direct-connections",
+    "中继连接": "relayed-connections",
+    "判断你的连接类型": "determine-your-connection-type",
+    "为什么-tailscale-并不总能使用直连": "why-tailscale-cant-always-use-direct-connections",
+    "直连示例": "direct-connection-example",
+    "对等中继连接示例": "peer-relayed-connection-example",
+    "derp-中继连接示例": "derp-relayed-connection-example",
+    "家庭与小型办公网络": "home-and-small-office-networks",
+    "云平台与-nat-网关": "cloud-platforms-and-nat-gateways",
+    "出口节点与-terraform": "exit-nodes-and-terraform"
+  },
+  "/docs/reference/contact-preferences": {
+    "联系人邮件的类型": "types-of-contact-emails",
+    "设置账户变更邮件": "setting-the-account-changes-email",
+    "设置配置问题邮件": "setting-the-configuration-issues-email",
+    "设置安全问题邮件": "setting-the-security-issues-email",
+    "设置账单邮箱": "setting-the-billing-email",
+    "联系人偏好更新与验证的审计日志": "audit-logging-of-contact-preference-updates-and-verification",
+    "限制": "limitations"
+  },
+  "/docs/reference/deployment-checklist": {
+    "支持": "support",
+    "及时了解-tailscale-动态": "stay-up-to-date-on-tailscale-news",
+    "生产环境最佳实践": "production-best-practices",
+    "tailnet-管理": "tailnet-management",
+    "用户管理": "user-management",
+    "设备管理": "device-management",
+    "监控": "monitoring"
+  },
+  "/docs/reference/derp-servers": {
+    "使用-derp-服务器的中继连接": "relayed-connections-using-derp-servers",
+    "derp-服务器位置": "derp-server-locations",
+    "derp-数据包": "derp-packets",
+    "可用性与停机": "availability-and-downtime"
+  },
+  "/docs/reference/device-connectivity": {
+    "nat-类型": "nat-types",
+    "连接矩阵": "connectivity-matrix",
+    "用-netcheck-排查问题": "troubleshooting-with-netcheck"
+  },
+  "/docs/reference/dns-in-tailscale": {
+    "在-tailscale-中管理-dns": "manage-dns-in-tailscale",
+    "测试-dns-配置": "test-dns-configurations",
+    "覆盖-dns-服务器": "override-dns-servers",
+    "dns-解析器的顺序": "the-order-of-dns-resolvers",
+    "受限域名服务器": "restricted-nameservers",
+    "全局域名服务器": "global-nameservers",
+    "域名服务器与出口节点": "nameservers-and-exit-nodes"
+  },
+  "/docs/reference/examples/acls": {
+    "允许所有默认-acl": "allow-all-default-acl",
+    "拒绝所有": "deny-all",
+    "用户可以访问自己的设备": "users-can-access-their-own-devices",
+    "资源级访问策略": "resource-level-access-policies",
+    "按用途限制标签": "restrict-based-on-purpose-tags",
+    "按组限制": "restrict-based-on-group",
+    "按单个用户限制": "restrict-based-on-individual-user",
+    "standard-套餐-acl": "standard-plan-acl",
+    "访问内部应用vpn": "access-to-an-internal-application-vpn",
+    "远程访问生产环境": "remote-access-to-production-environment",
+    "vpc-访问vpc-对等连接": "vpc-access-vpc-peering",
+    "与承包商共享访问权限": "share-access-with-a-contractor",
+    "远程开发": "remote-development",
+    "结对编程": "pair-programming",
+    "cicd-部署流水线": "cicd-deployment-pipeline",
+    "监控对应用的访问": "monitoring-access-to-applications",
+    "应用对等连接": "application-peering",
+    "网络微分段": "network-microsegmentation"
+  },
+  "/docs/reference/examples/funnel": {
+    "共享文件服务器": "share-a-file-server",
+    "托管静态站点": "serve-a-static-site",
+    "将开发服务器公开到互联网": "expose-a-development-server-to-the-public",
+    "共享-funnel-设备": "share-a-funnel-device",
+    "测试-webhook-接收器的变更": "test-webhook-receiver-changes"
+  },
+  "/docs/reference/examples/grants": {
+    "全部允许": "allow-all",
+    "允许用户访问自己的设备": "allow-users-access-to-their-own-devices",
+    "允许使用出口节点": "allow-using-exit-nodes",
+    "使用标签按用途授权": "allow-based-on-purpose-using-tags",
+    "按组访问不同环境": "allow-access-to-different-environments-by-group",
+    "按位置经出口节点路由流量": "route-traffic-through-exit-nodes-based-on-location",
+    "基于设备态势控制资源访问": "allow-access-to-resources-based-on-device-posture",
+    "经应用连接器路由组流量": "route-group-traffic-through-app-connectors",
+    "自定义-autogroupinternet": "customize-autogroup-internet",
+    "使用设备态势访问不同环境": "allow-access-to-different-environments-using-device-posture",
+    "以特定权限访问-kubernetes-operator": "allow-access-to-the-kubernetes-operator-with-privileges",
+    "应用对等连接": "application-peering",
+    "cicd-开发流水线": "cicd-development-pipeline",
+    "监控应用访问": "monitor-application-access",
+    "网络微分段": "network-microsegmentation",
+    "vpc-访问": "vpc-access",
+    "使用-tailscale-peer-relay": "use-tailscale-peer-relays",
+    "结语": "conclusion"
+  },
+  "/docs/reference/examples/serve": {
+    "共享一个基础文件服务器": "share-a-basic-file-server",
+    "托管静态站点": "serve-a-static-site",
+    "将本地服务绑定到你的-tailnet": "bind-local-services-to-your-tailnet",
+    "共享-serve-节点": "share-a-serve-node",
+    "将应用能力转发到本地服务": "forward-app-capabilities-to-a-local-service"
+  },
+  "/docs/reference/examples/tsnet-hello-world": {
+    "如何添加-hellotsnet": "how-can-i-add-hellotsnet",
+    "如何将它从我的网络中移除": "how-can-i-remove-it-from-my-network",
+    "hellotsnet-有可靠性保证吗": "does-hellotsnet-have-a-reliability-guarantee"
+  },
+  "/docs/reference/faq/dns-rebinding": {
+    "dns-重绑定防护是如何工作的": "how-does-dns-rebinding-protection-work",
+    "dns-重绑定防护如何影响-tailscale": "how-does-dns-rebinding-protection-affect-tailscale",
+    "使用-tailscale-时可考虑的解决方法": "workarounds-to-consider-when-using-tailscale"
+  },
+  "/docs/reference/faq/firewall-ports": {
+    "如何判断我的设备是否正在使用中继": "how-can-i-tell-if-my-devices-are-using-a-relay",
+    "如何让经中继连接的设备改用点对点连接": "how-do-i-connect-devices-on-a-relay-with-peer-to-peer-connections",
+    "确认或更改-udp-端口": "confirm-or-change-the-udp-port",
+    "如果我想指定-tailscale-运营其服务所用的主机名怎么办": "what-if-i-want-to-specify-the-hostnames-that-tailscale-uses-to-operate-its-service"
+  },
+  "/docs/reference/faq": {
+    "开始使用": "getting-started",
+    "部署-tailscale": "deploying-tailscale",
+    "可靠性": "reliability",
+    "安全与隐私": "security-and-privacy",
+    "其他": "other"
+  },
+  "/docs/reference/faq/ipv6": {
+    "什么是-ipv6": "what-is-ipv6",
+    "ipv6-比-ipv4-更快吗": "is-ipv6-faster-than-ipv4",
+    "ipv6-是否为所有连接内置了-ipsec-加密": "does-ipv6-have-built-in-ipsec-encryption-for-all-connections",
+    "ipv6-失败了吗": "is-ipv6-a-failure",
+    "为什么-ipv6-没有更流行": "why-isnt-ipv6-more-popular",
+    "ipv6-在哪些领域取得了重大成功": "where-has-ipv6-seen-major-success",
+    "ipv6-会免费给我一个永久的静态-ip-地址吗": "does-ipv6-give-me-a-permanent-static-ip-address-for-free",
+    "ipv6-适用于移动-ip-或多宿主设备吗": "does-ipv6-work-with-mobile-ip-or-multi-homed-devices",
+    "ipv6-终有一天会全面部署吗": "will-ipv6-ever-be-fully-rolled-out",
+    "我应该在服务器上支持-ipv6-吗": "should-i-support-ipv6-on-my-server",
+    "我能做些什么来推动-ipv6-的普及": "what-can-i-do-to-encourage-adoption-of-ipv6",
+    "ipv4-地址真的耗尽了吗": "are-we-really-out-of-ipv4-addresses",
+    "ipv6-让点对点应用更容易了吗": "does-ipv6-make-peer-to-peer-apps-easier",
+    "全面部署-ipv6-能消除-nat-吗": "would-fully-deployed-ipv6-eliminate-nats",
+    "ipv6-能消除-cgnat-吗": "does-ipv6-eliminate-cgnat",
+    "ipv6-能消除双重-nat-的问题吗": "does-ipv6-eliminate-the-problems-of-double-nat",
+    "nat-会提升安全性吗": "do-nats-increase-security",
+    "nat-会增强隐私吗": "do-nats-increase-privacy",
+    "换一种设计会比-ipv6-部署得更快吗": "could-a-different-design-have-rolled-out-faster-than-ipv6",
+    "对-ipv4-做向后兼容的地址扩展会是什么样子": "what-would-a-backward-compatible-address-extension-to-ipv4-look-like",
+    "tailscale-支持-ipv6-吗": "does-tailscale-support-ipv6"
+  },
+  "/docs/reference/faq/other-vpns": {
+    "解决方法": "workarounds"
+  },
+  "/docs/reference/funnel-vs-sharing": {
+    "共享设备": "sharing-a-device",
+    "示例场景": "example-scenarios"
+  },
+  "/docs/reference/glossary": {
+    "访问控制列表acl": "access-control-lists",
+    "标签tag": "tags",
+    "管理控制台": "admin-console",
+    "客户端": "client",
+    "协调服务器": "coordination-server",
+    "设备": "device",
+    "设备密钥": "device-key",
+    "防火墙": "firewall",
+    "全隧道": "full-tunnel",
+    "身份提供方idp": "identity-provider",
+    "密钥过期": "key-expiry",
+    "nat-穿透": "nat-traversal",
+    "网络拓扑": "network-topology",
+    "节点": "node",
+    "覆盖网络": "overlay-network",
+    "对端": "peer",
+    "中继": "relay",
+    "分流隧道": "split-tunnel",
+    "tailnet-策略文件": "tailnet-policy-file",
+    "tailscale-ip-地址": "tailscale-ip-address",
+    "隧道": "tunnel",
+    "底层网络": "underlay-network"
+  },
+  "/docs/reference/grants-vs-acls": {
+    "对比": "comparison",
+    "何时使用哪种方式": "when-to-use-each-method"
+  },
+  "/docs/reference": {
+    "访问控制策略": "access-control-policies",
+    "tailscale-命令行界面cli": "tailscale-command-line-interface-cli",
+    "tailscale-应用编程接口api": "tailscale-application-programming-interface-api",
+    "技术概览与生产环境最佳实践": "technical-overviews-and-production-best-practices",
+    "术语与概念": "terminology-and-concepts"
+  },
+  "/docs/reference/invite-only-feature": {
+    "工作原理": "how-it-works",
+    "创建功能邀请": "creating-a-feature-invitation",
+    "接受功能邀请": "accepting-a-feature-invitation",
+    "加入功能邀请候补名单": "joining-a-feature-invitation-waitlist"
+  },
+  "/docs/reference/inviting-vs-sharing": {
+    "邀请用户": "inviting-a-user",
+    "共享设备": "sharing-a-device"
+  },
+  "/docs/reference/kernel-vs-userspace-routers": {
+    "内核模式": "kernel-mode",
+    "用户态netstack模式": "userspace-netstack-mode",
+    "性能": "performance",
+    "总结": "summary"
+  },
+  "/docs/reference/key-secret-management": {
+    "密钥与机密的最佳实践": "keys-and-secrets-best-practices",
+    "密钥前缀": "key-prefixes",
+    "密钥与机密的类型": "key-and-secret-types",
+    "使用日志与事件": "using-logs-and-events",
+    "密钥过期": "key-expiry",
+    "机密扫描": "secret-scanning",
+    "用户下线offboarding": "offboarding-users"
+  },
+  "/docs/reference/linux-dns": {
+    "常见问题": "common-problems"
+  },
+  "/docs/reference/logging-streaming-events": {
+    "捕获日志与事件": "capture-logs-and-events",
+    "把日志与事件流式传输到-siem-或存储桶": "stream-logs-and-events-to-a-siem-or-storage-bucket",
+    "将日志事件接入你的基础设施": "integrate-log-events-with-your-infrastructure"
+  },
+  "/docs/reference/messages/client/coordination-server-issue": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "参考-id": "reference-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/client/could-not-apply-config": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "参考-id": "reference-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/client/docker-stateful-filtering": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "参考-id": "reference-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/client/invalid-packet-filter": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "参考-id": "reference-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/client/local-log-config-error": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "消息-id": "message-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do"
+  },
+  "/docs/reference/messages/client/magicsock-receive-func-error": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "消息-id": "message-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多参考": "additional-reference"
+  },
+  "/docs/reference/messages/client/network-map-response-timeout": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "消息-id": "message-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do"
+  },
+  "/docs/reference/messages/client/network-status": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "消息-id": "message-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多参考": "additional-reference"
+  },
+  "/docs/reference/messages/client/no-derp-connection": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "参考-id": "reference-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/client/no-derp-home": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "参考-id": "reference-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/client/not-in-map-poll": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "参考-id": "reference-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/client/resolv-conf-overwritten": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "参考-id": "reference-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/client/screen-time-controlclient": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "消息-id": "message-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多参考": "additional-reference"
+  },
+  "/docs/reference/messages/client/security-update-available": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "消息-id": "message-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多参考": "additional-reference"
+  },
+  "/docs/reference/messages/client/set-network-category-failed": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "消息-id": "message-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do"
+  },
+  "/docs/reference/messages/client/ssh-unavailable-selinux-enabled": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "消息-id": "message-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do"
+  },
+  "/docs/reference/messages/client/tls-connection-failed": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "消息-id": "message-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do"
+  },
+  "/docs/reference/messages/client/update-available": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "引用-id": "reference-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/client/using-unstable-version": {
+    "客户端中显示的消息": "message-displayed-in-the-client",
+    "消息-id": "message-id",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多参考": "additional-reference"
+  },
+  "/docs/reference/messages/console/account-not-admin": {
+    "管理控制台中显示的消息": "message-displayed-in-the-admin-console",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/console/auth-failed-sso": {
+    "管理控制台中显示的消息": "message-displayed-in-the-admin-console",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/console/login-name-change": {
+    "管理控制台中显示的消息": "message-displayed-in-the-admin-console",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/console/multi-user-login": {
+    "管理控制台中显示的消息": "message-displayed-in-the-admin-console",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do"
+  },
+  "/docs/reference/messages/console/no-access": {
+    "管理控制台中显示的消息": "message-displayed-in-the-admin-console",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/console/no-auth-service": {
+    "管理控制台中显示的消息": "message-displayed-in-the-admin-console",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/console/org-has-restrictions": {
+    "管理控制台中显示的消息": "message-displayed-in-the-admin-console",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/console/reached-use-limit": {
+    "管理控制台中显示的消息": "message-displayed-in-the-admin-console",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages/console/sharing-failure": {
+    "管理控制台中显示的消息": "message-displayed-in-the-admin-console",
+    "为什么会看到这条消息": "why-youre-seeing-this-message",
+    "处理方法": "what-to-do",
+    "更多信息": "additional-information"
+  },
+  "/docs/reference/messages": {
+    "管理控制台消息": "admin-console-messages",
+    "客户端消息": "client-messages"
+  },
+  "/docs/reference/migrate-acls-grants": {
+    "了解差异": "understanding-the-differences",
+    "迁移到授权的好处": "benefits-of-migrating-to-grants",
+    "acl-与授权的结构映射": "structural-mapping-between-acls-and-grants",
+    "基本迁移模式": "basic-migration-patterns",
+    "迁移场景": "migration-scenarios",
+    "ssh-规则": "ssh-rules",
+    "测试迁移结果": "testing-your-migration",
+    "授权管理最佳实践": "best-practices-for-grant-management",
+    "常见问题排查": "troubleshooting-common-issues"
+  },
+  "/docs/reference/multiple-recorder-nodes": {
+    "为故障转移部署多个记录器": "deploy-multiple-recorders-for-failover",
+    "为每条-ssh-访问规则部署不同的记录器": "deploy-different-recorders-for-each-ssh-access-rule"
+  },
+  "/docs/reference/netfilter-modes": {
+    "netfilter-模式选项": "netfilter-mode-options"
+  },
+  "/docs/reference/node-attributes-vs-app-capabilities": {
+    "节点属性": "node-attributes",
+    "授权应用能力": "grant-app-capabilities",
+    "两个部分中的应用能力": "application-capabilities-in-both-sections",
+    "如何选择": "choosing-between-them",
+    "相关内容": "related"
+  },
+  "/docs/reference/ping-types": {
+    "tsmptailscale-消息协议": "tsmp-tailscale-message-protocol"
+  },
+  "/docs/reference/quad100": {
+    "dns-解析器": "dns-resolver",
+    "设备管理界面": "device-management-interface"
+  },
+  "/docs/reference/reference-architectures/aws": {
+    "总体架构": "high-level-architecture",
+    "部署-tailscale-以连接-aws-资源的方式": "ways-to-deploy-tailscale-to-connect-to-and-from-aws-resources",
+    "生产环境最佳实践": "production-best-practices",
+    "性能最佳实践": "performance-best-practices",
+    "在-aws-中使用-tailscale": "using-tailscale-with-aws",
+    "限制": "limitations",
+    "普通用途": "normal-usage",
+    "子网路由器出口节点与应用连接器": "subnet-routers-exit-nodes-and-app-connectors",
+    "aws-nat-网关": "aws-nat-gateway",
+    "仅出站互联网网关": "egress-only-internet-gateway",
+    "在-amazon-eks-或-amazon-ecs-中运行子网路由器": "operating-a-subnet-router-within-amazon-eks-or-amazon-ecs",
+    "用-s3-持久化录制内容": "s3-for-recording-persistence",
+    "最小必需的-iam-策略": "minimum-required-iam-policy",
+    "存储桶位置": "storage-bucket-locations",
+    "存储桶策略": "storage-bucket-policy",
+    "存储生命周期规则": "storage-lifecycle-rules"
+  },
+  "/docs/reference/reference-architectures/azure": {
+    "总体架构": "high-level-architecture",
+    "部署-tailscale-与-azure-资源互连的几种方式": "ways-to-deploy-tailscale-to-connect-to-and-from-azure-resources",
+    "生产环境最佳实践": "production-best-practices",
+    "性能最佳实践": "performance-best-practices",
+    "将-tailscale-与-azure-配合使用": "using-tailscale-with-azure",
+    "局限性": "limitations",
+    "常规用法": "normal-usage",
+    "子网路由器出口节点与应用连接器": "subnet-routers-exit-nodes-and-app-connectors",
+    "在-azure-aks-中运行子网路由器": "operating-a-subnet-router-within-azure-aks"
+  },
+  "/docs/reference/reference-architectures/gcp": {
+    "总体架构": "high-level-architecture",
+    "部署-tailscale-与-gcp-资源互连的几种方式": "ways-to-deploy-tailscale-to-connect-to-and-from-gcp-resources",
+    "生产环境最佳实践": "production-best-practices",
+    "性能最佳实践": "performance-best-practices",
+    "常规用法": "normal-usage",
+    "子网路由器出口节点与应用连接器": "subnet-routers-exit-nodes-and-app-connectors"
+  },
+  "/docs/reference/reserved-ip-addresses": {
+    "这对你意味着什么": "what-this-means-for-you",
+    "故障排除": "troubleshooting"
+  },
+  "/docs/reference/route-injection": {
+    "路由注入与访问控制": "route-injection-and-access-controls",
+    "路由何时被注入": "when-routes-are-injected",
+    "路由和-acl-如何与-cidr-地址段交互": "how-routes-and-acls-interact-with-cidr-ranges",
+    "选择路由器当多台路由器通告同一路由时": "choosing-a-router-when-multiple-routers-advertise-the-same-route",
+    "路由与授权的交互": "interaction-between-routes-and-grants",
+    "故障排除": "troubleshooting"
+  },
+  "/docs/reference/ssh-over-tailscale": {
+    "什么是-secure-shellssh": "what-is-secure-shell-ssh",
+    "如何安全地使用-ssh-客户端": "how-can-i-use-ssh-clients-securely",
+    "如何安全地运行-ssh-服务器": "how-can-i-run-ssh-servers-securely",
+    "将-ssh-与-tailscale-配合使用的优势": "advantages-of-using-ssh-with-tailscale",
+    "开始通过-tailscale-使用-ssh": "getting-started-with-ssh-over-tailscale"
+  },
+  "/docs/reference/subnet-site-to-site": {
+    "用-tailscale-和-wireguard-搭建站点到站点-vpn": "use-tailscale-and-wireguard-as-a-site-to-site-vpn"
+  },
+  "/docs/reference/support-options": {
+    "即时帮助": "immediate-assistance",
+    "电子邮件支持": "email-support",
+    "支持套餐": "support-packages",
+    "支持附加服务": "support-add-ons",
+    "严重度定义": "severity-definitions",
+    "排除范围": "exclusions"
+  },
+  "/docs/reference/syntax/grants": {
+    "核心概念": "core-concepts",
+    "语法": "syntax",
+    "源选择器": "source-selectors",
+    "目标选择器": "destination-selectors",
+    "网络层能力": "network-layer-capabilities",
+    "应用层能力": "application-layer-capabilities",
+    "设备态势要求": "device-posture-requirements",
+    "路由指定": "routing-specifications",
+    "错误处理与故障排除": "error-handling-and-troubleshooting"
+  },
+  "/docs/reference/syntax/policy-file": {
+    "授权grants": "grants",
+    "acl": "acls",
+    "引用用户": "reference-users",
+    "autogroup": "autogroups",
+    "群组groups": "groups",
+    "引用多台设备": "reference-multiple-devices",
+    "设备态势postures": "postures",
+    "标签所有者": "tag-owners",
+    "自动批准autoapprovers": "auto-approvers",
+    "节点属性": "node-attributes",
+    "测试tests": "tests",
+    "ssh-测试": "ssh-tests",
+    "ip-集": "ip-sets",
+    "网络策略选项": "network-policy-options",
+    "acceptenv-示例": "acceptenv-examples"
+  },
+  "/docs/reference/tailnet-passkey-admin": {
+    "工作原理": "how-it-works",
+    "创建可用-passkey-登录的管理员": "creating-an-admin-that-can-log-in-with-a-passkey"
+  },
+  "/docs/reference/tailscale-api": {
+    "认证": "authentication",
+    "预配置设备的节点属性": "node-attributes-for-provisioned-devices"
+  },
+  "/docs/reference/tailscale-cli/funnel": {
+    "funnel-命令标志": "funnel-command-flags",
+    "使用-https-和-http-服务器": "use-https-and-http-servers",
+    "使用-proxy-protocol": "use-the-proxy-protocol",
+    "使用-tcp-转发器": "use-a-tcp-forwarder",
+    "使用有效证书": "use-valid-certificates",
+    "忽略无效和自签名证书检查": "ignore-invalid-and-self-signed-certificate-checks",
+    "获取状态": "get-the-status",
+    "重置-tailscale-funnel": "reset-tailscale-funnel",
+    "关闭-tailscale-funnel": "turn-tailscale-funnel-off",
+    "重启与重新启动的影响": "effects-of-rebooting-and-restarting"
+  },
+  "/docs/reference/tailscale-cli": {
+    "使用-tailscale-cli": "using-the-tailscale-cli",
+    "命令参考": "command-reference"
+  },
+  "/docs/reference/tailscale-cli/serve": {
+    "serve-命令标志": "serve-command-flags",
+    "使用-https-和-http-服务器": "use-https-and-http-servers",
+    "使用-proxy-protocol": "use-the-proxy-protocol",
+    "使用-tcp-转发器": "use-a-tcp-forwarder",
+    "使用有效证书": "use-a-valid-certificate",
+    "忽略无效和自签名证书检查": "ignore-invalid-and-self-signed-certificate-checks",
+    "获取状态": "get-the-status",
+    "重置-tailscale-serve": "reset-tailscale-serve",
+    "停用-tailscale-serve": "disable-tailscale-serve",
+    "获取服务配置": "get-service-configuration",
+    "设置服务配置": "set-service-configuration",
+    "排空服务drain": "drain",
+    "通告advertise": "advertise",
+    "重启与重新启动的影响": "effects-of-rebooting-and-restarting"
+  },
+  "/docs/reference/tailscale-client-metrics": {
+    "可用指标": "available-metrics",
+    "收集指标": "collect-metrics",
+    "本地访问指标": "access-metrics-locally",
+    "通过-tailscale-收集指标": "collect-metrics-over-tailscale",
+    "向其他网络暴露指标": "expose-metrics-to-other-networks",
+    "把指标写入文件": "write-metrics-to-a-file"
+  },
+  "/docs/reference/tailscale-client-versions": {
+    "客户端版本编号": "client-version-numbers",
+    "客户端发布通道": "client-release-tracks"
+  },
+  "/docs/reference/tailscale-community-projects": {
+    "收录考量": "consideration-for-inclusion",
+    "支持性": "supportability"
+  },
+  "/docs/reference/tailscale-fedramp-fips140": {
+    "tailscale-安全态势": "tailscale-security-posture",
+    "fedramp-相关考量": "fedramp-considerations",
+    "fips-140-23-合规背景": "fips-140-23-compliance-context"
+  },
+  "/docs/reference/tailscale-release-stages": {
+    "发布阶段": "release-stages",
+    "对比矩阵": "comparison-matrix",
+    "alpha-和-beta-发布阶段标识": "alpha-and-beta-release-stage-indicators"
+  },
+  "/docs/reference/tailscaled": {
+    "平台差异": "platform-differences",
+    "tailscaled-在哪里运行": "where-does-tailscaled-run",
+    "停止和启动-tailscaled": "stopping-and-starting-tailscaled",
+    "从-tailscaled-获取日志": "getting-logs-from-tailscaled",
+    "tailscaled-的标志": "flags-to-tailscaled",
+    "设置标志": "setting-flags",
+    "环境变量": "environment-variables"
+  },
+  "/docs/reference/targets-and-selectors": {
+    "类型": "types",
+    "通配符选择器": "wildcard-selectors",
+    "限制": "restrictions",
+    "ip-地址": "ip-address",
+    "主机别名": "host-alias",
+    "ip-地址范围": "ip-address-range",
+    "用户": "user",
+    "组": "groups",
+    "标签": "tags",
+    "ip-集合": "ip-sets"
+  },
+  "/docs/reference/troubleshooting/containers/kubernetes-operator/byod-gateway-api": {
+    "dns-解析失败": "dns-resolution-fails",
+    "tls-证书问题": "tls-certificate-issues",
+    "gateway-未接收到流量": "gateway-not-receiving-traffic",
+    "httproute-不工作": "httproute-not-working",
+    "externaldns-未创建记录": "externaldns-not-creating-records"
+  },
+  "/docs/reference/troubleshooting/containers/kubernetes-operator": {
+    "使用日志": "using-logs",
+    "集群出站集群入站代理": "cluster-egresscluster-ingress-proxies",
+    "tls-连接错误": "tls-connection-errors",
+    "oauth-客户端与标签问题": "oauth-client-and-tagging-issues",
+    "tailscale-ingress-排障": "tailscale-ingress-troubleshooting"
+  },
+  "/docs/reference/troubleshooting/containers/proxmox": {
+    "在虚拟机中安装-tailscale": "installing-tailscale-within-a-vm",
+    "在-lxc-中安装-tailscale": "installing-tailscale-within-an-lxc",
+    "lxc-中的-resolvconf": "resolvconf-within-lxc"
+  },
+  "/docs/reference/troubleshooting/grants": {
+    "排查授权grant问题": "diagnosing-grant-issues",
+    "解决常见问题": "resolve-common-issues",
+    "较少见与复杂的问题": "less-common-and-complex-issues",
+    "预防策略": "prevention-strategies"
+  },
+  "/docs/reference/troubleshooting": {
+    "连接与网络问题": "connectivity-and-network-issues",
+    "与特定操作系统相关的问题": "issues-related-to-a-specific-operating-system",
+    "移动设备问题": "mobile-device-issues",
+    "容器问题": "container-issues",
+    "云环境问题": "cloud-environment-issues",
+    "其他资源": "additional-resources"
+  },
+  "/docs/reference/troubleshooting/network-configuration/cgnat-conflicts": {
+    "选择性禁用-ipv4": "selectively-disable-ipv4",
+    "在整个-tailnet-范围禁用-ipv4": "disable-ipv4-tailnet-wide"
+  },
+  "/docs/reference/troubleshooting/network-configuration/overlapping-subnet-route-failover": {
+    "避免重叠路由造成黑洞": "avoid-black-holes-with-overlapping-routes"
+  },
+  "/docs/reference/trust-credentials": {
+    "oauth-客户端与联合身份的区别": "differences-between-oauth-clients-and-federated-identities",
+    "权限范围scopes": "scopes",
+    "吊销信任凭证": "revoke-a-trust-credential",
+    "api-访问令牌创建的审计日志": "audit-logging-of-api-access-token-creation",
+    "旧版-scope": "legacy-scopes"
+  },
+  "/docs/reference/tsidp-configuration": {
+    "tsidp-配置标志": "tsidp-configuration-flags",
+    "tsidp-cli-环境变量": "tsidp-cli-environment-variables",
+    "docker-环境变量": "docker-environment-variables"
+  },
+  "/docs/reference/user-roles": {
+    "管理角色": "managing-roles",
+    "用户角色类别": "user-role-categories",
+    "角色": "roles",
+    "权限矩阵": "permission-matrix"
+  },
+  "/docs/reference/visual-editor": {
+    "通用访问规则": "general-access-rules",
+    "组": "groups",
+    "标签": "tags",
+    "ip-集": "ip-sets",
+    "主机": "hosts",
+    "节点属性": "node-attributes",
+    "设备态势": "device-posture",
+    "自动审批者": "auto-approvers",
+    "测试": "tests",
+    "检查模式最佳实践": "check-mode-best-practices",
+    "添加-ssh-测试": "add-an-ssh-test"
+  },
+  "/docs/solutions/access-remote-desktops-using-windows-rdp": {
+    "前提条件": "prerequisites",
+    "第-1-步安装-tailscale-并创建你的-tailnet": "step-1-install-tailscale-and-create-your-tailnet",
+    "第-2-步可选管理密钥过期": "step-2-optional-manage-key-expiry",
+    "第-3-步配置-windows-rdp": "step-3-configure-windows-rdp",
+    "第-4-步在其他设备上安装-rdp-应用": "step-4-install-an-rdp-app-on-other-devices",
+    "第-5-步配置并连接-windows-rdp": "step-5-configure-and-connect-to-windows-rdp",
+    "结语": "conclusion",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/solutions/access-remote-desktops-with-rustdesk": {
+    "前提条件": "prerequisites",
+    "第-1-步创建你的-tailnet": "step-1-create-your-tailnet",
+    "第-2-步在你的设备上安装-tailscale": "step-2-install-tailscale-on-your-devices",
+    "第-3-步在你的设备上安装并配置-rustdesk": "step-3-install-and-configure-rustdesk-on-your-devices",
+    "第-4-步通过-tailnet-使用-rustdesk-连接设备": "step-4-connect-to-a-device-using-rustdesk-over-your-tailnet",
+    "结语": "conclusion",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/solutions/block-ads-all-devices-anywhere-using-raspberry-pi": {
+    "前提条件": "prerequisites",
+    "第-1-步安装并配置-pi-hole": "step-1-install-and-configure-pi-hole",
+    "第-2-步创建你的-tailnet": "step-2-create-your-tailnet",
+    "第-3-步在-raspberry-pi-上安装-tailscale": "step-3-install-tailscale-on-your-raspberry-pi",
+    "第-4-步将-raspberry-pi-设为-tailnet-的-dns-服务器": "step-4-set-raspberry-pi-as-the-dns-server-for-your-tailnet",
+    "结语": "conclusion",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/solutions/code-on-ipad-vscode-caddy-code-server": {
+    "前提条件": "prerequisites",
+    "第-1-步验证你的-tailscale-设置": "step-1-verify-your-tailscale-setup",
+    "第-2-步安装并加固-code-server": "step-2-install-and-secure-code-server",
+    "第-3-步配合-caddy-使用-https": "step-3-use-https-with-caddy",
+    "结语": "conclusion"
+  },
+  "/docs/solutions/connect-github-cicd-workflows-to-private-infrastructure-without-public-exposure": {
+    "前提条件": "prerequisites",
+    "第-1-步为工作流运行器创建身份与访问控制": "step-1-create-identity-and-access-controls-for-workflow-runners",
+    "第-2-步创建用于临时访问的-oauth-客户端": "step-2-create-an-oauth-client-for-ephemeral-access",
+    "第-3-步为-go-测试创建认证密钥": "step-3-create-an-auth-key-for-the-go-test",
+    "第-4-步创建一个基础的-tsnet-应用": "step-4-create-a-basic-tsnet-app",
+    "第-5-步创建-go-测试": "step-5-create-a-go-test",
+    "第-6-步创建-github-actions-工作流": "step-6-create-the-github-actions-workflow",
+    "第-7-步面向生产场景进行扩展监控与优化": "step-7-extend-monitor-and-optimize-for-production-use-cases",
+    "结语": "conclusion"
+  },
+  "/docs/solutions/connect-kubernetes-pods-to-tailnet-using-sidecar": {
+    "前提条件": "prerequisites",
+    "第-1-步持久化状态以避免重复注册": "step-1-persist-state-to-avoid-re-registrations",
+    "第-2-步为-secret-状态存储配置-rbac": "step-2-configure-rbac-for-secret-state-storage",
+    "第-3-步对-sidecar-进行认证": "step-3-authenticate-the-sidecar",
+    "第-4-步处理-pod-中的-dns": "step-4-handle-dns-in-the-pod",
+    "第-5-步加固-sidecar": "step-5-harden-the-sidecar",
+    "第-6-步部署-sidecar": "step-6-deploy-the-sidecar",
+    "第-7-步可选配置健康检查与可观测性": "step-7-optional-configure-health-checks-and-observability",
+    "故障排除": "troubleshooting",
+    "进一步探索": "further-exploration",
+    "路由的工作原理": "how-routing-works",
+    "部署前验证你的-tailnet": "verify-your-tailnet-before-deploying"
+  },
+  "/docs/solutions/create-a-secure-connection-to-mongodb-atlas": {
+    "简介": "introduction",
+    "前提条件": "prerequisites",
+    "第-1-步更新你的-tailnet-策略文件": "step-1-update-your-tailnet-policy-file",
+    "第-2-步为-atlas-启动一个应用连接器": "step-2-start-an-app-connector-for-atlas",
+    "第-3-步在-atlas-中将应用连接器加入允许列表": "step-3-allowlist-the-app-connector-in-atlas",
+    "第-4-步连接到你的数据库": "step-4-connect-to-your-database",
+    "结语": "conclusion"
+  },
+  "/docs/solutions": {
+    "开发": "development",
+    "管理基础设施": "manage-infrastructure"
+  },
+  "/docs/solutions/kubernetes-operator-byod-gateway-api": {
+    "简介": "introduction",
+    "前提条件": "prerequisites",
+    "第-1-步配置-tailscale-拆分-dns": "step-1-configure-tailscale-split-dns",
+    "第-2-步配置-envoyproxy-与-tailscale-集成": "step-2-configure-envoyproxy-with-tailscale-integration",
+    "第-3-步创建-gatewayclass": "step-3-create-a-gatewayclass",
+    "第-4-步部署-gateway": "step-4-deploy-the-gateway",
+    "第-5-步把流量路由到你的服务": "step-5-route-traffic-to-your-services",
+    "第-6-步配置-externaldns-实现自动-dns-管理": "step-6-configure-externaldns-for-automatic-dns-management",
+    "第-7-步验证你的配置": "step-7-verify-your-configuration",
+    "故障排除": "troubleshooting",
+    "高级配置": "advanced-configurations",
+    "结语": "conclusion"
+  },
+  "/docs/solutions/manage-multi-cluster-kubernetes-deployments-argocd": {
+    "简介": "introduction",
+    "前提条件": "prerequisites",
+    "安装带-api-服务器代理的-tailscale-kubernetes-operator": "install-the-tailscale-kubernetes-operator-with-api-server-proxy",
+    "使用访问控制策略配置安全访问": "configure-secure-access-with-access-control-policies",
+    "为-magicdns-设置-dns-解析": "set-up-dns-resolution-for-magicdns",
+    "为远程集群创建出站服务": "create-egress-services-for-remote-clusters",
+    "为远程集群生成-kubeconfig": "generate-kubeconfig-for-remote-clusters",
+    "将集群添加到-argocd": "add-clusters-to-argocd",
+    "结语": "conclusion"
+  },
+  "/docs/solutions/migrate-legacy-vpn-tailscale": {
+    "简介": "introduction",
+    "tailscale-与传统-vpn-的区别": "how-tailscale-differs-from-legacy-vpns",
+    "前提条件": "prerequisites",
+    "创建你的第一个-tailnet": "create-your-first-tailnet",
+    "向你的-tailnet-添加第二台设备": "add-a-second-device-to-your-tailnet",
+    "验证两台设备之间的连通性": "verify-connectivity-between-the-two-devices",
+    "配置对设备的访问控制": "configure-access-control-to-a-device",
+    "按用户角色和用途限制访问": "restrict-access-based-on-user-role-and-purpose",
+    "配置-dns-设置": "configure-dns-settings",
+    "结语": "conclusion",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/solutions/migrate-openvpn-tailscale": {
+    "简介": "introduction",
+    "tailscale-与-openvpn-的区别": "how-tailscale-differs-from-openvpn",
+    "前提条件": "prerequisites",
+    "创建你的第一个-tailnet": "create-your-first-tailnet",
+    "向你的-tailnet-添加第二台设备": "add-a-second-device-to-your-tailnet",
+    "验证两台设备之间的连通性": "verify-connectivity-between-the-two-devices",
+    "配置对设备的访问控制": "configure-access-control-to-a-device",
+    "按用户角色和用途限制访问": "restrict-access-based-on-user-role-and-purpose",
+    "配置-dns-设置": "configure-dns-settings",
+    "结语": "conclusion",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/solutions/protect-postgresql-unencrypted-macbooks": {
+    "前提条件": "prerequisites",
+    "第-1-步定义设备加密要求": "step-1-define-device-encryption-requirements",
+    "第-2-步为安全网关和数据库创建身份": "step-2-create-an-identity-for-the-security-gateway-and-databases",
+    "第-3-步为你的开发团队创建身份": "step-3-create-an-identity-for-your-development-team",
+    "第-4-步设置条件访问策略": "step-4-set-up-conditional-access-policies",
+    "第-5-步启动安全网关": "step-5-start-the-security-gateway",
+    "第-6-步验证数据库路由行为": "step-6-verify-database-routing-behavior",
+    "结语": "conclusion",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/solutions/reduce-aperture-token-costs-with-tsheadroom": {
+    "工作原理": "how-it-works",
+    "前提条件": "prerequisites",
+    "第-1-步生成-tailscale-认证密钥": "step-1-generate-a-tailscale-auth-key",
+    "第-2-步部署-tsheadroom": "step-2-deploy-tsheadroom",
+    "第-3-步确认设备已加入你的-tailnet": "step-3-confirm-the-device-joined-your-tailnet",
+    "第-4-步在-aperture-中定义-hook": "step-4-define-the-hook-in-aperture",
+    "第-5-步把-hook-挂接到授权": "step-5-attach-the-hook-to-a-grant",
+    "第-6-步验证端到端压缩": "step-6-verify-end-to-end-compression",
+    "回滚或禁用压缩": "roll-back-or-disable-compression",
+    "故障排除": "troubleshooting",
+    "安全注意事项": "security-notes",
+    "后续步骤": "next-steps",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/solutions/route-ai-code-reviews-through-aperture": {
+    "工作原理": "how-it-works",
+    "前提条件": "prerequisites",
+    "第-1-步创建-ci-标签并授予-aperture-访问权": "step-1-create-a-ci-tag-and-grant-access-to-aperture",
+    "第-2-步为-github-actions-设置-tailscale-认证": "step-2-set-up-tailscale-authentication-for-github-actions",
+    "第-3-步配置-github-actions-工作流": "step-3-configure-the-github-actions-workflow",
+    "第-4-步验证流水线": "step-4-verify-the-pipeline",
+    "导出日志用于长期保留可选": "export-logs-for-long-term-retention-optional",
+    "后续步骤": "next-steps"
+  },
+  "/docs/solutions/secure-traffic-public-wifi-appletv": {
+    "前提条件": "prerequisites",
+    "第-1-步创建你的-tailnet": "step-1-create-your-tailnet",
+    "第-2-步在-apple-tv-上安装并配置-tailscale-以路由流量": "step-2-install-and-configure-tailscale-on-your-apple-tv-to-route-traffic",
+    "第-3-步配置设备使用-apple-tv-路由流量": "step-3-configure-devices-to-use-apple-tv-for-traffic-routing",
+    "结语": "conclusion",
+    "进一步探索": "further-exploration"
+  },
+  "/docs/solutions/set-up-dogcam": {
+    "前提条件": "prerequisites",
+    "第-1-步在-raspberry-pi-上安装-tailscale": "step-1-install-tailscale-on-your-raspberry-pi",
+    "第-2-步安装-motion": "step-2-install-motion",
+    "第-3-步配置-motion": "step-3-configure-motion",
+    "第-4-步重启-motion": "step-4-restart-motion",
+    "第-5-步访问你的宠物摄像头": "step-5-access-your-dog-camera",
+    "后续步骤": "next-steps"
+  },
+  "/docs/solutions/set-up-minecraft": {
+    "前提条件": "prerequisites",
+    "第-1-步在-linux-上搭建-bedrock_server": "step-1-set-up-bedrock_server-on-linux",
+    "第-2-步在服务器上安装-tailscale": "step-2-install-tailscale-on-the-server",
+    "第-3-步畅玩-minecraft": "step-3-play-minecraft"
+  },
+  "/docs/solutions/set-up-nixos-minecraft": {
+    "前提条件": "prerequisites",
+    "第-1-步编写-nixos-配置文件": "step-1-write-the-nixos-configuration-file",
+    "第-2-步digitalocean-设置": "step-2-digitalocean-setup",
+    "第-3-步畅玩-minecraft": "step-3-play-minecraft",
+    "后续步骤": "next-steps"
+  },
+  "/docs/solutions/sync-kubernetes-secrets-across-clusters-external-secrets": {
+    "前提条件": "prerequisites",
+    "安装带-api-服务器代理的-tailscale-kubernetes-operator": "install-the-tailscale-kubernetes-operator-with-api-server-proxy",
+    "配置访问控制策略": "configure-access-control-policies",
+    "在源集群上为被模拟群组创建-rbac": "create-rbac-for-the-impersonated-group-on-the-source-cluster",
+    "在工作负载集群中创建-tailscale-出站服务": "create-a-tailscale-egress-service-in-the-workload-cluster",
+    "为-magicdns-设置-dns-解析": "set-up-dns-resolution-for-magicdns",
+    "配置-clustersecretstore": "configure-a-clustersecretstore",
+    "创建-externalsecret": "create-an-externalsecret",
+    "结语": "conclusion"
+  },
+  "/docs/use-cases/ai-infrastructure-access/centralize-llm-access-and-spending": {
+    "创建你的-aperture-网关": "create-your-aperture-gateway",
+    "授予用户模型访问权限": "grant-users-access-to-models",
+    "配置-ai-工具与-cicd-流水线": "configure-ai-tools-and-cicd-pipelines",
+    "监控用量并审查日志": "monitor-usage-and-review-logs"
+  },
+  "/docs/use-cases/ai-infrastructure-access/connect-inference-servers": {
+    "为服务器基础设施定义标签": "define-tags-for-your-server-infrastructure",
+    "用带标签的认证密钥认证服务器": "authenticate-servers-with-tagged-auth-keys",
+    "使用授权控制访问": "control-access-with-grants",
+    "为多租户环境隔离访问": "isolate-access-for-multi-tenant-environments",
+    "连接容器化推理工作负载": "connect-containerized-inference-workloads"
+  },
+  "/docs/use-cases/ai-infrastructure-access": {
+    "常用工作流": "popular-workflows"
+  },
+  "/docs/use-cases/ai-infrastructure-access/secure-ai-training-cluster": {
+    "在-tailnet-策略文件中定义标签": "define-tags-in-your-tailnet-policy-file",
+    "安装带-api-服务器代理的-kubernetes-operator": "install-the-kubernetes-operator-with-the-api-server-proxy",
+    "配置-kubectl-使用-tailscale-代理": "configure-kubectl-to-use-the-tailscale-proxy",
+    "将-tailscale-身份映射到-kubernetes-rbac": "map-tailscale-identities-to-kubernetes-rbac"
+  },
+  "/docs/use-cases/application-testing/geo-specific-testing": {
+    "在目标地区设置出口节点": "set-up-exit-nodes-in-target-regions",
+    "授予出口节点访问权限": "grant-access-to-exit-nodes",
+    "在测试机上安装-siege": "install-siege-on-your-test-machine",
+    "用-siege-运行特定地区的负载测试": "run-geo-specific-load-tests-with-siege",
+    "依次测试多个地区": "test-multiple-regions-sequentially"
+  },
+  "/docs/use-cases/application-testing": {
+    "常用工作流": "popular-workflows"
+  },
+  "/docs/use-cases/infrastructure-access/access-multi-cloud-or-multi-region-cloud-envs": {
+    "用子网路由器连接云-vpc": "connect-cloud-vpcs-with-subnet-routers",
+    "跨环境解析内部主机名": "resolve-internal-hostnames-across-environments",
+    "控制云环境之间的访问": "control-access-between-cloud-environments",
+    "连接-kubernetes-集群": "connect-kubernetes-clusters"
+  },
+  "/docs/use-cases/infrastructure-access": {
+    "常用工作流": "popular-workflows"
+  },
+  "/docs/use-cases/infrastructure-access/manage-least-privileged-and-jit-access": {
+    "为生产资源打标签": "tag-production-resources",
+    "用授权定义访问": "define-access-with-grants",
+    "强制实施设备态势要求": "enforce-device-posture-requirements",
+    "提供即时访问": "provide-just-in-time-access"
+  },
+  "/docs/use-cases/infrastructure-access/record-ssh-sessions-compliance": {
+    "在服务器上启用-tailscale-ssh": "enable-tailscale-ssh-on-your-servers",
+    "部署会话录制器": "deploy-a-session-recorder",
+    "在策略文件中配置录制": "configure-recording-in-the-policy-file",
+    "连接你的服务器": "connect-to-your-servers",
+    "审查已录制的会话": "review-recorded-sessions",
+    "延伸探索": "further-exploration"
+  },
+  "/docs/use-cases/personal-or-at-home-use/access-devices-without-tailscale": {
+    "设置子网路由器": "set-up-a-subnet-router",
+    "批准子网路由": "approve-the-subnet-routes",
+    "访问你的设备": "access-your-devices",
+    "延伸探索": "further-exploration"
+  },
+  "/docs/use-cases/personal-or-at-home-use/access-nas-media-file-servers": {
+    "在服务器上安装-tailscale-客户端": "install-the-tailscale-client-on-your-server",
+    "在你的设备上安装-tailscale-客户端": "install-the-tailscale-client-on-your-devices",
+    "访问你的文件和服务": "access-your-files-and-services",
+    "延伸探索": "further-exploration"
+  },
+  "/docs/use-cases/personal-or-at-home-use": {
+    "常用工作流": "popular-workflows"
+  },
+  "/docs/use-cases/personal-or-at-home-use/share-private-game-server": {
+    "在游戏服务器上安装-tailscalelinux": "install-tailscale-on-the-game-server-linux",
+    "锁紧服务器防火墙": "lock-down-the-server-firewall",
+    "与朋友共享服务器": "share-the-server-with-friends"
+  },
+  "/docs/use-cases/regulated-environment/enforce-device-compliance": {
+    "启用设备身份收集": "enable-device-identity-collection",
+    "在策略文件中定义态势条件": "define-posture-conditions-in-the-policy-file",
+    "把态势条件应用到访问规则": "apply-posture-conditions-to-access-rules",
+    "验证合规状态": "verify-compliance-status"
+  },
+  "/docs/use-cases/regulated-environment": {
+    "常用工作流": "popular-workflows"
+  },
+  "/docs/use-cases/regulated-environment/static-egress-ip-allowlist": {
+    "更新你的-tailnet-策略文件": "update-your-tailnet-policy-file",
+    "配置云虚拟机": "configure-the-cloud-vm",
+    "将云虚拟机-ip-地址列入白名单": "allowlist-the-cloud-vm-ip-address",
+    "可选让云虚拟机保持持久连接": "optional-keep-the-cloud-vm-persistently-connected"
+  },
+  "/docs/use-cases/vpn-replacement/employee-onboarding-offboarding": {
+    "使用-scim-实现自动化": "automate-with-scim",
+    "手动管理访问权限": "manage-access-manually"
+  },
+  "/docs/use-cases/vpn-replacement": {
+    "常用工作流": "popular-workflows"
+  },
+  "/docs/use-cases/vpn-replacement/remote-workers": {
+    "将所有流量路由经过公司网关": "route-all-traffic-through-a-corporate-gateway",
+    "连接到你的公司网络": "connect-to-your-corporate-network",
+    "按群组和角色限制访问": "limit-access-by-group-and-role"
+  },
+  "/docs/use-cases/vpn-replacement/secure-access": {
+    "控制对内部应用的访问": "control-access-to-internal-applications",
+    "使用-ssh-安全访问服务器": "access-servers-securely-with-ssh",
+    "通过即时审批限制访问": "limit-access-with-just-in-time-approvals",
+    "监控与审计访问": "monitor-and-audit-access"
+  }
+}
