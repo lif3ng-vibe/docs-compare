@@ -120,5 +120,12 @@
     "origin": "https://tailscale.com",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/tailscale",
     "anchorMapUrl": "anchor-maps/tailscale.json"
+  },
+  {
+    "id": "impeccable",
+    "name": "Impeccable 线上镜像",
+    "origin": "https://impeccable.style",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/impeccable-mirror",
+    "anchorMapUrl": "anchor-maps/impeccable.json"
   }
 ]

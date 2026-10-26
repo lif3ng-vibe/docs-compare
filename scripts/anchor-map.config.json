@@ -168,6 +168,17 @@
       "listFrom": {
         "sitemap": "https://tailscale.com/sitemap.xml"
       }
+    },
+    {
+      "id": "impeccable",
+      "dir": "impeccable-mirror-cn",
+      "origin": "https://impeccable.style",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/impeccable-mirror",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "githubDir": "impeccable-mirror-cn/site",
+        "ext": ".html"
+      }
     }
   ]
 }
