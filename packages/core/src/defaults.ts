@@ -132,6 +132,20 @@ const RAW = [
     anchorMapUrl: 'anchor-maps/tailscale.json',
   },
   {
+    id: 'litellm',
+    name: 'LiteLLM 文档',
+    origin: 'https://docs.litellm.ai',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/litellm',
+    anchorMapUrl: 'anchor-maps/litellm.json',
+  },
+  {
+    id: 'coolify',
+    name: 'Coolify 文档',
+    origin: 'https://coolify.io',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/coolify',
+    anchorMapUrl: 'anchor-maps/coolify.json',
+  },
+  {
     id: 'impeccable',
     name: 'Impeccable 线上镜像',
     origin: 'https://impeccable.style',

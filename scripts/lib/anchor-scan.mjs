@@ -67,7 +67,8 @@ export async function pool(items, limit, fn) {
 
 // ---------- 解析 ----------
 
-const HEAD_RE = /<h([1-6])[^>]*?\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h\1>/g;
+// id 属性兼容双引号与无引号两种形态(litellm 的 Docusaurus 构建输出无引号属性)
+const HEAD_RE = /<h([1-6])[^>]*?\sid=(?:"([^"]+)"|([^\s">]+))[^>]*>([\s\S]*?)<\/h\1>/g;
 
 /**
  * 框架 chrome 标题判定:除了 CHROME_IDS 白名单外,再按形态排除两类
@@ -84,7 +85,7 @@ function isChromeId(id) {
 export function headings(html) {
   const out = [];
   for (const m of html.matchAll(HEAD_RE)) {
-    const id = m[2];
+    const id = m[2] ?? m[3];
     if (isChromeId(id)) continue;
     out.push({ level: Number(m[1]), id });
   }

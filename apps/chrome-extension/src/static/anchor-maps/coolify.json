@@ -1,0 +1,2872 @@
+{
+  "/": {
+    "用-coolify-构建与部署": "build--deploy-with-coolify"
+  },
+  "/api/authorization": {
+    "api-授权": "api-authorization",
+    "发起请求之前": "before-you-make-a-request",
+    "发送-bearer-令牌": "send-a-bearer-token",
+    "授权检查": "authorization-checks"
+  },
+  "/api/errors": {
+    "api-错误": "api-errors",
+    "错误响应": "error-responses",
+    "状态码": "status-codes",
+    "诊断认证与授权失败": "diagnose-authentication-and-authorization-failures",
+    "数据缺失或被脱敏": "missing-or-redacted-data",
+    "数据库导入与日志请求": "database-imports-and-log-requests",
+    "ip-白名单拒绝": "ip-allowlist-rejections"
+  },
+  "/api/ip-allowlist": {
+    "api-ip-白名单": "api-ip-allowlist",
+    "api-访问控制": "api-access-controls",
+    "按-ip-地址限制-api-访问": "restrict-api-access-by-ip-address",
+    "从-coolify-docker-网络调用-api": "call-the-api-from-the-coolify-docker-network",
+    "验证白名单": "verify-the-allowlist"
+  },
+  "/api/making-requests": {
+    "发起-api-请求": "make-api-requests",
+    "构造请求-url": "build-the-request-url",
+    "发送请求头": "send-request-headers",
+    "发送-json-请求体": "send-json-request-bodies",
+    "处理响应": "handle-the-response"
+  },
+  "/api/overview": {
+    "基础-url": "base-urls",
+    "发送受保护请求之前": "before-sending-a-protected-request",
+    "api-参考章节": "api-reference-sections"
+  },
+  "/api/permissions": {
+    "api-权限": "api-permissions",
+    "权限级别": "permission-levels",
+    "团队与角色范围": "team-and-role-scope",
+    "敏感响应数据": "sensitive-response-data",
+    "遵循最小权限": "choose-the-least-privilege",
+    "特定操作的检查": "operation-specific-checks"
+  },
+  "/api/rate-limits": {
+    "api-速率限制": "api-rate-limits",
+    "默认限额": "default-limits",
+    "速率限制响应头": "rate-limit-headers",
+    "处理-429-响应": "handle-a-429-response",
+    "修改实例级速率限制": "change-the-instance-wide-rate-limit"
+  },
+  "/applications": {
+    "应用": "applications",
+    "找到对应的章节": "find-the-right-section",
+    "从第一个应用开始": "start-with-your-first-application"
+  },
+  "/applications/builds/custom-docker-options": {
+    "自定义-docker-选项": "custom-docker-options",
+    "受支持的选项": "supported-options",
+    "使用自定义-seccomp-配置文件": "use-a-custom-seccomp-profile",
+    "添加选项": "add-an-option",
+    "覆盖入口点": "override-the-entrypoint"
+  },
+  "/applications/builds/docker-compose": {
+    "创建-docker-compose-资源": "create-the-docker-compose-resource",
+    "配置-compose-定义": "configure-the-compose-definition",
+    "环境变量": "environment-variables",
+    "存储": "storage",
+    "健康检查": "health-checks",
+    "compose-网络": "compose-networking",
+    "应用的-raw-compose-部署": "raw-compose-deployment-for-an-application",
+    "应用标签": "application-labels",
+    "应用构建参数": "application-build-arguments",
+    "应用-compose-命令": "application-compose-commands",
+    "排查不可用的域名": "troubleshoot-an-unavailable-domain",
+    "网络名称中的变量": "variables-in-network-names",
+    "选择来源": "choose-the-source",
+    "选择-docker-compose": "select-docker-compose",
+    "加载并检查定义": "load-and-review-the-definition",
+    "配置公开服务": "configure-public-services",
+    "部署并验证": "deploy-and-verify",
+    "默认值与必填值": "defaults-and-required-values",
+    "复用同一变量": "reuse-one-variable",
+    "使用共享变量": "use-a-shared-variable",
+    "生成的堆栈值": "generated-stack-values",
+    "为服务生成域名": "generate-domains-for-services",
+    "生成变量的命名": "naming-generated-variables"
+  },
+  "/applications/builds/docker-registries": {
+    "docker-镜像仓库": "docker-registries",
+    "拉取现有镜像": "pull-an-existing-image",
+    "推送-coolify-构建的镜像": "push-an-image-built-by-coolify",
+    "认证私有镜像仓库": "authenticate-a-private-registry",
+    "在-docker-swarm-中使用镜像仓库": "use-a-registry-with-docker-swarm",
+    "在-coolify-中托管镜像仓库": "host-a-registry-in-coolify",
+    "通过-ssh-认证": "authenticate-through-ssh"
+  },
+  "/applications/builds/dockerfile": {
+    "选择-dockerfile-的存放位置": "choose-where-the-dockerfile-is-stored",
+    "使用-dockerfile-部署": "deploy-from-a-dockerfile",
+    "构建参数": "build-arguments",
+    "镜像健康检查": "image-health-checks",
+    "部署命令": "deployment-commands",
+    "nodejs-多核扩展": "nodejs-multi-core-scaling",
+    "排查运行时问题": "troubleshoot-the-runtime",
+    "连接仓库": "connect-the-repository",
+    "选择-dockerfile": "select-dockerfile",
+    "配置构建上下文": "configure-the-build-context",
+    "配置运行时": "configure-the-runtime",
+    "部署并验证": "deploy-and-verify"
+  },
+  "/applications/builds/nixpacks/deploy": {
+    "使用-nixpacks-部署": "deploy-with-nixpacks",
+    "部署应用": "deploy-the-application",
+    "配置静态输出": "configure-static-output",
+    "创建资源": "create-a-resource",
+    "连接仓库": "connect-the-repository",
+    "选择-nixpacks": "select-nixpacks",
+    "选择应用类型": "choose-the-application-type",
+    "添加环境变量": "add-environment-variables",
+    "检查识别出的命令": "review-the-detected-commands",
+    "部署并验证": "deploy-and-verify"
+  },
+  "/applications/builds/nixpacks/node-versioning": {
+    "nixpacks-中的-nodejs-版本": "nodejs-versioning-in-nixpacks",
+    "选择主版本": "select-a-major-version",
+    "为什么版本范围无法固定补丁版本": "why-a-range-does-not-pin-a-patch-release",
+    "固定-nixpkgs-归档": "pin-a-nixpkgs-archive",
+    "查找归档提交": "find-an-archive-commit",
+    "nodejs-源哈希参考": "nodejs-source-hash-reference"
+  },
+  "/applications/builds/nixpacks/overview": {
+    "何时使用-nixpacks": "when-to-use-nixpacks",
+    "coolify-如何使用-nixpacks": "how-coolify-uses-nixpacks",
+    "配置-nixpacks": "configure-nixpacks",
+    "静态应用": "static-applications",
+    "nodejs-版本": "nodejs-versions",
+    "排查识别问题": "troubleshoot-detection",
+    "让-nodejs-使用多个-cpu-核": "use-multiple-cpu-cores-with-nodejs",
+    "nixpacks-解析出旧版软件包": "nixpacks-resolves-an-older-package"
+  },
+  "/applications/builds/overview": {
+    "构建应用": "build-applications",
+    "比较构建方式": "compare-build-methods",
+    "构建在哪里运行": "where-builds-run",
+    "构建与运行时配置": "build-and-runtime-configuration",
+    "构建缓存": "build-cache",
+    "把构建出的镜像推送到镜像仓库": "push-built-images-to-a-registry",
+    "选择下一篇构建指南": "choose-the-next-build-guide"
+  },
+  "/applications/builds/railpack": {
+    "使用-railpack-部署": "deploy-with-railpack",
+    "命令覆盖": "command-overrides",
+    "railpack-环境变量": "railpack-environment-variables",
+    "静态输出": "static-output",
+    "选择-railpack-还是-nixpacks": "choose-railpack-or-nixpacks",
+    "连接仓库": "connect-the-repository",
+    "选择-railpack": "select-railpack",
+    "配置应用类型": "configure-the-application-type",
+    "检查识别出的命令": "review-detected-commands",
+    "部署并验证": "deploy-and-verify"
+  },
+  "/applications/builds/static": {
+    "部署静态文件": "deploy-static-files",
+    "nginx-配置": "nginx-configuration",
+    "准备仓库": "prepare-the-repository",
+    "创建资源": "create-a-resource",
+    "选择仓库来源": "choose-the-repository-source",
+    "选择-static": "select-static",
+    "设置基础目录": "set-the-base-directory",
+    "查看-web-服务器": "review-the-web-server",
+    "配置域名": "configure-the-domain",
+    "部署并验证": "deploy-and-verify"
+  },
+  "/applications/choose-deployment-method": {
+    "选择部署方式": "choose-a-deployment-method",
+    "根据你拥有的内容选择": "choose-what-you-provide",
+    "使用-git-仓库": "use-a-git-repository",
+    "免-git-使用-dockerfile": "use-a-dockerfile-without-git",
+    "使用来自-git-的-docker-compose": "use-docker-compose-from-git",
+    "使用现有-docker-镜像": "use-an-existing-docker-image",
+    "验证选择": "verify-the-choice"
+  },
+  "/applications/coming-from-managed-platforms": {
+    "从托管平台迁移而来": "coming-from-managed-platforms",
+    "对照熟悉的概念": "map-familiar-concepts",
+    "你必须决定的事": "what-you-must-decide",
+    "安全的迁移顺序": "a-safe-migration-sequence",
+    "选择应用运行的位置": "choose-where-the-application-runs",
+    "选择-coolify-部署什么": "choose-what-coolify-deploys",
+    "规划数据持久化的位置": "plan-where-data-persists",
+    "规划流量如何到达应用": "plan-how-traffic-reaches-the-application",
+    "规划应用的恢复方式": "plan-how-the-application-recovers"
+  },
+  "/applications/configuration/advanced": {
+    "高级设置": "advanced-settings",
+    "各应用类型的可用设置": "settings-available-by-application-type",
+    "构建缓存": "build-cache",
+    "构建参数": "build-arguments",
+    "源提交可用性source-commit-availability": "source-commit-availability"
+  },
+  "/applications/configuration/environment-variables": {
+    "环境变量": "environment-variables",
+    "添加变量": "add-variables",
+    "构建与运行时作用域": "build-and-runtime-scope",
+    "多行与字面值": "multiline-and-literal-values",
+    "共享变量": "shared-variables",
+    "外部机密管理器": "external-secret-managers",
+    "预定义应用变量": "predefined-application-variables",
+    "docker-compose-变量": "docker-compose-variables",
+    "应用更改": "apply-changes",
+    "命名与复制取值": "names-and-copying-values",
+    "示例私有-npm-仓库": "example-private-npm-registry"
+  },
+  "/applications/configuration/general": {
+    "常规设置": "general-settings",
+    "各部署方式的可用设置": "settings-available-by-deployment-method",
+    "应用信息": "application-details",
+    "域名domains": "domains"
+  },
+  "/applications/configuration/health-checks": {
+    "健康检查": "health-checks",
+    "选择在哪里定义检查": "choose-where-to-define-the-check",
+    "在-coolify-中配置健康检查": "configure-a-health-check-in-coolify",
+    "随应用定义检查": "define-the-check-with-the-application",
+    "健康检查与滚动更新": "health-checks-and-rolling-updates",
+    "排查失败的检查": "troubleshoot-a-failed-check",
+    "创建就绪端点": "create-a-readiness-endpoint",
+    "配置请求": "configure-the-request",
+    "确认容器内有-http-客户端": "verify-the-container-has-an-http-client",
+    "测试端点": "test-the-endpoint",
+    "配置时间参数": "configure-timing",
+    "保存并启用检查": "save-and-enable-the-check"
+  },
+  "/applications/configuration/overview": {
+    "配置应用": "configure-an-application",
+    "配置页面": "configuration-pages",
+    "应用配置更改": "apply-configuration-changes",
+    "相关配置指南": "related-configuration-guides"
+  },
+  "/applications/configuration/persistent-storage": {
+    "配置持久化存储": "configure-persistent-storage",
+    "理解挂载的两端": "understand-the-two-paths",
+    "为应用添加挂载": "add-a-mount-to-an-application",
+    "compose-应用": "compose-applications",
+    "重要边界": "important-boundaries",
+    "继续-core-指南": "continue-with-the-core-guides",
+    "打开-persistent-storage": "open-persistent-storage",
+    "选择挂载类型": "choose-the-mount-type",
+    "填写源与目标": "enter-the-source-and-destination",
+    "保存并应用挂载": "save-and-apply-the-mount"
+  },
+  "/applications/configuration/resource-limits": {
+    "资源限制": "resource-limits",
+    "cpu-限制": "cpu-limits",
+    "内存限制": "memory-limits",
+    "应用并验证": "apply-and-verify"
+  },
+  "/applications/deployments/automatic-deployments": {
+    "自动部署": "automatic-deployments",
+    "按变更路径限制部署": "limit-deployments-by-changed-paths",
+    "禁用自动-git-部署": "disable-automatic-git-deployments",
+    "启用自动部署": "enable-automatic-deployments",
+    "推送到已配置的分支": "push-to-the-configured-branch",
+    "验证部署": "verify-the-deployment"
+  },
+  "/applications/deployments/docker-image": {
+    "部署-docker-镜像": "deploy-a-docker-image",
+    "何时使用-docker-image": "when-to-use-docker-image",
+    "开始之前": "before-you-start",
+    "选择标签还是摘要": "choose-a-tag-or-digest",
+    "部署-docker-镜像-1": "deploy-a-docker-image-1",
+    "更换已部署的镜像": "change-the-deployed-image",
+    "docker-image-会跳过哪些环节": "what-docker-image-skips",
+    "选择-docker-image": "select-docker-image",
+    "填写镜像引用": "enter-the-image-reference",
+    "配置运行时": "configure-the-runtime",
+    "部署并验证": "deploy-and-verify"
+  },
+  "/applications/deployments/manual-webhooks": {
+    "手动-git-webhook": "manual-git-webhooks",
+    "选择仓库提供商": "choose-the-repository-provider",
+    "排查部署记录未出现": "troubleshoot-a-missing-deployment",
+    "启用自动分支部署": "enable-automatic-branch-deployments",
+    "复制-github-webhook-信息": "copy-the-github-webhook-details",
+    "在-github-上添加-webhook": "add-the-webhook-on-github",
+    "选择事件": "select-the-events",
+    "验证-webhook": "verify-the-webhook"
+  },
+  "/applications/deployments/overview": {
+    "部署应用": "deploy-applications",
+    "发起部署": "start-a-deployment",
+    "查看部署历史": "inspect-deployment-history",
+    "选择下一篇部署指南": "choose-the-next-deployment-guide"
+  },
+  "/applications/deployments/preview-deployments": {
+    "预览部署": "preview-deployments",
+    "启用预览部署之前": "before-enabling-previews",
+    "启用预览部署": "enable-preview-deployments",
+    "接入-pull-request-事件": "connect-pull-request-events",
+    "配置预览域名": "configure-preview-domains",
+    "将预览变量与生产环境隔离": "separate-preview-variables-from-production",
+    "载入已存在的-pull-request": "load-pull-requests-that-were-already-open",
+    "github-pull-request-评论": "github-pull-request-comments",
+    "手动部署-docker-image-预览": "deploy-a-docker-image-preview-manually",
+    "管理预览": "manage-a-preview",
+    "验证预览生命周期": "verify-the-preview-lifecycle",
+    "通过-api-管理预览": "manage-previews-through-the-api",
+    "在-coolify-中启用预览权限": "enable-preview-permissions-in-coolify",
+    "完成-github-app-安装": "finish-the-github-app-installation",
+    "验证事件连接": "verify-the-event-connection",
+    "更新已有的-github-app": "update-an-existing-github-app",
+    "打开-github-app-的权限设置": "open-the-github-app-permissions",
+    "更新-github-权限": "update-github-permissions",
+    "接受并验证更新": "accept-and-verify-the-update"
+  },
+  "/applications/deployments/rollbacks": {
+    "回滚": "rollbacks",
+    "回滚之前": "before-rolling-back",
+    "部署旧版镜像": "deploy-an-older-image",
+    "镜像保留": "image-retention"
+  },
+  "/applications/deployments/rolling-updates": {
+    "滚动更新": "rolling-updates",
+    "滚动更新的工作方式": "how-a-rolling-update-works",
+    "应用需要处理什么": "what-the-application-must-handle",
+    "配置优雅关闭": "configure-graceful-shutdown",
+    "会阻止滚动更新的设置": "settings-that-prevent-a-rolling-update",
+    "docker-compose-与-docker-swarm": "docker-compose-and-docker-swarm",
+    "测试完整的切换过程": "test-the-complete-transition",
+    "排查被打断的更新": "troubleshoot-an-interrupted-update"
+  },
+  "/applications/framework-examples/elixir/phoenix": {
+    "要求": "requirements"
+  },
+  "/applications/framework-examples/javascript/nextjs": {
+    "使用-nixpacks-部署": "deploy-with-nixpacks",
+    "使用-dockerfile-部署": "deploy-with-dockerfile",
+    "服务器构建nodejs": "server-build-nodejs",
+    "静态构建spa": "static-build-spa",
+    "前置条件": "prerequisites"
+  },
+  "/applications/framework-examples/javascript/nuxt": {
+    "服务器构建nuxt使用-nuxt-build": "server-build-nuxt-using-nuxt-build",
+    "静态构建nuxt使用-nuxt-generate": "static-build-nuxt-using-nuxt-generate",
+    "nitro-服务器构建nitro使用-nitro-build": "nitro-server-build-nitro-using-nitro-build"
+  },
+  "/applications/framework-examples/javascript/svelte-kit": {
+    "静态构建adapter-static": "static-build-adapter-static",
+    "node-服务器adapter-node": "node-server-adapter-node"
+  },
+  "/applications/framework-examples/javascript/vite": {
+    "原生-typescript-构建静态": "vanilla-typescript-build-static",
+    "原生-javascript-构建静态": "vanilla-javascript-build-static"
+  },
+  "/applications/framework-examples/javascript/vuejs": {
+    "服务器构建nodejsexpress": "server-build-nodejsexpress",
+    "静态构建spa": "static-build-spa",
+    "带路由的静态构建spa": "static-build-with-router-spa"
+  },
+  "/applications/framework-examples/php/laravel": {
+    "使用-nixpacks-部署": "deploy-with-nixpacks",
+    "使用-dockerfile-与-nginx-unit-部署": "deploy-with-dockerfile-and-nginx-unit",
+    "要求": "requirements",
+    "环境变量": "environment-variables",
+    "一体化容器": "all-in-one-container",
+    "搭配-inertiajs": "with-inertiajs",
+    "持久化-phpini-自定义": "persistent-phpini-customizations",
+    "使用-pnpm": "using-pnpm",
+    "前置条件": "prerequisites",
+    "为-inertia-请求增大-nginx-缓冲区": "increasing-the-nginx-buffer-size-for-inertia-requests"
+  },
+  "/applications/framework-examples/php/symfony": {
+    "要求": "requirements",
+    "数据库迁移": "database-migrations",
+    "其他组件": "other-components",
+    "可信代理": "trusted-proxy",
+    "持久化-phpini-自定义": "persistent-phpini-customizations"
+  },
+  "/applications/framework-examples/python/django": {
+    "要求": "requirements"
+  },
+  "/applications/framework-examples/ruby/jekyll": {
+    "使用-nixpacks-部署": "deploy-with-nixpacks",
+    "使用-dockerfile-部署": "deploy-with-dockerfile",
+    "前置条件": "prerequisites"
+  },
+  "/applications/framework-examples/ruby/rails": {
+    "要求": "requirements"
+  },
+  "/applications/how-applications-work": {
+    "应用的工作原理": "how-applications-work",
+    "从源码到运行中的应用": "from-source-to-a-running-application",
+    "控制平面与工作负载服务器": "control-plane-and-workload-server",
+    "容器是可替换的": "containers-are-replaceable",
+    "网络": "networking",
+    "构建与部署是两回事": "builds-and-deployments-are-different"
+  },
+  "/applications/operations/danger-zone": {
+    "删除应用": "delete-an-application",
+    "删除之前": "before-deletion",
+    "删除应用-1": "delete-the-application",
+    "核实删除结果": "verify-deletion",
+    "重建已删除的应用": "recreate-a-deleted-application",
+    "查看删除操作": "review-the-deletion-actions",
+    "确认应用名称": "confirm-the-application-name",
+    "确认密码": "confirm-your-password"
+  },
+  "/applications/operations/migrate-between-instances": {
+    "迁移应用": "migrate-an-application",
+    "开始之前": "before-you-start",
+    "选择各类状态的迁移方式": "choose-how-each-type-of-state-moves",
+    "重建并测试应用": "recreate-and-test-the-application",
+    "迁移应用状态": "move-application-state",
+    "切换到目标环境": "cut-over-to-the-destination",
+    "迁移-docker-卷": "move-a-docker-volume",
+    "迁移目录bind-mount-或主机文件": "move-a-directory-bind-mount-or-host-file",
+    "验证迁移结果": "verify-the-migration",
+    "回滚切换": "roll-back-the-cutover",
+    "准备目标环境": "prepare-the-destination",
+    "重建应用": "recreate-the-application",
+    "在没有生产数据的情况下验证应用": "verify-the-application-without-production-state",
+    "数据库与外部依赖": "databases-and-external-dependencies",
+    "持久化文件": "persistent-files",
+    "执行最终同步": "perform-the-final-synchronization",
+    "切换生产流量": "transfer-production-traffic",
+    "重新接上自动化": "reconnect-automation"
+  },
+  "/applications/operations/overview": {
+    "运维应用": "operate-applications",
+    "知道去哪里看": "know-where-to-look",
+    "选择生命周期操作": "choose-a-lifecycle-action",
+    "诊断应用问题": "diagnose-an-application-problem",
+    "保护应用状态": "protect-application-state",
+    "运行周期性任务": "run-recurring-work",
+    "移除或移动应用": "remove-or-move-an-application",
+    "继续运维应用": "continue-operating-the-application",
+    "资源操作按钮": "resource-action-buttons",
+    "跟踪进行中的操作": "follow-a-running-operation",
+    "检查应用状态": "check-the-application-status",
+    "检查最近一次部署": "inspect-the-latest-deployment",
+    "阅读容器输出": "read-the-container-output",
+    "必要时检查运行中的容器": "inspect-the-running-container-when-necessary",
+    "检查资源用量": "check-resource-usage"
+  },
+  "/applications/operations/resource-operations": {
+    "克隆或移动应用": "clone-or-move-an-application",
+    "准备目标": "prepare-the-destination",
+    "打开-clone-resource": "open-clone-resource",
+    "选择网络目标": "select-the-network-destination",
+    "检查克隆结果": "review-the-clone",
+    "部署并验证克隆": "deploy-and-verify-the-clone",
+    "克隆到另一个环境": "clone-into-another-environment"
+  },
+  "/applications/operations/scheduled-tasks": {
+    "运行应用计划任务": "run-scheduled-application-tasks",
+    "打开-scheduled-tasks": "open-scheduled-tasks",
+    "应用侧的特定行为": "application-specific-behavior",
+    "使用详细的-core-指南": "use-the-detailed-core-guides",
+    "打开应用页面": "open-the-application-page",
+    "选择详细指南": "choose-the-detailed-guide",
+    "运行第一次执行": "run-the-first-execution"
+  },
+  "/applications/sources/bitbucket": {
+    "配置自动部署": "configure-automatic-deployments"
+  },
+  "/applications/sources/cursor-origin": {
+    "在-coolify-中添加部署密钥": "add-a-deploy-key-to-coolify",
+    "将密钥添加到-origin": "add-the-key-to-origin",
+    "在-coolify-中创建应用": "create-the-application-in-coolify"
+  },
+  "/applications/sources/deploy-keys": {
+    "部署密钥": "deploy-keys",
+    "创建部署密钥": "create-a-deploy-key",
+    "自动部署": "automatic-deployments",
+    "密钥范围": "key-scope",
+    "在-coolify-中生成密钥": "generate-a-key-in-coolify",
+    "将公钥添加到仓库": "add-the-public-key-to-the-repository",
+    "复制-ssh-仓库-url": "copy-the-ssh-repository-url",
+    "创建应用": "create-the-application",
+    "部署并验证": "deploy-and-verify"
+  },
+  "/applications/sources/gitea": {
+    "配置自动部署": "configure-automatic-deployments"
+  },
+  "/applications/sources/github/actions": {
+    "构建并部署": "build-and-deploy",
+    "选择部署类型": "choose-the-deployment-type",
+    "启用-coolify-api-访问": "enable-coolify-api-access",
+    "创建-coolify-api-令牌": "create-a-coolify-api-token",
+    "复制部署-webhook": "copy-the-deploy-webhook",
+    "添加-github-仓库-secrets": "add-github-repository-secrets",
+    "添加-github-actions-工作流": "add-the-github-actions-workflow",
+    "对部署服务器进行身份验证": "authenticate-the-deployment-server"
+  },
+  "/applications/sources/github/app": {
+    "设置-github-app": "set-up-a-github-app",
+    "选择安装方式": "choose-an-installation-method",
+    "更改仓库访问权限": "change-repository-access",
+    "1-在-coolify-中创建-github-app-来源": "1-create-a-github-app-source-in-coolify",
+    "2-选择自动安装": "2-choose-automated-installation",
+    "3-在-github-上注册应用": "3-register-the-app-on-github",
+    "4-安装仓库访问权限": "4-install-repository-access",
+    "5-创建应用": "5-create-an-application",
+    "6-选择部署服务器": "6-choose-the-deployment-server",
+    "7-选择-github-app": "7-choose-the-github-app",
+    "8-配置并部署应用": "8-configure-and-deploy-the-application"
+  },
+  "/applications/sources/github/auto-deploy": {
+    "github-自动部署": "github-auto-deploy",
+    "通过-github-app-部署": "deploy-through-a-github-app"
+  },
+  "/applications/sources/github/deploy-key": {
+    "github-部署密钥": "github-deploy-key",
+    "在-coolify-中创建私钥": "create-a-private-key-in-coolify",
+    "在-github-上添加部署密钥": "add-the-deploy-key-on-github",
+    "复制仓库-ssh-url": "copy-the-repository-ssh-url",
+    "创建资源": "create-a-resource",
+    "选择部署密钥资源类型": "select-the-deploy-key-resource-type",
+    "选择服务器": "choose-the-server",
+    "选择部署密钥": "choose-the-deploy-key",
+    "配置并部署": "configure-and-deploy"
+  },
+  "/applications/sources/github/preview-deploy": {
+    "github-预览部署": "github-preview-deployments",
+    "功能特性": "features",
+    "设置预览部署": "set-up-preview-deployments",
+    "验证预览部署": "verify-preview-deployments",
+    "预览域名": "preview-domains",
+    "选择谁可以部署预览": "choose-who-can-deploy-previews",
+    "按范围隔离的机密": "scoped-secrets",
+    "自动评论": "automated-comments",
+    "更新现有-github-app": "update-an-existing-github-app"
+  },
+  "/applications/sources/github/public-repository": {
+    "部署公开-github-仓库": "deploy-a-public-github-repository",
+    "创建资源": "create-a-resource",
+    "选择-public-repository": "select-public-repository",
+    "选择服务器": "choose-the-server",
+    "输入仓库-url": "enter-the-repository-url",
+    "配置并部署": "configure-and-deploy"
+  },
+  "/applications/sources/github/switch-apps": {
+    "切换-github-app": "switch-github-apps",
+    "1-必要时先迁移仓库": "1-move-the-repository-when-needed",
+    "2-添加新的-github-app": "2-add-the-replacement-github-app",
+    "3-确认仓库访问权限": "3-confirm-repository-access",
+    "4-更换应用的来源": "4-change-the-application-source",
+    "5-必要时更新仓库名称": "5-update-the-repository-name-when-needed",
+    "6-重新部署并验证": "6-redeploy-and-verify"
+  },
+  "/applications/sources/gitlab": {
+    "设置-gitlab-app": "set-up-a-gitlab-app",
+    "使用部署密钥": "use-a-deploy-key",
+    "配置手动-gitlab-webhook": "configure-a-manual-gitlab-webhook",
+    "使用-gitlab-container-registry": "use-gitlab-container-registry",
+    "在-coolify-中添加来源": "add-the-source-in-coolify",
+    "在-gitlab-中创建-oauth-应用": "create-the-oauth-application-in-gitlab",
+    "连接-coolify-与-gitlab": "connect-coolify-to-gitlab",
+    "配置仓库-webhook": "configure-repository-webhooks",
+    "部署仓库": "deploy-a-repository"
+  },
+  "/applications/sources/other-providers": {
+    "其他-git-提供方": "other-git-providers",
+    "自动部署": "automatic-deployments",
+    "预览部署": "preview-deployments"
+  },
+  "/applications/sources/overview": {
+    "连接源代码": "connect-source-code",
+    "选择来源方式": "choose-a-source-method",
+    "仓库访问与容器镜像仓库相互独立": "repository-access-and-container-registries-are-separate",
+    "选择下一篇来源指南": "choose-the-next-source-guide"
+  },
+  "/applications/sources/public-repositories": {
+    "公开仓库": "public-repositories",
+    "创建应用": "create-the-application",
+    "启用自动部署": "enable-automatic-deployments",
+    "复制-https-url": "copy-the-https-url",
+    "选择-public-repository": "select-public-repository",
+    "检查仓库": "check-the-repository",
+    "配置并部署": "configure-and-deploy"
+  },
+  "/applications/what-is-an-application": {
+    "什么是应用": "what-is-an-application",
+    "应用包含什么": "what-an-application-includes",
+    "coolify-管理什么": "what-coolify-manages",
+    "部署之前": "before-deploying",
+    "继续了解": "continue-learning"
+  },
+  "/choose-your-path": {
+    "选择你的路径": "choose-your-path"
+  },
+  "/cli/authentication": {
+    "认证-coolify-cli": "authenticate-the-coolify-cli",
+    "创建-api-令牌": "create-an-api-token",
+    "选择你的-coolify-部署方式": "choose-your-coolify-deployment",
+    "临时覆盖已保存的令牌": "override-a-saved-token",
+    "排查认证问题": "troubleshoot-authentication",
+    "使用-coolify-cloud-认证": "authenticate-with-coolify-cloud"
+  },
+  "/cli/automate-with-cli": {
+    "用-coolify-cli-实现自动化": "automate-with-the-coolify-cli",
+    "配置独立的上下文": "configure-separate-contexts",
+    "获取结构化输出": "request-structured-output",
+    "部署多个资源": "deploy-several-resources",
+    "安全地处理失败": "handle-failures-safely"
+  },
+  "/cli/contexts": {
+    "管理-cli-上下文": "manage-cli-contexts",
+    "添加上下文": "add-a-context",
+    "选择上下文": "select-a-context",
+    "验证上下文": "verify-a-context",
+    "更新上下文": "update-a-context",
+    "移除上下文": "remove-a-context",
+    "配置文件位置": "configuration-file-location"
+  },
+  "/cli/database-backups": {
+    "用-cli-管理数据库备份": "manage-database-backups-with-the-cli",
+    "开始之前": "before-you-begin",
+    "创建备份配置": "create-a-backup-configuration",
+    "立即执行备份": "run-the-backup-immediately",
+    "验证执行结果": "verify-the-execution",
+    "调整保留策略或计划": "change-retention-or-scheduling",
+    "移除备份配置": "remove-a-backup-configuration"
+  },
+  "/cli/deploy-applications": {
+    "用-cli-部署应用": "deploy-applications-with-the-cli",
+    "开始之前": "before-you-begin",
+    "创建应用": "create-the-application",
+    "配置环境变量": "configure-environment-variables",
+    "部署应用": "deploy-the-application",
+    "验证部署": "verify-the-deployment"
+  },
+  "/cli/how-cli-works": {
+    "cli-的工作原理": "how-the-cli-works",
+    "从命令到响应": "from-a-command-to-a-response",
+    "上下文与令牌的优先级": "context-and-token-precedence",
+    "访问边界": "access-boundaries",
+    "请求失败与重试": "request-failures-and-retries",
+    "响应格式": "response-formats"
+  },
+  "/cli/installation": {
+    "安装-coolify-cli": "install-the-coolify-cli",
+    "选择安装方式": "choose-an-installation-method",
+    "验证安装": "verify-the-installation",
+    "启用-shell-补全": "enable-shell-completion",
+    "使用安装脚本安装": "install-with-the-install-script"
+  },
+  "/cli/uninstallation": {
+    "卸载-coolify-cli": "uninstall-the-coolify-cli",
+    "移除-cli": "remove-the-cli",
+    "验证二进制文件已移除": "verify-binary-removal",
+    "可选删除已保存的上下文": "optionally-delete-saved-contexts",
+    "移除安装脚本安装的二进制文件": "remove-an-install-script-binary",
+    "删除-linux-或-macos-配置": "delete-the-linux-or-macos-configuration"
+  },
+  "/cli/update": {
+    "更新-coolify-cli": "update-the-coolify-cli",
+    "选择更新方式": "choose-an-update-method",
+    "验证更新": "verify-the-update",
+    "更新当前二进制文件": "update-the-current-binary"
+  },
+  "/cli/what-is-the-coolify-cli": {
+    "什么是-coolify-cli": "what-is-the-coolify-cli",
+    "开始之前": "before-you-begin",
+    "快速开始": "get-started",
+    "cli-如何连接-coolify": "how-the-cli-connects-to-coolify",
+    "查找命令与选项": "find-commands-and-options",
+    "配合-ai-代理使用-cli": "use-the-cli-with-ai-agents"
+  },
+  "/concepts": {
+    "服务器": "servers",
+    "资源": "resources",
+    "环境": "environments",
+    "项目": "projects",
+    "容器": "containers",
+    "反向代理": "reverse-proxy",
+    "安全": "security",
+    "团队": "teams"
+  },
+  "/contribute/coolify": {
+    "为-coolify-做贡献": "contributing-to-coolify"
+  },
+  "/contribute/documentation": {
+    "coolify-文档贡献指南": "coolify-docs-contribution-guide",
+    "未发布功能的-api-schema": "api-schema-for-unreleased-docs"
+  },
+  "/contribute/guidelines": {
+    "为-coolify-做贡献": "contributing-to-coolify"
+  },
+  "/contribute/service": {
+    "为-coolify-添加新的服务模板": "adding-a-new-service-template-to-coolify",
+    "coolify-自动添加的配置": "configuration-coolify-adds"
+  },
+  "/core/automation/cron-syntax": {
+    "cron-语法": "cron-syntax",
+    "五字段格式": "five-field-format",
+    "命名调度": "named-schedules",
+    "常见示例": "common-examples",
+    "时区": "timezone",
+    "验证调度": "validate-a-schedule",
+    "常用运算符": "common-operators",
+    "字段专属取值": "field-specific-values"
+  },
+  "/core/automation/deploy-webhooks": {
+    "部署-webhook": "deploy-webhooks",
+    "开始之前": "before-you-start",
+    "创建部署令牌": "create-a-deploy-token",
+    "复制-webhook-url": "copy-a-webhook-url",
+    "触发部署": "trigger-the-deployment",
+    "请求选项": "request-options",
+    "验证部署": "verify-the-deployment",
+    "故障排除": "troubleshooting",
+    "打开-api-tokens": "open-api-tokens",
+    "配置令牌": "configure-the-token",
+    "创建并复制令牌": "create-and-copy-the-token",
+    "保存令牌": "store-the-token"
+  },
+  "/core/automation/scheduled-tasks/create-a-task": {
+    "创建计划任务": "create-a-scheduled-task",
+    "创建任务之前": "before-you-create-a-task",
+    "创建任务": "create-the-task",
+    "验证任务": "verify-the-task",
+    "故障排除": "troubleshooting",
+    "打开-scheduled-tasks": "open-scheduled-tasks",
+    "打开任务表单": "open-the-task-form",
+    "为任务命名": "name-the-task",
+    "输入命令": "enter-the-command",
+    "设置执行频率": "set-the-frequency",
+    "设置超时": "set-the-timeout",
+    "选择容器": "select-the-container",
+    "保存任务": "save-the-task"
+  },
+  "/core/automation/scheduled-tasks/execution-history": {
+    "计划任务执行历史": "scheduled-task-execution-history",
+    "打开执行历史": "open-execution-history",
+    "解读执行记录": "read-an-execution",
+    "查看与下载输出": "inspect-and-download-output",
+    "故障排除": "troubleshooting"
+  },
+  "/core/automation/scheduled-tasks/manage-tasks": {
+    "管理计划任务": "manage-scheduled-tasks",
+    "打开任务": "open-a-task",
+    "更新任务配置": "update-task-configuration",
+    "启用或停用任务": "enable-or-disable-a-task",
+    "立即运行任务": "run-a-task-now",
+    "删除任务": "delete-a-task",
+    "故障排除": "troubleshooting"
+  },
+  "/core/automation/scheduled-tasks/overview": {
+    "计划任务概览": "scheduled-tasks-overview",
+    "计划任务包含哪些配置": "what-a-scheduled-task-contains",
+    "任务的运行方式": "how-a-task-runs",
+    "选择下一步": "choose-the-next-task"
+  },
+  "/core/automation/tags/deploy-by-tag": {
+    "按标签部署资源": "deploy-resources-by-tag",
+    "部署之前": "before-deploying",
+    "从控制台重新部署": "redeploy-from-the-dashboard",
+    "用-webhook-自动化部署": "automate-deployment-with-a-webhook",
+    "故障排除": "troubleshooting",
+    "选择标签": "select-the-tag",
+    "检查分组": "review-the-group",
+    "启动部署": "start-the-deployment",
+    "验证资源": "verify-the-resources"
+  },
+  "/core/automation/tags/manage-tags": {
+    "管理标签": "manage-tags",
+    "为资源添加标签": "add-tags-to-a-resource",
+    "分配已有标签": "assign-an-existing-tag",
+    "移除标签": "remove-a-tag",
+    "未使用标签的清理机制": "how-unused-tags-are-removed",
+    "故障排除": "troubleshooting",
+    "打开资源": "open-the-resource",
+    "输入一个或多个名称": "enter-one-or-more-names",
+    "添加标签": "add-the-tags"
+  },
+  "/core/automation/tags/overview": {
+    "标签概览": "tags-overview",
+    "标签的作用": "what-tags-do",
+    "标签的作用范围": "tag-scope",
+    "管理和部署已打标签的资源": "manage-and-deploy-tagged-resources"
+  },
+  "/core/backup-and-recovery/change-root-email": {
+    "修改-root-邮箱": "change-root-email",
+    "选择合适的方式": "choose-the-right-method",
+    "修改邮箱之前": "before-you-change-the-email",
+    "通过终端修改-root-邮箱": "change-the-root-email",
+    "验证新登录邮箱": "verify-the-new-login-email",
+    "故障排查": "troubleshooting",
+    "连接到-coolify-服务器": "connect-to-the-coolify-server",
+    "确认-coolify-容器正在运行": "confirm-that-the-coolify-container-is-running",
+    "运行修改邮箱命令": "run-the-email-change-command"
+  },
+  "/core/backup-and-recovery/instance-backup": {
+    "备份-coolify": "back-up-coolify",
+    "备份之前": "before-you-back-up",
+    "选择备份途径": "choose-a-backup-path",
+    "保存实例加密密钥": "save-the-instance-encryption-key",
+    "配置定期备份": "configure-recurring-backups",
+    "验证并管理备份": "verify-and-manage-backups",
+    "从仪表盘创建备份": "create-a-backup-from-the-dashboard"
+  },
+  "/core/backup-and-recovery/instance-restore": {
+    "恢复-coolify": "restore-coolify",
+    "恢复之前": "before-you-restore",
+    "准备恢复目标": "prepare-the-restore-target",
+    "恢复实例": "restore-the-instance",
+    "验证恢复结果": "verify-the-restore",
+    "故障排查": "troubleshooting",
+    "检查备份文件": "check-the-backup-file",
+    "停止-coolify-控制平面": "stop-the-coolify-control-plane",
+    "设置已保存的-app_key": "set-the-saved-app_key",
+    "恢复数据库": "restore-the-database",
+    "恢复-ssh-密钥": "restore-the-ssh-keys",
+    "启动-coolify": "start-coolify"
+  },
+  "/core/backup-and-recovery/reset-2fa": {
+    "重置-2fa": "reset-2fa",
+    "选择合适的恢复方式": "choose-the-right-recovery-method",
+    "重置-2fa-之前": "before-you-reset-2fa",
+    "在服务器上重置-2fa": "reset-2fa-from-the-server",
+    "验证账户访问": "verify-account-access",
+    "重新配置-2fa": "configure-2fa-again",
+    "故障排查": "troubleshooting",
+    "连接到-coolify-服务器": "connect-to-the-coolify-server",
+    "确认-coolify-容器正在运行": "confirm-that-the-coolify-container-is-running",
+    "打开-laravel-tinker": "open-laravel-tinker",
+    "选择受影响的账户": "select-the-affected-account",
+    "核对所选账户": "verify-the-selected-account",
+    "清除-2fa-配置": "clear-the-2fa-setup",
+    "验证数据库更新": "verify-the-database-update"
+  },
+  "/core/backup-and-recovery/reset-root-password": {
+    "重置-root-密码": "reset-root-password",
+    "选择合适的恢复方式": "choose-the-right-recovery-method",
+    "重置密码之前": "before-you-reset-the-password",
+    "通过终端重置-root-密码": "reset-the-root-password",
+    "验证-root-访问": "verify-root-access",
+    "重置失败时": "if-the-reset-fails",
+    "连接到-coolify-服务器": "connect-to-the-coolify-server",
+    "确认-coolify-容器正在运行": "confirm-that-the-coolify-container-is-running",
+    "运行重置密码命令": "run-the-password-reset-command"
+  },
+  "/core/build-deployment-model": {
+    "构建与部署模型": "build-and-deployment-model",
+    "什么会触发部署": "what-starts-a-deployment",
+    "从配置到运行中的容器": "from-configuration-to-running-containers",
+    "coolify-如何准备镜像": "how-coolify-prepares-an-image",
+    "coolify-如何替换运行中的容器": "how-coolify-replaces-running-containers",
+    "部署之间什么会保留": "what-persists-between-deployments"
+  },
+  "/core/docker-and-containers": {
+    "docker-与容器": "docker-and-containers",
+    "docker-核心概念": "core-docker-concepts",
+    "镜像与容器": "images-and-containers",
+    "持久化数据": "persistent-data",
+    "网络与-docker-compose": "networks-and-docker-compose",
+    "资源标签": "resource-labels",
+    "从配置到运行中的容器": "from-configuration-to-running-containers",
+    "查看-docker-资源": "inspect-docker-resources",
+    "为什么标准-docker-很重要": "why-standard-docker-matters",
+    "深入了解": "go-deeper",
+    "网络": "networks",
+    "检查自托管的-coolify-容器": "check-the-self-hosted-coolify-containers"
+  },
+  "/core/how-coolify-works": {
+    "coolify-的工作原理": "how-coolify-works",
+    "控制路径与流量路径": "the-control-path-and-traffic-path",
+    "coolify-架构的组成部分": "parts-of-a-coolify-setup",
+    "从配置到运行中的容器": "from-configuration-to-running-containers",
+    "请求如何到达资源": "how-requests-reach-a-resource",
+    "配置与数据存放在哪里": "where-configuration-and-data-live",
+    "当-coolify-实例不可用时": "when-the-coolify-instance-is-unavailable",
+    "继续学习": "continue-learning",
+    "自托管-coolify-实例的内部": "inside-a-self-hosted-coolify-instance"
+  },
+  "/core/infrastructure/scaling/cloud-load-balancing": {
+    "云端负载均衡": "cloud-load-balancing",
+    "开始之前": "before-you-begin",
+    "选择负载均衡器访问每台服务器的方式": "choose-how-the-load-balancer-reaches-each-server",
+    "配置负载均衡器": "configure-the-load-balancer",
+    "将-dns-指向负载均衡器": "point-dns-to-the-load-balancer",
+    "验证流量与故障转移": "verify-traffic-and-failover",
+    "运维注意事项": "operating-considerations"
+  },
+  "/core/infrastructure/scaling/docker-swarm": {
+    "docker-swarm已弃用": "docker-swarm-deprecated",
+    "现有的-coolify-v4-部署": "existing-coolify-v4-deployments",
+    "镜像仓库与存储要求": "registry-and-storage-requirements",
+    "检查现有集群": "check-an-existing-cluster",
+    "迁离-docker-swarm": "move-away-from-docker-swarm"
+  },
+  "/core/infrastructure/scaling/multi-server-deployments": {
+    "多服务器部署": "multi-server-deployments",
+    "开始之前": "before-you-begin",
+    "配置应用镜像": "configure-the-application-image",
+    "添加部署服务器": "add-deployment-servers",
+    "部署并验证": "deploy-and-verify",
+    "管理部署服务器": "manage-deployment-servers",
+    "多服务器部署不包含的内容": "what-multi-server-deployment-does-not-provide"
+  },
+  "/core/infrastructure/scaling/overview": {
+    "扩展概览": "scaling-overview",
+    "选择扩展路径": "choose-a-scaling-path",
+    "coolify-负责的部分": "what-coolify-handles",
+    "准备应用": "prepare-the-application",
+    "相关扩展指南": "related-scaling-guides"
+  },
+  "/core/infrastructure/servers/add-server": {
+    "手动添加服务器": "add-a-server-manually",
+    "准备工作": "what-you-need",
+    "创建并授权-ssh-密钥": "create-and-authorize-an-ssh-key",
+    "连接服务器": "connect-the-server",
+    "设置泛域名": "set-a-wildcard-domain",
+    "oracle-cloud免费-arm注意事项": "oracle-cloud-free-arm-notes",
+    "在-coolify-中创建密钥": "create-the-key-in-coolify",
+    "在服务器上授权公钥": "authorize-the-public-key-on-the-server",
+    "打开服务器表单": "open-the-server-form",
+    "填写连接信息": "enter-the-connection-details",
+    "验证服务器": "validate-the-server",
+    "确认服务器就绪": "confirm-the-server-is-ready"
+  },
+  "/core/infrastructure/servers/automated-docker-cleanup": {
+    "docker-自动清理": "automated-docker-cleanup",
+    "配置-docker-清理": "configure-docker-cleanup",
+    "资源操作后的清理": "cleanup-after-resource-operations",
+    "打开-docker-cleanup": "open-docker-cleanup",
+    "设置清理时机": "choose-when-cleanup-runs",
+    "设置允许-coolify-删除的内容": "choose-what-coolify-may-delete",
+    "执行手动清理": "run-a-manual-cleanup",
+    "检查清理结果": "review-the-result"
+  },
+  "/core/infrastructure/servers/build-servers": {
+    "构建服务器": "build-servers",
+    "服务器角色": "server-roles",
+    "准备工作": "what-you-need",
+    "配置构建服务器": "configure-a-build-server",
+    "登录容器镜像仓库": "sign-in-to-the-container-registry",
+    "配置应用使用构建服务器": "configure-an-application-to-use-the-build-server",
+    "准备-ssh-密钥": "prepare-the-ssh-key",
+    "打开-servers-页面": "open-the-servers-page",
+    "添加构建服务器": "add-the-build-server",
+    "验证构建服务器": "validate-the-build-server",
+    "连接到构建服务器": "connect-to-the-build-server",
+    "登录镜像仓库": "log-in-to-the-registry",
+    "打开应用的-general-页面": "open-the-application-general-page",
+    "填写-docker-镜像": "enter-the-docker-image",
+    "启用构建服务器": "enable-the-build-server",
+    "部署应用": "deploy-the-application"
+  },
+  "/core/infrastructure/servers/docker-images": {
+    "docker-镜像": "docker-images",
+    "删除未使用的镜像": "delete-an-unused-image"
+  },
+  "/core/infrastructure/servers/firewall": {
+    "防火墙": "firewall",
+    "选择正确的端口": "choose-the-correct-ports",
+    "配置防火墙": "configure-the-firewall",
+    "确认防火墙生效": "confirm-the-firewall-works",
+    "仅在需要时开放额外端口": "open-additional-ports-only-when-needed",
+    "运行-coolify-的服务器": "server-running-coolify",
+    "使用托管商防火墙": "use-the-hosting-provider-firewall"
+  },
+  "/core/infrastructure/servers/github-actions-runners": {
+    "工作原理": "how-it-works",
+    "准备工作": "what-you-need",
+    "设置-github-app": "set-up-the-github-app",
+    "在构建服务器上配置-runner": "configure-runners-on-a-build-server",
+    "在-workflow-中使用-runner": "use-the-runners-in-a-workflow",
+    "任务中的-docker": "docker-in-jobs",
+    "runner-镜像": "runner-image",
+    "监控-runner": "monitor-runners",
+    "停用-runner": "disable-runners",
+    "故障排查": "troubleshooting",
+    "创建源": "create-the-source",
+    "在-github-上注册-app": "register-the-app-on-github",
+    "启用-runner": "enable-the-runners",
+    "设置-runner-参数": "set-the-runner-settings",
+    "设置资源": "set-the-resources",
+    "设置超时": "set-the-timeouts",
+    "保存设置": "save-the-settings",
+    "安装-sysbox": "install-sysbox"
+  },
+  "/core/infrastructure/servers/manage-server": {
+    "管理服务器": "manage-a-server",
+    "通用设置": "general-settings",
+    "服务器详情": "server-details",
+    "将现有服务器关联到云提供商": "link-an-existing-server-to-a-cloud-provider",
+    "连接变更后重新验证": "revalidate-after-connection-changes",
+    "构建与部署限制": "build-and-deployment-limits",
+    "磁盘使用量通知": "disk-usage-notifications",
+    "泛域名": "wildcard-domain",
+    "添加提供商令牌": "add-the-provider-token",
+    "打开关联流程": "open-the-linking-flow",
+    "找到提供商机器": "find-the-provider-machine",
+    "确认关联": "confirm-the-link"
+  },
+  "/core/infrastructure/servers/non-root-user": {
+    "使用非-root-服务器用户": "use-a-non-root-server-user",
+    "配置非-root-用户": "configure-the-non-root-user",
+    "以-root-登录": "sign-in-as-root",
+    "创建用户": "create-the-user",
+    "打开-coolify-控制台": "open-the-coolify-dashboard",
+    "生成-ssh-密钥": "generate-the-ssh-key",
+    "把密钥添加给新用户": "add-the-key-to-the-new-user",
+    "允许免密-sudo": "allow-passwordless-sudo",
+    "准备-coolify-数据目录": "prepare-the-coolify-data-directory",
+    "继续添加服务器": "continue-to-add-server"
+  },
+  "/core/infrastructure/servers/openssh": {
+    "配置-openssh": "configure-openssh",
+    "选择服务器": "choose-the-server",
+    "故障排查": "troubleshooting",
+    "在安装-coolify-前配置-openssh": "configure-openssh-before-installing-coolify",
+    "登录服务器": "log-in-to-the-server",
+    "安装-openssh": "install-openssh",
+    "配置基于密钥的-ssh-访问": "configure-key-based-ssh-access",
+    "检查并重启-openssh": "check-and-restart-openssh",
+    "运行-coolify-安装脚本": "run-the-coolify-installation-script",
+    "确认-localhost-服务器就绪": "confirm-the-localhost-server-is-ready"
+  },
+  "/core/infrastructure/servers/overview": {
+    "服务器概览": "servers-overview",
+    "服务器角色": "server-roles",
+    "选择添加服务器的方式": "choose-how-to-add-a-server",
+    "连接服务器之后": "after-connecting-a-server",
+    "部署服务器": "deployment-servers",
+    "构建服务器": "build-servers"
+  },
+  "/core/infrastructure/servers/provision-cloud-server": {
+    "创建云服务器": "provision-a-cloud-server",
+    "准备工作": "what-you-need",
+    "创建服务器": "create-the-server",
+    "hostinger-计费与删除": "hostinger-billing-and-deletion",
+    "通过-api-创建-hostinger-服务器": "create-a-hostinger-server-with-the-api",
+    "创建失败时": "if-provisioning-fails",
+    "选择提供商": "choose-a-provider",
+    "配置服务器": "configure-the-server",
+    "发送创建请求": "send-the-creation-request",
+    "等待提供商": "wait-for-the-provider",
+    "验证服务器": "validate-the-server",
+    "支付仍在处理中": "payment-is-still-processing",
+    "支付后设置失败": "setup-fails-after-payment",
+    "服务器状态": "server-status",
+    "删除-hostinger-vps": "delete-a-hostinger-vps"
+  },
+  "/core/infrastructure/servers/remove-server": {
+    "移除服务器": "remove-a-server",
+    "决定删除什么": "decide-what-to-delete",
+    "删除前的准备": "prepare-for-removal",
+    "删除服务器": "delete-the-server",
+    "重新添加机器": "add-the-machine-again",
+    "通过-api-进行提供商侧删除": "provider-deletion-through-the-api",
+    "检查托管资源": "review-managed-resources",
+    "决定资源的处理方式": "choose-how-resources-will-be-handled",
+    "检查提供商关联": "check-the-provider-link",
+    "打开-danger-zone": "open-the-danger-zone",
+    "核对确认信息": "review-the-confirmation",
+    "核实结果": "verify-the-result"
+  },
+  "/core/infrastructure/servers/server-patching": {
+    "修补服务器软件包": "patch-server-packages",
+    "更新服务器软件包": "update-server-packages",
+    "更新通知": "update-notifications",
+    "支持的软件包管理器": "supported-package-managers",
+    "打开-server-patching": "open-server-patching",
+    "检查更新": "check-for-updates",
+    "评估软件包": "review-the-packages",
+    "安装更新": "install-updates",
+    "再次检查服务器": "check-the-server-again"
+  },
+  "/core/infrastructure/servers/web-terminal": {
+    "web-终端": "web-terminal",
+    "开始之前": "before-you-start",
+    "打开终端": "open-a-terminal",
+    "打开资源终端": "open-a-resource-terminal",
+    "更改终端访问": "change-terminal-access",
+    "终端无法连接时": "if-the-terminal-does-not-connect",
+    "选择服务器或容器": "select-a-server-or-container",
+    "确认终端可用": "confirm-the-terminal-works",
+    "禁用终端访问": "disable-terminal-access",
+    "重新启用终端访问": "enable-terminal-access-again"
+  },
+  "/core/instance-management/downgrade": {
+    "降级-coolify": "downgrade-coolify",
+    "降级之前": "before-you-downgrade",
+    "执行降级": "perform-the-downgrade",
+    "故障排查": "troubleshooting",
+    "禁用自动更新": "disable-automatic-updates",
+    "安装目标版本": "install-the-target-version",
+    "验证降级结果": "verify-the-downgrade"
+  },
+  "/core/instance-management/environment-variables": {
+    "实例环境变量": "instance-environment-variables",
+    "php-内存与-worker-设置": "php-memory-and-worker-settings",
+    "计划任务分发": "scheduled-job-dispatch",
+    "修改设置": "change-a-setting",
+    "应用更改": "apply-the-changes",
+    "验证配置": "verify-the-configuration",
+    "何时使用-compose-覆盖": "when-to-use-a-compose-override"
+  },
+  "/core/instance-management/instance-settings": {
+    "实例设置": "instance-settings",
+    "实例环境设置": "instance-environment-settings",
+    "首次设置": "first-time-setup",
+    "启用或禁用备份": "enable-or-disable-backups",
+    "频率": "frequency",
+    "时区": "timezone",
+    "超时时间": "timeout",
+    "备份缺失告警阈值": "missing-backup-alert-after"
+  },
+  "/core/instance-management/reverb-migration": {
+    "将实时服务迁移到-reverb": "migrate-realtime-services-to-reverb",
+    "变更内容": "what-changes",
+    "更新之前": "before-you-update",
+    "迁移自定义-compose-覆盖": "migrate-a-custom-compose-override",
+    "检查环境变量": "check-the-environment-variables",
+    "cloudflare-配置": "cloudflare-configurations",
+    "更新": "update",
+    "验证迁移": "verify-the-migration",
+    "故障排查": "troubleshooting",
+    "备份实例配置": "back-up-the-instance-configuration",
+    "检查是否存在-soketi-服务覆盖": "check-for-a-soketi-service-override",
+    "记录自定义实时设置": "record-custom-realtime-settings",
+    "经-coolify-代理访问仪表盘": "dashboard-through-the-coolify-proxy",
+    "独立的实时主机名": "separate-realtime-hostname",
+    "coolify-容器持续不健康": "the-coolify-container-stays-unhealthy",
+    "cloudflare-对-websocket-请求返回错误": "cloudflare-returns-an-error-for-the-websocket-request",
+    "仪表盘正常但实时更新不工作": "the-dashboard-works-but-realtime-updates-do-not",
+    "直接-ip-访问不再收到更新": "direct-ip-access-stops-receiving-updates"
+  },
+  "/core/instance-management/uninstallation": {
+    "卸载-coolify": "uninstall-coolify",
+    "移除自托管实例": "remove-the-self-hosted-instance",
+    "卸载之前": "before-you-uninstall",
+    "连接到-coolify-服务器": "connect-to-the-coolify-server",
+    "移除-coolify-容器": "remove-coolify-containers",
+    "移除-coolify-数据卷": "remove-coolify-data-volumes",
+    "移除-coolify-网络": "remove-the-coolify-network",
+    "删除-coolify-文件": "delete-coolify-files",
+    "移除-docker-镜像": "remove-docker-images",
+    "验证移除结果": "verify-the-removal"
+  },
+  "/core/instance-management/update": {
+    "更新-coolify": "update-coolify",
+    "更新之前": "before-you-update",
+    "选择更新方式": "choose-an-update-path",
+    "自动更新": "automatic-updates",
+    "验证更新": "verify-the-update",
+    "启用自动更新": "enable-automatic-updates",
+    "更新频率": "update-frequency",
+    "检查频率": "check-frequency"
+  },
+  "/core/instance-management/update-coolify-database": {
+    "更新-coolify-数据库": "update-coolify-database",
+    "更新之前": "before-you-update",
+    "更新数据库": "update-the-database",
+    "回滚数据库更新": "roll-back-the-database-update",
+    "数据库更新如何改变-docker-compose": "how-the-database-update-changes-docker-compose",
+    "数据库更新创建的文件": "files-created-by-the-database-update",
+    "检查迁移脚本": "check-the-migration-script",
+    "检查当前-postgresql-版本": "check-the-current-postgresql-version",
+    "运行数据库更新": "run-the-database-update",
+    "验证数据库更新": "verify-the-database-update",
+    "验证回滚": "verify-the-rollback"
+  },
+  "/core/networking-in-coolify": {
+    "coolify-中的网络": "networking-in-coolify",
+    "三条网络路径": "the-three-networking-paths",
+    "公网流量如何到达资源": "how-public-traffic-reaches-a-resource",
+    "私有容器流量的工作方式": "how-private-container-traffic-works",
+    "选择代理模式": "choose-a-proxy-model",
+    "网络责任边界": "the-networking-responsibility-boundary",
+    "继续了解网络": "continue-with-networking",
+    "配置域名": "configure-domains",
+    "配置代理": "configure-the-proxy",
+    "保障与排查流量": "secure-and-troubleshoot-traffic"
+  },
+  "/core/networking/destinations/create": {
+    "创建目标destination": "create-a-destination",
+    "开始之前": "before-you-start",
+    "创建新的目标": "create-a-new-destination",
+    "导入已有的-docker-网络": "import-an-existing-docker-network",
+    "故障排查": "troubleshooting",
+    "打开新建目标表单": "open-the-new-destination-form",
+    "配置目标": "configure-the-destination",
+    "创建并验证目标": "create-and-verify-the-destination",
+    "扫描服务器": "scan-the-server",
+    "添加发现的网络": "add-the-discovered-network"
+  },
+  "/core/networking/destinations/delete": {
+    "删除目标destination": "delete-a-destination",
+    "删除之前": "before-you-delete",
+    "删除目标": "delete-the-destination",
+    "如果还需要这个目标": "if-you-need-the-destination-again",
+    "打开目标": "open-the-destination",
+    "确认删除": "confirm-the-deletion",
+    "验证删除结果": "verify-the-deletion"
+  },
+  "/core/networking/destinations/manage": {
+    "管理目标destination": "manage-destinations",
+    "查找目标": "find-a-destination",
+    "查看目标详情与资源": "review-destination-details-and-resources",
+    "重命名目标": "rename-a-destination",
+    "为新资源选择目标": "choose-a-destination-for-a-new-resource",
+    "将资源克隆到另一个目标": "clone-a-resource-to-another-destination",
+    "连接-docker-compose-资源": "connect-docker-compose-resources"
+  },
+  "/core/networking/destinations/overview": {
+    "目标destination概览": "destinations-overview",
+    "目标决定了什么": "what-a-destination-controls",
+    "默认目标": "the-default-destination",
+    "何时创建其他目标": "when-to-create-another-destination",
+    "docker-compose-的目标行为": "destination-behavior-for-docker-compose",
+    "继续了解目标": "continue-with-destinations"
+  },
+  "/core/networking/dns": {
+    "将域名指向服务器": "point-a-domain-to-the-server",
+    "选择-dns-记录类型": "choose-the-dns-record",
+    "验证-dns-更改": "verify-the-dns-change",
+    "配置泛域名-dns": "configure-wildcard-dns",
+    "配置-coolify-dns-验证": "configure-coolify-dns-validation",
+    "使用国际化域名": "use-internationalized-domain-names",
+    "相关网络指南": "related-networking-guides",
+    "cloudflare-托管记录": "cloudflare-managed-records"
+  },
+  "/core/networking/domains": {
+    "域名": "domains",
+    "选择域名方案": "choose-a-domain-option",
+    "添加自定义域名": "add-a-custom-domain",
+    "路由到端口或路径": "route-to-a-port-or-path",
+    "配置-https-与重定向": "configure-https-and-redirects",
+    "控制搜索引擎收录": "control-search-engine-indexing",
+    "使用生成的域名": "use-generated-domains",
+    "使用-sslipio-测试域名": "use-sslipio-testing-domains",
+    "解决域名冲突": "resolve-domain-conflicts",
+    "设置-coolify-面板域名": "set-the-coolify-dashboard-domain",
+    "继续配置域名路由": "continue-with-domain-routing",
+    "cloudflare-托管记录": "cloudflare-managed-records",
+    "在-coolify-中填写域名": "enter-the-domain-in-coolify",
+    "重新部署并验证域名": "redeploy-and-verify-the-domain",
+    "支持的域名格式": "supported-domain-formats",
+    "控制前缀剥离": "control-prefix-stripping",
+    "www-与非-www-重定向": "redirect-www-and-non-www",
+    "配置服务器泛域名": "configure-the-server-wildcard-domain",
+    "生成应用域名": "generate-an-application-domain"
+  },
+  "/core/networking/proxy/caddy/basic-auth": {
+    "基本身份验证basic-authentication": "basic-authentication",
+    "保护资源": "protect-a-resource",
+    "故障排查": "troubleshooting",
+    "自动方式": "automatic",
+    "手动方式": "manual",
+    "打开应用设置": "open-the-application-settings",
+    "添加凭据": "add-the-credentials",
+    "重新部署并验证": "redeploy-and-verify",
+    "生成凭据": "generate-credentials",
+    "添加标签": "add-the-label",
+    "重新部署并验证-1": "redeploy-and-verify-1"
+  },
+  "/core/networking/proxy/caddy/custom-ssl-certs": {
+    "自定义-ssl-证书": "custom-ssl-certificates",
+    "准备证书文件": "prepare-the-certificate-files",
+    "将文件挂载进-caddy": "mount-the-files-into-caddy",
+    "配置资源的证书": "configure-the-resources-certificate",
+    "验证与续期": "verify-and-renew"
+  },
+  "/core/networking/proxy/caddy/dns-challenge": {
+    "dns-质询dns-challenge": "dns-challenge",
+    "准备条件": "what-you-need",
+    "添加支持-dns-的-caddy-构建": "add-a-dns-enabled-caddy-build",
+    "重启并验证": "restart-and-verify",
+    "故障排查": "troubleshooting"
+  },
+  "/core/networking/proxy/caddy/overview": {
+    "caddy-概览": "caddy-overview",
+    "coolify-管理哪些内容": "what-coolify-manages",
+    "配置-caddy": "configure-caddy"
+  },
+  "/core/networking/proxy/custom/nginx": {
+    "为什么要更换": "why-switch",
+    "为什么选-nginx": "why-nginx",
+    "整套架构如何协作": "how-the-stack-fits-together",
+    "compose-文件": "the-compose-file",
+    "主配置": "the-main-configuration",
+    "应用如何接入": "how-applications-connect",
+    "域名文件": "domain-files",
+    "让目标在重新部署后保持稳定": "keep-targets-stable-across-redeploys",
+    "用-lego-签发证书": "certificates-with-lego",
+    "日志": "logs",
+    "变更与回滚": "changes-and-rollbacks",
+    "切换生产流量": "switching-production-traffic",
+    "共享的代理头": "shared-proxy-headers",
+    "cloudflare-ip-段": "cloudflare-ip-ranges",
+    "未知主机名": "unknown-names",
+    "令牌": "tokens",
+    "证书清单": "certificate-list",
+    "每日续期": "daily-renewal"
+  },
+  "/core/networking/proxy/custom/overview": {
+    "自定义代理概览": "custom-proxy-overview",
+    "有哪些变化": "what-changes",
+    "准备你的自定义代理": "prepare-your-custom-proxy",
+    "将代理连接到资源": "connect-the-proxy-to-resources",
+    "切换到-customnone": "switch-to-custom-none",
+    "维护这套配置": "maintain-the-setup",
+    "容器名称与重新部署": "container-names-and-redeploys",
+    "保留恢复路径": "keep-a-recovery-path",
+    "停止集成代理": "stop-the-integrated-proxy",
+    "选择-custom": "select-custom",
+    "启动替代代理": "start-the-replacement",
+    "验证路由与恢复": "verify-routes-and-recovery"
+  },
+  "/core/networking/proxy/overview": {
+    "代理概览": "proxy-overview",
+    "选择代理": "choose-a-proxy",
+    "打开代理设置": "open-the-proxy-settings",
+    "在-traefik-和-caddy-之间切换": "switch-between-traefik-and-caddy",
+    "配置所选代理": "configure-the-selected-proxy",
+    "网络连接与配置变更": "network-connections-and-configuration-changes",
+    "准备资源标签": "prepare-resource-labels",
+    "停止当前代理": "stop-the-current-proxy",
+    "选择新代理": "select-the-new-proxy",
+    "启动代理并重新部署资源": "start-the-proxy-and-redeploy-resources",
+    "验证公网路由": "verify-public-routes"
+  },
+  "/core/networking/proxy/traefik/basic-auth": {
+    "基本身份验证basic-authentication": "basic-authentication",
+    "保护资源": "protect-a-resource",
+    "故障排查": "troubleshooting",
+    "自动方式": "automatic",
+    "手动方式": "manual",
+    "打开应用设置": "open-the-application-settings",
+    "添加凭据": "add-the-credentials",
+    "重新部署并验证": "redeploy-and-verify",
+    "生成凭据": "generate-credentials",
+    "添加标签": "add-the-labels",
+    "重新部署并验证-1": "redeploy-and-verify-1"
+  },
+  "/core/networking/proxy/traefik/custom-middlewares": {
+    "自定义中间件": "custom-middlewares",
+    "定义可复用的中间件": "define-reusable-middleware",
+    "把中间件挂到资源上": "attach-middleware-to-a-resource",
+    "重定向": "redirects",
+    "故障排查": "troubleshooting",
+    "docker-compose-应用与服务": "docker-compose-applications-and-services"
+  },
+  "/core/networking/proxy/traefik/custom-ssl-certs": {
+    "自定义-ssl-证书": "custom-ssl-certificates",
+    "准备证书文件": "prepare-the-certificate-files",
+    "添加动态-tls-配置": "add-the-dynamic-tls-configuration",
+    "验证证书": "verify-the-certificate"
+  },
+  "/core/networking/proxy/traefik/dashboard": {
+    "traefik-仪表板": "traefik-dashboard",
+    "创建仪表板凭据": "create-dashboard-credentials",
+    "启用仪表板-api": "enable-the-dashboard-api",
+    "添加仪表板路由": "add-the-dashboard-route",
+    "不要在公网服务器上使用-insecure-模式": "do-not-use-insecure-mode-on-a-public-server",
+    "故障排查": "troubleshooting"
+  },
+  "/core/networking/proxy/traefik/dns-challenge": {
+    "dns-质询dns-challenge": "dns-challenge",
+    "准备条件": "what-you-need",
+    "修改-traefik-配置": "change-the-traefik-configuration",
+    "重启并验证": "restart-and-verify",
+    "故障排查": "troubleshooting"
+  },
+  "/core/networking/proxy/traefik/dynamic-config": {
+    "动态配置": "dynamic-configuration",
+    "添加配置文件": "add-a-configuration-file",
+    "编辑或删除自定义文件": "edit-or-remove-a-custom-file",
+    "何时需要重启代理": "when-to-restart-the-proxy",
+    "打开-dynamic-configurations": "open-dynamic-configurations",
+    "创建文件": "create-the-file",
+    "验证-traefik-已加载": "verify-traefik-loaded-it"
+  },
+  "/core/networking/proxy/traefik/load-balancing": {
+    "负载均衡": "load-balancing",
+    "准备上游": "prepare-the-upstreams",
+    "添加负载均衡路由": "add-the-load-balancer-route",
+    "验证流量分配": "verify-traffic-distribution"
+  },
+  "/core/networking/proxy/traefik/overview": {
+    "traefik-概览": "traefik-overview",
+    "coolify-管理的内容": "what-coolify-manages",
+    "选择-traefik-指南": "choose-a-traefik-guide"
+  },
+  "/core/networking/proxy/traefik/protect-services-with-authentik": {
+    "使用-authentik-保护": "protect-with-authentik",
+    "配置-authentik": "configure-authentik",
+    "创建-traefik-中间件": "create-the-traefik-middleware",
+    "附加中间件": "attach-the-middleware",
+    "验证认证": "verify-authentication",
+    "故障排查": "troubleshooting"
+  },
+  "/core/networking/proxy/traefik/tls-certificates": {
+    "traefik-tls-证书": "traefik-tls-certificates",
+    "删除证书": "delete-a-certificate",
+    "恢复-acme-存储": "restore-acme-storage"
+  },
+  "/core/networking/proxy/traefik/update": {
+    "更新-traefik": "update-traefik",
+    "先检查兼容性": "check-compatibility-first",
+    "打开代理配置": "open-the-proxy-configuration",
+    "更改镜像版本": "change-the-image-version",
+    "保存并重启": "save-and-restart"
+  },
+  "/core/networking/proxy/traefik/wildcard-certs": {
+    "泛域名证书": "wildcard-certificates",
+    "准备工作": "what-you-need",
+    "申请证书": "request-the-certificate",
+    "使用泛域名证书": "use-the-wildcard-certificate"
+  },
+  "/core/notifications/channels/discord": {
+    "创建-discord-webhook": "create-a-discord-webhook",
+    "配置-coolify": "configure-coolify",
+    "排查-discord-投递问题": "troubleshoot-discord-delivery",
+    "选择目标频道": "choose-the-destination",
+    "创建-webhook": "create-the-webhook"
+  },
+  "/core/notifications/channels/email": {
+    "邮件": "email",
+    "选择邮件服务商": "choose-an-email-provider",
+    "使用托管或全实例服务商": "use-the-hosted-or-system-wide-provider",
+    "配置团队自己的服务商": "configure-a-team-provider",
+    "选择事件并验证投递": "choose-events-and-verify-delivery",
+    "排查邮件投递问题": "troubleshoot-email-delivery",
+    "配置实例服务商": "configure-the-instance-provider",
+    "团队复用该配置": "reuse-it-for-the-team",
+    "选择事件并测试团队通道": "choose-events-and-test-the-team-channel"
+  },
+  "/core/notifications/channels/pushover": {
+    "创建-pushover-应用": "create-a-pushover-application",
+    "配置-coolify": "configure-coolify",
+    "排查-pushover-投递问题": "troubleshoot-pushover-delivery",
+    "复制用户密钥": "copy-your-user-key",
+    "创建应用令牌": "create-an-application-token"
+  },
+  "/core/notifications/channels/slack-mattermost": {
+    "slack-与-mattermost": "slack--mattermost",
+    "配置服务商": "configure-a-provider",
+    "选择事件并验证投递": "choose-events-and-verify-delivery",
+    "排查-slack-或-mattermost-投递问题": "troubleshoot-slack-or-mattermost-delivery",
+    "创建-slack-应用": "create-a-slack-app",
+    "创建-incoming-webhook": "create-the-incoming-webhook",
+    "将-webhook-添加到-coolify": "add-the-webhook-to-coolify"
+  },
+  "/core/notifications/channels/telegram": {
+    "创建机器人和目标": "create-the-bot-and-destination",
+    "查找-chat-和-topic-id": "find-the-chat-and-topic-ids",
+    "配置-coolify": "configure-coolify",
+    "排查-telegram-投递问题": "troubleshoot-telegram-delivery",
+    "创建-telegram-机器人": "create-a-telegram-bot",
+    "创建或选择接收目标": "create-or-choose-the-destination",
+    "可选创建话题": "optional-create-topics",
+    "为机器人生成一条更新": "generate-an-update-for-the-bot",
+    "保存机器人和-chat": "save-the-bot-and-chat",
+    "启用通道": "enable-the-channel",
+    "选择事件和话题": "choose-events-and-topics",
+    "发送测试": "send-a-test"
+  },
+  "/core/notifications/channels/webhook/payload-reference": {
+    "webhook-负载参考": "webhook-payload-reference",
+    "应用部署与状态": "application-deployments-and-status",
+    "数据库备份": "database-backups",
+    "计划任务": "scheduled-tasks",
+    "docker-清理": "docker-cleanup",
+    "服务器事件": "server-events",
+    "容器事件": "container-events",
+    "测试事件": "test-event"
+  },
+  "/core/notifications/channels/webhook/setup": {
+    "设置-webhook-通知": "set-up-webhook-notifications",
+    "开始之前": "before-you-start",
+    "配置-webhook": "configure-the-webhook",
+    "端点要求": "endpoint-requirements",
+    "投递行为": "delivery-behavior",
+    "排查-webhook-投递问题": "troubleshoot-webhook-delivery",
+    "添加端点": "add-the-endpoint",
+    "启用通道": "enable-the-channel",
+    "选择事件": "choose-events",
+    "发送测试": "send-a-test"
+  },
+  "/core/notifications/events": {
+    "通知事件": "notification-events",
+    "部署": "deployments",
+    "备份": "backups",
+    "计划任务": "scheduled-tasks",
+    "服务器事件": "server-events",
+    "测试所选事件": "test-the-selection"
+  },
+  "/core/notifications/overview": {
+    "通知概览": "notifications-overview",
+    "通知的工作方式": "how-notifications-work",
+    "选择通道": "choose-a-channel",
+    "配置通知": "configure-notifications",
+    "延伸阅读": "what-to-read-next"
+  },
+  "/core/observability/log-drains/axiom": {
+    "将日志发送到-axiom": "send-logs-to-axiom",
+    "开始之前": "before-you-start",
+    "在-coolify-中配置-axiom": "configure-axiom-in-coolify",
+    "为资源启用": "enable-a-resource",
+    "识别日志": "identify-logs",
+    "验证投递": "verify-delivery",
+    "更新数据集或令牌": "update-the-dataset-or-token",
+    "修复日志缺失": "fix-missing-logs",
+    "继续了解日志转发": "continue-with-log-drains"
+  },
+  "/core/observability/log-drains/custom-fluent-bit": {
+    "配置自定义-fluent-bit-日志转发": "configure-a-custom-fluent-bit-log-drain",
+    "开始之前": "before-you-start",
+    "coolify-如何运行配置": "how-coolify-runs-the-configuration",
+    "编写主配置": "write-the-main-configuration",
+    "添加解析器定义": "add-parser-definitions",
+    "配置-coolify": "configure-coolify",
+    "为资源启用": "enable-a-resource",
+    "验证送达": "verify-delivery",
+    "更新配置": "update-the-configuration",
+    "排查自定义转发失败": "fix-a-failed-custom-drain",
+    "继续了解日志转发": "continue-with-log-drains"
+  },
+  "/core/observability/log-drains/new-relic": {
+    "把日志发送到-new-relic": "send-logs-to-new-relic",
+    "开始之前": "before-you-start",
+    "选择端点": "choose-the-endpoint",
+    "在-coolify-中配置-new-relic": "configure-new-relic-in-coolify",
+    "为资源启用": "enable-a-resource",
+    "识别日志": "identify-logs",
+    "验证送达": "verify-delivery",
+    "更新端点或许可密钥": "update-the-endpoint-or-license-key",
+    "排查日志缺失": "fix-missing-logs",
+    "继续了解日志转发": "continue-with-log-drains"
+  },
+  "/core/observability/log-drains/overview": {
+    "日志转发概览": "log-drains-overview",
+    "日志转发包含哪些内容": "what-log-drains-forward",
+    "选择目标": "choose-a-destination",
+    "配置服务器": "configure-the-server",
+    "为资源启用日志转发": "enable-log-draining-for-a-resource",
+    "验证送达": "verify-delivery",
+    "局限": "limitations",
+    "打开应用": "open-the-application",
+    "开启-drain-logs": "enable-drain-logs",
+    "应用更改": "apply-the-change"
+  },
+  "/core/observability/monitoring/metrics": {
+    "指标": "metrics",
+    "提供哪些指标": "what-metrics-are-available",
+    "启用指标之前": "before-you-enable-metrics",
+    "启用指标": "enable-metrics",
+    "查看指标": "view-metrics",
+    "采样与保留": "sampling-and-retention",
+    "禁用指标": "disable-metrics",
+    "故障排查": "troubleshooting",
+    "选择服务器": "select-the-server",
+    "打开-charts-页面": "open-the-charts-page",
+    "等待-sentinel-重启": "wait-for-sentinel-to-restart",
+    "确认指标可用": "confirm-that-metrics-are-available",
+    "服务器指标": "server-metrics"
+  },
+  "/core/observability/monitoring/overview": {
+    "监控概览": "monitoring-overview",
+    "coolify-监控什么": "what-coolify-monitors",
+    "监控边界": "monitoring-boundaries",
+    "代理流量分析": "proxy-traffic-analytics",
+    "继续了解可观测性": "continue-with-observability"
+  },
+  "/core/observability/monitoring/sentinel": {
+    "sentinel-上报什么": "what-sentinel-reports",
+    "sentinel-的工作方式": "how-sentinel-works",
+    "启用或同步-sentinel": "enable-or-sync-sentinel",
+    "sentinel-设置": "sentinel-settings",
+    "sentinel-与指标": "sentinel-and-metrics",
+    "故障排查": "troubleshooting"
+  },
+  "/core/observability/monitoring/traffic-analytics": {
+    "流量分析": "traffic-analytics",
+    "启用采集": "enable-collection",
+    "配置采集": "configure-collection",
+    "查看分析": "view-analytics"
+  },
+  "/core/persistent-storage/storage-mounts/backups": {
+    "备份存储挂载": "back-up-storage-mounts",
+    "确认挂载是否受支持": "check-whether-the-mount-is-supported",
+    "创建计划备份": "create-a-scheduled-backup",
+    "降低中断或一致性风险": "reduce-interruptions-or-consistency-risk",
+    "选择备份的存储位置": "choose-where-backups-are-stored",
+    "设置保留上限": "set-retention-limits",
+    "验证并下载备份": "verify-and-download-a-backup",
+    "删除备份或计划": "delete-a-backup-or-schedule"
+  },
+  "/core/persistent-storage/storage-mounts/bind-mounts": {
+    "绑定挂载bind-mount": "bind-mounts",
+    "何时使用绑定挂载": "when-to-use-a-bind-mount",
+    "绑定挂载选项": "bind-mount-options",
+    "添加绑定挂载": "add-a-bind-mount",
+    "准备权限": "prepare-permissions",
+    "在预览部署中使用绑定挂载": "use-bind-mounts-with-preview-deployments",
+    "在-docker-compose-中定义绑定挂载": "define-bind-mounts-in-docker-compose",
+    "备份和迁移绑定挂载的数据": "back-up-and-move-bind-mounted-data"
+  },
+  "/core/persistent-storage/storage-mounts/file-mounts": {
+    "文件挂载file-mount": "file-mounts",
+    "添加托管文件挂载": "add-a-managed-file-mount",
+    "编辑托管文件挂载": "edit-a-managed-file-mount",
+    "添加主机文件挂载": "add-a-host-file-mount",
+    "在-docker-compose-中定义文件挂载": "define-file-mounts-in-docker-compose",
+    "文件挂载的限制": "file-mount-limits",
+    "备份文件挂载": "back-up-file-mounts",
+    "安全删除文件挂载": "delete-a-file-mount-safely",
+    "相对路径与权限": "relative-paths-and-permissions"
+  },
+  "/core/persistent-storage/storage-mounts/overview": {
+    "持久化存储概览": "persistent-storage-overview",
+    "持久化存储的工作原理": "how-persistent-storage-works",
+    "选择存储挂载": "choose-a-storage-mount",
+    "挂载在哪里配置": "where-mounts-are-configured",
+    "重要的存储边界": "important-storage-boundaries",
+    "继续阅读挂载指南": "continue-with-a-mount-guide"
+  },
+  "/core/persistent-storage/storage-mounts/volume-mounts": {
+    "卷挂载volume-mount": "volume-mounts",
+    "何时使用卷挂载": "when-to-use-a-volume-mount",
+    "添加卷挂载": "add-a-volume-mount",
+    "在预览部署中使用卷挂载": "use-volume-mounts-with-preview-deployments",
+    "在-docker-compose-中定义卷": "define-volumes-in-docker-compose",
+    "备份卷": "back-up-a-volume",
+    "检查卷": "inspect-a-volume"
+  },
+  "/core/s3-storage/aws": {
+    "配置-amazon-s3-存储": "configure-amazon-s3-storage",
+    "设置-amazon-s3": "set-up-amazon-s3",
+    "创建-s3-存储桶": "create-an-s3-bucket",
+    "创建-iam-策略": "create-an-iam-policy",
+    "创建-iam-用户": "create-an-iam-user",
+    "创建访问密钥": "create-an-access-key",
+    "在-coolify-中设置-amazon-s3": "set-up-amazon-s3-in-coolify"
+  },
+  "/core/s3-storage/neon": {
+    "配置-neon-object-storage": "configure-neon-object-storage",
+    "验证连接": "verify-the-connection",
+    "创建存储桶": "create-the-bucket",
+    "复制-s3-连接信息": "copy-the-s3-connection-details",
+    "把-neon-object-storage-添加到-coolify": "add-neon-object-storage-to-coolify"
+  },
+  "/core/s3-storage/overview": {
+    "s3-存储概览": "s3-storage-overview",
+    "添加-s3-存储之前的准备": "before-you-add-s3-storage",
+    "选择存储提供商": "choose-a-storage-provider",
+    "把存储添加到-coolify": "add-the-storage-to-coolify",
+    "恢复不可用的存储": "recovering-an-unusable-storage",
+    "其他受支持的提供商": "other-supported-providers"
+  },
+  "/core/s3-storage/r2": {
+    "配置-cloudflare-r2": "configure-cloudflare-r2",
+    "创建存储桶": "create-a-bucket",
+    "创建-r2-api-令牌": "create-an-r2-api-token",
+    "保存-s3-凭证": "save-the-s3-credentials",
+    "把-cloudflare-r2-添加到-coolify": "add-cloudflare-r2-to-coolify"
+  },
+  "/core/s3-storage/supabase": {
+    "配置-supabase-storage": "configure-supabase-storage",
+    "验证连接": "verify-the-connection",
+    "创建存储桶": "create-the-bucket",
+    "创建访问密钥对": "create-an-access-key-pair",
+    "复制端点和区域": "copy-the-endpoint-and-region",
+    "把-supabase-storage-添加到-coolify": "add-supabase-storage-to-coolify"
+  },
+  "/core/security-model": {
+    "安全模型": "security-model",
+    "安全边界": "security-boundary",
+    "coolify-的安全控制": "security-controls-in-coolify",
+    "保护-coolify-控制平面": "protect-the-coolify-control-plane",
+    "保护已连接的服务器与工作负载": "protect-connected-servers-and-workloads",
+    "生产环境安全基线": "security-baseline-for-production",
+    "下一步": "where-to-go-next",
+    "配置校验与机密": "configuration-validation-and-secrets",
+    "保护账户访问": "secure-account-access",
+    "限制-api-与集成访问": "limit-api-and-integration-access",
+    "保护加密数据与恢复材料": "protect-encrypted-data-and-recovery-material",
+    "保持控制平面可恢复": "keep-the-control-plane-recoverable",
+    "加固每台服务器": "harden-each-server",
+    "控制网络暴露面": "control-network-exposure",
+    "保护应用与数据": "secure-applications-and-data"
+  },
+  "/core/security/authentication/2fa": {
+    "双因素认证2fa": "two-factor-authentication",
+    "配置-2fa": "configure-2fa",
+    "使用-2fa-登录": "sign-in-with-2fa",
+    "管理恢复码": "manage-recovery-codes",
+    "禁用-2fa": "disable-2fa",
+    "没有可用验证码时找回访问权限": "regain-access-without-a-working-code",
+    "打开你的个人资料": "open-your-profile",
+    "把-coolify-添加到验证器": "add-coolify-to-the-authenticator",
+    "确认验证器验证码": "confirm-the-authenticator-code",
+    "保存恢复码": "save-the-recovery-codes"
+  },
+  "/core/security/authentication/oauth/azure": {
+    "配置-azure-oauth": "configure-azure-oauth",
+    "设置-azure-oauth": "set-up-azure-oauth",
+    "故障排查": "troubleshooting",
+    "创建应用注册": "create-an-app-registration",
+    "复制应用程序和租户-id": "copy-the-application-and-tenant-ids",
+    "创建客户端密钥": "create-a-client-secret",
+    "确认-microsoft-graph-访问权限": "confirm-microsoft-graph-access",
+    "在-coolify-中配置-azure": "configure-azure-in-coolify",
+    "验证-azure-登录": "verify-azure-sign-in"
+  },
+  "/core/security/authentication/oauth/bitbucket": {
+    "配置-bitbucket-oauth": "configure-bitbucket-oauth",
+    "设置-bitbucket-oauth": "set-up-bitbucket-oauth",
+    "故障排查": "troubleshooting",
+    "打开-oauth-consumers": "open-oauth-consumers",
+    "添加-oauth-consumer": "add-an-oauth-consumer",
+    "保存-bitbucket-凭据": "save-the-bitbucket-credentials",
+    "在-coolify-中配置-bitbucket": "configure-bitbucket-in-coolify",
+    "验证-bitbucket-登录": "verify-bitbucket-sign-in"
+  },
+  "/core/security/authentication/oauth/discord": {
+    "配置-discord-oauth": "configure-discord-oauth",
+    "设置-discord-oauth": "set-up-discord-oauth",
+    "故障排查": "troubleshooting",
+    "创建-discord-应用": "create-a-discord-application",
+    "注册-coolify-重定向": "register-the-coolify-redirect",
+    "复制-discord-凭据": "copy-the-discord-credentials",
+    "在-coolify-中配置-discord": "configure-discord-in-coolify",
+    "验证-discord-登录": "verify-discord-sign-in"
+  },
+  "/core/security/authentication/oauth/github": {
+    "配置-github-oauth": "configure-github-oauth",
+    "设置-github-oauth": "set-up-github-oauth",
+    "故障排查": "troubleshooting",
+    "打开-github-oauth-apps": "open-github-oauth-apps",
+    "注册-coolify-应用": "register-the-coolify-application",
+    "创建客户端密钥": "create-the-client-secret",
+    "在-coolify-中配置-github": "configure-github-in-coolify",
+    "验证-github-登录": "verify-github-sign-in"
+  },
+  "/core/security/authentication/oauth/gitlab": {
+    "配置-gitlab-oauth": "configure-gitlab-oauth",
+    "设置-gitlab-oauth": "set-up-gitlab-oauth",
+    "故障排查": "troubleshooting",
+    "打开-gitlab-应用": "open-gitlab-applications",
+    "创建-oauth-应用": "create-the-oauth-application",
+    "保存-gitlab-凭据": "save-the-gitlab-credentials",
+    "在-coolify-中配置-gitlab": "configure-gitlab-in-coolify",
+    "验证-gitlab-登录": "verify-gitlab-sign-in"
+  },
+  "/core/security/authentication/oauth/google": {
+    "配置-google-oauth": "configure-google-oauth",
+    "设置-google-oauth": "set-up-google-oauth",
+    "故障排查": "troubleshooting",
+    "选择-google-cloud-项目": "select-a-google-cloud-project",
+    "创建-web-oauth-客户端": "create-a-web-oauth-client",
+    "保存-google-凭据": "save-the-google-credentials",
+    "在-coolify-中配置-google": "configure-google-in-coolify",
+    "验证-google-登录": "verify-google-sign-in"
+  },
+  "/core/security/authentication/oauth/infomaniak": {
+    "配置-infomaniak-oauth": "configure-infomaniak-oauth",
+    "设置-infomaniak-oauth": "set-up-infomaniak-oauth",
+    "故障排查": "troubleshooting",
+    "打开-infomaniak-应用": "open-infomaniak-applications",
+    "创建应用": "create-the-application",
+    "保存-infomaniak-凭据": "save-the-infomaniak-credentials",
+    "在-coolify-中配置-infomaniak": "configure-infomaniak-in-coolify",
+    "验证-infomaniak-登录": "verify-infomaniak-sign-in"
+  },
+  "/core/security/authentication/oauth/overview": {
+    "oauth-概览": "oauth-overview",
+    "oauth-登录的工作原理": "how-oauth-sign-in-works",
+    "选择-oauth-提供商": "choose-an-oauth-provider",
+    "控制账号创建": "control-account-creation",
+    "提供商变更后保持已关联身份可用": "keep-linked-identities-working-after-a-provider-change",
+    "安全测试": "test-safely"
+  },
+  "/core/security/authentication/profile": {
+    "个人资料与账号删除": "profile-and-account-deletion",
+    "删除你的账号": "delete-your-account"
+  },
+  "/core/security/authentication/sso/authentik": {
+    "配置-authentik-sso": "configure-authentik-sso",
+    "设置-authentik-sso": "set-up-authentik-sso",
+    "故障排查": "troubleshooting",
+    "创建-authentik-应用": "start-an-authentik-application",
+    "配置-oauth2openid-提供商": "configure-the-oauth2openid-provider",
+    "保存-authentik-凭据": "save-the-authentik-credentials",
+    "在-coolify-中配置-authentik": "configure-authentik-in-coolify",
+    "验证-authentik-登录": "verify-authentik-sign-in"
+  },
+  "/core/security/authentication/sso/clerk": {
+    "配置-clerk-sso": "configure-clerk-sso",
+    "设置-clerk-sso": "set-up-clerk-sso",
+    "故障排查": "troubleshooting",
+    "创建-clerk-oauth-应用": "create-a-clerk-oauth-application",
+    "保存-clerk-凭据": "save-the-clerk-credentials",
+    "注册-coolify-重定向地址": "register-the-coolify-redirect",
+    "复制-clerk-base-url": "copy-the-clerk-base-url",
+    "在-coolify-中配置-clerk": "configure-clerk-in-coolify",
+    "验证-clerk-登录": "verify-clerk-sign-in"
+  },
+  "/core/security/authentication/sso/oidc": {
+    "配置提供商": "configure-the-provider",
+    "注册与团队成员身份": "registration-and-team-membership",
+    "验证登录": "verify-sign-in"
+  },
+  "/core/security/authentication/sso/overview": {
+    "sso-概览": "sso-overview",
+    "选择-sso-提供商": "choose-an-sso-provider",
+    "coolify-如何处理-sso-账号": "how-coolify-handles-sso-accounts",
+    "在正式依赖-sso-之前进行测试": "test-before-relying-on-sso"
+  },
+  "/core/security/authentication/sso/zitadel": {
+    "配置-zitadel-sso": "configure-zitadel-sso",
+    "设置-zitadel-sso": "set-up-zitadel-sso",
+    "故障排查": "troubleshooting",
+    "创建或选择-zitadel-项目": "create-or-select-a-zitadel-project",
+    "添加-web-应用": "add-a-web-application",
+    "注册回调-url": "register-the-callback-url",
+    "保存-zitadel-凭据": "save-the-zitadel-credentials",
+    "在-coolify-中配置-zitadel": "configure-zitadel-in-coolify",
+    "验证-zitadel-登录": "verify-zitadel-sign-in"
+  },
+  "/core/security/credentials/api-tokens": {
+    "api-令牌": "api-tokens",
+    "创建令牌之前": "before-you-create-a-token",
+    "创建令牌": "create-a-token",
+    "令牌权限": "token-permissions",
+    "发起测试请求": "make-a-test-request",
+    "团队与角色范围": "team-and-role-scope",
+    "轮换或撤销令牌": "rotate-or-revoke-a-token",
+    "故障排查": "troubleshooting",
+    "打开-api-tokens": "open-api-tokens",
+    "填写令牌描述": "describe-the-token",
+    "选择有效期": "choose-an-expiration",
+    "选择权限": "select-permissions",
+    "创建并复制令牌": "create-and-copy-the-token"
+  },
+  "/core/security/credentials/cloud-init-scripts": {
+    "cloud-init-脚本": "cloud-init-scripts",
+    "创建可复用脚本": "create-a-reusable-script",
+    "创建服务器时使用脚本": "use-a-script-while-provisioning",
+    "编辑或删除脚本": "edit-or-delete-a-script",
+    "故障排查": "troubleshooting",
+    "打开-cloud-init-scripts": "open-cloud-init-scripts",
+    "添加脚本": "add-the-script"
+  },
+  "/core/security/credentials/cloud-tokens": {
+    "云令牌": "cloud-tokens",
+    "创建提供商令牌": "create-a-provider-token",
+    "将令牌添加到-coolify": "add-the-token-to-coolify",
+    "管理云令牌": "manage-a-cloud-token",
+    "故障排查": "troubleshooting",
+    "打开-hetzner-项目": "open-the-hetzner-project",
+    "打开-api-tokens": "open-api-tokens",
+    "配置令牌": "configure-the-token",
+    "生成并复制令牌": "generate-and-copy-the-token",
+    "打开-cloud-tokens": "open-cloud-tokens",
+    "选择提供商": "choose-the-provider",
+    "填写令牌信息": "enter-the-token-details",
+    "确认令牌已添加": "confirm-the-token-was-added"
+  },
+  "/core/security/credentials/ssh-keys": {
+    "ssh-密钥": "ssh-keys",
+    "coolify-如何使用密钥对": "how-coolify-uses-a-key-pair",
+    "创建-ssh-密钥": "create-an-ssh-key",
+    "在服务器上授权公钥": "authorize-the-public-key-on-a-server",
+    "选择并验证服务器密钥": "select-and-verify-a-server-key",
+    "将密钥用于私有-git-仓库": "use-a-key-for-a-private-git-repository",
+    "轮换-ssh-密钥": "rotate-an-ssh-key",
+    "删除未使用的密钥": "delete-unused-keys",
+    "安全与存储": "security-and-storage",
+    "从-coolify-复制公钥": "copy-the-public-key-from-coolify",
+    "连接到服务器": "connect-to-the-server",
+    "将密钥添加到-ssh-账号": "add-the-key-to-the-ssh-account"
+  },
+  "/core/selfhosted-cloud-comparison": {
+    "自托管与-coolify-cloud-对比": "self-hosted-vs-coolify-cloud",
+    "哪些保持不变": "what-stays-the-same",
+    "自托管-coolify-与-coolify-cloud-对比": "compare-self-hosted-coolify-and-coolify-cloud",
+    "成本对比": "compare-the-cost",
+    "理解责任边界": "understand-the-responsibility-boundary",
+    "选择你的路径": "choose-your-path"
+  },
+  "/core/team/audit-log": {
+    "团队审计日志": "team-audit-log",
+    "查看变更": "review-changes",
+    "api-访问": "api-access"
+  },
+  "/core/team/members/add-a-member": {
+    "添加成员": "add-a-member",
+    "邀请之前": "before-you-invite-someone",
+    "邀请成员": "invite-the-member",
+    "发送或复制邀请": "send-or-copy-the-invitation",
+    "验证邀请": "verify-the-invitation",
+    "如果邀请未被接受": "if-the-invitation-is-not-accepted",
+    "打开当前团队的-members-页面": "open-the-active-teams-members-page",
+    "输入电子邮箱地址": "enter-the-email-address",
+    "选择角色": "choose-a-role",
+    "通过电子邮件发送邀请": "send-the-invitation-by-email"
+  },
+  "/core/team/members/delete-user": {
+    "删除用户": "delete-a-user",
+    "删除用户之前": "before-you-delete-a-user",
+    "删除用户-1": "delete-the-user",
+    "删除期间会发生什么": "what-happens-during-deletion",
+    "删除你自己的账户": "delete-your-own-account",
+    "用户是团队中唯一的成员": "the-user-is-alone-in-the-team",
+    "用户不是团队中唯一的成员": "the-user-is-not-alone-in-the-team"
+  },
+  "/core/team/members/manage-members": {
+    "管理成员": "manage-members",
+    "查看成员列表": "review-the-member-list",
+    "更改成员角色": "change-a-members-role",
+    "查看待处理邀请": "review-pending-invitations",
+    "撤销邀请": "revoke-an-invitation"
+  },
+  "/core/team/members/overview": {
+    "成员概览": "members-overview",
+    "团队成员身份的工作方式": "how-team-membership-works",
+    "members-页面显示什么": "what-the-members-page-shows",
+    "选择下一步任务": "choose-the-next-task"
+  },
+  "/core/team/members/remove-a-member": {
+    "移除成员": "remove-a-member",
+    "移除成员之前": "before-you-remove-a-member",
+    "移除成员-1": "remove-the-member",
+    "移除会改变什么": "what-removal-changes",
+    "打开成员列表": "open-the-member-list",
+    "选择-remove": "select-remove",
+    "确认移除": "confirm-the-removal"
+  },
+  "/core/team/roles-and-permissions": {
+    "角色与权限": "roles-and-permissions",
+    "角色对比": "role-comparison",
+    "仅-owner-可用的控制": "owner-only-controls",
+    "实例管理": "instance-administration",
+    "选择角色": "choose-a-role",
+    "仪表盘中的敏感内容": "sensitive-content-in-the-dashboard",
+    "团队与成员": "team-and-members",
+    "项目与资源": "projects-and-resources",
+    "服务器与目标": "servers-and-destinations",
+    "团队配置与凭据": "team-configuration-and-credentials",
+    "api-令牌": "api-tokens"
+  },
+  "/core/team/shared-variables": {
+    "共享变量": "shared-variables",
+    "共享变量的工作方式": "how-shared-variables-work",
+    "选择范围": "choose-a-scope",
+    "创建共享变量": "create-a-shared-variable",
+    "引用共享变量": "reference-a-shared-variable",
+    "在-developer-view-中管理变量": "manage-variables-in-developer-view",
+    "更新或删除共享变量": "update-or-delete-a-shared-variable",
+    "在-docker-compose-中使用共享变量": "use-shared-variables-in-docker-compose",
+    "复制已解析的值": "copying-resolved-values",
+    "打开共享变量": "open-shared-variables",
+    "选择范围-1": "choose-the-scope",
+    "添加变量": "add-the-variable",
+    "打开资源的环境变量": "open-the-resource-environment-variables",
+    "添加资源变量": "add-the-resource-variable",
+    "应用并验证更改": "apply-and-verify-the-change"
+  },
+  "/core/what-is-coolify": {
+    "coolify-是什么": "what-is-coolify",
+    "coolify-管理什么": "what-coolify-manages",
+    "coolify-如何融入你的基础设施": "how-coolify-fits-into-your-infrastructure",
+    "哪些仍在你的掌控之中": "what-stays-in-your-control",
+    "自托管还是-coolify-cloud": "self-hosted-or-coolify-cloud",
+    "开始使用-coolify": "start-using-coolify"
+  },
+  "/databases": {
+    "数据库": "databases",
+    "支持的数据库引擎": "supported-engines",
+    "借助备份自托管数据库": "self-host-a-database-with-backups",
+    "仍需你自己负责的事项": "what-you-still-own",
+    "常见问题": "faq",
+    "部署数据库": "deploy-a-database",
+    "连接应用": "connect-an-application",
+    "网络访问": "network-access",
+    "持久化数据": "persistent-data",
+    "数据库健康状态": "database-health",
+    "数据库资源导航": "database-resource-navigation",
+    "继续阅读数据库指南": "continue-with-a-database-guide"
+  },
+  "/databases/backups": {
+    "备份": "backups",
+    "创建备份计划": "create-a-backup-schedule",
+    "备份服务内的数据库": "back-up-a-database-inside-a-service",
+    "设置备份范围": "set-the-backup-scope",
+    "选择执行频率": "choose-a-frequency",
+    "将备份保存在本地": "store-backups-locally",
+    "将备份上传到-s3": "upload-backups-to-s3",
+    "运行并验证备份": "run-and-verify-a-backup",
+    "相关指南": "related-guides",
+    "调度与失败的执行": "scheduling-and-failed-executions"
+  },
+  "/databases/choose-a-database": {
+    "选择数据库": "choose-a-database",
+    "选择数据库引擎": "choose-an-engine",
+    "选择一键数据库还是服务": "choose-a-one-click-database-or-a-service",
+    "选择版本与镜像": "choose-a-version-and-image",
+    "核查你的选择": "verify-the-choice"
+  },
+  "/databases/clickhouse": {
+    "创建-clickhouse-数据库": "create-a-clickhouse-database",
+    "默认配置": "default-configuration",
+    "配置-clickhouse": "configure-clickhouse",
+    "备份与恢复-clickhouse": "back-up-and-restore-clickhouse",
+    "健康检查": "health-checks",
+    "clickhouse-官方资源": "official-clickhouse-resources",
+    "使用文件挂载的既有数据卷": "existing-data-volumes-with-file-mounts",
+    "打开新建资源": "open-new-resource",
+    "选择-clickhouse": "select-clickhouse",
+    "选择服务器": "select-a-server",
+    "选择目标": "select-a-destination",
+    "检查生成的配置": "review-the-generated-configuration",
+    "启动-clickhouse": "start-clickhouse"
+  },
+  "/databases/configuration/environment-variables": {
+    "环境变量": "environment-variables",
+    "添加或编辑变量": "add-or-edit-a-variable",
+    "外部机密管理器": "external-secret-managers",
+    "数据库变量与常规设置": "database-variables-and-general-settings",
+    "应用更改": "apply-changes",
+    "命名与复制值": "names-and-copying-values"
+  },
+  "/databases/configuration/general": {
+    "常规设置": "general-settings",
+    "通用设置": "common-settings",
+    "引擎专属设置": "engine-specific-settings",
+    "保持凭据同步": "keep-credentials-synchronized",
+    "应用更改": "apply-changes"
+  },
+  "/databases/configuration/health-checks": {
+    "健康检查": "health-checks",
+    "配置检查项": "configure-the-check",
+    "启用或停用检查": "enable-or-disable-the-check",
+    "验证健康检查": "verify-a-health-check"
+  },
+  "/databases/configuration/overview": {
+    "配置数据库": "configure-a-database",
+    "配置页面": "configuration-pages",
+    "应用配置更改": "apply-configuration-changes",
+    "继续阅读配置指南": "continue-with-configuration-guides"
+  },
+  "/databases/configuration/persistent-storage": {
+    "配置持久化存储": "configure-persistent-storage",
+    "数据库默认数据路径": "default-database-data-paths",
+    "添加挂载": "add-a-mount",
+    "存储边界": "storage-boundaries"
+  },
+  "/databases/configuration/resource-limits": {
+    "资源限制": "resource-limits",
+    "cpu-限制": "cpu-limits",
+    "内存限制": "memory-limits",
+    "应用并验证": "apply-and-verify"
+  },
+  "/databases/dragonfly": {
+    "创建-dragonfly-数据库": "create-a-dragonfly-database",
+    "默认配置": "default-configuration",
+    "连接-dragonfly": "connect-to-dragonfly",
+    "配置-dragonfly": "configure-dragonfly",
+    "备份与持久化": "backups-and-persistence",
+    "ssl-与健康检查": "ssl-and-health-checks",
+    "dragonfly-官方资源": "official-dragonfly-resources",
+    "密码环境变量": "password-environment-variable",
+    "打开新建资源": "open-new-resource",
+    "选择-dragonfly": "select-dragonfly",
+    "选择服务器": "select-a-server",
+    "选择目标": "select-a-destination",
+    "检查生成的配置": "review-the-generated-configuration",
+    "启动-dragonfly": "start-dragonfly"
+  },
+  "/databases/how-databases-work": {
+    "数据库的工作原理": "how-databases-work",
+    "一键数据库在-coolify-中的工作方式": "how-a-one-click-database-works-in-coolify",
+    "从创建到数据库运行": "from-creation-to-a-running-database",
+    "coolify-管理哪些内容": "what-coolify-manages",
+    "容器是可以替换的": "containers-can-be-replaced",
+    "应用如何连接": "how-applications-connect",
+    "健康检查反映数据库就绪状态": "health-checks-show-database-readiness",
+    "备份因引擎而异": "backups-are-engine-specific",
+    "控制平面与数据库服务器": "control-plane-and-database-server",
+    "继续学习": "continue-learning"
+  },
+  "/databases/keydb": {
+    "创建-keydb-数据库": "create-a-keydb-database",
+    "默认配置": "default-configuration",
+    "连接-keydb": "connect-to-keydb",
+    "配置-keydb": "configure-keydb",
+    "备份与持久化": "backups-and-persistence",
+    "ssl-与健康检查": "ssl-and-health-checks",
+    "keydb-官方资源": "official-keydb-resources",
+    "密码环境变量": "password-environment-variable",
+    "打开新建资源": "open-new-resource",
+    "选择-keydb": "select-keydb",
+    "选择服务器": "select-a-server",
+    "选择目标": "select-a-destination",
+    "检查生成的配置": "review-the-generated-configuration",
+    "启动-keydb": "start-keydb"
+  },
+  "/databases/mariadb": {
+    "创建-mariadb-数据库": "create-a-mariadb-database",
+    "默认配置": "default-configuration",
+    "连接-mariadb": "connect-to-mariadb",
+    "配置-mariadb": "configure-mariadb",
+    "备份与恢复-mariadb": "back-up-and-restore-mariadb",
+    "ssl-与健康检查": "ssl-and-health-checks",
+    "mariadb-官方资源": "official-mariadb-resources",
+    "打开新建资源": "open-new-resource",
+    "选择-mariadb": "select-mariadb",
+    "选择服务器": "select-a-server",
+    "选择目标": "select-a-destination",
+    "检查生成的配置": "review-the-generated-configuration",
+    "启动-mariadb": "start-mariadb"
+  },
+  "/databases/mongodb": {
+    "创建-mongodb-数据库": "create-a-mongodb-database",
+    "默认配置": "default-configuration",
+    "连接-mongodb": "connect-to-mongodb",
+    "配置-mongodb": "configure-mongodb",
+    "备份-mongodb": "back-up-mongodb",
+    "ssl-与健康检查": "ssl-and-health-checks",
+    "mongodb-官方资源": "official-mongodb-resources",
+    "打开新建资源": "open-new-resource",
+    "选择-mongodb": "select-mongodb",
+    "选择服务器": "select-a-server",
+    "选择目标": "select-a-destination",
+    "检查生成的配置": "review-the-generated-configuration",
+    "启动-mongodb": "start-mongodb"
+  },
+  "/databases/mysql": {
+    "创建-mysql-数据库": "create-a-mysql-database",
+    "默认配置": "default-configuration",
+    "连接-mysql": "connect-to-mysql",
+    "配置-mysql": "configure-mysql",
+    "备份与恢复-mysql": "back-up-and-restore-mysql",
+    "ssl-与健康检查": "ssl-and-health-checks",
+    "mysql-官方资源": "official-mysql-resources",
+    "打开新建资源": "open-new-resource",
+    "选择-mysql": "select-mysql",
+    "选择服务器": "select-a-server",
+    "选择目标": "select-a-destination",
+    "检查生成的配置": "review-the-generated-configuration",
+    "启动-mysql": "start-mysql"
+  },
+  "/databases/operations/danger-zone": {
+    "删除数据库": "delete-a-database",
+    "删除前的准备": "before-deletion",
+    "删除动作": "deletion-actions",
+    "确认删除": "confirm-deletion",
+    "删除之后": "after-deletion"
+  },
+  "/databases/operations/overview": {
+    "运维数据库": "operate-databases",
+    "找到对应的页面": "know-where-to-look",
+    "选择生命周期操作": "choose-a-lifecycle-action",
+    "保护数据库状态": "protect-database-state",
+    "继续运维数据库": "continue-operating-the-database",
+    "资源操作按钮": "resource-action-buttons",
+    "跟踪进行中的操作": "follow-a-running-operation"
+  },
+  "/databases/operations/resource-operations": {
+    "克隆或移动数据库": "clone-or-move-a-database",
+    "准备目标位置": "prepare-the-destination",
+    "选择目标位置": "select-the-destination",
+    "克隆并检查": "clone-and-review",
+    "克隆到另一个环境": "clone-into-another-environment"
+  },
+  "/databases/postgresql": {
+    "创建-postgresql-数据库": "create-a-postgresql-database",
+    "默认配置": "default-configuration",
+    "连接-postgresql": "connect-to-postgresql",
+    "配置-postgresql": "configure-postgresql",
+    "备份与恢复-postgresql": "back-up-and-restore-postgresql",
+    "ssl-与健康检查": "ssl-and-health-checks",
+    "postgresql-官方资源": "official-postgresql-resources",
+    "打开-new-resource": "open-new-resource",
+    "选择-postgresql": "select-postgresql",
+    "选择服务器": "select-a-server",
+    "选择目标": "select-a-destination",
+    "选择-postgresql-类型": "select-a-postgresql-type",
+    "检查生成的配置": "review-the-generated-configuration",
+    "启动-postgresql": "start-postgresql",
+    "资源详情": "resource-details",
+    "数据库凭据": "database-credentials"
+  },
+  "/databases/redis": {
+    "创建-redis-数据库": "create-a-redis-database",
+    "默认配置": "default-configuration",
+    "连接-redis": "connect-to-redis",
+    "配置-redis": "configure-redis",
+    "备份与持久化": "backups-and-persistence",
+    "ssl-与健康检查": "ssl-and-health-checks",
+    "redis-官方资源": "official-redis-resources",
+    "打开-new-resource": "open-new-resource",
+    "选择-redis": "select-redis",
+    "选择服务器": "select-a-server",
+    "选择目标": "select-a-destination",
+    "检查生成的配置": "review-the-generated-configuration",
+    "启动-redis": "start-redis"
+  },
+  "/databases/restore": {
+    "恢复数据库": "restore-a-database",
+    "支持的备份": "supported-backups",
+    "检查恢复选项": "review-restore-options",
+    "选择并导入备份": "select-and-import-a-backup",
+    "通过-api-导入": "import-through-the-api",
+    "验证结果": "verify-the-result",
+    "示例导入服务器文件": "example-import-a-server-file"
+  },
+  "/databases/sqlite": {
+    "创建数据库": "create-the-database",
+    "连接应用": "connect-an-application",
+    "备份与恢复": "backups-and-recovery"
+  },
+  "/databases/ssl": {
+    "数据库-ssl": "database-ssl",
+    "启用-ssl": "enable-ssl",
+    "ssl-模式": "ssl-modes",
+    "信任-coolify-ca-证书": "trust-the-coolify-ca-certificate",
+    "验证连接": "verify-the-connection",
+    "服务器-ca-管理": "server-ca-management"
+  },
+  "/databases/what-is-a-database": {
+    "什么是数据库": "what-is-a-database",
+    "什么是一键数据库": "what-is-a-one-click-database",
+    "数据库资源包含什么": "what-a-database-resource-includes",
+    "独立数据库与应用": "standalone-databases-and-applications",
+    "独立数据库不是什么": "what-a-standalone-database-is-not",
+    "继续学习": "continue-learning"
+  },
+  "/deploy-your-first-app": {
+    "部署你的第一个应用": "deploy-your-first-app",
+    "开始之前": "before-you-start",
+    "部署概览": "deployment-overview",
+    "部署你的第一个-nginx-应用": "deploy-your-first-nginx-app",
+    "首次部署的常见问题": "common-first-deploy-issues",
+    "接下来做什么": "what-to-do-next",
+    "创建你的第一个项目": "create-your-first-project",
+    "创建新资源": "create-a-new-resource",
+    "选择部署类型": "choose-deployment-type",
+    "填入镜像引用": "enter-the-image-reference",
+    "配置网络设置": "configure-network-settings",
+    "部署": "deploy",
+    "访问应用链接": "visit-application-link"
+  },
+  "/deploy-your-first-database": {
+    "部署你的第一个数据库": "deploy-your-first-database",
+    "开始之前": "before-you-start",
+    "部署概览": "deployment-overview",
+    "部署你的第一个-redis-数据库": "deploy-your-first-redis-database",
+    "首次部署的常见问题": "common-first-deploy-issues",
+    "接下来做什么": "what-to-do-next",
+    "创建你的第一个项目": "create-your-first-project",
+    "创建新资源": "create-a-new-resource",
+    "从数据库列表中选择-redis": "choose-redis-from-the-database-list",
+    "配置端口映射": "configure-port-mapping",
+    "在防火墙上放行映射的宿主机端口": "open-the-mapped-host-port-on-your-firewall",
+    "启动-redis": "start-redis",
+    "从终端连接-redis": "connect-to-redis-from-terminal"
+  },
+  "/deploy-your-first-service": {
+    "部署你的第一个服务": "deploy-your-first-service",
+    "开始之前": "before-you-start",
+    "部署概览": "deployment-overview",
+    "部署你的第一个-umami-服务": "deploy-your-first-umami-service",
+    "首次部署的常见问题": "common-first-deploy-issues",
+    "接下来做什么": "what-to-do-next",
+    "创建你的第一个项目": "create-your-first-project",
+    "创建新资源": "create-a-new-resource",
+    "从服务列表中选择-umami": "choose-umami-from-the-service-list",
+    "检查服务-url": "review-the-service-url",
+    "部署": "deploy",
+    "打开-umami-并登录": "open-umami-and-sign-in"
+  },
+  "/hetzner": {
+    "hetzner-优惠码新用户专享-20-欧元赠金": "hetzner-promo-code-20-credit-for-new-users"
+  },
+  "/integrations/networking/cloudflare/tunnels": {
+    "为什么使用-cloudflare-tunnels": "why-use-cloudflare-tunnels",
+    "什么时候不适合使用-cloudflare-tunnels": "when-not-to-use-cloudflare-tunnels",
+    "在-coolify-中使用-cloudflare-tunnels-的几种方式": "ways-to-use-cloudflare-tunnels-with-coolify"
+  },
+  "/integrations/networking/cloudflare/tunnels/all-resource": {
+    "通过-cloudflare-tunnel-访问所有资源": "access-all-resource-via-cloudflare-tunnels",
+    "适合谁使用": "who-this-is-for",
+    "环境要求": "setup-requirements",
+    "开始之前": "before-we-start",
+    "工作原理": "how-it-works",
+    "1-创建-cloudflare-tunnel": "1-create-a-cloudflare-tunnel",
+    "2-在-coolify-上部署-cloudflared": "2-deploy-cloudflared-on-coolify",
+    "3-启动-coolify-代理": "3-start-coolify-proxy",
+    "4-配置隧道路由": "4-configure-tunnel-routes",
+    "5-配置资源域名": "5-configure-your-resource-domain",
+    "如何使用多个不同的域名": "how-to-use-multiple-different-domains",
+    "已知问题与解决办法": "known-issues-and-solutions"
+  },
+  "/integrations/networking/cloudflare/tunnels/full-tls": {
+    "为所有资源配置完整-httpstls": "full-httpstls-setup-for-all-resources",
+    "适合谁使用": "who-this-is-for",
+    "环境要求": "setup-requirements",
+    "开始之前": "before-we-start",
+    "1-配置源站-tls-证书": "1-setup-origin-tls-certificate",
+    "a-创建-cloudflare-源站证书-toc": "a-create-cloudflare-origin-certificate-toc",
+    "b-把证书添加到你的服务器-toc": "b-add-certificate-to-your-server-toc",
+    "c-配置-coolify-代理使用源站证书-toc": "c-configure-coolify-proxy-to-use-the-origin-certificate-toc",
+    "2-配置-tls-加密模式": "2-setup-tls-encryption",
+    "3-配置-always-use-https": "3-setup-always-use-https",
+    "4-配置隧道使用-https": "4-configure-tunnel-to-use-https",
+    "5-把-url-从-http-更新为-https": "5-update-urls-from-http-to-https",
+    "疑难排查切换-https-后出现-502-bad-gateway": "troubleshooting-bad-gateway-502-after-switching-to-https"
+  },
+  "/integrations/networking/cloudflare/tunnels/server-ssh": {
+    "通过-cloudflare-tunnel-进行服务器-ssh-访问": "server-ssh-access-via-cloudflare-tunnels",
+    "配置方式": "setup-methods",
+    "适合谁使用": "who-this-is-for",
+    "开始之前": "before-we-start",
+    "工作原理": "how-it-works",
+    "1-创建-ssh-私钥-toc": "1-create-a-private-ssh-key-toc",
+    "2-把公钥添加到你的服务器-toc": "2-add-public-key-to-your-server-toc",
+    "3-把你的服务器添加到-coolify-toc": "3-add-your-server-to-coolify-toc",
+    "4-在-coolify-中验证你的服务器-toc": "4-validate-your-server-on-coolify-toc",
+    "5-创建-cloudflare-tunnel-toc": "5-create-a-cloudflare-tunnel-toc",
+    "6-在-coolify-上配置-cloudflare-tunnel-toc": "6-configure-cloudflare-tunnel-on-coolify-toc",
+    "7-配置隧道路由-toc": "7-configure-tunnel-routes-toc",
+    "已知问题与解决办法": "known-issues-and-solutions"
+  },
+  "/integrations/networking/cloudflare/tunnels/single-resource": {
+    "通过-cloudflare-tunnel-访问单个资源": "access-single-resource-via-cloudflare-tunnels",
+    "适合谁使用": "who-this-is-for",
+    "环境要求": "setup-requirements",
+    "开始之前": "before-we-start",
+    "工作原理": "how-it-works",
+    "1-为隧道配置你的应用": "1-setup-your-app-for-tunneling",
+    "2-创建-cloudflare-tunnel": "2-create-a-cloudflare-tunnel",
+    "3-在-coolify-上部署-cloudflared": "3-deploy-cloudflared-on-coolify",
+    "4-配置-tls-加密模式": "4-set-up-tls-encryption",
+    "5-配置隧道路由": "5-configure-tunnel-routes",
+    "隧道化多个资源": "tunnel-multiple-resources",
+    "已知问题与解决办法": "known-issues-and-solutions",
+    "realtime-或终端连接因-localhost-失败": "realtime-or-terminal-connections-fail-with-localhost",
+    "既有-dns-记录导致路由无法生效": "an-existing-dns-record-prevents-the-route-from-working"
+  },
+  "/integrations/security/cloudflare/ddos-protection": {
+    "cloudflare-ddos-防护": "cloudflare-ddos-protection",
+    "为什么在-coolify-中使用-cloudflare-做-ddos-防护": "why-use-cloudflare-for-ddos-protection-with-coolify",
+    "什么时候不适合用-cloudflare-做-ddos-防护": "when-not-to-use-cloudflare-for-ddos-protection",
+    "工作原理": "how-it-works",
+    "1-配置源站-tls-证书": "1-setup-origin-tls-certificate",
+    "a-创建-cloudflare-源站证书-toc": "a-create-cloudflare-origin-certificate-toc",
+    "b-把证书添加到你的服务器-toc": "b-add-certificate-to-your-server-toc",
+    "c-配置-coolify-代理使用源站证书-toc": "c-configure-coolify-proxy-to-use-the-origin-certificate-toc",
+    "2-配置-dns-记录": "2-set-up-dns-records",
+    "3-配置-tls-加密模式": "3-set-up-tls-encryption",
+    "4-配置-always-use-https": "4-set-up-always-use-https",
+    "5-配置防火墙": "5-configure-firewall"
+  },
+  "/integrations/security/cloudflare/dns-management": {
+    "cloudflare-dns-管理": "cloudflare-dns-management",
+    "添加令牌": "add-a-token",
+    "管理域名": "manage-a-domain"
+  },
+  "/integrations/security/secret-managers": {
+    "机密管理器凭据": "secret-manager-credentials",
+    "在-coolify-中添加凭据": "add-credentials-in-coolify"
+  },
+  "/integrations/security/using-secret-managers": {
+    "使用机密管理器": "use-a-secret-manager",
+    "刷新已更改的机密": "refresh-a-changed-secret"
+  },
+  "/knowledge-base": {
+    "概览": "overview"
+  },
+  "/knowledge-base/hetzner-loadbalancing": {
+    "在-hetzner-上做负载均衡": "load-balancing-on-hetzner",
+    "简介": "introduction",
+    "前提条件": "requirements",
+    "步骤": "steps",
+    "购买服务器": "buy-servers",
+    "在-coolify-中添加并验证": "add--validate-them-in-coolify",
+    "可选部署数据库": "optional-deploy-your-database",
+    "部署你的应用": "deploy-your-applications",
+    "添加并配置负载均衡器": "add--configure-the-loadbalancer",
+    "配置-dns": "setup-dns",
+    "配置防火墙": "setup-firewall"
+  },
+  "/knowledge-base/how-to/macos-colima": {
+    "使用-colima-的-macos-安装指南": "macos-using-colima-setup-guide",
+    "前置条件": "prerequisites",
+    "安装-colima": "install-colima",
+    "创建虚拟机": "create-the-virtual-machine",
+    "网络配置": "networking",
+    "ssh-配置": "ssh-configuration",
+    "安装-coolify": "install-coolify",
+    "从头开始": "starting-fresh",
+    "安装后步骤": "post-install-steps",
+    "桥接模式本指南默认": "bridged-mode-default-in-this-guide",
+    "共享模式": "shared-mode",
+    "开机自动启动-colima": "start-colima-automatically-on-boot"
+  },
+  "/knowledge-base/how-to/webstudio-with-hetzner": {
+    "用-coolify-部署-webstudio-项目": "deploy-webstudio-projects-using-coolify",
+    "你需要准备什么": "what-youll-need",
+    "1-创建-github-仓库": "1-create-your-github-repository",
+    "2-导出-webstudio-项目": "2-export-your-webstudio-project",
+    "3-将代码推送到-github": "3-push-your-code-to-github",
+    "4-准备你的-hetzner-服务器": "4-set-up-your-hetzner-server",
+    "5-将-coolify-连接到你的服务器": "5-connect-coolify-to-your-server",
+    "6-在-coolify-上配置项目": "6-configure-your-project-on-coolify",
+    "7-更新你的-webstudio-站点": "7-update-your-webstudio-site"
+  },
+  "/knowledge-base/nodejs-multi-core-scaling": {
+    "nodejs-多核扩展": "nodejs-multi-core-scaling",
+    "问题所在": "the-problem",
+    "解决方案": "the-fix",
+    "技术背景": "technical-background",
+    "dockerfile-示例pm2-集群模式": "dockerfile-example-pm2-cluster-mode",
+    "nixpacks-示例": "nixpacks-example",
+    "bun-替代方案一行代码实现多核": "bun-alternative-one-line-multi-core",
+    "deno-替代方案一行代码实现多核": "deno-alternative-one-line-multi-core",
+    "注意事项": "caveats",
+    "验证多核是否生效": "verifying-multi-core-use",
+    "应用代码": "app-code",
+    "构建配置": "build-configuration",
+    "应用代码-1": "app-code-1",
+    "构建配置-1": "build-configuration-1"
+  },
+  "/knowledge-base/php-security-advisory-2026": {
+    "2026-年-php-安全公告php2shell": "php-security-advisory-2026-php2shell",
+    "已修复的-coolify-版本": "patched-coolify-versions",
+    "自托管-coolify-用户": "self-hosted-coolify-users",
+    "coolify-cloud-用户": "coolify-cloud-users",
+    "如果无法立即更新": "if-you-cannot-update-immediately",
+    "这些版本中的其他安全更新": "other-security-updates-in-these-releases",
+    "从仪表盘更新-v44": "update-v44-from-the-dashboard",
+    "继续留在-v40v43-稳定版本线": "stay-on-a-stable-v40v43-release-line",
+    "从-v4-beta-或更早版本迁移": "move-from-a-v4-beta-or-older-release",
+    "恢复访问前先确认更新": "confirm-the-update-before-restoring-access",
+    "cloudflare-waf-只是权宜之计": "cloudflare-waf-remains-a-stopgap",
+    "让未修复的实例保持离线或隔离": "keep-an-unpatched-instance-offline-or-isolated",
+    "方案-1停止-coolify推荐": "option-1-stop-coolify-recommended"
+  },
+  "/mcp/capabilities/applications": {
+    "应用": "applications"
+  },
+  "/mcp/capabilities/automation": {
+    "自动化": "automation"
+  },
+  "/mcp/capabilities/databases": {
+    "数据库": "databases"
+  },
+  "/mcp/capabilities/deployments": {
+    "部署": "deployments"
+  },
+  "/mcp/capabilities/environment-and-storage": {
+    "环境与存储": "environment-and-storage"
+  },
+  "/mcp/capabilities/integrations": {
+    "集成": "integrations"
+  },
+  "/mcp/capabilities/logs": {
+    "日志": "logs"
+  },
+  "/mcp/capabilities/overview": {
+    "概览": "overview",
+    "从这些工具开始": "start-with-these-tools",
+    "能力页面": "capability-pages"
+  },
+  "/mcp/capabilities/pagination": {
+    "分页": "pagination"
+  },
+  "/mcp/capabilities/projects": {
+    "项目": "projects"
+  },
+  "/mcp/capabilities/prompts-and-resources": {
+    "提示词与资源": "prompts-and-resources",
+    "资源": "resources",
+    "提示词": "prompts"
+  },
+  "/mcp/capabilities/servers": {
+    "服务器": "servers"
+  },
+  "/mcp/capabilities/services": {
+    "服务": "services"
+  },
+  "/mcp/capabilities/teams": {
+    "团队": "teams"
+  },
+  "/mcp/clients/claude-code": {
+    "将-claude-code-连接到-mcp": "connect-claude-code-to-mcp",
+    "添加-coolify-服务器": "add-the-coolify-server",
+    "验证连接": "verify-the-connection"
+  },
+  "/mcp/clients/cursor": {
+    "将-cursor-连接到-mcp": "connect-cursor-to-mcp",
+    "在-cursor-中添加-coolify": "add-coolify-in-cursor",
+    "验证连接": "verify-the-connection"
+  },
+  "/mcp/clients/other-clients": {
+    "连接其他-mcp-客户端": "connect-other-mcp-clients",
+    "必需配置": "required-configuration",
+    "验证连接": "verify-the-connection"
+  },
+  "/mcp/how-mcp-works": {
+    "mcp-的工作原理": "how-mcp-works",
+    "连接流程": "connection-flow",
+    "身份验证与作用域": "authentication-and-scope",
+    "mcp-原语": "mcp-primitives",
+    "响应边界": "response-boundaries"
+  },
+  "/mcp/overview": {
+    "mcp-概览": "mcp-overview",
+    "从这里开始": "start-here",
+    "查找能力": "find-capabilities",
+    "继续学习": "continue-learning"
+  },
+  "/mcp/security": {
+    "mcp-安全": "mcp-security",
+    "遵循最小权限原则": "use-least-privilege",
+    "团队作用域": "team-scope",
+    "保护客户端配置": "protect-client-configuration"
+  },
+  "/mcp/setup": {
+    "设置-mcp": "set-up-mcp",
+    "开始之前": "before-you-begin",
+    "示例值": "example-values",
+    "启用-mcp": "enable-mcp",
+    "创建-mcp-令牌": "create-an-mcp-token",
+    "连接客户端": "connect-a-client",
+    "验证访问": "verify-access"
+  },
+  "/mcp/troubleshooting": {
+    "mcp-疑难排查": "troubleshoot-mcp"
+  },
+  "/mcp/what-is-mcp": {
+    "什么是-mcp": "what-is-mcp",
+    "mcp-提供什么": "what-mcp-provides",
+    "mcp-不做什么": "what-mcp-does-not-do",
+    "继续学习": "continue-learning"
+  },
+  "/offers": {
+    "优惠汇总": "offers"
+  },
+  "/screenshots": {
+    "coolify-界面截图": "coolify-ui-screenshots"
+  },
+  "/services/configuration/docker-compose": {
+    "源定义与可部署-compose": "source-and-deployable-compose",
+    "编辑用户自定义-service": "edit-a-user-defined-service",
+    "环境引用": "environment-references",
+    "生成的-service-值": "generated-service-values",
+    "域名与内部端口": "domains-and-internal-ports",
+    "存储由-compose-管理": "storage-is-compose-owned",
+    "健康检查由-compose-管理": "health-checks-are-compose-owned",
+    "网络": "networking",
+    "更新一键-service": "update-a-one-click-service",
+    "全部魔法环境变量": "all-magic-environment-variables",
+    "变量名中的下划线": "underscores-in-variable-names"
+  },
+  "/services/configuration/environment-variables": {
+    "环境变量": "environment-variables",
+    "理解变量的来源": "understand-the-source-of-a-variable",
+    "添加与编辑值": "add-and-edit-values",
+    "必填值与默认值": "required-values-and-defaults",
+    "跨组件复用值": "reuse-values-across-components",
+    "外部机密管理器": "external-secret-managers",
+    "生成的域名与凭据": "generated-domains-and-credentials",
+    "应用并验证更改": "apply-and-verify-changes"
+  },
+  "/services/configuration/general": {
+    "常规设置": "general-settings",
+    "service-组件": "service-components",
+    "保存并验证更改": "save-and-verify-changes",
+    "资源详情": "resource-details",
+    "组件卡片": "component-cards"
+  },
+  "/services/configuration/networking": {
+    "配置-service-网络": "configure-service-networking",
+    "理解两种-service-网络": "understand-the-two-service-networks",
+    "选择连接目标": "choose-the-connection-target",
+    "验证连接": "verify-the-connection",
+    "网络边界": "networking-boundaries"
+  },
+  "/services/configuration/overview": {
+    "配置-service": "configure-a-service",
+    "栈配置页面": "stack-configuration-pages",
+    "组件设置": "component-settings",
+    "应用配置更改": "apply-configuration-changes",
+    "继续了解配置指南": "continue-with-configuration-guides"
+  },
+  "/services/configuration/persistent-storage": {
+    "配置持久化存储": "configure-persistent-storage",
+    "选择挂载类型": "choose-a-mount",
+    "定义命名卷": "define-a-named-volume",
+    "定义目录或文件": "define-a-directory-or-file",
+    "安全地更改挂载": "change-a-mount-safely",
+    "备份-service-数据": "back-up-service-data",
+    "重要边界": "important-boundaries"
+  },
+  "/services/operations/danger-zone": {
+    "删除-service": "delete-a-service",
+    "删除之前": "before-deletion",
+    "删除动作": "deletion-actions",
+    "确认删除": "confirm-deletion",
+    "验证删除": "verify-deletion",
+    "强制删除卡住的-service": "force-delete-a-stuck-service",
+    "重建已删除的-service": "recreate-a-deleted-service"
+  },
+  "/services/operations/overview": {
+    "运维-service": "operate-services",
+    "知道去哪里找": "know-where-to-look",
+    "选择生命周期操作": "choose-a-lifecycle-action",
+    "保护-service-状态": "protect-service-state",
+    "运行循环命令": "run-recurring-commands",
+    "继续运维-service": "continue-operating-the-service"
+  },
+  "/services/operations/resource-operations": {
+    "克隆或移动-service": "clone-or-move-a-service"
+  },
+  "/services/operations/scheduled-tasks": {
+    "运行-service-计划任务": "run-scheduled-service-tasks",
+    "打开计划任务": "open-scheduled-tasks",
+    "service-专属行为": "service-specific-behavior",
+    "使用详细的-core-指南": "use-the-detailed-core-guides",
+    "打开-service-页面": "open-the-service-page",
+    "选择详细指南": "choose-the-detailed-guide",
+    "运行首次执行": "run-the-first-execution"
+  },
+  "/services/operations/troubleshooting": {
+    "排查-service-问题": "troubleshoot-a-service",
+    "定位故障层": "identify-the-failing-layer",
+    "按症状处理": "follow-the-matching-symptom",
+    "收集支持所需的信息": "collect-information-for-support",
+    "找到第一条失败的部署命令": "find-the-first-failed-deployment-command"
+  },
+  "/services/operations/update-service": {
+    "更新-service": "update-a-service",
+    "选择更新路径": "choose-the-update-path",
+    "准备更新": "prepare-the-update",
+    "应用更新": "apply-the-update",
+    "验证试更新": "verify-the-trial-update",
+    "更新生产": "update-production",
+    "安全回滚": "roll-back-safely",
+    "相关指南": "related-guides",
+    "有计划地更改版本": "change-the-version-deliberately"
+  },
+  "/start-with-cloud": {
+    "从-coolify-cloud-开始": "start-with-coolify-cloud",
+    "开始之前": "before-you-begin",
+    "开始使用-coolify-cloud": "get-started-with-coolify-cloud",
+    "常见速答": "quick-answers",
+    "故障排查": "troubleshooting",
+    "1-cloud-的工作方式": "1-how-cloud-works",
+    "2-共享责任模型": "2-shared-responsibility-model",
+    "3-需要自备服务器": "3-your-own-server-is-required",
+    "4-项目所需的服务器资源": "4-server-resources-for-your-projects",
+    "5-订阅与服务器数量限制": "5-subscription-and-server-limits",
+    "6-服务器访问要求": "6-server-access-requirements",
+    "1-创建-cloud-账户": "1-create-your-cloud-account",
+    "2-选择订阅方案": "2-choose-your-subscription-plan",
+    "3-添加-ssh-私钥": "3-add-an-ssh-private-key",
+    "4-添加你的服务器": "4-add-your-server",
+    "5-部署你的第一个应用": "5-deploy-your-first-application"
+  },
+  "/start-with-self-hosted": {
+    "从自托管开始": "start-with-self-hosted",
+    "开始之前": "before-you-begin",
+    "选择安装方式": "choose-installation-method",
+    "自动化安装-": "automated-installation-",
+    "部署完成后": "after-setup",
+    "高级安装方式": "advanced-installations",
+    "1-服务器要求": "1-server-requirements",
+    "2-支持的操作系统": "2-supported-operating-systems",
+    "3-最低硬件要求": "3-minimum-hardware-requirements",
+    "4-项目所需的服务器资源": "4-server-resources-for-your-projects",
+    "5-配置-ssh-访问与防火墙": "5-configure-ssh-access-and-firewall",
+    "1-运行安装脚本": "1-run-the-install-script",
+    "2-访问控制台": "2-access-the-dashboard",
+    "3-备份安装机密": "3-back-up-installation-secrets",
+    "1-root-用户": "1-root-user"
+  },
+  "/support": {
+    "支持": "support"
+  },
+  "/troubleshoot": {
+    "-故障排查": "-troubleshooting",
+    "安装": "installation",
+    "应用": "applications",
+    "面板": "dashboard",
+    "服务器": "server",
+    "dns-与域名": "dns--domains"
+  },
+  "/troubleshoot/applications/bad-gateway": {
+    "bad-gateway502错误": "bad-gateway-502-error",
+    "应用与服务有什么区别": "whats-an-application-and-whats-a-service",
+    "症状": "symptoms",
+    "诊断": "diagnosis",
+    "解决方案": "solution",
+    "支持": "support",
+    "端口配置": "port-configuration",
+    "主机映射": "host-mapping",
+    "监听地址": "listening-address",
+    "域名中包含端口": "domain-port-inclusion",
+    "容器状态": "container-status",
+    "更新端口设置": "update-port-settings",
+    "移除主机端口映射": "remove-host-port-mapping",
+    "调整监听地址": "adjust-listening-address",
+    "修正域名-url": "correct-domain-url",
+    "重启容器--检查日志": "restart-container--check-logs"
+  },
+  "/troubleshoot/applications/failed-to-get-token": {
+    "获取访问令牌失败": "failed-to-get-access-token",
+    "错误": "error",
+    "解决方案": "solution"
+  },
+  "/troubleshoot/applications/gateway-timeout": {
+    "gateway-timeout504错误": "gateway-timeout-504-errors",
+    "常见原因": "common-causes",
+    "快速排查清单": "quick-diagnosis-checklist",
+    "预防建议": "prevention-tips",
+    "支持": "support"
+  },
+  "/troubleshoot/applications/no-available-server": {
+    "no-available-server503错误": "no-available-server-503-error",
+    "该错误的成因": "what-causes-this-error",
+    "快速排查步骤": "quick-diagnosis-steps",
+    "常见解决方案": "common-solutions",
+    "进阶调试": "advanced-debugging",
+    "预防建议": "prevention-tips",
+    "何时求助": "when-to-seek-help",
+    "检查容器健康状态": "check-container-health-status",
+    "检查域名配置": "check-domain-configuration",
+    "检查-traefik-代理日志": "check-traefik-proxy-logs"
+  },
+  "/troubleshoot/applications/too-many-redirects": {
+    "重定向次数过多": "too-many-redirects",
+    "cloudflare-ssltls-模式": "cloudflare-ssltls-mode",
+    "cloudflare-tunnel-使用-http-源站": "cloudflare-tunnel-using-an-http-origin",
+    "如果循环仍未消除": "if-the-loop-continues",
+    "修改加密模式": "change-the-encryption-mode"
+  },
+  "/troubleshoot/dashboard/dashboard-inaccessible": {
+    "coolify-面板无法访问": "coolify-dashboard-inaccessible",
+    "常见问题小结": "summary-of-common-issues",
+    "确定你的访问方式": "determine-your-access-method",
+    "用服务器-ip-测试": "test-with-your-servers-ip-address",
+    "a-开放防火墙端口": "a-open-your-firewall-port",
+    "b-直接访问面板": "b-access-the-dashboard-directly",
+    "检查-coolify-容器": "check-the-coolify-container",
+    "a-确认容器状态": "a-verify-the-container-status",
+    "b-重启容器如有必要": "b-restart-the-container-if-necessary",
+    "c-coolify-相关容器端口冲突": "c-conflict-coolify-related-containers-port",
+    "处理代理相关问题": "addressing-proxy-related-issues",
+    "a-启动代理": "a-start-the-proxy",
+    "b-检查最近的改动": "b-review-recent-changes",
+    "c-查看代理日志": "c-check-proxy-logs",
+    "寻求进一步帮助": "getting-further-assistance"
+  },
+  "/troubleshoot/dashboard/dashboard-slow-performance": {
+    "coolify-面板加载缓慢": "slow-coolify-dashboard-performance",
+    "常见问题小结": "summary-of-common-issues",
+    "确定你的域名接入方式": "determine-your-domain-setup",
+    "用服务器-ip-测试": "test-with-your-servers-ip-address",
+    "a-开放防火墙端口": "a-open-your-firewall-port",
+    "b-直接访问面板": "b-access-the-dashboard-directly",
+    "处理-cloudflare-rocket-loader": "addressing-cloudflare-rocket-loader",
+    "寻求进一步帮助": "getting-further-assistance"
+  },
+  "/troubleshoot/dns-and-domains/certificate-resolver-doesnt-exist": {
+    "coolify-代理找不到证书解析器": "certificate-resolver-not-found-on-coolify-proxy",
+    "症状": "symptoms",
+    "诊断": "diagnosis",
+    "根本原因": "root-cause",
+    "解决方案": "solution",
+    "sudo-chmod-600-做了什么": "what-does-sudo-chmod-600-do"
+  },
+  "/troubleshoot/dns-and-domains/lets-encrypt-not-working": {
+    "lets-encrypt-未生成-ssl-证书": "lets-encrypt-not-generating-ssl-certificates",
+    "支持": "support",
+    "了解域名所有权质询challenge": "understand-the-domain-ownership-challenges",
+    "检查端口可达性": "check-port-accessibility",
+    "使用第三方代理的情形": "usage-of-third-party-proxy",
+    "检查-lets-encrypt-服务状态": "check-lets-encrypt-service-status",
+    "关于证书有效期的说明": "note-on-certificate-validity",
+    "强制重新生成证书": "force-regenerate-certificates",
+    "检查-waf-设置": "check-your-waf-settings",
+    "检查-coolify-代理日志": "check-coolify-proxy-logs",
+    "核实-dns-记录": "verify-dns-records",
+    "为什么这很重要": "why-this-matters"
+  },
+  "/troubleshoot/dns-and-domains/wildcard-ssl-certs": {
+    "coolify-未使用泛域名-ssl-证书": "coolify-not-using-wildcard-ssl-certificates",
+    "支持": "support",
+    "检查-ssl-证书有效性": "check-the-ssl-certificate-validity",
+    "核实证书安装": "verify-certificate-installation",
+    "检查-coolify-代理配置": "check-the-coolify-proxy-configuration",
+    "移除旧证书": "remove-old-certificates",
+    "清理浏览器缓存": "clear-your-browser-cache",
+    "核实-dns-质询配置": "verify-dns-challenge-configuration"
+  },
+  "/troubleshoot/docker/expired-github-personal-access-token": {
+    "github-个人访问令牌pat过期": "expired-github-personal-access-token-pat",
+    "错误": "error",
+    "解决方案": "solution"
+  },
+  "/troubleshoot/installation/docker-install-failed": {
+    "docker-安装失败": "docker-installation-failed",
+    "症状": "symptoms",
+    "解决方案": "solution"
+  },
+  "/troubleshoot/installation/install-script-failed": {
+    "coolify-安装脚本失败": "coolify-installation-script-failed",
+    "常见症状": "common-symptoms",
+    "开启详细模式调试": "enable-verbose-mode-for-debugging",
+    "诊断步骤": "diagnostic-steps",
+    "常见问题与解决方案": "common-issues--solutions",
+    "手动核查清单": "manual-verification-checklist",
+    "恢复步骤": "recovery-steps",
+    "获取帮助": "getting-help",
+    "相关文档": "related-documentation",
+    "检查安装日志": "check-installation-logs",
+    "确认-docker-安装": "verify-docker-installation",
+    "检查端口占用情况": "check-port-availability",
+    "检查-docker-容器": "validate-docker-containers",
+    "确认-docker-镜像": "verify-docker-images",
+    "检查-docker-网络": "check-docker-networks",
+    "确认磁盘空间": "verify-disk-space",
+    "需要提供的信息": "information-to-provide"
+  },
+  "/troubleshoot/server/connection-issues": {
+    "连接不稳定": "connection-unstable",
+    "症状": "symptoms",
+    "诊断": "diagnosis",
+    "解决方案": "solution"
+  },
+  "/troubleshoot/server/crash-during-build": {
+    "构建期间服务器无响应或崩溃": "server-unresponsive-or-crashes-during-build",
+    "小结": "summary",
+    "支持": "support",
+    "了解你的部署方式": "understand-your-deployment-method",
+    "排查性能问题": "troubleshoot-performance-issues",
+    "用-github-actions-分流构建": "offload-builds-with-github-actions",
+    "a-预构建-docker-镜像部署": "a-pre-built-docker-image-deployment",
+    "b-源码构建部署": "b-building-from-source-deployment"
+  },
+  "/troubleshoot/server/raspberry-crashes": {
+    "树莓派崩溃": "raspberry-pi-crashes",
+    "解决方案": "solution"
+  },
+  "/troubleshoot/server/two-factor-stopped-working": {
+    "2fa-突然失效": "2fa-stopped-working",
+    "诊断": "diagnosis",
+    "解决方案": "solution"
+  },
+  "/troubleshoot/server/validation-issues": {
+    "服务器验证问题": "server-validation-issues"
+  },
+  "/usage": {
+    "coolify-自托管": "coolify-self-hosted",
+    "两者如何对比": "how-do-they-compare",
+    "哪一种更适合你": "which-one-is-right-for-you"
+  },
+  "/videos": {
+    "视频教程": "videos"
+  }
+}

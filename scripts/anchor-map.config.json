@@ -179,6 +179,26 @@
         "githubDir": "impeccable-mirror-cn/site",
         "ext": ".html"
       }
+    },
+    {
+      "id": "litellm",
+      "dir": "litellm-docs-cn",
+      "origin": "https://docs.litellm.ai",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/litellm",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "sitemap": "https://docs.litellm.ai/sitemap.xml"
+      }
+    },
+    {
+      "id": "coolify",
+      "dir": "coolify-docs-cn",
+      "origin": "https://coolify.io/docs",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/coolify",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "sitemap": "https://coolify.io/docs/sitemap.xml"
+      }
     }
   ]
 }
