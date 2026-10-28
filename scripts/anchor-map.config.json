@@ -199,6 +199,16 @@
       "listFrom": {
         "sitemap": "https://coolify.io/docs/sitemap.xml"
       }
+    },
+    {
+      "id": "hallmark",
+      "dir": "hallmark-docs-cn",
+      "origin": "https://www.usehallmark.com",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/hallmark",
+      "listFrom": {
+        "githubDir": "hallmark-docs-cn/site",
+        "ext": ".html"
+      }
     }
   ]
 }

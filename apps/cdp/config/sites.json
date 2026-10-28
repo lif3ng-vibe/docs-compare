@@ -141,5 +141,12 @@
     "origin": "https://coolify.io",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/coolify",
     "anchorMapUrl": "anchor-maps/coolify.json"
+  },
+  {
+    "id": "hallmark",
+    "name": "Hallmark 官网",
+    "origin": "https://www.usehallmark.com",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/hallmark",
+    "anchorMapUrl": "anchor-maps/hallmark.json"
   }
 ]

@@ -152,6 +152,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/impeccable-mirror',
     anchorMapUrl: 'anchor-maps/impeccable.json',
   },
+  {
+    id: 'hallmark',
+    name: 'Hallmark 官网',
+    origin: 'https://www.usehallmark.com',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/hallmark',
+    anchorMapUrl: 'anchor-maps/hallmark.json',
+  },
 
 ] as const;
 
