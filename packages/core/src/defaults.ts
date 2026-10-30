@@ -159,6 +159,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/hallmark',
     anchorMapUrl: 'anchor-maps/hallmark.json',
   },
+  {
+    id: 'aihero',
+    name: 'AI Hero 官网',
+    origin: 'https://www.aihero.dev',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/aihero',
+    anchorMapUrl: 'anchor-maps/aihero.json',
+  },
 
 ] as const;
 

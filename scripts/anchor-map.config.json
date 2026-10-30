@@ -209,6 +209,15 @@
         "githubDir": "hallmark-docs-cn/site",
         "ext": ".html"
       }
+    },
+    {
+      "id": "aihero",
+      "dir": "aihero-docs-cn",
+      "origin": "https://www.aihero.dev",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/aihero",
+      "listFrom": {
+        "sitemap": "https://www.aihero.dev/sitemap.xml"
+      }
     }
   ]
 }
