@@ -211,8 +211,7 @@
     "预定义应用变量": "predefined-application-variables",
     "docker-compose-变量": "docker-compose-variables",
     "应用更改": "apply-changes",
-    "命名与复制取值": "names-and-copying-values",
-    "示例私有-npm-仓库": "example-private-npm-registry"
+    "命名与复制取值": "names-and-copying-values"
   },
   "/applications/configuration/general": {
     "常规设置": "general-settings",
@@ -606,6 +605,1336 @@
     "获取结构化输出": "request-structured-output",
     "部署多个资源": "deploy-several-resources",
     "安全地处理失败": "handle-failures-safely"
+  },
+  "/cli/command-reference/commands/app/clone": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/create-deploy-key": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/create-dockerfile": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/create-dockerimage": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/create-github": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/create-public": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/deployments-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/deployments-logs": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/destinations-add": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/destinations-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/destinations-remove": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/env-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/env-delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/env-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/env-list": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/env-sync": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/env-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/execute-task": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/logs": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/move": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/previews-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/previews-delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/previews-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/previews-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/previews-logs": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/previews-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/restart": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/rollback-images": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/rollback-run": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/run-storage-backup": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/secret-manager-set": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/start": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/stop": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/storage-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/storage-delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/storage-delete-backup": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/storage-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/storage-run-backup": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/storage-set-backup": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/storage-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/tag-add": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/tag-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/tag-remove": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/task-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/task-delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/task-execute": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/task-executions": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/task-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/task-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/app/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/audit": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/cloud-init/create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/cloud-init/delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/cloud-init/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/cloud-init/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/cloud-init/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/cloud-token/create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/cloud-token/delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/cloud-token/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/cloud-token/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/cloud-token/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/cloud-token/validate": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/completion": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/config": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/context/add": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/context/delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/context/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/context/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/context/set-default": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/context/set-token": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/context/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/context/use": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/context/verify": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/context/version": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/backup-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/backup-delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/backup-delete-execution": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/backup-executions": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/backup-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/backup-trigger": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/backup-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/clone": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/env-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/env-delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/env-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/env-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/env-sync": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/env-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/import-start": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/import-status": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/import-upload": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/logs": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/move": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/restart": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/run-storage-backup": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/start": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/stop": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/storage-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/storage-delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/storage-delete-backup": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/storage-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/storage-run-backup": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/storage-set-backup": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/storage-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/tag-add": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/tag-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/tag-remove": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/database/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/deploy/batch": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/deploy/cancel": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/deploy/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/deploy/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/deploy/name": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/deploy/uuid": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/destination/create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/destination/delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/destination/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/destination/list": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/destination/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/github/branches": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/github/create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/github/delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/github/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/github/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/github/repos": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/github/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/gitlab/create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/gitlab/delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/gitlab/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/gitlab/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/gitlab/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/global-options": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/integration-token": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/mcp/disable": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/mcp/enable": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/notification/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/notification/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/private-key/add": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/private-key/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/private-key/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/private-key/remove": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/private-key/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/project/create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/project/delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/project/environments-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/project/environments-delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/project/environments-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/project/environments-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/project/environments-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/project/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/project/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/project/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/project/update-environment": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/resources": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/s3/create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/s3/delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/s3/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/s3/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/s3/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/s3/validate": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/add": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/cloudflare-tunnel-disable": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/cloudflare-tunnel-enable": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/cloudflare-tunnel-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/cloudflare-tunnel-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/destinations-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/destinations-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/digitalocean-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/digitalocean-images": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/digitalocean-regions": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/digitalocean-sizes": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/digitalocean-ssh-keys": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/docker-cleanup-executions": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/docker-cleanup-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/docker-cleanup-run": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/docker-cleanup-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/domains": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/get": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hetzner-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hetzner-firewalls": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hetzner-images": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hetzner-locations": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hetzner-networks": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hetzner-server-types": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hetzner-ssh-keys": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hostinger-catalog": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hostinger-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hostinger-data-centers": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hostinger-post-install-scripts": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hostinger-ssh-keys": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/hostinger-templates": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/log-drains-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/log-drains-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/proxy-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/proxy-restart": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/proxy-set-config": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/proxy-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/registry-check": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/registry-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/registry-login": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/registry-logout": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/remove": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/sentinel-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/sentinel-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/validate": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/vultr-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/vultr-os": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/vultr-plans": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/vultr-regions": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/server/vultr-ssh-keys": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/application-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/application-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/application-logs": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/application-restart": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/application-start": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/application-stop": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/application-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/clone": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/database-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/database-import-start": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/database-import-status": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/database-import-upload": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/database-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/database-logs": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/database-restart": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/database-start": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/database-stop": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/database-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/env-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/env-delete": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/env-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/env-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/env-sync": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/env-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/execute-task": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/logs": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/move": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/restart": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/run-storage-backup": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/start": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/stop": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/storage-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/storage-delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/storage-delete-backup": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/storage-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/storage-run-backup": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/storage-set-backup": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/storage-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/tag-add": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/tag-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/tag-remove": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/task-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/task-delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/task-execute": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/task-executions": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/task-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/service/task-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/settings/email-get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/settings/email-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/environment-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/environment-delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/environment-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/environment-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/project-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/project-delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/project-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/project-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/server-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/server-delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/server-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/server-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/team-create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/team-delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/team-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/shared-env/team-update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/tag/create": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/tag/delete": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/tag/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/tag/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/teams/current": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/teams/get": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/teams/list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/teams/members-list": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/teams/update": {
+    "用法": "usage",
+    "选项": "options",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/update": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
+  },
+  "/cli/command-reference/commands/version": {
+    "用法": "usage",
+    "查看当前帮助": "get-current-help"
   },
   "/cli/contexts": {
     "管理-cli-上下文": "manage-cli-contexts",
@@ -1341,12 +2670,7 @@
     "重新部署并验证-1": "redeploy-and-verify-1"
   },
   "/core/networking/proxy/traefik/custom-middlewares": {
-    "自定义中间件": "custom-middlewares",
-    "定义可复用的中间件": "define-reusable-middleware",
-    "把中间件挂到资源上": "attach-middleware-to-a-resource",
-    "重定向": "redirects",
-    "故障排查": "troubleshooting",
-    "docker-compose-应用与服务": "docker-compose-applications-and-services"
+    "自定义中间件": "custom-middlewares"
   },
   "/core/networking/proxy/traefik/custom-ssl-certs": {
     "自定义-ssl-证书": "custom-ssl-certificates",
@@ -2468,9 +3792,7 @@
     "日志": "logs"
   },
   "/mcp/capabilities/overview": {
-    "概览": "overview",
-    "从这些工具开始": "start-with-these-tools",
-    "能力页面": "capability-pages"
+    "概览": "overview"
   },
   "/mcp/capabilities/pagination": {
     "分页": "pagination"
@@ -2550,6 +3872,306 @@
   "/screenshots": {
     "coolify-界面截图": "coolify-ui-screenshots"
   },
+  "/services": {
+    "服务": "services",
+    "找到合适的章节": "find-the-right-section",
+    "部署一个服务": "deploy-a-service",
+    "理解一键服务": "understand-one-click-services",
+    "service-资源导航": "service-resource-navigation",
+    "继续了解服务": "continue-with-services"
+  },
+  "/services/9router": {
+    "相关链接": "links"
+  },
+  "/services/activepieces": {
+    "activepieces-是什么": "what-is-activepieces",
+    "可视化演示": "visual-demos"
+  },
+  "/services/actualbudget": {
+    "actual-budget-是什么": "what-is-actual-budget",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/affine": {
+    "affine-是什么": "what-is-affine",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/alexandrie": {
+    "alexandrie-是什么": "what-is-alexandrie",
+    "功能特性": "features",
+    "相关链接": "links"
+  },
+  "/services/all": {
+    "全部服务": "all-services",
+    "ai": "administration",
+    "cms": "ai",
+    "rss": "analytics",
+    "书签": "automation",
+    "健康": "backup",
+    "分析": "bookmarks",
+    "加密货币": "browser",
+    "即时通讯": "business",
+    "商业": "cms",
+    "备份": "communication",
+    "媒体": "crypto",
+    "存储": "database",
+    "安全": "design",
+    "实用工具": "development",
+    "家庭": "documentation",
+    "开发工具": "email",
+    "搜索": "family",
+    "效率": "file-management",
+    "数据库": "file-sharing",
+    "文件共享": "finance",
+    "文件管理": "forum",
+    "文档": "gaming",
+    "智能家居": "health",
+    "沟通协作": "home",
+    "浏览器": "iot",
+    "游戏": "marketing",
+    "物联网": "media",
+    "监控": "messaging",
+    "社交媒体": "monitoring",
+    "网络": "networking",
+    "自动化": "notifications",
+    "营销": "productivity",
+    "论坛": "project-management",
+    "设计": "rss",
+    "运维管理": "search",
+    "通知": "security",
+    "邮件": "social-media",
+    "金融": "storage",
+    "项目管理": "utilities"
+  },
+  "/services/anythingllm": {
+    "anythingllm-是什么": "what-is-anythingllm",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/appflowy": {
+    "appflowy-是什么": "what-is-appflowy",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/apprise-api": {
+    "apprise-api-是什么": "what-is-apprise-api",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/appsmith": {
+    "appsmith-是什么": "what-is-appsmith",
+    "为什么选择-appsmith": "why-appsmith",
+    "学习资源": "learning-resources",
+    "需要帮助": "need-help",
+    "相关链接": "links"
+  },
+  "/services/appwrite": {
+    "appwrite-是什么": "what-is-appwrite",
+    "相关链接": "links"
+  },
+  "/services/argilla": {
+    "argilla-是什么": "what-is-argilla",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/audiobookshelf": {
+    "audiobookshelf-是什么": "what-is-audiobookshelf",
+    "相关链接": "links"
+  },
+  "/services/authentik": {
+    "authentik-是什么": "what-is-authentik",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/autobase": {
+    "autobase-是什么": "what-is-autobase",
+    "演示": "demo",
+    "相关链接": "links"
+  },
+  "/services/azimutt": {
+    "相关链接": "links"
+  },
+  "/services/babybuddy": {
+    "babybuddy-是什么": "what-is-babybuddy",
+    "截图": "screenshots",
+    "演示": "demo",
+    "相关链接": "links"
+  },
+  "/services/bento-pdf": {
+    "bentopdf-是什么": "what-is-bentopdf",
+    "相关链接": "links"
+  },
+  "/services/beszel": {
+    "beszel-是什么": "what-is-beszel",
+    "设置步骤": "setup",
+    "相关链接": "links",
+    "1-部署-beszel": "1-deploy-beszel",
+    "2-在-beszel-仪表盘上添加系统": "2-add-system-on-beszel-dashboard",
+    "3-在-coolify-中设置-key-和-token-环境变量": "3-set-key-and-token-environment-variables-on-coolify",
+    "4-重启-beszel": "4-restart-beszel"
+  },
+  "/services/bitcoin-core": {
+    "bitcoin-core-是什么": "what-is-bitcoin-core",
+    "公共节点与私有用途": "public-node-vs-private-use",
+    "相关链接": "links",
+    "如何运行公共节点": "how-to-run-a-public-node",
+    "注意事项": "considerations"
+  },
+  "/services/bluesky-pds": {
+    "bluesky-pds-是什么": "what-is-a-bluesky-pds",
+    "为尚未配置域名的情况设置-https-域名": "setting-a-domain-with-https-if-already-not-set",
+    "在你的-pds-中创建账户": "creating-an-account-in-your-pds",
+    "配置邮件": "setting-up-mail",
+    "相关链接": "links"
+  },
+  "/services/booklore": {
+    "booklore-是什么": "what-is-booklore"
+  },
+  "/services/bookstack": {
+    "bookstack-是什么": "what-is-bookstack",
+    "相关链接": "links"
+  },
+  "/services/browserless": {
+    "browserless-是什么": "what-is-browserless",
+    "使用场景示例": "example-use-cases",
+    "主要特性": "key-features",
+    "图片": "images",
+    "相关链接": "links"
+  },
+  "/services/budge": {
+    "budge-是什么": "what-is-budge",
+    "当前功能": "current-features",
+    "截图": "screenshots",
+    "支持": "support",
+    "相关链接": "links"
+  },
+  "/services/budibase": {
+    "budibase-是什么": "what-is-budibase",
+    "相关链接": "links"
+  },
+  "/services/bugsink": {
+    "bugsink-是什么": "what-is-bugsink",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/bulwark": {
+    "bulwark-是什么": "what-is-bulwark",
+    "前提条件": "prerequisites",
+    "配置-bulwark": "configuring-bulwark",
+    "故障排除": "troubleshooting",
+    "相关链接": "links",
+    "jmap-服务器-url": "jmap-server-url",
+    "会话密钥": "session-secret",
+    "访问网页邮箱": "accessing-the-webmail",
+    "stalwart-专属功能": "stalwart-specific-features"
+  },
+  "/services/buzz": {
+    "buzz-是什么": "what-is-buzz",
+    "连接-buzz-客户端": "connect-a-buzz-client",
+    "相关链接": "links"
+  },
+  "/services/calcom": {
+    "calcom-是什么": "what-is-calcom",
+    "在-x86amd64上部署": "deploying-on-x86-amd64",
+    "相关链接": "links"
+  },
+  "/services/calibre-web": {
+    "calibre-web-是什么": "what-is-calibre-web",
+    "相关链接": "links"
+  },
+  "/services/calibre-web-automated-with-downloader": {
+    "calibre-web-automated-with-downloader-是什么": "what-is-calibre-web-automated-with-downloader",
+    "相关链接": "links",
+    "相关链接-1": "links-1"
+  },
+  "/services/cap": {
+    "cap-是什么": "what-is-cap",
+    "如何自托管": "how-to-self-host",
+    "邮箱登录链接": "email-login-links",
+    "如何解除限制组织席位与录制数量": "how-to-unlock-limits-organization-seats-and-recordings",
+    "截图": "screenshots",
+    "相关链接": "links",
+    "方案一远程-s3-兼容存储aws-s3cloudflare-r2-等": "option-1-remote-s3-compatible-storage-aws-s3-cloudflare-r2-etc",
+    "方案二本地-minio-存储": "option-2-local-minio-storage"
+  },
+  "/services/cap-captcha": {
+    "cap-是什么": "what-is-cap",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/castopod": {
+    "castopod-是什么": "what-is-castopod",
+    "相关链接": "links"
+  },
+  "/services/celld": {
+    "相关链接": "links"
+  },
+  "/services/changedetection": {
+    "change-detection-是什么": "what-is-change-detection",
+    "使用场景示例": "example-use-cases",
+    "核心特性": "key-features",
+    "相关链接": "links"
+  },
+  "/services/chaskiq": {
+    "chaskiq-是什么": "what-is-chaskiq",
+    "相关链接": "links"
+  },
+  "/services/chatwoot": {
+    "chatwoot-是什么": "what-is-chatwoot",
+    "相关链接": "links"
+  },
+  "/services/checkmate": {
+    "checkmate-是什么": "what-is-checkmate",
+    "相关链接": "links"
+  },
+  "/services/chibisafe": {
+    "chibisafe-是什么": "what-is-chibisafe",
+    "相关链接": "links"
+  },
+  "/services/chroma": {
+    "chroma-是什么": "what-is-chroma",
+    "相关链接": "links"
+  },
+  "/services/classicpress": {
+    "classicpress-是什么": "what-is-classicpress",
+    "部署变体": "deployment-variants"
+  },
+  "/services/cloudbeaver": {
+    "cloudbeaver-是什么": "what-is-cloudbeaver",
+    "相关链接": "links"
+  },
+  "/services/cloudflare-ddns": {
+    "cloudflare-ddns-是什么": "what-is-cloudflare-ddns",
+    "相关链接": "links"
+  },
+  "/services/cloudflared": {
+    "cloudflared-是什么": "what-is-cloudflared",
+    "相关链接": "links"
+  },
+  "/services/cloudreve": {
+    "cloudreve-是什么": "what-is-cloudreve",
+    "相关链接": "links"
+  },
+  "/services/cockpit": {
+    "cockpit-是什么": "what-is-cockpit",
+    "相关链接": "links"
+  },
+  "/services/code-server": {
+    "code-server-是什么": "what-is-code-server",
+    "亮点": "highlights",
+    "环境要求": "requirements",
+    "有疑问": "questions",
+    "相关链接": "links"
+  },
+  "/services/coder": {
+    "相关链接": "links"
+  },
+  "/services/codimd": {
+    "codimd-是什么": "what-is-codimd",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
   "/services/configuration/docker-compose": {
     "源定义与可部署-compose": "source-and-deployable-compose",
     "编辑用户自定义-service": "edit-a-user-defined-service",
@@ -2603,6 +4225,871 @@
     "备份-service-数据": "back-up-service-data",
     "重要边界": "important-boundaries"
   },
+  "/services/convertx": {
+    "convertx-是什么": "what-is-convertx",
+    "相关链接": "links"
+  },
+  "/services/convex": {
+    "convex-是什么": "what-is-convex",
+    "如何生成管理密钥": "how-to-generate-an-admin-key",
+    "相关链接": "links"
+  },
+  "/services/cryptgeon": {
+    "cryptgeon-是什么": "what-is-cryptgeon",
+    "相关链接": "links"
+  },
+  "/services/cyberchef": {
+    "cyberchef-是什么": "what-is-cyberchef",
+    "相关链接": "links"
+  },
+  "/services/dashboard": {
+    "dashboard-是什么": "what-is-dashboard",
+    "特性": "features",
+    "相关链接": "links"
+  },
+  "/services/dashy": {
+    "dashy-是什么": "what-is-dashy",
+    "相关链接": "links"
+  },
+  "/services/databasus": {
+    "databasus-是什么": "what-is-databasus",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/denokv": {
+    "deno-kv-是什么": "what-is-deno-kv",
+    "相关链接": "links"
+  },
+  "/services/dify": {
+    "相关链接": "links"
+  },
+  "/services/directus": {
+    "directus-是什么": "what-is-directus",
+    "部署变体": "deployment-variants",
+    "社区支持": "community-help",
+    "相关链接": "links",
+    "directus默认": "directus-default",
+    "directus--postgresql": "directus-with-postgresql"
+  },
+  "/services/diun": {
+    "diun-是什么": "what-is-diun",
+    "相关链接": "links"
+  },
+  "/services/docker-registry": {
+    "docker-registry-是什么": "what-is-docker-registry",
+    "相关链接": "links"
+  },
+  "/services/docling": {
+    "相关链接": "links"
+  },
+  "/services/docmost": {
+    "docmost-是什么": "what-is-docmost",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/documenso": {
+    "documenso-是什么": "what-is-documenso",
+    "相关链接": "links"
+  },
+  "/services/docuseal": {
+    "docuseal-是什么": "what-is-docuseal",
+    "部署变体": "deployment-variants",
+    "截图": "screenshots",
+    "相关链接": "links",
+    "docuseal默认": "docuseal-default",
+    "docuseal--postgresql": "docuseal-with-postgresql"
+  },
+  "/services/dokuwiki": {
+    "dokuwiki-是什么": "what-is-dokuwiki",
+    "为什么选-dokuwiki": "why-dokuwiki",
+    "使用场景": "use-cases",
+    "相关链接": "links"
+  },
+  "/services/dolibarr": {
+    "dolibarr-是什么": "what-is-dolibarr",
+    "相关链接": "links"
+  },
+  "/services/dozzle": {
+    "dozzle-是什么": "what-is-dozzle",
+    "部署变体": "deployment-variants",
+    "相关链接": "links",
+    "dozzle默认": "dozzle-default",
+    "带身份验证的-dozzle": "dozzle-with-authentication"
+  },
+  "/services/drizzle-gateway": {
+    "drizzle-gateway-是什么": "what-is-drizzle-gateway",
+    "相关链接": "links"
+  },
+  "/services/drupal": {
+    "drupal-是什么": "what-is-drupal",
+    "部署变体": "variants",
+    "相关链接": "links"
+  },
+  "/services/duplicati": {
+    "duplicati-是什么": "what-is-duplicati",
+    "相关链接": "links"
+  },
+  "/services/easyappointments": {
+    "easyappointments-是什么": "what-is-easyappointments",
+    "相关链接": "links"
+  },
+  "/services/edgedb": {
+    "相关链接": "links"
+  },
+  "/services/elasticsearch": {
+    "elasticsearch-是什么": "what-is-elasticsearch",
+    "如何在-coolify-上部署-elasticsearch": "how-to-deploy-elasticsearch-on-coolify",
+    "elasticsearch-独立部署": "elasticsearch-as-a-standalone-service",
+    "部署-elasticsearch-with-kibana": "deploy-elasticsearch-with-kibana",
+    "相关链接": "useful-links",
+    "elasticsearch-with-kibana-注意事项": "notes-for-elasticsearch-with-kibana"
+  },
+  "/services/electricsql": {
+    "electricsql-是什么": "what-is-electricsql",
+    "部署注意事项": "notes-on-deployment",
+    "环境变量": "environment-variables",
+    "相关链接": "links"
+  },
+  "/services/emby": {
+    "emby-是什么": "what-is-emby",
+    "系统要求": "requirements",
+    "社区": "community",
+    "最低配置无需转码": "minimum-requirements--no-transcoding",
+    "推荐配置转码高清内容": "recommended-configuration--transcoding-hd-content"
+  },
+  "/services/embystat": {
+    "emby-stat-是什么": "what-is-emby-stat",
+    "相关链接": "links"
+  },
+  "/services/emqx-enterprise": {
+    "emqx-enterprise-是什么": "what-is-emqx-enterprise",
+    "相关链接": "links"
+  },
+  "/services/engram": {
+    "engram-是什么": "what-is-engram",
+    "相关链接": "links"
+  },
+  "/services/ente-photos": {
+    "ente-是什么": "what-is-ente",
+    "配置对象存储": "configuring-object-store",
+    "环境变量": "environment-variables",
+    "相关链接": "links",
+    "1-远程-s3-存储桶": "1-remote-s3-bucket",
+    "2-coolify-的-minio-存储桶": "2-coolify-minio-bucket"
+  },
+  "/services/esphome": {
+    "esphome-是什么": "what-is-esphome",
+    "相关链接": "links"
+  },
+  "/services/espocrm": {
+    "espocrm-是什么": "what-is-espocrm",
+    "为什么选择-espocrm": "why-espocrm",
+    "登录凭据": "credentials",
+    "相关链接": "links"
+  },
+  "/services/evolution-api": {
+    "evolution-api-是什么": "what-is-evolution-api",
+    "需要配置什么才能让-coolify-与-evolution-api-协同工作": "what-i-need-to-configure-to-make-coolify-work-with-evolution-api",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/excalidraw": {
+    "excalidraw-是什么": "what-is-excalidraw",
+    "相关链接": "links"
+  },
+  "/services/executor": {
+    "相关链接": "links"
+  },
+  "/services/faraday": {
+    "faraday-是什么": "what-is-faraday",
+    "相关链接": "links"
+  },
+  "/services/fider": {
+    "fider-是什么": "what-is-fider",
+    "如何设置": "how-to-setup",
+    "相关链接": "links"
+  },
+  "/services/filebrowser": {
+    "filebrowser-是什么": "what-is-filebrowser",
+    "设置": "setup",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/fileflows": {
+    "fileflows-是什么": "what-is-fileflows",
+    "安装": "installation",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/firefly": {
+    "firefly-iii-是什么": "what-is-firefly-iii",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/firefox": {
+    "firefox-是什么": "what-is-firefox",
+    "相关链接": "links"
+  },
+  "/services/fizzy": {
+    "fizzy-是什么": "what-is-fizzy",
+    "相关链接": "links"
+  },
+  "/services/flipt": {
+    "flipt-是什么": "what-is-flipt",
+    "相关链接": "links"
+  },
+  "/services/flowise": {
+    "flowise-是什么": "what-is-flowise",
+    "部署变体": "deployment-variants",
+    "相关链接": "links",
+    "flowise默认": "flowise-default",
+    "flowise-搭配数据库": "flowise-with-databases"
+  },
+  "/services/forgejo": {
+    "forgejo-是什么": "what-is-forgejo",
+    "部署变体": "deployment-variants",
+    "ssh-访问": "ssh-access",
+    "演示": "demo",
+    "相关链接": "links",
+    "forgejo默认": "forgejo-default",
+    "forgejo-搭配-postgresql": "forgejo-with-postgresql",
+    "forgejo-搭配-mysql": "forgejo-with-mysql",
+    "forgejo-搭配-mariadb": "forgejo-with-mariadb"
+  },
+  "/services/formbricks": {
+    "formbricks-是什么": "what-is-formbricks",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/foundryvtt": {
+    "foundryvtt-是什么": "what-is-foundryvtt",
+    "相关链接": "links"
+  },
+  "/services/freescout": {
+    "freescout-是什么": "what-is-freescout",
+    "相关链接": "links"
+  },
+  "/services/freshrss": {
+    "freshrss-是什么": "what-is-freshrss",
+    "部署变体": "deployment-variants",
+    "相关链接": "links",
+    "freshrss默认": "freshrss-default",
+    "freshrss-搭配-postgresql": "freshrss-with-postgresql",
+    "freshrss-搭配-mysql": "freshrss-with-mysql",
+    "freshrss-搭配-mariadb": "freshrss-with-mariadb"
+  },
+  "/services/garage": {
+    "garage-是什么": "what-is-garage",
+    "相关链接": "links"
+  },
+  "/services/getoutline": {
+    "outline-是什么": "what-is-outline",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/ghost": {
+    "ghost-是什么": "what-is-ghost",
+    "相关链接": "links"
+  },
+  "/services/gitea": {
+    "gitea-是什么": "what-is-gitea",
+    "部署变体": "deployment-variants",
+    "相关链接": "links"
+  },
+  "/services/github-runner": {
+    "github-runner-是什么": "what-is-github-runner",
+    "相关链接": "links"
+  },
+  "/services/gitlab": {
+    "gitlab-是什么": "what-is-gitlab",
+    "演示": "demo",
+    "相关链接": "links"
+  },
+  "/services/glance": {
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/glances": {
+    "glances-是什么": "what-is-glances",
+    "相关链接": "links"
+  },
+  "/services/glitchtip": {
+    "glitchtip-是什么": "what-is-glitchtip",
+    "相关链接": "links"
+  },
+  "/services/glpi": {
+    "glpi-是什么": "what-is-glpi",
+    "相关链接": "links",
+    "初始设置": "initial-setup"
+  },
+  "/services/goatcounter": {
+    "goatcounter-是什么": "what-is-goatcounter",
+    "相关链接": "links"
+  },
+  "/services/gotenberg": {
+    "gotenberg-是什么": "what-is-gotenberg",
+    "相关链接": "links"
+  },
+  "/services/gotify": {
+    "gotify-是什么": "what-is-gotify",
+    "功能特性": "features",
+    "使用场景": "use-cases",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/gowa": {
+    "gowa-是什么": "what-is-gowa",
+    "相关链接": "links"
+  },
+  "/services/grafana": {
+    "grafana-是什么": "what-is-grafana",
+    "部署变体": "deployment-variants",
+    "功能特性": "features",
+    "相关链接": "links",
+    "grafana默认": "grafana-default"
+  },
+  "/services/gramps-web": {
+    "gramps-web-是什么": "what-is-gramps-web",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/grimmory": {
+    "grimmory-是什么": "what-is-grimmory",
+    "相关链接": "links"
+  },
+  "/services/grist": {
+    "grist-是什么": "what-is-grist",
+    "相关链接": "links"
+  },
+  "/services/grocy": {
+    "grocy-是什么": "what-is-grocy",
+    "相关链接": "links"
+  },
+  "/services/hatchet": {
+    "hatchet-是什么": "what-is-hatchet",
+    "相关链接": "links"
+  },
+  "/services/healthchecks": {
+    "healthchecks-是什么": "what-is-healthchecks",
+    "创建第一个账户": "create-the-first-account",
+    "截图": "screenshot",
+    "相关链接": "links"
+  },
+  "/services/hermes-agent": {
+    "hermes-agent-是什么": "what-is-hermes-agent",
+    "在-coolify-上部署": "deploy-on-coolify",
+    "部署变体": "deployment-variants",
+    "环境变量": "environment-variables",
+    "部署后要做什么": "what-to-do-after-deploying",
+    "插件": "plugins",
+    "持久记忆可选": "persistent-memory-optional",
+    "故障排查": "troubleshooting",
+    "关键文件容器内": "key-files-inside-the-container",
+    "相关链接": "links",
+    "hermes-agentwith-webui": "hermes-agent-with-webui",
+    "hermes-agentdashboard": "hermes-agent-dashboard",
+    "llm-提供商": "llm-providers",
+    "网络搜索可选": "web-search-optional",
+    "代理行为": "agent-behavior",
+    "webui-变体额外变量": "webui-variant---additional-variables",
+    "dashboard-变体额外变量": "dashboard-variant---additional-variables",
+    "第-1-步---打开-web-界面": "step-1---open-the-web-interface",
+    "第-2-步---运行设置向导": "step-2---run-the-setup-wizard",
+    "第-3-步---运行-doctor-检查": "step-3---run-the-doctor-check",
+    "第-4-步---启用-firecrawl-网络搜索可选": "step-4---enable-firecrawl-web-search-optional",
+    "第-5-步---接入消息平台可选": "step-5---connect-a-messaging-platform-optional"
+  },
+  "/services/heyform": {
+    "heyform-是什么": "what-is-heyform",
+    "相关链接": "links"
+  },
+  "/services/hoarder": {
+    "hoarder-是什么": "what-is-hoarder",
+    "相关链接": "links"
+  },
+  "/services/homarr": {
+    "homarr-是什么": "what-is-homarr",
+    "相关链接": "links"
+  },
+  "/services/home-assistant": {
+    "home-assistant-是什么": "what-is-home-assistant",
+    "功能特性": "features",
+    "相关链接": "links"
+  },
+  "/services/homebox": {
+    "homebox-是什么": "what-is-homebox",
+    "配置": "configuration",
+    "相关链接": "links"
+  },
+  "/services/homepage": {
+    "homepage-是什么": "what-is-homepage",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/honcho": {
+    "相关链接": "links"
+  },
+  "/services/hoppscotch": {
+    "hoppscotch-是什么": "what-is-hoppscotch",
+    "相关链接": "links"
+  },
+  "/services/how-services-work": {
+    "服务的工作原理": "how-services-work",
+    "从创建到服务运行": "from-creation-to-a-running-service",
+    "源定义与可部署-compose": "raw-and-deployable-compose",
+    "组件从属于一个堆栈": "components-belong-to-one-stack",
+    "网络": "networking",
+    "配置变更与重新部署": "configuration-changes-and-redeployment",
+    "持久化数据": "persistent-data",
+    "控制平面与-service-服务器": "control-plane-and-service-server",
+    "继续了解": "continue-learning"
+  },
+  "/services/huly": {
+    "相关链接": "links"
+  },
+  "/services/imgcompress": {
+    "imgcompress-是什么": "what-is-imgcompress",
+    "相关链接": "links"
+  },
+  "/services/immich": {
+    "immich-是什么": "what-is-immich",
+    "相关链接": "links"
+  },
+  "/services/infisical": {
+    "infisical-是什么": "what-is-infisical",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/influxdb": {
+    "influxdb-是什么": "what-is-influxdb",
+    "功能特性": "features",
+    "相关链接": "links"
+  },
+  "/services/inngest": {
+    "inngest-是什么": "what-is-inngest",
+    "相关链接": "links"
+  },
+  "/services/invoice-ninja": {
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/it-tools": {
+    "it-tools-是什么": "what-is-it-tools",
+    "相关链接": "links"
+  },
+  "/services/jean": {
+    "相关链接": "links"
+  },
+  "/services/jellyfin": {
+    "jellyfin-是什么": "what-is-jellyfin",
+    "相关链接": "links"
+  },
+  "/services/jenkins": {
+    "jenkins-是什么": "what-is-jenkins",
+    "相关链接": "links"
+  },
+  "/services/jitsi": {
+    "相关链接": "links"
+  },
+  "/services/joomla": {
+    "joomla-是什么": "what-is-joomla",
+    "变体": "variants",
+    "相关链接": "links"
+  },
+  "/services/joplin": {
+    "joplin-是什么": "what-is-joplin",
+    "相关链接": "links"
+  },
+  "/services/jupyter-notebook-python": {
+    "jupyter-notebook-python-是什么": "what-is-jupyter-notebook-python",
+    "相关链接": "links"
+  },
+  "/services/karakeep": {
+    "karakeep-是什么": "what-is-karakeep",
+    "相关链接": "links"
+  },
+  "/services/keycloak": {
+    "keycloak-是什么": "what-is-keycloak",
+    "部署变体": "deployment-variants",
+    "相关链接": "links",
+    "keycloak默认": "keycloak-default"
+  },
+  "/services/kimai": {
+    "kimai-是什么": "what-is-kimai",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/kuzzle": {
+    "kuzzle-是什么": "what-is-kuzzle",
+    "功能特性": "features",
+    "相关链接": "links"
+  },
+  "/services/labelstudio": {
+    "label-studio-是什么": "what-is-label-studio",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/langflow": {
+    "langflow-是什么": "what-is-langflow",
+    "凭据": "credentials",
+    "相关链接": "links"
+  },
+  "/services/langfuse": {
+    "langfuse-是什么": "what-is-langfuse",
+    "核心功能": "key-features",
+    "快速开始": "get-started",
+    "可观测性与链路追踪": "observability-and-tracing",
+    "提示词管理": "prompt-management",
+    "评估与分析": "evaluation-and-analytics"
+  },
+  "/services/leantime": {
+    "leantime-是什么": "what-is-leantime",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/librechat": {
+    "librechat-是什么": "what-is-librechat",
+    "相关链接": "links"
+  },
+  "/services/libreoffice": {
+    "libreoffice-是什么": "what-is-libreoffice",
+    "相关链接": "links"
+  },
+  "/services/librespeed": {
+    "librespeed-是什么": "what-is-librespeed",
+    "相关链接": "links"
+  },
+  "/services/libretranslate": {
+    "libretranslate-是什么": "what-is-libretranslate",
+    "相关链接": "links"
+  },
+  "/services/lidarr": {
+    "lidarr-是什么": "what-is-lidarr",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/limesurvey": {
+    "limesurvey-是什么": "what-is-limesurvey",
+    "相关链接": "links"
+  },
+  "/services/linkding": {
+    "linkding-是什么": "what-is-linkding",
+    "linkding-的不同版本": "different-versions-of-linkding",
+    "相关链接": "links"
+  },
+  "/services/linkwarden": {
+    "相关链接": "links"
+  },
+  "/services/listmonk": {
+    "listmonk-是什么": "what-is-listmonk",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/litellm": {
+    "litellm-是什么": "what-is-litellm",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/litequeen": {
+    "litequeen-是什么": "what-is-litequeen"
+  },
+  "/services/lobe-chat": {
+    "lobechat-是什么": "what-is-lobechat",
+    "功能特性": "features",
+    "相关链接": "links"
+  },
+  "/services/logto": {
+    "logto-是什么": "what-is-logto",
+    "相关链接": "links"
+  },
+  "/services/lowcoder": {
+    "lowcoder-是什么": "what-is-lowcoder",
+    "相关链接": "links"
+  },
+  "/services/macos": {
+    "相关链接": "links"
+  },
+  "/services/mage-ai": {
+    "mage-ai-是什么": "what-is-mage-ai",
+    "默认凭据": "default-credentials",
+    "旧款-cpu-的问题": "issue-with-older-cpus",
+    "相关链接": "links"
+  },
+  "/services/mailpit": {
+    "mailpit-是什么": "what-is-mailpit",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/marimo": {
+    "marimo-是什么": "what-is-marimo",
+    "相关链接": "links"
+  },
+  "/services/martin": {
+    "martin-是什么": "what-is-martin",
+    "相关链接": "links"
+  },
+  "/services/matrix": {
+    "matrix-是什么": "what-is-matrix",
+    "synapse-是什么": "what-is-synapse",
+    "部署变体": "deployment-variants",
+    "安装步骤": "installation-steps",
+    "相关链接": "links",
+    "使用-sqlite-的-synapse": "synapse-with-sqlite",
+    "使用-postgresql-的-synapse推荐": "synapse-with-postgresql-recommended",
+    "matrix-域名设置重要": "matrix-domain-setup-important",
+    "推荐设置": "recommended-setup",
+    "coolify-配置": "coolify-configuration",
+    "委派必需": "delegation-required",
+    "域名": "domains",
+    "环境变量": "environment-variables"
+  },
+  "/services/mattermost": {
+    "mattermost-是什么": "what-is-mattermost",
+    "相关链接": "links"
+  },
+  "/services/mautic": {
+    "mautic-是什么": "what-is-mautic",
+    "相关链接": "links"
+  },
+  "/services/maybe": {
+    "maybe-是什么": "what-is-maybe",
+    "相关链接": "links"
+  },
+  "/services/mealie": {
+    "mealie-是什么": "what-is-mealie",
+    "相关链接": "links"
+  },
+  "/services/mediawiki": {
+    "mediawiki-是什么": "what-is-mediawiki",
+    "安装步骤": "installation-steps",
+    "相关链接": "links"
+  },
+  "/services/meilisearch": {
+    "meilisearch-是什么": "what-is-meilisearch",
+    "截图": "screenshot",
+    "-功能特性": "-features",
+    "相关链接": "links"
+  },
+  "/services/memos": {
+    "memos-是什么": "what-is-memos",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/metabase": {
+    "metabase-是什么": "what-is-metabase",
+    "功能特性": "features",
+    "相关链接": "links"
+  },
+  "/services/metamcp": {
+    "metamcp-是什么": "what-is-metamcp",
+    "相关链接": "links"
+  },
+  "/services/metube": {
+    "metube-是什么": "what-is-metube",
+    "相关链接": "links"
+  },
+  "/services/mindsdb": {
+    "mindsdb-是什么": "what-is-mindsdb",
+    "相关链接": "links"
+  },
+  "/services/minecraft": {
+    "minecraft-是什么": "what-is-minecraft",
+    "相关链接": "links"
+  },
+  "/services/miniflux": {
+    "miniflux-是什么": "what-is-miniflux",
+    "相关链接": "links"
+  },
+  "/services/minio": {
+    "minio-社区版": "minio-community-edition",
+    "minio-是什么": "what-is-minio",
+    "相关链接": "links",
+    "常见问题": "faq",
+    "登录凭据无效": "invalid-login-credentials"
+  },
+  "/services/minio-community-edition": {
+    "minio-社区版": "minio-community-edition",
+    "minio-是什么": "what-is-minio",
+    "相关链接": "links",
+    "常见问题": "faq",
+    "登录凭据无效": "invalid-login-credentials"
+  },
+  "/services/mixpost": {
+    "mixpost-是什么": "what-is-mixpost",
+    "相关链接": "links"
+  },
+  "/services/moodle": {
+    "moodle-是什么": "what-is-moodle",
+    "相关链接": "links"
+  },
+  "/services/mosquitto": {
+    "mosquitto-是什么": "what-is-mosquitto",
+    "相关链接": "links"
+  },
+  "/services/n8n": {
+    "n8n-是什么": "what-is-n8n",
+    "部署变体": "deployment-variants",
+    "截图": "screenshots",
+    "相关链接": "links",
+    "n8n默认": "n8n-default",
+    "使用-postgresql-的-n8n": "n8n-with-postgresql",
+    "使用-postgresql-和-worker-的-n8n": "n8n-with-postgresql-and-worker",
+    "使用自定义依赖扩展-n8n": "extending-n8n-with-custom-dependencies",
+    "dockerfile-示例": "example-dockerfile"
+  },
+  "/services/navidrome": {
+    "navidrome-是什么": "what-is-navidrome",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/neon-ws-proxy": {
+    "neon-ws-proxy-是什么": "what-is-neon-ws-proxy",
+    "相关链接": "links"
+  },
+  "/services/netbird-client": {
+    "netbird-client-是什么": "what-is-netbird-client",
+    "相关链接": "links"
+  },
+  "/services/newapi": {
+    "newapi-是什么": "what-is-newapi",
+    "相关链接": "links"
+  },
+  "/services/newt-pangolin": {
+    "newt-是什么": "what-is-newt",
+    "环境变量": "env-variables",
+    "相关链接": "links"
+  },
+  "/services/next-image-transformation": {
+    "next-image-transformation-是什么": "what-is-next-image-transformation",
+    "相关链接": "links"
+  },
+  "/services/nextcloud": {
+    "nextcloud-是什么": "what-is-nextcloud",
+    "部署变体": "deployment-variants",
+    "截图": "screenshots",
+    "相关链接": "links",
+    "nextcloud默认": "nextcloud-default",
+    "使用-postgresql-的-nextcloud": "nextcloud-with-postgresql",
+    "使用-mysql-的-nextcloud": "nextcloud-with-mysql",
+    "使用-mariadb-的-nextcloud": "nextcloud-with-mariadb"
+  },
+  "/services/nexus": {
+    "sonatype-nexus-是什么": "what-is-sonatype-nexus",
+    "可用版本": "versions-available",
+    "安装设置": "setup",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/nitropage": {
+    "nitropage-是什么": "what-is-nitropage",
+    "部署变体": "deployment-variants",
+    "功能特性": "features",
+    "视频": "video",
+    "相关链接": "links",
+    "nitropage默认": "nitropage-default",
+    "使用-postgresql-的-nitropage": "nitropage-with-postgresql"
+  },
+  "/services/nocobase": {
+    "nocobase-是什么": "what-is-nocobase",
+    "功能特性": "features",
+    "相关链接": "links"
+  },
+  "/services/nocodb": {
+    "nocodb-是什么": "what-is-nocodb",
+    "界面截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/nodebb": {
+    "nodebb-是什么": "what-is-nodebb",
+    "相关链接": "links"
+  },
+  "/services/ntfy": {
+    "ntfy-是什么": "what-is-ntfy",
+    "相关链接": "links"
+  },
+  "/services/observium": {
+    "observium-是什么": "what-is-observium",
+    "界面截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/obsidian": {
+    "obsidian-是什么": "what-is-obsidian",
+    "系统要求": "system-requirements",
+    "部署-obsidian": "deploying-obsidian",
+    "首次设置": "first-time-setup",
+    "安全须知": "security-notes",
+    "查看登录凭据": "accessing-your-credentials",
+    "更新-obsidian": "updating-obsidian",
+    "相关链接": "links"
+  },
+  "/services/obsidian-livesync": {
+    "obsidian-livesync-是什么": "what-is-obsidian-livesync",
+    "工作原理": "how-it-works",
+    "配置": "configuration",
+    "环境变量": "environment-variables",
+    "相关链接": "links"
+  },
+  "/services/odoo": {
+    "odoo-是什么": "what-is-odoo",
+    "界面截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/ollama": {
+    "ollama-是什么": "what-is-ollama",
+    "界面截图": "screenshots",
+    "使用-nvidia-gpu-运行-ollama": "run-ollama-with-an-nvidia-gpu",
+    "相关链接": "links"
+  },
+  "/services/once-campfire": {
+    "once-campfire-是什么": "what-is-once-campfire",
+    "相关链接": "links",
+    "配置": "configuration",
+    "必需的环境变量": "required-environment-variables",
+    "可选的环境变量": "optional-environment-variables"
+  },
+  "/services/onedev": {
+    "onedev-是什么": "what-is-onedev",
+    "相关链接": "links"
+  },
+  "/services/onetimesecret": {
+    "onetime-secret-是什么": "what-is-onetime-secret",
+    "相关链接": "links"
+  },
+  "/services/open-archiver": {
+    "open-archiver-是什么": "what-is-open-archiver",
+    "相关链接": "links"
+  },
+  "/services/open-webui": {
+    "open-webui-是什么": "what-is-open-webui",
+    "相关链接": "links"
+  },
+  "/services/openblocks": {
+    "openblocks-是什么": "what-is-openblocks",
+    "界面截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/openclaw": {
+    "openclaw-是什么": "what-is-openclaw",
+    "身份验证": "authentication",
+    "ai-供应商": "ai-providers",
+    "浏览器": "browser",
+    "相关链接": "links",
+    "基于订阅的身份验证": "subscription-based-authentication"
+  },
+  "/services/openobserve": {
+    "openobserve-是什么": "what-is-openobserve",
+    "coolify-部署": "coolify-deployment",
+    "默认凭据": "default-credentials",
+    "相关链接": "links"
+  },
+  "/services/openpanel": {
+    "openpanel-是什么": "what-is-openpanel",
+    "相关链接": "links"
+  },
+  "/services/openwa": {
+    "部署变体": "variants",
+    "相关链接": "links"
+  },
   "/services/operations/danger-zone": {
     "删除-service": "delete-a-service",
     "删除之前": "before-deletion",
@@ -2649,6 +5136,428 @@
     "安全回滚": "roll-back-safely",
     "相关指南": "related-guides",
     "有计划地更改版本": "change-the-version-deliberately"
+  },
+  "/services/opnform": {
+    "opnform-是什么": "what-is-opnform",
+    "功能特性": "features",
+    "相关链接": "links"
+  },
+  "/services/orangehrm": {
+    "orangehrm-是什么": "what-is-orangehrm",
+    "相关链接": "links"
+  },
+  "/services/organizr": {
+    "organizr-是什么": "what-is-organizr",
+    "相关链接": "links"
+  },
+  "/services/osticket": {
+    "osticket-是什么": "what-is-osticket",
+    "相关链接": "links"
+  },
+  "/services/overseerr": {
+    "overseerr-是什么": "what-is-overseerr",
+    "界面截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/overview": {
+    "一键服务目录": "one-click-service-catalog"
+  },
+  "/services/owncloud": {
+    "owncloud-是什么": "what-is-owncloud",
+    "相关链接": "links"
+  },
+  "/services/pairdrop": {
+    "pairdrop-是什么": "what-is-pairdrop",
+    "相关链接": "links"
+  },
+  "/services/palworld": {
+    "palworld-是什么": "what-is-palworld",
+    "功能特性": "features",
+    "相关链接": "links"
+  },
+  "/services/paperless": {
+    "paperless-是什么": "what-is-paperless",
+    "相关链接": "links"
+  },
+  "/services/passbolt": {
+    "passbolt-是什么": "what-is-passbolt",
+    "界面截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/paymenter": {
+    "paymenter-是什么": "what-is-paymenter",
+    "如何在-coolify-中配置-paymenter": "how-to-configure-paymenter-with-coolify",
+    "相关链接": "links"
+  },
+  "/services/peertube": {
+    "相关链接": "links"
+  },
+  "/services/penpot": {
+    "penpot-是什么": "what-is-penpot",
+    "部署变体": "variants",
+    "界面截图": "screenshot",
+    "相关链接": "links"
+  },
+  "/services/peppermint": {
+    "相关链接": "links"
+  },
+  "/services/pgadmin": {
+    "pgadmin-是什么": "what-is-pgadmin",
+    "相关链接": "links"
+  },
+  "/services/pgbackweb": {
+    "pg-back-web-是什么": "what-is-pg-back-web",
+    "界面截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/phpmyadmin": {
+    "phpmyadmin-是什么": "what-is-phpmyadmin",
+    "相关链接": "links"
+  },
+  "/services/pi-hole": {
+    "pi-hole-是什么": "what-is-pi-hole",
+    "相关链接": "links"
+  },
+  "/services/pingvinshare": {
+    "pingvinshare-是什么": "what-is-pingvinshare",
+    "如何通过-coolify-部署-pingvinshare": "how-to-deploy-pingvinshare-with-coolify",
+    "安装": "installation",
+    "相关链接": "links"
+  },
+  "/services/plane": {
+    "plane-是什么": "what-is-plane",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/plausible": {
+    "plausible-analytics-是什么": "what-is-plausible-analytics",
+    "如何通过-coolify-部署-plausible-analytics": "how-to-deploy-plausible-analytics-with-coolify",
+    "安装": "installation",
+    "相关链接": "links"
+  },
+  "/services/plex": {
+    "plex-是什么": "what-is-plex",
+    "安装": "installation",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/plunk": {
+    "plunk-是什么": "what-is-plunk",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/pocket-id": {
+    "pocket-id-是什么": "what-is-pocket-id",
+    "部署变体": "deployment-variants",
+    "功能特性": "features",
+    "快速开始": "getting-started",
+    "演示": "demo",
+    "相关链接": "links",
+    "更多资源": "additional-resources",
+    "pocket-id默认": "pocket-id-default",
+    "pocket-idpostgresql": "pocket-id-with-postgresql"
+  },
+  "/services/pocketbase": {
+    "pocketbase-是什么": "what-is-pocketbase",
+    "相关链接": "links"
+  },
+  "/services/portabase": {
+    "portabase-是什么": "what-is-portabase",
+    "截图": "screenshots",
+    "支持的数据源": "supported-data-sources",
+    "功能特性": "features",
+    "相关链接": "links"
+  },
+  "/services/portainer": {
+    "portainer-是什么": "what-is-portainer",
+    "相关链接": "links"
+  },
+  "/services/posthog": {
+    "posthog-是什么": "what-is-posthog",
+    "相关链接": "links"
+  },
+  "/services/postiz": {
+    "postiz-是什么": "what-is-postiz",
+    "相关链接": "links",
+    "警告": "warning"
+  },
+  "/services/prefect": {
+    "prefect-是什么": "what-is-prefect",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/privatebin": {
+    "privatebin-是什么": "what-is-privatebin",
+    "相关链接": "links"
+  },
+  "/services/prowlarr": {
+    "prowlarr-是什么": "what-is-prowlarr",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/proxyscotch": {
+    "proxyscotch-是什么": "what-is-proxyscotch",
+    "设置说明": "setup-instructions",
+    "相关链接": "links",
+    "proxyscotch-实例设置完成后": "after-youve-set-up-your-proxyscotch-instance"
+  },
+  "/services/pterodactyl": {
+    "pterodactyl-是什么": "what-is-pterodactyl",
+    "当前功能": "current-features",
+    "wings-是什么": "what-is-wings",
+    "在-coolify-上安装": "installation-on-coolify",
+    "常见问题": "common-issues",
+    "截图": "screenshots",
+    "相关链接": "links",
+    "选项-1pterodactyl-搭配-wings合并模板": "option-1-pterodactyl-with-wings-combined-template",
+    "选项-2分开安装-panel-与-wings": "option-2-separate-panel-and-wings-installation",
+    "panel-界面": "panel-interface",
+    "wings-节点管理": "wings-node-management"
+  },
+  "/services/pydio-cells": {
+    "pydio-cells-是什么": "what-is-pydio-cells",
+    "设置": "setup",
+    "相关链接": "links"
+  },
+  "/services/qbittorrent": {
+    "qbittorrent-是什么": "what-is-qbittorrent",
+    "相关链接": "links"
+  },
+  "/services/qdrant": {
+    "qdrant-是什么": "what-is-qdrant",
+    "相关链接": "links"
+  },
+  "/services/rabbitmq": {
+    "rabbitmq-是什么": "what-is-rabbitmq",
+    "相关链接": "links"
+  },
+  "/services/radarr": {
+    "radarr-是什么": "what-is-radarr",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/rallly": {
+    "rallly-是什么": "what-is-rallly",
+    "相关链接": "links"
+  },
+  "/services/reactive-resume": {
+    "reactive-resume-是什么": "what-is-reactive-resume",
+    "相关链接": "links"
+  },
+  "/services/satisfactory": {
+    "satisfactory-是什么": "what-is-satisfactory",
+    "信息": "info",
+    "模组": "modding",
+    "相关链接": "links",
+    "更新": "updating",
+    "环境变量": "environment-variables"
+  },
+  "/services/seafile": {
+    "seafile-是什么": "what-is-seafile",
+    "相关链接": "links"
+  },
+  "/services/searxng": {
+    "searxng-是什么": "what-is-searxng",
+    "相关链接": "links"
+  },
+  "/services/seaweedfs": {
+    "seaweedfs-是什么": "what-is-seaweedfs",
+    "相关链接": "links"
+  },
+  "/services/sequin": {
+    "sequin-是什么": "what-is-sequin",
+    "相关链接": "links"
+  },
+  "/services/sessy": {
+    "sessy-是什么": "what-is-sessy",
+    "相关链接": "links"
+  },
+  "/services/sftpgo": {
+    "sftpgo-是什么": "what-is-sftpgo",
+    "相关链接": "links"
+  },
+  "/services/shlink": {
+    "shlink-是什么": "what-is-shlink",
+    "相关链接": "links"
+  },
+  "/services/signoz": {
+    "signoz-是什么": "what-is-signoz",
+    "配置-signoz": "configuring-signoz",
+    "使用非-root-用户时的权限问题": "permission-issue-while-using-non-root-user",
+    "相关链接": "links",
+    "url-配置": "urls-configuration",
+    "启用-smtp-邮件发送": "enabling-smtp-emailing",
+    "每个接收器一个子域名": "one-subdomain-per-receiver",
+    "在宿主机上暴露端口": "exposing-the-ports-on-the-host",
+    "signoz-邮件": "signoz-emails",
+    "alert-manager-邮件": "alert-manager-emails"
+  },
+  "/services/silverbullet": {
+    "silverbullet-是什么": "what-is-silverbullet",
+    "相关链接": "links"
+  },
+  "/services/siyuan": {
+    "siyuan-是什么": "what-is-siyuan",
+    "相关链接": "links"
+  },
+  "/services/slash": {
+    "slash-是什么": "what-is-slash",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/snapdrop": {
+    "snapdrop-是什么": "what-is-snapdrop",
+    "相关链接": "links"
+  },
+  "/services/snipe-it": {
+    "snipe-it-是什么": "what-is-snipe-it",
+    "截图": "screenshots",
+    "相关链接": "links",
+    "初始设置": "initial-setup"
+  },
+  "/services/soju": {
+    "soju-是什么": "what-is-soju",
+    "相关链接": "links"
+  },
+  "/services/soketi": {
+    "soketi-是什么": "what-is-soketi",
+    "相关链接": "links"
+  },
+  "/services/soketi-app-manager": {
+    "soketi-app-manager-是什么": "what-is-soketi-app-manager-",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/sonarqube": {
+    "相关链接": "links"
+  },
+  "/services/sonarr": {
+    "sonarr-是什么": "what-is-sonarr",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/spacebot": {
+    "相关链接": "links"
+  },
+  "/services/sparkyfitness": {
+    "sparkyfitness-是什么": "what-is-sparkyfitness",
+    "相关链接": "links"
+  },
+  "/services/stalwart": {
+    "stalwart-是什么": "what-is-stalwart",
+    "配置-stalwart": "configuring-stalwart",
+    "相关链接": "links",
+    "初始设置": "initial-setup",
+    "dns-记录": "dns-records",
+    "故障排除": "troubleshooting",
+    "找到你的反向代理网络": "find-your-reverse-proxy-network",
+    "恢复访问": "recover-access",
+    "将反向代理网络加入白名单": "whitelist-your-reverse-proxy-network"
+  },
+  "/services/statusnook": {
+    "statusnook-是什么": "what-is-statusnook",
+    "相关链接": "links"
+  },
+  "/services/stirling-pdf": {
+    "stirling-pdf-是什么": "what-is-stirling-pdf",
+    "相关链接": "links"
+  },
+  "/services/strapi": {
+    "strapi-是什么": "what-is-strapi",
+    "相关链接": "links"
+  },
+  "/services/supabase": {
+    "supabase-是什么": "what-is-supabase",
+    "截图": "screenshots",
+    "说明": "notes",
+    "公开端口访问": "public-port-access",
+    "使用-ufw-docker-开放端口": "opening-ports-with-ufw-docker",
+    "相关链接": "links",
+    "使用-hetzner-的防火墙-ui": "using-hetzners-firewall-ui"
+  },
+  "/services/superset": {
+    "superset-是什么": "what-is-superset",
+    "变体": "variants",
+    "非官方-docker-镜像": "unofficial-docker-image",
+    "使用方法": "usage",
+    "相关链接": "links",
+    "初始设置": "initial-setup",
+    "连接-coolify-网络上的其他数据库": "connecting-to-other-databases-on-the-coolify-network",
+    "配置-superset": "configuring-superset"
+  },
+  "/services/supertokens": {
+    "supertokens-是什么": "what-is-supertokens",
+    "部署变体": "deployment-variants",
+    "相关链接": "links",
+    "基于-mysql-的-supertokens": "supertokens-with-mysql",
+    "基于-postgresql-的-supertokens": "supertokens-with-postgresql"
+  },
+  "/services/sure": {
+    "sure-是什么": "what-is-sure",
+    "相关链接": "links"
+  },
+  "/services/swetrix": {
+    "swetrix-是什么": "what-is-swetrix",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/terraria-server": {
+    "terraria-是什么": "what-is-terraria",
+    "环境变量": "environment-variables",
+    "相关链接": "links"
+  },
+  "/services/tolgee": {
+    "tolgee-是什么": "what-is-tolgee",
+    "截图": "screenshots",
+    "相关链接": "links"
+  },
+  "/services/traccar": {
+    "traccar-是什么": "what-is-traccar",
+    "相关链接": "links"
+  },
+  "/services/trailbase": {
+    "trailbase-是什么": "what-is-trailbase",
+    "相关链接": "links"
+  },
+  "/services/transmission": {
+    "transmission-是什么": "what-is-transmission",
+    "相关链接": "links"
+  },
+  "/services/trigger": {
+    "trigger-是什么": "what-is-trigger",
+    "部署变体": "deployment-variants",
+    "相关链接": "links",
+    "triggerdev默认": "triggerdev-default",
+    "triggerdev外接数据库": "triggerdev-with-external-database"
+  },
+  "/services/triliumnext": {
+    "triliumnext-是什么": "what-is-triliumnext",
+    "相关链接": "links"
+  },
+  "/services/twenty": {
+    "twenty-是什么": "what-is-twenty",
+    "相关链接": "links"
+  },
+  "/services/typesense": {
+    "typesense-是什么": "what-is-typesense",
+    "相关链接": "links"
+  },
+  "/services/unstructured": {
+    "unstructured-是什么": "what-is-unstructured",
+    "视频": "videos",
+    "相关链接": "links"
+  },
+  "/services/weaviate": {
+    "weaviate-是什么": "what-is-weaviate",
+    "相关链接": "links"
+  },
+  "/services/what-is-a-service": {
+    "选择服务类型": "choose-a-service-type",
+    "服务包含什么": "what-a-service-includes",
+    "服务与应用": "services-and-applications",
+    "服务与独立数据库": "services-and-standalone-databases",
+    "一键意味着什么不意味着什么": "what-one-click-does-and-does-not-mean",
+    "继续了解": "continue-learning"
   },
   "/start-with-cloud": {
     "从-coolify-cloud-开始": "start-with-coolify-cloud",
