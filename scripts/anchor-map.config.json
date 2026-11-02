@@ -237,6 +237,18 @@
         "githubDir": "lightpanda-docs-cn/src/content",
         "ext": ".mdx"
       }
+    },
+    {
+      "id": "handy",
+      "dir": "handy-docs-cn",
+      "origin": "https://handy.computer/docs",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/handy/docs",
+      "useSourceFrontmatter": false,
+      "listFrom": {
+        "githubDir": "handy-docs-cn/src/content/docs",
+        "ext": ".mdx"
+      },
+      "noTrailingSlash": true
     }
   ]
 }

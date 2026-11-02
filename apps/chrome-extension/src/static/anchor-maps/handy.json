@@ -1,0 +1,152 @@
+{
+  "/about": {
+    "应用语言": "app-language",
+    "版本": "version",
+    "目录": "directories",
+    "支持开发": "support-development",
+    "源代码": "source-code",
+    "致谢": "acknowledgments"
+  },
+  "/advanced": {
+    "应用": "app",
+    "输出": "output",
+    "转写": "transcription",
+    "历史记录": "history",
+    "实验性功能": "experimental-features",
+    "启动时隐藏": "start-hidden",
+    "开机自启": "launch-on-startup",
+    "显示托盘图标": "show-tray-icon",
+    "悬浮层位置": "overlay-position",
+    "取消录音": "cancelling-a-recording",
+    "卸载模型": "unload-model",
+    "自动发送": "auto-submit",
+    "剪贴板处理": "clipboard-handling",
+    "自定义词": "custom-words",
+    "追加尾随空格": "append-trailing-space",
+    "历史记录上限": "history-limit",
+    "自动删除录音": "auto-delete-recordings",
+    "后处理": "post-processing",
+    "快捷键实现": "keyboard-implementation",
+    "悬浮层状态": "overlay-states"
+  },
+  "/cli": {
+    "概述": "overview",
+    "命令行标志": "flags",
+    "信号控制": "signal-control",
+    "脚本调用": "scripting",
+    "窗口管理器集成": "window-manager-integration",
+    "gnomewayland": "gnome-wayland"
+  },
+  "/debug": {
+    "启用调试菜单": "enabling-the-debug-menu",
+    "调试设置": "debug-settings",
+    "查找日志": "finding-logs",
+    "应用数据目录": "app-data-directory",
+    "日志级别": "log-level",
+    "检查更新": "check-for-updates",
+    "提示音主题": "sound-theme",
+    "词纠错阈值": "word-correction-threshold",
+    "粘贴延迟": "paste-delay",
+    "常开麦克风": "always-on-microphone",
+    "合盖麦克风": "clamshell-microphone",
+    "取消快捷键": "cancel-shortcut"
+  },
+  "/faq": {
+    "一般问题": "general",
+    "模型与转写": "models--transcription",
+    "粘贴与输出": "pasting--output",
+    "键盘快捷键": "keyboard-shortcuts",
+    "后处理": "post-processing"
+  },
+  "/general": {
+    "转写快捷键": "transcribe-shortcut",
+    "按住说话": "push-to-talk",
+    "声音": "sound",
+    "切换模式": "toggle-mode",
+    "麦克风": "microphone",
+    "录音时静音": "mute-while-recording",
+    "提示音": "audio-feedback",
+    "输出设备": "output-device",
+    "音量": "volume"
+  },
+  "/getting-started": {
+    "下载与安装": "download--install",
+    "首次启动": "first-launch",
+    "你的第一次转写": "your-first-transcription",
+    "快捷键": "shortcuts",
+    "后续步骤": "next-steps",
+    "选择模型": "choosing-a-model"
+  },
+  "/history": {
+    "管理历史记录": "managing-history",
+    "历史记录上限": "history-limit",
+    "自动删除录音": "auto-delete-recordings"
+  },
+  "/linux": {
+    "1-配置快捷键": "1-set-up-the-shortcut",
+    "2-配置粘贴": "2-set-up-pasting",
+    "3-如果文本输出不对": "3-if-the-text-comes-out-wrong",
+    "还是卡住了": "still-stuck"
+  },
+  "/models": {
+    "概览": "overview",
+    "更换模型": "changing-your-model",
+    "速度与精度": "speed-vs-accuracy",
+    "自定义模型": "custom-models",
+    "硬件注意事项": "hardware-considerations"
+  },
+  "/paste-methods": {
+    "可用的粘贴方式": "available-methods",
+    "我该用哪种方式": "which-method-should-i-use",
+    "打字工具linux": "typing-tools-linux",
+    "剪贴板处理": "clipboard-handling",
+    "粘贴延迟": "paste-delay",
+    "故障排查": "troubleshooting",
+    "直接输入direct-input": "direct-input",
+    "无none": "none",
+    "外部脚本仅-linux": "external-script-linux-only",
+    "合成器推荐": "compositor-recommendations",
+    "文本没有被粘贴": "text-is-not-being-pasted",
+    "非-qwerty-键盘出现乱码文本": "garbled-text-with-non-qwerty-keyboards",
+    "粘贴在提权管理员应用中无效windows": "paste-not-working-in-elevatedadmin-applications-windows",
+    "终端中粘贴无效": "paste-not-working-in-terminals"
+  },
+  "/post-processing": {
+    "概述": "overview",
+    "启用后处理": "enabling-post-processing",
+    "服务商": "providers",
+    "专用快捷键": "dedicated-hotkey",
+    "自定义提示词": "custom-prompts",
+    "output-模板": "the-output-template",
+    "本地-llm-配置": "local-llm-setup",
+    "推荐模型": "recommended-models",
+    "局限性": "limitations",
+    "社区提示词": "community-prompts",
+    "云端服务商": "cloud-providers",
+    "设备端": "on-device",
+    "自定义端点": "custom-endpoint",
+    "提示词示例": "example-prompts"
+  },
+  "/troubleshooting": {
+    "调试模式": "debug-mode",
+    "常见问题": "common-issues",
+    "各平台注意事项": "platform-specific-notes",
+    "已知问题": "known-issues",
+    "寻求帮助": "getting-help",
+    "handy-完全不能转写": "handy-is-not-transcribing-anything",
+    "macos-上快捷键失效secure-input": "shortcuts-stopped-working-on-macos-secure-input",
+    "文本没有被粘贴": "text-is-not-being-pasted",
+    "粘贴的是错误的文本": "wrong-text-is-being-pasted",
+    "转写速度慢": "slow-transcription",
+    "检测不到麦克风": "microphone-not-detected",
+    "whisper-崩溃": "whisper-crashes",
+    "vulkan-1dll-not-foundwindows": "vulkan-1dll-not-found-windows",
+    "非-qwerty-键盘出现乱码文本": "garbled-text-with-non-qwerty-keyboards",
+    "linux-下窗口空白": "blank-window-on-linux",
+    "appimage-glibc-错误linux": "appimage-glibc-error-linux",
+    "linux-下悬浮层抢占焦点": "overlay-steals-focus-on-linux",
+    "wayland-悬浮层不显示": "wayland-overlay-not-showing",
+    "模型下载失败": "failed-model-download",
+    "跳过初始化设置界面": "bypass-setup-screen"
+  }
+}

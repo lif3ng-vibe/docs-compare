@@ -261,7 +261,9 @@ export async function scanSite(cfg, site) {
       originUrl = frontmatterField(md, 'source');
     }
     if (!originUrl) originUrl = site.origin + (page.logicalPath === '/' ? '/' : page.logicalPath);
-    const mirrorUrl = site.mirror + (page.logicalPath === '/' ? '/' : `${page.logicalPath}/`);
+    // site.noTrailingSlash: 文件式产物镜像（GH Pages 对尾斜杠请求 404）不加尾斜杠
+    const slash = site.noTrailingSlash ? '' : '/';
+    const mirrorUrl = site.mirror + (page.logicalPath === '/' ? '/' : `${page.logicalPath}${slash}`);
 
     const [mirrorHtml, originHtml] = await Promise.all([fetchText(mirrorUrl), fetchText(originUrl)]);
     const { map, warns } = pairHeadings(headings(mirrorHtml), headings(originHtml), page.logicalPath);
