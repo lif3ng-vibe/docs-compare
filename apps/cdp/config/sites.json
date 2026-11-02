@@ -155,5 +155,12 @@
     "origin": "https://www.aihero.dev",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/aihero",
     "anchorMapUrl": "anchor-maps/aihero.json"
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama 文档",
+    "origin": "https://docs.ollama.com",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/ollama",
+    "anchorMapUrl": "anchor-maps/ollama.json"
   }
 ]

@@ -218,6 +218,15 @@
       "listFrom": {
         "sitemap": "https://www.aihero.dev/sitemap.xml"
       }
+    },
+    {
+      "id": "ollama",
+      "dir": "ollama-docs-cn",
+      "origin": "https://docs.ollama.com",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/ollama",
+      "listFrom": {
+        "sitemap": "https://docs.ollama.com/sitemap.xml"
+      }
     }
   ]
 }

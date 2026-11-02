@@ -1,0 +1,506 @@
+{
+  "/api/anthropic-compatibility": {
+    "直接云端访问": "direct-cloud-access",
+    "本地服务器用法": "local-server-usage",
+    "在-claude-code-中使用": "using-with-claude-code",
+    "端点": "endpoints",
+    "模型": "models",
+    "与-anthropic-api-的差异": "differences-from-the-anthropic-api",
+    "环境变量": "environment-variables",
+    "/v1/messages-简单示例": "simple-/v1/messages-example",
+    "流式输出示例": "streaming-example",
+    "工具调用示例": "tool-calling-example",
+    "本地模型": "local-models",
+    "云端模型": "cloud-models",
+    "本地服务器上的默认模型名": "default-model-names-on-a-local-server",
+    "行为差异": "behavior-differences",
+    "不支持的功能": "not-supported",
+    "部分支持": "partial-support",
+    "支持的特性": "supported-features",
+    "支持的请求字段": "supported-request-fields",
+    "支持的响应字段": "supported-response-fields",
+    "流式事件": "streaming-events"
+  },
+  "/api/authentication": {
+    "api-密钥": "api-keys",
+    "登录": "signing-in"
+  },
+  "/api/balance": {
+    "余额构成": "balances",
+    "速率限制": "rate-limits",
+    "团队": "teams",
+    "参考": "reference"
+  },
+  "/api/cloud-usage": {
+    "时间范围": "time-ranges",
+    "用量总计与时间桶": "usage-totals-and-buckets",
+    "按模型细分": "model-breakdown",
+    "速率限制": "rate-limits",
+    "团队用量": "team-usage",
+    "即将推出": "coming-soon",
+    "参考": "reference"
+  },
+  "/api/errors": {
+    "状态码": "status-codes",
+    "错误消息": "error-messages",
+    "流式输出期间发生的错误": "errors-that-occur-while-streaming"
+  },
+  "/api/introduction": {
+    "快速开始": "get-started",
+    "基础-url": "base-urls",
+    "ollama-api-示例": "ollama-api-example",
+    "软件库": "libraries",
+    "版本管理": "versioning"
+  },
+  "/api/openai-compatibility": {
+    "直接云端访问": "direct-cloud-access",
+    "本地服务器用法": "local-server-usage",
+    "端点": "endpoints",
+    "模型": "models",
+    "/v1/chat/completions-简单示例": "simple-/v1/chat/completions-example",
+    "/v1/responses-简单示例": "simple-/v1/responses-example",
+    "/v1/chat/completions-视觉示例": "/v1/chat/completions-with-vision-example",
+    "本地服务器上的默认模型名": "default-model-names-on-a-local-server",
+    "设置本地上下文大小": "setting-the-local-context-size",
+    "支持的特性": "supported-features",
+    "支持的请求字段": "supported-request-fields",
+    "支持的特性-2": "supported-features-2",
+    "支持的请求字段-2": "supported-request-fields-2",
+    "说明": "notes",
+    "说明-2": "notes-2",
+    "说明-3": "notes-3",
+    "支持的请求字段-3": "supported-request-fields-3",
+    "支持的请求字段-4": "supported-request-fields-4",
+    "说明-4": "notes-4",
+    "支持的请求字段-5": "supported-request-fields-5",
+    "说明-5": "notes-5",
+    "支持的请求字段-6": "supported-request-fields-6",
+    "支持的特性-3": "supported-features-3",
+    "支持的请求字段-7": "supported-request-fields-7"
+  },
+  "/api/streaming": {
+    "禁用流式输出": "disabling-streaming",
+    "流式与非流式的使用场景": "when-to-use-streaming-vs-non-streaming"
+  },
+  "/api/usage": {
+    "响应示例": "example-response"
+  },
+  "/capabilities/decision": {
+    "准备工作": "setup",
+    "从终端提问": "ask-from-the-terminal",
+    "选择标签": "choose-a-label",
+    "评判图片": "judge-an-image",
+    "使用云端模型": "use-a-cloud-model",
+    "问题类型": "question-types",
+    "提问多个问题": "ask-multiple-questions"
+  },
+  "/capabilities/embeddings": {
+    "生成嵌入": "generate-embeddings",
+    "批量生成嵌入": "generate-a-batch-of-embeddings",
+    "技巧": "tips"
+  },
+  "/capabilities/speech": {
+    "准备工作": "setup",
+    "从终端朗读": "speak-from-the-terminal",
+    "用-api-生成语音": "generate-speech-with-the-api",
+    "将音频保存到文件": "save-audio-to-a-file",
+    "音频格式": "audio-formats",
+    "限制": "limits"
+  },
+  "/capabilities/streaming": {
+    "流式核心概念": "key-streaming-concepts",
+    "处理流式数据块": "handling-streamed-chunks"
+  },
+  "/capabilities/structured-outputs": {
+    "生成结构化-json": "generating-structured-json",
+    "用-schema-生成结构化-json": "generating-structured-json-with-a-schema",
+    "示例：提取结构化数据": "example-extract-structured-data",
+    "示例：视觉与结构化输出": "example-vision-with-structured-outputs",
+    "获得可靠结构化输出的技巧": "tips-for-reliable-structured-outputs"
+  },
+  "/capabilities/thinking": {
+    "发现模型的思考控制选项": "discover-a-model’s-thinking-controls",
+    "在-api-调用中启用思考": "enable-thinking-in-api-calls",
+    "流式输出推理轨迹": "stream-the-reasoning-trace"
+  },
+  "/capabilities/tool-calling": {
+    "调用单个工具": "calling-a-single-tool",
+    "并行工具调用": "parallel-tool-calling",
+    "多轮工具调用（代理循环）": "multi-turn-tool-calling-agent-loop",
+    "结合流式的工具调用": "tool-calling-with-streaming",
+    "在-ollama-python-sdk-中将函数用作工具": "using-functions-as-tools-with-ollama-python-sdk"
+  },
+  "/capabilities/vision": {
+    "快速开始": "quick-start",
+    "通过-ollama-的-api-使用": "usage-with-ollama’s-api"
+  },
+  "/capabilities/web-search": {
+    "身份验证": "authentication",
+    "网页搜索-api": "web-search-api",
+    "网页抓取-api": "web-fetch-api",
+    "构建搜索代理": "building-a-search-agent",
+    "mcp-服务器": "mcp-server",
+    "请求": "request",
+    "响应": "response",
+    "示例": "examples",
+    "请求-2": "request-2",
+    "响应-2": "response-2",
+    "示例-2": "examples-2",
+    "上下文长度与代理": "context-length-and-agents",
+    "其他集成": "other-integrations",
+    "curl-请求": "curl-request",
+    "python-库": "python-library",
+    "javascript-库": "javascript-library",
+    "curl-请求-2": "curl-request-2"
+  },
+  "/cli": {
+    "运行模型": "run-a-model",
+    "启动集成": "launch-integrations",
+    "生成嵌入": "generate-embeddings",
+    "询问决策模型": "ask-a-decision-model",
+    "与语音模型对话": "speak-with-a-speech-model",
+    "下载模型": "download-a-model",
+    "删除模型": "remove-a-model",
+    "列出模型": "list-models",
+    "登录-ollama": "sign-in-to-ollama",
+    "退出登录-ollama": "sign-out-of-ollama",
+    "创建自定义模型": "create-a-customized-model",
+    "列出运行中的模型": "list-running-models",
+    "停止运行中的模型": "stop-a-running-model",
+    "启动-ollama": "start-ollama",
+    "支持的集成": "supported-integrations",
+    "示例": "examples",
+    "多行输入": "multiline-input",
+    "多模态模型": "multimodal-models"
+  },
+  "/cloud": {
+    "api-密钥": "api-key",
+    "ollama-应用或-cli": "ollama-app-or-cli",
+    "模型": "models",
+    "用量": "usage",
+    "模型退役": "retirements",
+    "数据处理": "data-handling"
+  },
+  "/context-length": {
+    "设置上下文长度": "setting-context-length",
+    "应用": "app",
+    "查看已分配的上下文长度与模型卸载情况": "check-allocated-context-length-and-model-offloading"
+  },
+  "/docker": {
+    "仅-cpu": "cpu-only",
+    "vulkan-支持": "vulkan-support",
+    "在本地运行模型": "run-model-locally",
+    "尝试不同的模型": "try-different-models",
+    "使用-apt-安装": "install-with-apt",
+    "使用-yum-或-dnf-安装": "install-with-yum-or-dnf",
+    "配置-docker-使用-nvidia-驱动": "configure-docker-to-use-nvidia-driver",
+    "启动容器": "start-the-container"
+  },
+  "/faq": {
+    "如何升级-ollama？": "how-can-i-upgrade-ollama",
+    "如何查看日志？": "how-can-i-view-the-logs",
+    "我的-gpu-与-ollama-兼容吗？": "is-my-gpu-compatible-with-ollama",
+    "如何指定上下文窗口大小？": "how-can-i-specify-the-context-window-size",
+    "如何判断模型是否已加载到-gpu？": "how-can-i-tell-if-my-model-was-loaded-onto-the-gpu",
+    "如何配置-ollama-服务器？": "how-do-i-configure-ollama-server",
+    "如何在代理后使用-ollama？": "how-do-i-use-ollama-behind-a-proxy",
+    "ollama-会把我的提示词和回答发回-ollama-com-吗？": "does-ollama-send-my-prompts-and-answers-back-to-ollama-com",
+    "如何将-ollama-暴露到我的网络上？": "how-can-i-expose-ollama-on-my-network",
+    "如何搭配代理服务器使用-ollama？": "how-can-i-use-ollama-with-a-proxy-server",
+    "如何搭配-ngrok-使用-ollama？": "how-can-i-use-ollama-with-ngrok",
+    "如何搭配-cloudflare-tunnel-使用-ollama？": "how-can-i-use-ollama-with-cloudflare-tunnel",
+    "如何允许更多-web-来源访问-ollama？": "how-can-i-allow-additional-web-origins-to-access-ollama",
+    "模型存储在哪里？": "where-are-models-stored",
+    "如何在-visual-studio-code-中使用-ollama？": "how-can-i-use-ollama-in-visual-studio-code",
+    "如何在-docker-中使用-gpu-加速运行-ollama？": "how-do-i-use-ollama-with-gpu-acceleration-in-docker",
+    "为什么-windows-10-上-wsl2-的网络很慢？": "why-is-networking-slow-in-wsl2-on-windows-10",
+    "如何将模型预加载到-ollama-以获得更快的响应？": "how-can-i-preload-a-model-into-ollama-to-get-faster-response-times",
+    "如何让模型常驻内存或立即卸载？": "how-do-i-keep-a-model-loaded-in-memory-or-make-it-unload-immediately",
+    "如何管理-ollama-服务器可排队的最大请求数？": "how-do-i-manage-the-maximum-number-of-requests-the-ollama-server-can-queue",
+    "ollama-如何处理并发请求？": "how-does-ollama-handle-concurrent-requests",
+    "ollama-如何在多个-gpu-上加载模型？": "how-does-ollama-load-models-on-multiple-gpus",
+    "如何启用-flash-attention？": "how-can-i-enable-flash-attention",
+    "如何设置-k/v-缓存的量化类型？": "how-can-i-set-the-quantization-type-for-the-k/v-cache",
+    "在哪里可以找到我的-ollama-公钥？": "where-can-i-find-my-ollama-public-key",
+    "如何阻止-ollama-在登录电脑时自动启动？": "how-can-i-stop-ollama-from-starting-when-i-login-to-my-computer",
+    "在-mac-上设置环境变量": "setting-environment-variables-on-mac",
+    "在-linux-上设置环境变量": "setting-environment-variables-on-linux",
+    "在-windows-上设置环境变量": "setting-environment-variables-on-windows",
+    "在-docker-中如何通过代理使用-ollama？": "how-do-i-use-ollama-behind-a-proxy-in-docker",
+    "如何把模型存到其他位置？": "how-do-i-set-them-to-a-different-location",
+    "如何添加密钥": "how-to-add-the-key",
+    "ollama-公钥的存放位置": "where-the-ollama-public-key-lives"
+  },
+  "/gpu": {
+    "metal（apple-gpu）": "metal-apple-gpus",
+    "vulkan-gpu-支持": "vulkan-gpu-support",
+    "gpu-选择": "gpu-selection",
+    "linux-休眠恢复": "linux-suspend-resume",
+    "linux-支持": "linux-support",
+    "windows-支持": "windows-support",
+    "linux-上的覆盖设置": "overrides-on-linux",
+    "gpu-选择-2": "gpu-selection-2",
+    "容器权限": "container-permission",
+    "gpu-选择-3": "gpu-selection-3"
+  },
+  "/import": {
+    "目录": "table-of-contents",
+    "从-safetensors-权重导入模型": "importing-a-model-from-safetensors-weights",
+    "导入-gguf-模型": "importing-a-gguf-model",
+    "在-ollama-com-上分享模型": "sharing-your-model-on-ollama-com"
+  },
+  "/": {
+    "探索模型": "explore-models",
+    "文档": "documentation",
+    "社区": "community"
+  },
+  "/integrations/chatgpt": {
+    "前提条件": "prerequisites",
+    "连接-chatgpt": "connect-chatgpt",
+    "选择模型": "choose-models",
+    "断开-chatgpt": "disconnect-chatgpt",
+    "codex-行为与限制": "codex-behavior-and-limits",
+    "相关集成": "related-integrations"
+  },
+  "/integrations/claude-code": {
+    "快速开始": "get-started",
+    "能力": "capabilities",
+    "模型": "models",
+    "更多功能": "more-features",
+    "直接连接-ollama-云端": "connect-directly-to-ollama’s-cloud",
+    "手动设置": "manual-setup",
+    "免交互运行": "run-without-interaction",
+    "网页搜索": "web-search",
+    "使用-/loop-定时任务": "scheduled-tasks-with-/loop"
+  },
+  "/integrations/claude-desktop": {
+    "前提条件": "prerequisites",
+    "设置-claude": "set-up-claude",
+    "切换模型": "switch-models",
+    "支持的功能": "supported-features",
+    "断开-claude": "disconnect-claude"
+  },
+  "/integrations/cline": {
+    "安装": "install",
+    "配合-ollama-使用": "usage-with-ollama",
+    "连接到-ollama-com": "connecting-to-ollama-com",
+    "模型": "models"
+  },
+  "/integrations/cline-cli": {
+    "安装": "install",
+    "配合-ollama-使用": "usage-with-ollama",
+    "快速设置": "quick-setup",
+    "直接用模型运行": "run-directly-with-a-model",
+    "向-cline-传递提示词": "pass-a-prompt-to-cline",
+    "手动设置": "manual-setup"
+  },
+  "/integrations/codex": {
+    "安装": "install",
+    "配合-ollama-使用": "usage-with-ollama",
+    "通过本地-ollama-网页搜索": "web-search-through-local-ollama",
+    "快速设置": "quick-setup",
+    "手动设置": "manual-setup",
+    "基于配置文件的设置": "profile-based-setup"
+  },
+  "/integrations/copilot-cli": {
+    "安装": "install",
+    "配合-ollama-使用": "usage-with-ollama",
+    "免交互（无头）模式": "non-interactive-headless-mode",
+    "手动设置": "manual-setup",
+    "快速设置": "quick-setup",
+    "直接用模型运行": "run-directly-with-a-model"
+  },
+  "/integrations/deepseek-harness": {
+    "设置": "setup",
+    "网页搜索": "web-search",
+    "配置": "configuration",
+    "手动安装": "manual-install"
+  },
+  "/integrations/droid": {
+    "安装": "install",
+    "配合-ollama-使用": "usage-with-ollama",
+    "云端模型": "cloud-models",
+    "连接到-ollama-com": "connecting-to-ollama-com",
+    "快速设置": "quick-setup",
+    "手动设置": "manual-setup"
+  },
+  "/integrations/goose": {
+    "配合-ollama-使用": "usage-with-ollama",
+    "连接到-ollama-com": "connecting-to-ollama-com",
+    "配合-ollama-使用-2": "usage-with-ollama-2",
+    "连接到-ollama-com-2": "connecting-to-ollama-com-2"
+  },
+  "/integrations/hermes": {
+    "快速开始": "quick-start",
+    "连接消息应用": "connect-messaging-apps",
+    "重新配置": "reconfigure",
+    "手动设置": "manual-setup",
+    "连接到-ollama": "connect-to-ollama",
+    "连接消息平台": "connect-messaging",
+    "启动": "launch"
+  },
+  "/integrations/hermes-desktop": {
+    "快速开始": "quick-start",
+    "直接用模型运行": "run-directly-with-a-model",
+    "直接安装-hermes-desktop": "install-hermes-desktop-directly"
+  },
+  "/integrations": {
+    "启动编码代理": "launch-a-coding-agent",
+    "连接桌面应用": "connect-a-desktop-app",
+    "运行个人助手": "run-a-personal-assistant",
+    "在编辑器中工作": "work-in-your-editor"
+  },
+  "/integrations/jetbrains": {
+    "安装": "install",
+    "配合-ollama-使用": "usage-with-ollama"
+  },
+  "/integrations/marimo": {
+    "安装": "install",
+    "配合-ollama-使用": "usage-with-ollama",
+    "连接到-ollama-com": "connecting-to-ollama-com"
+  },
+  "/integrations/n8n": {
+    "安装": "install",
+    "本地使用-ollama": "using-ollama-locally",
+    "连接到-ollama-com": "connecting-to-ollama-com"
+  },
+  "/integrations/nemoclaw": {
+    "快速开始": "quick-start",
+    "平台支持": "platform-support",
+    "系统要求": "system-requirements"
+  },
+  "/integrations/oh-my-pi": {
+    "快速设置": "quick-setup",
+    "插件": "plugins",
+    "手动设置": "manual-setup",
+    "直接用模型运行": "run-directly-with-a-model"
+  },
+  "/integrations/onyx": {
+    "概览": "overview",
+    "安装-onyx": "install-onyx",
+    "配合-ollama-使用": "usage-with-ollama",
+    "发送第一条查询": "send-your-first-query"
+  },
+  "/integrations/openclaw": {
+    "快速开始": "quick-start",
+    "网页搜索与抓取": "web-search-and-fetch",
+    "不启动直接配置": "configure-without-launching",
+    "免交互（无头）模式": "non-interactive-headless-mode",
+    "连接消息应用": "connect-messaging-apps",
+    "停止网关": "stopping-the-gateway"
+  },
+  "/integrations/opencode": {
+    "快速开始": "get-started",
+    "能力": "capabilities",
+    "模型": "models",
+    "手动设置": "manual-setup",
+    "配置优先级": "configuration-precedence"
+  },
+  "/integrations/pi": {
+    "快速设置": "quick-setup",
+    "扩展": "extensions",
+    "手动设置": "manual-setup",
+    "直接用模型运行": "run-directly-with-a-model",
+    "网页搜索": "web-search",
+    "使用-pi-autoresearch-自动研究": "autoresearch-with-pi-autoresearch",
+    "安装": "install"
+  },
+  "/integrations/pool": {
+    "安装": "install",
+    "配合-ollama-使用": "usage-with-ollama",
+    "手动设置": "manual-setup",
+    "快速设置": "quick-setup",
+    "直接用模型运行": "run-directly-with-a-model",
+    "向-pool-透传参数": "pass-arguments-through-to-pool"
+  },
+  "/integrations/roo-code": {
+    "安装": "install",
+    "配合-ollama-使用": "usage-with-ollama",
+    "连接到-ollama-com": "connecting-to-ollama-com"
+  },
+  "/integrations/vscode": {
+    "要求": "requirements",
+    "安装扩展": "install-the-extension",
+    "添加模型": "add-a-model",
+    "上下文长度": "context-length",
+    "故障排除": "troubleshooting"
+  },
+  "/integrations/xcode": {
+    "安装": "install",
+    "配合-ollama-使用": "usage-with-ollama",
+    "直接连接到-ollama-com": "connecting-to-ollama-com-directly"
+  },
+  "/integrations/zed": {
+    "安装": "install",
+    "配合-ollama-使用": "usage-with-ollama",
+    "连接到-ollama-com": "connecting-to-ollama-com"
+  },
+  "/linux": {
+    "安装": "install",
+    "手动安装": "manual-install",
+    "自定义": "customizing",
+    "更新": "updating",
+    "安装特定版本": "installing-specific-versions",
+    "查看日志": "viewing-logs",
+    "卸载": "uninstall",
+    "amd-gpu-安装": "amd-gpu-install",
+    "arm64-安装": "arm64-install",
+    "将-ollama-添加为启动服务（推荐）": "adding-ollama-as-a-startup-service-recommended",
+    "安装-cuda-驱动（可选）": "install-cuda-drivers-optional",
+    "安装-amd-rocm-驱动（可选）": "install-amd-rocm-drivers-optional",
+    "启动-ollama": "start-ollama"
+  },
+  "/macos": {
+    "系统要求": "system-requirements",
+    "文件系统要求": "filesystem-requirements",
+    "故障排查": "troubleshooting",
+    "卸载": "uninstall",
+    "更改安装位置": "changing-install-location"
+  },
+  "/modelfile": {
+    "目录": "table-of-contents",
+    "格式": "format",
+    "示例": "examples",
+    "指令": "instructions",
+    "注意事项": "notes",
+    "基础-modelfile": "basic-modelfile",
+    "from（必需）": "from-required",
+    "从现有模型构建": "build-from-existing-model",
+    "从-safetensors-模型构建": "build-from-a-safetensors-model",
+    "从-gguf-模型构建": "build-from-a-gguf-model",
+    "有效参数与取值": "valid-parameters-and-values",
+    "模板变量": "template-variables",
+    "有效角色": "valid-roles",
+    "对话示例": "example-conversation"
+  },
+  "/quickstart": {
+    "开始使用": "get-started",
+    "连接桌面应用": "connect-a-desktop-app",
+    "使用编码代理": "use-a-coding-agent",
+    "构建应用": "build-an-application",
+    "在本地运行模型": "run-a-model-locally",
+    "下一步": "next-steps",
+    "1-创建-api-密钥": "1-create-an-api-key",
+    "2-发送请求": "2-send-a-request"
+  },
+  "/troubleshooting": {
+    "llm-库": "llm-libraries",
+    "在-linux-上安装旧版本或预发布版本": "installing-older-or-pre-release-versions-on-linux",
+    "nvidia-gpu-发现": "nvidia-gpu-discovery",
+    "amd-gpu-发现": "amd-gpu-discovery",
+    "多块-amd-gpu": "multiple-amd-gpus",
+    "windows-终端错误": "windows-terminal-errors",
+    "linux-nvidia-故障排查": "linux-nvidia-troubleshooting",
+    "amd-驱动版本不匹配": "amd-driver-version-mismatch"
+  },
+  "/windows": {
+    "系统要求": "system-requirements",
+    "文件系统要求": "filesystem-requirements",
+    "api-访问": "api-access",
+    "故障排查": "troubleshooting",
+    "卸载": "uninstall",
+    "独立-cli": "standalone-cli",
+    "更改安装位置": "changing-install-location",
+    "更改模型存储位置": "changing-model-location"
+  }
+}
