@@ -227,6 +227,16 @@
       "listFrom": {
         "sitemap": "https://docs.ollama.com/sitemap.xml"
       }
+    },
+    {
+      "id": "lightpanda",
+      "dir": "lightpanda-docs-cn",
+      "origin": "https://lightpanda.io/docs",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/lightpanda",
+      "listFrom": {
+        "githubDir": "lightpanda-docs-cn/src/content",
+        "ext": ".mdx"
+      }
     }
   ]
 }

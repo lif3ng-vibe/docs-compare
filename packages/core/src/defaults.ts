@@ -173,6 +173,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/ollama',
     anchorMapUrl: 'anchor-maps/ollama.json',
   },
+  {
+    id: 'lightpanda',
+    name: 'Lightpanda 文档',
+    origin: 'https://lightpanda.io/docs',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/lightpanda',
+    anchorMapUrl: 'anchor-maps/lightpanda.json',
+  },
 
 ] as const;
 

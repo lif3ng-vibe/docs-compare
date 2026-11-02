@@ -1,0 +1,272 @@
+{
+  "/core-concepts/architecture-overview": {
+    "为什么没有渲染引擎": "why-theres-no-rendering-engine",
+    "各部分如何协作": "how-the-parts-fit-together",
+    "内存模型": "memory-model",
+    "入口": "entry-points",
+    "浏览器引擎": "the-browser-engine"
+  },
+  "/core-concepts/benchmarks": {
+    "测量方法": "how-results-are-measured",
+    "大规模爬取": "crawling-at-scale",
+    "单页自动化": "single-page-automation",
+    "ai-agent-任务完成率": "ai-agent-task-completion",
+    "复现这些结果": "reproduce-these-results"
+  },
+  "/core-concepts/local-vs-cloud": {
+    "选本地还是-cloud": "choose-local-or-cloud",
+    "机密性与遥测": "confidentiality-and-telemetry",
+    "功能覆盖": "feature-coverage"
+  },
+  "/core-concepts/what-is-lightpanda": {
+    "chrome-做自动化的痛点": "the-problem-with-chrome-for-automation",
+    "lightpanda-如何解决": "how-lightpanda-solves-it",
+    "本地还是-cloud": "local-or-cloud"
+  },
+  "/guides/configure-a-proxy": {
+    "在本地使用代理": "use-a-proxy-locally",
+    "在-lightpanda-cloud-上使用代理": "use-a-proxy-on-lightpanda-cloud",
+    "使用-basic-auth-认证": "authenticate-with-basic-auth",
+    "使用-bearer-token-认证": "authenticate-with-a-bearer-token",
+    "在脚本中认证": "authenticate-from-your-script",
+    "使用共享代理": "use-a-shared-proxy",
+    "使用你自己的代理": "use-your-own-proxy"
+  },
+  "/guides/interact-with-a-webpage": {
+    "前置条件": "prerequisites",
+    "创建-indexjs": "create-indexjs",
+    "导航并搜索": "navigate-and-search",
+    "等待结果": "wait-for-results",
+    "提取数据": "extract-the-data",
+    "完整脚本": "full-script",
+    "运行": "run-it"
+  },
+  "/guides/lightpanda-agent-tutorial": {
+    "前置条件": "prerequisites",
+    "1-启动-repl": "1-start-the-repl",
+    "2-运行单个任务": "2-run-a-single-task",
+    "3-登录-hacker-news": "3-log-in-to-hacker-news",
+    "4-将会话保存为脚本": "4-save-the-session-as-a-script",
+    "5-不依赖-llm-重放脚本": "5-replay-the-script-without-an-llm",
+    "6-添加你自己的-javascript-逻辑": "6-add-your-own-javascript-logic",
+    "7-从其他-agent-使用-lightpandamcp": "7-use-lightpanda-from-another-agent-mcp",
+    "延伸阅读": "further-reading",
+    "这些选择器是怎么来的": "how-we-got-those-selectors"
+  },
+  "/guides/markdown-axtree": {
+    "总览": "overview",
+    "clifetch---dump": "cli-fetch---dump",
+    "cdplpgetmarkdown": "cdp-lpgetmarkdown",
+    "cdp无障碍树": "cdp-accessibility-tree",
+    "mcp-服务器": "mcp-server",
+    "参考链接": "references",
+    "语法": "syntax",
+    "输出格式": "output-formats",
+    "基本示例": "basic-example",
+    "--with-frames-选项": "--with-frames-flag",
+    "--strip-mode-选项": "--strip-mode-flag",
+    "语义树输出": "semantic-tree-output",
+    "启动-cdp-服务器": "starting-the-cdp-server",
+    "使用-lpgetmarkdown": "using-lpgetmarkdown",
+    "在-puppeteer-中的用法": "usage-with-puppeteer",
+    "在-playwright-中的用法": "usage-with-playwright",
+    "ax-节点结构": "ax-node-structure"
+  },
+  "/guides/retrieve-an-html-webpage": {
+    "前置条件": "prerequisites",
+    "创建-indexjs": "create-indexjs",
+    "导航并提取": "navigate-and-extract",
+    "完整脚本": "full-script",
+    "运行": "run-it"
+  },
+  "/guides/use-hermes": {
+    "前置条件": "prerequisites",
+    "方案-abrowser-use-模式hermes-默认": "option-a--browser-use-mode-the-hermes-default",
+    "方案-b内置浏览器工具": "option-b--built-in-browser-tools",
+    "验证配置": "verify-the-configuration",
+    "排障明明设置了引擎hermes-却用-chrome": "troubleshooting-hermes-uses-chrome-even-though-i-set-the-engine",
+    "延伸阅读": "further-reading"
+  },
+  "/guides/use-python": {
+    "前置条件": "prerequisites",
+    "创建-scrapepy": "create-scrapepy",
+    "导航并提取": "navigate-and-extract",
+    "完整脚本": "full-script",
+    "运行": "run-it",
+    "使用-asyncio-并发抓取": "scrape-concurrently-with-asyncio",
+    "重放已保存的脚本": "replay-a-saved-script",
+    "遵守-robotstxt": "respect-robotstxt"
+  },
+  "/guides/use-stagehand": {
+    "安装-lightpanda-与-stagehand-依赖": "install-the-lightanda-and-stagehand-dependencies",
+    "结合-lightpanda-编写-stagehand-脚本": "write-your-stagehand-script-with-lightpanda",
+    "运行脚本": "run-your-script"
+  },
+  "/": {
+    "快速上手": "quickstarts"
+  },
+  "/quickstarts/agent": {
+    "前置条件": "prerequisites",
+    "步骤": "steps",
+    "安装-lightpanda": "install-lightpanda",
+    "设置供应商的-api-key": "set-your-providers-api-key",
+    "启动-repl": "launch-the-repl",
+    "告诉它你要什么": "tell-it-what-you-want",
+    "保存为可复现脚本": "save-it-as-a-reproducible-script"
+  },
+  "/quickstarts/mcp": {
+    "前置条件": "prerequisites",
+    "步骤": "steps",
+    "走向生产环境": "go-to-production",
+    "安装-lightpanda": "install-lightpanda",
+    "连接你的-ai-agent": "connect-your-ai-agent",
+    "试一试": "try-it"
+  },
+  "/quickstarts/puppeteer-playwright-clients": {
+    "步骤": "steps",
+    "走向生产环境": "go-to-production",
+    "安装-lightpanda": "install-lightpanda",
+    "安装你的客户端库": "install-your-client-library",
+    "启动-lightpanda": "start-lightpanda",
+    "连接并读取-js-渲染的内容": "connect-and-read-js-rendered-content",
+    "运行": "run-it"
+  },
+  "/quickstarts/skill": {
+    "前置条件": "prerequisites",
+    "步骤": "steps",
+    "安装-skill": "install-the-skill",
+    "安装-lightpanda": "install-lightpanda",
+    "试一试": "try-it"
+  },
+  "/reference/cli/agent": {
+    "选项": "options",
+    "示例": "examples",
+    "repl-命令": "repl-commands"
+  },
+  "/reference/cli/common-options": {
+    "选项": "options"
+  },
+  "/reference/cli/fetch": {
+    "选项": "options"
+  },
+  "/reference/cli/mcp": {
+    "选项": "options"
+  },
+  "/reference/cli/serve": {
+    "选项": "options"
+  },
+  "/reference/http-api": {
+    "抓取-url": "fetch-a-url",
+    "请求": "request",
+    "响应": "response"
+  },
+  "/reference/mcp-tools": {
+    "调用工具": "calling-a-tool",
+    "导航与搜索": "navigation-and-search",
+    "读取页面": "reading-the-page",
+    "数据提取与脚本": "data-extraction-and-scripting",
+    "与页面交互": "interacting-with-the-page",
+    "等待": "waiting",
+    "状态与调试": "state-and-debugging",
+    "仅-mcp-工具": "session",
+    "资源": "resources"
+  },
+  "/reference/pandascript": {
+    "导航": "navigation",
+    "读取页面": "reading-the-page",
+    "交互": "interaction",
+    "等待": "waiting",
+    "调用约定": "calling-conventions",
+    "错误": "errors",
+    "提取-schema": "extraction-schema"
+  },
+  "/run-locally/installation/build-from-sources": {
+    "前置条件": "prerequisites",
+    "构建与运行": "build-and-run",
+    "遥测": "telemetry",
+    "内嵌-v8-快照": "embed-v8-snapshot"
+  },
+  "/run-locally/installation/nightly-builds": {
+    "遥测": "telemetry"
+  },
+  "/run-locally/installation/one-liner": {
+    "遥测": "telemetry"
+  },
+  "/run-locally/installation/package-managers": {
+    "arch-linux-用户仓库": "arch-linux-user-repository",
+    "遥测": "telemetry"
+  },
+  "/run-on-lightpanda-cloud/getting-started": {
+    "创建账号与-token": "create-an-account-and-token",
+    "将-cdp-客户端连接到-lightpanda-cloud": "connect-your-cdp-client-to-lightpanda-cloud",
+    "其他功能playgroundhttp-api-与-mcp": "other-features-playground-http-api-and-mcp",
+    "连接选项": "connection-options"
+  },
+  "/run-on-lightpanda-cloud/limits-and-billing": {
+    "套餐": "plans",
+    "用量如何计算": "how-usage-is-measured",
+    "触达限额时": "when-you-reach-a-limit"
+  },
+  "/run-on-lightpanda-cloud/playground": {
+    "编写并运行脚本": "write-and-run-a-script",
+    "cdp_ws_url-里有什么": "what-cdp_ws_url-contains",
+    "运行时提供什么": "what-the-runtime-provides"
+  },
+  "/usage/agent": {
+    "快速上手": "quickstart",
+    "命令": "commands",
+    "repl-特性": "repl-features",
+    "一次性模式--task": "one-shot-mode---task",
+    "服务商与-api-key": "providers-and-api-keys",
+    "模型": "models",
+    "提取数据": "extracting-data",
+    "网页搜索": "web-search",
+    "元命令": "meta-commands",
+    "llm-驱动的命令": "llm-driven-commands"
+  },
+  "/usage/api": {
+    "连接": "connect",
+    "获取-url": "fetch-a-url"
+  },
+  "/usage/cdp/chromedp": {
+    "cloud-选项": "cloud-options",
+    "端点": "endpoints",
+    "浏览器": "browser",
+    "代理": "proxies"
+  },
+  "/usage/cdp/playwright": {
+    "cloud-选项": "cloud-options",
+    "端点": "endpoints",
+    "浏览器": "browser",
+    "代理": "proxies"
+  },
+  "/usage/cdp/puppeteer": {
+    "cloud-选项": "cloud-options",
+    "端点": "endpoints",
+    "浏览器": "browser",
+    "代理": "proxies"
+  },
+  "/usage/mcp": {
+    "连接-mcp-服务器": "connect-the-mcp-server",
+    "接入-ai-agent": "connect-an-ai-agent",
+    "工具与资源": "tools-and-resources",
+    "提示示例": "example-prompts",
+    "已知行为": "known-behaviors",
+    "stdio默认": "stdio-default",
+    "http-传输": "http-transport",
+    "调试": "debugging",
+    "资源": "resources",
+    "goto-在-http-错误页或超时时不会失败": "goto-doesnt-fail-on-an-http-error-page-or-a-timeout"
+  },
+  "/usage/pandascript": {
+    "运行时环境": "runtime-environment",
+    "值与返回类型": "values-and-return-types",
+    "已安装的原语": "installed-primitives",
+    "导航": "navigation",
+    "结构化提取": "structured-extraction",
+    "页面-javascript": "page-javascript",
+    "交互原语": "interaction-primitives",
+    "错误处理": "error-handling",
+    "完整示例": "complete-example"
+  }
+}
