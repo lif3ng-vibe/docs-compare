@@ -187,6 +187,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/handy/docs',
     anchorMapUrl: 'anchor-maps/handy.json',
   },
+  {
+    id: 'worktrunk',
+    name: 'Worktrunk 文档',
+    origin: 'https://worktrunk.dev',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/worktrunk',
+    anchorMapUrl: 'anchor-maps/worktrunk.json',
+  },
 
 ] as const;
 

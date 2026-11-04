@@ -249,6 +249,16 @@
         "ext": ".mdx"
       },
       "noTrailingSlash": true
+    },
+    {
+      "id": "worktrunk",
+      "dir": "worktrunk-docs-cn",
+      "origin": "https://worktrunk.dev",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/worktrunk",
+      "listFrom": {
+        "githubDir": "worktrunk-docs-cn/src/content/docs",
+        "ext": ".md"
+      }
     }
   ]
 }
