@@ -259,6 +259,16 @@
         "githubDir": "worktrunk-docs-cn/src/content/docs",
         "ext": ".md"
       }
+    },
+    {
+      "id": "gstack",
+      "dir": "gstack-docs-cn",
+      "origin": "https://github.com/garrytan/gstack",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/gstack",
+      "listFrom": {
+        "githubDir": "gstack-docs-cn/src/content/docs",
+        "ext": ".md"
+      }
     }
   ]
 }

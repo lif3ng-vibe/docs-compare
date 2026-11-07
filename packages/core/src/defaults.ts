@@ -194,6 +194,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/worktrunk',
     anchorMapUrl: 'anchor-maps/worktrunk.json',
   },
+  {
+    id: 'gstack',
+    name: 'gstack 文档',
+    origin: 'https://github.com/garrytan/gstack',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/gstack',
+    anchorMapUrl: 'anchor-maps/gstack.json',
+  },
 
 ] as const;
 
