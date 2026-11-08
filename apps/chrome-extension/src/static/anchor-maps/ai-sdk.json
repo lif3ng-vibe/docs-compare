@@ -113,39 +113,11 @@
     "检索增强生成rag": "retrieval-augmented-generation-rag",
     "组合多项修改": "combining-multiple-modifications"
   },
-  "/docs/agents/loop-control": {
-    "停止条件": "stop-conditions",
-    "准备步骤preparestep": "prepare-step",
-    "访问步骤信息": "access-step-information",
-    "强制工具调用": "forced-tool-calling",
-    "手动循环控制": "manual-loop-control",
-    "使用内置条件": "use-built-in-conditions",
-    "在最大步数内运行": "run-up-to-a-maximum-number-of-steps",
-    "运行至自然结束": "run-until-finished",
-    "组合多个条件": "combine-multiple-conditions",
-    "创建自定义条件": "create-custom-conditions",
-    "动态模型选择": "dynamic-model-selection",
-    "模型调用设置": "model-call-settings",
-    "上下文管理": "context-management",
-    "工具选择": "tool-selection",
-    "消息修改": "message-modification",
-    "实验性沙箱选择": "experimental-sandbox-selection",
-    "实现手动循环": "implementing-a-manual-loop"
-  },
   "/docs/agents/memory": {
     "三种方式": "three-approaches",
     "提供商定义的工具": "provider-defined-tools",
     "记忆提供商": "memory-providers",
     "自定义工具": "custom-tool"
-  },
-  "/docs/agents/overview": {
-    "智能体状态与上下文": "agent-state-and-context",
-    "toolloopagent-类": "toolloopagent-class",
-    "为什么使用-toolloopagent": "why-use-the-toolloopagent",
-    "harnessagent-类": "harnessagent-class",
-    "终端-ui": "terminal-ui",
-    "结构化工作流": "structured-workflows",
-    "下一步": "next-steps"
   },
   "/docs/agents/policy-tool-approvals": {
     "你能强制约束什么": "what-you-can-enforce",
@@ -221,20 +193,6 @@
     "使用-experimental_toolapprovalsecret-签名审批": "signing-approvals-with-experimental_toolapprovalsecret"
   },
   "/docs/agents/workflow-agent": {
-    "为什么需要持久化智能体": "why-durable-agents",
-    "何时用-workflowagent-还是-toolloopagent": "when-to-use-workflowagent-vs-toolloopagent",
-    "安装": "installation",
-    "创建-workflowagent": "creating-a-workflowagent",
-    "在工作流中使用智能体": "using-the-agent-in-a-workflow",
-    "使用-workflowchattransport-实现可恢复的流式": "resumable-streaming-with-workflowchattransport",
-    "工具即工作流步骤": "tools-as-workflow-steps",
-    "工具审批": "tool-approval",
-    "循环控制": "loop-control",
-    "结构化输出": "structured-output",
-    "配置选项": "configuration-options",
-    "生命周期回调": "lifecycle-callbacks",
-    "类型推断": "type-inference",
-    "从-durableagent-迁移": "migrating-from-durableagent",
     "模型解析": "model-resolution",
     "端到端示例": "end-to-end-example",
     "消息转换": "message-conversion",
@@ -334,13 +292,6 @@
     "访问响应的请求头与响应体": "accessing-response-headers--body",
     "流中的错误处理": "error-handling-in-streams"
   },
-  "/docs/ai-sdk-core/generating-text": {
-    "访问响应请求头与响应体": "accessing-response-headers--body",
-    "onend-回调": "onend-callback",
-    "生命周期回调实验性": "lifecycle-callbacks-experimental",
-    "onend-callback": "onend-callback-1",
-    "生命周期回调实验性-1": "lifecycle-callbacks-experimental-1"
-  },
   "/docs/ai-sdk-core/image-generation": {
     "设置": "settings",
     "图像中间件": "image-middleware",
@@ -405,29 +356,7 @@
     "使用-mcp-提示词": "using-mcp-prompts",
     "处理引导请求elicitation": "handling-elicitation-requests",
     "检测工具定义漂移rug-pull": "detecting-tool-definition-drift-rug-pull",
-    "示例": "examples",
-    "http-传输推荐": "http-transport-recommended",
-    "sse-传输": "sse-transport",
-    "stdio-传输本地服务器": "stdio-transport-local-servers",
-    "自定义传输": "custom-transport",
-    "共享-oauth-凭据存储": "shared-oauth-credential-storage",
-    "oauth-授权服务器验证": "oauth-authorization-server-validation",
-    "oauth-回调签发方验证": "oauth-callback-issuer-validation",
-    "动态客户端凭据恢复": "dynamic-client-credential-recovery",
-    "重试瞬时工具失败": "retrying-transient-tool-failures",
-    "关闭-mcp-客户端": "closing-the-mcp-client",
-    "schema-发现": "schema-discovery",
-    "工具批注与审批": "tool-annotations-and-approval",
-    "定义-schema": "schema-definition",
-    "类型化工具输出": "typed-tool-outputs",
-    "列出资源": "listing-resources",
-    "读取资源内容": "reading-resource-contents",
-    "列出资源模板": "listing-resource-templates",
-    "列出提示词": "listing-prompts",
-    "获取提示词": "getting-a-prompt",
-    "启用引导支持": "enabling-elicitation-support",
-    "注册引导处理器": "registering-an-elicitation-handler",
-    "引导响应动作": "elicitation-response-actions"
+    "示例": "examples"
   },
   "/docs/ai-sdk-core/middleware": {
     "使用语言模型中间件": "using-language-model-middleware",
@@ -486,28 +415,12 @@
     "示例使用技能接口": "example-use-skills-interface",
     "自定义全局提供商": "customizing-the-global-provider"
   },
-  "/docs/ai-sdk-core/realtime": {
-    "设置端点": "setup-endpoint",
-    "客户端会话": "client-session",
-    "工具调用": "tool-calling",
-    "支持的提供商": "supported-providers",
-    "服务器支撑的工具端点": "server-backed-tool-endpoint",
-    "客户端工具处理器": "client-tool-handler"
-  },
   "/docs/ai-sdk-core/reasoning": {
     "基本用法": "basic-usage",
     "流式": "streaming",
     "优先级规则": "precedence-rules",
     "提供商支持": "provider-support",
-    "从-provideroptions-迁移": "migrating-from-provideroptions",
-    "迁移前anthropic": "before-anthropic",
-    "迁移后anthropic": "after-anthropic",
-    "迁移前anthropic-旧模型": "before-anthropic-with-older-model",
-    "迁移后anthropic-旧模型": "after-anthropic-with-older-model",
-    "迁移前google-带-includethoughts": "before-google-with-includethoughts",
-    "迁移后google-带-includethoughts": "after-google-with-includethoughts",
-    "迁移前openai-带-reasoningsummary": "before-openai-with-reasoningsummary",
-    "迁移后openai-带-reasoningsummary": "after-openai-with-reasoningsummary"
+    "从-provideroptions-迁移": "migrating-from-provideroptions"
   },
   "/docs/ai-sdk-core/reranking": {
     "文档重排序": "reranking-documents",
@@ -552,9 +465,6 @@
     "支持的提供商": "supported-providers"
   },
   "/docs/ai-sdk-core/speech": {
-    "遥测": "telemetry",
-    "设置": "settings",
-    "语音模型": "speech-models",
     "提供商特定设置": "provider-specific-settings",
     "中止信号与超时": "abort-signals-and-timeouts",
     "自定义请求头": "custom-headers",
@@ -562,33 +472,6 @@
     "错误处理": "error-handling"
   },
   "/docs/ai-sdk-core/telemetry": {
-    "启用遥测": "enabling-telemetry",
-    "遥测元数据": "telemetry-metadata",
-    "自定义-tracer": "custom-tracer",
-    "遥测集成": "telemetry-integrations",
-    "收集的数据": "collected-data",
-    "步骤-1注册-opentelemetry-集成": "step-1-register-the-opentelemetry-integration",
-    "步骤-2启用遥测": "step-2-enabling-telemetry",
-    "选择退出": "opting-out",
-    "运行时上下文的遥测收录": "runtime-context-telemetry-inclusion",
-    "工具上下文": "tool-context",
-    "全局注册集成": "registering-integrations-globally",
-    "单次调用的集成": "per-call-integrations",
-    "追踪通道tracing-channel": "tracing-channel",
-    "构建自定义集成": "building-a-custom-integration",
-    "可用的生命周期方法": "available-lifecycle-methods",
-    "genai-语义约定": "genai-semantic-conventions",
-    "自定义-opentelemetry-span-属性": "custom-opentelemetry-span-attributes",
-    "opentelemetry-span-上的补充-ai-sdk-属性": "supplemental-ai-sdk-attributes-on-opentelemetry-spans",
-    "legacy-ai-sdk-spanlegacyopentelemetry": "legacy-ai-sdk-spans-legacyopentelemetry",
-    "已弃用的对象-apigenerateobject--streamobject": "deprecated-object-apis-generateobject--streamobject",
-    "genai-span-详情": "genai-span-details",
-    "generatetext-函数": "generatetext-function",
-    "streamtext-函数": "streamtext-function",
-    "已弃用的对象-api": "deprecated-object-apis",
-    "embed-函数": "embed-function",
-    "embedmany-函数": "embedmany-function",
-    "legacy-span-详情": "legacy-span-details",
     "genai-消息格式": "genai-message-format",
     "genai-工具调用-span": "genai-tool-call-spans",
     "基础-llm-span-信息": "basic-llm-span-information",
@@ -628,38 +511,12 @@
     "提取工具": "extracting-tools",
     "mcp-工具": "mcp-tools",
     "示例-2": "examples",
-    "配置-toolapproval": "configure-toolapproval",
-    "工作原理": "how-it-works",
-    "处理审批请求": "handling-approval-requests",
-    "动态审批": "dynamic-approval",
-    "usechat-中的工具执行审批": "tool-execution-approval-with-usechat",
-    "示例": "example",
-    "步骤": "steps",
-    "onstepend-回调": "onstepend-callback",
-    "工具执行生命周期回调": "tool-execution-lifecycle-callbacks",
-    "preparestep-回调": "preparestep-callback",
-    "使用-dynamictool": "using-dynamictool",
-    "类型安全处理": "type-safe-handling",
-    "工具调用-id": "tool-call-id",
-    "消息": "messages",
-    "中止信号": "abort-signals",
-    "实验性沙箱": "experimental-sandbox",
-    "运行时上下文": "runtime-context",
-    "工具上下文遥测": "tool-context-telemetry",
-    "示例-1": "example-1",
-    "示例使用结构化输出模型进行修复": "example-use-a-model-with-structured-outputs-for-repair",
-    "示例使用重新询问策略进行修复": "example-use-the-re-ask-strategy-for-repair",
-    "ai-sdk-工具与-mcp-工具": "ai-sdk-tools-vs-mcp-tools",
     "通用-toolapproval-函数": "generic-toolapproval-function",
     "示例从所有步骤提取工具结果": "example-extract-tool-results-from-all-steps",
     "为较长的智能体循环修改消息": "message-modification-for-longer-agentic-loops",
     "用于步骤配置的提供商选项": "provider-options-for-step-configuration"
   },
   "/docs/ai-sdk-core/transcription": {
-    "遥测": "telemetry",
-    "流式转写": "streaming-transcription",
-    "设置": "settings",
-    "语音转写模型": "transcription-models",
     "提供商特定设置": "provider-specific-settings",
     "下载大小限制": "download-size-limits",
     "中止信号与超时": "abort-signals-and-timeouts",
@@ -692,27 +549,6 @@
     "ai-sdk-harness-适配器": "ai-sdk-harness-adapters",
     "适配器能力": "adapter-capabilities",
     "即将推出": "coming-soon"
-  },
-  "/docs/ai-sdk-harnesses/harness-agent": {
-    "安装": "installation",
-    "创建智能体": "create-an-agent",
-    "运行回合": "run-a-turn",
-    "生命周期回调": "lifecycle-callbacks",
-    "运行时上下文": "runtime-context",
-    "生成结构化输出": "generate-structured-output",
-    "消息与历史": "messages-and-history",
-    "会话生命周期": "session-lifecycle",
-    "在回合之间更改设置": "change-settings-between-turns",
-    "恢复": "resuming",
-    "继续被暂停的回合": "continue-a-suspended-turn",
-    "在-harness-步骤之后停止": "stop-after-a-harness-step",
-    "准备沙箱": "prepare-the-sandbox",
-    "准备可复用沙箱": "prepare-reusable-sandboxes",
-    "设置": "settings",
-    "自定义沙箱编排": "custom-sandbox-orchestration",
-    "下一步": "next-steps",
-    "读取运行时自身的历史": "reading-the-runtimes-own-history",
-    "无网络控制的基本沙箱会话": "basic-sandbox-sessions-without-network-control"
   },
   "/docs/ai-sdk-harnesses/overview": {
     "何时使用-harness": "when-to-use-a-harness",
@@ -765,97 +601,6 @@
     "启动时间切片工作流": "starting-the-time-sliced-workflow",
     "语义智能体步骤工作流": "semantic-agent-step-workflow",
     "时间切片工作流": "time-sliced-workflow"
-  },
-  "/docs/ai-sdk-rsc/error-handling": {
-    "处理-ui-错误": "handling-ui-errors",
-    "处理其他错误": "handling-other-errors"
-  },
-  "/docs/ai-sdk-rsc/generative-ui-state": {
-    "什么是-ai-状态与-ui-状态": "what-is-ai-and-ui-state",
-    "使用-ai--ui-状态": "using-ai--ui-state",
-    "在客户端读取-ui-状态": "reading-ui-state-in-client",
-    "在客户端读取-ai-状态": "reading-ai-state-in-client",
-    "在服务器读取-ai-状态": "reading-ai-state-on-server",
-    "在服务器更新-ai-状态": "updating-ai-state-on-server",
-    "从客户端调用-server-actions": "calling-server-actions-from-the-client",
-    "ai-状态": "ai-state",
-    "ui-状态": "ui-state",
-    "创建-ai-上下文": "creating-the-ai-context"
-  },
-  "/docs/ai-sdk-rsc/loading-state": {
-    "在客户端处理加载状态": "handling-loading-state-on-the-client",
-    "从服务器流式传输加载状态": "streaming-loading-state-from-the-server",
-    "使用-streamui-流式传输加载组件": "streaming-loading-components-with-streamui",
-    "服务端-2": "server-2",
-    "客户端-2": "client-2",
-    "客户端": "client",
-    "服务端": "server",
-    "服务端-1": "server-1",
-    "客户端-1": "client-1"
-  },
-  "/docs/ai-sdk-rsc/migrating-to-ui": {
-    "背景": "background",
-    "流式传输聊天补全": "streaming-chat-completions",
-    "流式传输对象生成": "streaming-object-generation",
-    "基本设置": "basic-setup",
-    "并行工具调用": "parallel-tool-calls",
-    "多步工具调用": "multi-step-tool-calls",
-    "生成式用户界面": "generative-user-interfaces",
-    "处理客户端交互": "handling-client-interactions",
-    "加载指示器": "loading-indicators",
-    "保存聊天": "saving-chats",
-    "恢复聊天": "restoring-chats",
-    "迁移前在单个-server-action-中处理生成与渲染": "before-handle-generation-and-rendering-in-a-single-server-action",
-    "迁移前调用-server-action-并更新-ui-状态": "before-call-server-action-and-update-ui-state",
-    "迁移后用-route-handler-替换-server-action": "after-replace-server-action-with-route-handler",
-    "迁移后更新客户端以使用-chat-hook": "after-update-client-to-use-chat-hook",
-    "迁移前在-server-action-内渲染组件并流式传输到客户端": "before-render-components-within-the-server-action-and-stream-to-client",
-    "迁移后替换为-route-handler-并将-props-数据流式传输到客户端": "after-replace-with-route-handler-and-stream-props-data-to-client",
-    "迁移后更新客户端以使用-chat-hook-并通过工具调用渲染组件": "after-update-client-to-use-chat-hook-and-render-components-using-tool-invocations",
-    "迁移前使用-actions-hook-发送消息": "before-use-actions-hook-to-send-messages",
-    "迁移后在组件中使用相同-id-的另一个-chat-hook": "after-use-another-chat-hook-with-same-id-from-the-component",
-    "迁移前使用-loading-显示加载指示器": "before-use-loading-to-show-loading-indicator",
-    "迁移后使用工具调用状态显示加载指示器": "after-use-tool-invocation-state-to-show-loading-indicator",
-    "迁移前使用上下文提供程序的回调函数保存聊天": "before-save-chats-using-callback-function-of-context-provider",
-    "迁移后使用-streamtext-的回调函数保存聊天": "after-save-chats-using-callback-function-of-streamtext",
-    "迁移前使用上下文提供程序的回调函数从数据库加载聊天": "before-load-chat-from-database-using-callback-function-of-context-provider",
-    "迁移后在页面静态生成期间从数据库加载聊天": "after-load-chat-from-database-during-static-generation-of-page",
-    "迁移后将聊天消息作为-props-传入并加载到-chat-hook": "after-pass-chat-messages-as-props-and-load-into-chat-hook",
-    "迁移前使用可流式值流式传输对象生成": "before-use-streamable-value-to-stream-object-generations",
-    "迁移前读取可流式值并更新对象": "before-read-streamable-value-and-update-object",
-    "迁移后替换为-route-handler-并流式传输文本响应": "after-replace-with-route-handler-and-stream-text-response",
-    "迁移后使用-object-hook-解码流并更新对象": "after-use-object-hook-to-decode-stream-and-update-object"
-  },
-  "/docs/ai-sdk-rsc/multistep-interfaces": {
-    "概述": "overview",
-    "实现": "implementation"
-  },
-  "/docs/ai-sdk-rsc/overview": {
-    "ai-sdk-rsc-函数": "ai-sdk-rsc-functions",
-    "模板": "templates",
-    "api-参考": "api-reference"
-  },
-  "/docs/ai-sdk-rsc/saving-and-restoring-states": {
-    "ai-状态": "ai-state",
-    "ui-状态": "ui-state",
-    "保存-ai-状态": "saving-ai-state",
-    "恢复-ai-状态": "restoring-ai-state",
-    "保存-ui-状态": "saving-ui-state",
-    "恢复-ui-状态": "restoring-ui-state"
-  },
-  "/docs/ai-sdk-rsc/streaming-react-components": {
-    "在-nextjs-中使用-streamui": "using-streamui-with-nextjs",
-    "超越单个提示词": "going-beyond-a-single-prompt",
-    "核心概念": "concepts",
-    "添加工具": "adding-a-tool",
-    "步骤-1创建-server-action": "step-1-create-a-server-action",
-    "步骤-2创建页面": "step-2-create-a-page"
-  },
-  "/docs/ai-sdk-rsc/streaming-values": {
-    "创建可流式传输的值": "creating-a-streamable-value",
-    "读取可流式传输的值": "reading-a-streamable-value",
-    "使用-createstreamableui": "using-createstreamableui",
-    "读取可流式-ui": "reading-a-streamable-ui"
   },
   "/docs/ai-sdk-ui/chatbot-message-persistence": {
     "开始新的聊天": "starting-a-new-chat",
@@ -1009,30 +754,6 @@
   "/docs/ai-sdk-ui/stream-protocol": {
     "文本流协议": "text-stream-protocol",
     "数据流协议": "data-stream-protocol",
-    "文本流示例": "text-stream-example",
-    "消息开始部分": "message-start-part",
-    "文本部分": "text-parts",
-    "推理部分": "reasoning-parts",
-    "推理文件部分": "reasoning-file-part",
-    "来源部分": "source-parts",
-    "文件部分": "file-part",
-    "自定义部分": "custom-part",
-    "数据部分": "data-parts",
-    "错误部分": "error-part",
-    "工具输入开始部分": "tool-input-start-part",
-    "工具输入增量部分": "tool-input-delta-part",
-    "工具输入就绪部分": "tool-input-available-part",
-    "工具审批请求部分": "tool-approval-request-part",
-    "工具审批响应部分": "tool-approval-response-part",
-    "工具输出就绪部分": "tool-output-available-part",
-    "工具输出拒绝部分": "tool-output-denied-part",
-    "步骤开始部分": "start-step-part",
-    "步骤完成部分": "finish-step-part",
-    "步骤重置部分": "reset-step-part",
-    "消息完成部分": "finish-message-part",
-    "中止部分": "abort-part",
-    "流终止": "stream-termination",
-    "ui-消息流示例": "ui-message-stream-example",
     "文本开始部分": "text-start-part",
     "文本增量部分": "text-delta-part",
     "文本结束部分": "text-end-part",
@@ -1064,6 +785,97 @@
     "请求转换": "request-transformation",
     "工作原理": "how-it-works",
     "配置选项": "configuration-options"
+  },
+  "/docs/ai-sdk-rsc/error-handling": {
+    "处理-ui-错误": "handling-ui-errors",
+    "处理其他错误": "handling-other-errors"
+  },
+  "/docs/ai-sdk-rsc/generative-ui-state": {
+    "什么是-ai-状态与-ui-状态": "what-is-ai-and-ui-state",
+    "使用-ai--ui-状态": "using-ai--ui-state",
+    "在客户端读取-ui-状态": "reading-ui-state-in-client",
+    "在客户端读取-ai-状态": "reading-ai-state-in-client",
+    "在服务器读取-ai-状态": "reading-ai-state-on-server",
+    "在服务器更新-ai-状态": "updating-ai-state-on-server",
+    "从客户端调用-server-actions": "calling-server-actions-from-the-client",
+    "ai-状态": "ai-state",
+    "ui-状态": "ui-state",
+    "创建-ai-上下文": "creating-the-ai-context"
+  },
+  "/docs/ai-sdk-rsc/loading-state": {
+    "在客户端处理加载状态": "handling-loading-state-on-the-client",
+    "从服务器流式传输加载状态": "streaming-loading-state-from-the-server",
+    "使用-streamui-流式传输加载组件": "streaming-loading-components-with-streamui",
+    "服务端-2": "server-2",
+    "客户端-2": "client-2",
+    "客户端": "client",
+    "服务端": "server",
+    "服务端-1": "server-1",
+    "客户端-1": "client-1"
+  },
+  "/docs/ai-sdk-rsc/migrating-to-ui": {
+    "背景": "background",
+    "流式传输聊天补全": "streaming-chat-completions",
+    "流式传输对象生成": "streaming-object-generation",
+    "基本设置": "basic-setup",
+    "并行工具调用": "parallel-tool-calls",
+    "多步工具调用": "multi-step-tool-calls",
+    "生成式用户界面": "generative-user-interfaces",
+    "处理客户端交互": "handling-client-interactions",
+    "加载指示器": "loading-indicators",
+    "保存聊天": "saving-chats",
+    "恢复聊天": "restoring-chats",
+    "迁移前在单个-server-action-中处理生成与渲染": "before-handle-generation-and-rendering-in-a-single-server-action",
+    "迁移前调用-server-action-并更新-ui-状态": "before-call-server-action-and-update-ui-state",
+    "迁移后用-route-handler-替换-server-action": "after-replace-server-action-with-route-handler",
+    "迁移后更新客户端以使用-chat-hook": "after-update-client-to-use-chat-hook",
+    "迁移前在-server-action-内渲染组件并流式传输到客户端": "before-render-components-within-the-server-action-and-stream-to-client",
+    "迁移后替换为-route-handler-并将-props-数据流式传输到客户端": "after-replace-with-route-handler-and-stream-props-data-to-client",
+    "迁移后更新客户端以使用-chat-hook-并通过工具调用渲染组件": "after-update-client-to-use-chat-hook-and-render-components-using-tool-invocations",
+    "迁移前使用-actions-hook-发送消息": "before-use-actions-hook-to-send-messages",
+    "迁移后在组件中使用相同-id-的另一个-chat-hook": "after-use-another-chat-hook-with-same-id-from-the-component",
+    "迁移前使用-loading-显示加载指示器": "before-use-loading-to-show-loading-indicator",
+    "迁移后使用工具调用状态显示加载指示器": "after-use-tool-invocation-state-to-show-loading-indicator",
+    "迁移前使用上下文提供程序的回调函数保存聊天": "before-save-chats-using-callback-function-of-context-provider",
+    "迁移后使用-streamtext-的回调函数保存聊天": "after-save-chats-using-callback-function-of-streamtext",
+    "迁移前使用上下文提供程序的回调函数从数据库加载聊天": "before-load-chat-from-database-using-callback-function-of-context-provider",
+    "迁移后在页面静态生成期间从数据库加载聊天": "after-load-chat-from-database-during-static-generation-of-page",
+    "迁移后将聊天消息作为-props-传入并加载到-chat-hook": "after-pass-chat-messages-as-props-and-load-into-chat-hook",
+    "迁移前使用可流式值流式传输对象生成": "before-use-streamable-value-to-stream-object-generations",
+    "迁移前读取可流式值并更新对象": "before-read-streamable-value-and-update-object",
+    "迁移后替换为-route-handler-并流式传输文本响应": "after-replace-with-route-handler-and-stream-text-response",
+    "迁移后使用-object-hook-解码流并更新对象": "after-use-object-hook-to-decode-stream-and-update-object"
+  },
+  "/docs/ai-sdk-rsc/multistep-interfaces": {
+    "概述": "overview",
+    "实现": "implementation"
+  },
+  "/docs/ai-sdk-rsc/overview": {
+    "ai-sdk-rsc-函数": "ai-sdk-rsc-functions",
+    "模板": "templates",
+    "api-参考": "api-reference"
+  },
+  "/docs/ai-sdk-rsc/saving-and-restoring-states": {
+    "ai-状态": "ai-state",
+    "ui-状态": "ui-state",
+    "保存-ai-状态": "saving-ai-state",
+    "恢复-ai-状态": "restoring-ai-state",
+    "保存-ui-状态": "saving-ui-state",
+    "恢复-ui-状态": "restoring-ui-state"
+  },
+  "/docs/ai-sdk-rsc/streaming-react-components": {
+    "在-nextjs-中使用-streamui": "using-streamui-with-nextjs",
+    "超越单个提示词": "going-beyond-a-single-prompt",
+    "核心概念": "concepts",
+    "添加工具": "adding-a-tool",
+    "步骤-1创建-server-action": "step-1-create-a-server-action",
+    "步骤-2创建页面": "step-2-create-a-page"
+  },
+  "/docs/ai-sdk-rsc/streaming-values": {
+    "创建可流式传输的值": "creating-a-streamable-value",
+    "读取可流式传输的值": "reading-a-streamable-value",
+    "使用-createstreamableui": "using-createstreamableui",
+    "读取可流式-ui": "reading-a-streamable-ui"
   },
   "/docs/foundations/overview": {
     "生成式人工智能": "generative-artificial-intelligence",
@@ -1193,7 +1005,7 @@
   },
   "/docs/getting-started/nextjs-pages-router": {
     "前置条件": "prerequisites",
-    "设置你的应用": "setup-your-application",
+    "设置你的应用": "set-up-your-application",
     "创建-route-handler": "create-a-route-handler",
     "选择提供商": "choosing-a-provider",
     "搭建-ui": "wire-up-the-ui",
@@ -1846,306 +1658,6 @@
     "问题": "issue",
     "解决方案": "solution"
   },
-  "/docs/reference/ai-sdk-errors/ai-api-call-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-decision-refusal-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-decision-unsupported-question-type-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-download-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-empty-response-body-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-invalid-argument-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-invalid-data-content-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-invalid-message-role-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-invalid-prompt-error": {
-    "潜在原因": "potential-causes",
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error",
-    "ui-消息": "ui-messages"
-  },
-  "/docs/reference/ai-sdk-errors/ai-invalid-response-data-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-invalid-tool-approval-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-invalid-tool-approval-signature-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-invalid-tool-input-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-json-parse-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-load-api-key-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-load-setting-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-message-conversion-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-content-generated-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-image-generated-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-object-generated-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-output-generated-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-speech-generated-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-such-model-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-such-provider-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-such-provider-reference-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-such-tool-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-transcript-generated-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-translation-generated-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-no-video-generated-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-retry-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-stream-provider-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-too-many-embedding-values-for-call-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-tool-call-not-found-for-approval-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-tool-call-repair-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-tool-choice-violation-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-type-validation-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors/ai-ui-message-stream-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error",
-    "常见解决方案": "common-solutions"
-  },
-  "/docs/reference/ai-sdk-errors/ai-unsupported-functionality-error": {
-    "属性": "properties",
-    "排查此错误": "checking-for-this-error"
-  },
-  "/docs/reference/ai-sdk-errors": {
-    "导入错误": "importing-errors",
-    "迁移到类型化错误处理": "migrating-to-typed-error-handling",
-    "常见失败模式": "common-failure-modes",
-    "错误参考": "error-reference",
-    "基础错误": "base-error",
-    "提供商请求与响应": "provider-requests-and-responses",
-    "输入与消息流": "inputs-and-message-streams",
-    "生成的输出": "generated-output",
-    "提供商与模型兼容性": "providers-and-model-compatibility",
-    "工具与批准": "tools-and-approvals"
-  },
-  "/docs/reference/ai-sdk-tui/run-agent-tui": {
-    "导入": "import",
-    "api-签名": "api-signature",
-    "类型": "types",
-    "工具显示选项示例": "example-with-tool-display-options",
-    "聊天传输层示例": "example-with-a-chat-transport",
-    "沙箱示例": "example-with-sandbox",
-    "兼容性": "compatibility",
-    "相关内容": "related",
-    "参数": "parameters",
-    "返回值": "returns"
-  },
-  "/docs/reference/ai-sdk-workflow/generate-video": {
-    "导入": "import",
-    "参数": "parameters",
-    "返回值": "returns"
-  },
-  "/docs/reference/ai-sdk-workflow/workflow-agent": {
-    "导入": "import",
-    "构造函数": "constructor",
-    "属性": "properties",
-    "方法": "methods",
-    "工具函数": "utilities",
-    "类型": "types",
-    "示例": "examples",
-    "参数": "parameters",
-    "repairtoolcall-在工作流中": "repairtoolcall-in-a-workflow",
-    "experimental_transform-在工作流中": "experimental_transform-in-a-workflow",
-    "带工具的基本智能体": "basic-agent-with-tools",
-    "工作流中使用持久化工具的智能体": "agent-in-a-workflow-with-durable-tools",
-    "带结构化输出的智能体": "agent-with-structured-output",
-    "带工具审批的智能体": "agent-with-tool-approval",
-    "带生命周期回调的智能体": "agent-with-lifecycle-callbacks",
-    "返回值": "returns",
-    "返回值-1": "returns-1"
-  },
-  "/docs/reference/ai-sdk-workflow/workflow-chat-transport": {
-    "导入": "import",
-    "构造函数": "constructor",
-    "方法": "methods",
-    "重连工作原理": "how-reconnection-works",
-    "服务器要求": "server-requirements",
-    "示例": "examples",
-    "参数": "parameters",
-    "负数起始索引": "negative-start-index",
-    "post-api例如-apichat": "post-api-eg-apichat",
-    "get-apirunidstream例如-apichatrunidstream": "get-apirunidstream-eg-apichatrunidstream",
-    "usechat-基本用法": "basic-usage-with-usechat",
-    "使用回调": "with-callbacks",
-    "服务器端端点nextjs": "server-side-endpoints-nextjs",
-    "返回值": "returns",
-    "返回值-1": "returns-1"
-  },
-  "/docs/reference/ai-sdk-rsc/create-ai": {
-    "导入": "import",
-    "api-签名": "api-signature",
-    "示例": "examples",
-    "参数": "parameters",
-    "返回值": "returns"
-  },
-  "/docs/reference/ai-sdk-rsc/create-streamable-ui": {
-    "导入": "import",
-    "api-签名": "api-signature",
-    "示例": "examples",
-    "参数": "parameters",
-    "返回值": "returns",
-    "方法": "methods"
-  },
-  "/docs/reference/ai-sdk-rsc/create-streamable-value": {
-    "导入": "import",
-    "api-签名": "api-signature",
-    "参数": "parameters",
-    "返回值": "returns",
-    "方法": "methods"
-  },
-  "/docs/reference/ai-sdk-rsc/get-ai-state": {
-    "导入": "import",
-    "api-签名": "api-signature",
-    "示例": "examples",
-    "参数": "parameters",
-    "返回值": "returns"
-  },
-  "/docs/reference/ai-sdk-rsc/get-mutable-ai-state": {
-    "导入": "import",
-    "api-签名": "api-signature",
-    "示例": "examples",
-    "参数": "parameters",
-    "返回值": "returns",
-    "方法": "methods"
-  },
-  "/docs/reference/ai-sdk-rsc/read-streamable-value": {
-    "导入": "import",
-    "示例": "example",
-    "api-签名": "api-signature",
-    "参数": "parameters",
-    "返回值": "returns"
-  },
-  "/docs/reference/ai-sdk-rsc/render": {
-    "导入不再可用": "import-no-longer-available",
-    "api-签名": "api-signature",
-    "参数": "parameters",
-    "返回值": "returns"
-  },
-  "/docs/reference/ai-sdk-rsc/stream-ui": {
-    "导入": "import",
-    "参数": "parameters",
-    "返回值": "returns",
-    "示例": "examples"
-  },
-  "/docs/reference/ai-sdk-rsc/use-actions": {
-    "导入": "import",
-    "api-签名": "api-signature",
-    "示例": "examples",
-    "返回值": "returns"
-  },
-  "/docs/reference/ai-sdk-rsc/use-ai-state": {
-    "导入": "import",
-    "api-签名": "api-signature",
-    "返回值": "returns"
-  },
-  "/docs/reference/ai-sdk-rsc/use-streamable-value": {
-    "导入": "import",
-    "示例": "example",
-    "api-签名": "api-signature",
-    "参数": "parameters",
-    "返回值": "returns"
-  },
-  "/docs/reference/ai-sdk-rsc/use-ui-state": {
-    "导入": "import",
-    "api-签名": "api-signature",
-    "示例": "examples",
-    "返回值": "returns"
-  },
   "/docs/reference/ai-sdk-core/add-tool-input-examples-middleware": {
     "导入": "import",
     "用法示例": "usage-example",
@@ -2222,13 +1734,6 @@
     "示例自定义模型设置": "example-custom-model-settings",
     "参数": "parameters",
     "返回值": "returns"
-  },
-  "/docs/reference/ai-sdk-core/decide": {
-    "参数": "parameters",
-    "结果": "result",
-    "提供商规范": "provider-specification",
-    "错误": "errors",
-    "模型解析": "model-resolution"
   },
   "/docs/reference/ai-sdk-core/default-generated-file": {
     "导入": "import",
@@ -2486,13 +1991,6 @@
     "已弃用的-rawinput-字段": "deprecated-rawinput-field",
     "进阶用法": "advanced-usage"
   },
-  "/docs/reference/ai-sdk-core/sandbox": {
-    "导入": "import",
-    "类型定义": "type-definition",
-    "属性": "properties",
-    "示例": "example",
-    "另请参阅": "see-also"
-  },
   "/docs/reference/ai-sdk-core/simulate-readable-stream": {
     "导入": "import",
     "api-签名": "api-signature",
@@ -2633,6 +2131,217 @@
     "参数": "parameters",
     "返回值": "returns"
   },
+  "/docs/reference/ai-sdk-tui/run-agent-tui": {
+    "导入": "import",
+    "api-签名": "api-signature",
+    "类型": "types",
+    "工具显示选项示例": "example-with-tool-display-options",
+    "聊天传输层示例": "example-with-a-chat-transport",
+    "沙箱示例": "example-with-sandbox",
+    "兼容性": "compatibility",
+    "相关内容": "related",
+    "参数": "parameters",
+    "返回值": "returns"
+  },
+  "/docs/reference/ai-sdk-workflow/generate-video": {
+    "导入": "import",
+    "参数": "parameters",
+    "返回值": "returns"
+  },
+  "/docs/reference/ai-sdk-workflow/workflow-agent": {
+    "导入": "import",
+    "构造函数": "constructor",
+    "属性": "properties",
+    "方法": "methods",
+    "工具函数": "utilities",
+    "类型": "types",
+    "示例": "examples",
+    "返回值": "returns",
+    "返回值-1": "returns-1"
+  },
+  "/docs/reference/ai-sdk-workflow/workflow-chat-transport": {
+    "导入": "import",
+    "构造函数": "constructor",
+    "方法": "methods",
+    "重连工作原理": "how-reconnection-works",
+    "服务器要求": "server-requirements",
+    "示例": "examples",
+    "参数": "parameters",
+    "负数起始索引": "negative-start-index",
+    "post-api例如-apichat": "post-api-eg-apichat",
+    "get-apirunidstream例如-apichatrunidstream": "get-apirunidstream-eg-apichatrunidstream",
+    "usechat-基本用法": "basic-usage-with-usechat",
+    "使用回调": "with-callbacks",
+    "服务器端端点nextjs": "server-side-endpoints-nextjs",
+    "返回值": "returns",
+    "返回值-1": "returns-1"
+  },
+  "/docs/reference/ai-sdk-errors/ai-api-call-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-decision-refusal-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-decision-unsupported-question-type-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-download-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-empty-response-body-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-invalid-argument-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-invalid-data-content-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-invalid-message-role-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-invalid-prompt-error": {
+    "潜在原因": "potential-causes",
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-invalid-response-data-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-invalid-tool-approval-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-invalid-tool-approval-signature-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-invalid-tool-input-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-json-parse-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-load-api-key-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-load-setting-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-message-conversion-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-content-generated-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-image-generated-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-object-generated-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-output-generated-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-speech-generated-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-such-model-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-such-provider-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-such-provider-reference-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-such-tool-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-transcript-generated-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-translation-generated-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-no-video-generated-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-retry-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-stream-provider-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-too-many-embedding-values-for-call-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-tool-call-not-found-for-approval-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-tool-call-repair-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-tool-choice-violation-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-type-validation-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors/ai-ui-message-stream-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error",
+    "常见解决方案": "common-solutions"
+  },
+  "/docs/reference/ai-sdk-errors/ai-unsupported-functionality-error": {
+    "属性": "properties",
+    "排查此错误": "checking-for-this-error"
+  },
+  "/docs/reference/ai-sdk-errors": {
+    "导入错误": "importing-errors",
+    "迁移到类型化错误处理": "migrating-to-typed-error-handling",
+    "常见失败模式": "common-failure-modes",
+    "错误参考": "error-reference",
+    "基础错误": "base-error",
+    "提供商请求与响应": "provider-requests-and-responses",
+    "输入与消息流": "inputs-and-message-streams",
+    "生成的输出": "generated-output",
+    "提供商与模型兼容性": "providers-and-model-compatibility",
+    "工具与批准": "tools-and-approvals"
+  },
   "/docs/reference/ai-sdk-ui/convert-to-model-messages": {
     "导入": "import",
     "api-签名": "api-signature",
@@ -2752,10 +2461,86 @@
     "api-签名": "api-signature",
     "工具调用": "tool-calling",
     "采集所有权": "capture-ownership",
-    "实验性兼容性": "experimental-compatibility",
-    "应用侧处理的客户端委托": "application-handled-client-delegation",
-    "可选的-webrtc": "optional-webrtc",
+    "实验性兼容性": "experimental-compatibility"
+  },
+  "/docs/reference/ai-sdk-rsc/create-ai": {
+    "导入": "import",
+    "api-签名": "api-signature",
+    "示例": "examples",
     "参数": "parameters",
+    "返回值": "returns"
+  },
+  "/docs/reference/ai-sdk-rsc/create-streamable-ui": {
+    "导入": "import",
+    "api-签名": "api-signature",
+    "示例": "examples",
+    "参数": "parameters",
+    "返回值": "returns",
+    "方法": "methods"
+  },
+  "/docs/reference/ai-sdk-rsc/create-streamable-value": {
+    "导入": "import",
+    "api-签名": "api-signature",
+    "参数": "parameters",
+    "返回值": "returns",
+    "方法": "methods"
+  },
+  "/docs/reference/ai-sdk-rsc/get-ai-state": {
+    "导入": "import",
+    "api-签名": "api-signature",
+    "示例": "examples",
+    "参数": "parameters",
+    "返回值": "returns"
+  },
+  "/docs/reference/ai-sdk-rsc/get-mutable-ai-state": {
+    "导入": "import",
+    "api-签名": "api-signature",
+    "示例": "examples",
+    "参数": "parameters",
+    "返回值": "returns",
+    "方法": "methods"
+  },
+  "/docs/reference/ai-sdk-rsc/read-streamable-value": {
+    "导入": "import",
+    "示例": "example",
+    "api-签名": "api-signature",
+    "参数": "parameters",
+    "返回值": "returns"
+  },
+  "/docs/reference/ai-sdk-rsc/render": {
+    "导入不再可用": "import-no-longer-available",
+    "api-签名": "api-signature",
+    "参数": "parameters",
+    "返回值": "returns"
+  },
+  "/docs/reference/ai-sdk-rsc/stream-ui": {
+    "导入": "import",
+    "参数": "parameters",
+    "返回值": "returns",
+    "示例": "examples"
+  },
+  "/docs/reference/ai-sdk-rsc/use-actions": {
+    "导入": "import",
+    "api-签名": "api-signature",
+    "示例": "examples",
+    "返回值": "returns"
+  },
+  "/docs/reference/ai-sdk-rsc/use-ai-state": {
+    "导入": "import",
+    "api-签名": "api-signature",
+    "返回值": "returns"
+  },
+  "/docs/reference/ai-sdk-rsc/use-streamable-value": {
+    "导入": "import",
+    "示例": "example",
+    "api-签名": "api-signature",
+    "参数": "parameters",
+    "返回值": "returns"
+  },
+  "/docs/reference/ai-sdk-rsc/use-ui-state": {
+    "导入": "import",
+    "api-签名": "api-signature",
+    "示例": "examples",
     "返回值": "returns"
   },
   "/providers/adapters/langchain": {
@@ -2785,19 +2570,6 @@
     "工具与审批": "tools-and-approvals",
     "完整的-acp-harness-实现": "complete-acp-harness-implementations",
     "已知限制": "known-limitations",
-    "相关内容": "related",
-    "实现来源": "implementation-source",
-    "网关环境": "gateway-environment"
-  },
-  "/providers/ai-sdk-harnesses/claude-code": {
-    "安装": "setup",
-    "导入": "import",
-    "基本用法": "basic-usage",
-    "适配器设置": "adapter-settings",
-    "结构化输出": "structured-output",
-    "身份验证": "authentication",
-    "沙箱": "sandbox",
-    "内置工具": "built-in-tools",
     "相关内容": "related"
   },
   "/providers/ai-sdk-harnesses/cline": {
@@ -2837,30 +2609,6 @@
     "已知限制": "known-limitations",
     "相关内容": "related"
   },
-  "/providers/ai-sdk-harnesses/deepagents": {
-    "安装": "setup",
-    "导入": "import",
-    "基本用法": "basic-usage",
-    "适配器设置": "adapter-settings",
-    "结构化输出": "structured-output",
-    "身份验证": "authentication",
-    "沙箱": "sandbox",
-    "技能": "skills",
-    "内置工具": "built-in-tools",
-    "已知限制": "known-limitations",
-    "相关内容": "related"
-  },
-  "/providers/ai-sdk-harnesses/fx": {
-    "安装": "setup",
-    "导入": "import",
-    "基本用法": "basic-usage",
-    "适配器设置": "adapter-settings",
-    "身份验证": "authentication",
-    "沙箱": "sandbox",
-    "内置工具": "built-in-tools",
-    "已知限制": "known-limitations",
-    "相关内容": "related"
-  },
   "/providers/ai-sdk-harnesses/github-copilot": {
     "安装": "setup",
     "导入": "import",
@@ -2887,86 +2635,7 @@
   "/providers/ai-sdk-harnesses": {
     "用法": "usage"
   },
-  "/providers/ai-sdk-harnesses/opencode": {
-    "安装": "setup",
-    "导入": "import",
-    "基本用法": "basic-usage",
-    "适配器设置": "adapter-settings",
-    "结构化输出": "structured-output",
-    "身份验证": "authentication",
-    "沙箱": "sandbox",
-    "内置工具": "built-in-tools",
-    "相关内容": "related"
-  },
-  "/providers/ai-sdk-harnesses/pi": {
-    "安装": "setup",
-    "导入": "import",
-    "基本用法": "basic-usage",
-    "适配器设置": "adapter-settings",
-    "文件工具路径": "file-tool-paths",
-    "内联扩展": "inline-extensions",
-    "会话重挂载": "session-reattachment",
-    "身份验证": "authentication",
-    "沙箱": "sandbox",
-    "内置工具": "built-in-tools",
-    "已知限制": "known-limitations",
-    "相关内容": "related"
-  },
-  "/providers/ai-sdk-providers/ai-gateway": {
-    "主要特性": "features",
-    "安装": "setup",
-    "基本用法": "basic-usage",
-    "提供商实例": "provider-instance",
-    "身份验证": "authentication",
-    "自带密钥byok": "bring-your-own-key-byok",
-    "语言模型": "language-models",
-    "批处理": "batch",
-    "重排序模型": "reranking-models",
-    "实时模型": "realtime-models",
-    "可用模型": "available-models",
-    "动态模型发现": "dynamic-model-discovery",
-    "额度用量": "credit-usage",
-    "生成记录查询": "generation-lookup",
-    "示例": "examples",
-    "提供商选项-1": "provider-options-1",
-    "模型能力": "model-capabilities",
-    "api-密钥身份验证": "api-key-authentication",
-    "模型请求的-vercel-访问令牌身份验证": "vercel-access-token-authentication-for-model-requests",
-    "oidc-身份验证vercel-部署": "oidc-authentication-vercel-deployments",
-    "取消批处理": "cancelling-a-batch",
-    "提供商选项": "provider-options",
-    "基本文本生成": "basic-text-generation",
-    "流式生成": "streaming",
-    "工具使用": "tool-usage",
-    "提供商执行的工具": "provider-executed-tools",
-    "网关工具": "gateway-tools",
-    "自定义用量报告": "custom-reporting",
-    "网关提供商选项": "gateway-provider-options",
-    "提供商专属选项": "provider-specific-options",
-    "可用提供商": "available-providers",
-    "oidc-身份验证的工作原理": "how-oidc-authentication-works",
-    "perplexity-搜索": "perplexity-search",
-    "exa-搜索": "exa-search",
-    "browserbase-搜索": "browserbase-search",
-    "browserbase-抓取": "browserbase-fetch",
-    "tako-搜索": "tako-search",
-    "parallel-搜索": "parallel-search",
-    "使用-user-与-tags-追踪用量": "usage-tracking-with-user-and-tags",
-    "查询消费报告": "querying-spend-reports",
-    "模型回退示例": "model-fallbacks-example",
-    "条件式决策回退示例": "conditional-decision-fallbacks-example",
-    "零数据保留示例": "zero-data-retention-example",
-    "禁止提示词训练示例": "disallow-prompt-training-example",
-    "配额实体-id-示例": "quota-entity-id-example",
-    "按模型能力过滤": "filtering-by-model-capability"
-  },
   "/providers/ai-sdk-providers/alibaba": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "嵌入模型": "embedding-models",
-    "视频模型": "video-models",
-    "模型能力": "model-capabilities",
     "思考模式": "thinking-mode",
     "多轮对话中保留思考内容": "preserved-thinking-in-multi-turn-conversations",
     "工具调用": "tool-calling",
@@ -2984,20 +2653,6 @@
     "参考生视频-1": "reference-to-video-1"
   },
   "/providers/ai-sdk-providers/amazon-bedrock": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "推理": "reasoning",
-    "服务层级": "service-tiers",
-    "扩展上下文窗口": "extended-context-window",
-    "计算机使用computer-use": "computer-use",
-    "嵌入模型": "embedding-models",
-    "重排序模型": "reranking-models",
-    "图像模型": "image-models",
-    "响应头": "response-headers",
-    "bedrock-anthropic-提供商用法": "bedrock-anthropic-provider-usage",
-    "bedrock-mantle-提供商用法": "bedrock-mantle-provider-usage",
-    "迁移到-ai-sdkamazon-bedrock-2x": "migrating-to-ai-sdkamazon-bedrock-2x",
     "前置条件": "prerequisites",
     "身份验证": "authentication",
     "结构化输出": "structured-outputs",
@@ -3045,75 +2700,10 @@
     "提供商设置-1": "provider-settings-1"
   },
   "/providers/ai-sdk-providers/anthropic-aws": {
-    "安装": "setup",
-    "语言模型": "language-models",
-    "iam-权限": "iam-permissions",
-    "前置条件": "prerequisites",
-    "身份验证": "authentication",
-    "提供商设置": "provider-settings",
-    "示例": "example",
     "使用-aws-sigv4生产环境推荐": "using-aws-sigv4-recommended-for-production",
     "使用-api-密钥": "using-an-api-key"
   },
   "/providers/ai-sdk-providers/anthropic": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "代码执行": "code-execution",
-    "智能体技能agent-skills": "agent-skills",
-    "决策模型": "decision-models",
-    "消息开始事件": "message-start-events",
-    "提供商选项": "provider-options",
-    "批处理": "batch",
-    "结构化输出与工具输入流式传输": "structured-outputs-and-tool-input-streaming",
-    "推理力度effort": "effort",
-    "快速模式": "fast-mode",
-    "任务预算": "task-budgets",
-    "数据驻留": "data-residency",
-    "安全分类器与回退": "safety-classifiers-and-fallbacks",
-    "危险工具使用防护": "dangerous-tool-use-safeguard",
-    "推理reasoning": "reasoning",
-    "上下文管理": "context-management",
-    "缓存控制": "cache-control",
-    "bash-工具": "bash-tool",
-    "记忆工具": "memory-tool",
-    "文本编辑器工具": "text-editor-tool",
-    "计算机工具": "computer-tool",
-    "网络搜索工具": "web-search-tool",
-    "网页抓取工具": "web-fetch-tool",
-    "顾问工具": "advisor-tool",
-    "工具搜索": "tool-search",
-    "对话中途系统控制": "mid-conversation-system-controls",
-    "对话中途工具变更": "mid-conversation-tool-changes",
-    "mcp-连接器": "mcp-connectors",
-    "程序化工具调用": "programmatic-tool-calling",
-    "使用内置技能": "using-built-in-skills",
-    "自定义技能": "custom-skills",
-    "pdf-支持": "pdf-support",
-    "模型能力": "model-capabilities",
-    "批处理限制": "batch-limitations",
-    "自适应思考": "adaptive-thinking",
-    "基于预算的思考": "budget-based-thinking",
-    "上下文编辑": "context-editing",
-    "按需压缩compaction": "on-demand-compaction",
-    "阈值压缩": "threshold-compaction",
-    "已应用编辑的元数据": "applied-edits-metadata",
-    "更长的缓存-ttl": "longer-cache-ttl",
-    "限制": "limitations",
-    "计算机工具集": "computer-toolset",
-    "配置选项": "configuration-options",
-    "配置选项-1": "configuration-options-1",
-    "工作原理": "how-it-works",
-    "流式传输": "streaming",
-    "基本用法": "basic-usage",
-    "使用正则搜索": "using-regex-search",
-    "自定义工具搜索": "custom-tool-search",
-    "配置选项-2": "configuration-options-2",
-    "错误处理": "error-handling",
-    "上传文件用于代码执行": "uploading-files-for-code-execution",
-    "错误处理-1": "error-handling-1",
-    "裁剪程序化工具历史": "pruning-programmatic-tool-history",
-    "容器持久化": "container-persistence",
     "仅自适应思考的模型": "adaptive-only-models",
     "工具间思考between_tools": "between-tools-thinking",
     "思考内容显示opus-47": "thinking-display-opus-47",
@@ -3125,20 +2715,10 @@
     "ui-应用中的压缩": "compaction-in-ui-applications"
   },
   "/providers/ai-sdk-providers/assemblyai": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语音转写模型": "transcription-models",
     "说话人分离与音频智能结果": "speaker-diarization-and-audio-intelligence-results",
     "模型能力": "model-capabilities"
   },
   "/providers/ai-sdk-providers/azure": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "嵌入模型": "embedding-models",
-    "图像模型": "image-models",
-    "语音转写模型": "transcription-models",
-    "语音模型": "speech-models",
     "推理模型": "reasoning-models",
     "示例": "example",
     "提供商选项": "provider-options",
@@ -3151,23 +2731,9 @@
     "openai-语音转写": "openai-transcription",
     "模型能力-1": "model-capabilities-1",
     "示例-2": "example-2",
-    "模型能力-2": "model-capabilities-2",
-    "对话中途调整推理力度": "changing-reasoning-effort-mid-conversation",
-    "网络搜索工具": "web-search-tool",
-    "文件搜索工具": "file-search-tool",
-    "图像生成工具": "image-generation-tool",
-    "代码解释器工具": "code-interpreter-tool",
-    "pdf-支持": "pdf-support",
-    "文本部件中的类型化-providermetadata": "typed-providermetadata-in-text-parts",
-    "推理部件中的类型化-providermetadata": "typed-providermetadata-in-reasoning-parts",
-    "源文档部件中的类型化-providermetadata": "typed-providermetadata-in-source-document-parts"
+    "模型能力-2": "model-capabilities-2"
   },
   "/providers/ai-sdk-providers/baseten": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "专用模型": "dedicated-models",
-    "嵌入模型": "embedding-models",
-    "错误处理": "error-handling",
     "示例": "example",
     "openai-兼容端点syncv1": "openai-compatible-endpoints-syncv1",
     "predict-端点": "predict-endpoints",
@@ -3176,10 +2742,6 @@
     "常见错误场景": "common-error-scenarios"
   },
   "/providers/ai-sdk-providers/black-forest-labs": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "图像模型": "image-models",
-    "视频模型": "video-models",
     "基本用法": "basic-usage",
     "模型能力": "model-capabilities",
     "flux-3-图像生成与编辑": "flux-3-image-generation-and-editing",
@@ -3193,17 +2755,9 @@
     "草稿模式": "draft-mode",
     "视频提供商选项": "video-provider-options",
     "视频提供商元数据": "video-provider-metadata",
-    "视频模型能力": "video-model-capabilities",
-    "单图编辑": "single-image-editing",
-    "多参考图编辑": "multi-reference-editing",
-    "flux2-编辑": "flux2-editing",
-    "局部重绘inpainting": "inpainting"
+    "视频模型能力": "video-model-capabilities"
   },
   "/providers/ai-sdk-providers/bytedance": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "图像模型": "image-models",
-    "视频模型": "video-models",
     "文生图": "text-to-image",
     "图像编辑": "image-editing",
     "图像模型选项": "image-model-options",
@@ -3224,53 +2778,26 @@
     "轮询选项": "polling-options"
   },
   "/providers/ai-sdk-providers/cartesia": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语音模型": "speech-models",
-    "实时语音转写模型": "realtime-transcription-models",
-    "流式语音转写模型": "streaming-transcription-models",
-    "批量语音转写模型": "batch-transcription-models",
     "模型能力": "model-capabilities",
     "模型能力-1": "model-capabilities-1",
     "模型能力-2": "model-capabilities-2",
     "模型能力-3": "model-capabilities-3"
   },
   "/providers/ai-sdk-providers/cerebras": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "模型能力": "model-capabilities",
     "推理模型": "reasoning-models",
     "提供商选项": "provider-options"
   },
   "/providers/ai-sdk-providers/cohere": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "嵌入模型": "embedding-models",
-    "重排序模型": "reranking-models",
     "示例": "example",
     "模型能力": "model-capabilities",
     "模型能力-1": "model-capabilities-1",
-    "模型能力-2": "model-capabilities-2",
-    "图像输入": "image-inputs",
-    "推理": "reasoning"
+    "模型能力-2": "model-capabilities-2"
   },
   "/providers/ai-sdk-providers/deepgram": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语音模型": "speech-models",
-    "语音转写模型": "transcription-models",
     "模型能力": "model-capabilities",
     "模型能力-1": "model-capabilities-1"
   },
   "/providers/ai-sdk-providers/deepinfra": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "模型能力": "model-capabilities",
-    "图像模型": "image-models",
-    "嵌入模型": "embedding-models",
     "模型特有选项": "model-specific-options",
     "图像编辑": "image-editing",
     "模型能力-1": "model-capabilities-1",
@@ -3280,10 +2807,6 @@
     "多图合成": "multi-image-combining"
   },
   "/providers/ai-sdk-providers/deepseek": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "模型能力": "model-capabilities",
     "消息名称": "message-names",
     "推理": "reasoning",
     "聊天前缀补全": "chat-prefix-completion",
@@ -3292,22 +2815,7 @@
     "聊天响应元数据": "chat-response-metadata",
     "文件上传": "file-uploads"
   },
-  "/providers/ai-sdk-providers/elevenlabs": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语音模型": "speech-models",
-    "语音转写模型": "transcription-models",
-    "流式语音转写模型": "streaming-transcription-models",
-    "模型能力": "model-capabilities",
-    "模型能力-1": "model-capabilities-1",
-    "模型能力-2": "model-capabilities-2"
-  },
   "/providers/ai-sdk-providers/fal": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "图像模型": "image-models",
-    "语音转写模型": "transcription-models",
-    "语音模型": "speech-models",
     "基本用法": "basic-usage",
     "模型能力": "model-capabilities",
     "提供商选项": "provider-options",
@@ -3319,11 +2827,6 @@
     "修改图像": "modify-image"
   },
   "/providers/ai-sdk-providers/fireworks": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "嵌入模型": "embedding-models",
-    "图像模型": "image-models",
     "推理模型": "reasoning-models",
     "示例": "example",
     "提供商选项": "provider-options",
@@ -3340,10 +2843,6 @@
     "stability-ai-模型": "stability-ai-models"
   },
   "/providers/ai-sdk-providers/fish-audio": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语音模型": "speech-models",
-    "语音转写模型": "transcription-models",
     "提供商选项": "provider-options",
     "多说话人对话": "multi-speaker-dialogue",
     "输出格式": "output-formats",
@@ -3351,83 +2850,7 @@
     "提供商选项-1": "provider-options-1",
     "模型能力-1": "model-capabilities-1"
   },
-  "/providers/ai-sdk-providers/gladia": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语音转写模型": "transcription-models",
-    "模型能力": "model-capabilities"
-  },
-  "/providers/ai-sdk-providers/gmicloud": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "错误诊断": "error-diagnostics"
-  },
   "/providers/ai-sdk-providers/google-vertex": {
-    "安装": "setup",
-    "google-vertex-提供商用法": "google-vertex-provider-usage",
-    "google-vertex-anthropic-提供商用法": "google-vertex-anthropic-provider-usage",
-    "google-vertex-xai-提供商用法": "google-vertex-xai-provider-usage",
-    "google-vertex-maas-提供商用法": "google-vertex-maas-provider-usage",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "工具结果文件": "tool-result-files",
-    "缓存内容": "cached-content",
-    "安全评级": "safety-ratings",
-    "故障排查": "troubleshooting",
-    "模型能力": "model-capabilities",
-    "嵌入模型": "embedding-models",
-    "图像模型": "image-models",
-    "视频模型": "video-models",
-    "语音模型": "speech-models",
-    "语音转写模型": "transcription-models",
-    "提供商实例-1": "provider-instance-1",
-    "语言模型-1": "language-models-1",
-    "推理reasoning": "reasoning",
-    "工具": "tools",
-    "模型能力-3": "model-capabilities-3",
-    "提供商实例-2": "provider-instance-2",
-    "语言模型-2": "language-models-2",
-    "函数调用": "function-calling",
-    "结构化输出": "structured-outputs",
-    "可用模型": "available-models",
-    "提供商实例-3": "provider-instance-3",
-    "语言模型-3": "language-models-3",
-    "可用模型-1": "available-models-1",
-    "nodejs-运行时": "nodejs-runtime",
-    "edge-运行时": "edge-runtime",
-    "express-模式": "express-mode",
-    "微调模型tuned-models": "tuned-models",
-    "代码执行": "code-execution",
-    "url-上下文": "url-context",
-    "google-搜索": "google-search",
-    "企业网络搜索enterprise-web-search": "enterprise-web-search",
-    "google-地图": "google-maps",
-    "函数调用参数流式传输": "streaming-function-call-arguments",
-    "推理思考-token": "reasoning-thinking-tokens",
-    "文件输入": "file-inputs",
-    "隐式缓存": "implicit-caching",
-    "显式缓存": "explicit-caching",
-    "schema-限制": "schema-limitations",
-    "模型能力-1": "model-capabilities-1",
-    "gemini-图像模型": "gemini-image-models",
-    "首帧与尾帧": "first-and-last-frame",
-    "参考图像": "reference-images",
-    "提供商选项": "provider-options",
-    "模型能力-2": "model-capabilities-2",
-    "语音模型能力": "speech-model-capabilities",
-    "语音转写模型能力": "transcription-model-capabilities",
-    "nodejs-运行时-1": "nodejs-runtime-1",
-    "edge-运行时-1": "edge-runtime-1",
-    "缓存控制": "cache-control",
-    "bash-工具": "bash-tool",
-    "文本编辑器工具": "text-editor-tool",
-    "计算机工具": "computer-tool",
-    "网络搜索工具": "web-search-tool",
-    "nodejs-运行时-2": "nodejs-runtime-2",
-    "edge-运行时-2": "edge-runtime-2",
-    "nodejs-运行时-3": "nodejs-runtime-3",
-    "edge-运行时-3": "edge-runtime-3",
     "可选提供商设置": "optional-provider-settings",
     "可选提供商设置-1": "optional-provider-settings-1",
     "可选提供商设置-2": "optional-provider-settings-2",
@@ -3437,68 +2860,7 @@
     "可选提供商设置-5": "optional-provider-settings-5",
     "可选提供商设置-6": "optional-provider-settings-6"
   },
-  "/providers/ai-sdk-providers/google": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "实时模型realtime": "realtime-models",
-    "翻译模型": "translation-models",
-    "gemma-模型": "gemma-models",
-    "嵌入模型embedding": "embedding-models",
-    "图像模型": "image-models",
-    "语音模型": "speech-models",
-    "决策模型": "decision-models",
-    "思考thinking": "thinking",
-    "文件输入": "file-inputs",
-    "缓存内容": "cached-content",
-    "代码执行": "code-execution",
-    "google-搜索": "google-search",
-    "企业网络搜索enterprise-web-search": "enterprise-web-search",
-    "文件搜索file-search": "file-search",
-    "url-上下文": "url-context",
-    "google-地图接地": "google-maps-grounding",
-    "rag-engine-接地": "rag-engine-grounding",
-    "图像输出": "image-outputs",
-    "安全评级": "safety-ratings",
-    "故障排查": "troubleshooting",
-    "模型能力": "model-capabilities",
-    "批处理": "batch",
-    "实时翻译live-translation": "live-translation",
-    "模型能力-1": "model-capabilities-1",
-    "提供商选项": "provider-options",
-    "提供商元数据": "provider-metadata",
-    "有状态链式调用": "stateful-chaining",
-    "智能体式视频理解": "agentic-video-understanding",
-    "内置工具": "built-in-tools",
-    "通过-interactions-输出图像": "image-output-via-interactions",
-    "智能体预设agent-presets": "agent-presets",
-    "托管智能体managed-agents": "managed-agents",
-    "流式传输": "streaming",
-    "模型能力-2": "model-capabilities-2",
-    "gemini-图像模型": "gemini-image-models",
-    "gemini-38-中的语音指令": "speech-directions-in-gemini-38",
-    "多说话人音频": "multi-speaker-audio",
-    "模型能力-3": "model-capabilities-3",
-    "gemini-3-及更高版本的模型": "gemini-3-and-later-models",
-    "gemini-25-模型": "gemini-25-models",
-    "隐式缓存": "implicit-caching",
-    "显式缓存": "explicit-caching",
-    "将-url-上下文与搜索接地结合": "combine-url-context-with-search-grounding",
-    "配置选项": "configuration-options",
-    "schema-限制": "schema-limitations",
-    "webhook": "webhooks",
-    "大型批处理": "large-batches",
-    "自定义托管智能体": "custom-managed-agents",
-    "google-搜索接地": "google-search-grounding",
-    "gemini-图像模型能力": "gemini-image-model-capabilities"
-  },
   "/providers/ai-sdk-providers/groq": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "模型能力": "model-capabilities",
-    "浏览器搜索工具": "browser-search-tool",
-    "语音转写模型": "transcription-models",
     "推理模型": "reasoning-models",
     "示例": "example",
     "图像输入": "image-input",
@@ -3512,18 +2874,11 @@
     "结构化输出": "structured-outputs"
   },
   "/providers/ai-sdk-providers/huggingface": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "模型能力": "model-capabilities",
     "提供商选项": "provider-options",
     "推理输出": "reasoning-output",
     "图像输入": "image-input"
   },
   "/providers/ai-sdk-providers/hume": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语音模型": "speech-models",
     "支持的参数": "supported-parameters",
     "提供商选项": "provider-options",
     "模型能力": "model-capabilities"
@@ -3532,10 +2887,6 @@
     "提供商支持": "provider-support"
   },
   "/providers/ai-sdk-providers/klingai": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "身份验证": "authentication",
-    "视频模型": "video-models",
     "文生视频": "text-to-video",
     "图生视频": "image-to-video",
     "多镜头视频生成": "multi-shot-video-generation",
@@ -3554,9 +2905,6 @@
     "运动控制-1": "motion-control-1"
   },
   "/providers/ai-sdk-providers/luma": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "图像模型": "image-models",
     "基本用法": "basic-usage",
     "图像模型设置": "image-model-settings",
     "模型能力": "model-capabilities",
@@ -3566,44 +2914,13 @@
     "风格参考": "style-reference",
     "角色参考": "character-reference"
   },
-  "/providers/ai-sdk-providers/minimax": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "视频模型": "video-models",
-    "模型能力": "model-capabilities",
-    "推理": "reasoning",
-    "提供商选项": "provider-options",
-    "异步生成": "asynchronous-generation",
-    "生成模式": "generation-modes",
-    "视频提供商选项": "video-provider-options",
-    "视频提供商元数据": "video-provider-metadata"
-  },
   "/providers/ai-sdk-providers/mistral": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "语音转写模型": "transcription-models",
-    "语音模型": "speech-models",
-    "嵌入模型": "embedding-models",
-    "提示词缓存亲和性": "prompt-cache-affinity",
-    "文档-ocr": "document-ocr",
-    "推理模型": "reasoning-models",
-    "示例": "example",
-    "模型能力": "model-capabilities",
-    "模型能力-1": "model-capabilities-1",
-    "模型能力-2": "model-capabilities-2",
-    "模型能力-3": "model-capabilities-3",
     "可配置的推理": "configurable-reasoning",
     "结构化输出": "structured-outputs",
     "网页搜索": "web-search",
     "多轮对话": "multi-turn-conversations"
   },
   "/providers/ai-sdk-providers/moonshotai": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "模型能力": "model-capabilities",
     "消息名称": "message-names",
     "部分模式": "partial-mode",
     "kimi-k3-动态工具加载": "kimi-k3-dynamic-tool-loading",
@@ -3617,115 +2934,15 @@
     "结构化输出": "structured-outputs"
   },
   "/providers/ai-sdk-providers/open-responses": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "推理与提供商选项": "reasoning-and-provider-options",
-    "自定义工具": "custom-tools",
-    "文件输入": "file-inputs",
-    "实验性扩展": "experimental-extensions",
-    "局限性": "limitations",
     "端点示例": "endpoint-examples",
     "生成文本": "generate-text",
     "流式生成文本": "stream-text"
   },
-  "/providers/ai-sdk-providers/openai": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "实时模型": "realtime-models",
-    "嵌入模型": "embedding-models",
-    "图像模型": "image-models",
-    "语音转写模型": "transcription-models",
-    "翻译模型": "translation-models",
-    "语音模型": "speech-models",
-    "决策模型": "decision-models",
-    "示例": "example",
-    "responses-模型": "responses-models",
-    "聊天模型": "chat-models",
-    "补全模型": "completion-models",
-    "模型能力": "model-capabilities",
-    "live-会话选项": "live-session-options",
-    "模型能力-1": "model-capabilities-1",
-    "图像编辑": "image-editing",
-    "模型能力-2": "model-capabilities-2",
-    "模型能力-3": "model-capabilities-3",
-    "模型能力-4": "model-capabilities-4",
-    "模型能力-5": "model-capabilities-5",
-    "对话中途调整推理力度": "changing-reasoning-effort-mid-conversation",
-    "推理输出": "reasoning-output",
-    "websocket-传输": "websocket-transport",
-    "详尽度控制": "verbosity-control",
-    "命名空间化的函数调用": "namespaced-function-calls",
-    "异步工具调用": "async-tool-calling",
-    "程序化工具调用": "programmatic-tool-calling",
-    "网络搜索工具": "web-search-tool",
-    "文件搜索工具": "file-search-tool",
-    "图像生成工具": "image-generation-tool",
-    "代码解释器工具": "code-interpreter-tool",
-    "mcp-工具": "mcp-tool",
-    "计算机工具": "computer-tool",
-    "本地-shell-工具": "local-shell-tool",
-    "shell-工具": "shell-tool",
-    "应用补丁工具": "apply-patch-tool",
-    "工具搜索": "tool-search",
-    "自定义工具": "custom-tool",
-    "限制可调用的工具": "restricting-callable-tools",
-    "图像输入": "image-inputs",
-    "pdf-输入": "pdf-inputs",
-    "结构化输出": "structured-outputs",
-    "文本部件中的类型化-providermetadata": "typed-providermetadata-in-text-parts",
-    "推理部件中的类型化-providermetadata": "typed-providermetadata-in-reasoning-parts",
-    "源文档部件中的类型化-providermetadata": "typed-providermetadata-in-source-document-parts",
-    "压缩-1": "compaction-1",
-    "推理": "reasoning",
-    "严格结构化输出": "strict-structured-outputs",
-    "图像支持": "image-support",
-    "pdf-支持": "pdf-support",
-    "预测输出": "predicted-outputs",
-    "图像细节": "image-detail",
-    "蒸馏": "distillation",
-    "提示词缓存": "prompt-caching",
-    "音频输入": "audio-input",
-    "基本图像编辑": "basic-image-editing",
-    "使用蒙版修补": "inpainting-with-mask",
-    "背景移除": "background-removal",
-    "多图像合并": "multi-image-combining",
-    "限制": "restrictions",
-    "压缩": "compaction",
-    "请求级更新选项": "request-level-update-option",
-    "本地执行默认": "local-execution-default",
-    "托管容器auto": "hosted-container-auto",
-    "引用现有容器": "existing-container-reference",
-    "execute-回调": "execute-callback",
-    "服务器执行托管的工具搜索": "server-executed-hosted-tool-search",
-    "命名空间": "namespaces",
-    "客户端执行的工具搜索": "client-executed-tool-search",
-    "显式压缩": "explicit-compaction",
-    "在流中检测压缩": "detecting-compaction-in-streams",
-    "ui-应用中的压缩": "compaction-in-ui-applications"
-  },
   "/providers/ai-sdk-providers/perplexity": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "嵌入模型": "embedding-models",
-    "模型能力": "model-capabilities",
-    "来源": "sources",
-    "agent-工具": "agent-tools",
-    "提供商选项与元数据": "provider-options-and-metadata",
-    "结构化输出": "structured-output",
-    "图像输入": "input-images",
-    "从-v4-sonar-迁移到-v5-agent-api": "migrating-from-v4-sonar-to-v5-agent-api",
-    "提供商选项-1": "provider-options-1",
-    "嵌入模型能力": "embedding-model-capabilities",
     "提供商选项": "provider-options",
     "提供商元数据": "provider-metadata"
   },
   "/providers/ai-sdk-providers/prodia": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "图像模型": "image-models",
     "基本用法": "basic-usage",
     "模型能力": "model-capabilities",
     "图像尺寸": "image-size",
@@ -3734,10 +2951,6 @@
     "提供商元数据": "provider-metadata"
   },
   "/providers/ai-sdk-providers/quiverai": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "图像模型": "image-models",
     "推理选项": "reasoning-options",
     "调用方执行的工具": "caller-executed-tools",
     "responses-api-限制": "responses-api-limitations",
@@ -3752,33 +2965,14 @@
     "计费与用量": "billing-and-usage"
   },
   "/providers/ai-sdk-providers/replicate": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "图像模型": "image-models",
-    "支持的图像模型": "supported-image-models",
-    "基本用法": "basic-usage",
-    "模型特定选项": "model-specific-options",
-    "版本化模型": "versioned-models",
-    "图像编辑": "image-editing",
-    "提供商选项": "provider-options",
     "基本图像编辑": "basic-image-editing",
     "使用遮罩进行局部重绘": "inpainting-with-mask",
     "多参考图像生成flux-2": "multi-reference-image-generation-flux-2"
   },
   "/providers/ai-sdk-providers/revai": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语音转写模型": "transcription-models",
     "模型能力": "model-capabilities"
   },
   "/providers/ai-sdk-providers/togetherai": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "模型能力": "model-capabilities",
-    "图像模型": "image-models",
-    "嵌入模型": "embedding-models",
-    "重排序模型": "reranking-models",
     "推理模型": "reasoning-models",
     "示例": "example",
     "图像编辑": "image-editing",
@@ -3790,10 +2984,6 @@
     "支持图像编辑的模型": "supported-image-editing-models"
   },
   "/providers/ai-sdk-providers/topaz": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "图像模型": "image-models",
-    "视频模型": "video-models",
     "模型能力": "model-capabilities",
     "图像提供商选项": "image-provider-options",
     "图像提供商元数据": "image-provider-metadata",
@@ -3804,32 +2994,11 @@
     "长时运行操作": "long-running-operations",
     "视频提供商元数据": "video-provider-metadata"
   },
-  "/providers/ai-sdk-providers/typesafe-ai": {
-    "安装": "setup",
-    "决策": "decision",
-    "舍入值与置信度": "rounded-values-and-confidence",
-    "错误与重试": "errors-and-retries"
-  },
   "/providers/ai-sdk-providers/voyage": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "嵌入模型": "embedding-models",
-    "重排序模型": "reranking-models",
     "模型能力": "model-capabilities",
     "模型能力-1": "model-capabilities-1"
   },
   "/providers/ai-sdk-providers/xai": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "实时模型": "realtime-models",
-    "responses-api智能体工具": "responses-api-agentic-tools",
-    "批处理": "batch",
-    "模型能力": "model-capabilities",
-    "语音模型": "speech-models",
-    "语音转写模型": "transcription-models",
-    "图像模型": "image-models",
-    "视频模型": "video-models",
     "示例": "example",
     "推理力度": "reasoning-effort",
     "优先级处理": "priority-processing",
@@ -3873,13 +3042,6 @@
     "多图编辑": "multi-image-editing",
     "风格迁移": "style-transfer",
     "参考音频": "reference-audio"
-  },
-  "/providers/ai-sdk-providers/zai": {
-    "安装": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "提供商选项": "provider-options",
-    "流式工具调用": "streaming-tool-calls"
   },
   "/providers/observability/arize-ax": {
     "安装": "setup",
@@ -4082,91 +3244,6 @@
     "相关资源": "resources",
     "身份验证": "authentication",
     "项目配置": "project-configuration"
-  },
-  "/providers/openai-compatible-providers/cheaper-inference": {
-    "设置": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "支持的模型与能力": "supported-models-and-capabilities",
-    "资源": "resources",
-    "生成文本": "generate-text",
-    "流式生成文本": "stream-text"
-  },
-  "/providers/openai-compatible-providers/clarifai": {
-    "设置": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "示例---生成文本": "example---generate-text",
-    "示例---流式生成文本": "example---streaming-text"
-  },
-  "/providers/openai-compatible-providers/custom-providers": {
-    "文件结构": "file-structure",
-    "关键文件": "key-files",
-    "用法": "usage",
-    "内部-api": "internal-api"
-  },
-  "/providers/openai-compatible-providers/heroku": {
-    "设置": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "heroku-设置": "heroku-setup",
-    "示例": "example"
-  },
-  "/providers/openai-compatible-providers": {
-    "设置": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "图像模型": "image-models",
-    "嵌入模型": "embedding-models",
-    "补全模型": "completion-models",
-    "聊天模型选项": "chat-model-options",
-    "提供商特定选项": "provider-specific-options",
-    "自定义元数据提取": "custom-metadata-extraction",
-    "支持的能力": "supported-capabilities",
-    "示例": "example",
-    "视频输入": "video-inputs",
-    "提供模型-id-以支持自动补全": "including-model-ids-for-auto-completion",
-    "自定义查询参数": "custom-query-parameters",
-    "基本图像生成": "basic-image-generation",
-    "图像模型选项": "image-model-options",
-    "图像编辑": "image-editing",
-    "示例-1": "example-1",
-    "嵌入模型选项": "embedding-model-options",
-    "示例-2": "example-2",
-    "补全模型选项": "completion-model-options",
-    "基本图像编辑": "basic-image-editing",
-    "使用蒙版进行局部重绘": "inpainting-with-mask"
-  },
-  "/providers/openai-compatible-providers/lmstudio": {
-    "设置": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "嵌入模型": "embedding-models",
-    "示例": "example",
-    "示例---嵌入单个值": "example---embedding-a-single-value",
-    "示例---批量嵌入多个值": "example---embedding-many-values",
-    "要使用模型你需要先下载它": "to-be-able-to-use-a-model-you-need-to-download-it-first"
-  },
-  "/providers/openai-compatible-providers/modelrush": {
-    "设置": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "支持的模型与能力": "supported-models-and-capabilities",
-    "相关资源": "resources",
-    "示例": "example"
-  },
-  "/providers/openai-compatible-providers/nearai": {
-    "设置": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "示例": "example"
-  },
-  "/providers/openai-compatible-providers/nim": {
-    "设置": "setup",
-    "提供商实例": "provider-instance",
-    "语言模型": "language-models",
-    "示例---生成文本": "example---generate-text",
-    "示例---流式生成文本": "example---stream-text"
   },
   "/providers/community-providers/a2a": {
     "设置": "setup",
@@ -4819,6 +3896,105 @@
     "示例": "example",
     "文档": "documentation"
   },
+  "/providers/openai-compatible-providers/cheaper-inference": {
+    "设置": "setup",
+    "提供商实例": "provider-instance",
+    "语言模型": "language-models",
+    "支持的模型与能力": "supported-models-and-capabilities",
+    "资源": "resources",
+    "生成文本": "generate-text",
+    "流式生成文本": "stream-text"
+  },
+  "/providers/openai-compatible-providers/clarifai": {
+    "设置": "setup",
+    "提供商实例": "provider-instance",
+    "语言模型": "language-models",
+    "示例---生成文本": "example---generate-text",
+    "示例---流式生成文本": "example---streaming-text"
+  },
+  "/providers/openai-compatible-providers/custom-providers": {
+    "文件结构": "file-structure",
+    "关键文件": "key-files",
+    "用法": "usage",
+    "内部-api": "internal-api"
+  },
+  "/providers/openai-compatible-providers/heroku": {
+    "设置": "setup",
+    "提供商实例": "provider-instance",
+    "语言模型": "language-models",
+    "heroku-设置": "heroku-setup",
+    "示例": "example"
+  },
+  "/providers/openai-compatible-providers": {
+    "基本图像编辑": "basic-image-editing",
+    "使用蒙版进行局部重绘": "inpainting-with-mask"
+  },
+  "/providers/openai-compatible-providers/lmstudio": {
+    "设置": "setup",
+    "提供商实例": "provider-instance",
+    "语言模型": "language-models",
+    "嵌入模型": "embedding-models",
+    "示例": "example",
+    "示例---嵌入单个值": "example---embedding-a-single-value",
+    "示例---批量嵌入多个值": "example---embedding-many-values",
+    "要使用模型你需要先下载它": "to-be-able-to-use-a-model-you-need-to-download-it-first"
+  },
+  "/providers/openai-compatible-providers/modelrush": {
+    "设置": "setup",
+    "提供商实例": "provider-instance",
+    "语言模型": "language-models",
+    "支持的模型与能力": "supported-models-and-capabilities",
+    "相关资源": "resources",
+    "示例": "example"
+  },
+  "/providers/openai-compatible-providers/nearai": {
+    "设置": "setup",
+    "提供商实例": "provider-instance",
+    "语言模型": "language-models",
+    "示例": "example"
+  },
+  "/providers/openai-compatible-providers/nim": {
+    "设置": "setup",
+    "提供商实例": "provider-instance",
+    "语言模型": "language-models",
+    "示例---生成文本": "example---generate-text",
+    "示例---流式生成文本": "example---stream-text"
+  },
+  "/cookbook/api-servers/express": {
+    "示例": "examples",
+    "故障排查": "troubleshooting",
+    "ui-消息流": "ui-message-stream",
+    "发送自定义数据": "sending-custom-data",
+    "文本流": "text-stream"
+  },
+  "/cookbook/api-servers/fastify": {
+    "示例": "examples",
+    "故障排查": "troubleshooting",
+    "ui-消息流": "ui-message-stream",
+    "发送自定义数据": "sending-custom-data",
+    "文本流": "text-stream"
+  },
+  "/cookbook/api-servers/hono": {
+    "示例": "examples",
+    "故障排查": "troubleshooting",
+    "ui-消息流": "ui-message-stream",
+    "文本流": "text-stream",
+    "发送自定义数据": "sending-custom-data"
+  },
+  "/cookbook/api-servers/nest": {
+    "示例": "examples",
+    "故障排查": "troubleshooting",
+    "ui-消息流": "ui-message-stream",
+    "发送自定义数据": "sending-custom-data",
+    "文本流": "text-stream"
+  },
+  "/cookbook/api-servers/node-http-server": {
+    "示例": "examples",
+    "故障排查": "troubleshooting",
+    "ui-消息流": "ui-message-stream",
+    "发送自定义数据": "sending-custom-data",
+    "文本流": "text-stream"
+  },
   "/cookbook/guides/agent-context-compaction": {
     "从一个不断增长的智能体循环开始": "start-with-a-growing-agent-loop",
     "添加压缩触发器": "add-a-compaction-trigger",
@@ -5039,23 +4215,6 @@
     "检索资源工具": "retrieve-resource-tool",
     "使用-vercel-搭建-postgres": "setting-up-postgres-with-vercel"
   },
-  "/cookbook/guides/slackbot": {
-    "slack-应用设置": "slack-app-setup",
-    "项目搭建": "project-setup",
-    "快速上手": "getting-started",
-    "项目结构": "project-structure",
-    "事件处理器": "event-handler",
-    "事件处理逻辑": "event-handlers",
-    "实现-ai-逻辑": "implementing-ai-logic",
-    "用工具增强": "enhancing-with-tools",
-    "工作原理": "how-it-works",
-    "部署应用": "deploying-the-app",
-    "下一步": "next-steps",
-    "waituntil-函数": "the-waituntil-function",
-    "应用提及": "app-mentions",
-    "助手线程消息": "assistant-thread-messages",
-    "私信": "direct-messages"
-  },
   "/cookbook/guides/sonnet-3-7": {
     "ai-sdk-快速上手": "getting-started-with-the-ai-sdk",
     "开始使用": "get-started",
@@ -5175,40 +4334,57 @@
     "在独立组件中处理输入": "handle-input-in-a-separate-component",
     "服务器": "server"
   },
-  "/cookbook/api-servers/express": {
-    "示例": "examples",
-    "故障排查": "troubleshooting",
-    "ui-消息流": "ui-message-stream",
-    "发送自定义数据": "sending-custom-data",
-    "文本流": "text-stream"
+  "/cookbook/rsc/call-tools-in-parallel": {
+    "客户端": "client",
+    "服务器": "server"
   },
-  "/cookbook/api-servers/fastify": {
-    "示例": "examples",
-    "故障排查": "troubleshooting",
-    "ui-消息流": "ui-message-stream",
-    "发送自定义数据": "sending-custom-data",
-    "文本流": "text-stream"
+  "/cookbook/rsc/call-tools": {
+    "客户端": "client",
+    "服务器": "server"
   },
-  "/cookbook/api-servers/hono": {
-    "示例": "examples",
-    "故障排查": "troubleshooting",
-    "ui-消息流": "ui-message-stream",
-    "文本流": "text-stream",
-    "发送自定义数据": "sending-custom-data"
+  "/cookbook/rsc/generate-object": {
+    "客户端": "client",
+    "服务器": "server"
   },
-  "/cookbook/api-servers/nest": {
-    "示例": "examples",
-    "故障排查": "troubleshooting",
-    "ui-消息流": "ui-message-stream",
-    "发送自定义数据": "sending-custom-data",
-    "文本流": "text-stream"
+  "/cookbook/rsc/generate-text-with-chat-prompt": {
+    "客户端": "client",
+    "服务器": "server"
   },
-  "/cookbook/api-servers/node-http-server": {
-    "示例": "examples",
-    "故障排查": "troubleshooting",
-    "ui-消息流": "ui-message-stream",
-    "发送自定义数据": "sending-custom-data",
-    "文本流": "text-stream"
+  "/cookbook/rsc/generate-text": {
+    "客户端": "client",
+    "服务器": "server"
+  },
+  "/cookbook/rsc/render-visual-interface-in-chat": {
+    "客户端": "client",
+    "服务器": "server"
+  },
+  "/cookbook/rsc/restore-messages-from-database": {
+    "客户端": "client",
+    "服务器": "server"
+  },
+  "/cookbook/rsc/save-messages-to-database": {
+    "客户端": "client",
+    "服务器": "server"
+  },
+  "/cookbook/rsc/stream-object": {
+    "客户端": "client",
+    "服务器": "server"
+  },
+  "/cookbook/rsc/stream-text-with-chat-prompt": {
+    "客户端": "client",
+    "服务器": "server"
+  },
+  "/cookbook/rsc/stream-text": {
+    "客户端": "client",
+    "服务器": "server"
+  },
+  "/cookbook/rsc/stream-ui-record-token-usage": {
+    "onfinish-回调": "onfinish-callback",
+    "服务器": "server"
+  },
+  "/cookbook/rsc/stream-updates-to-visual-interfaces": {
+    "客户端": "client",
+    "服务器": "server"
   },
   "/cookbook/node/call-tools": {
     "访问工具调用与工具结果": "accessing-tool-calls-and-tool-results",
@@ -5283,57 +4459,5 @@
     "使用工具": "using-tools",
     "使用现成工具": "use-ready-made-tools",
     "构建并使用自定义工具": "build-and-use-custom-tools"
-  },
-  "/cookbook/rsc/call-tools-in-parallel": {
-    "客户端": "client",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/call-tools": {
-    "客户端": "client",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/generate-object": {
-    "客户端": "client",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/generate-text-with-chat-prompt": {
-    "客户端": "client",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/generate-text": {
-    "客户端": "client",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/render-visual-interface-in-chat": {
-    "客户端": "client",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/restore-messages-from-database": {
-    "客户端": "client",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/save-messages-to-database": {
-    "客户端": "client",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/stream-object": {
-    "客户端": "client",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/stream-text-with-chat-prompt": {
-    "客户端": "client",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/stream-text": {
-    "客户端": "client",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/stream-ui-record-token-usage": {
-    "onfinish-回调": "onfinish-callback",
-    "服务器": "server"
-  },
-  "/cookbook/rsc/stream-updates-to-visual-interfaces": {
-    "客户端": "client",
-    "服务器": "server"
   }
 }

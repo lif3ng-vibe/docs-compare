@@ -131,7 +131,7 @@
     {
       "id": "ai-sdk",
       "origin": "https://ai-sdk.dev",
-      "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-sdk",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn-2/ai-sdk",
       "useSourceFrontmatter": false,
       "listFrom": {
         "sitemap": "https://ai-sdk.dev/sitemap.xml"
@@ -163,7 +163,7 @@
       "id": "tailscale",
       "dir": "tailscale-docs-cn",
       "origin": "https://tailscale.com",
-      "mirror": "https://lif3ng-vibe.github.io/docs-cn/tailscale",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn-1/tailscale",
       "useSourceFrontmatter": false,
       "listFrom": {
         "sitemap": "https://tailscale.com/sitemap.xml"
@@ -173,7 +173,7 @@
       "id": "impeccable",
       "dir": "impeccable-mirror-cn",
       "origin": "https://impeccable.style",
-      "mirror": "https://lif3ng-vibe.github.io/docs-cn/impeccable-mirror",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn-2/impeccable-mirror",
       "useSourceFrontmatter": false,
       "listFrom": {
         "githubDir": "impeccable-mirror-cn/site",
@@ -184,7 +184,7 @@
       "id": "litellm",
       "dir": "litellm-docs-cn",
       "origin": "https://docs.litellm.ai",
-      "mirror": "https://lif3ng-vibe.github.io/docs-cn/litellm",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn-2/litellm",
       "useSourceFrontmatter": false,
       "listFrom": {
         "sitemap": "https://docs.litellm.ai/sitemap.xml"
@@ -194,7 +194,7 @@
       "id": "coolify",
       "dir": "coolify-docs-cn",
       "origin": "https://coolify.io/docs",
-      "mirror": "https://lif3ng-vibe.github.io/docs-cn/coolify",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn-1/coolify",
       "useSourceFrontmatter": false,
       "listFrom": {
         "sitemap": "https://coolify.io/docs/sitemap.xml"

@@ -221,45 +221,6 @@
     "理解连接器": "understand-connectors",
     "参考": "reference"
   },
-  "/docs/aperture/connectors/kinds-of-connector": {
-    "执行与可达性": "execution-and-reachability",
-    "连接器类型": "connector-types",
-    "各类型的行为差异": "behavioral-differences-by-type",
-    "能力更新": "capability-updates",
-    "api-类别": "api-categories",
-    "示例": "examples",
-    "相关内容": "related"
-  },
-  "/docs/aperture/connectors/reference": {
-    "connectors-字段": "connectors-fields",
-    "servers-字段": "servers-fields",
-    "连接器-id-规则": "connector-id-rules",
-    "连接器标签": "connector-labels",
-    "系统连接器": "system-connectors",
-    "经验证连接器注册表": "verified-connectors-registry",
-    "连接器类别": "connector-categories",
-    "连接器状态": "connector-statuses",
-    "认证": "authentication",
-    "mcp-连接器": "mcp-connectors",
-    "http-连接器": "http-connectors",
-    "动态注册": "dynamic-registration",
-    "连接器资源的授权": "grants-for-connector-resources",
-    "从-mcpservers-迁移": "migration-from-mcpservers",
-    "校验错误": "validation-errors",
-    "管理-rest-api-端点": "admin-rest-api-endpoints",
-    "完整注释示例": "full-annotated-example",
-    "故障排查": "troubleshooting",
-    "发起流程": "initiating-the-flow",
-    "令牌生命周期": "token-lifecycle",
-    "能力填充": "capability-population",
-    "chat-中缺少连接器或工具": "missing-chat-connectors-or-tools",
-    "连接被拒或主机未找到": "connection-refused-or-host-not-found",
-    "认证配置因未知字段被拒绝": "auth-configuration-rejected-with-unknown-field-error",
-    "动态注册失败": "dynamic-registration-fails",
-    "授权与重新连接": "authorizing-and-reconnecting",
-    "工具此前正常现在失效": "tools-stop-working-after-previously-working",
-    "工具调用超时": "tool-calls-time-out"
-  },
   "/docs/aperture/connectors/set-up-authenticated-mcp-connector": {
     "前提条件": "prerequisites",
     "选择认证类型": "choose-an-authentication-type",
@@ -386,7 +347,7 @@
   "/docs/aperture/how-to/grant-mcp-tool-access": {
     "前提条件": "prerequisites",
     "配置连接器访问授权": "configure-connector-access-grants",
-    "内置连接器": "built-in-connectors",
+    "内置连接器": "grant-access-to-system-tools",
     "后续步骤": "next-steps"
   },
   "/docs/aperture/how-to/grant-model-access": {
@@ -534,7 +495,7 @@
     "mcp-核心概念": "key-mcp-concepts",
     "前提条件": "prerequisites",
     "开始使用": "get-started",
-    "内置工具": "built-in-tools",
+    "内置工具": "system-tools",
     "常见场景": "common-scenarios",
     "http-api-连接器": "http-api-connectors",
     "mcp-配置参考": "mcp-configuration-reference",
@@ -555,11 +516,6 @@
   },
   "/docs/aperture/observe-and-export": {
     "留存": "retention"
-  },
-  "/docs/aperture/privacy-and-data-retention": {
-    "控制留存": "control-retention",
-    "导出并归档用量数据": "export-and-archive-usage-data",
-    "请求内容的去向": "where-request-content-goes"
   },
   "/docs/aperture/provider-compatibility": {
     "兼容性标志": "compatibility-flags",
@@ -1511,7 +1467,7 @@
     "抑制-ip-地址复制通知": "suppress-ip-address-copied-notifications",
     "设置密钥过期提醒期限": "set-the-key-expiration-notice-period",
     "设置用于身份验证的自定义浏览器": "set-a-custom-browser-for-authentication",
-    "设置自定义控制服务器-url": "set-a-custom-control-server-url",
+    "设置自定义控制服务器-url": "set-a-custom-coordination-server-url",
     "设置机器证书主题": "set-a-machine-certificate-subject",
     "启用设备态势数据收集": "enable-gathering-device-posture-data",
     "设置重新连接计时器": "set-a-reconnection-timer",
@@ -1679,10 +1635,6 @@
     "第-6-步重启-ufw-和-ssh": "step-6-restart-ufw-and-ssh",
     "第-7-步测试并验证": "step-7-test-and-verify",
     "可选为所有-ssh-连接启用多因素认证mfa": "optional-enable-multifactor-authentication-mfa-for-all-ssh-connections"
-  },
-  "/docs/how-to/set-up-custom-control-server": {
-    "添加自定义控制服务器": "add-a-custom-control-server",
-    "移除自定义控制服务器": "remove-a-custom-control-server"
   },
   "/docs/how-to/set-up-high-availability": {
     "选择路由选择选项": "choose-a-route-selection-option",
@@ -2219,17 +2171,6 @@
     "安装步骤": "installation-steps",
     "功能": "features",
     "使用-tailscale-cli": "using-the-tailscale-cli",
-    "特别致谢": "special-thanks"
-  },
-  "/docs/integrations/synology": {
-    "功能与优势": "features-and-benefits",
-    "使用-synology-package-center-安装": "install-using-synology-package-center",
-    "安排自动更新": "schedule-automatic-updates",
-    "启用出站连接": "enable-outbound-connections",
-    "调整-synology-防火墙设置": "adjust-synology-firewall-settings",
-    "故障排除": "troubleshooting",
-    "在-dsm-上手动安装-tailscale": "install-tailscale-on-dsm-manually",
-    "限制与已知问题": "limitations-and-known-issues",
     "特别致谢": "special-thanks"
   },
   "/docs/integrations/terraform-provider": {
@@ -2778,7 +2719,7 @@
   "/docs/privileged-access-management/how-to/control-access": {
     "前提条件": "prerequisites",
     "tailscale-pam-授权的工作原理": "how-tailscale-pam-grants-work",
-    "在管理控制台中创建授权": "create-a-grant-of-the-admin-console",
+    "在管理控制台中创建授权": "create-a-grant-in-the-admin-console",
     "控制数据库访问": "control-database-access",
     "控制-ssh-访问": "control-ssh-access",
     "控制-kubernetes-访问": "control-kubernetes-access",

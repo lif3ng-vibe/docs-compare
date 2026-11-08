@@ -97,7 +97,7 @@
     "id": "ai-sdk",
     "name": "AI SDK 文档",
     "origin": "https://ai-sdk.dev",
-    "mirror": "https://lif3ng-vibe.github.io/docs-cn/ai-sdk",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn-2/ai-sdk",
     "anchorMapUrl": "anchor-maps/ai-sdk.json"
   },
   {
@@ -118,28 +118,28 @@
     "id": "tailscale",
     "name": "Tailscale 文档",
     "origin": "https://tailscale.com",
-    "mirror": "https://lif3ng-vibe.github.io/docs-cn/tailscale",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn-1/tailscale",
     "anchorMapUrl": "anchor-maps/tailscale.json"
   },
   {
     "id": "impeccable",
     "name": "Impeccable 线上镜像",
     "origin": "https://impeccable.style",
-    "mirror": "https://lif3ng-vibe.github.io/docs-cn/impeccable-mirror",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn-2/impeccable-mirror",
     "anchorMapUrl": "anchor-maps/impeccable.json"
   },
   {
     "id": "litellm",
     "name": "LiteLLM 文档",
     "origin": "https://docs.litellm.ai",
-    "mirror": "https://lif3ng-vibe.github.io/docs-cn/litellm",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn-2/litellm",
     "anchorMapUrl": "anchor-maps/litellm.json"
   },
   {
     "id": "coolify",
     "name": "Coolify 文档",
     "origin": "https://coolify.io",
-    "mirror": "https://lif3ng-vibe.github.io/docs-cn/coolify",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn-1/coolify",
     "anchorMapUrl": "anchor-maps/coolify.json"
   },
   {
