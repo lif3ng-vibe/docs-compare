@@ -269,6 +269,15 @@
         "githubDir": "gstack-docs-cn/src/content/docs",
         "ext": ".md"
       }
+    },
+    {
+      "id": "agent-desktop",
+      "dir": "agent-desktop-docs-cn",
+      "origin": "https://agent-browser.dev/desktop",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-desktop/desktop",
+      "listFrom": {
+        "sitemap": "https://agent-browser.dev/desktop/sitemap.xml"
+      }
     }
   ]
 }

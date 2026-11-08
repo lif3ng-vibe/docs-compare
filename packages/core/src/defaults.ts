@@ -201,6 +201,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/gstack',
     anchorMapUrl: 'anchor-maps/gstack.json',
   },
+  {
+    id: 'agent-desktop',
+    name: 'agent-desktop 文档',
+    origin: 'https://agent-browser.dev/desktop',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/agent-desktop/desktop',
+    anchorMapUrl: 'anchor-maps/agent-desktop.json',
+  },
 
 ] as const;
 

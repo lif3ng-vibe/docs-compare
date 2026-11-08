@@ -57,11 +57,7 @@
     "从第一个应用开始": "start-with-your-first-application"
   },
   "/applications/builds/custom-docker-options": {
-    "自定义-docker-选项": "custom-docker-options",
-    "受支持的选项": "supported-options",
-    "使用自定义-seccomp-配置文件": "use-a-custom-seccomp-profile",
-    "添加选项": "add-an-option",
-    "覆盖入口点": "override-the-entrypoint"
+    "自定义-docker-选项": "custom-docker-options"
   },
   "/applications/builds/docker-compose": {
     "创建-docker-compose-资源": "create-the-docker-compose-resource",
@@ -151,11 +147,6 @@
     "选择下一篇构建指南": "choose-the-next-build-guide"
   },
   "/applications/builds/railpack": {
-    "使用-railpack-部署": "deploy-with-railpack",
-    "命令覆盖": "command-overrides",
-    "railpack-环境变量": "railpack-environment-variables",
-    "静态输出": "static-output",
-    "选择-railpack-还是-nixpacks": "choose-railpack-or-nixpacks",
     "连接仓库": "connect-the-repository",
     "选择-railpack": "select-railpack",
     "配置应用类型": "configure-the-application-type",
@@ -202,16 +193,7 @@
     "源提交可用性source-commit-availability": "source-commit-availability"
   },
   "/applications/configuration/environment-variables": {
-    "环境变量": "environment-variables",
-    "添加变量": "add-variables",
-    "构建与运行时作用域": "build-and-runtime-scope",
-    "多行与字面值": "multiline-and-literal-values",
-    "共享变量": "shared-variables",
-    "外部机密管理器": "external-secret-managers",
-    "预定义应用变量": "predefined-application-variables",
-    "docker-compose-变量": "docker-compose-variables",
-    "应用更改": "apply-changes",
-    "命名与复制取值": "names-and-copying-values"
+    "环境变量": "environment-variables"
   },
   "/applications/configuration/general": {
     "常规设置": "general-settings",
@@ -316,10 +298,7 @@
     "接受并验证更新": "accept-and-verify-the-update"
   },
   "/applications/deployments/rollbacks": {
-    "回滚": "rollbacks",
-    "回滚之前": "before-rolling-back",
-    "部署旧版镜像": "deploy-an-older-image",
-    "镜像保留": "image-retention"
+    "回滚": "rollbacks"
   },
   "/applications/deployments/rolling-updates": {
     "滚动更新": "rolling-updates",
@@ -429,15 +408,6 @@
   },
   "/applications/operations/overview": {
     "运维应用": "operate-applications",
-    "知道去哪里看": "know-where-to-look",
-    "选择生命周期操作": "choose-a-lifecycle-action",
-    "诊断应用问题": "diagnose-an-application-problem",
-    "保护应用状态": "protect-application-state",
-    "运行周期性任务": "run-recurring-work",
-    "移除或移动应用": "remove-or-move-an-application",
-    "继续运维应用": "continue-operating-the-application",
-    "资源操作按钮": "resource-action-buttons",
-    "跟踪进行中的操作": "follow-a-running-operation",
     "检查应用状态": "check-the-application-status",
     "检查最近一次部署": "inspect-the-latest-deployment",
     "阅读容器输出": "read-the-container-output",
@@ -455,9 +425,6 @@
   },
   "/applications/operations/scheduled-tasks": {
     "运行应用计划任务": "run-scheduled-application-tasks",
-    "打开-scheduled-tasks": "open-scheduled-tasks",
-    "应用侧的特定行为": "application-specific-behavior",
-    "使用详细的-core-指南": "use-the-detailed-core-guides",
     "打开应用页面": "open-the-application-page",
     "选择详细指南": "choose-the-detailed-guide",
     "运行第一次执行": "run-the-first-execution"
@@ -481,9 +448,6 @@
     "创建应用": "create-the-application",
     "部署并验证": "deploy-and-verify"
   },
-  "/applications/sources/gitea": {
-    "配置自动部署": "configure-automatic-deployments"
-  },
   "/applications/sources/github/actions": {
     "构建并部署": "build-and-deploy",
     "选择部署类型": "choose-the-deployment-type",
@@ -496,8 +460,6 @@
   },
   "/applications/sources/github/app": {
     "设置-github-app": "set-up-a-github-app",
-    "选择安装方式": "choose-an-installation-method",
-    "更改仓库访问权限": "change-repository-access",
     "1-在-coolify-中创建-github-app-来源": "1-create-a-github-app-source-in-coolify",
     "2-选择自动安装": "2-choose-automated-installation",
     "3-在-github-上注册应用": "3-register-the-app-on-github",
@@ -551,10 +513,6 @@
     "6-重新部署并验证": "6-redeploy-and-verify"
   },
   "/applications/sources/gitlab": {
-    "设置-gitlab-app": "set-up-a-gitlab-app",
-    "使用部署密钥": "use-a-deploy-key",
-    "配置手动-gitlab-webhook": "configure-a-manual-gitlab-webhook",
-    "使用-gitlab-container-registry": "use-gitlab-container-registry",
     "在-coolify-中添加来源": "add-the-source-in-coolify",
     "在-gitlab-中创建-oauth-应用": "create-the-oauth-application-in-gitlab",
     "连接-coolify-与-gitlab": "connect-coolify-to-gitlab",
@@ -848,6 +806,7 @@
     "查看当前帮助": "get-current-help"
   },
   "/cli/command-reference/commands/audit": {
+    "list": "list-audit-events",
     "用法": "usage",
     "选项": "options",
     "查看当前帮助": "get-current-help"
@@ -1232,6 +1191,7 @@
     "查看当前帮助": "get-current-help"
   },
   "/cli/command-reference/commands/integration-token": {
+    "create": "create-integration-token",
     "用法": "usage",
     "选项": "options",
     "查看当前帮助": "get-current-help"
@@ -2097,11 +2057,6 @@
   },
   "/core/automation/tags/manage-tags": {
     "管理标签": "manage-tags",
-    "为资源添加标签": "add-tags-to-a-resource",
-    "分配已有标签": "assign-an-existing-tag",
-    "移除标签": "remove-a-tag",
-    "未使用标签的清理机制": "how-unused-tags-are-removed",
-    "故障排除": "troubleshooting",
     "打开资源": "open-the-resource",
     "输入一个或多个名称": "enter-one-or-more-names",
     "添加标签": "add-the-tags"
@@ -2125,11 +2080,6 @@
   },
   "/core/backup-and-recovery/instance-backup": {
     "备份-coolify": "back-up-coolify",
-    "备份之前": "before-you-back-up",
-    "选择备份途径": "choose-a-backup-path",
-    "保存实例加密密钥": "save-the-instance-encryption-key",
-    "配置定期备份": "configure-recurring-backups",
-    "验证并管理备份": "verify-and-manage-backups",
     "从仪表盘创建备份": "create-a-backup-from-the-dashboard"
   },
   "/core/backup-and-recovery/instance-restore": {
@@ -2392,9 +2342,6 @@
   },
   "/core/infrastructure/servers/server-patching": {
     "修补服务器软件包": "patch-server-packages",
-    "更新服务器软件包": "update-server-packages",
-    "更新通知": "update-notifications",
-    "支持的软件包管理器": "supported-package-managers",
     "打开-server-patching": "open-server-patching",
     "检查更新": "check-for-updates",
     "评估软件包": "review-the-packages",
@@ -2402,16 +2349,7 @@
     "再次检查服务器": "check-the-server-again"
   },
   "/core/infrastructure/servers/web-terminal": {
-    "web-终端": "web-terminal",
-    "开始之前": "before-you-start",
-    "打开终端": "open-a-terminal",
-    "打开资源终端": "open-a-resource-terminal",
-    "更改终端访问": "change-terminal-access",
-    "终端无法连接时": "if-the-terminal-does-not-connect",
-    "选择服务器或容器": "select-a-server-or-container",
-    "确认终端可用": "confirm-the-terminal-works",
-    "禁用终端访问": "disable-terminal-access",
-    "重新启用终端访问": "enable-terminal-access-again"
+    "web-终端": "web-terminal"
   },
   "/core/instance-management/downgrade": {
     "降级-coolify": "downgrade-coolify",
@@ -2475,10 +2413,6 @@
   },
   "/core/instance-management/update": {
     "更新-coolify": "update-coolify",
-    "更新之前": "before-you-update",
-    "选择更新方式": "choose-an-update-path",
-    "自动更新": "automatic-updates",
-    "验证更新": "verify-the-update",
     "启用自动更新": "enable-automatic-updates",
     "更新频率": "update-frequency",
     "检查频率": "check-frequency"
@@ -2579,8 +2513,6 @@
   },
   "/core/networking/proxy/caddy/basic-auth": {
     "基本身份验证basic-authentication": "basic-authentication",
-    "保护资源": "protect-a-resource",
-    "故障排查": "troubleshooting",
     "自动方式": "automatic",
     "手动方式": "manual",
     "打开应用设置": "open-the-application-settings",
@@ -2645,11 +2577,6 @@
   },
   "/core/networking/proxy/overview": {
     "代理概览": "proxy-overview",
-    "选择代理": "choose-a-proxy",
-    "打开代理设置": "open-the-proxy-settings",
-    "在-traefik-和-caddy-之间切换": "switch-between-traefik-and-caddy",
-    "配置所选代理": "configure-the-selected-proxy",
-    "网络连接与配置变更": "network-connections-and-configuration-changes",
     "准备资源标签": "prepare-resource-labels",
     "停止当前代理": "stop-the-current-proxy",
     "选择新代理": "select-the-new-proxy",
@@ -2658,8 +2585,6 @@
   },
   "/core/networking/proxy/traefik/basic-auth": {
     "基本身份验证basic-authentication": "basic-authentication",
-    "保护资源": "protect-a-resource",
-    "故障排查": "troubleshooting",
     "自动方式": "automatic",
     "手动方式": "manual",
     "打开应用设置": "open-the-application-settings",
@@ -2673,10 +2598,7 @@
     "自定义中间件": "custom-middlewares"
   },
   "/core/networking/proxy/traefik/custom-ssl-certs": {
-    "自定义-ssl-证书": "custom-ssl-certificates",
-    "准备证书文件": "prepare-the-certificate-files",
-    "添加动态-tls-配置": "add-the-dynamic-tls-configuration",
-    "验证证书": "verify-the-certificate"
+    "自定义-ssl-证书": "custom-ssl-certificates"
   },
   "/core/networking/proxy/traefik/dashboard": {
     "traefik-仪表板": "traefik-dashboard",
@@ -2748,11 +2670,6 @@
   },
   "/core/notifications/channels/email": {
     "邮件": "email",
-    "选择邮件服务商": "choose-an-email-provider",
-    "使用托管或全实例服务商": "use-the-hosted-or-system-wide-provider",
-    "配置团队自己的服务商": "configure-a-team-provider",
-    "选择事件并验证投递": "choose-events-and-verify-delivery",
-    "排查邮件投递问题": "troubleshoot-email-delivery",
     "配置实例服务商": "configure-the-instance-provider",
     "团队复用该配置": "reuse-it-for-the-team",
     "选择事件并测试团队通道": "choose-events-and-test-the-team-channel"
@@ -2874,15 +2791,8 @@
   },
   "/core/observability/monitoring/metrics": {
     "指标": "metrics",
-    "提供哪些指标": "what-metrics-are-available",
-    "启用指标之前": "before-you-enable-metrics",
-    "启用指标": "enable-metrics",
-    "查看指标": "view-metrics",
-    "采样与保留": "sampling-and-retention",
-    "禁用指标": "disable-metrics",
-    "故障排查": "troubleshooting",
     "选择服务器": "select-the-server",
-    "打开-charts-页面": "open-the-charts-page",
+    "打开-charts-页面": "open-the-metrics-page",
     "等待-sentinel-重启": "wait-for-sentinel-to-restart",
     "确认指标可用": "confirm-that-metrics-are-available",
     "服务器指标": "server-metrics"
@@ -2903,10 +2813,7 @@
     "故障排查": "troubleshooting"
   },
   "/core/observability/monitoring/traffic-analytics": {
-    "流量分析": "traffic-analytics",
-    "启用采集": "enable-collection",
-    "配置采集": "configure-collection",
-    "查看分析": "view-analytics"
+    "流量分析": "traffic-analytics"
   },
   "/core/persistent-storage/storage-mounts/backups": {
     "备份存储挂载": "back-up-storage-mounts",
@@ -3245,10 +3152,7 @@
     "撤销邀请": "revoke-an-invitation"
   },
   "/core/team/members/overview": {
-    "成员概览": "members-overview",
-    "团队成员身份的工作方式": "how-team-membership-works",
-    "members-页面显示什么": "what-the-members-page-shows",
-    "选择下一步任务": "choose-the-next-task"
+    "成员概览": "members-overview"
   },
   "/core/team/members/remove-a-member": {
     "移除成员": "remove-a-member",
@@ -3274,14 +3178,6 @@
   },
   "/core/team/shared-variables": {
     "共享变量": "shared-variables",
-    "共享变量的工作方式": "how-shared-variables-work",
-    "选择范围": "choose-a-scope",
-    "创建共享变量": "create-a-shared-variable",
-    "引用共享变量": "reference-a-shared-variable",
-    "在-developer-view-中管理变量": "manage-variables-in-developer-view",
-    "更新或删除共享变量": "update-or-delete-a-shared-variable",
-    "在-docker-compose-中使用共享变量": "use-shared-variables-in-docker-compose",
-    "复制已解析的值": "copying-resolved-values",
     "打开共享变量": "open-shared-variables",
     "选择范围-1": "choose-the-scope",
     "添加变量": "add-the-variable",
@@ -3312,16 +3208,7 @@
     "继续阅读数据库指南": "continue-with-a-database-guide"
   },
   "/databases/backups": {
-    "备份": "backups",
-    "创建备份计划": "create-a-backup-schedule",
-    "备份服务内的数据库": "back-up-a-database-inside-a-service",
-    "设置备份范围": "set-the-backup-scope",
-    "选择执行频率": "choose-a-frequency",
-    "将备份保存在本地": "store-backups-locally",
-    "将备份上传到-s3": "upload-backups-to-s3",
-    "运行并验证备份": "run-and-verify-a-backup",
-    "相关指南": "related-guides",
-    "调度与失败的执行": "scheduling-and-failed-executions"
+    "备份": "backups"
   },
   "/databases/choose-a-database": {
     "选择数据库": "choose-a-database",
@@ -3346,12 +3233,7 @@
     "启动-clickhouse": "start-clickhouse"
   },
   "/databases/configuration/environment-variables": {
-    "环境变量": "environment-variables",
-    "添加或编辑变量": "add-or-edit-a-variable",
-    "外部机密管理器": "external-secret-managers",
-    "数据库变量与常规设置": "database-variables-and-general-settings",
-    "应用更改": "apply-changes",
-    "命名与复制值": "names-and-copying-values"
+    "环境变量": "environment-variables"
   },
   "/databases/configuration/general": {
     "常规设置": "general-settings",
@@ -3385,14 +3267,6 @@
     "应用并验证": "apply-and-verify"
   },
   "/databases/dragonfly": {
-    "创建-dragonfly-数据库": "create-a-dragonfly-database",
-    "默认配置": "default-configuration",
-    "连接-dragonfly": "connect-to-dragonfly",
-    "配置-dragonfly": "configure-dragonfly",
-    "备份与持久化": "backups-and-persistence",
-    "ssl-与健康检查": "ssl-and-health-checks",
-    "dragonfly-官方资源": "official-dragonfly-resources",
-    "密码环境变量": "password-environment-variable",
     "打开新建资源": "open-new-resource",
     "选择-dragonfly": "select-dragonfly",
     "选择服务器": "select-a-server",
@@ -3413,14 +3287,6 @@
     "继续学习": "continue-learning"
   },
   "/databases/keydb": {
-    "创建-keydb-数据库": "create-a-keydb-database",
-    "默认配置": "default-configuration",
-    "连接-keydb": "connect-to-keydb",
-    "配置-keydb": "configure-keydb",
-    "备份与持久化": "backups-and-persistence",
-    "ssl-与健康检查": "ssl-and-health-checks",
-    "keydb-官方资源": "official-keydb-resources",
-    "密码环境变量": "password-environment-variable",
     "打开新建资源": "open-new-resource",
     "选择-keydb": "select-keydb",
     "选择服务器": "select-a-server",
@@ -3474,11 +3340,7 @@
     "启动-mysql": "start-mysql"
   },
   "/databases/operations/danger-zone": {
-    "删除数据库": "delete-a-database",
-    "删除前的准备": "before-deletion",
-    "删除动作": "deletion-actions",
-    "确认删除": "confirm-deletion",
-    "删除之后": "after-deletion"
+    "删除数据库": "database-danger-zone"
   },
   "/databases/operations/overview": {
     "运维数据库": "operate-databases",
@@ -3515,13 +3377,6 @@
     "数据库凭据": "database-credentials"
   },
   "/databases/redis": {
-    "创建-redis-数据库": "create-a-redis-database",
-    "默认配置": "default-configuration",
-    "连接-redis": "connect-to-redis",
-    "配置-redis": "configure-redis",
-    "备份与持久化": "backups-and-persistence",
-    "ssl-与健康检查": "ssl-and-health-checks",
-    "redis-官方资源": "official-redis-resources",
     "打开-new-resource": "open-new-resource",
     "选择-redis": "select-redis",
     "选择服务器": "select-a-server",
@@ -3642,18 +3497,7 @@
   },
   "/integrations/networking/cloudflare/tunnels/server-ssh": {
     "通过-cloudflare-tunnel-进行服务器-ssh-访问": "server-ssh-access-via-cloudflare-tunnels",
-    "配置方式": "setup-methods",
-    "适合谁使用": "who-this-is-for",
-    "开始之前": "before-we-start",
-    "工作原理": "how-it-works",
-    "1-创建-ssh-私钥-toc": "1-create-a-private-ssh-key-toc",
-    "2-把公钥添加到你的服务器-toc": "2-add-public-key-to-your-server-toc",
-    "3-把你的服务器添加到-coolify-toc": "3-add-your-server-to-coolify-toc",
-    "4-在-coolify-中验证你的服务器-toc": "4-validate-your-server-on-coolify-toc",
-    "5-创建-cloudflare-tunnel-toc": "5-create-a-cloudflare-tunnel-toc",
-    "6-在-coolify-上配置-cloudflare-tunnel-toc": "6-configure-cloudflare-tunnel-on-coolify-toc",
-    "7-配置隧道路由-toc": "7-configure-tunnel-routes-toc",
-    "已知问题与解决办法": "known-issues-and-solutions"
+    "配置方式": "setup-methods"
   },
   "/integrations/networking/cloudflare/tunnels/single-resource": {
     "通过-cloudflare-tunnel-访问单个资源": "access-single-resource-via-cloudflare-tunnels",
@@ -3686,9 +3530,7 @@
     "5-配置防火墙": "5-configure-firewall"
   },
   "/integrations/security/cloudflare/dns-management": {
-    "cloudflare-dns-管理": "cloudflare-dns-management",
-    "添加令牌": "add-a-token",
-    "管理域名": "manage-a-domain"
+    "cloudflare-dns-管理": "cloudflare-dns-management"
   },
   "/integrations/security/secret-managers": {
     "机密管理器凭据": "secret-manager-credentials",
@@ -3843,10 +3685,7 @@
     "继续学习": "continue-learning"
   },
   "/mcp/security": {
-    "mcp-安全": "mcp-security",
-    "遵循最小权限原则": "use-least-privilege",
-    "团队作用域": "team-scope",
-    "保护客户端配置": "protect-client-configuration"
+    "mcp-安全": "mcp-security"
   },
   "/mcp/setup": {
     "设置-mcp": "set-up-mcp",
@@ -4186,14 +4025,7 @@
     "变量名中的下划线": "underscores-in-variable-names"
   },
   "/services/configuration/environment-variables": {
-    "环境变量": "environment-variables",
-    "理解变量的来源": "understand-the-source-of-a-variable",
-    "添加与编辑值": "add-and-edit-values",
-    "必填值与默认值": "required-values-and-defaults",
-    "跨组件复用值": "reuse-values-across-components",
-    "外部机密管理器": "external-secret-managers",
-    "生成的域名与凭据": "generated-domains-and-credentials",
-    "应用并验证更改": "apply-and-verify-changes"
+    "环境变量": "environment-variables"
   },
   "/services/configuration/general": {
     "常规设置": "general-settings",
@@ -5100,21 +4932,13 @@
     "重建已删除的-service": "recreate-a-deleted-service"
   },
   "/services/operations/overview": {
-    "运维-service": "operate-services",
-    "知道去哪里找": "know-where-to-look",
-    "选择生命周期操作": "choose-a-lifecycle-action",
-    "保护-service-状态": "protect-service-state",
-    "运行循环命令": "run-recurring-commands",
-    "继续运维-service": "continue-operating-the-service"
+    "运维-service": "operate-services"
   },
   "/services/operations/resource-operations": {
     "克隆或移动-service": "clone-or-move-a-service"
   },
   "/services/operations/scheduled-tasks": {
     "运行-service-计划任务": "run-scheduled-service-tasks",
-    "打开计划任务": "open-scheduled-tasks",
-    "service-专属行为": "service-specific-behavior",
-    "使用详细的-core-指南": "use-the-detailed-core-guides",
     "打开-service-页面": "open-the-service-page",
     "选择详细指南": "choose-the-detailed-guide",
     "运行首次执行": "run-the-first-execution"
@@ -5682,12 +5506,7 @@
     "寻求进一步帮助": "getting-further-assistance"
   },
   "/troubleshoot/dns-and-domains/certificate-resolver-doesnt-exist": {
-    "coolify-代理找不到证书解析器": "certificate-resolver-not-found-on-coolify-proxy",
-    "症状": "symptoms",
-    "诊断": "diagnosis",
-    "根本原因": "root-cause",
-    "解决方案": "solution",
-    "sudo-chmod-600-做了什么": "what-does-sudo-chmod-600-do"
+    "coolify-代理找不到证书解析器": "certificate-resolver-not-found-on-coolify-proxy"
   },
   "/troubleshoot/dns-and-domains/lets-encrypt-not-working": {
     "lets-encrypt-未生成-ssl-证书": "lets-encrypt-not-generating-ssl-certificates",

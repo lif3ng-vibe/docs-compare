@@ -140,7 +140,7 @@ npm run build          # 产物在 apps/chrome-extension/dist/
 
 3. 打开任一侧的文档页 → 点扩展图标 →「配对并打开对照页」
 
-内置的二十七个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步;`official: true` 表示两侧都是官方维护的双语站,下拉打「官方」角标)。列表会随远程热更自动补新站(见「收录新站点」),以下为兜底快照:
+内置的二十八个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步;`official: true` 表示两侧都是官方维护的双语站,下拉打「官方」角标)。列表会随远程热更自动补新站(见「收录新站点」),以下为兜底快照:
 
 ```json
 [
@@ -225,6 +225,9 @@ npm run build          # 产物在 apps/chrome-extension/dist/
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/worktrunk",
     "anchorMapUrl": "anchor-maps/worktrunk.json" },
   { "id": "gstack", "origin": "https://github.com/garrytan/gstack",
+  { "id": "agent-desktop", "origin": "https://agent-browser.dev/desktop",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-desktop/desktop",
+    "anchorMapUrl": "anchor-maps/agent-desktop.json" },
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/gstack",
     "anchorMapUrl": "anchor-maps/gstack.json" },
 ]
