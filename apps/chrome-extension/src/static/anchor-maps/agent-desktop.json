@@ -1,0 +1,307 @@
+{
+  "/changelog": {
+    "bug-修复": "bug-fixes",
+    "正式发布": "release",
+    "bug-修复-1": "bug-fixes-1",
+    "-破坏性变更": "-breaking-changes",
+    "新特性": "features",
+    "bug-修复-2": "bug-fixes-2",
+    "bug-修复-3": "bug-fixes-3",
+    "bug-修复-4": "bug-fixes-4",
+    "bug-修复-5": "bug-fixes-5",
+    "-破坏性变更-1": "-breaking-changes-1",
+    "新特性-1": "features-1",
+    "bug-修复-6": "bug-fixes-6",
+    "新特性-2": "features-2",
+    "新特性-3": "features-3",
+    "新特性-4": "features-4",
+    "新特性-5": "features-5",
+    "新特性-6": "features-6",
+    "-破坏性变更-2": "-breaking-changes-2",
+    "新特性-7": "features-7",
+    "-破坏性变更-3": "-breaking-changes-3",
+    "bug-修复-7": "bug-fixes-7",
+    "-破坏性变更-4": "-breaking-changes-4",
+    "重构": "refactoring",
+    "bug-修复-8": "bug-fixes-8",
+    "-破坏性变更-5": "-breaking-changes-5",
+    "新特性-8": "features-8",
+    "新特性-9": "features-9",
+    "新特性-10": "features-10",
+    "新特性-11": "features-11",
+    "新特性-12": "features-12",
+    "bug-修复-9": "bug-fixes-9",
+    "新特性-13": "features-13",
+    "新特性-14": "features-14",
+    "-破坏性变更-6": "-breaking-changes-6",
+    "重构-1": "refactoring-1",
+    "bug-修复-10": "bug-fixes-10",
+    "-破坏性变更-7": "-breaking-changes-7",
+    "新特性-15": "features-15",
+    "bug-修复-11": "bug-fixes-11",
+    "性能": "performance",
+    "测试": "tests",
+    "bug-修复-12": "bug-fixes-12",
+    "bug-修复-13": "bug-fixes-13",
+    "bug-修复-14": "bug-fixes-14",
+    "-破坏性变更-8": "-breaking-changes-8",
+    "重构-2": "refactoring-2",
+    "新特性-16": "features-16",
+    "新特性-17": "features-17",
+    "新特性-18": "features-18",
+    "bug-修复-15": "bug-fixes-15",
+    "bug-修复-16": "bug-fixes-16",
+    "新特性-19": "features-19",
+    "新特性-20": "features-20",
+    "新特性-21": "features-21",
+    "bug-修复-17": "bug-fixes-17",
+    "bug-修复-18": "bug-fixes-18",
+    "新特性-22": "features-22",
+    "bug-修复-19": "bug-fixes-19",
+    "新特性-23": "features-23",
+    "bug-修复-20": "bug-fixes-20",
+    "性能-1": "performance-1",
+    "bug-修复-21": "bug-fixes-21",
+    "新特性-24": "features-24",
+    "bug-修复-22": "bug-fixes-22"
+  },
+  "/configuration": {
+    "全局-flag": "global-flags",
+    "操作后等待-flag": "post-action-wait-flags",
+    "环境变量": "environment-variables",
+    "目录布局": "layout"
+  },
+  "/errors-and-recovery": {
+    "错误对象": "the-error-object",
+    "错误码": "error-codes",
+    "恢复策略": "recovery-strategies",
+    "决定是否重试": "decide-whether-to-retry"
+  },
+  "/": {
+    "agent-desktop-是什么不是什么": "what-agent-desktop-is-and-is-not",
+    "四条命令看清这个循环": "the-loop-in-four-commands",
+    "工作原理": "how-it-works",
+    "平台支持": "platform-support",
+    "下一步": "next-steps"
+  },
+  "/installation": {
+    "包里有什么": "what-the-package-contains",
+    "发布归档": "release-archives",
+    "安装脚本被拦截": "blocked-install-scripts",
+    "scoop-与旧安装": "scoop-and-older-installs",
+    "从源码构建": "build-from-source",
+    "验证安装": "verify-the-install",
+    "授予权限": "grant-permissions"
+  },
+  "/json-output": {
+    "信封": "envelope",
+    "省略规则": "omission-rules",
+    "应用拥有的快照": "application-owned-snapshots",
+    "数据放在哪里": "where-data-lives",
+    "操作结果与-disposition": "action-results-and-disposition",
+    "find-的结果": "find-results",
+    "退出码": "exit-codes",
+    "契约版本": "contract-versions",
+    "操作后观察": "post-action-observation"
+  },
+  "/quick-start": {
+    "检查安装": "check-the-install",
+    "绘制应用地图": "map-the-app",
+    "下钻一个区域": "drill-into-a-region",
+    "对引用执行操作": "act-on-a-ref",
+    "验证": "verify",
+    "恢复状态": "restore-the-state",
+    "下一步": "next-steps"
+  },
+  "/sessions": {
+    "会话拥有什么": "what-a-session-owns",
+    "启动列出结束与清理": "start-list-end-and-clean-up",
+    "选择会话": "select-a-session",
+    "快照命名空间": "snapshot-namespaces",
+    "智能体身份": "agent-identity",
+    "会话追踪记录与光标覆盖层": "sessions-traces-and-the-cursor-overlay"
+  },
+  "/skeleton-and-drill-down": {
+    "循环": "the-loop",
+    "拍一个骨架": "take-a-skeleton",
+    "找到下钻目标": "find-the-drill-target",
+    "下钻一个区域": "drill-into-a-region",
+    "变化后重新下钻": "re-drill-after-a-change",
+    "下钻拒绝的情形": "what-a-drill-refuses",
+    "限定搜索范围": "scope-a-search",
+    "用-max-depth-控制深度": "depth-with-max-depth",
+    "何时跳过骨架": "when-to-skip-the-skeleton",
+    "部分观察": "partial-observations",
+    "超时": "timeouts"
+  },
+  "/skills": {
+    "引导bootstrap一个智能体": "bootstrap-an-agent",
+    "skills-命令": "the-skills-command",
+    "可用技能": "available-skills",
+    "参考文件": "references",
+    "在智能体-harness-中安装技能": "install-a-skill-in-an-agent-harness"
+  },
+  "/snapshots-and-refs": {
+    "快照里有什么": "what-a-snapshot-contains",
+    "选择窗口": "choose-the-window",
+    "引用refs": "refs",
+    "引用存储了什么": "what-a-ref-stores",
+    "引用如何解析": "how-a-ref-resolves",
+    "ui-变化后重新读取": "refresh-after-the-ui-changes",
+    "引用存在哪里": "where-refs-are-stored",
+    "哪些元素会拿到引用": "which-elements-get-a-ref"
+  },
+  "/surfaces": {
+    "表面类型": "surface-kinds",
+    "查看支持项": "check-what-is-supported",
+    "知道表面何时打开": "know-when-a-surface-opened",
+    "拍快照或搜索一个表面": "snapshot-or-search-a-surface",
+    "列出当前打开的表面": "list-what-is-open",
+    "打开操作系统-shell-表面": "open-an-os-shell-surface"
+  },
+  "/commands/batch": {
+    "条目格式": "entry-format",
+    "上限": "limits",
+    "首个条目运行前的校验": "validation-before-the-first-entry",
+    "执行与输出": "execution-and-output"
+  },
+  "/commands/interaction": {
+    "结果形态": "result-shape",
+    "等待预算": "wait-budget",
+    "引用命令共有的错误": "errors-shared-by-ref-commands"
+  },
+  "/commands/wait": {
+    "时间": "time",
+    "元素": "element",
+    "窗口": "window",
+    "文本": "text",
+    "菜单": "menu",
+    "通知": "notification",
+    "事件": "event",
+    "错误": "errors"
+  },
+  "/ffi/api": {
+    "枚举": "enums",
+    "abi-握手": "abi-handshake",
+    "适配器生命周期": "adapter-lifecycle",
+    "以命令为底座的-json-入口": "command-backed-json-entrypoints",
+    "操作引用与原生句柄": "actions-refs-and-native-handles",
+    "findget-与-is": "find-get-and-is",
+    "原始树": "raw-tree",
+    "应用与窗口": "apps-and-windows",
+    "表面": "surfaces",
+    "等待": "wait",
+    "显示器与截图": "displays-and-screenshots",
+    "剪贴板": "clipboard",
+    "鼠标": "mouse",
+    "通知": "notifications",
+    "错误": "errors",
+    "日志与内存": "logging-and-memory",
+    "尺寸-getter": "size-getters"
+  },
+  "/ffi/build-and-link": {
+    "预编译压缩包": "prebuilt-archives",
+    "从源码构建": "build-from-source",
+    "头文件": "the-header",
+    "链接并运行一个程序": "link-and-run-a-program"
+  },
+  "/ffi": {
+    "与-cli-的关系": "relationship-to-the-cli",
+    "两个层次": "two-layers",
+    "库不暴露什么": "what-the-library-does-not-expose",
+    "abi-版本": "abi-version",
+    "下一步": "next-steps"
+  },
+  "/ffi/ownership-and-threading": {
+    "所有权": "ownership",
+    "线程": "threading",
+    "错误": "errors",
+    "json-入口的两种失败方式": "two-failure-modes-for-json-entrypoints",
+    "引用枚举与-panic": "refs-enums-and-panics"
+  },
+  "/guides/batch": {
+    "何时使用-batch": "when-to-batch",
+    "弄清什么先运行": "know-what-runs-first",
+    "逐条读取结果": "read-every-entry",
+    "控制失败行为": "control-failures",
+    "在-batch-中使用引用": "use-refs-in-a-batch"
+  },
+  "/guides/chromium-and-electron": {
+    "带-devtools-端口启动应用": "launch-the-app-with-a-devtools-port",
+    "把-agent-browser-连到端口上": "connect-agent-browser-to-the-port",
+    "原生-ui-交给-agent-desktop": "keep-the-native-ui-on-agent-desktop",
+    "关闭应用": "close-the-app",
+    "--cdp-失败时": "when---cdp-fails"
+  },
+  "/guides/headed-mode": {
+    "无头操作做什么": "what-headless-actions-do",
+    "--headed-授权什么": "what---headed-permits",
+    "哪些命令需要---headed": "which-commands-need---headed",
+    "处理-policy_denied": "handle-policy_denied",
+    "看清操作落在哪里": "see-where-actions-land"
+  },
+  "/guides/mcp": {
+    "连接客户端": "connect-a-client",
+    "工具如何映射到命令": "how-tools-map-to-commands",
+    "全局-flag-一次生效": "apply-global-flags-once",
+    "读取结果": "read-results",
+    "从技能入手": "start-with-the-skills",
+    "安全性": "security"
+  },
+  "/guides/observe-act-verify": {
+    "观察": "observe",
+    "操作": "act",
+    "验证": "verify",
+    "从失败中恢复": "recover-from-failures",
+    "完整示例": "worked-example"
+  },
+  "/guides/traces": {
+    "在会话中记录一次运行": "record-a-run-in-a-session",
+    "读取时间线": "read-the-timeline",
+    "追踪到单个文件": "trace-to-a-single-file",
+    "在会话中截屏": "capture-screenshots-with-a-session",
+    "生成可视化调试文件": "make-a-visual-debug-file",
+    "保持隐私数据私密": "keep-private-data-private",
+    "事件名称": "event-names"
+  },
+  "/guides/waiting": {
+    "选一种等待方式": "choose-the-wait",
+    "在操作内部等待": "wait-inside-the-action",
+    "等待一个元素": "wait-for-an-element",
+    "先等窗口再等内容": "wait-for-a-window-then-its-content",
+    "等待你的操作引发的事件": "wait-for-an-event-your-action-causes",
+    "等待一个菜单": "wait-for-a-menu",
+    "设置超时": "set-timeouts",
+    "读懂一次超时": "read-a-timeout"
+  },
+  "/platforms/linux": {
+    "系统要求": "requirements",
+    "检查无障碍总线": "check-the-accessibility-bus",
+    "无头模式下的能力": "what-works-headless",
+    "应用命名": "app-naming",
+    "表面": "surfaces",
+    "chromiumqt-与-electron": "chromium-qt-and-electron",
+    "故障排查": "troubleshooting"
+  },
+  "/platforms/macos": {
+    "系统要求": "requirements",
+    "授予与检查权限": "grant-and-check-permissions",
+    "无头模式下的能力": "what-works-headless",
+    "应用命名": "app-naming",
+    "表面": "surfaces",
+    "按键与通知": "keys-and-notifications",
+    "chromium-与-electron": "chromium-and-electron",
+    "故障排查": "troubleshooting"
+  },
+  "/platforms/windows": {
+    "系统要求": "requirements",
+    "权限与提权": "permissions-and-elevation",
+    "无头模式下的能力": "what-works-headless",
+    "应用命名": "app-naming",
+    "表面": "surfaces",
+    "使用-powershell": "use-powershell",
+    "按键": "keys",
+    "chromium-与-electron": "chromium-and-electron",
+    "故障排查": "troubleshooting"
+  }
+}
