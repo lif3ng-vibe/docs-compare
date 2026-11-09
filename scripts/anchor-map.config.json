@@ -278,6 +278,15 @@
       "listFrom": {
         "sitemap": "https://agent-browser.dev/desktop/sitemap.xml"
       }
+    },
+    {
+      "id": "agent-browser",
+      "dir": "agent-browser-docs-cn",
+      "origin": "https://agent-browser.dev",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-browser",
+      "listFrom": {
+        "sitemap": "https://agent-browser.dev/sitemap.xml"
+      }
     }
   ]
 }

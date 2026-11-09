@@ -140,7 +140,7 @@ npm run build          # 产物在 apps/chrome-extension/dist/
 
 3. 打开任一侧的文档页 → 点扩展图标 →「配对并打开对照页」
 
-内置的二十八个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步;`official: true` 表示两侧都是官方维护的双语站,下拉打「官方」角标)。列表会随远程热更自动补新站(见「收录新站点」),以下为兜底快照:
+内置的二十九个站点对可直接用(锚点表打包在扩展里,`anchor-maps/*.json`,由生成器同步;`official: true` 表示两侧都是官方维护的双语站,下拉打「官方」角标)。列表会随远程热更自动补新站(见「收录新站点」),以下为兜底快照:
 
 ```json
 [
@@ -225,11 +225,14 @@ npm run build          # 产物在 apps/chrome-extension/dist/
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/worktrunk",
     "anchorMapUrl": "anchor-maps/worktrunk.json" },
   { "id": "gstack", "origin": "https://github.com/garrytan/gstack",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/gstack",
+    "anchorMapUrl": "anchor-maps/gstack.json" },
   { "id": "agent-desktop", "origin": "https://agent-browser.dev/desktop",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-desktop/desktop",
     "anchorMapUrl": "anchor-maps/agent-desktop.json" },
-    "mirror": "https://lif3ng-vibe.github.io/docs-cn/gstack",
-    "anchorMapUrl": "anchor-maps/gstack.json" },
+  { "id": "agent-browser", "origin": "https://agent-browser.dev",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-browser",
+    "anchorMapUrl": "anchor-maps/agent-browser.json" },
 ]
 ```
 4. 分屏方式在 popup 里选:**两窗口平铺**(配对时自动左右平铺)或**同窗口标签页 + Chrome 分屏**(配对时开相邻标签页,右键 →「分屏」;建议关掉 Chrome 分屏自带的同步滚动,避免与扩展叠加)

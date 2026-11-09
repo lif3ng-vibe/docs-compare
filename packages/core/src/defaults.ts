@@ -208,6 +208,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/agent-desktop/desktop',
     anchorMapUrl: 'anchor-maps/agent-desktop.json',
   },
+  {
+    id: 'agent-browser',
+    name: 'agent-browser 文档',
+    origin: 'https://agent-browser.dev',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/agent-browser',
+    anchorMapUrl: 'anchor-maps/agent-browser.json',
+  },
 
 ] as const;
 
