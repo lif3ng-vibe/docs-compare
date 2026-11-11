@@ -1,0 +1,133 @@
+{
+  "/blog/introducing-astryx-richtext": {
+    "首先是一个表单字段": "a-form-field-first",
+    "markdown-无损进出": "markdown-in-and-out-losslessly",
+    "同一份文档-阅读与编辑模式一致": "the-same-document-in-read-and-edit-mode",
+    "与主题一致的工具栏": "a-toolbar-that-matches-your-theme",
+    "基于-lexical-构建": "built-on-lexical",
+    "不需要你自己搭建的无障碍": "accessibility-you-do-not-have-to-build",
+    "上手": "get-started"
+  },
+  "/blog/astryx-v0-7-0": {
+    "表单与输入": "forms-and-inputs",
+    "菜单与覆盖层": "menus-and-overlays",
+    "移动端与触控": "mobile-and-touch",
+    "数据展示": "data-display",
+    "markdown-与内容": "markdown-and-content",
+    "主题与视觉基础": "themes-and-visual-foundations",
+    "无障碍与本地化": "accessibility-and-localization",
+    "cli-与集成": "cli-and-integrations",
+    "升级到-0-7-0": "upgrading-to-0-7-0",
+    "致谢": "thank-you",
+    "搜索时创建缺失的选项": "create-a-missing-choice-while-searching",
+    "把控件放在菜单行旁边": "put-controls-beside-menu-rows",
+    "在手机上逐层下钻子菜单": "drill-into-submenus-on-a-phone",
+    "让嵌套层级有序": "keep-nested-layers-in-order",
+    "给-bottomsheet-的内容留出空间": "give-bottomsheet-content-room",
+    "用滑动显出行的操作": "reveal-row-actions-with-a-swipe",
+    "自选日期与时间拾取器": "choose-the-date-and-time-picker",
+    "在手机上舒适阅读": "read-comfortably-on-a-phone",
+    "展开行而不扰动表格": "expand-a-row-without-disturbing-the-table",
+    "调整列宽而不丢失上下文": "resize-columns-without-losing-context",
+    "保留作者写入的换行": "keep-authored-line-breaks",
+    "把-frontmatter-当数据读": "read-frontmatter-as-data",
+    "把产品语法变成链接": "turn-product-syntax-into-links",
+    "把自定义围栏变成组件": "turn-custom-fences-into-components",
+    "复制标题链接": "copy-links-to-headings",
+    "把渲染块连接到源码行": "connect-rendered-blocks-to-source-lines",
+    "用你产品的渲染器渲染数学公式": "render-math-with-your-products-renderer",
+    "使用来自唯一-stylex-源的数据色": "use-data-colors-from-one-stylex-source",
+    "让键盘快捷键清晰可读": "read-keyboard-shortcuts-clearly",
+    "让-slider-刻度跟随填充": "keep-slider-marks-with-the-fill",
+    "图标尺寸跟随其-button": "size-icons-with-their-button",
+    "让布局跟随读者的文字尺寸": "let-layouts-follow-the-readers-text-size",
+    "让焦点提示跟随上一次输入": "keep-focus-cues-matched-to-the-last-input",
+    "播报异步结果": "announce-an-async-outcome",
+    "添加并校验集成组件": "add-and-verify-an-integration-component",
+    "手工代码修改-无-codemod-4": "manual-code-edits-no-codemod-4",
+    "cli-命令与脚本-无-codemod-10": "cli-commands-and-scripts-no-codemod-10",
+    "视觉与-token-变化-检查你的应用-通常无需改代码-4": "visual-and-token-changes-inspect-your-app-usually-no-code-4",
+    "由-astryx-upgrade-处理或检查-8": "handled-or-checked-by-astryx-upgrade-8",
+    "全部-26-条破坏性迁移": "all-26-breaking-migrations"
+  },
+  "/blog/astryx-v0-6-0": {
+    "主题在-css-里响应": "themes-respond-in-css",
+    "selector-自适应呈现形态": "selector-adapts-its-presentation",
+    "六个新起点": "six-new-starting-points",
+    "neutral-的视觉焕新": "neutral-s-visual-makeover",
+    "一条有规格背书的-v1-之路": "a-specification-backed-path-to-v1",
+    "迁移到-0-6-0": "migrate-to-0-6-0",
+    "本次发布的其他内容": "also-in-this-release",
+    "致谢": "thank-you"
+  },
+  "/blog/astryx-v0-5-0": {
+    "两个破坏性变更": "two-breaking-changes",
+    "三次晋升": "three-promotions",
+    "亮点": "highlights",
+    "致谢": "thank-you",
+    "banner-的折叠行为收敛为一个-collapsible-prop": "banners-collapse-axis-is-one-collapsible-prop",
+    "一次-escape-只关闭一层": "one-escape-dismisses-one-layer",
+    "一并移除的内容": "also-removed",
+    "stepper-core-本次发布": "stepper-core-this-release",
+    "30-个-locale-日期跟随你的-provider": "30-locales-and-dates-that-follow-your-provider",
+    "主题现在真正继承-extends": "themes-now-inherit-from-extends",
+    "键盘-指针与触控": "keyboard-pointer-and-touch",
+    "更多可用的构建素材": "more-to-build-with"
+  },
+  "/blog/internationalizing-astryx": {
+    "为什么我们没有直接引入-i18n-框架": "why-we-didnt-just-adopt-an-i18n-framework",
+    "复数如今已是被解决的问题": "plurals-are-now-a-solved-problem",
+    "从右到左-以及躲开-linter-的-bug": "right-to-left-and-the-bugs-that-hide-from-your-linter",
+    "播种-29-种语言": "seeding-29-languages",
+    "尚待解决的事": "whats-still-open"
+  },
+  "/blog/vibe-tests": {
+    "我们铭记的原则": "the-principles-we-keep-in-mind",
+    "报告与自愈": "reporting-and-self-healing",
+    "设计你自己的": "design-your-own"
+  },
+  "/blog/one-month-of-astryx": {
+    "数字里的第一个月": "by-the-numbers-first-month",
+    "用-astryx-构建": "built-with-astryx",
+    "社区告诉我们的": "what-the-community-told-us",
+    "我们要去的方向": "where-were-headed",
+    "致谢": "thank-you",
+    "给我们看看你构建了什么": "show-us-what-you-built"
+  },
+  "/blog/astryx-cli-build-command": {
+    "你大概已经注意到-ai-非常擅长模仿": "you-have-probably-noticed-ai-is-very-good-at-copying",
+    "值得模仿的好范例": "good-examples-to-copy",
+    "推出-astryx-build": "introducing-astryx-build",
+    "这才是重点": "the-whole-point"
+  },
+  "/blog/the-astryx-cli": {
+    "cli-即文档": "the-cli-is-the-docs",
+    "导览": "the-tour",
+    "一个界面-多种读者": "one-surface-many-readers",
+    "这才是重点": "the-whole-point"
+  },
+  "/blog/astryx-v0-1-3": {
+    "亮点": "highlights",
+    "一个破坏性变更-很容易处理": "one-breaking-change-easy",
+    "致谢": "thank-you",
+    "table-支持右键上下文菜单": "right-click-context-menus-on-table",
+    "键盘导航": "keyboard-navigation",
+    "在-inputgroup-中组合输入组件": "compose-inputs-in-an-inputgroup",
+    "说明控件为何禁用": "explain-disabled-controls",
+    "布局易用性提升": "layout-ergonomics",
+    "popover-关闭行为控制": "popover-dismissal-control",
+    "更多": "more"
+  },
+  "/blog/how-astryx-works": {
+    "astryx-是什么": "what-is-astryx",
+    "meta-内部的问题": "the-problem-at-meta",
+    "系统构成": "the-systems",
+    "原则": "principles",
+    "名字的由来": "the-name",
+    "开源": "open-source"
+  },
+  "/blog/introducing-astryx": {
+    "从任何地方开始-随心修改-更快交付": "start-anywhere-change-anything-and-ship-faster",
+    "为人以及与他们并肩构建的智能体而生": "built-for-people-and-the-agents-building-alongside-them"
+  }
+}
