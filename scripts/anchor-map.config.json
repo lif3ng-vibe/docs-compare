@@ -287,6 +287,15 @@
       "listFrom": {
         "sitemap": "https://agent-browser.dev/sitemap.xml"
       }
+    },
+    {
+      "id": "astryx",
+      "dir": "astryx-docs-cn",
+      "origin": "https://astryx.atmeta.com",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/astryx",
+      "listFrom": {
+        "sitemap": "https://astryx.atmeta.com/sitemap.xml"
+      }
     }
   ]
 }

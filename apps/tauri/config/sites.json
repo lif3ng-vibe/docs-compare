@@ -191,6 +191,25 @@
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/gstack",
     "anchorMapUrl": "anchor-maps/gstack.json"
   },
-  {    "id": "agent-desktop",    "name": "agent-desktop 文档",    "origin": "https://agent-browser.dev/desktop",    "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-desktop/desktop",    "anchorMapUrl": "anchor-maps/agent-desktop.json"  },
-  {    "id": "agent-browser",    "name": "agent-browser 文档",    "origin": "https://agent-browser.dev",    "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-browser",    "anchorMapUrl": "anchor-maps/agent-browser.json"  }
+  {
+    "id": "agent-desktop",
+    "name": "agent-desktop 文档",
+    "origin": "https://agent-browser.dev/desktop",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-desktop/desktop",
+    "anchorMapUrl": "anchor-maps/agent-desktop.json"
+  },
+  {
+    "id": "agent-browser",
+    "name": "agent-browser 文档",
+    "origin": "https://agent-browser.dev",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/agent-browser",
+    "anchorMapUrl": "anchor-maps/agent-browser.json"
+  },
+  {
+    "id": "astryx",
+    "name": "Astryx 设计系统文档",
+    "origin": "https://astryx.atmeta.com",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/astryx",
+    "anchorMapUrl": "anchor-maps/astryx.json"
+  }
 ]
