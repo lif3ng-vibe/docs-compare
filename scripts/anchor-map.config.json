@@ -296,6 +296,16 @@
       "listFrom": {
         "sitemap": "https://astryx.atmeta.com/sitemap.xml"
       }
+    },
+    {
+      "id": "herdr-dev",
+      "dir": "herdr-docs-cn",
+      "origin": "https://herdr.dev",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/herdr",
+      "listFrom": {
+        "githubDir": "herdr-docs-cn/site",
+        "ext": ".html"
+      }
     }
   ]
 }

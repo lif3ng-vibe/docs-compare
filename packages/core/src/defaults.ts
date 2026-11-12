@@ -222,6 +222,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/astryx',
     anchorMapUrl: 'anchor-maps/astryx.json',
   },
+  {
+    id: 'herdr-dev',
+    name: 'Herdr 官网',
+    origin: 'https://herdr.dev',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/herdr',
+    anchorMapUrl: 'anchor-maps/herdr-dev.json',
+  },
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */
