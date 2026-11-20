@@ -218,5 +218,12 @@
     "origin": "https://herdr.dev",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/herdr",
     "anchorMapUrl": "anchor-maps/herdr-dev.json"
+  },
+  {
+    "id": "diagram-design",
+    "name": "Diagram Design 官网",
+    "origin": "https://diagramdesign.dev",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/diagram-design",
+    "anchorMapUrl": "anchor-maps/diagram-design.json"
   }
 ]

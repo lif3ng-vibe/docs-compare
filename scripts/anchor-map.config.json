@@ -306,6 +306,17 @@
         "githubDir": "herdr-docs-cn/site",
         "ext": ".html"
       }
+    },
+    {
+      "id": "diagram-design",
+      "dir": "diagram-design-docs-cn",
+      "origin": "https://diagramdesign.dev",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/diagram-design",
+      "listFrom": {
+        "githubDir": "diagram-design-docs-cn/site",
+        "ext": ".html"
+      },
+      "noTrailingSlash": true
     }
   ]
 }

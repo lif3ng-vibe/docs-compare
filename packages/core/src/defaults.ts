@@ -229,6 +229,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/herdr',
     anchorMapUrl: 'anchor-maps/herdr-dev.json',
   },
+  {
+    id: 'diagram-design',
+    name: 'Diagram Design 官网',
+    origin: 'https://diagramdesign.dev',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/diagram-design',
+    anchorMapUrl: 'anchor-maps/diagram-design.json',
+  },
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */
