@@ -243,6 +243,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/ag-ui',
     anchorMapUrl: 'anchor-maps/ag-ui.json',
   },
+  {
+    id: 'app-store-compliance',
+    name: 'App Store Compliance Playbook',
+    origin: 'https://mjmirza.github.io/app-store-compliance',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/app-store-compliance',
+    anchorMapUrl: 'anchor-maps/app-store-compliance.json',
+  },
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */

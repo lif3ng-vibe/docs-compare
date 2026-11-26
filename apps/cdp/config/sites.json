@@ -232,5 +232,12 @@
     "origin": "https://docs.ag-ui.com",
     "mirror": "https://lif3ng-vibe.github.io/docs-cn/ag-ui",
     "anchorMapUrl": "anchor-maps/ag-ui.json"
+  },
+  {
+    "id": "app-store-compliance",
+    "name": "App Store Compliance Playbook",
+    "origin": "https://mjmirza.github.io/app-store-compliance",
+    "mirror": "https://lif3ng-vibe.github.io/docs-cn/app-store-compliance",
+    "anchorMapUrl": "anchor-maps/app-store-compliance.json"
   }
 ]

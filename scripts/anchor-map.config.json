@@ -326,6 +326,17 @@
       "listFrom": {
         "sitemap": "https://docs.ag-ui.com/sitemap.xml"
       }
+    },
+    {
+      "id": "app-store-compliance",
+      "dir": "app-store-compliance-docs-cn",
+      "origin": "https://mjmirza.github.io/app-store-compliance",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/app-store-compliance",
+      "listFrom": {
+        "githubDir": "app-store-compliance-docs-cn/site",
+        "ext": ".html"
+      },
+      "noTrailingSlash": true
     }
   ]
 }
