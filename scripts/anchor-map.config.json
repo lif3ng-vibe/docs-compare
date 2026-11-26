@@ -317,6 +317,15 @@
         "ext": ".html"
       },
       "noTrailingSlash": true
+    },
+    {
+      "id": "ag-ui",
+      "dir": "ag-ui-docs-cn",
+      "origin": "https://docs.ag-ui.com",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/ag-ui",
+      "listFrom": {
+        "sitemap": "https://docs.ag-ui.com/sitemap.xml"
+      }
     }
   ]
 }
