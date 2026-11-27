@@ -250,6 +250,13 @@ const RAW = [
     mirror: 'https://lif3ng-vibe.github.io/docs-cn/app-store-compliance',
     anchorMapUrl: 'anchor-maps/app-store-compliance.json',
   },
+  {
+    id: 'cli-anything',
+    name: 'CLI-Anything Hub',
+    origin: 'https://clianything.cc',
+    mirror: 'https://lif3ng-vibe.github.io/docs-cn/cli-anything',
+    anchorMapUrl: 'anchor-maps/cli-anything.json',
+  },
 ] as const;
 
 /** 解析一次并断言全绿:内置配置出错属构建期错误,不该静默兜底 */

@@ -337,6 +337,17 @@
         "ext": ".html"
       },
       "noTrailingSlash": true
+    },
+    {
+      "id": "cli-anything",
+      "dir": "cli-anything-docs-cn",
+      "origin": "https://clianything.cc",
+      "mirror": "https://lif3ng-vibe.github.io/docs-cn/cli-anything",
+      "listFrom": {
+        "githubDir": "cli-anything-docs-cn/site",
+        "ext": ".html"
+      },
+      "noTrailingSlash": true
     }
   ]
 }
